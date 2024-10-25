@@ -237,3 +237,104 @@ audio::-webkit-media-controls-enclosure {
 audio::-webkit-media-controls-timeline:hover {
   opacity: 0.8;
 }
+
+:root {
+  --mov-y: 0px;
+  --rot-y: 0deg;
+}
+.ft- {
+  @keyframes rainbow-animate {
+    0% {
+      background-position: 0px 0;
+    }
+    50% {
+      background-position: 100px 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+  @keyframes shake-animate {
+    // CSS Houdini
+    // 0% { --mov-y: 1px }
+    // 100% { --mov-y: -1px }
+    0% {
+      transform: translateY(1px);
+    }
+    100% {
+      transform: translateY(-1px);
+    }
+  }
+  @keyframes spin-animate {
+    // CSS Houdini
+    // 0% { --rot-y: 0deg }
+    // 100% { --rot-y: 360deg }
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
+  @for $i from 0 through 10 {
+    &char {
+      animation-delay: 10ms;
+    }
+  }
+  &letters {
+    white-space: nowrap;
+  }
+  &letters span {
+    white-space: pre;
+  }
+  &rainbow {
+    background: repeating-linear-gradient(
+      to right,
+      #cb94ff 0px,
+      #028ba1 20px,
+      #4dc725 40px,
+      #ff941a 60px,
+      #d21b1b 80px,
+      #cb94ff 100px
+    );
+    background-size: 100px;
+    background-clip: text;
+    color: transparent !important;
+    & span,
+    p {
+      color: transparent;
+    }
+    animation: rainbow-animate 2s linear infinite;
+  }
+  &shake .char {
+    animation: shake-animate 0.05s linear infinite alternate;
+    display: inline-block;
+    @for $i from 0 through 10 {
+      &:nth-child(10n + #{$i}) {
+        animation-delay: #{$i * -20ms};
+      }
+    }
+  }
+  &wave .char {
+    animation: shake-animate 0.2s ease-in-out infinite alternate;
+    display: inline-block;
+    @for $i from 0 through 10 {
+      &:nth-child(10n + #{$i}) {
+        animation-delay: #{$i * -40ms};
+      }
+    }
+  }
+  &spin .char {
+    animation: spin-animate 1s ease-in-out infinite;
+    display: inline-block;
+    @for $i from 0 through 10 {
+      &:nth-child(10n + #{$i}) {
+        animation-delay: #{$i * 40ms - 400ms};
+      }
+    }
+  }
+  // CSS Houdini
+  // &letters .char {
+  //   transform: translateY(var(--mov-y)) rotateY(var(--rot-y));
+  // }
+}
