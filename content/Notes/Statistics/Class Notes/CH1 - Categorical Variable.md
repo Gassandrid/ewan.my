@@ -86,6 +86,8 @@ We are going to find:
 
 Lets find these with python.
 
+This will yield the 1-Variable Statistics we would normally get from a Ti-84 Graphing Calculator. And lets include a graph to go along with it.
+
 ```python
 import micropip
 await micropip.install("numpy")
@@ -130,13 +132,6 @@ print(f"Chromium Quartiles: {first_quartile_chromium}, {second_quartile_chromium
 print(f"Nickel Mean: {mean_nickel}, Median: {median_nickel}, Standard Deviation: {std_nickel}")
 print(f"Nickel Quartiles: {firsst_quartile_nickel}, {second_quartile_nickel}, {third_quartile_nickel}, {fourth_quartile_nickel}")
 
-```
-
-This yield the 1-Variable Statistics we would normally get from a Ti-84 Graphing Calculator.
-
-And now let's plot it as a box plot:
-
-```python
 # Boxplot
 plt.figure(figsize=(6, 4))
 plt.boxplot([chromium, nickel], labels=['Chromium', 'Nickel'])
@@ -145,3 +140,4 @@ plt.title('Boxplot of Chromium and Nickel')
 # Display the chart
 plt.show()
 ```
+

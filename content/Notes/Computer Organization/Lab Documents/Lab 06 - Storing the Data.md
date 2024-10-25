@@ -31,4 +31,5 @@ tags:
 `app.py`
 
 >[!Info]- Screenshot
-> ![[Screenshot 2024-10-17 at 3.51.57 PM.png]]
+> ![[Screenshot 2024-10-25 at 12.08.58 PM.png]]
+

@@ -3,13 +3,14 @@ tags:
   - math
 date: 2024-09-04
 ---
-## How do you "add" two vectors together?
+
+## How Do You "add" Two Vectors Together?
 
 ![[Pasted image 20240826123538.png]]
 
 We can use the "tip to tail" method to add two or more vectors together as show in the figure.
 
-## How do you "subtract" them?
+## How Do You "subtract" Them?
 
 ![[Pasted image 20240826123719.png]]
 
@@ -18,13 +19,14 @@ We can subtract two vectors by representing one of them as a negative vector `-v
 That works for adding and subtracting vectors geometrically, but what about arithmetically?
 
 Vectors can be added or subtracted by adding or subtracting the corresponding components.
-For example, to add two vectors, add the first components together, then add the second components together, and so on.
-To subtract two vectors, subtract the corresponding components.
 
+For example, to add two vectors, add the first components together, then add the second components together, and so on.
+
+To subtract two vectors, subtract the corresponding components.
 
 $$\begin{bmatrix} 1 \\ 2 \\ 5 \end{bmatrix} + \begin{bmatrix} -1 \\ -3 \\ -4 \end{bmatrix} = \begin{bmatrix} 0 \\ -1 \\ 1 \end{bmatrix}$$
 
-## Multiplication of vectors
+## Multiplication of Vectors
 
 ![[Pasted image 20240826124335.png]]
 

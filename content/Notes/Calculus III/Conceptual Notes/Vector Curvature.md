@@ -3,9 +3,11 @@ tags:
   - math
 date: 2024-09-25
 ---
+
 Curvature is a very intuitive concept.
 
 If you have a straight line, does it have curvature? No, of course not.
+
 Does a circle have a curvature? Yeah, it has some curvature.
 
 It is our job to quantify how "much" curvature is in a given problem.
@@ -68,7 +70,7 @@ So we know the smaller the circle, the more curvature it has.
 
 **Definition:** Curvature is a measure of how much the direction vector changes
 
-## How does the derivative of a direction/tangent vector change?
+## How Does the Derivative of a direction/tangent Vector Change?
 
 Essentially, this is talking about the speed/velocity of the curve. But the thing is, the velocity at which we traverse the curve has no effect on the actual curvature itself. 
 
@@ -78,25 +80,29 @@ $$
 curvature = K = \frac{dT}{ds}
 $$
 
-## Finding the curvature
+## Finding the Curvature
 
 To find the curvature, parametrize the unit tangent vector, which is 
 
 $$T = \frac{r\prime(t)}{|r\prime(t)|}$$
+
 Where we differentiate with respect to arc length
 
 This yields something like 
+
 $$ r\prime(s)$$
+
 Which always equals 1, meaning `r'(s)` is _the_ unit tangent vector
 
-## Curvature of a circle
-
+## Curvature of a Circle
 
 > [!example] Find the curvature of a circle with radius R
 > **Q:** how do you parameterize a circle?
 
 **Answer:** use the following formula
+
 $$ \vec{r} = \langle R \cos \theta, R \sin \theta \rangle $$
+
 which becomes 
 
 $$ \vec{r}(s) = \langle R \cos \frac{s}{R}, R \sin \frac{s}{R} \rangle $$
@@ -108,9 +114,11 @@ $$ \vec{r}' = \langle -\sin \frac{s}{R}, \cos \frac{s}{R} \rangle $$
 and then second derivative
 
 $$ \vec{r}'' = \langle -\frac{1}{R} \cos \frac{s}{R}, -\frac{1}{R} \sin \frac{s}{R} \rangle $$
+
 and then finding the magnitude
 
 $$ \left\| \vec{r}'' \right\| = \sqrt{\left( -\frac{1}{R} \cos \frac{s}{R} \right)^2 + \left( -\frac{1}{R} \sin \frac{s}{R} \right)^2} $$
+
 which yields
 
 $$ =\frac{1}{R}$$

@@ -33,11 +33,11 @@ $$
 > [!tip] **Key Insight**
 > 
 > The Cartesian product is not commutative: $A \times B \neq B \times A$. This means that:
-> 
+>
 > $$ A \times B \neq B \times A $$
-> 
+>
 > In particular:
-> 
+>
 > $$ A \times B \neq B \times A \text{ unless } A = B $$
 
 ---

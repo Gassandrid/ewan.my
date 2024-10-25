@@ -30,21 +30,27 @@ In essence, the gradients of $f$ and $g$ must be parallel, reflecting that the r
 > Find the extrema of the function $f(x, y) = x^2 + y^2$ subject to the constraint $g(x, y) = x + y - 1 = 0$.
 >
 > - **Step 1:** Set up the Lagrange system:
+>
 >   $$
 >   \nabla f = \lambda \nabla g
 >   $$
+>
 >   This gives:
+>
 >   $$
 >   (2x, 2y) = \lambda (1, 1)
 >   $$
 >
 > - **Step 2:** Solve for $\lambda$:
+>
 >   $$
 >   2x = \lambda \quad \text{and} \quad 2y = \lambda
 >   $$
+>
 >   So, $x = y$.
 >
 > - **Step 3:** Use the constraint $x + y = 1$ to find $x$ and $y$:
+>
 >   $$
 >   x + x = 1 \implies x = \frac{1}{2}, \quad y = \frac{1}{2}
 >   $$

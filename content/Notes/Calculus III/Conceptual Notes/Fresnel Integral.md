@@ -15,6 +15,7 @@ C(x) = \int_0^x \cos\left( \frac{\pi t^2}{2} \right) dt
 $$
 
 They are often written together as a parametric curve in the complex plane:
+
 $$
 Z(x) = C(x) + i S(x)
 $$
@@ -24,6 +25,7 @@ $$
 > [!info] **Basic Properties**
 > - Both $C(x)$ and $S(x)$ are odd functions: $C(-x) = -C(x)$ and $S(-x) = -S(x)$.
 > - As $x \to \infty$, both $C(x)$ and $S(x)$ tend toward $\frac{1}{2}$, leading to:
+>
 > $$ \lim_{x \to \infty} C(x) = \lim_{x \to \infty} S(x) = \frac{1}{2} $$
 
 ---
@@ -40,7 +42,9 @@ The Fresnel integrals are widely used in physics and engineering, including:
 
 > [!tip] **Approximations**
 > For small $x$, we can approximate $C(x)$ and $S(x)$ as:
+>
 > $$ C(x) \approx x - \frac{\pi x^5}{40}, \quad S(x) \approx \frac{\pi x^3}{6} - \frac{\pi x^7}{336} $$
+>
 > These approximations become useful for practical numerical computations.
 
 ---

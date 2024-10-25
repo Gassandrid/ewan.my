@@ -16,6 +16,7 @@ $$
 $$
 
 ### Finding Critical Points
+
 To find the critical points, solve:
 
 $$
@@ -43,6 +44,7 @@ H =
 $$
 
 ### Eigenvalues of the Hessian
+
 1. If all eigenvalues are **positive**, the point is a **local minimum**.
 2. If all eigenvalues are **negative**, the point is a **local maximum**.
 3. If the eigenvalues have **mixed signs**, the point is a **saddle point**.
@@ -61,6 +63,7 @@ H =
 $$
 
 With the **discriminant** $D = f_{xx} f_{yy} - (f_{xy})^2$:
+
 - $D > 0$ and $f_{xx} > 0$: local minimum.
 - $D > 0$ and $f_{xx} < 0$: local maximum.
 - $D < 0$: saddle point.
@@ -79,11 +82,13 @@ where $\lambda$ is a scalar (the Lagrange multiplier). Solve the system of equat
 $$
 \nabla f - \lambda \nabla g = 0
 $$
+
 and the constraint $g(x, y, z) = 0$.
 
 ---
 
 > [!summary] **Summary**
+
 - Find critical points by setting $\nabla f = \mathbf{0}$.
 - Use the Hessian matrix and eigenvalues (or discriminant for two variables) to classify critical points.
 - Apply Lagrange multipliers for constrained optimization problems.

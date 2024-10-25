@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { Pseudocode as CommunityPseudocode } from "quartz-pseudocode"
 import { Staticrypt } from "./quartz/password"
 
 /**
@@ -62,6 +63,7 @@ const config: QuartzConfig = {
 
   plugins: {
     transformers: [
+      CommunityPseudocode(),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"],
