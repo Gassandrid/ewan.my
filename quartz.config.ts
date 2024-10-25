@@ -75,6 +75,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.RunPythonPlugin(),
+      Plugin.Tabs(),
     ],
 
     filters: [Plugin.RemoveDrafts()],
