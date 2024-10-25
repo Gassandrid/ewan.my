@@ -473,3 +473,35 @@ audio::-webkit-media-controls-timeline:hover {
 .close-output-btn:hover {
   color: #ff79c6;
 }
+
+// light/dark mode toggle for the latex pseudocode block.
+// add color toggle to elements of classes:
+// ps-root, ps-code, ps-line, ps-block, etc
+
+[saved-theme="dark"] .ps-root,
+ps-code,
+ps-line,
+ps-algorithm,
+ps-block {
+  color: var(--shiki-dark);
+}
+
+[saved-theme="light"] .ps-root,
+ps-code,
+ps-line,
+ps-algorithm,
+ps-block {
+  color: var(--shiki-light);
+}
+
+[saved-theme="light"] .ps-root,
+.ps-algorithm {
+  border-top: 3px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+[saved-theme="dark"] .ps-root,
+.ps-algorithm {
+  border-top: 3px solid #2d2d2d;
+  border-bottom: 2px solid #2d2d2d;
+}
