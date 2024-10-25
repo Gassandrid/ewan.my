@@ -9,7 +9,7 @@ tags:
 > CS2210
 > 10 • 23 • 2024
 
-*[online doc version](https://gassandrid.xyz/Notes/Computer-Organization/Lab-Documents/Lab-06---Storing-the-Data) for*
+*[online doc version](https://gassandrid.xyz/Notes/Computer-Organization/Lab-Documents/Lab-06---Storing-the-Data), as markdown always seems to compile to pdf weirdly*
 
 ---
 
@@ -22,7 +22,7 @@ tags:
 ## 15.  Run the Flask app and view the page in the browser. Ensure that the correct temperature data is displayed. **Take a screenshot** of your web page displayed in the browser.
 
 >[!Info]- Photo
-> ![[Screenshot 2024-10-10 at 7.17.05 PM.png]]
+> ![[Screenshot 2024-10-25 at 6.10.34 PM.png]]
 
 ---
 
