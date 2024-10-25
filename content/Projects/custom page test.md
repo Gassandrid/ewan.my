@@ -1,0 +1,376 @@
+---
+id: custom page test
+aliases: []
+tags: []
+---
+
+<style>
+  :root {
+	--bg-primary: #000000;
+	--bg-secondary: #111111;
+	--text-primary: #ffffff;
+	--text-secondary: #cccccc;
+	--glow-1: #ff00ff;
+	--glow-2: #00ffff;
+	--glow-3: #ffff00;
+  }
+  body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: var(--text-primary);
+	background-color: var(--bg-primary);
+	margin: 0;
+	padding: 0;
+  }
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  header {
+	background-color: var(--bg-secondary);
+	padding: 20px 0;
+	text-align: center;
+  }
+  h1 {
+	color: var(--text-primary);
+	margin: 0;
+  }
+  .intro {
+	font-style: italic;
+	color: var(--text-secondary);
+	margin-top: 10px;
+  }
+  nav {
+	background-color: var(--bg-secondary);
+	padding: 10px 0;
+  }
+  nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+  }
+  nav ul li {
+	margin: 0 15px;
+  }
+  nav ul li a {
+	color: var(--text-primary);
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+	position: relative;
+	overflow: hidden;
+  }
+  nav ul li a:hover {
+	color: var(--text-secondary);
+  }
+  .content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+	padding: 40px 0;
+  }
+  .card {
+	background-color: var(--bg-secondary);
+	border-radius: 8px;
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s ease;
+	position: relative;
+	overflow: hidden;
+  }
+  .card:hover {
+	transform: translateY(-5px);
+  }
+  .card::before,
+  nav ul li a::before,
+  .social-links a::before {
+	content: "";
+	position: absolute;
+	inset: -5px;
+	background: conic-gradient(
+	  from var(--angle),
+	  var(--glow-1),
+	  var(--glow-2),
+	  var(--glow-3),
+	  var(--glow-1)
+	);
+	filter: blur(15px);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+  }
+  .card:hover::before,
+  nav ul li a:hover::before,
+  .social-links a:hover::before {
+	opacity: 1;
+	animation:
+	  rotate 2s linear infinite,
+	  glow-start 0.5s ease-out;
+  }
+  .card::after {
+	content: "";
+	position: absolute;
+	inset: 2px;
+	background: var(--bg-secondary);
+	border-radius: 8px;
+	z-index: 1;
+  }
+  .card svg {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+	fill: var(--text-primary);
+	position: relative;
+	z-index: 2;
+  }
+  .card img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-bottom: 15px;
+	position: relative;
+	z-index: 2;
+  }
+  .card h2 {
+	color: var(--text-primary);
+	margin-top: 0;
+	position: relative;
+	z-index: 2;
+  }
+  .card p {
+	color: var(--text-secondary);
+	position: relative;
+	z-index: 2;
+  }
+  footer {
+	background-color: var(--bg-secondary);
+	text-align: center;
+	padding: 20px 0;
+	margin-top: 40px;
+  }
+  .social-links {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 20px;
+  }
+  .social-links a {
+	color: var(--text-primary);
+	transition: color 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	padding: 5px;
+  }
+  .social-links a:hover {
+	color: var(--text-secondary);
+  }
+  .social-links svg {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	z-index: 2;
+  }
+  @keyframes rotate {
+	0% {
+	  --angle: 0deg;
+	}
+	100% {
+	  --angle: 360deg;
+	}
+  }
+  @keyframes glow-start {
+	0% {
+	  opacity: 0;
+	  clip-path: polygon(
+		var(--x) var(--y),
+		var(--x) var(--y),
+		var(--x) var(--y)
+	  );
+	}
+	100% {
+	  opacity: 1;
+	  clip-path: polygon(-50% -50%, 150% -50%, 150% 150%, -50% 150%);
+	}
+  }
+  @property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+  }
+</style>
+<header>
+  <div class="container">
+	<h1>Ewan Pedersen</h1>
+	<p class="intro">Complete Notebook For Most of My Classes</p>
+  </div>
+</header>
+
+    <main class="container">
+      <section id="notebook" class="content">
+        <a
+          href="/Statistics Index.html"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="card">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <h2>Statistics</h2>
+            <p>Statistics Notebook</p>
+          </div>
+        </a>
+      </section>
+
+      <section id="notebook" class="content">
+        <a
+          href="./place.html"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="card">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <h2>Calculus 3</h2>
+            <p>Pixel Canvas Test</p>
+          </div>
+        </a>
+      </section>
+
+      <section id="notebook" class="content">
+        <a
+          href="./Stats/statistics-index.html"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="card">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <h2>Artificial Intelligence</h2>
+            <p>AI Notebook</p>
+          </div>
+        </a>
+      </section>
+
+    <footer>
+      <div class="container">
+        <p>Connect with me:</p>
+        <div class="social-links">
+          <a
+            href="https://github.com/gassandrid"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              ></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:your.email@example.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelectorAll(".card, nav a, .social-links a")
+        .forEach((element) => {
+          element.addEventListener("mousemove", function (e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            this.style.setProperty("--x", `${x}px`);
+            this.style.setProperty("--y", `${y}px`);
+          });
+        });
+    </script>
