@@ -1,9 +1,18 @@
 also seems to break syntax highlighter, though should be an easy fix
 
+not runnable:
+
 ```python
 print("hello world")
 ```
 
+runnable
+
+```python-r
+print("hello world")
+```
+
+title test
 
 ```ts title="quartz.layout.ts"
 console.log("hello")
@@ -11,7 +20,7 @@ console.log("hello")
 
 matplotlib test m
 
-```python
+```python-r
 import matplotlib.pyplot as plt
 import numpy as np
 
