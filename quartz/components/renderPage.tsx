@@ -227,15 +227,15 @@ export function renderPage(
                     <HeaderComponent {...componentData} />
                   ))}
                 </Header>
-                <div class="popover-hint, popover-hint-ewan">
-                  {slug === "index"
-                    ? beforeBody
-                        .filter(
-                          (BodyComponent) =>
-                            BodyComponent.name === "Breadcrumbs" || BodyComponent.name === "Row",
-                        )
-                        .map((BodyComponent) => <BodyComponent {...componentData} />)
-                    : beforeBody.map((BodyComponent) => <BodyComponent {...componentData} />)}
+                <div class="popover-hint popover-hint-ewan">
+                  {beforeBody.slice(0, 2).map((BodyComponent) => (
+                    <BodyComponent {...componentData} />
+                  ))}
+                  <div style={{ width: "100%" }} class="ewan-divider"></div>
+                  {slug !== "index" &&
+                    beforeBody
+                      .slice(2)
+                      .map((BodyComponent) => <BodyComponent {...componentData} />)}
                 </div>
               </div>
               <Content {...componentData} />

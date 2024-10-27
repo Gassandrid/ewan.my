@@ -154,10 +154,15 @@ audio::-webkit-media-controls-panel {
   width: 100%; /* Ensures these elements span the full width of the container */
 }
 
-.article-title {
+.ewan-divider {
+  width: 100%;
+  // 0.5 margin on top and 2 on bottom
+  margin: 0.5rem 0 2rem;
   border-top: 1px solid var(--darkgray);
-  margin-top: 0.5rem;
-  padding-top: 2rem;
+}
+
+.article-title {
+  margin: 0;
 }
 
 .forced-column {

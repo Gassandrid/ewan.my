@@ -148,10 +148,6 @@ export const defaultListPageLayout: PageLayout = {
     Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
     Component.ArticleTitle(),
   ],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
-  ],
+  left: [Component.MobileOnly(Component.Spacer())],
   right: [],
 }
