@@ -165,6 +165,11 @@ audio::-webkit-media-controls-panel {
   margin: 0;
 }
 
+// for a div with class graph AND desktop-only, set width to 100%
+.graph.desktop-only {
+  width: 100%;
+}
+
 .forced-column {
   flex: 1;
   display: flex;

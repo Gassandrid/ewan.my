@@ -76,7 +76,33 @@ export const defaultContentPageLayout: PageLayout = {
     //   { titles: [homePageTitle, mapTitle] },
     //   Component.DesktopOnly(Component.RecentNotes({ title: "Most recent", limit: 5 })),
     // ),
+    Component.DesktopOnly(
+      Component.Graph({
+        localGraph: {
+          linkDistance: 50,
+        },
+        globalGraph: {
+          linkDistance: 50,
+        },
+      }),
+    ),
+  ],
+  right: [
+    Component.DesktopOnly(Component.TagList()),
 
+    Component.MobileOnly(
+      Component.Graph({
+        localGraph: {
+          linkDistance: 50,
+        },
+        globalGraph: {
+          linkDistance: 50,
+        },
+      }),
+    ),
+
+    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Backlinks(),
     Component.DesktopOnly(
       Component.Explorer({
         title: "Explore",
@@ -98,19 +124,6 @@ export const defaultContentPageLayout: PageLayout = {
         },
       }),
     ),
-  ],
-  right: [
-    Component.DesktopOnly(Component.TagList()),
-    Component.Graph({
-      localGraph: {
-        linkDistance: 50,
-      },
-      globalGraph: {
-        linkDistance: 50,
-      },
-    }),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
     Component.MobileOnly(
       Component.RecentNotes({
         title: "Most recent",
