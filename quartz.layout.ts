@@ -61,21 +61,21 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
+    Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.MobileOnly(Component.TagList()),
   ],
   left: [
-    Component.PageTitle(),
+    // Component.PageTitle(),
 
-    Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
     // Component.Search(),
     // Component.Darkmode(),
 
-    Component.OnlyFor(
-      { titles: [homePageTitle, mapTitle] },
-      Component.DesktopOnly(Component.RecentNotes({ title: "Most recent", limit: 5 })),
-    ),
+    // Component.OnlyFor(
+    //   { titles: [homePageTitle, mapTitle] },
+    //   Component.DesktopOnly(Component.RecentNotes({ title: "Most recent", limit: 5 })),
+    // ),
 
     Component.DesktopOnly(
       Component.Explorer({
@@ -143,7 +143,11 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle()],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
+    Component.ArticleTitle(),
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),

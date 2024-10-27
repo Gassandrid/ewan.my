@@ -124,7 +124,7 @@ audio::-webkit-media-controls-panel {
   flex: 1;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end; // Align to the left
   // gap: 2rem;
   top: 0;
   // width: initial;
@@ -137,9 +137,27 @@ audio::-webkit-media-controls-panel {
   .minibutton {
     margin: 0.4rem;
   }
-  @media all and (max-width: $fullPageWidth) {
-    justify-content: flex-end;
-  }
+}
+
+.popover-hint:has(.breadcrumbs-container, .forced-row) {
+  display: flex;
+  flex-wrap: wrap; /* Allows elements to wrap to the next line if needed */
+}
+
+.breadcrumbs-container,
+.forced-row {
+  flex: 1; /* Adjusts width as needed */
+}
+
+.article-title,
+.content-meta {
+  width: 100%; /* Ensures these elements span the full width of the container */
+}
+
+.article-title {
+  border-top: 1px solid var(--darkgray);
+  margin-top: 0.5rem;
+  padding-top: 2rem;
 }
 
 .forced-column {
@@ -584,18 +602,6 @@ ps-block {
   color: var(--shiki-light);
 }
 
-[saved-theme="light"] .ps-root,
-.ps-algorithm {
-  border-top: 3px solid #f0f0f0;
-  border-bottom: 2px solid #f0f0f0;
-}
-
-[saved-theme="dark"] .ps-root,
-.ps-algorithm {
-  border-top: 3px solid #2d2d2d;
-  border-bottom: 2px solid #2d2d2d;
-}
-
 [saved-theme="light"] .cm-s-dracula .CodeMirror-gutters,
 .cm-s-dracula.CodeMirror {
   background-color: #f3f3f3;
@@ -604,4 +610,19 @@ ps-block {
 [saved-theme="dark"] .cm-s-dracula .CodeMirror-gutters,
 .cm-s-dracula.CodeMirror {
   background-color: #282a36;
+}
+
+// main center border with light/dark mode
+// square
+[saved-theme="dark"] .center {
+  border: 1px solid var(--darkgray);
+}
+
+[saved-theme="light"] .center {
+  border: 1px solid var(--darkgray);
+}
+
+.center {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
 }

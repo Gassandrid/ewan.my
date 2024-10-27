@@ -228,8 +228,14 @@ export function renderPage(
                   ))}
                 </Header>
                 <div class="popover-hint">
-                  {slug !== "index" &&
-                    beforeBody.map((BodyComponent) => <BodyComponent {...componentData} />)}
+                  {slug === "index"
+                    ? beforeBody
+                        .filter(
+                          (BodyComponent) =>
+                            BodyComponent.name === "Breadcrumbs" || BodyComponent.name === "Row",
+                        )
+                        .map((BodyComponent) => <BodyComponent {...componentData} />)
+                    : beforeBody.map((BodyComponent) => <BodyComponent {...componentData} />)}
                 </div>
               </div>
               <Content {...componentData} />
