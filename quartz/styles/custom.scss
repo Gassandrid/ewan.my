@@ -139,7 +139,7 @@ audio::-webkit-media-controls-panel {
   }
 }
 
-.popover-hint:has(.breadcrumbs-container, .forced-row) {
+.popover-hint-ewan:has(.breadcrumbs-container, .forced-row) {
   display: flex;
   flex-wrap: wrap; /* Allows elements to wrap to the next line if needed */
 }

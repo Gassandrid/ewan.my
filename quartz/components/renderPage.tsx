@@ -227,7 +227,7 @@ export function renderPage(
                     <HeaderComponent {...componentData} />
                   ))}
                 </Header>
-                <div class="popover-hint">
+                <div class="popover-hint, popover-hint-ewan">
                   {slug === "index"
                     ? beforeBody
                         .filter(
