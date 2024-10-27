@@ -595,3 +595,13 @@ ps-block {
   border-top: 3px solid #2d2d2d;
   border-bottom: 2px solid #2d2d2d;
 }
+
+[saved-theme="light"] .cm-s-dracula .CodeMirror-gutters,
+.cm-s-dracula.CodeMirror {
+  background-color: #f3f3f3;
+}
+
+[saved-theme="dark"] .cm-s-dracula .CodeMirror-gutters,
+.cm-s-dracula.CodeMirror {
+  background-color: #282a36;
+}

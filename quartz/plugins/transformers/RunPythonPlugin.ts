@@ -43,7 +43,7 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
     return [
       () => (tree: Root, _file) => {
         visit(tree, "code", (node, index, parent) => {
-          if (node.lang === "python" && parent?.children) {
+          if (node.lang === "python-r" && parent?.children) {
             const id = `${Math.random().toString(36).substr(2, 9)}`
 
             // Assemble the entire HTML content as a string

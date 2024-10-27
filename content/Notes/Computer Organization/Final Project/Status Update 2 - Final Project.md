@@ -4,8 +4,6 @@ aliases: []
 tags: []
 ---
 
-# Final Project Status Update
-
 > [!abstract] Student Information
 > Ewan Pedersen
 > CS2210
