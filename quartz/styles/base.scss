@@ -111,25 +111,21 @@ a {
 
 .desktop-only {
   display: initial;
-  @media all and (max-width: $fullPageWidth) {
+  @media all and ($mobile) {
     display: none;
   }
 }
 
 .mobile-only {
   display: none;
-  @media all and (max-width: $fullPageWidth) {
+  @media all and ($mobile) {
     display: initial;
   }
 }
 
 .page {
-  @media all and (max-width: $fullPageWidth) {
-    margin: 0 auto;
-    padding: 0 1rem;
-    max-width: $pageWidth;
-  }
-
+  max-width: calc(#{map-get($breakpoints, desktop)} + 300px);
+  margin: 0 auto;
   & article {
     & > h1 {
       font-size: 2rem;
@@ -157,12 +153,6 @@ a {
   }
 
   & > #quartz-body {
-<<<<<<< HEAD
-    width: 100%;
-    display: flex;
-    @media all and (max-width: $fullPageWidth) {
-      flex-direction: column;
-=======
     display: grid;
     grid-template-columns: #{map-get($desktopGrid, templateColumns)};
     grid-template-rows: #{map-get($desktopGrid, templateRows)};
@@ -189,44 +179,43 @@ a {
     }
     @media all and ($mobile) {
       margin: 0 auto;
->>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
     }
 
     & .sidebar {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
       gap: 2rem;
       top: 0;
-      width: $sidePanelWidth;
-      margin-top: $topSpacing;
       box-sizing: border-box;
-      padding: 0 4rem;
-      position: fixed;
-      @media all and (max-width: $fullPageWidth) {
-        position: initial;
-        flex-direction: row;
+      padding: $topSpacing 2rem 2rem 2rem;
+      display: flex;
+      height: 100vh;
+      position: sticky;
+    }
+
+    // for all layout except desktop overide the height and padding of sidebar
+    @media not ($desktop) {
+      & .sidebar {
         padding: 0;
-        width: initial;
-        margin-top: 2rem;
+        height: auto;
       }
     }
 
     & .sidebar.left {
-      left: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
-      @media all and (max-width: $fullPageWidth) {
+      z-index: 1;
+      grid-area: grid-sidebar-left;
+      flex-direction: column;
+      @media all and ($mobile) {
         gap: 0;
         align-items: center;
+        position: initial;
+        display: flex;
+        height: unset;
+        flex-direction: row;
+        padding: 0;
+        padding-top: 2rem;
       }
     }
 
     & .sidebar.right {
-<<<<<<< HEAD
-      right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
-      flex-wrap: wrap;
-      & > * {
-        @media all and (max-width: $fullPageWidth) {
-=======
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
@@ -241,40 +230,35 @@ a {
         flex-direction: row;
         padding: 0;
         & > * {
->>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
           flex: 1;
-          min-width: 140px;
+        }
+        & > .toc {
+          display: none;
         }
       }
     }
-  }
-
-  & .page-header,
-  & .page-footer {
-    width: $pageWidth;
-    margin-top: 1rem;
-
-    @media all and (max-width: $fullPageWidth) {
-      width: initial;
+    & .page-header,
+    & .page-footer {
+      margin-top: 1rem;
     }
-  }
 
-  & .page-header {
-    margin: $topSpacing auto 0 auto;
-    @media all and (max-width: $fullPageWidth) {
-      margin-top: 2rem;
+    & .page-header {
+      grid-area: grid-header;
+      margin: $topSpacing 0 0 0;
+      @media all and ($mobile) {
+        margin-top: 0;
+        padding: 0;
+      }
     }
-  }
 
-<<<<<<< HEAD
-  & .center,
-  & footer {
-    margin-left: auto;
-    margin-right: auto;
-    width: $pageWidth;
-    @media all and (max-width: $fullPageWidth) {
-      width: initial;
-=======
+    & .center > article {
+      grid-area: grid-center;
+    }
+
+    & footer {
+      grid-area: grid-footer;
+    }
+
     & .center,
     & footer {
       max-width: 100%;
@@ -290,9 +274,7 @@ a {
       }
     }
     & footer {
->>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
       margin-left: 0;
-      margin-right: 0;
     }
   }
 }

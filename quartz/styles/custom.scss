@@ -79,9 +79,10 @@ body[data-slug="thoughts/craft"] {
     grid-area: 4 / 1 / 4 / 3;
   }
 
-  @media all and (max-width: $fullPageWidth) {
+  @media all and not ($desktop) {
     display: flex !important;
   }
+  // using new variables and grid layout from variables.scss
 }
 
 hr {
@@ -183,7 +184,7 @@ audio::-webkit-media-controls-panel {
   .darkmode {
     margin: 0.4rem;
   }
-  @media all and (max-width: $fullPageWidth) {
+  @media all and ($desktop) {
     justify-content: flex-end;
   }
 }
@@ -632,7 +633,38 @@ ps-block {
   border: 1px solid var(--darkgray);
 }
 
-.center {
-  margin: 2rem auto;
-  padding: 1rem 2rem;
+/* .center { */
+/*   box-sizing: border-box; */
+/*   padding: 1rem 2rem; */
+/*   margin-top: 2rem; */
+/* } */
+/**/
+@media not ($desktop) {
+  .page > #quartz-body {
+    padding: 3em;
+  }
+}
+
+// give all contents of center a margin of 1rem
+.center > * {
+  margin: 1rem;
+}
+
+.page > #quartz-body .page-header {
+  margin: 1rem;
+}
+
+@media ($desktop) {
+  .page > #quartz-body .center {
+    margin-top: 2.5rem;
+  }
+}
+
+@media not ($desktop) {
+  .page {
+    max-width: 980px;
+  }
+  .page > #quartz-body .sidebar {
+    pading: 0;
+  }
 }
