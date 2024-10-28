@@ -65,7 +65,11 @@
       height: 80vh;
       width: 80vw;
 
+<<<<<<< HEAD
       @media all and (max-width: $fullPageWidth) {
+=======
+      @media all and not ($desktop) {
+>>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
         width: 90%;
       }
     }

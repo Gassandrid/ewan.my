@@ -157,10 +157,39 @@ a {
   }
 
   & > #quartz-body {
+<<<<<<< HEAD
     width: 100%;
     display: flex;
     @media all and (max-width: $fullPageWidth) {
       flex-direction: column;
+=======
+    display: grid;
+    grid-template-columns: #{map-get($desktopGrid, templateColumns)};
+    grid-template-rows: #{map-get($desktopGrid, templateRows)};
+    column-gap: #{map-get($desktopGrid, columnGap)};
+    row-gap: #{map-get($desktopGrid, rowGap)};
+    grid-template-areas: #{map-get($desktopGrid, templateAreas)};
+    @media all and ($tablet) {
+      grid-template-columns: #{map-get($tabletGrid, templateColumns)};
+      grid-template-rows: #{map-get($tabletGrid, templateRows)};
+      column-gap: #{map-get($tabletGrid, columnGap)};
+      row-gap: #{map-get($tabletGrid, rowGap)};
+      grid-template-areas: #{map-get($tabletGrid, templateAreas)};
+    }
+    @media all and ($mobile) {
+      grid-template-columns: #{map-get($mobileGrid, templateColumns)};
+      grid-template-rows: #{map-get($mobileGrid, templateRows)};
+      column-gap: #{map-get($mobileGrid, columnGap)};
+      row-gap: #{map-get($mobileGrid, rowGap)};
+      grid-template-areas: #{map-get($mobileGrid, templateAreas)};
+    }
+
+    @media all and not ($desktop) {
+      padding: 0 1rem;
+    }
+    @media all and ($mobile) {
+      margin: 0 auto;
+>>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
     }
 
     & .sidebar {
@@ -192,10 +221,27 @@ a {
     }
 
     & .sidebar.right {
+<<<<<<< HEAD
       right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
       flex-wrap: wrap;
       & > * {
         @media all and (max-width: $fullPageWidth) {
+=======
+      grid-area: grid-sidebar-right;
+      margin-right: 0;
+      flex-direction: column;
+      @media all and ($mobile) {
+        margin-left: inherit;
+        margin-right: inherit;
+      }
+      @media all and not ($desktop) {
+        position: initial;
+        height: unset;
+        width: 100%;
+        flex-direction: row;
+        padding: 0;
+        & > * {
+>>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
           flex: 1;
           min-width: 140px;
         }
@@ -220,6 +266,7 @@ a {
     }
   }
 
+<<<<<<< HEAD
   & .center,
   & footer {
     margin-left: auto;
@@ -227,6 +274,23 @@ a {
     width: $pageWidth;
     @media all and (max-width: $fullPageWidth) {
       width: initial;
+=======
+    & .center,
+    & footer {
+      max-width: 100%;
+      min-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      @media all and ($tablet) {
+        margin-right: 0;
+      }
+      @media all and ($mobile) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+    & footer {
+>>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
       margin-left: 0;
       margin-right: 0;
     }

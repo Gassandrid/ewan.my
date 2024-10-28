@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+@use "../../styles/variables.scss" as *;
+
+.toc {
+  display: flex;
+  flex-direction: column;
+
+  &.desktop-only {
+    max-height: 40%;
+  }
+}
+
+@media all and not ($mobile) {
+  .toc {
+    display: flex;
+  }
+}
+
+>>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
 button#toc {
   background-color: transparent;
   border: none;

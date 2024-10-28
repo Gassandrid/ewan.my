@@ -17,4 +17,17 @@
       }
     }
   }
+<<<<<<< HEAD
+=======
+
+  & > .overflow {
+    &:after {
+      display: none;
+    }
+    height: auto;
+    @media all and not ($desktop) {
+      height: 250px;
+    }
+  }
+>>>>>>> 1d2dc167f4397e230092cc867889a86734343cfc
 }
