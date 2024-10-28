@@ -1,0 +1,75 @@
+---
+tags:
+  - math
+  - neuroscience
+date: 2024-10-28
+---
+*study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)*
+
+## Abstract
+
+This video covers **Dynamical Systems Theory**, and how it can be used to model the behavior of systems in which time is a factor.
+
+Looking at a Neuron, how can we apply this?
+
+> [!Info]+ Graphic
+> ![[Screenshot 2024-10-28 at 12.17.24 PM.png|350]]
+
+**Neurons are temporal computers**. Unlike the contrary, neurons don't only have "inputs" and "outputs" as factors, but also what that neuron was doing **1 millisecond ago, 1 second ago, or even minutes before**.
+
+This is exactly what **Dynamical Systems Theory** is all about. This will cover differential equations, limit cycles, equilibrium points, and phase portraits.
+
+We will learn the fundamentals in this note, and later apply it to **Neuronal Dynamics**
+
+---
+
+## State Variables
+
+At its core, **Dynamical Systems Theory** is about studying things that change. This can be anything from a neuron firing, to a population of bacteria, or even a leaf floating in the water. 
+
+> [!Warning]
+> The KEY is having a way to describe the system state at any given point.
+
+This is where **state** variables come into play. We use state variables to track the most important aspects of a phenomena. They will be **real numbers** used to **fully** describe the state of a system.
+
+Let's take an example of a **ball in motion**
+
+> [!Example]+ 
+> A ball is in motion within a 3d plane of existence. What are its **state variables**?
+
+> [!Success]- Solution
+> Motion in the 3D requires **6** variables:
+>  - 3 for the **Position Vector** of the ball, `x,y,z`
+>  - 3 for the **Velocity/Direction Vector** of the ball, also `x,y,z`
+>
+> > [!Info] Sketch
+> > ![[Screenshot 2024-10-28 at 12.29.43 PM.png|350]]
+
+But this can range depending both on what you are examining, but **also** on what you ACTUALLY care about. Let's explain
+
+
+
+
+---
+
+## Differential Equations
+
+---
+
+## Numerical Solutions
+
+---
+
+## Predator - Prey Model
+
+---
+
+## Phase Portraits
+
+---
+
+## Equilibrium Points & Stability
+
+---
+
+## Limit Cycles
