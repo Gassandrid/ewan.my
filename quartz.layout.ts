@@ -110,13 +110,13 @@ export const defaultContentPageLayout: PageLayout = {
       }),
     ),
 
-    Component.MobileOnly(
-      Component.RecentNotes({
-        title: "Most recent",
-        limit: 5,
-      }),
-    ),
-
+    // Component.MobileOnly(
+    //   Component.RecentNotes({
+    //     title: "Most recent",
+    //     limit: 5,
+    //   }),
+    // ),
+    //
     Component.MobileOnly(
       Component.Explorer({
         title: "Explore",

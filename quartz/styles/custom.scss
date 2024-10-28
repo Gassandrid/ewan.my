@@ -633,15 +633,13 @@ ps-block {
   border: 1px solid var(--darkgray);
 }
 
-/* .center { */
-/*   box-sizing: border-box; */
-/*   padding: 1rem 2rem; */
-/*   margin-top: 2rem; */
-/* } */
-/**/
+// media not desktop or mobile
+
 @media not ($desktop) {
-  .page > #quartz-body {
-    padding: 3em;
+  @media not ($mobile) {
+    .page > #quartz-body {
+      padding: 3em;
+    }
   }
 }
 
@@ -674,4 +672,10 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+@media ($mobile) {
+  .page > #quartz-body {
+    padding: 1rem;
+  }
 }
