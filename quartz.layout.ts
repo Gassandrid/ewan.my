@@ -64,7 +64,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.MobileOnly(Component.TagList()),
+    Component.TagList(),
   ],
   left: [
     // Component.PageTitle(),
@@ -86,8 +86,6 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ],
   right: [
-    Component.DesktopOnly(Component.TagList()),
-
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
     Component.DesktopOnly(
@@ -111,12 +109,14 @@ export const defaultContentPageLayout: PageLayout = {
         },
       }),
     ),
+
     Component.MobileOnly(
       Component.RecentNotes({
         title: "Most recent",
         limit: 5,
       }),
     ),
+
     Component.MobileOnly(
       Component.Explorer({
         title: "Explore",
