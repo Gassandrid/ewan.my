@@ -31,7 +31,12 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
           contentType: "external",
         },
         {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css",
+          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-palenight.min.css",
+          loadTime: "beforeDOMReady", // Same here, styles should be ready early
+          contentType: "external",
+        },
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/base16-light.min.css",
           loadTime: "beforeDOMReady", // Same here, styles should be ready early
           contentType: "external",
         },
@@ -273,7 +278,8 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-palenight.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/base16-light.min.css" />
 <script>
     // make sure scripts are loaded before running the code
     if (typeof CodeMirror === 'undefined') {
@@ -298,11 +304,13 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
 
     // Initialize CodeMirror editor
     const editor${id} = CodeMirror.fromTextArea(codeTextarea${id}, {
-        mode: 'python',
-        theme: 'dracula',
-        lineNumbers: true,
-        lineWrapping: true,
-        readOnly: false,
+      mode: 'python',
+      theme: 'material-palenight',
+      lineNumbers: true,
+      lineWrapping: true,
+      readOnly: false,
+      // dont have any color set for the backrground color, as we are handling that out of _file
+      style: 'background-color: auto',
     });
 
     // update expand button icon based on isExpanded${id}

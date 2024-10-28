@@ -47,6 +47,18 @@ Let's take an example of a **ball in motion**
 
 But this can range depending both on what you are examining, but **also** on what you ACTUALLY care about. Let's explain
 
+> [!Example]+ 
+> State variables can range, even for objects that we would consider to be in a 3d space.
+>  
+> Like the ball in motion, a pendulum has some observed motion over time, but what state variable **do we actually care about?**
+>
+> Well it turns out we only really need 2, if we only care about observing the "important" repeating motion of the pendulum that we all know, even though it also has a direction and postion vector like the ball.
+> 
+> > [!Info]- Graphic
+> > ![[Screenshot 2024-10-28 at 1.25.23 PM.png|350]]
+> 
+
+The importance of this is that even though there might be other state variables that we can account for in our calculations, it is oftentimes unnecessary for what we are trying to find. And for extremely complex systems like neurons, it is vital to make sure we are only observing the state variables that matter to us.
 
 
 

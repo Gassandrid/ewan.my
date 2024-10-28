@@ -612,16 +612,16 @@ ps-algorithm,
 ps-block {
   color: var(--shiki-light);
 }
-
-[saved-theme="light"] .cm-s-dracula .CodeMirror-gutters,
-.cm-s-dracula.CodeMirror {
-  background-color: #f3f3f3;
-}
-
-[saved-theme="dark"] .cm-s-dracula .CodeMirror-gutters,
-.cm-s-dracula.CodeMirror {
-  background-color: #282a36;
-}
+/**/
+/* [saved-theme="light"] .cm-s-dracula .CodeMirror-gutters, */
+/* .cm-s-dracula.CodeMirror { */
+/*   background-color: #f3f3f3; */
+/* } */
+/**/
+/* [saved-theme="dark"] .cm-s-dracula .CodeMirror-gutters, */
+/* .cm-s-dracula.CodeMirror { */
+/*   background-color: #282a36; */
+/* } */
 
 // main center border with light/dark mode
 // square

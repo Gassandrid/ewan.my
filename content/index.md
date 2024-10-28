@@ -106,7 +106,6 @@ title: Home Page
 >
 </div>
 
-
 # Hello! My name is Ewan
 
 I am a second year student at the [[University Of Vermont]] studying computer science and robotics. I have a big passion and desire to specialize in [[Artificial Intelligence]] and [[Mathematics]], but I also take part in a wide variety of other Computer Science fields.
@@ -128,7 +127,8 @@ Currently invested in learning Golang, not just as a language but as a Web Frame
 **[[DARS]] - Dormitory Automated Residential System**
 
 A model replica of TARS from interstellar, built for the purpose of mapping natural human language to discrete functional output through the use of LLM's and microcontrollers.
-## About me ⛵️
+
+## About Me ⛵️
 
 Outside of Computer Science, my main interests are [[Sailing]], [[Health|Health/Fitness]], and [[Woodwork]]/Engineering
 
@@ -143,10 +143,9 @@ I love building and tinkering! While doing some construction work, I found a int
 > *me having a little too much fun mixing cement!*
 
 I love to chat about philosophy! Let's start a conversation!
-## About this garden 🪴
+
+## About This Garden 🪴
 
 This is my version of what is called a [[Digital Garden]]( and yes, every digital garden mentions what a digital garden is)
 
-You can navigate this garden by using the [[map]](or clicking the map icon in the top right), using `CMD+K` or `CRTL+K` to pull up the page search,
-
-🌊waaaaaave🌊
+You can navigate this garden by using the [[map]](or clicking the map icon in the top right), using `CMD+K` or `CRTL+K` to pull up the page search, or by clicking a tag/folder like <a href="/Notes">Notes</a>
