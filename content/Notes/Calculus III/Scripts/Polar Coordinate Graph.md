@@ -9,7 +9,7 @@ This script demonstrates polar and Cartesian coordinates, annotating both the ra
 
 ## Code
 
-```python
+```python-r
 import micropip
 await micropip.install("matplotlib")
 await micropip.install("numpy")
