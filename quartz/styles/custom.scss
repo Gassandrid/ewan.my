@@ -668,3 +668,10 @@ ps-block {
     pading: 0;
   }
 }
+
+// have all the UL elements inside the footer be aligned to the center
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
