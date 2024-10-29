@@ -34,7 +34,7 @@ This is where **state** variables come into play. We use state variables to trac
 
 Let's take an example of a **ball in motion**
 
-> [!Example]+ 
+> [!Example]
 > A ball is in motion within a 3d plane of existence. What are its **state variables**?
 
 > [!Success]- Solution
@@ -47,7 +47,7 @@ Let's take an example of a **ball in motion**
 
 But this can range depending both on what you are examining, but **also** on what you ACTUALLY care about. Let's explain
 
-> [!Example]+ 
+> [!Example]
 > State variables can range, even for objects that we would consider to be in a 3d space.
 >  
 > Like the ball in motion, a pendulum has some observed motion over time, but what state variable **do we actually care about?**
