@@ -40,13 +40,3 @@ Perhaps everyone's first thought about Africa is all the cool wildlife and Eleph
 ![[IMG_2326.jpeg]]
 
 > *The goat and a baby elephant*
-
-![[Calvin Article.pdf]]
-
-
-```query
-multivariable
-```
-
-
-

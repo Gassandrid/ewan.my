@@ -12,8 +12,7 @@ This video covers **Dynamical Systems Theory**, and how it can be used to model 
 
 Looking at a Neuron, how can we apply this?
 
-> [!Info]+ Graphic
-> ![[Screenshot 2024-10-28 at 12.17.24 PM.png|350]]
+![[Screenshot 2024-10-28 at 12.17.24 PM.png|350]]
 
 **Neurons are temporal computers**. Unlike the contrary, neurons don't only have "inputs" and "outputs" as factors, but also what that neuron was doing **1 millisecond ago, 1 second ago, or even minutes before**.
 
