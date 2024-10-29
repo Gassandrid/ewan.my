@@ -1,11 +1,7 @@
 I couldn't quite get the graph to represent what I wanted, but here is the attempt regardless. I am not annotating it much more than this, as you are welcome to check out the [[15.1.2 - Iterated Integrals#Proof of Fubini's Theorem|hand drawn reference]]
 ## Code
 
-```python
-import micropip
-await micropip.install("numpy")
-await micropip.install("matplotlib")
-
+```python-r
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
