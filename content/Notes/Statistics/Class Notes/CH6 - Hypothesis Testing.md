@@ -154,11 +154,68 @@ plt.legend()
 plt.xlabel("Values of $\hat{p}$")
 plt.ylabel("Probability Density")
 plt.grid(True)
-- [ ] plt.show()
+plt.show()
 ```
 
-**Calculations:**
+#### Calculations:
 
 $$
-Test \ Statistic = t =
+Test \ Statistic = t = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}}
 $$
+
+$$
+t = \frac{1753.9 - 2000}{819.35/\sqrt{45}} = -1.75
+$$
+
+#### Conclusions:
+
+$H_{0}: \mu \geq 2000 \leftarrow$ assumes the mean salt use per storm has not decreased.
+
+$H_{1}: \mu < 2000 \leftarrow$ assumes the mean salt use per storm has decreased.
+
+> [!Note] Understanding the Distrubtion
+> As the distribution gets further away from the null hypothesis, the probability of the null hypothesis being true decreases, as the amount of evidence increases.
+>
+> Let's label another graph
+
+```python-r
+import matplotlib.pyplot as plt
+import numpy as np
+
+mu = 0  # Mean at the center
+sigma = 1  # Standard deviation
+
+# x values and y values for the normal curve
+x = np.linspace(mu - 4 * sigma, mu + 4 * sigma, 1000)
+y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+
+# Plot the distribution curve
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, label="Normal Distribution", color='black')
+plt.title("Normal Distribution with Increasing Evidence to the Left")
+
+# Shaded regions for increasing evidence to the left of the center
+# Defining regions with decreasing widths as you move left
+evidence_regions = [(-2, -1.5), (-2.5, -2), (-3, -2.5), (-3.5, -3)]
+colors = ['lightblue', 'skyblue', 'deepskyblue', 'dodgerblue']
+
+# Loop through the regions and plot shaded areas with decreasing widths
+for i, (start, end) in enumerate(evidence_regions):
+    plt.fill_between(x, y, where=(x >= start) & (x <= end), color=colors[i], alpha=0.7,
+                     label=f"Evidence Level {i+1}")
+
+# Center line and label for increasing evidence
+plt.axvline(mu, color='black', linestyle='--', label="Center (Mean)")
+plt.text(-3.7, max(y) * 0.6, "Increasing Evidence", rotation=90, color='dodgerblue', fontsize=12)
+
+# Adding legend and labels
+plt.legend(loc="upper right")
+plt.xlabel("Values")
+plt.ylabel("Probability Density")
+plt.grid(True)
+
+# Show the plot
+plt.show()
+```
+
+The value at the point of the distribution is what we call the T-score, which is the value of the test statistic.
