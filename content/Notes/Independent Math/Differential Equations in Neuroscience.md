@@ -42,7 +42,7 @@ Let's take an example of a **ball in motion**
 >  - 3 for the **Position Vector** of the ball, `x,y,z`
 >  - 3 for the **Velocity/Direction Vector** of the ball, also `x,y,z`
 >
-> > [!Info] Sketch
+> > [!Info] Graphic
 > > 
 > > ![[Screenshot 2024-10-28 at 12.29.43 PM.png|350]]
 

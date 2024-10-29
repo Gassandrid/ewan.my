@@ -1,7 +1,9 @@
 ---
 id: CH5 - Confidence Intervals
-aliases: []
-tags: []
+aliases: 
+tags:
+  - statistics
+date: 2024-10-23
 ---
 
 For confidence intervals and the like, we need to start with a **Research Question:**
