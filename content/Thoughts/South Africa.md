@@ -5,7 +5,8 @@ tags:
 
 Most of my family comes from South Africa, as my parents(despite only meeting in the United States) are both from there!
 
->![[939F803F-A6B2-469B-B649-F152F9E18E2C.jpg]]
+![[939F803F-A6B2-469B-B649-F152F9E18E2C.jpg]]
+
 > *me in south africa, 2022*
 
 ---
@@ -20,7 +21,8 @@ For one; [[Loadshedding]]. This problem started several decades ago when the Sou
 
 I have some family in Franschhoek, which is know as wine country in South Africa. But beyond the wine produced on these farms, there is quit a beautiful landscape to be seen in the mornings.
 
-> ![[IMG_2240.jpeg]]
+![[IMG_2240.jpeg]]
+
 > *Franschhoek, South Africa*
 
 On that same morning I got another picture of my brother in the wine garden.
@@ -36,4 +38,3 @@ Perhaps everyone's first thought about Africa is all the cool wildlife and Eleph
 
 >  ![[IMG_2326.jpeg]]
 > *The goat and a baby elephant*
-
