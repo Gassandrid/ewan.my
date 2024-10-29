@@ -56,7 +56,7 @@ But this can range depending both on what you are examining, but **also** on wha
 > 
 > > [!Info] Graphic
 > > ![[Screenshot 2024-10-28 at 1.25.23 PM.png|350]]
-> > *where $\theta$ is the angle away from center and $\omega$ is its direction/velocity in a said direction, single dimension*
+> > where $\theta$ is the angle away from center and $\omega$ is its direction/velocity in a said direction, single dimension
 
 The importance of this is that even though there might be other state variables that we can account for in our calculations, it is oftentimes unnecessary for what we are trying to find. And for extremely complex systems like neurons, it is vital to make sure we are only observing the state variables that matter to us.
 
