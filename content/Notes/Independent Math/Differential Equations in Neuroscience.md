@@ -43,6 +43,7 @@ Let's take an example of a **ball in motion**
 >  - 3 for the **Velocity/Direction Vector** of the ball, also `x,y,z`
 >
 > > [!Info] Sketch
+> > 
 > > ![[Screenshot 2024-10-28 at 12.29.43 PM.png|350]]
 
 But this can range depending both on what you are examining, but **also** on what you ACTUALLY care about. Let's explain
@@ -55,6 +56,7 @@ But this can range depending both on what you are examining, but **also** on wha
 > Well it turns out we only really need 2, if we only care about observing the "important" repeating motion of the pendulum that we all know, even though it also has a direction and postion vector like the ball.
 >
 > > [!Info] Graphic
+> >
 > > ![[Screenshot 2024-10-28 at 1.25.23 PM.png|350]]
 > >
 > >where $\theta$ is the angle away from center and $\omega$ is its direction/velocity in a said direction, single dimension
