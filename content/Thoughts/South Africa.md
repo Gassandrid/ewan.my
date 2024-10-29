@@ -7,7 +7,7 @@ Most of my family comes from South Africa, as my parents(despite only meeting in
 
 ![[939F803F-A6B2-469B-B649-F152F9E18E2C.jpg]]
 
-> *me in south africa, 2022*
+> *me in South Africa, 2022*
 
 ---
 
@@ -27,7 +27,8 @@ I have some family in Franschhoek, which is know as wine country in South Africa
 
 On that same morning I got another picture of my brother in the wine garden.
 
-> ![[IMG_2243.jpeg]]
+![[IMG_2243.jpeg]]
+
 > *The goat*
 
 ---
@@ -36,5 +37,16 @@ On that same morning I got another picture of my brother in the wine garden.
 
 Perhaps everyone's first thought about Africa is all the cool wildlife and Elephants you can see on Safari. While the Elephant and Rhino populations are under threat due to [Poaching](https://en.wikipedia.org/wiki/Poaching), they are regardless majestic creatures that I very much enjoy.
 
->  ![[IMG_2326.jpeg]]
+![[IMG_2326.jpeg]]
+
 > *The goat and a baby elephant*
+
+![[Calvin Article.pdf]]
+
+
+```query
+multivariable
+```
+
+
+
