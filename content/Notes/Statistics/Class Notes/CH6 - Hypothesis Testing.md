@@ -131,6 +131,7 @@ import numpy as np
 mu = 2000  # Mean
 sigma = 819.35 / np.sqrt(45)  # Standard deviation
 x = np.linspace(mu - 4*sigma, mu + 4*sigma, 1000)
+y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
 
 plt.figure(figsize=(10, 6))
 plt.plot(x, y, label=r"$\hat{p}$")
@@ -153,9 +154,11 @@ plt.legend()
 plt.xlabel("Values of $\hat{p}$")
 plt.ylabel("Probability Density")
 plt.grid(True)
-plt.show()
+- [ ] plt.show()
 ```
 
-```
+**Calculations:**
 
-```
+$$
+Test \ Statistic = t =
+$$
