@@ -76,3 +76,86 @@ plt.show()
 ```
 
 Use Standard Deviation to measure distance on a population model.
+
+---
+
+## Example Problems
+
+### First Problem
+
+> [!Example]
+> Civil engineers collected data from one area of Wisconsin on the amount of salt(tons) used to keep highways drivable during a snowstorm. Historic use of salt in that area was 2000 tons per storm. The amount of salt for $n=45$ storms has $\bar{x}=1753.9$ tons and $s=819.35$ tons. Test the claim that the mean salt use per storm has decreased.
+
+#### How Do We Test This Claim?
+
+Lets start with labeling what we know.
+
+$$Q_{1 = Populations \ or \ Means?}$$
+
+> Means.
+
+#### Notation
+
+| 200       | 45  | 1753.9    | 819.35 |
+| --------- | --- | --------- | ------ |
+| $\mu_{0}$ | $n$ | $\bar{x}$ | $s$    |
+
+#### Unit Hypotheses
+
+**Null Hypothesis:**
+
+The null hypothesis is that the mean salt use per storm has not decreased.
+
+$$
+H_{0}: \mu \geq 2000
+$$
+
+**Alternative Hypothesis:**
+
+The alternative hypothesis is that the mean salt use per storm has decreased.
+
+$$H_{1}: \mu < 2000$$
+
+#### Model
+
+The model is a normal distribution. Like the one we plotted above, we will use python to plot this.
+
+We have $n=45$ and $s=819.35$.
+
+We will label the area between $\mu_{0}$ and $\bar{x}$ as $\mathbb{R}$.
+
+```python-r
+import matplotlib.pyplot as plt
+import numpy as np
+
+mu = 2000  # Mean
+sigma = 819.35 / np.sqrt(45)  # Standard deviation
+x = np.linspace(mu - 4*sigma, mu + 4*sigma, 1000)
+
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, label=r"$\hat{p}$")
+plt.title(r"Sampling Distribution of $\hat{p}$'s")
+
+plt.axvline(mu, color='black', linestyle='--', label=r"$P_0$")
+plt.axvline(1753.9, color='red', linestyle='--', label=r"$\bar{x}$")
+
+plt.text(mu, max(y) * 0.8, "not a big difference", ha='center', color='blue')
+plt.text(1753.9, max(y) * 0.8, "not a big difference", ha='center', color='blue')
+
+plt.text(mu - 3*sigma, max(y) * 0.3, "big difference", ha='center', color='red')
+plt.text(mu + 3*sigma, max(y) * 0.3, "big difference", ha='center', color='red')
+
+plt.text(mu - 4*sigma, 0, r"$\mathbb{R}$", ha='center', va='bottom', color='purple', fontsize=12)
+plt.text(mu + 4*sigma, 0, r"$\mathbb{R}$", ha='center', va='bottom', color='purple', fontsize=12)
+
+# display
+plt.legend()
+plt.xlabel("Values of $\hat{p}$")
+plt.ylabel("Probability Density")
+plt.grid(True)
+plt.show()
+```
+
+```
+
+```
