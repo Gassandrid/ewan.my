@@ -254,6 +254,16 @@ Let's talk about the **STATISTICAL SIGNIFICANCE** of the test.
 
 Using a $\alpha$-level of significance of 0.05, we can say that the p-value is less than $\alpha$.
 
-**David** wants the **environmental programs** to be funded, so he would be happy with this result.
+**People will make decisions based on the context of the situation, and since the evidence is only moderate, the decision will be based on the context of the situation.**
 
-**Alex** wants the **budget** to be saved, so he would be happy with this result.
+**David** might say that the evidence is enough to support the claim that the mean salt use per storm has decreased.
+
+**Alex** might say that the evidence is not enough to support the claim that the mean salt use per storm has decreased.
+
+### Using the P-Value
+
+We generally say that if:
+
+$$ P-value \leq \alpha \rightarrow Reject \ H_{0} $$
+
+$$ P-value > \alpha \rightarrow Fail \ to \ Reject \ H_{0}, test\ is\ inconclusive $$
