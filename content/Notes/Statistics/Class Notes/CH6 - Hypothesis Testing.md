@@ -218,4 +218,42 @@ plt.grid(True)
 plt.show()
 ```
 
-The value at the point of the distribution is what we call the T-score, which is the value of the test statistic.
+#### More Definitions
+
+- $T-Value$: The test statistic
+- $P-Value$: The probability of observing a test statistic as extreme as the one computed, given that the null hypothesis is true.
+- $Type \ I \ Error$: Rejecting the null hypothesis when it is true.
+- $Type \ II \ Error$: Failing to reject the null hypothesis when it is false.
+
+#### Finding Values on a TI-84 Plus CE
+
+$$
+p-value = P(T \leq -2.015) = tcdf(-1E99, -2.015, 44) = .025 \approx \frac{1}{40}
+$$
+
+---
+
+## Hypothesis Test Decision-making
+
+Hypothesis Testing decisions **need to be contextual**
+
+> [!Example] Example
+> **David** - Environmental Lobbyist
+>
+> - "any victory, no matter how small, is a victory for the environment"
+>   David works for the nonprofit organization, "Save the Earth".
+>
+> **Alex** - Fiscally Minded, DPW Budget Analyst
+>
+> - "We can't afford to waste money on unnecessary environmental programs"
+>   Alex works for the Department of Public Works on the budgeting team.
+
+We have a **moderate** amount of evidence to support that the mean salt use per storm has decreased.
+
+Let's talk about the **STATISTICAL SIGNIFICANCE** of the test.
+
+Using a $\alpha$-level of significance of 0.05, we can say that the p-value is less than $\alpha$.
+
+**David** wants the **environmental programs** to be funded, so he would be happy with this result.
+
+**Alex** wants the **budget** to be saved, so he would be happy with this result.
