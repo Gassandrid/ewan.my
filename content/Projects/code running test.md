@@ -70,3 +70,14 @@ plt.axvline(0, color='black',linewidth=0.5)
 # Show plot
 plt.show()
 ```
+
+
+math block declared with no newline characters
+
+$$\int_{a}^b f(x) \ dx$$
+
+math block declared with newline characters
+
+$$
+\int_{a}^b f(x) \ dx
+$$
