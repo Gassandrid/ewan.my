@@ -12,7 +12,8 @@ This video covers **Dynamical Systems Theory**, and how it can be used to model 
 
 Looking at a Neuron, how can we apply this?
 
-![[Screenshot 2024-10-28 at 12.17.24 PM.png|350]]
+> [!Info] Graphic
+> ![[Screenshot 2024-10-28 at 12.17.24 PM.png|350]]
 
 **Neurons are temporal computers**. Unlike the contrary, neurons don't only have "inputs" and "outputs" as factors, but also what that neuron was doing **1 millisecond ago, 1 second ago, or even minutes before**.
 
@@ -53,8 +54,9 @@ But this can range depending both on what you are examining, but **also** on wha
 >
 > Well it turns out we only really need 2, if we only care about observing the "important" repeating motion of the pendulum that we all know, even though it also has a direction and postion vector like the ball.
 > 
-> > [!Info]- Graphic
+> > [!Info] Graphic
 > > ![[Screenshot 2024-10-28 at 1.25.23 PM.png|350]]
+> > *where $\theta$ is the angle away from center and $\omega$ is its direction/velocity in a said direction, single dimension*
 > 
 
 The importance of this is that even though there might be other state variables that we can account for in our calculations, it is oftentimes unnecessary for what we are trying to find. And for extremely complex systems like neurons, it is vital to make sure we are only observing the state variables that matter to us.
