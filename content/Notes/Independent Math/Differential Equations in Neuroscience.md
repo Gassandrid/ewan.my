@@ -61,11 +61,52 @@ But this can range depending both on what you are examining, but **also** on wha
 > >
 > >where $\theta$ is the angle away from center and $\omega$ is its direction/velocity in a said direction, single dimension
 
-The importance of this is that even though there might be other state variables that we can account for in our calculations, it is oftentimes unnecessary for what we are trying to find. And for extremely complex systems like neurons, it is vital to make sure we are only observing the state variables that matter to us.
+The importance of this is that even though there might be other state variables that we can account for in our calculations, it is oftentimes unnecessary for what we are trying to find. And for extremely complex systems like neurons, it is vital to make sure we are only observing the state variables that matter to us. 
+
+A neuroscientist observing the electrical properties of neurons might choose completely different state variables than, for example a biochemist would when observing the sugar content within, or the DNA being repaired.
+
+We will talk about the **actual** state variables we use for neuroscience a bit later, but for now, let's introduce the formalism of the differential equations themselves.
+
+Here's a taste of what is to come:
+
+$$
+C_{m} \frac{dV_{m}}{dt} = \sum I_{ion}
+$$
+
+$$
+I_{K^+} = g_{K} n^4 ( E_{K} - V_{m})
+$$
+
+$$
+I_{Na^+} = g_{Na} m^3 h (E_{Na} - V_{m})
+$$
+
+$$
+I_{l} = g_{l}(E_{l}-V_{m})
+$$
 
 ---
 
 ## Differential Equations
+
+> [!Example]
+> Imagine you are tracking a population of bacteria in a petri dish.
+> 
+> Initially, you start with $1000$, and you count them every hour.
+> 
+> And suppose we observe a pattern like the following:
+> 
+> >[!Info] Graphic
+> >
+> > ![[Screenshot 2024-10-29 at 10.43.57 AM.png]]
+
+This is a simple growth pattern, for which we can model like the following:
+
+$$
+N(t+1) = 2N(t)
+$$
+
+Where $N(t)$ is the number of bacteria at time $t$
 
 ---
 
