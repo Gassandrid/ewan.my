@@ -19,8 +19,8 @@ tags:
 
 ## Order Checklist
 
-- [ ] ESP32 x 5
-- [ ] screen
+- [x] ESP32 x 5
+- [x] screen
 - [ ] coral tpu usb
-- [ ] usb speaker
-- [ ] usb microphone
+- [x] usb speaker
+- [x] usb microphone

@@ -267,3 +267,4 @@ We generally say that if:
 $$ P-value \leq \alpha \rightarrow Reject \ H_{0} $$
 
 $$ P-value > \alpha \rightarrow Fail \ to \ Reject \ H_{0}, test\ is\ inconclusive $$
+
