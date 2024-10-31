@@ -7,29 +7,36 @@ tags:
 > [!abstract] Student Information
 > Ewan Pedersen
 > CS2210
-> 10 • 23 • 2024
+> 10 • 30 • 2024
 
 *[online doc version](https://gassandrid.xyz/Notes/Computer-Organization/Lab-Documents/Lab-07---Storing-Temperature-Data), as markdown always seems to compile to pdf weirdly*
 
 ---
 
-## 12. From the MariaDB Interpreter, Display All the Records in the `test_data` Table by Running the Statement: `SELECT * FROM test_data;`. **Take a screenshot** of the Contents of the Table. (When Ready: `CTRL` + `Z` to Exit MariaDB)
+## 7. Wire the temperature sensor as follows. **Take a picture** of the sensor wired to your Pi.
+
+I have a raspberry pi 5, as well as some different sensors, but the result is the same.
 
 >[!Info]- Photo
-> ![[Screenshot 2024-10-24 at 11.58.13 PM.png]]
+> ![[temperature.png]]
 
 ---
 
-## 15. Run the Flask App and view the Page in the Browser. Ensure that the Correct Temperature Data is Displayed. **Take a screenshot** of Your Web Page Displayed in the Browser.
+## 11. Modify `temp_logger.py` to display _your_ name, and then run the script. Let it collect at least 20 values before terminating it. **Take a screenshot** of the output of this script.
 
 >[!Info]- Photo
-> ![[Screenshot 2024-10-25 at 6.10.34 PM.png]]
+> ![[Screenshot 2024-10-31 at 6.35.12 PM.png]]
 
 ---
 
-## Completed Code
-
-`app.py`
+## 12. Run `SELECT * FROM temperature_data;` in the MySQL interpreter to ensure the data was successfully inserted into the table. **Take a screenshot** of the contents of your table.
 
 >[!Info]- Screenshot
-> ![[Screenshot 2024-10-25 at 12.08.58 PM.png]]
+> ![[Screenshot 2024-10-31 at 6.41.58 PM.png]]
+
+---
+
+## 14. Run your flask app and view the sensor data in the browser. **Take a screenshot**.
+
+>[!Info]- Screenshot
+> ![[Screenshot 2024-10-31 at 6.45.38 PM.png]]
