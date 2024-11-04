@@ -44,7 +44,7 @@ export async function handleCreate(argv) {
   let linkResolutionStrategy = argv.links?.toLowerCase()
   const sourceDirectory = argv.source
 
-  // If all cmd arguments were provided, check if theyre valid
+  // If all cmd arguments were provided, check if they're valid
   if (setupStrategy && linkResolutionStrategy) {
     // If setup isn't, "new", source argument is required
     if (setupStrategy !== "new") {
@@ -234,6 +234,11 @@ export async function handleBuild(argv) {
     plugins: [
       sassPlugin({
         type: "css-text",
+        cssImports: true,
+      }),
+      sassPlugin({
+        filter: /\.inline\.scss$/,
+        type: "css",
         cssImports: true,
       }),
       {

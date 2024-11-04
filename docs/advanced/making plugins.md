@@ -27,7 +27,7 @@ The following sections will go into detail for what methods can be implemented f
   - `cfg`: The full Quartz [[configuration]]
   - `allSlugs`: a list of all the valid content slugs (see [[paths]] for more information on what a `ServerSlug` is)
 - `StaticResources` is defined in `quartz/resources.tsx`. It consists of
-  - `css`: a list of URLs for stylesheets that should be loaded
+  - `css`: a list of CSS style definitions that should be loaded. A CSS style is described with the `CSSResource` type which is also defined in `quartz/resources.tsx`. It accepts either a source URL or the inline content of the stylesheet.
   - `js`: a list of scripts that should be loaded. A script is described with the `JSResource` type which is also defined in `quartz/resources.tsx`. It allows you to define a load time (either before or after the DOM has been loaded), whether it should be a module, and either the source URL or the inline content of the script.
 
 ## Transformers
@@ -85,8 +85,10 @@ export const Latex: QuartzTransformerPlugin<Options> = (opts?: Options) => {
       if (engine === "katex") {
         return {
           css: [
-            // base css
-            "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css",
+            {
+              // base css
+              content: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css",
+            },
           ],
           js: [
             {
