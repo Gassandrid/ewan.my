@@ -127,3 +127,4 @@ Where $N(t)$ is the number of bacteria at time $t$
 ---
 
 ## Limit Cycles
+
