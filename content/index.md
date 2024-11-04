@@ -150,4 +150,4 @@ This is my version of what is called a [[Digital Garden]]( and yes, every digita
 
 You can navigate this garden by using the [[map]](or clicking the map icon in the top right), using `CMD+K` or `CRTL+K` to pull up the page search, or by clicking a tag/folder like <a href="/Notes">Notes</a>
 
-*try doing `cmd + -` or `ctrl + - to view the sidebars!*
+*try doing `cmd + -` or `ctrl +` - to view the sidebars!*
