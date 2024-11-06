@@ -9,6 +9,8 @@ Most of my family comes from South Africa, as my parents(despite only meeting in
 
 > *me in South Africa, 2022*
 
+![hi](939F803F-A6B2-469B-B649-F152F9E18E2C.jpg)
+
 ---
 
 While South Africa is a beautiful country, it has definitely been struggling with its issues recently.

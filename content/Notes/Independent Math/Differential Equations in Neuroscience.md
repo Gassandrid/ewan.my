@@ -95,7 +95,7 @@ $$
 > Initially, you start with $1000$, and you count them every hour.
 > 
 > And suppose we observe a pattern like the following:
-> 
+>
 > >[!Info] Graphic
 > >
 > > ![[Screenshot 2024-10-29 at 10.43.57 AM.png]]
@@ -127,4 +127,3 @@ Where $N(t)$ is the number of bacteria at time $t$
 ---
 
 ## Limit Cycles
-
