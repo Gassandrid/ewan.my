@@ -140,7 +140,6 @@ I love building and tinkering! While doing some construction work, I found a int
 
 >[!Info]- Photo
 > ![[IMG_1992 1.jpg|350]]
-> *me having a little too much fun mixing cement!*
 
 I love to chat about philosophy! Let's start a conversation!
 
