@@ -11,7 +11,7 @@ Most of my family comes from South Africa, as my parents(despite only meeting in
 
 ---
 
-While South Africa is a beautiful country, it has definitely been struggling with its issues recently.
+While South Africa is a beautiful country, it has definitely been struggling with its issues recently. ^1
 
 For one; [[Loadshedding]]. This problem started several decades ago when the South African government developed the power line network extensively, but didn't scale up the power generation infrastructure needed to support such a network. And because of that indecision to scale decades ago, South Africa to this day is still facing a worsening power grid, with much of the country without power for a good chunk of the day.
 
@@ -40,3 +40,5 @@ Perhaps everyone's first thought about Africa is all the cool wildlife and Eleph
 ![[IMG_2326.jpeg]]
 
 > *The goat and a baby elephant*
+
+[^1]: deez
