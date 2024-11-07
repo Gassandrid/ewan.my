@@ -264,10 +264,11 @@ Using a $\alpha$-level of significance of 0.05, we can say that the p-value is l
 
 We generally say that if:
 
-$$ P-value \leq \alpha \rightarrow Reject \ H_{0} $$
-
-$$ P-value > \alpha \rightarrow Fail \ to \ Reject \ H_{0}, test\ is\ inconclusive $$
-
-
 $$
+P-value \leq \alpha \rightarrow Reject \ H_{0} 
 $$
+
+$$ 
+P-value > \alpha \rightarrow Fail \ to \ Reject \ H_{0}, test\ is\ inconclusive 
+$$
+
