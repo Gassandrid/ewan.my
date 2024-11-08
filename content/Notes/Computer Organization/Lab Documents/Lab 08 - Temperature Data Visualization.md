@@ -8,30 +8,22 @@
 
 ---
 
-## 7. Wire the temperature sensor as follows. **Take a picture** of the sensor wired to your Pi.
+## Screenshots
 
-I have a raspberry pi 5, as well as some different sensors, but the result is the same.
+*temperature sensor is semi broken, weird readings being received*
 
+`Chart.js chart`
 >[!Info]- Photo
-> ![[temperature.png]]
+> ![[Screenshot 2024-11-07 at 10.54.20 PM.png]]
 
----
-
-## 11. Modify `temp_logger.py` to display _your_ name, and then run the script. Let it collect at least 20 values before terminating it. **Take a screenshot** of the output of this script.
-
+`InitialState Chart`
 >[!Info]- Photo
-> ![[Screenshot 2024-10-31 at 6.35.12 PM.png]]
+> ![[Screenshot 2024-11-07 at 10.47.30 PM.png]]
 
----
+`app.py`
+>[!Info]- Photo
+> ![[Screenshot 2024-11-07 at 9.06.31 PM.png]]
 
-## 12. Run `SELECT * FROM temperature_data;` in the MySQL interpreter to ensure the data was successfully inserted into the table. **Take a screenshot** of the contents of your table.
-
->[!Info]- Screenshot
-> ![[Screenshot 2024-10-31 at 6.41.58 PM.png]]
-
----
-
-## 14. Run your flask app and view the sensor data in the browser. **Take a screenshot**.
-
->[!Info]- Screenshot
-> ![[Screenshot 2024-10-31 at 6.45.38 PM.png]]
+`is_chart.html`
+>[!Info]- Photo
+> ![[Screenshot 2024-11-07 at 10.57.00 PM.png]]
