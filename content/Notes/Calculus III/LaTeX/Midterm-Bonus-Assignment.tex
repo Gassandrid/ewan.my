@@ -40,7 +40,17 @@ $$
 \int_0^1 \int_0^1 \frac{1}{1 - xy} \, dx \, dy = \sum_{n=1}^\infty \frac{1}{n^2}.
 $$
 
-\section{Main Results}
+For the double integral, we have:
+
+$$
+\int_0^1 \int_0^1 \frac{1}{1 - xy} \, dx \, dy = \int_0^1 \left[ \ln(1 - xy) \right]_0^1 \, dy = \int_0^1 \ln(1 - y) \, dy = \left[ -y \ln(1 - y) + y \right]_0^1 = 1.
+$$
+
+Expanding the integrand into an infinite series, we have:
+
+$$
+\frac{1}{1 - xy} = \sum_{n=0}^\infty (xy)^n = \sum_{n=0}^\infty x^n y^n.
+$$
 
 \section{Conclusion}
 

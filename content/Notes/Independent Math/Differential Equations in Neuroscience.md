@@ -67,7 +67,7 @@ A neuroscientist observing the electrical properties of neurons might choose com
 
 We will talk about the **actual** state variables we use for neuroscience a bit later, but for now, let's introduce the formalism of the differential equations themselves.
 
-Here's a taste of what is to come:
+Here's a sample of the equations to come:
 
 $$
 C_{m} \frac{dV_{m}}{dt} = \sum I_{ion}
@@ -107,6 +107,8 @@ N(t+1) = 2N(t)
 $$
 
 Where $N(t)$ is the number of bacteria at time $t$
+
+
 
 ---
 
