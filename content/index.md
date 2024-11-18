@@ -112,7 +112,7 @@ I am a second year student at the [[University Of Vermont]] studying computer sc
 
 ## Thoughts 🏡
 
-To hell with specialization! You can have a focus on being good at one thing, but I guarentee you will be happier enjoying all your varied interests/skills.
+
 
 Getting back into simple woodwork again! I love woodwork, but at University there is never much time for me to get really invested in a project. But finding time to work on a medium stick with my Leatherman has been very enjoyable for the last 2 weeks.
 
@@ -149,4 +149,4 @@ This is my version of what is called a [[Digital Garden]]( and yes, every digita
 
 You can navigate this garden by using the [[map]](or clicking the map icon in the top right), using `CMD+K` or `CRTL+K` to pull up the page search, or by clicking a tag/folder like <a href="/Notes">Notes</a>
 
-*try doing `cmd + -` or `ctrl +` - to view the sidebars!*
+*try doing `cmd + -` or `ctrl + -` to view the sidebars!*

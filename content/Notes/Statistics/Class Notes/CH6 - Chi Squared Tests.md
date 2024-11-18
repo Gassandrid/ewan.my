@@ -92,3 +92,4 @@ First, we find the expected counts for each color.
 | Green  | .125      | 515             | 514.5           |
 | Red    | .125      | 391             | 390.5           |
 | Total  | 1         | 2680            | 2680            |
+

@@ -7,13 +7,16 @@ $$\int_{0}^2 \int_{0}^\sqrt{ 2x-x^2 }7\sqrt{ x^2 + y^2 }dydx$$
 this tells us that y is running from 0 up to the curve $y=\sqrt{ 2x-x^2 }$
 
 this is some circle of the form $y^2=2x-x^2$
-
+iframe
 which is this circle
 
 $$x^2+y^2 = 2x$$
 thisis also known as $r=2\cos \theta$
 
 lets graph this
+
+
+![](https://x.com/ThePrimeagen/status/1856702499211624522)
 
 > [!Info] Desmos
 > <iframe src="https://www.desmos.com/calculator/win3io2qrs" width=600 height="400" ></iframe>
@@ -144,6 +147,7 @@ $$(x-2)^2 - 4 +y^2 = 0$$
 
 $$(x-2)^2 + y^2 =4 \ \ \ r = 4\cos \theta$$
 2. $r^2 = 4r\cos \theta$
+
 
 $r = 4\cos \theta$
 
