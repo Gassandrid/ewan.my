@@ -195,3 +195,5 @@ For speech synthesis, Coqui TTS gives us voice cloning and strong voice replicat
 - _unslothai/unsloth_. (2024, January 12). GitHub. https://github.com/unslothai/unsloth
 
 For fine tuning the ollama language models, provides some tooling to do it much more efficiently.
+
+𓂺
