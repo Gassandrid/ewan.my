@@ -20,4 +20,7 @@ This is difficult for my semi-OCD brain to accept, but I am satisfied that as lo
 
 ## A Road Ahead...
 
-*todo*
+*todoist*
+
+- [ ] [[DARS]] 
+	- [ ] [[web serv]]
