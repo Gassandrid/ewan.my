@@ -36,6 +36,14 @@ If it is a room control function, the Pi calls the master ESP-32 to send a signa
 - Langroid for Function Calling and Framework
 - Quartz for Website architecture(this website), hosted on DARS.
 
+### Planned Features
+
+- [ ] [[AI Command API]] - kind of like talking to DARS in person, but the natural language prompt is provided via a API somewhere in the world. This would allow me to interact with my room from anywhere in the world, or get information about my room sent to me.
+- [ ] Full File Interface - Control my notes, my cs projects, my music... all from one point. I would probably have to make DARS into a NAS first
+- [ ] Camera Features - Coral TPU specializes at object recodnition tasks, and I have a pi camera inside the box now, just need to handle the software side of things.
+
+---
+
 ## Why
 
 As much as we love the idea of voice assistance, I can't help but admit the ones we have today kind of suck. I have never been able to use Siri for more than setting a timer, and even that it oftentimes struggles with. 
