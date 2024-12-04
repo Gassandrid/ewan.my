@@ -70,19 +70,12 @@ We will talk about the **actual** state variables we use for neuroscience a bit 
 Here's a sample of the equations to come:
 
 $$
-C_{m} \frac{dV_{m}}{dt} = \sum I_{ion}
-$$
-
-$$
-I_{K^+} = g_{K} n^4 ( E_{K} - V_{m})
-$$
-
-$$
-I_{Na^+} = g_{Na} m^3 h (E_{Na} - V_{m})
-$$
-
-$$
-I_{l} = g_{l}(E_{l}-V_{m})
+\begin{align}
+C_{m} \frac{dV_{m}}{dt} &= \sum I_{ion} \\ \\
+I_{K^+} &= g_{K} n^4 ( E_{K} - V_{m}) \\ \\
+I_{Na^+} &= g_{Na} m^3 h (E_{Na} - V_{m}) \\ \\
+I_{l} &= g_{l}(E_{l}-V_{m}) 
+\end{align}
 $$
 
 ---
