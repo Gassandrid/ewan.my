@@ -23,7 +23,7 @@ const config: QuartzConfig = {
     baseUrl: "gassandrid.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-
+    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
