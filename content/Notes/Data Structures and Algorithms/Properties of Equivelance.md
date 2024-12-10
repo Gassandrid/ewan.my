@@ -19,7 +19,7 @@ Reflexivity: \ \ \ \forall x \in A, \ \ (x,x) \in R
 $$
 
 $$
-Symmetry: \ \ \ \forall x,y \in A, \ \ (x,y) \in R \Rightarrow
+Symmetry: \ \ \ \forall x,y \in A, \ \ (x,y) \in R \Rightarrow (y,x) \in R
 $$
 
 $$
