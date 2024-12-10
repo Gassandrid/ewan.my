@@ -60,14 +60,4 @@ Currently, DARS is taking the form outlined in the [[Wood Box Demo]], where the 
 
 I have some ideas for how the project can serve as a online server, where DARS would have a [[AI Command API]] to provide an interface of control through the web.
 
-DARS will be multi-fauceted,
-
-
-
-$$
-\vec{F} = \langle y, yz, z^2 \rangle
-$$
-
-$$
-\int \int_{S} \cos
-$$
+DARS will be multifaceted,
