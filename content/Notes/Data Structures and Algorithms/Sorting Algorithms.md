@@ -317,3 +317,49 @@ void heapSort(vector<int>& arr) {
 
 Time: $O(n \log n)$  
 Space: $O(1)$
+
+---
+
+## Insertion Sort
+
+Insertion Sort builds the sorted array one element at a time by inserting elements into their correct position.
+
+### Steps
+
+1. Iterate over the array from the second element.
+2. Compare the current element with the elements to its left.
+3. Insert the element into its correct position.
+4. Repeat for the remaining elements.
+
+### Animation
+
+![250](https://upload.wikimedia.org/wikipedia/commons/2/24/Sorting_insertion_sort_anim.gif)
+
+### C++ Implementation
+
+```cpp
+#include <vector>
+#include <algorithm>
+
+void insertionSort(vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+```
+
+```cpp
+#include <iostream>
+
+int main() {
+	cout << "test" << endl;
+	return 0
+}
+```
