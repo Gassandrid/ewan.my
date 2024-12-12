@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 20
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --package-lock-only
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
