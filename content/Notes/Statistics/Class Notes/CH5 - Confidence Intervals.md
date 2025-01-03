@@ -1,122 +1,114 @@
 ---
 id: CH5 - Confidence Intervals
-aliases: 
+aliases: []
 tags:
   - statistics
-date: 2024-10-23
+date: "2024-10-23"
 ---
 
-For confidence intervals and the like, we need to start with a **Research Question:**
+## Research Question
 
-Taking a sample and find the sample statistic, What to estimate about the population grown, conduct a [[Hypothesis Test]]Proportions
+When working with confidence intervals, we start with a **Research Question:**  
+Taking a sample and finding the sample statistic, what can we estimate about the population? To answer this, we calculate a confidence interval or conduct a [[Hypothesis Test]].
+
+---
 
 ## 5.1 - Point Estimates and Confidence Intervals
 
-Point estimates are single values that are used to estimate population parameters. They are calculated from sample data and are used to estimate the true population parameter.
+Point estimates are single values calculated from sample data to estimate population parameters. They serve as our "best guess" of the true population value.
 
 ### Point Estimates
 
-We can find point estimates for population parameters using sample data. For example, we can use the sample mean to estimate the population mean or the sample proportion to estimate the population proportion.
+For example:
+
+- Use the sample mean $\bar{x}$ to estimate the population mean $\mu$.
+- Use the sample proportion $\hat{p}$ to estimate the population proportion $p$.
+
+Point estimates give us a starting point, but they lack information about how much error may exist in the estimate. That’s where confidence intervals come in.
 
 ---
 
 ## 5.2 - Confidence Intervals for Proportions
 
-> [!Warning] Note
-> We'll do TRADITIONAL METHOD only (ignore other methods for this class)
+> [!Warning] Traditional Method Only
+> In this class, we focus solely on the **traditional method** for constructing confidence intervals, ignoring other approaches like bootstrapping.
 
-Let's have a look at an example of a confidence interval for a fun divisive topic!
+### Confidence Interval Example - Presidential Approval Rating
 
-### CI Example - Presidential Approval Rating
-
-Oftentimes we are presented with some statistics about approval rating of presidential candidates through the country, something like
+Polls often present approval ratings in the format:
 
 $$
 45\% \pm 3\%
 $$
 
-This form factor can be boiled down to something like
+This is equivalent to the formula:
 
 $$
-Sample \ Statistic \ \pm \ margin \ of \ error
+\hat{p} \pm E
 $$
 
-Which are represented in the discrete math world as
+Where:
 
-$$
-\hat{p} \ \pm \ E
-$$
+- $\hat{p}$ = sample proportion
+- $E$ = margin of error
 
-### How do you go about getting a CI?
+### Constructing a Confidence Interval
 
-Start with a [[Sampling Distribution]], where all candidates are equally likely to be selected. This is a **Random Sample**.
+1. Start with a **Random Sample** from a [[Sampling Distribution]]. Assume the sample proportion $\hat{p}$ is approximately normal:
 
-$$
-\hat{p} ~ N(p, \sqrt{\frac{p(1-p)}{n}})
-$$
+   $$
+   \hat{p} ~ N(p, \sqrt{\frac{p(1-p)}{n}})
+   $$
 
-Where $p$ is the population proportion, and $n$ is the sample size.
+   Where:
 
-$$
-\sigma = \sqrt{\frac{p(1-p)}{n}} 
-$$
+   - $p$ = population proportion
+   - $n$ = sample size
 
-Let's make a normal distribution for a 95% Confidence Interval of a population.
+2. Calculate the standard error (SE):
 
-### [[Normal Distribution Graph]]
+   $$
+   \sigma = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+   $$
 
-![[Pasted image 20241015090052.png]]
+   For confidence intervals, $\sigma \approx SE(\hat{p})$.
+
+3. Use the formula for a confidence interval:
+   $$
+   \hat{p} \pm z \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+   $$
+   Where $z$ is the critical value for the desired confidence level.
+
+### Confidence Levels and Critical Values
+
+Common critical values for the $z$-score:
+
+- **95% Confidence Level**:
+  $$
+  C = 95\% \rightarrow \frac{\alpha}{2} = 0.025 \rightarrow z_{.025} = | invNorm(0.025) | = 1.96
+  $$
+- **90% Confidence Level**:
+  $$
+  C = 90\% \rightarrow \frac{\alpha}{2} = 0.05 \rightarrow z_{.05} = | invNorm(0.05) | = 1.645
+  $$
+- **80% Confidence Level**:
+  $$
+  C = 80\% \rightarrow \frac{\alpha}{2} = 0.10 \rightarrow z_{.10} = | invNorm(0.10) | = 1.282
+  $$
+
+> [!Note] Observation
+> As the confidence level increases, the margin of error also increases. This means we gain confidence but lose precision.
 
 ---
 
-Why does a CI do a better job at estimating population proportion?
+## Why Confidence Intervals?
 
-With just $\hat{p}$, we can't be sure how close we are to the population proportion, but with a CI, we can be sure that the population proportion is within a certain range.
+Confidence intervals provide a range within which we expect the true population parameter to lie with a certain level of confidence. This is more informative than a single point estimate, as it accounts for sampling variability.
 
-On the other hand, when we construct a CI, we can be sure that the population proportion is within a certain range.
+For example:
 
-With knowing the value of p, we can construct a CI that is within a certain range of the population proportion.
-
-### How do we construct a CI?
-
-Remember,
-
-$$Point \ Estimate \pm Margin \ of \ Error$$
-
-$$ Point \ Estimate \pm \frac{(critical \ value) \times (standard \ error)}{\sqrt{n}} $$
-
-Also recall
-
-$$\sigma = \sqrt{\frac{p(1-p)}{n}}$$
-
-Plugging it all in,
-
-$$\sigma = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
-
-$$\sigma \approx SE(\hat{p})$$
-
----
-
-Let's look at a useful equation derived from this reasoning.
-
-$$ \hat{p} \pm z \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$
-
-Where $z$ is the critical value for the desired confidence level.
-
-Let's take a sample ($n =$) and get a sample proportion ($\hat{p} =$), and then construct a 95% CI.
-
-**For 95%**
-
-$$C = 95\% \rightarrow \frac{\alpha}{2} = 0.025 \ rightarrow z_{.025} = | invNorm(0.025) | = 1.96$$
-
-**For 90%**
-
-$$C = 90\% \rightarrow \frac{\alpha}{2} = 0.05 \ rightarrow z_{.05} = | invNorm(0.05) | = 1.645$$
-
-**For 80%**
-
-$$C = 80\% \rightarrow \frac{\alpha}{2} = 0.10 \ rightarrow z_{.10} = | invNorm(0.10) | = 1.282$$
-
-> [!Note] Something to notice
-> As the confidence level increases, the margin of error increases as well, meaning our precision decreases.
-
+- If $\hat{p} = 0.45$ with $E = 0.03$, the 95% confidence interval is:
+  $$
+  0.45 \pm 0.03 = [0.42, 0.48]
+  $$
+  This means we are 95% confident the true population proportion lies within this range.

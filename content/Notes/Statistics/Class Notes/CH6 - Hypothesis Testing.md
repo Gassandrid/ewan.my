@@ -265,10 +265,19 @@ Using a $\alpha$-level of significance of 0.05, we can say that the p-value is l
 We generally say that if:
 
 $$
-P-value \leq \alpha \rightarrow Reject \ H_{0} 
+P-value \leq \alpha \rightarrow Reject \ H_{0}
 $$
 
-$$ 
-P-value > \alpha \rightarrow Fail \ to \ Reject \ H_{0}, test\ is\ inconclusive 
+$$
+P-value > \alpha \rightarrow Fail \ to \ Reject \ H_{0}, test\ is\ inconclusive
 $$
 
+---
+
+## Conclusion
+
+Hypothesis testing provides a systematic method to evaluate claims about a population parameter using sample data. The process involves:
+
+1. Formulating null and alternative hypotheses.
+2. Calculating a test statistic based on the sample.
+3. Comparing the p-value to a significance level to make a decision.

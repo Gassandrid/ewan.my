@@ -1,9 +1,7 @@
 ---
 date: 2024-09-12
+updated: 2024-12-28
 ---
-# Function Calling in Language Models
-
-## Overview
 
 Function calling in language models refers to the ability of a model to not only generate text but also interact with external functions or APIs. This capability allows the model to perform specific tasks like retrieving data, performing calculations, or interacting with other systems, enhancing its utility beyond just text generation.
 
@@ -91,7 +89,3 @@ Langroid is another framework that allows for enhanced interactions with languag
 3. **Define the Interaction**: Specify how the agent should interact with the function and handle inputs.
 
 4. **Run the Agent**: Deploy the agent to handle function calls as part of the model's workflow.
-
-## Conclusion
-
-Function calling in language models expands the capabilities of these models, allowing them to interact with external systems and perform tasks beyond text generation. By using frameworks like LangChain and Langroid, you can easily integrate function calls into your language model workflows, enabling more complex and dynamic applications.

@@ -1,7 +1,8 @@
 ---
-date: 2024-10-14
-title: Atlas
+date: 2024-10-15
+updated: 2024-12-25
 ---
+
 Navigating this garden can be a bit difficult if you are just relying on the links between notes or my poor choice of directory organization, so here is a sort of markdown "map" to help find what you are looking for!
 
 ---

@@ -1,9 +1,9 @@
 ---
 id: CH4 - Binomial Distribution
-aliases: 
+aliases: []
 tags:
   - statistics
-date: 2024-09-12
+date: "2024-09-12"
 ---
 
 # Binomial Distribution
@@ -15,7 +15,7 @@ date: 2024-09-12
 
 ## Definition
 
-A **binomial distribution** describes the number of successes in a sequence of $n$ independent trials, where each trial has two possible outcomes: _success_ or _failure_. The probability of success in each trial is denoted by $p$.k
+A **binomial distribution** describes the number of successes in a sequence of $n$ independent trials, where each trial has two possible outcomes: _success_ or _failure_. The probability of success in each trial is denoted by $p$.
 
 The **binomial probability mass function (PMF)** is given by:
 
@@ -58,7 +58,7 @@ where:
 > Using the binomial formula:
 >
 > $$
-> P(X = 6) = \binom{10}{6} (0.5)^6 (0.5)^{4} = \frac{10!}{6!(10-6)!} (0.5)^{10}
+> P(X = 6) = \binom{10}{6} (0.5)^6 (0.5)^4 = \frac{10!}{6!(10-6)!} (0.5)^{10}
 > $$
 >
 > This simplifies to:
@@ -85,11 +85,47 @@ where:
 
 ---
 
+## Cumulative Binomial Probability
+
+In practice, it is often useful to compute the probability of $X$ being less than or equal to a certain value. The **cumulative distribution function (CDF)** for the binomial distribution is:
+
+$$
+P(X \leq k) = \sum_{i=0}^k \binom{n}{i} p^i (1 - p)^{n - i}
+$$
+
+This can be used, for example, to determine the likelihood of obtaining up to a certain number of successes in $n$ trials.
+
+---
+
 ## Inverse Binomial Distribution
 
-$$ P(X = k) = \binom{k + r - 1}{k} p^r (1 - p)^k $$
+An **inverse binomial distribution** (or negative binomial distribution) models the number of failures needed before achieving $r$ successes, where $r$ is a fixed number of successes. Its probability mass function is:
 
-> [!question]
-> How many trials are needed to achieve $k$ successes in a binomial distribution with probability $p$?
+$$
+P(X = k) = \binom{k + r - 1}{k} p^r (1 - p)^k
+$$
 
+Here, $k$ represents the number of failures before the $r^{th}$ success.
 
+> [!question] **Conceptual Question**
+> How many trials are needed, on average, to achieve $r$ successes if the probability of success on each trial is $p$?
+
+The expected value for the total number of trials is:
+
+$$
+\mathbb{E}[T] = \frac{r}{p}
+$$
+
+---
+
+## Practical Considerations
+
+- The binomial distribution assumes **independence** between trials. If the trials are dependent (e.g., without replacement), consider using a **hypergeometric distribution**.
+- For large $n$ and small $p$, the **Poisson distribution** can approximate the binomial distribution when $\lambda = np$.
+- The **normal distribution** can approximate the binomial distribution when $n$ is large, using the **Central Limit Theorem**:
+
+  $$
+  Z = \frac{X - np}{\sqrt{np(1 - p)}}
+  $$
+
+This approximation is particularly useful for computationally expensive problems.

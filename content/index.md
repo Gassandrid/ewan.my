@@ -4,6 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Home Page
+updated: 2024-12-27
 ---
 
 <div>
@@ -112,11 +113,11 @@ I am a second year student at the [[University Of Vermont]] studying computer sc
 
 ## Thoughts 🏡
 
+I am really liking the german word *waldeinsamkeit*
 
+Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering.
 
-Getting back into simple woodwork again! I love woodwork, but at University there is never much time for me to get really invested in a project. But finding time to work on a medium stick with my Leatherman has been very enjoyable for the last 2 weeks.
-
-Currently invested in learning Golang, not just as a language but as a Web Framework when used with HTMX. Seems like a lot simpler of a way to do web development, great for someone like me who doesn't have many skills with frontend stuff.
+Rust is still my main project language but I have taken some time to learn the functional programming side of it for maths reasons.
 
 *give this song a listen to!*
 

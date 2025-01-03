@@ -4,7 +4,7 @@ aliases: []
 tags: []
 ---
 
-There are two kinds of Chi Squared Tests we should be familiar with
+There are two kinds of Chi Squared Tests we should be familiar with:
 
 ---
 
@@ -41,12 +41,21 @@ Where:
 - $\chi^2$ = Chi Squared Test Statistic
 - $O$ = Observed Frequency
 - $E$ = Expected Frequency
-- $\sum$ = Summation
-- $O$ and $E$ are calculated for each cell in the contingency table.
+- $\sum$ = Summation over all categories or cells
 
 ### Calculating Expected Frequencies
 
-The expected frequency for each cell in the contingency table is calculated as follows:
+#### For Goodness of Fit:
+
+The expected frequency for each category is calculated as:
+
+$$
+E = (\text{Proportion of Expected Frequency}) \times (\text{Grand Total})
+$$
+
+#### For Test of Independence:
+
+The expected frequency for each cell in the contingency table is calculated as:
 
 $$
 E = \frac{(\text{Row Total} \times \text{Column Total})}{\text{Grand Total}}
@@ -65,31 +74,56 @@ Where:
 
 To perform these tests on a TI-84 calculator, follow these steps:
 
-1. Enter the observed frequencies into a matrix.
-2. Enter the expected frequencies into a matrix.
-3. Use the $\chi^2$ Test function to calculate the test statistic and p-value.
-4. Interpret the results to determine whether the observed data fits the expected distribution or whether the two variables are independent.
+1. Enter the observed frequencies into a matrix (e.g., `[A]`).
+2. Enter the expected frequencies into a matrix (e.g., `[B]`).
+3. Use the $\chi^2$ Test function to calculate the test statistic and p-value:
+   - Press `STAT` > `TESTS` > `χ²-Test`.
+   - Assign the observed and expected matrices.
+4. Interpret the results:
+   - Compare the p-value to the significance level ($\alpha$) to make a decision.
+   - A low p-value (typically $< \alpha = 0.05$) indicates that the observed and expected distributions differ significantly.
 
-Let's implement this on a table.
+---
 
-| Color  | Frequency | Observed Counts |
-| ------ | --------- | --------------- |
-| Brown  | .125      | 339             |
-| Blue   | .25       | 583             |
-| Yellow | .125      | 359             |
-| Orange | .25       | 493             |
-| Green  | .125      | 515             |
-| Red    | .125      | 391             |
+## Example: Goodness of Fit Test
 
-First, we find the expected counts for each color.
+Let's perform a Goodness of Fit test on the following data:
 
 | Color  | Frequency | Observed Counts | Expected Counts |
 | ------ | --------- | --------------- | --------------- |
-| Brown  | .125      | 339             | 339.5           |
-| Blue   | .25       | 583             | 582.5           |
-| Yellow | .125      | 359             | 359.5           |
-| Orange | .25       | 493             | 492.5           |
-| Green  | .125      | 515             | 514.5           |
-| Red    | .125      | 391             | 390.5           |
-| Total  | 1         | 2680            | 2680            |
+| Brown  | .125      | 339             | 335.0           |
+| Blue   | .25       | 583             | 670.0           |
+| Yellow | .125      | 359             | 335.0           |
+| Orange | .25       | 493             | 670.0           |
+| Green  | .125      | 515             | 335.0           |
+| Red    | .125      | 391             | 335.0           |
+| Total  | 1         | 2680            | 2680.0          |
 
+### Step 1: Calculate $\chi^2$
+
+Using the formula:
+
+$$
+\chi^2 = \sum \frac{(O - E)^2}{E}
+$$
+
+We calculate for each color:
+
+1. Brown: $\frac{(339 - 335)^2}{335} = 0.048$
+2. Blue: $\frac{(583 - 670)^2}{670} = 10.716$
+3. Yellow: $\frac{(359 - 335)^2}{335} = 1.792$
+4. Orange: $\frac{(493 - 670)^2}{670} = 48.668$
+5. Green: $\frac{(515 - 335)^2}{335} = 94.373$
+6. Red: $\frac{(391 - 335)^2}{335} = 8.008$
+
+Summing these gives:
+
+$$
+\chi^2 = 0.048 + 10.716 + 1.792 + 48.668 + 94.373 + 8.008 = 163.605
+$$
+
+### Step 2: Interpret Results
+
+Compare $\chi^2$ to the critical value from the Chi Squared table (or use the p-value from your calculator).
+
+If $\chi^2$ is greater than the critical value, or if the p-value is less than $\alpha$, reject the null hypothesis that the distributions are the same.
