@@ -1,6 +1,6 @@
 ---
 date: 2025-01-02
-updated: 2025-01-02
+updated: 2025-01-03
 tags:
   - homelab
   - cs
@@ -8,9 +8,10 @@ type: project
 title: Brainstorming Software Stack
 ---
 
-Looking for a general purpose Linux sandbox hosting environment, containers, vms, etc. This could either be through hypervisors/k3s-nix, not sure yet.
+Looking for a general purpose Linux sandbox hosting environment, containers,
+vms, etc. This could either be through hypervisors/k3s-nix, not sure yet.
 
-Good Reddit thread covers my questions: 
+Goods Reddit thread covers my questions: 
 
 - https://www.reddit.com/r/homelab/comments/167luly/looking_for_advise_on_beginner_home_server/
 
