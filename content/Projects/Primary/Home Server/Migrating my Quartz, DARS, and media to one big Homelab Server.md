@@ -1,7 +1,7 @@
 ---
 title: Migrating my Quartz, DARS, and media to one big Homelab Server
 date: 2025-01-02
-updated: 2025-01-02
+updated: 2025-01-12
 tags:
   - homelab
 type: project
@@ -13,9 +13,13 @@ My general idea for this "system" is that I can take all the other things that I
 
 Right now this project is mostly just a clutter of brainstorming efforts to bring the collection together, etc.
 
+---
+
 ## Running ML Models
 
 I want this server to act both as a training ground for me to develop models of my own, but also run several models in parallel ranging from language and image generation to several recodnition models to work alongside home assistant 
+
+---
 
 ## Home Assistant
 
@@ -24,6 +28,8 @@ One of the big features of this project would be the home assistant functionalit
 I have both several Raspberry Pi's, and also several machines that would inevitably be running proxmox. I can run home assistant as its own container on proxmox, or run it bare metal on the pi. Running on the Pi would be easier to set up and less complex, but would be resource limited and not be containerized like the rest of the apps
 
 - I think the best would be to start my practice with running home assistant on the Pi, and then in the long term moving it to HAOS as a container on Proxmox
+
+---
 
 ## Tasks
 
@@ -34,6 +40,8 @@ I have both several Raspberry Pi's, and also several machines that would inevita
 - [ ] [[Using rPi's for home assistant]]
 - [ ] [[Running Local ML Models on the Lab]]
 - [x] [[Proxmox on old Macbooks]]
+
+---
 
 ## Move Hosting of quartz/vault to Homelab
 

@@ -3,8 +3,8 @@ id: index
 aliases: 
 tags: 
 date: 2024-10-02
-title: Home Page
-updated: 2024-12-27
+title: Hello! My name is Ewan
+updated: 2025-01-12
 ---
 
 <div>
@@ -109,7 +109,7 @@ updated: 2024-12-27
 
 # Hello! My name is Ewan
 
-I am a second year student at the [[University Of Vermont]] studying computer science and robotics. I have a big passion and desire to specialize in [[Artificial Intelligence]] and [[Mathematics]], but I also take part in a wide variety of other Computer Science fields.
+I am a second year student at the [[University Of Vermont]] studying Computer Science and robotics. I have a big passion and desire to specialize in [[Artificial Intelligence]], [[Computational Neuroscience]], and [[Mathematics]]. In addition I also enjoy a variety of other subtopics within Computer Science, such as embedded engineering and robotics.
 
 ## Thoughts 🏡
 
