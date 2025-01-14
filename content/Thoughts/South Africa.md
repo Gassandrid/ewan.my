@@ -1,6 +1,8 @@
 ---
 date: 2024-10-17
-tags:
+tags: 
+updated: 2025-01-14
+title: South Africa
 ---
 
 Most of my family comes from South Africa, as my parents(despite only meeting in the United States) are both from there!
@@ -40,5 +42,3 @@ Perhaps everyone's first thought about Africa is all the cool wildlife and Eleph
 ![[IMG_2326.jpeg]]
 
 > *The goat and a baby elephant*
-
-[^1]: deez
