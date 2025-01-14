@@ -188,7 +188,7 @@ export function joinSegments(...args: string[]): string {
   }
 
   let joined = args
-    .filter((segment) => segment !== "")
+    .filter((segment) => segment !== "" && segment !== "/")
     .map((segment) => stripSlashes(segment))
     .join("/")
 
