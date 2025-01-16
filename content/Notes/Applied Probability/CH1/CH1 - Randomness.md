@@ -5,7 +5,7 @@ tags:
   - statistics
 date: 2025-01-13
 title: CH1 - Randomness
-updated: 2025-01-13
+updated: 2025-01-15
 ---
 
 Randomness refers to the inherent unpredictability of a sequence of events. In statistics, randomness is a key concept that underlies many statistical methods and procedures. Understanding randomness is essential for interpreting data and making informed decisions based on statistical analyses.
@@ -119,7 +119,7 @@ De Morgan's Laws are a pair of fundamental rules in set theory that describe how
 > | 61  | 62  | 63  | 64  | 65  | 66  |
 >
 > This yields **36** possible outcomes.
-> 
+>
 > Let $X+Y$ be the sum of the 2 rolls:
 >
 > $$
@@ -149,9 +149,12 @@ De Morgan's Laws are a pair of fundamental rules in set theory that describe how
 ## Playing Angry Birds
 
 Say you are playing the famous and fun game **Angry birds**. Let's say that for this case:
+
 - $W$ = win
 - $L$ = lose
 
 Every time you lose, you have to start over from the beggning.
 
-Consider the event that you win in less than $1000$ times
+Consider the event that you win in less than $1000$ times:
+
+Here, we can see that the sample space is infinite, and the event that you win in less than $1000$ times is a finite event.

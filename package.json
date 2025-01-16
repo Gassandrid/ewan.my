@@ -93,6 +93,7 @@
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0",
     "vfile": "^6.0.3",
+    "webr": "^0.4.2",
     "workerpool": "^9.2.0",
     "ws": "^8.18.0",
     "yargs": "^17.7.2"

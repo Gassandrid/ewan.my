@@ -1,6 +1,6 @@
 ---
 date: 2025-01-03
-updated: 2025-01-14
+updated: 2025-01-16
 tags:
   - ai
   - ollama

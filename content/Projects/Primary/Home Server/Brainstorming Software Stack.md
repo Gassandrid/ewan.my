@@ -1,6 +1,6 @@
 ---
 date: 2025-01-02
-updated: 2025-01-14
+updated: 2025-01-16
 tags:
   - homelab
   - cs
