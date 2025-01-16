@@ -223,18 +223,18 @@ What even is a **DFA**?
 - Where we defined a **Graph** as a `2-tuple`, we define a **DFA** as a `5-tuple`:
 
 $$
-M =\left( Q,\sum, \delta, q_{0}, F \right) 
+M =\left( Q,\sum, \delta, q_{0}, F \right)
 $$
 
 Where:
 
 - $Q$ is a finite set of states
-	- Think of these as vertices/nodes
+  - Think of these as vertices/nodes
 - $\sum$ is a finite set of symbols
-	- The "Alphabet" we discussed
+  - The "Alphabet" we discussed
 - $\delta$ is the **transition function**
 - $q_{0}$ is the start state
-	- $q_{0} \in Q$
+  - $q_{0} \in Q$
 - $F \subseteq Q$ is the Set of **accepting states**
 
 DFA is a **pattern matching machine** given a certain task
@@ -257,3 +257,14 @@ This example DFA would recognize a string like `0001` is in the "language" or no
 Let's try and make this machine, given that we can only construct it out of the variables and states that we defined just now.
 
 We have no ram, no stack, no nothing we know? How do we do this?
+
+Let's define $q_{0}$ as the start state, and $F$ as the set of accepting states.
+
+```mermaid
+graph LR
+   q0 --> q1
+   q1 --> q0
+```
+
+Traversing 
+

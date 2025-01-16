@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@clack/prompts": "^0.9.1",
+    "@expo/spawn-async": "^1.7.2",
     "@floating-ui/dom": "^1.6.13",
     "@myriaddreamin/rehype-typst": "^0.5.4",
     "@napi-rs/simple-git": "0.1.19",
