@@ -3,14 +3,14 @@ import { Root, Content } from "mdast"
 import { visit } from "unist-util-visit"
 import { WebR } from "webr"
 
-export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
-  name: "RunPythonPlugin",
+export const RunRPlugin: QuartzTransformerPlugin = () => ({
+  name: "RunRPlugin",
 
   externalResources() {
     return {
       js: [
         {
-          src: "https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js",
+          src: "https://webr.r-wasm.org/latest/webr.mjs",
           loadTime: "afterDOMReady", // You may want this to load asynchronously since it's large.
           contentType: "external",
         },
@@ -20,7 +20,7 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
           contentType: "external",
         },
         {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js",
+          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/r/r.min.js",
           loadTime: "beforeDOMReady", // Load with CodeMirror
           contentType: "external",
         },
@@ -49,7 +49,7 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
     return [
       () => (tree: Root, _file) => {
         visit(tree, "code", (node, index, parent) => {
-          if (node.lang === "python-r" && parent?.children) {
+          if (node.lang === "r-r" && parent?.children) {
             const id = `${Math.random().toString(36).substr(2, 9)}`
 
             // Assemble the entire HTML content as a string
@@ -73,7 +73,7 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
       height: 16px;
       vertical-align: middle;
     }
-    .python-output {
+    .r-output {
       display: none;
       margin-top: 10px;
       padding: 10px;
@@ -81,7 +81,7 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
       border: 2px solid rgba(64, 64, 64, 0.8); /* darker gray and less transparent border */
       border-radius: 10px; /* rounded corners */
     }
-    .python-output.visible {
+    .r-output.visible {
       display: block; /* make visible after running */
     }
 
@@ -199,7 +199,7 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
 <div class="code-wrapper">
   <div class="code-block">
     <div class="code-header">
-      <div class="code-language">Python</div>
+      <div class="code-language">R</div>
       <div class="code-actions">
         <button id="${id}-copy" aria-label="Copy code">
           <svg
@@ -270,14 +270,57 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
               </button>
             </div>
             <div id="outputContent" class="output-content"> 
-                <div class="python-text" id="${id}-text"></div>
-                <div class="python-plot" id="${id}-plot"></div>
+                <div class="r-text" id="${id}-text"></div>
+                <div class="r-plot" id="${id}-plot"></div>
             </div>
           </div>
 </div>
 
+<script> 
+import('https://webr.r-wasm.org/latest/webr.mjs').then(
+  async ({ WebR }) => {
+    const webR = new WebR();
+    await webR.init();
+
+        const runBtn = document.getElementById('${id}-button');
+        const outputDiv = document.getElementById('${id}-text');
+        const plotDiv = document.getElementById('${id}-plot');
+
+        runBtn.addEventListener("click", async () => {
+            runBtn.disabled = true;
+            outputDiv.innerText = "Running...";
+            plotDiv.innerHTML = ""; // Clear previous output
+
+            try {
+                const code = editor${id}.getValue(); // Get code from CodeMirror
+                const result = await webR.evalR(code);
+                const output = await result.toArray();
+
+                outputDiv.innerText = output.join("\n"); // Display text output
+                
+                // Handling graphics (plots)
+                const plotPNG = await webR.evalR("ragg::agg_png('plot.png'); " + code + "; dev.off();");
+                const plotData = await webR.fetchFile("plot.png");
+                const blob = new Blob([plotData], { type: "image/png" });
+                const url = URL.createObjectURL(blob);
+                plotDiv.innerHTML = \`<img src="\${url}" />\`; // Display plot
+
+            } catch (error) {
+                outputDiv.innerText = "Error: " + error.message;
+            }
+
+            runBtn.disabled = false;
+        });
+    });
+
+  }
+);
+
+
+</script>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js'></script>
+https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/r/r.min.js
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-palenight.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/base16-light.min.css" />
@@ -305,7 +348,7 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
 
     // Initialize CodeMirror editor
     const editor${id} = CodeMirror.fromTextArea(codeTextarea${id}, {
-      mode: 'python',
+      mode: 'r',
       theme: 'material-palenight',
       lineNumbers: true,
       lineWrapping: true,
@@ -399,113 +442,6 @@ svgElement.setAttribute('width', '20');
         outputWrapper${id}.classList.remove('expanded');
       });
 </script>
-
-<script>
-    (function() {
-      let pyodideReadyPromise;
-
-      async function loadPyodideAndPackages() {
-        if (!pyodideReadyPromise) {
-          pyodideReadyPromise = (async function() {
-            try {
-              const pyodide = await loadPyodide();
-              console.log('Pyodide loaded successfully');
-              await pyodide.loadPackage('matplotlib');
-              await pyodide.loadPackage('numpy');
-              await pyodide.loadPackage('pandas');
-              await pyodide.loadPackage('scipy');
-              await pyodide.loadPackage('sympy');
-              await pyodide.loadPackage('scikit-learn');
-              return pyodide;
-            } catch (error) {
-              console.error('Error loading Pyodide:', error);
-              throw error;
-            }
-          })();
-        }
-        return pyodideReadyPromise;
-      }
-
-      async function runPython() {
-        const button = document.getElementById('${id}-button');
-        const playIcon = button.querySelector('.play-icon');
-        const spinner = button.querySelector('.spinner');
-        const plotElement = document.getElementById('${id}-plot');
-        const textElement = document.getElementById('${id}-text');
-        const outputWrapper = document.getElementById('${id}-outputWrapper');
-
-        textElement.innerHTML = '';
-        plotElement.innerHTML = '';
-
-        playIcon.style.display = 'none';
-        spinner.style.display = 'inline-block';
-        button.disabled = true;
-
-        try {
-          const pyodide = await loadPyodideAndPackages();
-          const code = editor${id}.getValue();
-          pyodide.runPython(\`
-            import io, sys
-            import matplotlib.pyplot as plt
-            sys.stdout = io.StringIO()
-          \`);
-          await pyodide.loadPackagesFromImports(code);
-          await pyodide.runPythonAsync(code);
-          let output = pyodide.runPython('sys.stdout.getvalue()');
-
-          textElement.innerHTML = output;
-
-
-          let plotData = pyodide.runPython(\`
-            import io
-            import base64
-            buf = io.BytesIO()
-            plt.savefig(buf, format='png')
-            buf.seek(0)
-            img_str = base64.b64encode(buf.read()).decode('UTF-8')
-            plt.close()
-            img_str
-          \`);
-
-          let plotElement = document.getElementById('${id}-plot');
-          const imgElement = document.createElement('img');
-          imgElement.src = 'data:image/png;base64,' + plotData;
-          plotElement.appendChild(imgElement);
-
-          if (!code.includes('import matplotlib.pyplot as plt')) {
-            plotElement.style.display = 'none';
-          }
-
-        } catch (error) {
-          console.error('Error running Python code:', error);
-          const outputElement = document.getElementById('${id}-text');
-          outputElement.innerHTML = 'Error: ' + error.message;
-          outputElement.classList.add('visible');
-        } finally {
-          playIcon.style.display = 'inline';
-          spinner.style.display = 'none';
-          button.disabled = false;
-          outputWrapper.classList.add('expanded');
-        }
-      }
-
-      function initializePythonRunner() {
-        const button = document.getElementById('${id}-button');
-        if (button) {
-          button.addEventListener('click', runPython);
-        } else {
-          console.error('Run Python button not found');
-        }
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializePythonRunner);
-      } else {
-        initializePythonRunner();
-      }
-    })();
-
-  </script>
 `
             // replace the node the new html content
             node.type = "html" as "code"

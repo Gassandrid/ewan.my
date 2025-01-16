@@ -1,3 +1,9 @@
+---
+date: 2024-12-10
+updated: 2025-01-16
+title: code running test
+---
+
 also seems to break syntax highlighter, though should be an easy fix
 
 not runnable:
@@ -69,4 +75,15 @@ plt.axvline(0, color='black',linewidth=0.5)
 
 # Show plot
 plt.show()
+```
+
+## For R:
+
+```r
+print("hello world")
+```
+
+
+```r-r
+print("hello world")
 ```

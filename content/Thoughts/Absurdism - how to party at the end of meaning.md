@@ -2,6 +2,7 @@
 tags:
   - philosophy
 date: 2024-10-04
+updated: 2025-01-16
 ---
 
 Absurdism, founded by [[Albert Camau]], dictates that we should accept the absurd situation that we as humans are in, that being:
