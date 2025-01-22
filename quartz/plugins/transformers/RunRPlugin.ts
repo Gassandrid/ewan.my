@@ -281,41 +281,99 @@ import('https://webr.r-wasm.org/latest/webr.mjs').then(
   async ({ WebR }) => {
     const webR = new WebR();
     await webR.init();
-
-        const runBtn = document.getElementById('${id}-button');
-        const outputDiv = document.getElementById('${id}-text');
-        const plotDiv = document.getElementById('${id}-plot');
-
-        runBtn.addEventListener("click", async () => {
-            runBtn.disabled = true;
-            outputDiv.innerText = "Running...";
-            plotDiv.innerHTML = ""; // Clear previous output
-
-            try {
-                const code = editor${id}.getValue(); // Get code from CodeMirror
-                const result = await webR.evalR(code);
-                const output = await result.toArray();
-
-                outputDiv.innerText = output.join("\n"); // Display text output
-                
-                // Handling graphics (plots)
-                const plotPNG = await webR.evalR("ragg::agg_png('plot.png'); " + code + "; dev.off();");
-                const plotData = await webR.fetchFile("plot.png");
-                const blob = new Blob([plotData], { type: "image/png" });
-                const url = URL.createObjectURL(blob);
-                plotDiv.innerHTML = \`<img src="\${url}" />\`; // Display plot
-
-            } catch (error) {
-                outputDiv.innerText = "Error: " + error.message;
-            }
-
-            runBtn.disabled = false;
-        });
-    });
-
   }
 );
 
+    (function() {
+
+      let webRReadyPromise;
+
+      async function loadWebR() {
+        if (!webRReadyPromise) {
+          webRReadyPromise = (async function() {
+            try {
+              const { WebR } = await import('https://webr.r-wasm.org/latest/webr.mjs');
+              const webR = new WebR();
+              await webR.init();
+              console.log('WebR loaded successfully');
+              await webR.evalR('install.packages(c("ggplot2", "dplyr", "tidyverse", "data.table", "ragg"))');
+              return webR;
+            } catch (error) {
+              console.error('Error loading WebR:', error);
+              throw error;
+            }
+          })();
+        }
+        return webRReadyPromise;
+      }
+
+      async function runR() {
+        const button = document.getElementById('${id}-button');
+        const playIcon = button.querySelector('.play-icon');
+        const spinner = button.querySelector('.spinner');
+        const plotElement = document.getElementById('${id}-plot');
+        const textElement = document.getElementById('${id}-text');
+        const outputWrapper = document.getElementById('${id}-outputwrapper');
+
+        textElement.innerHTML = '';
+        plotElement.innerHTML = '';
+
+        playIcon.style.display = 'none';
+        spinner.style.display = 'inline-block';
+        button.disabled = true;
+
+        try {
+          const webR = await loadWebR();
+          const code = editor${id}.getValue();
+
+          // Run the R script
+          const result = await webR.evalR(code);
+          const output = await result.toArray();
+          textElement.innerHTML = output.join("\n");
+
+          // Handling plots using ragg
+          await webR.evalR(\`
+            library(ragg)
+            agg_png('plot.png', width = 800, height = 600)
+            \${code}
+            dev.off()
+          \`);
+
+          const plotData = await webR.fetchFile('plot.png');
+          const blob = new Blob([plotData], { type: 'image/png' });
+          const url = URL.createObjectURL(blob);
+          const imgElement = document.createElement('img');
+          imgElement.src = url;
+          plotElement.appendChild(imgElement);
+
+        } catch (error) {
+          console.error('Error running R code:', error);
+          textElement.innerHTML = 'Error: ' + error.message;
+          textElement.classList.add('visible');
+        } finally {
+          playIcon.style.display = 'inline';
+          spinner.style.display = 'none';
+          button.disabled = false;
+          outputWrapper.classList.add('expanded');
+        }
+      }
+
+      function initializeRrunner() {
+        const button = document.getElementById('${id}-button');
+        if (button) {
+          button.addEventListener('click', runR);
+        } else {
+          console.error('Run R button not found');
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeRrunner);
+      } else {
+        initializeRrunner();
+      }
+
+    })();
 
 </script>
 
