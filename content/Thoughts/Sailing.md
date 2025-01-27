@@ -1,7 +1,10 @@
 ---
-tags:
-  - hobbies
 date: 2024-10-05
+updated: 2025-01-24
+title: Sailing
+tags:
+  - thoughts
+  - hobbies
 ---
 
 > [!Info]- Video

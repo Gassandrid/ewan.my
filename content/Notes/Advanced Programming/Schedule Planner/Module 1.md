@@ -1,11 +1,11 @@
 ---
 date: 2025-01-15
-updated: 2025-01-16
+updated: 2025-01-23
 title: Module 1
 ---
-**Potential:** 330
+**Potential:** 345
 **Ideal:** 250
-**Current: *30*
+**Current: *120*
 
 ---
 
@@ -19,7 +19,8 @@ title: Module 1
 
 ## In-Class Activities - 20 Each
 
-Cant do here, but log when you do them for counting.
+- [x] [Debugging Activity-A](https://www.gradescope.com/courses/947788/assignments/5569650/submissions/new) - 20
+
 
 ---
 
@@ -37,7 +38,15 @@ Cant do here, but log when you do them for counting.
 
 ## Guided Project - 20 Each
 
-- [ ] [Style Me Repo](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098646/View)
-- [ ] [Errors Repo](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098647/View)
-- [ ] [Poptionals Repo](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098703/View)
+- [x] [Style Me Repo](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098646/View) - 20
+- [x] [Errors Repo](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098647/View) - 20
+- [x] [Poptionals Repo](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098703/View) - 20
+
+---
+
+## Other Assignments - TBD
+
+- [ ] [TA Office Hours](https://www.gradescope.com/courses/947788/assignments/5569646/submissions/new) - 5
+- [x] [Boolean Logic Review](https://www.gradescope.com/courses/947788/assignments/5569657/submissions/new) - 10
+
 

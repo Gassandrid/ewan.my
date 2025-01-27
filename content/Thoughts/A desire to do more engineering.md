@@ -2,6 +2,10 @@
 date: 2024-11-25
 tags:
   - OCD
+updated:
+  - OCD
+  - thoughts
+title: A desire to do more engineering
 ---
 
 Working on [[DARS]] has re-ignited my passion for the physical side of computer science. While I have always excelled at the software side of things, and while I am sure that I do want to go into a more theoretical field, I can't help but desire to do some more on hands work in my free time.
@@ -16,7 +20,7 @@ The solution that I have ( somewhat ) come to is that I can have computer scienc
 
 This is difficult for my semi-OCD brain to accept, but I am satisfied that as long as I remind myself to contribute to my extra hobbies like embedded and my notetaking, I am sure that becoming an adept engineer is within my grasp.
 
---- 
+---
 
 ## A Road Ahead...
 

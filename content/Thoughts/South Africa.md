@@ -1,7 +1,8 @@
 ---
 date: 2024-10-17
-tags: 
-updated: 2025-01-16
+tags:
+  - thoughts
+updated: 2025-01-24
 title: South Africa
 ---
 

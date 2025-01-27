@@ -1,10 +1,11 @@
 ---
 date: 2025-01-03
-updated: 2025-01-16
+updated: 2025-01-24
 tags:
   - ai
   - ollama
   - flux
+  - cs
 title: Setting Up Local AI
 aliases:
   - ollama
@@ -70,6 +71,6 @@ Made by the same people as ComfyUI, but with the intention to be more usable and
 
 ---
 
-## Next steps
+## Next Steps
 
 Now that I have gotten enough of an Idea of how I want my model architecture to look, it is time to plan out how to implement it for my [[Migrating my Quartz, DARS, and media to one big Homelab Server|Home Server]] project. Because I chose [[Setting Up Local AI#[open-webui](https //github.com/open-webui/open-webui)|open webui]], docker integration is already recommended, which allows me to package this in a server as possibly a Kubernetes cluster, having the similar models run in parallel as separate docker containers.

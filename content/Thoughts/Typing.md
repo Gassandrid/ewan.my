@@ -1,3 +1,11 @@
+---
+tags:
+  - thoughts
+title: Typing
+date: 2024-11-20
+updated: 2025-01-24
+---
+
 I love typing. It's one of my big addictions. When I am being unproductive, you will often find me on [monkeytype](https://monkeytype.com/).
 
 Despite this, it is a very useful skill for me to have, as someone in the field of computer science. So, in a way, it is somewhat productive for to practice

@@ -1,7 +1,9 @@
 ---
 date: 2024-12-24
-updated: 2024-12-30
+updated: 2025-01-24
 title: 2025 Resolutions
+tags:
+  - thoughts
 ---
 
 While it isn't exactly the new year yet, I thought I might get ahead and start brainstorming my resolutions for how I will approach the upcoming year.

@@ -1,8 +1,7 @@
 ---
 date: 2024-10-03
+updated: 2025-01-24
 ---
->[!Note] 
->To be rewritten, right now is just AI filler lol
 
 
 The **University of Vermont (UVM)** is a public research university located in Burlington, Vermont. Established in 1791, it is one of the oldest universities in the United States. UVM is known for its commitment to sustainability, research, and community engagement.

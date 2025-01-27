@@ -1,7 +1,11 @@
 ---
 date: 2025-01-01
-updated: 2025-01-01
+updated: 2025-01-24
+tags:
+  - thoughts
+title: On Immortalizing My Family
 ---
+ 
 
 With the recent losses within my family, I was inspired to finally take a deep dive into all the data hoarding my family has done over the years. Going through all these drives, I found media from over 20 years ago from my childhood, my parent's youth, and my grandfather in his earlier(at least to me) years.
 
@@ -9,7 +13,7 @@ What I soon realized was that these archives were more precious to me than anyth
 
 ---
 
-## M-DISC: a data hoarders dream
+## M-DISC: a Data Hoarders Dream
 
 As one might expect from a computer science person, I happen to have a thing for storage and storage mediums. Of the wierd technology that I keep around for god knows what, I have these Blu-ray optical disks called “M-DISCS”. 
 

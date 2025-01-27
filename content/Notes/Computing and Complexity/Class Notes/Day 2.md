@@ -5,7 +5,7 @@ tags:
   - computing
 date: 2025-01-16
 title: Day 2
-updated: 2025-01-16
+updated: 2025-01-27
 ---
 
 In this class we will continue our work on [[Day 1#Deterministic Finite Automata|Deterministic Finite Automata]], where we will examine tools like Regex to help to understand this agents.
@@ -265,6 +265,4 @@ graph LR
    q0 --> q1
    q1 --> q0
 ```
-
-Traversing 
 
