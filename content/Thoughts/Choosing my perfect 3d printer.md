@@ -1,7 +1,7 @@
 ---
 title: Choosing my perfect 3d printer
 date: 2025-01-12
-updated: 2025-01-24
+updated: 2025-01-27
 tags:
   - 3dprinting
   - cs
@@ -32,4 +32,16 @@ Looking at the market, this leaves me with two *real* choices. **Bambu Lab** and
 
 **Prusa** is the reliable, established, and most importantly *Open Source* choice for a 3d printer. They work well, are well established as a reliable brand, and give you the freedom to do whatever the hell you want with your 3d printer, as you often build it yourself. But that is just it, you *DO* have to build, troubleshoot, and sometimes frankly babysit the printer until it gets on its feet, and then some. And on top of that, despite most of the parts in the Prusa kits being 3d printed, they are just as expensive if not more than the competition.
 
-**Bambu Lab** is the new kid on the block. But despite their youth in the industry, they have cemented themself as the consumer standard for 3d printing. Bambu Lab printers *just work*, no real setup, no babysitting, and with cutting edge features that Prusa would make you pay a grand for. And on top of that, they are really cheap for a 3d printer, and have disrupted the market in the few years that they have been around. There is a catch though, as they are sort of like the Apple of the 3d printing world. While it isn't impossible to modify/tinker with these printers, they are closed source, and share the walled garden philosophy of Apple. This doesnt mean the printers are bad, however it is a matter of principle for some people.
+![[Pasted image 20250127151652.png]]
+
+-*Prusa MK4 ~ 800$ when DIY assembled*
+
+**Bambu Lab** is the new kid on the block. But despite their youth in the industry, they have cemented themself as the consumer standard for 3d printing. Bambu Lab printers *just work*, no real setup, no babysitting, and with cutting edge features that Prusa would make you pay a grand for. And on top of that, they are really cheap for a 3d printer, and have disrupted the market in the few years that they have been around. There is a catch though, as they are sort of like the Apple of the 3d printing world. While it isn't impossible to modify/tinker with these printers, they are closed source, and share the walled garden philosophy of Apple. This doesn't mean the printers are bad, however it is a matter of principle for some people. In addition, for this price range, I can get a printer that has an enclosure included and supports more engineering filaments(carbon fibre filled, abs, etc).
+
+![[Pasted image 20250127151846.png]]
+
+-*Bambu Lab P1S ~800$ with AMS multi material system*
+
+---
+
+In the end, while I will always be one for open source nature, I decided to go with **Bambu Lab**, 

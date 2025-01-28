@@ -2,6 +2,7 @@
 tags:
   - math
 date: 2024-09-25
+updated: 2025-01-27
 ---
 
 Curvature is a very intuitive concept.
@@ -12,7 +13,7 @@ Does a circle have a curvature? Yeah, it has some curvature.
 
 It is our job to quantify how "much" curvature is in a given problem.
 
-## Recalling [[Vectors]]
+## Recalling [[Notes/Calculus III/Conceptual Notes/Vectors]]
 
 Lets have a look at a simple circle.
 

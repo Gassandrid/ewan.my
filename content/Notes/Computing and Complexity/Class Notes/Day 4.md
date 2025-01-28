@@ -6,7 +6,7 @@ tags:
   - cs
 date: 2025-01-23
 title: Day 4
-updated: 2025-01-23
+updated: 2025-01-28
 ---
 
 This class will discuss RL's and their closure properties, proof of closure under union, and non-determinism.
@@ -94,4 +94,4 @@ This diagram shows an NFA (not a DFA) with the following properties:
 
 **Once an NFA reaches the end of its input string, if ANY of the output arrows are in an accepting state, it accepts.**
 
-
+NFAs are more powerful than DFAs because they can represent more complex patterns and behaviors. However, they are also harder to analyze and simulate because of their non-deterministic nature.

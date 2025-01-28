@@ -1,12 +1,13 @@
 ---
 title: Proxmox on old Macbooks
 date: 2025-01-02
-updated: 2025-01-02
+updated: 2025-01-27
 tags:
   - homelab
   - cs
 ---
  
+
 While my mini pc's haven't arrived yet, I thought I might as well go ahead and convert some of my old laptops - namely macBooks - into containerized Linux machines. This will be nice as I can have a bunch of old machines that split the workloads across themselves, and use the system as namely one giant [proxmox cluster](https://pve.proxmox.com/wiki/Cluster_Manager).
 
 ## Online Tutorial
@@ -17,7 +18,9 @@ I found [this video](https://youtu.be/FsPYgZYXyZw?si=twxsutQ-GoAIYHXl) which con
 
 While this wont let me use the different laptops as one system, it does mean I can access and manage all these devices from one place, which is nice.
 
-## More useful links:
+## More Useful Links:
 
 - [using pi in addition to a cluster](https://www.reddit.com/r/homelab/comments/e30qmh/my_rack_lab_with_proxmox_and_rpi/)
 	- I dont really want to run proxmox on the rPi as it is already such a limited resource that I dont really see the point. Prefer just to have it act on its own and interact with the other machines via network.
+- [starting guide to proxmox](https://www.youtube.com/watch?v=5j0Zb6x_hOk)
+	- not for a laptop cluster specifically, but just a guide to using/learning proxmox

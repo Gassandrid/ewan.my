@@ -1,17 +1,17 @@
 ---
 date: 2025-01-15
-updated: 2025-01-23
+updated: 2025-01-27
 title: Module 1
 ---
 **Potential:** 345
 **Ideal:** 250
-**Current: *120*
+**Current: *140*
 
 ---
 
 ## Oral Assignments - 15-20 Each
 
-- [ ] [History Essay](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098724/View)
+- [x] [History Essay](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098724/View) - 20
 - [x] [DEI Reflection](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098726/View) - 15
 - [x] [Proffesional Org/Conference](https://brightspace.uvm.edu/d2l/le/content/113454/viewContent/2098727/View) - 15
 
