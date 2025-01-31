@@ -1,6 +1,6 @@
 ---
 date: 2025-01-02
-updated: 2025-01-16
+updated: 2025-01-29
 tags:
   - homelab
   - cs
@@ -45,3 +45,14 @@ https://docs.openwebui.com/getting-started/advanced-topics/api-endpoints
 
 **Homelab Services List:**
 - https://www.reddit.com/r/homelab/comments/10zsjt6/what_services_do_you_run_in_your_homelab/
+
+- **Snapdrop**
+	- local hosted airdrop alternative for people on your network
+
+## Node Orchestration
+
+I want to get familiar with both Kubernetes and docker compose with this project. Deciding which to use what on is quite important, but a simple answer.
+
+My AI Proxmox VM, which is entirely a local endeavor, does not need scaling abilities, and would be best to pair with docker compose to tie together things like comfyui, ollama.cpp, and open webui
+
+My public facing website on the other hand might face scaling requirements, and is a simple enough starting point for me to get to know Kubernetes better.

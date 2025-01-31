@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+updated: 2025-01-31
 ---
 # Statistics Notes
 
@@ -34,7 +35,7 @@ A collection of my class notes for STAT2430
 
 [[Sample]]
 [[Axiom]]
-[[Event]]
+[[Notes/Statistics/Conceptual Notes/Event]]
 [[Population]]
 
 ### Cheat Sheets

@@ -1,11 +1,11 @@
 ---
 date: 2025-01-15
-updated: 2025-01-27
+updated: 2025-01-31
 title: Module 1
 ---
-**Potential:** 345
+**Potential:** 370
 **Ideal:** 250
-**Current: *140*
+**Current: *210*
 
 ---
 
@@ -32,7 +32,7 @@ title: Module 1
 
 ## Applied Project - 50 Each
 
-- [ ] [Repo](https://github.com/uvmcs2300s2025/M1AP) - [Submit](https://www.gradescope.com/courses/947788/assignments/5569659/submissions/new)
+- [x] [Repo](https://github.com/uvmcs2300s2025/M1AP) - [Submit](https://www.gradescope.com/courses/947788/assignments/5569659/submissions/new) - 50
 
 ---
 
@@ -48,5 +48,4 @@ title: Module 1
 
 - [ ] [TA Office Hours](https://www.gradescope.com/courses/947788/assignments/5569646/submissions/new) - 5
 - [x] [Boolean Logic Review](https://www.gradescope.com/courses/947788/assignments/5569657/submissions/new) - 10
-
-
+- [ ] demo Open ended project in class thursday - 5

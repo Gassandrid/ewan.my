@@ -2,8 +2,10 @@
 tags:
   - math
   - neuroscience
+  - artem-kirsanov
 date: 2024-10-28
-updated: 2024-12-25
+updated: 2025-01-30
+title: Differential Equations in Neuroscience
 ---
 *study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)*
 

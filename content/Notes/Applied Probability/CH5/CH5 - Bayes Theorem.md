@@ -5,7 +5,7 @@ tags:
   - statistics
 date: 2025-01-24
 title: CH5 - Bayes Theorem
-updated: 2025-01-24
+updated: 2025-01-29
 ---
 
 This note discusses the **Bayes Theorem** and how it can be used to calculate conditional probabilities.

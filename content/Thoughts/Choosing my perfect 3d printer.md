@@ -1,7 +1,7 @@
 ---
 title: Choosing my perfect 3d printer
 date: 2025-01-12
-updated: 2025-01-27
+updated: 2025-01-28
 tags:
   - 3dprinting
   - cs
@@ -44,4 +44,6 @@ Looking at the market, this leaves me with two *real* choices. **Bambu Lab** and
 
 ---
 
-In the end, while I will always be one for open source nature, I decided to go with **Bambu Lab**, 
+In the end, while I will always be one for open source nature, I decided to go with **Bambu Lab**, more specifically, the P1S.
+
+I need a tool, and it seems like the best choice. Looking forward to printing!

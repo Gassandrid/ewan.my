@@ -1,7 +1,7 @@
 ---
 title: Brainstorming Hardware Stack
 date: 2025-01-02
-updated: 2025-01-27
+updated: 2025-01-28
 tags:
   - homelab
 ---
@@ -26,3 +26,9 @@ When my [[Choosing my perfect 3d printer|3d printer]] arrives, I plan to print a
 ## Setup Plans
 
 Found [this useful thread](https://www.reddit.com/r/homelab/comments/ovfity/my_little_homelab_using_old_cheap_laptops/) with a guy who did something similar to what I am planning. I will have to purchase a network switch, but besides that I should be good to go.
+
+---
+
+## Updates
+
+I am consider [[Using Bare Metal Nixos and Debian Over Proxmox]] for this project now due to some of the reasons highlighted under [[Bridging my University Wifi to host own network access point]]
