@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-01-16
+updated: 2025-01-31
 ---
 
 <div>
@@ -128,6 +128,8 @@ Rust is still my main project language but I have taken some time to learn the f
 **[[DARS]] - Dormitory Automated Residential System**
 
 A model replica of TARS from interstellar, built for the purpose of mapping natural human language to discrete functional output through the use of LLM's and microcontrollers.
+
+**[[Migrating my Quartz, DARS, and media to one big Homelab Server|Homelab]]** - an evolution of [[DARS]] that interfaces the llm bindings I developed to control all my self hosted services in addition to my room.
 
 ## About Me ⛵️
 

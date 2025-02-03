@@ -1,12 +1,13 @@
 ---
 id: Echelon Form
-aliases: []
+aliases: 
 tags:
   - math
   - linear-algebra
+  - math/linear-algebra
 date: 2025-01-17
 title: Echelon Form
-updated: 2025-01-17
+updated: 2025-02-03
 ---
 
 Echelon form is a matrix form where the leading coefficient of each row is always to the right of the leading coefficient of the row above it. The leading coefficient of a row is the first non-zero element in that row.
@@ -140,13 +141,7 @@ $$
 
 Now you might notice that this is an **impossible solution**, and therefore this system of equations **cannot be solved.**
 
-
-
-
-
-
---- 
-
+---
 
 ## General Strategy
 
@@ -156,9 +151,7 @@ $$
 SYSTEM \rightarrow Echelon \ System
 $$
 
-
 |      | SOME        | NONE               |
 | ---- | ----------- | ------------------ |
 | SOME | No solution | $\infty$ solutions |
 | NONE | No solution | $1$ solution       |
-

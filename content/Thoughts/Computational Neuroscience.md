@@ -29,8 +29,9 @@ Until now, where I have started coming across like-minded individuals who are co
 
 ## How I Am Pursuing This Interest
 
-Because I am still in undergrad, and pursuing a major in computer science, there hasnt been a good enough opportunity for me to pursue this interest in a formal setting. However, in my free time I have been relentlessly pursuing this interest through online courses, books, and academic papers. Combining that with my rigorous notetaking and knowledge management system, I hope to build a strong foundation in this field.
+Because I am still in undergrad, and pursuing a major in computer science, there hasn't been a good enough opportunity for me to pursue this interest in a formal setting. However, in my free time I have been relentlessly pursuing this interest through online courses, books, and academic papers. Combining that with my rigorous note-taking and knowledge management system, I hope to build a strong foundation in this field.
 
 ### Some of the Resources I Have Been Using:
 
 [[Artem Kirsanov]], a computational neuroscientist, has some of the best videos on the subject of computational neuroscience. I have been following his videos and taking notes on them( he also is a big obsidian fan! ).
+
