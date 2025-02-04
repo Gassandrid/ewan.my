@@ -1,3 +1,7 @@
+---
+date: 2024-12-10
+updated: 2024-12-10
+---
 ## 1 polar coordinate practice
 
 problem:

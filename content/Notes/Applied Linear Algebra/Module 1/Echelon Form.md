@@ -4,7 +4,6 @@ aliases:
 tags:
   - math
   - linear-algebra
-  - math/linear-algebra
 date: 2025-01-17
 title: Echelon Form
 updated: 2025-02-03

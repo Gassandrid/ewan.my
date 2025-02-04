@@ -1,8 +1,9 @@
 ---
-date: 
+date: 2024-12-10
 tags:
   - math
   - cs
+updated: 2024-12-10
 ---
 ![[Pasted image 20241028124902.png]]
 

@@ -1,3 +1,7 @@
+---
+date: 2024-08-09
+updated: 2024-08-09
+---
 # AGE (CLI App)
 
 ## Overview

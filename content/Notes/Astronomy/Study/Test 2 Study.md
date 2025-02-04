@@ -2,6 +2,7 @@
 date: 2024-11-05
 tags:
   - astronomy
+updated: 2024-11-05
 ---
 
 For the second test in our astronomy class.

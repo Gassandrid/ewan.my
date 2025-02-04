@@ -5,6 +5,7 @@ tags:
   - cs
   - ai
 date: 2024-10-17
+updated: 2024-10-18
 ---
 
 > [!Note]

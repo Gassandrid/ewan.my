@@ -3,6 +3,7 @@ date: 2024-11-11
 tags:
   - cs
   - embedded
+updated: 2024-11-11
 ---
 
 > [!abstract] Student Information

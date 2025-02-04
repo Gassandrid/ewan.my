@@ -1,13 +1,14 @@
 ---
 id: Day 3
-aliases: []
+aliases: 
 tags:
   - computing
-  - cs
+  - cs/automata
 date: 2025-01-21
 title: Day 3
-updated: 2025-01-28
+updated: 2025-02-04
 ---
+ 
 
 This class will continue on the subject of DFA's and the Chomsky hierarchy.
 

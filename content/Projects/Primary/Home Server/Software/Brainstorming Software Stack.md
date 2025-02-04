@@ -1,9 +1,9 @@
 ---
 date: 2025-01-02
-updated: 2025-01-29
+updated: 2025-02-04
 tags:
-  - homelab
   - cs
+  - projects/homelab
 type: project
 title: Brainstorming Software Stack
 ---

@@ -2,6 +2,7 @@
 title: Finding The Total Number of Printer Combinations
 date: 2024-11-28
 author: Ewan / Gassandrid
+updated: 2024-11-28
 ---
 
 > **Abstract**

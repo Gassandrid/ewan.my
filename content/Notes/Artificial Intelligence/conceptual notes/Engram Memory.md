@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+updated: 2024-10-05
 ---
 # Engram and Memory Allocation/Encoding
 ![[Pasted image 20240904140011.png]]

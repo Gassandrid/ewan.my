@@ -1,3 +1,7 @@
+---
+date: 2024-09-02
+updated: 2024-09-02
+---
 Function pointers in C++ are pointers that point to the memory address of a function rather than a variable. This allows you to store the address of a function in a variable, pass it as an argument to other functions, and even call the function via the pointer. Here's a basic example:
 
 ### Declaring and Using Function Pointers

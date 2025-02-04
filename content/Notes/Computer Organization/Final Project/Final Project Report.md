@@ -3,7 +3,8 @@ id: Final Project Report
 aliases: []
 tags:
   - embedded
-date: "2024-12-04"
+date: 2024-12-04
+updated: 2024-12-06
 ---
 
 <body style="margin: 0; font-family: 'Helvetica', sans-serif; background: linear-gradient(to bottom right, #4e54c8, #8f94fb); display: flex; justify-content: center; align-items: center; height: 100vh; color: white;">

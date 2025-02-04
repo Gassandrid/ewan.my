@@ -4,6 +4,7 @@ aliases:
 tags:
   - statistics
 date: 2024-09-12
+updated: 2025-02-03
 ---
 
 # CH2.4 - Random Variables (RVs)
@@ -52,9 +53,7 @@ The probability model for the random variable X is given by the probability mass
 
 _python script for plotting PMF and CDF_
 
-```python
-import micropip
-await micropip.install("matplotlib")
+```python-r
 import matplotlib.pyplot as plt
 
 # Data from the table
@@ -85,7 +84,6 @@ ax2.legend(loc='upper right')
 plt.show()
 ```
 
-![[Screenshot 2024-09-17 at 8.51.41 AM.png]]
 
 > [!Info] Definition
 > **Fulcrum**: The balancing point of a lever
@@ -143,11 +141,7 @@ $$ f(x) = \begin{cases} 1.5-6(x-50.0)^2, & \text{for } 49.5 \leq x \leq 50.5 \\ 
 
 **Graping the PDF with the following python script**
 
-```python
-import micropip
-await micropip.install("numpy")
-await micropip.install("matplotlib")
-
+```python-r
 import numpy as np
 import matplotlib.pyplot as plt
 

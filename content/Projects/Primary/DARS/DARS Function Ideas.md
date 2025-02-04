@@ -2,6 +2,7 @@
 tags:
   - dars
 date: 2024-11-25
+updated: 2024-11-25
 ---
 
 Since DARS is a raspberry pi and ESP 32 project, a lot of the commands are going to be focused on room control devices and features. However, I think it would be nice to implement some software features in addition.

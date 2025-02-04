@@ -3,10 +3,12 @@ id: Day 2
 aliases: []
 tags:
   - computing
+  - cs/automata
 date: 2025-01-16
 title: Day 2
-updated: 2025-01-27
+updated: 2025-02-04
 ---
+ 
 
 In this class we will continue our work on [[Day 1#Deterministic Finite Automata|Deterministic Finite Automata]], where we will examine tools like Regex to help to understand this agents.
 

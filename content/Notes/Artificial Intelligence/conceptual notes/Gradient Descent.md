@@ -1,3 +1,7 @@
+---
+date: 2024-10-06
+updated: 2024-10-06
+---
 
 Gradient Descent is an optimization algorithm used to minimize the cost function by iteratively adjusting the model's parameters.
 

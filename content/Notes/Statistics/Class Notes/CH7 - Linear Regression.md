@@ -4,7 +4,8 @@ aliases: []
 tags:
   - statistics
   - engineering
-date: "2024-11-14"
+date: 2024-11-14
+updated: 2024-12-13
 ---
 
 # Chapter 7: Linear Regression

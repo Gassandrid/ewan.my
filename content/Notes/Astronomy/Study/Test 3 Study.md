@@ -1,3 +1,7 @@
+---
+date: 2024-12-09
+updated: 2024-12-09
+---
 ## Key Concepts:
 
 1. What is a science? A scientific hypothesis? Theory? What is the place of   astronomy in the sciences?  

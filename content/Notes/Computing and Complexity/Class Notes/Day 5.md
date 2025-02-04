@@ -1,17 +1,17 @@
 ---
 id: Day 5
-aliases: []
+aliases: 
 tags:
   - computing
-  - cs
+  - cs/automata
 date: 2025-01-28
 title: Day 5
-updated: 2025-01-29
+updated: 2025-02-04
 ---
 
-# Non-deterministic Finite Automata (NFA)
-
 ## Introduction to Non-determinism
+
+![[Pasted image 20250204090735.png]]
 
 Non-determinism is a fundamental concept in computation theory that allows a machine to have multiple possible next states for a given input. Unlike deterministic machines where each input leads to exactly one next state, non-deterministic machines can "guess" or "pursue multiple paths simultaneously."
 
@@ -43,7 +43,7 @@ $$
 \delta(q, a) = \{q_1, q_2, ..., q_n\} \text{ where } q_i \in Q
 $$
 
-## ε-transitions (Epsilon Transitions)
+## Ε-transitions (Epsilon Transitions)
 
 ### Properties
 
@@ -51,18 +51,10 @@ $$
 - Can create "shortcuts" in computation
 - Critical for certain constructions and proofs
 
-### ε-closure
+### Ε-closure
 
 For a state $q$, its ε-closure is defined as:
 
 $$
 \varepsilon\text{-closure}(q) = \{p \in Q \mid q \xRightarrow{\varepsilon^*} p\}
 $$
-
-## Examples
-
-### Basic NFA Example
-
-```
-
-```

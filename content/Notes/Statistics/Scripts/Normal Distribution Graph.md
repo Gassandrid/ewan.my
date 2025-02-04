@@ -1,6 +1,8 @@
 ---
 tags:
   - python
+date: 2024-10-15
+updated: 2024-10-17
 ---
 
 ## Image

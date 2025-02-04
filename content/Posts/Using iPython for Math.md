@@ -2,6 +2,7 @@
 date: 2024-10-03
 tags:
   - python
+updated: 2024-10-03
 ---
 I have recently started to like using ipython to do a lot of things I used to use tools like Jupyter, Desmos, and Mathematica for. And through this, I have found a powerful new tool to add to my collection.
 

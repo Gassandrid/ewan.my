@@ -1,9 +1,9 @@
 ---
 title: Migrating my Quartz, DARS, and media to one big Homelab Server
 date: 2025-01-02
-updated: 2025-01-16
+updated: 2025-02-04
 tags:
-  - homelab
+  - projects/homelab
 type: project
 ---
 

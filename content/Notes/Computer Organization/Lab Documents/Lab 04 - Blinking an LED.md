@@ -3,6 +3,7 @@ date: 2024-10-09
 tags:
   - embedded
   - python
+updated: 2024-10-17
 ---
 
 > [!abstract] Student Information

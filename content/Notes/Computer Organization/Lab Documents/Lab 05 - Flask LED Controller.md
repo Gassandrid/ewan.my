@@ -4,6 +4,7 @@ tags:
   - python
   - embedded
   - web
+updated: 2024-10-18
 ---
 
 > [!abstract] Student Information

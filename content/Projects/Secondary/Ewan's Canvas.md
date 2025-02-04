@@ -1,3 +1,7 @@
+---
+date: 2024-10-02
+updated: 2024-10-02
+---
 [Visit The Canvas](gassandrid.xyz/canvas)
 ## Inspirations
 

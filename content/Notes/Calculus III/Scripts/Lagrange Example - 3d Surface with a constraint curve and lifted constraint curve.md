@@ -1,3 +1,7 @@
+---
+date: 2024-10-03
+updated: 2024-10-03
+---
 ## Description
 
 This Python script uses `matplotlib` to visualize a 3D surface (a paraboloid) with a squiggled constraint curve. The curve is lifted onto the surface, with two points highlighted: one at the maximum and one at the minimum of the curve. Below is an explanation of the main steps:

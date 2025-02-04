@@ -2,6 +2,8 @@
 id: Status Update 2 - Final Project
 aliases: []
 tags: []
+date: 2024-10-10
+updated: 2024-10-25
 ---
 
 > [!abstract] Student Information

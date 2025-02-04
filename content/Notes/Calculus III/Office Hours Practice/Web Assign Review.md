@@ -1,3 +1,7 @@
+---
+date: 2024-10-14
+updated: 2024-10-14
+---
 Review of the web assign practice for the mid term review
 
 ## Vectors stuff

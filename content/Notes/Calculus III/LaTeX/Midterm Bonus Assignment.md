@@ -2,6 +2,7 @@
 title: Midterm Bonus Assignment
 author: Ewan Pedersen
 date: 2024-11-11
+updated: 2024-12-03
 ---
 
 ## Abstract

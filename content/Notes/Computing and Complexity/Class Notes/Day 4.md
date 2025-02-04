@@ -1,13 +1,14 @@
 ---
 id: Day 4
-aliases: []
+aliases: 
 tags:
   - computing
-  - cs
+  - cs/automata
 date: 2025-01-23
 title: Day 4
-updated: 2025-01-28
+updated: 2025-02-04
 ---
+ 
 
 This class will discuss RL's and their closure properties, proof of closure under union, and non-determinism.
 

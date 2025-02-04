@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+updated: 2024-10-20
 ---
 
 Latent variables are variables that are not directly observed but are inferred from other observable variables in the model. They play a crucial role in generative models, where the goal is to generate data from a learned distribution.

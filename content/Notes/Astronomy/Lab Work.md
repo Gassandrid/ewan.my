@@ -1,3 +1,7 @@
+---
+date: 2024-11-21
+updated: 2024-11-21
+---
 ## Calculating Scale 
 
 $$

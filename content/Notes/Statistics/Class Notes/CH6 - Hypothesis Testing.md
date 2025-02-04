@@ -3,7 +3,8 @@ id: CH6 - Hypothesis Testing
 aliases: []
 tags:
   - statistics
-date: "2024-10-29"
+date: 2024-10-29
+updated: 2024-12-13
 ---
 
 Hypothesis Testing is about **testing a claim** about a population parameter using sample data. The claim is called the **null hypothesis**, denoted by $H_0$. The alternative hypothesis is denoted by $H_1$.

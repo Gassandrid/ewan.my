@@ -1,3 +1,7 @@
+---
+date: 2024-10-04
+updated: 2024-10-04
+---
 ```python
 import micropip
 await micropip.install("matplotlib")

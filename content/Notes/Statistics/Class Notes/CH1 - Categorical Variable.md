@@ -7,6 +7,7 @@ tags:
   - python
   - statistics
 date: 2024-09-12
+updated: 2024-10-25
 ---
 # CH 1 Continued - Categorical Variables in Statistics
 

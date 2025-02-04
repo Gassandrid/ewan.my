@@ -2,6 +2,8 @@
 id: CH6 - Chi Squared Tests
 aliases: []
 tags: []
+date: 2024-12-13
+updated: 2024-12-13
 ---
 
 There are two kinds of Chi Squared Tests we should be familiar with:

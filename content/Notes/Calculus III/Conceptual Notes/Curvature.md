@@ -2,6 +2,7 @@
 date: 2024-09-24
 tags:
   - math
+updated: 2024-10-25
 ---
 
 Curvature measures how fast a curve is changing direction at any given point. It is a critical concept in understanding the geometry of curves in space.

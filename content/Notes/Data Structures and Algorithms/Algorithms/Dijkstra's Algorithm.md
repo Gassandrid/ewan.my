@@ -3,6 +3,7 @@ date: 2024-10-25
 tags:
   - cs
   - dsa
+updated: 2024-11-23
 ---
 
 Dijkstra's algorithm is a popular **graph traversal algorithm** used to find the shortest path between nodes in a weighted graph. Developed by Edsger W. Dijkstra in 1956, it’s an efficient solution for finding the shortest path from a single source to all other nodes.

@@ -2,6 +2,7 @@
 date: 2024-09-29
 tags:
   - math
+updated: 2024-10-25
 ---
 
 > [!summary] **Lagrange Multipliers**

@@ -2,6 +2,7 @@
 tags:
   - math
 date: 2024-09-04
+updated: 2024-10-25
 ---
 
 ## How Do You "add" Two Vectors Together?

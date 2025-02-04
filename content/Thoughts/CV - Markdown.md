@@ -1,3 +1,7 @@
+---
+date: 2024-10-22
+updated: 2024-10-22
+---
 # Ewan Pedersen
 Undergraduate Second Year  
 SF/Bay Area / Vermont  

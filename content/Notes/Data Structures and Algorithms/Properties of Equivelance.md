@@ -3,7 +3,8 @@ id: Properties of Equivelance
 aliases: []
 tags:
   - dsa
-date: "2024-12-10"
+date: 2024-12-10
+updated: 2024-12-10
 ---
 
 In layman's terms:

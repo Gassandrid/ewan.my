@@ -2,6 +2,7 @@
 tags:
   - dars
 date: 2024-11-21
+updated: 2024-11-21
 ---
 
 The wood box demo serves as a chassis test, as visual appeal isn't the biggest priority to me right now! What's more important is the capabilities, of this box.

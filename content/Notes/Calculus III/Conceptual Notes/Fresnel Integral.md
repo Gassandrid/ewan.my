@@ -2,6 +2,7 @@
 date: 2024-10-07
 tags:
   - math
+updated: 2024-10-25
 ---
 
 The **Fresnel integrals** are a pair of transcendental functions that arise in the study of wave optics, particularly in problems involving diffraction and interference. These integrals are defined as follows:

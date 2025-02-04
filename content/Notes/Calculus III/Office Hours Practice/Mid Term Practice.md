@@ -2,6 +2,8 @@
 id: Mid Term Practice
 aliases: []
 tags: []
+date: 2024-10-14
+updated: 2024-10-14
 ---
 
 Use to help structure studying

@@ -2,6 +2,7 @@
 date: 2024-09-20
 tags:
   - math
+updated: 2024-10-25
 ---
 
 The TNB frame, also known as the **Frenet-Serret frame**, is a coordinate system associated with a point on a space curve. It consists of three mutually perpendicular vectors:

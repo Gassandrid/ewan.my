@@ -1,6 +1,8 @@
 ---
 tags:
   - dars
+date: 2024-11-21
+updated: 2024-11-21
 ---
 Two main parts to the LLM structure behind DARS.
 

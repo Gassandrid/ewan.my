@@ -1,3 +1,7 @@
+---
+date: 2024-08-08
+updated: 2024-08-08
+---
 ## Cheat.sh
 This tool is awesome, gives you usefull knowledge for any cli command, just by using curl as so:
 ```zsh

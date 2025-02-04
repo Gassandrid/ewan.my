@@ -2,6 +2,7 @@
 date: 2024-10-23
 tags:
   - cs
+updated: 2024-10-25
 ---
 
 > [!abstract] Student Information

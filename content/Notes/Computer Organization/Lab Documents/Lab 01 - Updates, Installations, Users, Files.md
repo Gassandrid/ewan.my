@@ -2,6 +2,7 @@
 date: 2024-09-18
 tags:
   - embedded
+updated: 2024-12-10
 ---
 
 > [!abstract] Student Information

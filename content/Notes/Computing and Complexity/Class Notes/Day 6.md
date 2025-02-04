@@ -1,13 +1,14 @@
 ---
 id: Day 6
-aliases: []
+aliases: 
 tags:
   - computing
-  - cs
+  - cs/automata
 date: 2025-01-30
 title: Day 6
-updated: 2025-01-30
+updated: 2025-02-04
 ---
+ 
 
 This class will discuss the conversion of an NFA to equivelant DFA by subset construction algorithm.
 
@@ -152,7 +153,7 @@ stateDiagram
 
 *it doesnt say so in the diagram, but any state that CONTAINS A is considered an accepting state.*
 
-### The Process we follow
+### The Process We Follow
 
 1. create states in DFA for each element of $P(Q)$ where $Q$ is set of states in NFA
 2. for each transition consider all possible destinations and draw transitions to states with corresponding label

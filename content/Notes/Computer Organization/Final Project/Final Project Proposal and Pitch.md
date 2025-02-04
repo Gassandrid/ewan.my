@@ -2,6 +2,8 @@
 id: Final Project Proposal and Pitch
 aliases: []
 tags: []
+date: 2024-12-10
+updated: 2024-12-10
 ---
 
 <body style="margin: 0; font-family: 'Helvetica', sans-serif; background: linear-gradient(to bottom right, #4e54c8, #8f94fb); display: flex; justify-content: center; align-items: center; height: 100vh; color: white;">
