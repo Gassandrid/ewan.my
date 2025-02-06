@@ -4,9 +4,10 @@ aliases: []
 tags:
   - cs
   - neuroscience
+  - sapling
 date: 2025-01-31
 title: Computational Neuroscience
-updated: 2025-01-31
+updated: 2025-02-06
 ---
 
 Neuroscience is an emerging field that combines the study of the brain and nervous system with computer science. Computational neuroscience is a subfield of neuroscience that focuses on the development of mathematical models and computational techniques to understand the brain's function and behavior. By using computational models, researchers can simulate and analyze complex neural systems, helping to uncover the underlying mechanisms of brain function.
@@ -34,4 +35,3 @@ Because I am still in undergrad, and pursuing a major in computer science, there
 ### Some of the Resources I Have Been Using:
 
 [[Artem Kirsanov]], a computational neuroscientist, has some of the best videos on the subject of computational neuroscience. I have been following his videos and taking notes on them( he also is a big obsidian fan! ).
-

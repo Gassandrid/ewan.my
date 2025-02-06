@@ -1,9 +1,8 @@
 ---
 date: 2025-02-04
-updated: 2025-02-04
+updated: 2025-02-06
 tags:
-  - idea
-  - thoughts
+  - seed
 title: Video Editing With Code
 ---
 

@@ -3,7 +3,8 @@ date: 2024-10-28
 tags:
   - neuroscience
   - cs
-updated: 2025-02-03
+  - sapling
+updated: 2025-02-06
 title: Artem Kirsanov
 ---
 

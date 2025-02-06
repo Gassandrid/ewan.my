@@ -1,7 +1,11 @@
 ---
 date: 2024-12-06
-updated: 2024-12-08
+updated: 2025-02-06
+tags:
+  - seed
+title: Axel Pedersen - In Memoriam
 ---
+
 ![[Pasted image 20241206195004.png]]
 
 ---

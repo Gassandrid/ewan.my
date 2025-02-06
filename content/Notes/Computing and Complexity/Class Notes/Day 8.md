@@ -1,6 +1,6 @@
 ---
 id: Day 8
-aliases: []
+aliases: 
 tags:
   - cs/automata
   - computing

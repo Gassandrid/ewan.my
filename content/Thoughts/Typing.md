@@ -1,9 +1,9 @@
 ---
 tags:
-  - thoughts
+  - seed
 title: Typing
 date: 2024-11-20
-updated: 2025-01-24
+updated: 2025-02-06
 ---
 
 I love typing. It's one of my big addictions. When I am being unproductive, you will often find me on [monkeytype](https://monkeytype.com/).

@@ -1,9 +1,9 @@
 ---
 date: 2024-12-28
-updated: 2025-01-24
+updated: 2025-02-06
 tags:
-  - thoughts
   - OCD
+  - seed
 title: Tech Stacks
 ---
 

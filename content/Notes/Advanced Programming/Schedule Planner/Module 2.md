@@ -1,11 +1,11 @@
 ---
 date: 2025-01-15
-updated: 2025-02-05
+updated: 2025-02-06
 title: Module 2
 ---
 **Potential:** 330
 **Ideal:** 250
-**Current: *5*
+**Current: *20*
 
 ---
 
@@ -13,7 +13,7 @@ title: Module 2
 
 - [x] Survey 1 - 5 points
 - [ ] Team Dynamics Essay - 20
-- [ ] Peer Interview - 15
+- [x] Peer Interview - 15
 - [ ] Attend Clubs - 10
 - [ ] Attend online zoom - 10 - feb 12
 

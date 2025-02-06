@@ -1,8 +1,10 @@
 ---
 date: 2024-10-03
-updated: 2025-01-24
+updated: 2025-02-06
+tags:
+  - seed
+title: University Of Vermont
 ---
-
 
 The **University of Vermont (UVM)** is a public research university located in Burlington, Vermont. Established in 1791, it is one of the oldest universities in the United States. UVM is known for its commitment to sustainability, research, and community engagement.
 
@@ -36,6 +38,7 @@ UVM is classified as a **Carnegie Research University** with high research activ
 - Social sciences
 
 ### Notable Research Centers
+
 - **Larner College of Medicine** Research
 - **The Gund Institute for Environment**
 - **The Vermont Complex Systems Center**
@@ -75,6 +78,7 @@ UVM offers various transportation options for students and visitors, including:
 The University of Vermont is dedicated to fostering a culture of innovation and inclusivity. Its focus on sustainability and research positions it as a leader in higher education.
 
 ### Useful Links
+
 - [University of Vermont Official Website](https://www.uvm.edu)
 - [UVM Admissions](https://www.uvm.edu/admissions)
 - [UVM Campus Map](https://www.uvm.edu/campusmap)

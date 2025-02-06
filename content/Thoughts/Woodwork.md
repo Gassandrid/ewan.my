@@ -2,8 +2,8 @@
 date: 2024-10-06
 tags:
   - hobbies
-  - thoughts
-updated: 2025-01-24
+  - seed
+updated: 2025-02-06
 title: Woodwork
 ---
 

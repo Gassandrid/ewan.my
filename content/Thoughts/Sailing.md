@@ -1,10 +1,10 @@
 ---
 date: 2024-10-05
-updated: 2025-01-24
+updated: 2025-02-06
 title: Sailing
 tags:
-  - thoughts
   - hobbies
+  - seed
 ---
 
 > [!Info]- Video

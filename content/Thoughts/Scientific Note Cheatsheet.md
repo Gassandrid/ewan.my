@@ -1,12 +1,13 @@
 ---
 id: Scientific Note Cheatsheet
 aliases: []
-tags: []
+tags:
+  - seed
 author: Ewan Pedersen
 date: 2024-09-26
 section: "14.2"
 title: Scientific Note Cheatsheet
-updated: 2025-02-04
+updated: 2025-02-06
 ---
 
 This is just a cheatsheet of cool obsidian formatting and whatnot that I like to write down

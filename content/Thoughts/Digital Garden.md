@@ -4,8 +4,9 @@ aliases: []
 tags:
   - philosophy
   - hobbies
+  - seed
 date: 2024-10-28
-updated: 2025-02-03
+updated: 2025-02-06
 title: Digital Garden
 ---
 

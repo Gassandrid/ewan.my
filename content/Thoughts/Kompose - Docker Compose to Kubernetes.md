@@ -1,11 +1,11 @@
 ---
 title: Kompose - Docker Compose to Kubernetes
 date: 2025-02-04
-updated: 2025-02-04
+updated: 2025-02-06
 tags:
   - cs
-  - idea
   - homelab
+  - seed
 ---
 
 I work with docker a lot and, for the most part, don't really need to use Kubernetes for anything as most of my hosted services are only for my own use(namely Home Assistant, Nextcloud, etc). I have these services packaged as Docker Compose projects so that the separate containers can easily work with the other containers that they rely heavily on.

@@ -1,8 +1,10 @@
 ---
-title: Finding The Total Number of Printer Combinations
+title: Morse Combination Problem
 date: 2024-11-28
 author: Ewan / Gassandrid
-updated: 2024-11-28
+updated: 2025-02-06
+tags:
+  - seed
 ---
 
 > **Abstract**

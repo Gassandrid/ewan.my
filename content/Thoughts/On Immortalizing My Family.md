@@ -1,11 +1,10 @@
 ---
 date: 2025-01-01
-updated: 2025-01-24
+updated: 2025-02-06
 tags:
-  - thoughts
+  - seed
 title: On Immortalizing My Family
 ---
- 
 
 With the recent losses within my family, I was inspired to finally take a deep dive into all the data hoarding my family has done over the years. Going through all these drives, I found media from over 20 years ago from my childhood, my parent's youth, and my grandfather in his earlier(at least to me) years.
 

@@ -1,9 +1,9 @@
 ---
 tags:
   - philosophy
-  - thoughts
+  - seed
 date: 2024-10-04
-updated: 2025-01-24
+updated: 2025-02-06
 title: Absurdism - how to party at the end of meaning
 ---
 

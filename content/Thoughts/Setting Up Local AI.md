@@ -1,11 +1,12 @@
 ---
 date: 2025-01-03
-updated: 2025-01-24
+updated: 2025-02-06
 tags:
   - ai
   - ollama
   - flux
   - cs
+  - seed
 title: Setting Up Local AI
 aliases:
   - ollama
