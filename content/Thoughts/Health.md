@@ -1,21 +1,26 @@
 ---
 title: Health
 date: 2025-02-04
-updated: 2025-02-04
+updated: 2025-02-05
 tags:
   - thoughts
   - hobbies
 ---
-While the idea of **health** might not be a hobby as per se, I have recently come to start really valuing my health throughout my life. 
+
+While the idea of **health** might not be a hobby as per se, I have recently come to start really valuing my health throughout my life. But what really sold me is once I gave tiny big of effort into improving my health for the better, I saw drastic improvements in my quality of life and overall happiness, and that has motivated me to continue further on.
 
 ---
 
-## Why I care
+## Why I Care
 
-injury
+A lot of you may know that my right lung suffered a spontaneous lung collapse a few years back. While I have mostly recovered from the effects of that accident, it really scared the hell out of me, and shocked me into action. 
 
-how it affects quality of life and hapiness,
+Beyond my own personal opinions, I was also faced with the fact that this injury was directly caused by my body shape, essentially, that being very thin and tall greatly increases the risk of a lung collapse. I was assigned a physical therapist and nutritionist, who both agreed that I had to put on some weight and muscle/strength to prevent this from happening again.
+
+That kickstarted a self improvement journey regarding fitness, and that has eventually led to me adopting all things health after I felt the benefits firsthand. I now eat healthier, get better sleep, and enact a rigorous morning routine for my vitamins, skin, and teeth.
 
 ---
 
-## How I am Enacting This in My Life
+## How I Am Enacting This in My Life
+
+I hinted on this above, but the big thing is adopting a consistent, full routine. This is the basic things, like my class schedule, working out in the morning, 

@@ -1,6 +1,6 @@
 ---
 date: 2025-01-15
-updated: 2025-02-03
+updated: 2025-02-05
 title: Module 2
 ---
 **Potential:** 330
@@ -12,6 +12,10 @@ title: Module 2
 ## Oral Assignments - 20 Each
 
 - [x] Survey 1 - 5 points
+- [ ] Team Dynamics Essay - 20
+- [ ] Peer Interview - 15
+- [ ] Attend Clubs - 10
+- [ ] Attend online zoom - 10 - feb 12
 
 ---
 
@@ -30,5 +34,5 @@ title: Module 2
 ## Guided Project - 20 Each
 
 - [ ] Monsters Project - 25
-- [ ] Books Project, gradescope assignment - 36
+- [ ] Books Project, grade scope assignment - 36
 - [ ] custom quiz project - 20

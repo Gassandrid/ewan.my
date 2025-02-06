@@ -223,4 +223,3 @@ Given vectors $\vec{x}_{1},\vec{x}_{2}, \dots, \vec{x}_{n}$ , the linear span of
 $$
 s_{1} \vec{x}_{1} + s_{2}\vec{x}_{2} + \dots + s_{n}\vec{x}_{n}
 $$
-

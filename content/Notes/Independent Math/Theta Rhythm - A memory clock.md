@@ -5,7 +5,7 @@ tags:
   - neuroscience
 date: 2025-02-03
 title: Theta Rythm - A memory clock
-updated: 2025-02-04
+updated: 2025-02-06
 ---
 
 _study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)_
@@ -38,6 +38,3 @@ It is measured by sticking an electrode inside the hyppocampus and measure the v
 
 ![[Screenshot 2025-02-03 at 1.53.13 PM.png]]
 
-%%
-sigma balls
-%%
