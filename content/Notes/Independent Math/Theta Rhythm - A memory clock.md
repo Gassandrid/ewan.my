@@ -3,8 +3,9 @@ id: Theta Rhythm - A memory clock
 aliases: []
 tags:
   - neuroscience
+  - todo
 date: 2025-02-03
-title: Theta Rythm - A memory clock
+title: Theta Rhythm - A memory clock
 updated: 2025-02-06
 ---
 
@@ -37,4 +38,3 @@ The theta rhythm is characteristically described by its wavelength, with a frequ
 It is measured by sticking an electrode inside the hyppocampus and measure the voltage difference between a point in [[Extracellular Space]] and a ground electrode ( typically in the base of the skull )
 
 ![[Screenshot 2025-02-03 at 1.53.13 PM.png]]
-

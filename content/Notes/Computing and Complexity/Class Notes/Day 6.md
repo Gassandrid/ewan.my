@@ -6,7 +6,7 @@ tags:
   - cs/automata
 date: 2025-01-30
 title: Day 6
-updated: 2025-02-04
+updated: 2025-02-07
 ---
  
 
@@ -38,7 +38,7 @@ Let's apply this to a NFA Example:
 - Highlighted node is accepting state
 
 ```mermaid
-stateDiagram
+stateDiagram-v2
     [*] --> A
     A --> B : 1
     A --> C : ε
