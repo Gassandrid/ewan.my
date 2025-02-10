@@ -1,6 +1,6 @@
 ---
 date: 2025-01-02
-updated: 2025-02-04
+updated: 2025-02-10
 tags:
   - cs
   - projects/homelab
@@ -49,6 +49,9 @@ https://docs.openwebui.com/getting-started/advanced-topics/api-endpoints
 - **Snapdrop**
 	- local hosted airdrop alternative for people on your network
 
+- **Local File Explorer**
+	- has good login, good for remote management of my files, etc
+	- https://filebrowser.org/installation
 ## Node Orchestration
 
 I want to get familiar with both Kubernetes and docker compose with this project. Deciding which to use what on is quite important, but a simple answer.

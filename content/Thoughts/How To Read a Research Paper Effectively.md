@@ -1,6 +1,6 @@
 ---
 date: 2025-02-07
-updated: 2025-02-07
+updated: 2025-02-10
 tags:
   - seed
   - academia
@@ -102,7 +102,9 @@ Once you have set up your [[How To Read a Research Paper Effectively#Have a Clea
 
 1. **Read the Abstract**, skim the **Discussion** and **Introduction**
 	- see if this is something you would genuinely like to read.
+2. **Read the Introduction and Discussion**, should be a "deep skim"
+	- google and research things you don't understand in the paper, your goal is to get a full picture from this brief.
+	- watch some youtube videos/explainers if topic is complex
+	- keep your **mental filter** on while doing this, try to see the big picture of authors approach
+3.  
 
-$$
-\equiv
-$$

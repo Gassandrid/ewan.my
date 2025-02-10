@@ -4,11 +4,11 @@ tags:
   - neuroscience
   - cs
   - sapling
-updated: 2025-02-06
+updated: 2025-02-10
 title: Artem Kirsanov
 ---
 
-Artem Kirsanov is a Computational Neuroscientist I watch, who makes great videos on [[Machine Learning]], [[Neuroscience]], and [[Computer Science]], and even [[Digital Garden|my style of notetaking!]]
+Artem Kirsanov is a Computational Neuroscientist I watch, who makes great videos on [[Machine Learning]], [[Computational Neuroscience|Neuroscience]], and even [[Digital Garden|my style of notetaking!]]
 
 Artem's [channel](https://www.youtube.com/@ArtemKirsanov) contains videos that use the [[Manim]] animation framework in python, which is also used by [[3Blue1Brown]]
 
