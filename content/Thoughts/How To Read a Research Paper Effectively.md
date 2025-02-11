@@ -9,7 +9,7 @@ title: How To Read a Research Paper Effectively
 ---
 *notes for an [Artem Kirsanov](https://www.youtube.com/watch?v=4yOm4kklKIA&t=291s) video*
 
-Research Papers, while a very useful tool for getting practical experience with the academic world, can be somewhat dense and difficult to approach, especially if you are a undergraduate like me. TGhis video outlined some useful steps to make sure you are getting the most effective use out your time reading research papers, so that you might get results best for you.
+Research Papers, while a very useful tool for getting practical experience with the academic world, can be somewhat dense and difficult to approach, especially if you are a undergraduate like me. This video outlined some useful steps to make sure you are getting the most effective use out your time reading research papers, so that you might get results best for you.
 
 ---
 
