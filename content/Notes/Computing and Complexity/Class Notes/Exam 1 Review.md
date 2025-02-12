@@ -1,19 +1,21 @@
 ---
 date: 2025-02-11
-updated: 2025-02-11
+updated: 2025-02-12
 tags:
   - computing
   - cs/automata
 title: Exam 1 Review
 ---
 
-Things you will need to know how to do:
+For the first exam, you should be prepared to
 
-- basics of NFA's, DFA's, and GNFA's
-- Regular Expressions
-- Converting NFA $\to$ DFA by subset construction
-- Finite automaton $\to$ Regex by state elimination
-- PROOFS(although usually by subset construction)
+- answer questions about definitions, properties, and behaviors of DFAs, NFAs, and GNFAs,
+- determine whether a string is in the language of some finite automaton,
+- design a DFA or NFA given some language (which may or may not involve closure properties),
+- determine the language of a given DFA or NFA,
+- determine if a string matches a given regular expression,
+- convert a given NFA to an equivalent DFA using subset construction algorithm, and
+- recover a regular expression from a finite automaton using state elimination.
 
 ---
 
