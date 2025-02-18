@@ -1,7 +1,7 @@
 ---
 title: Health
 date: 2025-02-04
-updated: 2025-02-06
+updated: 2025-02-12
 tags:
   - hobbies
   - sapling
@@ -23,4 +23,6 @@ That kickstarted a self improvement journey regarding fitness, and that has even
 
 ## How I Am Enacting This in My Life
 
-I hinted on this above, but the big thing is adopting a consistent, full routine. This is the basic things, like my class schedule, working out in the morning, 
+I hinted on this above, but the big thing is adopting a consistent, full routine. This is the basic things, like my class schedule, working out in the morning, general good habits.
+
+I have also started to care about what I eat. I have practically never done this in my life, as I have always had quite a high metabolism.

@@ -6,7 +6,7 @@ tags:
   - cs/automata
 date: 2025-01-16
 title: Day 2
-updated: 2025-02-04
+updated: 2025-02-18
 ---
  
 
@@ -15,6 +15,8 @@ In this class we will continue our work on [[Day 1#Deterministic Finite Automata
 ---
 
 ## Pigeonhole Principle
+
+^c46864
 
 The pigeonhole principle is a simple but useful concept in combinatorics. It states that if you have more pigeons than pigeonholes, then at least one pigeonhole must contain more than one pigeon.
 

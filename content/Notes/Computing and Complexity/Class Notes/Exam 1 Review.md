@@ -1,6 +1,6 @@
 ---
 date: 2025-02-11
-updated: 2025-02-12
+updated: 2025-02-13
 tags:
   - computing
   - cs/automata
@@ -188,3 +188,40 @@ $$
 $$
 S \to A \to X: \epsilon 0^+ = \left( \frac{00^*}{0^+}(1 \Sigma^* 1) \right)^* 0^+
 $$
+
+---
+
+## Closure Properties of Regular Languages
+
+**Theorem**: The class of regular languages is closed under the union operation. That is, if languages $A$ and $B$ are regular, then $A \cup B$ is regular.
+
+**Theorem**: The class of regular languages is closed under the concatenation operation. That is, if languages $A$ and $B$ are regular, then $A \circ B$ is regular.
+
+**Theorem**: The class of regular languages is closed under the Kleene star operation. That is, if language $A$ is regular, then $A^{*}$ is regular.
+
+**Theorem**: the class of regular languages is closed under the reversal operation. That is, if language $A$ is regular, then $A^{\mathcal{R}}$ is regular.
+
+**Theorem**: The class of regular languages is closed under complementation. That is, if language $A$ is regular, then $\bar{A}$ is regular.
+
+---
+
+## NFAs and DFAs Equivalent
+
+**Theorem**: Every nondeterministic finite automaton has an equivalent deterministic finite automaton. (This is proven using subset construction.)  
+
+**Corollary**: A language is regular if and only if some nondeterministic finite automaton recognizes it.
+
+---
+
+## Definition of a Regular Expression
+
+We say that $R$ is a regular expression if $R$ is:
+
+1. $a$ for some $a$ in the alphabet $\Sigma$
+2. $\epsilon$, the empty string
+3. $\emptyset$, the empty language
+4. $(R_{1} \cup R_{2})$, where $R_{1}$ and $R_{2}$ are regular expressions
+5. $(R_{1} \circ R_{2})$, where $R_{1}$ and $R_{2}$ are regular expressions, or
+6. $(R_{1}^*)$, where $R_{1}$ is a regular expression
+
+

@@ -1,8 +1,9 @@
 ---
 date: 2024-12-06
-updated: 2025-02-06
+updated: 2025-02-12
 tags:
   - seed
+  - todo
 title: Axel Pedersen - In Memoriam
 ---
 
