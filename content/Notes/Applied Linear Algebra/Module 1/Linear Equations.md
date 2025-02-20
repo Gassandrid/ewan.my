@@ -6,7 +6,7 @@ tags:
   - linear-algebra
 date: 2025-01-15
 title: Linear Equations
-updated: 2025-01-16
+updated: 2025-02-18
 ---
 
 In essence, Linear Equations are equations that represent straight lines. They are the simplest form of equations and are used to represent relationships between variables. The general form of a linear equation is outlined as follows.
@@ -37,6 +37,7 @@ a_{21}x_{1} + a_{22}x_{2}+\dots+a_{2n}x_{n} = b_{2} \\
 a_{51}x_{1} + a_{52}x_{2}+\dots+a_{5n}x_{n} = b_{5} \\
 \end{align*}
 $$
+
 
 >[!Abstract] Definition
 > A system of linear equations is a list of linear equations that **all have the same variables**

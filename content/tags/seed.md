@@ -1,8 +1,7 @@
 ---
 date: 2025-02-06
-updated: 2025-02-11
-tags:
-  - todo
+updated: 2025-02-19
+tags: []
 title: seed
 ---
 

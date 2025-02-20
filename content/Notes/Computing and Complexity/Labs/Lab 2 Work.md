@@ -1,6 +1,6 @@
 ---
 date: 2025-01-30
-updated: 2025-02-11
+updated: 2025-02-20
 title: Lab 2 Work
 ---
 ```mermaid
@@ -56,5 +56,25 @@ stateDiagram-v2
 	q0 --> q2:0
 	q2 --> [*]: accept
 ```
+
+```mermaid
+stateDiagram-v2
+	direction LR
+	[*] --> A
+	A --> B:0,1
+	B --> C:0
+	B --> E:1
+	C --> D:0
+	C --> E:1
+	D --> E:0
+	D --> B:1
+	E --> ∅:0,1
+	∅ --> ∅:0,1
+
+	E:::accepting
+	
+    classDef accepting fill:#bbf,stroke:#333,stroke-width:2;
+```
+
 
 
