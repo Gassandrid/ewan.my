@@ -679,3 +679,93 @@ footer {
 .footer {
   padding-top: 1rem;
 }
+
+// for sidebar nav from cat code me
+
+// 导航组件样式
+.sidebar-nav {
+  margin: 1rem 0;
+  width: 100%;
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+
+    // 所有导航按钮的基础样式
+    .nav-button {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
+      color: var(--dark);
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      background: var(--light);
+      border: 1px solid var(--secondary);
+      position: relative;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-family: var(--bodyFont);
+      width: 100%;
+      box-sizing: border-box;
+
+      // 图标样式
+      .nav-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        font-style: normal;
+        width: 1.5rem; // 固定图标宽度
+        text-align: center; // 图标居中
+      }
+
+      // 文字样式
+      .nav-text {
+        font-weight: 500;
+        transition: color 0.2s ease;
+        font-style: normal;
+        flex: 1;
+        text-align: left;
+        color: var(--secondary);
+      }
+
+      // hover效果
+      &:hover {
+        transform: none;
+        background: var(--lightgray);
+        border-color: var(--gray);
+
+        .nav-text {
+          color: var(--dark);
+        }
+      }
+
+      // 阅读模式按钮特殊样式
+      &.reading-mode-toggle {
+        .nav-text {
+          text-align: left;
+          color: var(--secondary);
+
+          &:hover {
+            color: var(--dark);
+          }
+        }
+      }
+    }
+  }
+}
+
+.toc-clone {
+  margin-top: 2.5rem;
+}
+
+.toc {
+  margin-top: 2.5rem;
+}
+
+html.reading-mode .sidebar.reading-mode-active .toc-clone {
+  margin-top: 2.5rem;
+}

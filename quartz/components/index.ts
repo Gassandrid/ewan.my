@@ -26,6 +26,7 @@ import Row from "./_Row"
 import Cv from "./_Cv"
 import LinksHeader from "./LinksHeader"
 import OnlyFor from "./_OnlyFor"
+import SidebarNav from "./SidebarNav"
 
 export {
   ArticleTitle,
@@ -56,4 +57,5 @@ export {
   Cv,
   LinksHeader,
   OnlyFor,
+  SidebarNav,
 }

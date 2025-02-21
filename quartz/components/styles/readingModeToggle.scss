@@ -1,0 +1,201 @@
+// from cat code me's quartz garden
+// 边注容器样式
+.side-notes-container {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  right: calc(50% - 500px); // 正文区域宽度的一半加上一些间距
+}
+
+// 边注样式
+.side-note {
+  position: absolute;
+  width: 280px;
+  right: 0 !important;
+  background: rgba(var(--background-primary-rgb), 0.98);
+  border: 1px solid var(--secondary);
+  border-radius: 6px;
+  padding: 0 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
+  min-height: 3rem;
+  transition: all 0.3s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+
+  .note-number {
+    position: absolute;
+    left: -0.5rem;
+    top: 0;
+    transform: translateY(-50%);
+    padding: 0.2rem 0.2rem;
+    background: var(--tertiary);
+    color: var(--light);
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left center;
+
+    &:hover {
+      transform: translateY(-50%) translateY(-2px);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .note-content {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+// 阅读模式提示和欢迎消息
+.reading-mode-welcome {
+  position: fixed;
+  border-radius: 6px;
+  background: var(--tertiary);
+  color: var(--light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.reading-mode-welcome {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  font-size: 14px;
+  animation: tipFade 1s ease-in-out forwards;
+}
+
+// 阅读模式下的样式
+html.reading-mode {
+  .page-title {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .sidebar {
+    transition: all 0.3s ease-in-out;
+
+    &.hidden-in-reading-mode {
+      opacity: 0;
+      transform: translateX(100%);
+      pointer-events: none;
+    }
+
+    &.reading-mode-active {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: none !important;
+
+      .toc-clone {
+        max-height: calc(100vh - 80px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 1rem;
+        background: var(--background-primary);
+        z-index: 1000;
+        width: 280px;
+        opacity: 1;
+        transform: none;
+        border: 1px solid var(--lightgray);
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        &.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        // 链接样式
+        a {
+          color: var(--dark);
+          text-decoration: none;
+          transition: all 0.2s ease;
+          display: block;
+
+          &:hover {
+            color: var(--secondary);
+            transform: translateX(2px);
+          }
+        }
+      }
+
+      > *:not(.toc-clone).hidden-in-reading-mode {
+        opacity: 0;
+        transform: translateX(-20px);
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  article {
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// 阅读模式提示
+.reading-mode-hint {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  transform: none;
+  background: var(--tertiary);
+  color: var(--light);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: hintFade 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes hintFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tipFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

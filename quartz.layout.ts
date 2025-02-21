@@ -84,6 +84,7 @@ export const defaultContentPageLayout: PageLayout = {
         linkDistance: 50,
       },
     }),
+    Component.DesktopOnly(Component.SidebarNav()),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
