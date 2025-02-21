@@ -1,7 +1,7 @@
 ---
 title: Health
 date: 2025-02-04
-updated: 2025-02-12
+updated: 2025-02-20
 tags:
   - hobbies
   - sapling
@@ -26,3 +26,5 @@ That kickstarted a self improvement journey regarding fitness, and that has even
 I hinted on this above, but the big thing is adopting a consistent, full routine. This is the basic things, like my class schedule, working out in the morning, general good habits.
 
 I have also started to care about what I eat. I have practically never done this in my life, as I have always had quite a high metabolism.
+
+A lot of this has been taking inspiration from other people. While his methods are sometimes a little extreme, I have a huge amount of respect for [Brian Johnson](https://www.youtube.com/@BryanJohnson) and people like him, who are putting themselves forward as a guinea pig and publishing the findings free of charge for the rest of us to benefit from. Brian takes it to the extreme since he has dedicated his life to health and has quite a bit of capital behind him, but real lessons and improvements can be extracted from his findings at a fraction of the cost. Most of his ideas and habits are all but free to enact!
