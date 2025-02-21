@@ -11,7 +11,7 @@ export default (() => {
             <i class="nav-icon">🏠</i>
             <span class="nav-text">Home</span>
           </a>
-          <a href="/Archive" class="nav-button" data-tooltip="归档">
+          <a href="/Notes" class="nav-button" data-tooltip="归档">
             <i class="nav-icon">📚</i>
             <span class="nav-text">Notes</span>
           </a>
