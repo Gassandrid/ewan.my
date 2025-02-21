@@ -769,3 +769,16 @@ footer {
 html.reading-mode .sidebar.reading-mode-active .toc-clone {
   margin-top: 2.5rem;
 }
+
+.cm-s-material-palenight {
+  background: transparent !important;
+}
+
+.CodeMirror {
+  background: transparent !important;
+}
+
+.CodeMirror-gutters {
+  background: transparent !important;
+  border-right: none !important;
+}
