@@ -1,9 +1,9 @@
 ---
 title: Brainstorming Hardware Stack
 date: 2025-01-02
-updated: 2025-02-04
+updated: 2025-02-21
 tags:
-  - projects/homelab
+  - projects/homelab/hardware
 ---
 
 To start this great project of mine, Im going to just be using what I already have. While I do plan to invest in some proper homelab hardware in the distant future, that doesnt offset the fact that it will be ridiculously expensive.

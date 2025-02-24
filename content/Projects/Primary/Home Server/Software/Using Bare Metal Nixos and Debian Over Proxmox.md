@@ -1,11 +1,12 @@
 ---
 title: Using Bare Metal Nixos and Debian Over Proxmox
 date: 2025-01-28
-updated: 2025-02-04
+updated: 2025-02-21
 tags:
   - cs
-  - projects/homelab
+  - projects/homelab/software
 ---
+ 
 
 This idea was born from the fact that during the process described in [[Bridging my University Wifi to host own network access point]], I noted that it would be quite difficult to assign static IP's without access to the router myself.
 

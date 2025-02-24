@@ -1,12 +1,13 @@
 ---
 title: WLED Strips With Home Assistant
 date: 2025-01-24
-updated: 2025-02-04
+updated: 2025-02-21
 tags:
   - home-assistant
   - cs
-  - projects/homelab
+  - projects/homelab/hardware
 ---
+ 
 
 Now that I am getting more into Home Assistant and my home lab as a whole, I want to take some aspects of my room and migrate them over to home assistant.
 

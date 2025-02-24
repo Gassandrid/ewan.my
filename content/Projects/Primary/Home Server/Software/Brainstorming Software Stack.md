@@ -1,12 +1,13 @@
 ---
 date: 2025-01-02
-updated: 2025-02-10
+updated: 2025-02-21
 tags:
   - cs
-  - projects/homelab
+  - projects/homelab/software
 type: project
 title: Brainstorming Software Stack
 ---
+ 
 
 Looking for a general purpose Linux sandbox hosting environment, containers,
 
@@ -52,6 +53,7 @@ https://docs.openwebui.com/getting-started/advanced-topics/api-endpoints
 - **Local File Explorer**
 	- has good login, good for remote management of my files, etc
 	- https://filebrowser.org/installation
+
 ## Node Orchestration
 
 I want to get familiar with both Kubernetes and docker compose with this project. Deciding which to use what on is quite important, but a simple answer.

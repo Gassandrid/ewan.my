@@ -1,12 +1,12 @@
 ---
 date: 2025-02-12
-updated: 2025-02-12
+updated: 2025-02-21
 tags:
   - seed
-  - projects/homelab
+  - projects/homelab/software
 title: Docker Swarm as an alternative to proxmox
 ---
-*[article](https://medium.com/@georgeveersingh27/docker-compose-vs-docker-swarm-choosing-the-right-orchestration-tool-bdaf3b52e9a2) discussed*
+*[article](https://medium.com/@georgeveersingh27/docker-compose-vs-docker-swarm-choosing-the-right-orchestration-tool-bdaf3b52e9a2) discussed* 
 
 Because of the conclusion I came to in [[Using Bare Metal Nixos and Debian Over Proxmox]], I decided not to use proxmox entirely for my project due to the restrictions of my University Network.
 

@@ -1,6 +1,6 @@
 ---
 date: 2024-12-28
-updated: 2025-02-06
+updated: 2025-02-24
 tags:
   - OCD
   - seed
@@ -12,7 +12,11 @@ I am no web developer, but when I am going to do web development, I would prefer
 > [!Warning] Database Choice
 > I will probably go with [Turso](https://turso.tech/) if I am doing some sqlite stuff, [MongoDB](https://www.mongodb.com/) for Document database stuff, and [Valkey(redis alternative)](https://github.com/valkey-io/valkey) for high speed in memory db, although this could change.
 
-## Golang + HTMX + Echo + Templ ( And Alpine Js if needed)
+---
+
+## RAW HTML / HTMX Tech Stacks
+
+### Golang + HTMX + Echo + Templ ( And Alpine Js if needed)
 
 **Links**:
 - [Alpine.js](https://alpinejs.dev/)
@@ -24,7 +28,7 @@ I am no web developer, but when I am going to do web development, I would prefer
 	- enhanced http web framework
 - And Golang of course
 
-## Rust + HTMX + Axum + Askama ( And Alpine Js if Needed )
+### Rust + HTMX + Axum + Askama ( And Alpine Js if Needed )
 
 **Links**:
 - [Alpine.js](https://alpinejs.dev/)
@@ -36,10 +40,20 @@ I am no web developer, but when I am going to do web development, I would prefer
 - [HTMX](https://htmx.org/)
 - And Rust of course
 
-## SvelteKit + Other Languages
+---
+
+## Svelte Version
 
 I am not the biggest fan of javascript frameworks, but this one is okay and I am happy to use if needed.
 
-## Maybe - Python With Flask
+### Svelte + Axum
+
+Similar to rust stack above, just that it uses svelte for the frontend.
+
+https://github.com/jbertovic/svelte-axum-project
+
+### Maybe - Python With Flask
 
 I don't use python in production like this, only as a testing/data science tool, but this might be usefull if I am doing something with machine learning or other, and want a simple frontend for a python app.
+
+**It might also just be simpler to host a api with python as a backend and svelte at the front.**
