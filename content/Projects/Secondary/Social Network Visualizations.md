@@ -1,7 +1,7 @@
 ---
 title: Social Network Visualizations
 date: 2025-02-24
-updated: 2025-02-24
+updated: 2025-02-25
 tags:
   - python
   - projects
@@ -26,4 +26,28 @@ A friend on discord showed me how he was using Obsidian as a way to catalog his 
 I decided to start with discord as it would be a bit more of a challenge to scrape. Instagram already has an API for getting this information, but the main problem is the connections would pile up really quickly, and I would probably hit my rate limit near instantly again, which would suspend my account.
 
 So for this, I decided to have some fun and work with a web scraping library called [Selenium](https://www.selenium.dev/) for python. It not only very capable like other web scraping libraries, but actually fully simulates the browser on your computer. This means while the browser is fully automatable, anti bot mechanisms are not as easily triggered as it appears like a genuine web client on your computer.
+
+---
+
+I was able to cobble together a simple selenium python script which accomplished this. Essentially, the process looked something like:
+
+- open discord website
+- log in
+- go to all tab for friends
+- for each friend, right click and select profile
+- click mutual friends and save results
+- click mutual servers and save results
+- escape, on to next friend
+
+This would all get compiled and saved to a json file. While this might look like it is mostly complete, there are a few things I want to be able to do.
+
+I want this program to run universally on other people's computers, so that we can concatonate each others' results.
+
+For **this**, we will need to use *Docker* and write a program to merge the json documents together.
+
+And eventually, because I like the way the visualize it, we will need a markdown compiler that can convert these relationships to markdown notes for obsidian.
+
+---
+
+## Json to Obsidian Markdown Notes
 
