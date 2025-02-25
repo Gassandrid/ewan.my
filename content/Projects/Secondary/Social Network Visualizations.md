@@ -51,3 +51,21 @@ And eventually, because I like the way the visualize it, we will need a markdown
 
 ## Json to Obsidian Markdown Notes
 
+Now that I had a JSON file of my friends and their mutuals, I wanted a way to visualize this without hassle.
+
+Now, I could just use Matplotlib or some other simple library to generate the graph, but no, I don't like the easy and obvious way. 
+
+We are going to generate markdown files, and open the graph in obsidian instead.
+
+---
+
+What this ended up doing is:
+
+- reading the users name and creating a markdown file for them
+- adding some front matter to the file, with a tags element containing the servers they are in
+- adding a header to the file titled Relationships
+- under the header create a Obsidian link `[[filename]]` for each of the mutual friends.
+
+and Tada! We have a graph now!
+
+![[preview_graph.png]]
