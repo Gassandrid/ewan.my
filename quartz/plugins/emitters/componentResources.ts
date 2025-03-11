@@ -24,7 +24,7 @@ type ComponentResources = {
 function getComponentResources(ctx: BuildCtx): ComponentResources {
   const allComponents: Set<QuartzComponent> = new Set()
   for (const emitter of ctx.cfg.plugins.emitters) {
-    const components = emitter.getQuartzComponents(ctx)
+    const components = emitter.getQuartzComponents?.(ctx) ?? []
     for (const component of components) {
       allComponents.add(component)
     }
@@ -36,17 +36,21 @@ function getComponentResources(ctx: BuildCtx): ComponentResources {
     afterDOMLoaded: new Set<string>(),
   }
 
+  function normalizeResource(resource: string | string[] | undefined): string[] {
+    if (!resource) return []
+    if (Array.isArray(resource)) return resource
+    return [resource]
+  }
+
   for (const component of allComponents) {
     const { css, beforeDOMLoaded, afterDOMLoaded } = component
-    if (css) {
-      componentResources.css.add(css)
-    }
-    if (beforeDOMLoaded) {
-      componentResources.beforeDOMLoaded.add(beforeDOMLoaded)
-    }
-    if (afterDOMLoaded) {
-      componentResources.afterDOMLoaded.add(afterDOMLoaded)
-    }
+    const normalizedCss = normalizeResource(css)
+    const normalizedBeforeDOMLoaded = normalizeResource(beforeDOMLoaded)
+    const normalizedAfterDOMLoaded = normalizeResource(afterDOMLoaded)
+
+    normalizedCss.forEach((c) => componentResources.css.add(c))
+    normalizedBeforeDOMLoaded.forEach((b) => componentResources.beforeDOMLoaded.add(b))
+    normalizedAfterDOMLoaded.forEach((a) => componentResources.afterDOMLoaded.add(a))
   }
 
   return {
@@ -116,9 +120,13 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       const umamiScript = document.createElement("script")
       umamiScript.src = "${cfg.analytics.host ?? "https://analytics.umami.is"}/script.js"
       umamiScript.setAttribute("data-website-id", "${cfg.analytics.websiteId}")
+      umamiScript.setAttribute("data-auto-track", "false")
       umamiScript.async = true
-
       document.head.appendChild(umamiScript)
+
+      document.addEventListener("nav", () => {
+        umami.track();
+      })
     `)
   } else if (cfg.analytics?.provider === "goatcounter") {
     componentResources.afterDOMLoaded.push(`
@@ -128,21 +136,37 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       goatcounterScript.setAttribute("data-goatcounter",
         "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count")
       document.head.appendChild(goatcounterScript)
+
+      window.goatcounter = { no_onload: true }
+      document.addEventListener("nav", () => {
+        goatcounter.count({ path: location.pathname })
+      })
     `)
   } else if (cfg.analytics?.provider === "posthog") {
     componentResources.afterDOMLoaded.push(`
       const posthogScript = document.createElement("script")
       posthogScript.innerHTML= \`!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-      posthog.init('${cfg.analytics.apiKey}',{api_host:'${cfg.analytics.host ?? "https://app.posthog.com"}'})\`
+      posthog.init('${cfg.analytics.apiKey}', {
+        api_host: '${cfg.analytics.host ?? "https://app.posthog.com"}',
+        capture_pageview: false,
+      })\`
       document.head.appendChild(posthogScript)
+
+      document.addEventListener("nav", () => {
+        posthog.capture('$pageview', { path: location.pathname })
+      })
     `)
   } else if (cfg.analytics?.provider === "tinylytics") {
     const siteId = cfg.analytics.siteId
     componentResources.afterDOMLoaded.push(`
       const tinylyticsScript = document.createElement("script")
-      tinylyticsScript.src = "https://tinylytics.app/embed/${siteId}.js"
+      tinylyticsScript.src = "https://tinylytics.app/embed/${siteId}.js?spa"
       tinylyticsScript.defer = true
       document.head.appendChild(tinylyticsScript)
+
+      document.addEventListener("nav", () => {
+        window.tinylytics.triggerUpdate()
+      })
     `)
   } else if (cfg.analytics?.provider === "cabin") {
     componentResources.afterDOMLoaded.push(`
@@ -180,9 +204,6 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
 export const ComponentResources: QuartzEmitterPlugin = () => {
   return {
     name: "ComponentResources",
-    getQuartzComponents() {
-      return []
-    },
     async getDependencyGraph(_ctx, _content, _resources) {
       return new DepGraph<FilePath>()
     },

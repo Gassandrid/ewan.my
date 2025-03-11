@@ -3,7 +3,7 @@ import * as Plugin from "./quartz/plugins"
 import { Staticrypt } from "./quartz/password"
 
 /**
- * Quartz 4.0 Configuration
+ * Quartz 4 Configuration
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
