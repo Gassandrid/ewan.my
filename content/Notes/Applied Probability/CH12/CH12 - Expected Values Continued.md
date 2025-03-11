@@ -5,7 +5,7 @@ tags:
   - statistics
 date: 2025-02-12
 title: CH12 - Expected Values Continued
-updated: 2025-02-12
+updated: 2025-03-05
 ---
 
 This lesson will continue the discussion of expected values, focusing on the expected value of sums and constants.
@@ -126,3 +126,4 @@ $$
 $$
 
 $$
+

@@ -1,6 +1,6 @@
 ---
 date: 2025-01-30
-updated: 2025-02-20
+updated: 2025-03-08
 title: Lab 2 Work
 ---
 ```mermaid
@@ -28,6 +28,7 @@ $$
 ```mermaid
 stateDiagram
     direction LR
+	[*] --> A
     A --> B : 0
     B --> C : 0
 	C --> C : 0
@@ -75,6 +76,7 @@ stateDiagram-v2
 	
     classDef accepting fill:#bbf,stroke:#333,stroke-width:2;
 ```
+
 
 
 

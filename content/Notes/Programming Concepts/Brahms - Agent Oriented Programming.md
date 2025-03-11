@@ -4,8 +4,10 @@ aliases:
 tags:
   - cs
   - ai
+  - generated
 date: 2024-10-17
-updated: 2024-10-18
+updated: 2025-03-03
+title: Brahms - Agent Oriented Programming
 ---
 
 > [!Note]
@@ -29,7 +31,7 @@ updated: 2024-10-18
 	- `-d <destination-path />`: Set destination path.
 	- `-uml`: Generate UML for the model.
 	- `-debug`: Display debug information.
-	
+
 > [!Tip]
 > The compiler is integrated with the Brahms Composer to streamline development. Check the [Known Issues] before reporting bugs.
 
@@ -52,7 +54,7 @@ updated: 2024-10-18
 	- `-mode (sim | rt | drt)`: Choose simulation mode.
 	- `-random_seed <n />`: Seed for random number generator.
 	- `-time_unit <n />`: Time units represented by seconds.
-	
+
 > [!Note]
 >  The VM can handle distributed systems, scaling to hundreds of thousands of agents across multiple machines.
 
