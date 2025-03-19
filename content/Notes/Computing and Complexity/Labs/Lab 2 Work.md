@@ -1,6 +1,6 @@
 ---
 date: 2025-01-30
-updated: 2025-03-08
+updated: 2025-03-18
 title: Lab 2 Work
 ---
 ```mermaid
@@ -76,6 +76,7 @@ stateDiagram-v2
 	
     classDef accepting fill:#bbf,stroke:#333,stroke-width:2;
 ```
+
 
 
 

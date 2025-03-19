@@ -4,7 +4,7 @@ aliases: []
 tags: []
 date: 2025-02-20
 title: Day 10
-updated: 2025-02-20
+updated: 2025-03-18
 ---
 
 This class will discuss the pumping lemma for regular expressions.
@@ -39,3 +39,4 @@ $$
 
 For the pumping lemma for regular languages, we have a regular language $L$ and a pumping length $p$ such that for all strings $w \in L$ with $|w| \geq p$, we can divide $w$ into three parts $w = xyz$ such that:
 
+*I had to leave class, and wasnt able to finish this note*

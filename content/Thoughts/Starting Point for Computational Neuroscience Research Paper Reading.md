@@ -1,7 +1,7 @@
 ---
 title: Starting Point for Computational Neuroscience Research Paper Reading
 date: 2025-02-11
-updated: 2025-02-11
+updated: 2025-03-18
 tags:
   - seed
   - neuroscience
@@ -49,3 +49,14 @@ When doing this, I want to try applying what I learned in [[Artem Kirsanov]]'s [
 
 [[Neuronal Population Coding of Movement Direction]]
 
+---
+
+## Neuronal Avalanches in Neocortical Circuits
+
+*The paper demonstrates that spontaneous activity in mature organotypic cortex cultures and acute cortical slices exhibits "neuronal avalanches" - propagating patterns of activity that follow power law distributions in both size and lifetime. The authors show that the propagation of these avalanches is characterized by a critical branching parameter close to 1, indicating the cortical network operates near a critical state. Simulations suggest this critical state optimizes information transmission in feedforward networks while preventing runaway excitation. The authors conclude that neuronal avalanches may be a generic property of cortical networks, representing a mode of activity distinct from oscillations, synchrony, or waves, and that the critical state allows the network to balance information processing and stability.*
+
+[Paper Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC6741045/)
+
+- [ ] start seed note investigating this paper
+
+[[Neuronal Avalanches in Neocortical Circuits]]
