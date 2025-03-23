@@ -76,14 +76,7 @@ export const defaultContentPageLayout: PageLayout = {
     //   { titles: [homePageTitle, mapTitle] },
     //   Component.DesktopOnly(Component.RecentNotes({ title: "Most recent", limit: 5 })),
     // ),
-    Component.Graph({
-      localGraph: {
-        linkDistance: 50,
-      },
-      globalGraph: {
-        linkDistance: 50,
-      },
-    }),
+    Component.Graph(),
     Component.DesktopOnly(Component.SidebarNav()),
   ],
   right: [

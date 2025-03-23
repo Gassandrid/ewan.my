@@ -5,7 +5,7 @@ tags:
   - statistics
 date: 2025-02-12
 title: CH12 - Expected Values Continued
-updated: 2025-03-05
+updated: 2025-03-19
 ---
 
 This lesson will continue the discussion of expected values, focusing on the expected value of sums and constants.
@@ -36,7 +36,7 @@ This lesson will continue the discussion of expected values, focusing on the exp
 ## Examples
 
 > [!Example]
-
+> 
 > Four students order noodles at a certain local restaurant. Their orders are placed independently. Each student is kmown to prefer Japanese pan noodles $40\%$ of the time. How many of them do we expect to order Japanese Pan Noodles?
 >
 > Use X as an indicator variable and the [[CH12 - Expected Values Continued#Theorem To Remember|theorem we learned]] to solve this problem
@@ -75,7 +75,7 @@ $$
 
 Let's revisit an older problem we love:
 
-## Example: Drawing cards without replacement until we get Ace of Hearts
+## Example: Drawing Cards without Replacement until We Get Ace of Hearts
 
 We used a method in [[CH10 - Expected Values of Discrete Random Variables|chapter 10]] to find this by finding the sum of all the random variables. Let's try some other methods.
 
@@ -89,7 +89,6 @@ A_{5} \ means \ you \ still \ draw \ 5 \ or \ more \ cards \ to \ get \ Ace \ of
 \to do \ not \ get \ ace \ of \ hearts \ on \ first \ 5 \ cards
 \end{bmatrix}
 $$
-
 
 then:
 
@@ -126,4 +125,3 @@ $$
 $$
 
 $$
-

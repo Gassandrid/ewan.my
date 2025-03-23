@@ -1,13 +1,13 @@
 ---
 id: Homework 3 - Context Free Grammars
 aliases: []
-tags: []
+tags:
+  - cs/automata
 author: Ewan Pedersen
 date: 2025-03-18
 title: Homework 3 - Context Free Grammars
-updated: 2025-03-18
+updated: 2025-03-20
 ---
-
 **Abstract:**
 
 > This document serves to answer the questions provided by the homework using CFG constructions and derivations, demonstrating the understanding of the concepts.
@@ -19,14 +19,14 @@ updated: 2025-03-18
 > Consider the CFG
 >
 > $$
-> \begin{align*}
-> S &\to AB \mid C \\
-> A &\to aAb \mid ab \\
-> B &\to cBd \mid cd \\
-> C &\to aCd \mid aDd \\
-> D &\to bDc \mid
-> \end{align*}
-> $$
+ \begin{align*}
+ S &\to AB \mid C \\
+ A &\to aAb \mid ab \\
+ B &\to cBd \mid cd \\
+ C &\to aCd \mid aDd \\
+ D &\to bDc \mid
+ \end{align*}
+ $$
 >
 > Give the leftmost derivations for the string **aabbccdd**
 

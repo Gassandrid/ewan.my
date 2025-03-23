@@ -21,6 +21,10 @@ This has manifested as a problem with my sternum and ribcage. Essentially, somet
 
 ---
 
-## Changes finally coming
+## Changes Finally Coming
 
-A big thing I struggled with at the beggining of the year was a sense of work ethic. Purpose has never been a problem for me, and I consider myself above the average when it comes to knowing what you want to do with your life. But despite this, I struggled with actually getting work done in class. I was great at studying what I loved, and would do an absurd amount of self-education in my free time. But come the classroom, I would almost always slack off just because I could and get away with a mediocore but solid grade. But this is not a way to live life.
+A big thing I struggled with at the beginning of the year was a sense of work ethic. Purpose has never been a problem for me, and I consider myself above the average when it comes to knowing what you want to do with your life. But despite this, I struggled with actually getting work done in class. I was great at studying what I loved, and would do an absurd amount of self-education in my free time. But come the classroom, I would almost always slack off just because I could and get away with a mediocre but solid grade. But this is not a way to live life.
+
+But later in the year I finally started to get my act together when it comes to note-taking. That is a bit of an understatement, as I frankly fell in love with writing and documenting everything. The benefits of obsidian really started to show for me, where I felt a genuine desire to write down more and expand beyond just class notes and journaling.
+
+
