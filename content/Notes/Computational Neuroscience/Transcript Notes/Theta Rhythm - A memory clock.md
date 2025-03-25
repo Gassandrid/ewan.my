@@ -6,7 +6,7 @@ tags:
   - todo
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-02-06
+updated: 2025-03-24
 ---
 
 _study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)_
@@ -27,6 +27,8 @@ What was shown was several different oscillating patterns, which we now call **B
 
 At this point in history, we know quite a lot about the different kinds of brain waves, and the frequencies that they operate at. For example, **Delta Waves** are associated with deep sleep, **Alpha Waves** are associated with relaxation, and **Beta Waves** are associated with alertness.
 
+![[Pasted image 20250324102549.png]]
+
 But for this note, we are interested in the **Theta Rhythm**. This is a wave that operates at a frequency of around 4-8 Hz, and it is associated with the hippocampus.
 
 ---
@@ -35,6 +37,17 @@ But for this note, we are interested in the **Theta Rhythm**. This is a wave tha
 
 The theta rhythm is characteristically described by its wavelength, with a frequency between **4** and **12** hz.
 
-It is measured by sticking an electrode inside the hyppocampus and measure the voltage difference between a point in [[Extracellular Space]] and a ground electrode ( typically in the base of the skull )
+It is measured by sticking an electrode inside the hyppocampus and measure the voltage difference between a point in [[Extracellular Space]] and a ground electrode ( typically in the base of the skull ). 
+
+This voltage arises out of the summation of currents of neurons, reflecting synchronous synaptic inputs.
+
+That is, when **one neuron** sends information to another through synapses.
 
 ![[Screenshot 2025-02-03 at 1.53.13 PM.png]]
+
+In the case where there is a large number of neurons surrounding this electrode, and they are constantly sending signals simultaneously, then these individual currents **add up**, leading to the voltage becoming strong enough to be sensed by external electrode.
+
+> [!Warning] Note
+> Remember this measurement is finding the **overall activity** sensed by the electrode, and not the behavior of any individual neuron. As [[Artem Kirsanov|Artem]] put it, this is like putting a microphone over a stadium, you cant discern individual phenomena but rather general group behavior patterns(which are still useful).
+
+This special rythmn is generated in a special structure, called the [[Medial Septum]]

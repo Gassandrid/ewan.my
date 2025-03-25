@@ -1,0 +1,7 @@
+---
+date: 2025-03-25
+updated: 2025-03-25
+title: index
+---
+
+Not the "real" definition of theory, this is for concepts that pertain to neuroscience but don't rely on biology as much, and are not math or computationally heavy.
