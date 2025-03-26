@@ -1,6 +1,6 @@
 ---
 date: 2024-09-12
-updated: 2025-02-05
+updated: 2025-03-25
 title: Hopfield Networks
 ---
 
@@ -10,7 +10,7 @@ A Hopfield Network is a type of recurrent artificial neural network that serves 
 
 ## Key Characteristics
 
-- **Binary [Neurons](Neuron.md)**: Each neuron in a Hopfield Network has a binary state, typically represented as +1 or -1.
+- **Binary [Neurons](Artificial%20Neuron.md)**: Each neuron in a Hopfield Network has a binary state, typically represented as +1 or -1.
 - **Symmetric Weights**: The connection weights between neurons are symmetric, meaning that the weight from neuron \(i\) to neuron \(j\) is the same as from \(j\) to \(i\).
 - **No Self-Loops**: There are no self-connections in a Hopfield Network, so a neuron's state does not directly influence itself.
 

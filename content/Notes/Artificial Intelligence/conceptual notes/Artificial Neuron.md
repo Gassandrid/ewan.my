@@ -1,10 +1,10 @@
 ---
 date: 2024-09-12
-updated: 2024-10-05
+updated: 2025-03-25
+title: Artificial Neuron
 ---
-![[Pasted image 20240808134117.png]]
 
-## The Structure of a Neuron in Neural Networks
+![[Pasted image 20240808134117.png]]
 
 ### Overview
 
@@ -24,7 +24,9 @@ In neural networks, a neuron (also called a node or unit) is the fundamental bui
     **Weighted Sum Example:**  
     If a neuron has inputs `x₁, x₂, ..., xₙ` and corresponding weights `w₁, w₂, ..., wₙ`, the weighted sum can be represented as:
     
+
     `z = w₁x₁ + w₂x₂ + ... + wₙxₙ`
+
     
 3. **Bias**
     
@@ -34,7 +36,9 @@ In neural networks, a neuron (also called a node or unit) is the fundamental bui
     **Final Sum Example:**  
     The bias is added to the weighted sum to get the final value:
     
+
     `z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b`
+
     
 4. **Activation Function**
     
@@ -55,7 +59,9 @@ In neural networks, a neuron (also called a node or unit) is the fundamental bui
     **Output Example:**  
     If `f` represents the activation function, the output of the neuron is:
     
+
     `output = f(z) = f(w₁x₁ + w₂x₂ + ... + wₙxₙ + b)`
+
     
 
 ### Summary of the Neuron's Process

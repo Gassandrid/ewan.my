@@ -6,7 +6,7 @@ tags:
   - todo
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-03-24
+updated: 2025-03-26
 ---
 
 _study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)_
@@ -50,4 +50,30 @@ In the case where there is a large number of neurons surrounding this electrode,
 > [!Warning] Note
 > Remember this measurement is finding the **overall activity** sensed by the electrode, and not the behavior of any individual neuron. As [[Artem Kirsanov|Artem]] put it, this is like putting a microphone over a stadium, you cant discern individual phenomena but rather general group behavior patterns(which are still useful).
 
-This special rythmn is generated in a special structure, called the [[Medial Septum]]
+This special rythmn is generated in a special structure, called the [[Medial Septum]]. This structure contains a large amount of something called [[Pacemaker Neurons]], which are known to regularly discharge something between 4 and 12 times a second.
+
+These special neurons have some special proteins called [[Hyperpolarization Activated Channels]](HCNs), which allow Ions to flow into the cell at a regulated time interval, generating this rhythmic pattern.
+
+![[Screenshot 2025-03-26 at 12.07.01 PM.png]]
+
+>[!Important] Fun Fact
+> These are the same proteins that your heart uses to regulate its beating rhythm.
+
+These [[Pacemaker Neurons]] then send their connections straight to the [[Hippocampus]], thus providing the rhythmic output and leading to the rise of the theta wave. This causes the activity of the Hippocampus to wax and wane, following the rhythm that the conductor([[Medial Septum]]) is providing.
+
+---
+
+>[!Warning] Quick Note again...
+> This is quite the oversimplification of an otherwise very complex process. As [[Artem Kirsanov|Artem]] mentions, a group of researchers led by Romain Goutagny[^1] found that under certain conditions, the Hippocampus itself can generate theta rhythm, indicating that it contains some neuronal machinery sufficient enough for the generation of intrinsic rhythm.
+
+In this scenario, it would mean that the hippocampus, much like a well trained orchestra, can perform coherently even in the absence of its conductor.
+
+Goutagny Et al.[^1] found that rhythmic activity arrises due to the interactions between excitatory and inhibatory neurons, through a negative feedback loop. 
+
+![[Screenshot 2025-03-26 at 12.18.34 PM.png]]
+
+[^2]
+
+[^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 https://pubmed.ncbi.nlm.nih.gov/19881503/
+[^2]: Hummos A, Nair SS. An integrative model of the intrinsic hippocampal theta rhythm. Lytton WW, editor. PLoS ONE. 2017 https://pubmed.ncbi.nlm.nih.gov/28787026/
+	

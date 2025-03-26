@@ -1,6 +1,6 @@
 ---
 date: 2024-09-12
-updated: 2024-10-20
+updated: 2025-03-25
 ---
 
 ### 1. **Understanding Neural Networks**
@@ -15,7 +15,7 @@ updated: 2024-10-20
 
 ### 2. **Neurons: The Building Blocks**
 
-- **Structure of a [[Neuron]]**
+- **Structure of a [[Artificial Neuron]]**
     - Inputs, Weights, Biases, Activation Functions
 - **[[Activation Functions]]**
     - Role of activation functions

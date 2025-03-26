@@ -1,9 +1,9 @@
 ---
 date: 2024-10-15
-updated: 2025-02-20
+updated: 2025-03-25
 tags:
   - todo
-title: map
+title: Graph Map
 ---
 
 Navigating this garden can be a bit difficult if you are just relying on the links between notes or my poor choice of directory organization, so here is a sort of markdown "map" to help find what you are looking for!
