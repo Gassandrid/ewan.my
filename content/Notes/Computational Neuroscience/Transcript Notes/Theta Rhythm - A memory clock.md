@@ -74,6 +74,18 @@ Goutagny Et al.[^1] found that rhythmic activity arrises due to the interactions
 
 [^2]
 
+It is quite an elegant mechanism, however a tad bit complex for an introduction to Theta Rhythm. I will most likely create a note later on taking a [[Self-generated theta oscillations in the hippocampus|deeper look at the paper alone]].
+
+Aside from that quick detour, let us assume that for the most part, the [[Medial Septum]] is responsible for the beat generation for the [[Hippocampus]]. Even though the hippocampus does have an **intrinsic oscillator** within, a bulk of the computation will come from the **upstream oscillation** of the medial septum.
+
+![[Screenshot 2025-03-26 at 12.29.47 PM.png]]
+
+---
+
+## Functions of the theta wave
+
+
+
 [^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 https://pubmed.ncbi.nlm.nih.gov/19881503/
 [^2]: Hummos A, Nair SS. An integrative model of the intrinsic hippocampal theta rhythm. Lytton WW, editor. PLoS ONE. 2017 https://pubmed.ncbi.nlm.nih.gov/28787026/
 	
