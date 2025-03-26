@@ -194,6 +194,13 @@ a {
       position: sticky;
     }
 
+    // make the position relative when the sidebar is not on the side( collapsed/ ipad/ iphone mode)
+    @media all and not ($desktop) {
+      & .sidebar {
+        position: relative;
+      }
+    }
+
     // for all layout except desktop overide the height and padding of sidebar
     @media not ($desktop) {
       & .sidebar {
