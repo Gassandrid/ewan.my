@@ -1,7 +1,7 @@
 ---
 title: Staging Ground
 date: 2025-03-25
-updated: 2025-03-25
+updated: 2025-03-29
 tags:
   - computational-neuroscience
   - todo
@@ -24,6 +24,12 @@ This is not as concrete of a topic, more of a term that loosely describes some a
 [Quanta Magazine Video](https://youtu.be/yESSv7OgCv0?si=-Iy5kBq1qoKnXxba), very generalist, but a good staging ground for more concepts (talks about [[Memory]], [[Episodic Memory]], and many more concepts to cover)
 
 [Medlink Technology](https://www.medlink.com/news/neuroscience-origins-and-relevance-of-the-default-mode-network), not an acadmic source by any means, but once again a good overview.
+
+### Theoretical Neuroscience by Peter Dayan and LF Abbott
+
+This is the textbook that was given to me by a family member, covers a great range of biology, math, and machine learning. Is quite a long book, so I will read it over a long period.  Not sure how I will document/note-take for this work, I am thinking of giving it its own folder, and a note on each chapter. If not, then it will be one really long note like a reading log
+
+[[Notes/Computational Neuroscience/Theory/Theoretical Neuroscience - Peter Dayan and L. F. Abbott/index|Theoretical Neuroscience - Peter Dayan and L. F. Abbott]]
 
 ---
 

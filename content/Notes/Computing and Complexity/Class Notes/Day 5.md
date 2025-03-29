@@ -2,12 +2,12 @@
 id: Day 5
 aliases: 
 tags:
-  - computing
-  - cs/automata
+  - cs/theory
 date: 2025-01-28
 title: Day 5
-updated: 2025-02-04
+updated: 2025-03-27
 ---
+ 
 
 ## Introduction to Non-determinism
 

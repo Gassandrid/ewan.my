@@ -1,7 +1,9 @@
 ---
 title: Exam 02 Study Computing
 date: 2025-03-24
-updated: 2025-03-24
+updated: 2025-03-27
+tags:
+  - cs/theory
 ---
 
 > The second exam will focus on context-free languages (CFLs). Of course, all regular languages are also context-free, but not all context-free languages are regular. In addition to general familiarity with context-free languages, context-free grammars (CFGs), and pushdown automata (PDAs), you should be prepared for the following:

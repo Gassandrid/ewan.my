@@ -1,10 +1,11 @@
 ---
 id: Day 11 - Pushdown Automata
 aliases: []
-tags: []
+tags:
+  - cs/theory
 date: 2025-03-18
 title: Day 11 - Pushdown Automata
-updated: 2025-03-18
+updated: 2025-03-27
 ---
 
 This class will be a quick review of pushdown automata, and a lab + plans for exam review next class.

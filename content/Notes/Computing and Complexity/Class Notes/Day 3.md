@@ -2,11 +2,10 @@
 id: Day 3
 aliases: 
 tags:
-  - computing
-  - cs/automata
+  - cs/theory
 date: 2025-01-21
 title: Day 3
-updated: 2025-02-04
+updated: 2025-03-27
 ---
  
 

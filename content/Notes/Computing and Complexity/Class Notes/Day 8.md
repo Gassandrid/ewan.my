@@ -2,11 +2,10 @@
 id: Day 8
 aliases: 
 tags:
-  - cs/automata
-  - computing
+  - cs/theory
 date: 2025-02-06
 title: Day 8
-updated: 2025-02-06
+updated: 2025-03-27
 ---
 
 This class will discuss state elimination, more on REGEX, and how they relate to DFAs and NFAs.

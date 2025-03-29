@@ -2,13 +2,11 @@
 id: Day 6
 aliases: 
 tags:
-  - computing
-  - cs/automata
+  - cs/theory
 date: 2025-01-30
 title: Day 6
-updated: 2025-02-07
+updated: 2025-03-27
 ---
- 
 
 This class will discuss the conversion of an NFA to equivelant DFA by subset construction algorithm.
 

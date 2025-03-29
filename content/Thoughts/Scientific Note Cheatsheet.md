@@ -7,7 +7,7 @@ author: Ewan Pedersen
 date: 2024-09-26
 section: "14.2"
 title: Scientific Note Cheatsheet
-updated: 2025-03-08
+updated: 2025-03-28
 ---
 
 This is just a cheatsheet of cool obsidian formatting and whatnot that I like to write down
@@ -362,4 +362,3 @@ These callouts have standard use cases and titles, but you can overide the title
 
 >[!Bug]
 > There is an error when you run this
-

@@ -1,9 +1,8 @@
 ---
 date: 2025-02-11
-updated: 2025-02-13
+updated: 2025-03-27
 tags:
-  - computing
-  - cs/automata
+  - cs/theory
 title: Exam 1 Review
 ---
 

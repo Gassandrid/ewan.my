@@ -1,12 +1,11 @@
 ---
 id: Homework 3 - Context Free Grammars
-aliases: []
-tags:
-  - cs/automata
+aliases: 
+tags: []
 author: Ewan Pedersen
 date: 2025-03-18
 title: Homework 3 - Context Free Grammars
-updated: 2025-03-20
+updated: 2025-03-27
 ---
 **Abstract:**
 

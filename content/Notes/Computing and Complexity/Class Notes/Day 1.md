@@ -1,14 +1,12 @@
 ---
 id: Day 1
-aliases: []
+aliases: 
 tags:
-  - computing
-  - cs/automata
+  - cs/theory
 date: 2025-01-14
 title: Day 1
-updated: 2025-02-04
+updated: 2025-03-27
 ---
- 
 
 This class will discuss important concepts such as **what can be computed**, **automata**, and what is considered a **model of computation**.
 

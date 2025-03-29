@@ -1,6 +1,6 @@
 ---
 date: 2025-01-23
-updated: 2025-02-06
+updated: 2025-03-27
 title: Lab 01
 ---
 
@@ -82,6 +82,7 @@ graph LR
     style q3 fill:#bbf,stroke:#333,stroke-width:2px,double
 ```
 	
+
 ### C
 
 $$
@@ -131,3 +132,6 @@ graph LR
     style q0 fill:#f9f,stroke:#333,stroke-width:2px
     style q3 fill:#bbf,stroke:#333,stroke-width:2px,double
 ```
+
+
+
