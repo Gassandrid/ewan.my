@@ -4,6 +4,7 @@ updated: 2025-03-29
 tags:
   - biology
   - neuroscience
+fileClass: note
 ---
  
 
@@ -11,7 +12,7 @@ tags:
 
 A **voltage transient** is a brief, temporary changes in the electrical potential (voltage) of a neuron's membrane, often caused by synaptic activity or other stimuli
 
-**Cause by:**
+**Caused by:**
 
 - **Synaptic inputs:** The arrival of neurotransmitters at synapses can cause either depolarization (making the membrane potential more positive) or hyperpolarization (making it more negative).
 - **Action potentials:** The rapid depolarization and repolarization that characterize action potentials are also voltage transients.

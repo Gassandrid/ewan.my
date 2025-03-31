@@ -1,16 +1,13 @@
 ---
 id: Medial Septum
-aliases: []
+aliases: 
 tags:
-  - todo
   - neuroscience
   - biology
 date: 2025-03-24
 title: Medial Septum
-updated: 2025-03-24
+updated: 2025-03-30
 ---
-
-_mostly filler content here, will return to do more work when im doing biology stuff._
 
 The **medial septum** is a brain structure that is located in the [[Basal Forebrain]], near the **midline** of the brain
 

@@ -1,10 +1,9 @@
 ---
 title: Vacuously True
 date: 2025-02-18
-updated: 2025-02-18
+updated: 2025-03-31
 tags:
-  - cs/automata
-  - computing
+  - cs/theory
 ---
 
 A statement is "vacuously true" **if it resembles a material conditional statement , where the antecedent**. **is known to be false**.

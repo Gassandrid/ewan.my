@@ -1,24 +1,32 @@
 ---
-date: 2025-03-14
-updated: 2025-03-14
+id: Hippocampus
+aliases: []
 tags:
-  - neuroscience
-  - computational-neuroscience
-  - biology
   - todo
-title: Hippocampus
+  - neuroscience
+  - biology
+date: 2025-03-31
+fileClass: note
+updated: 2025-03-31
 ---
 
 The hippocampus serves as a critical section of the brain responsible for a variety of tasks, namely [[Memory Formation]], [[Spacial Navigation]], and [[Sequence Learning]].
 
 The Hippocampus is a key component of the [[Medial Temporal Lobe]] system, and oftentimes is modeled computationally as it plays a vital role in memory/information encoding, retrieval, and consolidation/compression.
 
+We consider the **hippocampus** to be one of the most important and interesting brain structures in [[Computational Neuroscience]], as it has a part in just about all the interesting functions of the brain. In addition to the memory and spatial navigation tasks, the hippocampus is also involved in the [[Formation of New Neurons]] and [[Neurogenesis]].
+
+![[Pasted image 20250331092645.png]]
+[^1]
+
 ---
 
-## Biology
+## Biological Structure
 
-*todo, this is a staging note*
+The **hippocampus** is a member of the [[Limbic System]]
 
 ---
 
 ## Computational Basis
+
+[^1]: https://nba.uth.tmc.edu/neuroscience/m/s4/chapter05.html

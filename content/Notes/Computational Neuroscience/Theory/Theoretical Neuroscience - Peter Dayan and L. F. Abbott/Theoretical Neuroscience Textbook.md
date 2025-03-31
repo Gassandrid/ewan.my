@@ -22,7 +22,7 @@ I look forward to reading it, will be breaking it up into chapters and their cor
 
 ## Chapters
 
-**[[Notes/Computational Neuroscience/Theory/Theoretical Neuroscience - Peter Dayan and L. F. Abbott/CH1 - Firing Rates and Spike Statistics/index|Chapter 1 - Firing Rates and Spike Statistics]]**
+**[[Chapter 1|Chapter 1 - Firing Rates and Spike Statistics]]**
 
 This serves as an introduction to the biophysical properties of neurons and how these characteristics form [[Action Potentials]].
 
