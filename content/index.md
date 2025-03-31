@@ -5,6 +5,7 @@ tags:
 date: 2024-10-02
 title: Hello! My name is Ewan
 updated: 2025-03-31
+fileClass: navigation
 ---
 
 <div>
@@ -150,8 +151,24 @@ I love to chat about philosophy! Let's start a conversation!
 
 This is my version of what is called a [[Digital Garden]]( and yes, every digital garden mentions what a digital garden is)
 
-This site utilizes [[tags/]]
+## Navigation
 
-You can navigate this garden by using the [[map]](or clicking the map icon in the top right), using `CMD+K` or `CRTL+K` to pull up the page search, or by clicking a tag/folder like <a href="/Notes">Notes</a>
+My notes use 3 forms of organization to categorize my thoughts:
+
+- **Folders** are what you know from the filesystem, the most structured way of organization but often quite rigid. They are best for laying the groundwork of your notetaking journey.
+- **Tags** are the in between. They are much less structured than folders, as notes with a tag can be anywhere in the Garden regardless of folder. They are used for organizing by genre and topic, and provide a more flexible and dynamic structure.
+- **Links** are how your own brain organizes information. It has no initial structure, as it forms through the natural process of taking notes( say you are writing a note on Elephants, and you recall a time you saw elephants in South Africa, you would link them together). Links are great because it is your brains own innate organization of knowledge, but they take time to form and are difficult to create when you are just starting. ^5348ae
+
+![[Screenshot 2025-03-31 at 11.47.22 AM.png]]
+
+I have created Index pages for each method of organization. 
+
+There is a [[folders|Folder]] Index, although there isn't much to display as I only have 3 root folders. 
+
+You can view the [[tags/index|Tags Index]](also accesible via left sidebar for desktop users), which has a listing of all tags and their subtags(where some have have notes attached to them). 
+
+And for links I have created a [[map|starting point]] to navigate the vault, but this is somewhat difficult to traverse as I cant really control the structure(read [[index#^5348ae|here]] again). A better way to traverse links is with the **Graph** on the left sidebar(for desktop) or at the bottom of the page(for mobile/tablet). You can click the button at the top right of the graph to maximize it and explore the full garden.
+
+You can also **Search** for notes/tags/folders using the Search button or `CMD+K` or `CRTL+K`.
 
 *try doing `cmd + -` or `ctrl + -` to view the sidebars!*

@@ -1,9 +1,10 @@
 ---
 date: 2024-10-15
-updated: 2025-03-25
+updated: 2025-03-31
 tags:
   - todo
-title: Graph Map
+title: The Link Index
+fileClass: navigation
 ---
 
 Navigating this garden can be a bit difficult if you are just relying on the links between notes or my poor choice of directory organization, so here is a sort of markdown "map" to help find what you are looking for!
