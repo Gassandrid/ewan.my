@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-02-24
+updated: 2025-03-31
 ---
 
 <div>
@@ -113,11 +113,11 @@ I am a second year student at the [[University Of Vermont]] studying Computer Sc
 
 ## Thoughts 🏡
 
+I have really been focusing on my **neuroscience** research right now, the brain is quite an interesting system!
+
 I am really liking the german word *waldeinsamkeit*
 
 Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering.
-
-Rust is still my main project language but I have taken some time to learn the functional programming side of it for maths reasons.
 
 *give this song a listen to!*
 
@@ -149,6 +149,8 @@ I love to chat about philosophy! Let's start a conversation!
 ## About This Garden 🪴
 
 This is my version of what is called a [[Digital Garden]]( and yes, every digital garden mentions what a digital garden is)
+
+This site utilizes [[tags/]]
 
 You can navigate this garden by using the [[map]](or clicking the map icon in the top right), using `CMD+K` or `CRTL+K` to pull up the page search, or by clicking a tag/folder like <a href="/Notes">Notes</a>
 
