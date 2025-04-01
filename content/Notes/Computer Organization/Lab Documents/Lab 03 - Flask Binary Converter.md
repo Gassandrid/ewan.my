@@ -3,8 +3,10 @@ date: 2024-10-03
 tags:
   - web
   - python
-  - embedded
-updated: 2024-10-17
+  - cs/embedded
+  - university
+updated: 2025-03-31
+fileClass: note
 ---
 
 > [!abstract] Student Information
@@ -14,14 +16,14 @@ updated: 2024-10-17
 
 ---
 
-## 1. 13. **Take a screenshot** of the conversion of `100010100010` to decimal in your browser.
+## 1. 13. **Take A screenshot** of the Conversion of `100010100010` to Decimal in Your Browser.
 
 >[!Info] Screenshot
 ![[Screenshot 2024-10-03 at 10.26.15 PM.png]]
 
 ---
 
-## 2. **(+5%)** Add some style! Include a stylesheet (CSS) that affects the appearance of the UI. **Take a screenshot** of your UI. 
+## 2. **(+5%)** Add Some Style! Include a Stylesheet (CSS) that Affects the Appearance of the UI. **Take a screenshot** of Your UI.
 
 You can't see it from the screenshot, but the glow follows your cursor as you hover over the card.
 
@@ -30,7 +32,7 @@ You can't see it from the screenshot, but the glow follows your cursor as you ho
 
 ---
 
-## 3.  **(+10%)** Modify the `to_decimal` function to process floating point binary too. **Take a screenshot of** your code, and the conversation of 10.101 to decimal in your browser.
+## 3. **(+10%)** Modify the `to_decimal` Function to Process Floating point Binary Too. **Take a Screenshot of** Your Code, and the Conversation of 10.101 to Decimal in Your Browser.
 
 >[!Info] Screenshot
 ![[Screenshot 2024-10-03 at 10.33.14 PM.png]]
@@ -43,14 +45,17 @@ You can't see it from the screenshot, but the glow follows your cursor as you ho
 ## 4. Codebases
 
 `app.py`
+
 >[!Info] Screenshot
 ![[Screenshot 2024-10-03 at 10.37.13 PM.png]]
 
 `binaryconverter.js`
+
 >[!Info] Screenshot
 ![[Screenshot 2024-10-03 at 10.38.02 PM.png]]
 
 `binaryconverter.html`
+
 >[!Info] Screenshot![[Screenshot 2024-10-03 at 10.39.16 PM.png]]
 
 It's just a tad bit small!

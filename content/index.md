@@ -151,6 +151,8 @@ I love to chat about philosophy! Let's start a conversation!
 
 This is my version of what is called a [[Digital Garden]]( and yes, every digital garden mentions what a digital garden is)
 
+I started this as a way to organize my thoughts. My brain is all over the place, and it brings me great discomfort when I have an idea and am not able to act on it in that immediate moment. To solve this, I just write down just about any idea I can think of, and let the organization sort itself out naturally(thanks to links, discussed below).
+
 ## Navigation
 
 My notes use 3 forms of organization to categorize my thoughts:

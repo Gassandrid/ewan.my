@@ -2,9 +2,11 @@
 date: 2024-10-17
 tags:
   - python
-  - embedded
   - web
-updated: 2024-10-18
+  - cs/embedded
+  - university
+updated: 2025-03-31
+fileClass: note
 ---
 
 > [!abstract] Student Information
@@ -21,7 +23,7 @@ updated: 2024-10-18
 
 ---
 
-## Completed Code 
+## Completed Code
 
 `app.py`
 

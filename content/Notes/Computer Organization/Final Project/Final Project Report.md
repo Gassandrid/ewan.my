@@ -1,12 +1,12 @@
 ---
 id: Final Project Report
-aliases: []
+aliases: 
 tags:
-  - embedded
+  - cs/embedded
 date: 2024-12-04
-updated: 2024-12-06
+updated: 2025-03-31
+fileClass: note
 ---
-
 <body style="margin: 0; font-family: 'Helvetica', sans-serif; background: linear-gradient(to bottom right, #4e54c8, #8f94fb); display: flex; justify-content: center; align-items: center; height: 100vh; color: white;">
     <div style="text-align: center; background: rgba(114, 135, 253, 0.6); padding: 50px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);">
         <h1 style="font-size: 50px; margin-bottom: 10px;">DARS</h1>
@@ -169,4 +169,3 @@ We hope to bring the dream of virtual assistants from movies like Iron Man and I
 ## Final Reflection
 
 Overall, I think this project was quite a success, so much so that I genuinely want to continue development outside of this class, as part of my upcoming homelab project. I think the biggest thing I learned was that the most important part of a project like this is the software, and that the hardware is almost secondary to the software. I think that the hardware is important, but the software is what makes the project, and that is where the most time should be spent.
-

@@ -1,11 +1,12 @@
 ---
 id: Final Project Proposal and Pitch
-aliases: []
-tags: []
+aliases: 
+tags:
+  - cs/embedded
 date: 2024-12-10
-updated: 2024-12-10
+updated: 2025-03-31
+fileClass: note
 ---
-
 <body style="margin: 0; font-family: 'Helvetica', sans-serif; background: linear-gradient(to bottom right, #4e54c8, #8f94fb); display: flex; justify-content: center; align-items: center; height: 100vh; color: white;">
     <div style="text-align: center; background: rgba(114, 135, 253, 0.6); padding: 50px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);">
         <h1 style="font-size: 50px; margin-bottom: 10px;">DARS</h1>
@@ -17,6 +18,7 @@ updated: 2024-12-10
 </body>
 
 ![[Pasted image 20240927213640.png]]
+
 _while this isnt what ours will look like, it sure gave us inspiration_
 
 ---
@@ -71,6 +73,7 @@ In addition, DARS will present a simple and expansable interface so that devices
 ## Project Detail
 
 This project will involve undertaking the difficult task of training large language models. This is going to be difficult as, even in the smallest of these models, such as the 8B parameter model, the model will be too large to fit on the raspberry pi 5. This will require us to train the model on a more powerful machine, and then convert the model to a smaller size that will fit on the raspberry pi 5.
+
 For this, we are planning to rent an Nvidia A100 for a few days to train the model. This will be expensive, but it is necessary for the project to be a success.
 
 ### Full System Diagram
@@ -80,6 +83,7 @@ This system is going to be much more complicated than we initially thought, as w
 ![[Screenshot 2024-09-27 at 7.49.22 PM.png]]
 
 This diagram shows the flow of data through the system, and how the various components interact with each other. The system will be able to take in audio input, convert that to text, run the text through the language model, and then generate a JSON output. This JSON output will then be processed by the Langroid stack, which will determine what function calls need to be made. The system will then be able to control devices such as lights, and output audio to the user.
+
 While this diagram is quite complex, it is necessary for the system to function as intended, as we want to create this project using minimal online SAAS services for the models, and instead run them locally.
 
 ### External Components
@@ -117,6 +121,7 @@ Keep in mind, this is also a very rough sketch of the model. We are by no means 
 ## Budget
 
 (including materials and labor itemized as well as an
+
 overall estimated project cost)
 
 Our budget for this project is as follows:
@@ -156,6 +161,7 @@ Once we have the hardware side of things complete, there is not much else to imp
 This Gantt chart gives us a rough estimation of our timeline for the project. There is a lot of empty space, but that it because of how unpredictable the troubleshooting in this field can be. The model training may end up being the easiest part, or we could reach a block that could hold us back weeks.
 
 The chart also puts a heavy emphasis on getting the wireless systems to work. While this may not seem like it would take that long, we also need to develop a reliable system to control the power to certain devices, and in some cases, do more than that(like controlling the specific color of a light).
+
 For this reason, we chose the esp32, as it has a lot of onboard processing power built in. So in cases where we need to do more than just manage power, we can bake that into the esp32, and the language model would only have to supply something like a RGB code.
 
 ### Fallback Plan

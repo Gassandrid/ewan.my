@@ -1,8 +1,10 @@
 ---
 date: 2024-10-23
 tags:
-  - cs
-updated: 2024-10-25
+  - cs/embedded
+  - university
+updated: 2025-03-31
+fileClass: note
 ---
 
 > [!abstract] Student Information
@@ -14,23 +16,23 @@ updated: 2024-10-25
 
 ---
 
-## 12. From the MariaDB interpreter, display all the records in the `test_data` table by running the statement: `SELECT * FROM test_data;`. **Take a screenshot** of the contents of the table. (When ready: `CTRL` + `Z` to exit MariaDB)
+## 12. From the MariaDB Interpreter, Display All the Records in the `test_data` Table by Running the Statement: `SELECT * FROM test_data;`. **Take a screenshot** of the Contents of the Table. (When Ready: `CTRL` + `Z` to Exit MariaDB)
 
 >[!Info]- Photo
 > ![[Screenshot 2024-10-24 at 11.58.13 PM.png]]
 
 ---
-## 15.  Run the Flask app and view the page in the browser. Ensure that the correct temperature data is displayed. **Take a screenshot** of your web page displayed in the browser.
+
+## 15. Run the Flask App and view the Page in the Browser. Ensure that the Correct Temperature Data is Displayed. **Take a screenshot** of Your Web Page Displayed in the Browser.
 
 >[!Info]- Photo
 > ![[Screenshot 2024-10-25 at 6.10.34 PM.png]]
 
 ---
 
-## Completed Code 
+## Completed Code
 
 `app.py`
 
 >[!Info]- Screenshot
 > ![[Screenshot 2024-10-25 at 12.08.58 PM.png]]
-

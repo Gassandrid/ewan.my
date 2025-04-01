@@ -1,11 +1,12 @@
 ---
 date: 2024-11-11
 tags:
-  - cs
-  - embedded
-updated: 2024-11-13
+  - cs/embedded
+updated: 2025-03-31
+fileClass: note
 ---
-# Final Project Status Update 3 
+
+# Final Project Status Update 3
 
 > [!abstract] Student Information
 > Ewan Pedersen

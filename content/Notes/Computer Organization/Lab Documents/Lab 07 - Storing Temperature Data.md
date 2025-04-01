@@ -1,9 +1,11 @@
 ---
 date: 2024-10-30
 tags:
-  - cs
-updated: 2025-01-16
+  - cs/embedded
+  - university
+updated: 2025-03-31
 title: Lab 07 - Storing Temperature Data
+fileClass: note
 ---
 
 > [!abstract] Student Information

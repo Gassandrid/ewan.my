@@ -1,9 +1,9 @@
 ---
 date: 2024-10-25
 tags:
-  - cs
-  - embedded
-updated: 2024-10-25
+  - cs/embedded
+updated: 2025-03-31
+fileClass: note
 ---
 
 > [!abstract] Student Information

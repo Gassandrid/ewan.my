@@ -1,8 +1,10 @@
 ---
 date: 2024-09-20
-updated: 2024-10-03
+updated: 2025-03-31
+tags:
+  - cs/embedded
+fileClass: note
 ---
-# Final Project Status Update
 
 > [!abstract] Student Information
 > Ewan Pedersen
@@ -15,7 +17,7 @@ updated: 2024-10-03
 
 ---
 
-## 2. Time Log 
+## 2. Time Log
 
 | date      | Name | Role                   | Description                                                        | Time(Hrs) |
 | --------- | ---- | ---------------------- | ------------------------------------------------------------------ | --------- |

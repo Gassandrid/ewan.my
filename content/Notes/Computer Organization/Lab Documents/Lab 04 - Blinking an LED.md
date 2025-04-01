@@ -1,9 +1,11 @@
 ---
 date: 2024-10-09
 tags:
-  - embedded
   - python
-updated: 2024-10-17
+  - cs/embedded
+  - university
+updated: 2025-03-31
+fileClass: note
 ---
 
 > [!abstract] Student Information
@@ -13,16 +15,17 @@ updated: 2024-10-17
 
 ---
 
-## 6.  Add a yellow LED that is ON while the red LED is OFF (alternating LEDs). **Take a picture** of your completed circuit on the breadboard, connected to your pi.
+## 6. Add a Yellow LED that is ON while the Red LED is OFF (alternating LEDs). **Take a picture** of Your Completed Circuit on the Breadboard, Connected to Your Pi.
 
 >[!Info] Screenshot
 > ![[Screenshot 2024-10-10 at 7.17.05 PM.png]]
 
 ---
 
-## 7. What is the current in milliamps?
+## 7. What is the Current in Milliamps?
 
 **Ohm's Law:**
+
    $$
    I = \frac{V_{supply} - V_{forward, red}}{R}
    Substituting the values:
@@ -53,11 +56,12 @@ $$
 **Results:**
 
 $RED = 5.91 mA$
+
 $YELLOW = 5.45 mA$
 
 ---
 
-## 8. Use [https://www.lucidchart.com](https://www.lucidchart.com/) (free account with a .edu email address), or [https://www.draw.io](https://www.draw.io/) to create a circuit diagram of your final circuit (with both LEDs). **Take a screenshot** of your diagram.
+## 8. Use [https://www.lucidchart.com](https://www.lucidchart.com/) (free account with a .edu Email address), or [https://www.draw.io](https://www.draw.io/) to Create a Circuit Diagram of Your Final Circuit (with both LEDs). **Take a screenshot** of Your Diagram.
 
 You can't see it from the screenshot, but the glow follows your cursor as you hover over the card.
 
@@ -79,4 +83,3 @@ Since I am on a Raspberry Pi 5 and not 4, the code had to be changed a bit durin
 
 >[!Info] Screenshot
 > ![[Screenshot 2024-10-10 at 7.18.04 PM.png]]
-
