@@ -4,12 +4,13 @@ aliases: []
 tags:
   - neuroscience
   - todo
+  - artem-kirsanov
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-03-27
+updated: 2025-04-03
 ---
 
-_study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)_
+_study notes for a [[Artem Kirsanov]] [video](https://youtu.be/5CxSoFK5tOQ?si=xNx2_g403li49K1i)_
 
 Recently, there have been some significant advancements in decoding the hippocampus, and how it is involved in memory. This is a very complex structure, and it is not yet fully understood. However, we do know that the hippocampus is involved in the formation of new memories, and the retrieval of old ones.
 
@@ -80,10 +81,11 @@ Aside from that quick detour, let us assume that for the most part, the [[Medial
 
 ![[Screenshot 2025-03-26 at 12.29.47 PM.png]]
 
-
 ---
 
 ## Functions of the Theta Wave
+
+
 
 [^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 https://pubmed.ncbi.nlm.nih.gov/19881503/
 [^2]: Hummos A, Nair SS. An integrative model of the intrinsic hippocampal theta rhythm. Lytton WW, editor. PLoS ONE. 2017 https://pubmed.ncbi.nlm.nih.gov/28787026/

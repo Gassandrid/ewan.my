@@ -4,7 +4,7 @@ tags:
   - neuroscience
   - cs
   - sapling
-updated: 2025-03-31
+updated: 2025-04-02
 title: Artem Kirsanov
 fileClass: person
 ---
@@ -17,11 +17,13 @@ Artem's [channel](https://www.youtube.com/@ArtemKirsanov) contains videos that u
 
 ## Study
 
+Here is a sample of some of the **transcript** notes that I have made for Artem's videos.
+
 - **[[Differential Equations in Neuroscience|Differential Equations: The Language of Change]]**
 	- a great video series on the basics of differential equations, but more specifically how they can be applied to neuroscience and other phenomena
 	- state variables, numerical solutions, predator-prey model, etc
 	- [link](https://www.youtube.com/watch?v=vTTlzmCRwU4&)
-- [[Theta Rhythm - A memory clock]]
+- **[[Theta Rhythm - A memory clock]]**
 	- Very interesting video and insight on how the brain might use the theta rhythm to encode information within the creation of memories
 	- brain waves, how they function, sequential organization, etc
 	- [link](https://www.youtube.com/watch?v=5CxSoFK5tOQ)
