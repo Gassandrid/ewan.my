@@ -15,11 +15,20 @@ interface Colors {
   darkMode: ColorScheme
 }
 
+export type FontSpecification =
+  | string
+  | {
+      name: string
+      weights?: number[]
+      includeItalic?: boolean
+    }
+
 export interface Theme {
   typography: {
-    header: string
-    body: string
-    code: string
+    title?: FontSpecification
+    header: FontSpecification
+    body: FontSpecification
+    code: FontSpecification
   }
   cdnCaching: boolean
   colors: Colors
@@ -29,12 +38,97 @@ export interface Theme {
 export type ThemeKey = keyof Colors
 
 const DEFAULT_SANS_SERIF =
-  '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+  'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 const DEFAULT_MONO = "ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace"
 
+export function getFontSpecificationName(spec: FontSpecification): string {
+  if (typeof spec === "string") {
+    return spec
+  }
+
+  return spec.name
+}
+
+function formatFontSpecification(
+  type: "title" | "header" | "body" | "code",
+  spec: FontSpecification,
+) {
+  if (typeof spec === "string") {
+    spec = { name: spec }
+  }
+
+  const defaultIncludeWeights = type === "header" ? [400, 700] : [400, 600]
+  const defaultIncludeItalic = type === "body"
+  const weights = spec.weights ?? defaultIncludeWeights
+  const italic = spec.includeItalic ?? defaultIncludeItalic
+
+  const features: string[] = []
+  if (italic) {
+    features.push("ital")
+  }
+
+  if (weights.length > 1) {
+    const weightSpec = italic
+      ? weights
+          .flatMap((w) => [`0,${w}`, `1,${w}`])
+          .sort()
+          .join(";")
+      : weights.join(";")
+
+    features.push(`wght@${weightSpec}`)
+  }
+
+  if (features.length > 0) {
+    return `${spec.name}:${features.join(",")}`
+  }
+
+  return spec.name
+}
+
 export function googleFontHref(theme: Theme) {
-  const { code, header, body } = theme.typography
-  return `https://fonts.googleapis.com/css2?family=${code}&family=${header}:wght@400;700&family=${body}:ital,wght@0,350;0,600;1,400;1,600&display=swap`
+  const { header, body, code } = theme.typography
+  const headerFont = formatFontSpecification("header", header)
+  const bodyFont = formatFontSpecification("body", body)
+  const codeFont = formatFontSpecification("code", code)
+
+  return `https://fonts.googleapis.com/css2?family=${headerFont}&family=${bodyFont}&family=${codeFont}&display=swap`
+}
+
+export function googleFontSubsetHref(theme: Theme, text: string) {
+  const title = theme.typography.title || theme.typography.header
+  const titleFont = formatFontSpecification("title", title)
+
+  return `https://fonts.googleapis.com/css2?family=${titleFont}&text=${encodeURIComponent(text)}&display=swap`
+}
+
+export interface GoogleFontFile {
+  url: string
+  filename: string
+  extension: string
+}
+
+export async function processGoogleFonts(
+  stylesheet: string,
+  baseUrl: string,
+): Promise<{
+  processedStylesheet: string
+  fontFiles: GoogleFontFile[]
+}> {
+  const fontSourceRegex = /url\((https:\/\/fonts.gstatic.com\/s\/[^)]+\.(woff2|ttf))\)/g
+  const fontFiles: GoogleFontFile[] = []
+  let processedStylesheet = stylesheet
+
+  let match
+  while ((match = fontSourceRegex.exec(stylesheet)) !== null) {
+    const url = match[1]
+    const [filename, extension] = url.split("/").pop()!.split(".")
+    const staticUrl = `https://${baseUrl}/static/fonts/${filename}.${extension}`
+
+    processedStylesheet = processedStylesheet.replace(url, staticUrl)
+    fontFiles.push({ url, filename, extension })
+  }
+
+  return { processedStylesheet, fontFiles }
 }
 
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {
@@ -52,9 +146,10 @@ ${stylesheet.join("\n\n")}
   --highlight: ${theme.colors.lightMode.highlight};
   --textHighlight: ${theme.colors.lightMode.textHighlight};
 
-  --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
-  --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
-  --codeFont: "${theme.typography.code}", ${DEFAULT_MONO};
+  --titleFont: "${getFontSpecificationName(theme.typography.title || theme.typography.header)}", ${DEFAULT_SANS_SERIF};
+  --headerFont: "${getFontSpecificationName(theme.typography.header)}", ${DEFAULT_SANS_SERIF};
+  --bodyFont: "${getFontSpecificationName(theme.typography.body)}", ${DEFAULT_SANS_SERIF};
+  --codeFont: "${getFontSpecificationName(theme.typography.code)}", ${DEFAULT_MONO};
 }
 
 :root[saved-theme="dark"] {

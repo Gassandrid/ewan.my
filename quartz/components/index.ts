@@ -27,6 +27,8 @@ import Cv from "./_Cv"
 import LinksHeader from "./LinksHeader"
 import OnlyFor from "./_OnlyFor"
 import SidebarNav from "./SidebarNav"
+import Flex from "./Flex"
+import ConditionalRender from "./ConditionalRender"
 
 export {
   ArticleTitle,
@@ -58,4 +60,6 @@ export {
   LinksHeader,
   OnlyFor,
   SidebarNav,
+  Flex,
+  ConditionalRender,
 }

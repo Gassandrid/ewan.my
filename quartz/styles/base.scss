@@ -68,6 +68,21 @@ ul,
   }
 }
 
+article {
+  > mjx-container.MathJax,
+  blockquote > div > mjx-container.MathJax {
+    display: flex;
+    > svg {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  blockquote > div > mjx-container.MathJax > svg {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 strong {
   font-weight: $semiBoldWeight;
 }
@@ -369,6 +384,10 @@ h6 {
   &[id]:hover > a {
     opacity: 1;
   }
+
+  &:not([id]) > a[role="anchor"] {
+    display: none;
+  }
 }
 
 // typography improvements
@@ -556,24 +575,32 @@ video {
 }
 
 .spacer {
-  flex: 1 1 auto;
+  flex: 2 1 auto;
 }
 
 div:has(> .overflow) {
-  position: relative;
+  max-height: 100%;
+  overflow-y: hidden;
 }
 
 ul.overflow,
 ol.overflow {
   max-height: 350px;
   overflow-y: auto;
+  width: 100%;
+  margin-bottom: 0;
 
   // clearfix
   content: "";
   clear: both;
 
-  & > li:last-of-type {
-    margin-bottom: 30px;
+  & > li.overflow-end {
+    height: 1rem;
+    margin: 0;
+  }
+
+  &.gradient-active {
+    mask-image: linear-gradient(to bottom, black calc(100% - 50px), transparent 100%);
   }
 
   &:after {

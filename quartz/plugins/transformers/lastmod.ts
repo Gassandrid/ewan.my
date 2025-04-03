@@ -1,8 +1,8 @@
 import fs from "fs"
-import path from "path"
 import { Repository } from "@napi-rs/simple-git"
 import { QuartzTransformerPlugin } from "../types"
 import chalk from "chalk"
+import path from "path"
 
 export interface Options {
   priority: ("frontmatter" | "git" | "filesystem")[]
@@ -31,17 +31,29 @@ export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options>> = (u
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "CreatedModifiedDate",
-    markdownPlugins() {
+    markdownPlugins(ctx) {
       return [
         () => {
           let repo: Repository | undefined = undefined
+          let repositoryWorkdir: string
+          if (opts.priority.includes("git")) {
+            try {
+              repo = Repository.discover(ctx.argv.directory)
+              repositoryWorkdir = repo.workdir() ?? ctx.argv.directory
+            } catch (e) {
+              console.log(
+                chalk.yellow(`\nWarning: couldn't find git repository for ${ctx.argv.directory}`),
+              )
+            }
+          }
+
           return async (_tree, file) => {
             let created: MaybeDate = undefined
             let modified: MaybeDate = undefined
             let published: MaybeDate = undefined
 
-            const fp = file.data.filePath!
-            const fullFp = path.isAbsolute(fp) ? fp : path.posix.join(file.cwd, fp)
+            const fp = file.data.relativePath!
+            const fullFp = file.data.filePath!
             for (const source of opts.priority) {
               if (source === "filesystem") {
                 const st = await fs.promises.stat(fullFp)
@@ -51,21 +63,14 @@ export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options>> = (u
                 created ||= file.data.frontmatter.created as MaybeDate
                 modified ||= file.data.frontmatter.modified as MaybeDate
                 published ||= file.data.frontmatter.published as MaybeDate
-              } else if (source === "git") {
-                if (!repo) {
-                  // Get a reference to the main git repo.
-                  // It's either the same as the workdir,
-                  // or 1+ level higher in case of a submodule/subtree setup
-                  repo = Repository.discover(file.cwd)
-                }
-
+              } else if (source === "git" && repo) {
                 try {
-                  modified ||= await repo.getFileLatestModifiedDateAsync(file.data.filePath!)
+                  const relativePath = path.relative(repositoryWorkdir, fullFp)
+                  modified ||= await repo.getFileLatestModifiedDateAsync(relativePath)
                 } catch {
                   console.log(
                     chalk.yellow(
-                      `\nWarning: ${file.data
-                        .filePath!} isn't yet tracked by git, last modification date is not available for this file`,
+                      `\nWarning: ${file.data.filePath!} isn't yet tracked by git, dates will be inaccurate`,
                     ),
                   )
                 }

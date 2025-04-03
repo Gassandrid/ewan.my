@@ -786,3 +786,9 @@ html.reading-mode .sidebar.reading-mode-active .toc-clone {
 .footer {
   padding-top: 4rem !important;
 }
+
+@media ($desktop) {
+  .footer {
+    padding-top: 8rem !important;
+  }
+}
