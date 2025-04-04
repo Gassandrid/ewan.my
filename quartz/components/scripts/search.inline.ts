@@ -147,7 +147,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
   const container = searchElement.querySelector(".search-container") as HTMLElement
   if (!container) return
 
-  const sidebar = container.closest(".sidebar") as HTMLElement
+  const sidebar = container.closest(".sidebar") || document.body
   if (!sidebar) return
 
   const searchButton = searchElement.querySelector(".search-button") as HTMLButtonElement
