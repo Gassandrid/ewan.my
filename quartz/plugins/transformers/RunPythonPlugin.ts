@@ -1,5 +1,5 @@
 import { QuartzTransformerPlugin } from "../types"
-import { Root } from "mdast" // Removed Content as it wasn't used directly
+import { Root } from "mdast"
 import { visit } from "unist-util-visit"
 
 let blockCounter = 0

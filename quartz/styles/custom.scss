@@ -388,14 +388,14 @@ audio::-webkit-media-controls-timeline:hover {
   padding: 10px;
   background-color: rgba(128, 128, 128, 0.5); /* grey and mostly transparent */
   border: 2px solid rgba(64, 64, 64, 0.8); /* darker gray and less transparent border */
-  border-radius: 10px; /* rounded corners */
+  border-radius: 0.5rem !important;
 }
 .python-output.visible {
   display: block; /* make visible after running */
+  border-radius: 0.5rem !important;
 }
 
 .code-block {
-  max-width: 800px;
   width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -589,25 +589,6 @@ audio::-webkit-media-controls-timeline:hover {
   color: #f5c2e7;
 }
 
-// light/dark mode toggle for the latex pseudocode block.
-// add color toggle to elements of classes:
-// ps-root, ps-code, ps-line, ps-block, etc
-
-[saved-theme="dark"] .ps-root,
-ps-code,
-ps-line,
-ps-algorithm,
-ps-block {
-  color: var(--shiki-dark);
-}
-
-[saved-theme="light"] .ps-root,
-ps-code,
-ps-line,
-ps-algorithm,
-ps-block {
-  color: var(--shiki-light);
-}
 /**/
 /* [saved-theme="light"] .cm-s-dracula .CodeMirror-gutters, */
 /* .cm-s-dracula.CodeMirror { */
@@ -663,7 +644,6 @@ ps-block {
   }
 }
 
-// have all the UL elements inside the footer be aligned to the center
 footer {
   text-align: center;
   display: flex;
