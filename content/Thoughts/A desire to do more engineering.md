@@ -3,10 +3,8 @@ date: 2024-11-25
 tags:
   - OCD
   - sapling
-updated:
-  - OCD
-  - thoughts
 title: A desire to do more engineering
+updated: 2025-04-03
 ---
 
 Working on [[DARS]] has re-ignited my passion for the physical side of computer science. While I have always excelled at the software side of things, and while I am sure that I do want to go into a more theoretical field, I can't help but desire to do some more on hands work in my free time.
