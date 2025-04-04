@@ -4,18 +4,34 @@ updated: 2025-04-04
 title: code running test
 ---
 
-also seems to break syntax highlighter, though should be an easy fix
+## Non Code Runner Vs Code Runner
 
-not runnable:
+Not runnable:
 
 ```python
 print("hello world")
 ```
 
-runnable
+Runnable
 
 ```python-r
 print("hello world")
+```
+
+---
+
+## Workspace Remember Test
+
+```python-r
+x = 1
+y = 2
+def add(x,y):
+	return x+y
+```
+
+```python-r
+z = add(x,y)
+print("we got " + z)
 ```
 
 title test
