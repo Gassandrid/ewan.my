@@ -6,7 +6,7 @@ tags:
   - biology
 date: 2025-03-24
 title: Medial Septum
-updated: 2025-03-30
+updated: 2025-04-06
 ---
 
 The **medial septum** is a brain structure that is located in the [[Basal Forebrain]], near the **midline** of the brain
@@ -41,9 +41,9 @@ For the medial septum, the lateral septum is a structure that is located in the 
 
 ## Purpose
 
-The medial septum plays quite the broad role in the brain, but it is mostly involved the process of memory formation and regulation. This consists of working with the [[Hippocampus]] and the [[Amygdala]] to regulate the formation of memories and the regulation of emotions.
+The medial septum plays quite the broad role in the brain, but it is mostly involved the process of [[Memory Formation]] and regulation. This consists of working with the [[Hippocampus]] and the [[Amygdala]] to regulate the formation of memories and the regulation of emotions.
 
-But more specifically, the medial setpum is responsible for the construction of spatial maps in the brain, which are crucial for the formation of memories. this involves generating theta waves in the hippocampus, which are the primary brain waves that are associated with memory formation.
+But more specifically, the medial setpum is responsible for the construction of spatial maps in the brain, which are crucial for the formation of memories. this involves generating theta waves in the hippocampus, which are the primary brain waves that are associated with [[Memory Formation]].
 
 Beyond that, the medial septum also plays a roll in social and emotional behaviors, namely in the regulation of aggression and anxiety.
 

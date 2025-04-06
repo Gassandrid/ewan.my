@@ -1,6 +1,6 @@
 ---
 date: 2024-09-12
-updated: 2024-10-05
+updated: 2025-04-06
 ---
 # Engram and Memory Allocation/Encoding
 ![[Pasted image 20240904140011.png]]
@@ -16,7 +16,7 @@ In neuroscience, an **engram** is the physical substrate of a memory, essentiall
 ## Neural Mechanisms
 
 ### Synaptic Plasticity
-- **Long-Term Potentiation (LTP)**: A process where the strength of synapses (connections between neurons) is increased, making it easier for neurons to communicate in the future. LTP is considered a key mechanism underlying memory formation.
+- **Long-Term Potentiation (LTP)**: A process where the strength of synapses (connections between neurons) is increased, making it easier for neurons to communicate in the future. LTP is considered a key mechanism underlying [[Memory Formation]].
 - **Long-Term Depression (LTD)**: The weakening of synaptic connections, which can also be involved in encoding memories, especially in processes like forgetting or memory refinement.
 
 ### Neuronal Ensembles

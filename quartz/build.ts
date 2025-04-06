@@ -1,4 +1,5 @@
 import sourceMapSupport from "source-map-support"
+import { encryptPages } from "./password"
 sourceMapSupport.install(options)
 import path from "path"
 import { PerfTimer } from "./util/perf"
@@ -85,6 +86,7 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
   const filteredContent = filterContent(ctx, parsedFiles)
 
   await emitContent(ctx, filteredContent)
+  await encryptPages()
   console.log(chalk.green(`Done processing ${markdownPaths.length} files in ${perf.timeSince()}`))
   release()
 

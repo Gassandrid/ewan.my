@@ -7,14 +7,14 @@ tags:
   - artem-kirsanov
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-04-05
+updated: 2025-04-06
 ---
 
 _study notes for a [[Artem Kirsanov]] [video](https://youtu.be/5CxSoFK5tOQ?si=xNx2_g403li49K1i)_
 
 Recently, there have been some significant advancements in decoding the hippocampus, and how it is involved in memory. This is a very complex structure, and it is not yet fully understood. However, we do know that the hippocampus is involved in the formation of new memories, and the retrieval of old ones.
 
-More specifically, looking at the brain's internal clock, the **Theta Rhythm** is a very interesting phenomenon. This is a brain wave that is present in the hippocampus, and it is associated with memory formation and retrieval. We believe that the theta rhythm is a clock that helps the brain to organize memories in time.
+More specifically, looking at the brain's internal clock, the **Theta Rhythm** is a very interesting phenomenon. This is a brain wave that is present in the hippocampus, and it is associated with [[Memory Formation]] and retrieval. We believe that the theta rhythm is a clock that helps the brain to organize memories in time.
 
 ---
 
@@ -121,7 +121,26 @@ In addition to the "assembly" of a unified memory, another problem that the brai
 
 ![[Screenshot 2025-04-05 at 3.19.03 PM.png]]
 
-This so-called **sequence organization**(a one dimensional process) is vital for [[Spacial Navigation]], as each trajectory/path is made up of a sequence of activated place cells.
+This so-called **sequence organization**(a one dimensional process) is vital for [[Spacial Navigation]], as each trajectory/path is made up of a sequence of activated place cells. But it is also vital for **episodic memory** in general. Theta Rhythm helps in the process of forming these "chains of representation", ensuring the correct temporal order.
+
+---
+
+## Forming an integrated representation
+
+To cement these concepts properly, lets work with an example:
+
+> [!Example]
+> **Alice** and **Bob** are childhood friends who have not seen each other in a very long time. 
+>
+> One day, they randomly bump into each other in the bank. But, given that both were busy, they thought it best to go and meet up later at their **favorite coffee shop** to catch up with each other.
+>
+> Suppose they dont have the luxuries we do now ( the internet, phones, etc ) to communicate with each other, other than face to face interaction. How can they possibly make the meeting at the coffee shop happen?
+
+One way is to agree on the place to meet like they did, and then occasionally visit it once in a while. There is a small chance that they meet each other there by coincidence, where they can finally sit down and talk. But we can all agree that this is a sub-par method of ensuring contact.
+
+A more intuitive way to us is to **agree on a time** in advance. If they both know that they are meeting each other at *1pm* tomorrow at their favorite coffee shop, there is no ambiguity left. In layman terms, even if they don't communicate directly, they can use an **external factor**, in the form of time, which they both have access to in order to **coordinate** their arrival.
+
+![[Screenshot 2025-04-06 at 4.16.18 PM.png]]
 
 [^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 https://pubmed.ncbi.nlm.nih.gov/19881503/
 [^2]: Hummos A, Nair SS. An integrative model of the intrinsic hippocampal theta rhythm. Lytton WW, editor. PLoS ONE. 2017 https://pubmed.ncbi.nlm.nih.gov/28787026/

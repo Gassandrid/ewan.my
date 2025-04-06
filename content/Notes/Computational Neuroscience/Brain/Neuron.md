@@ -7,7 +7,7 @@ tags:
   - neuroscience
 date: 2025-03-25
 title: Neuron
-updated: 2025-03-29
+updated: 2025-04-06
 fileClass: note
 ---
 
@@ -19,7 +19,7 @@ _While I have touched apon the abstract idea of a synthetic [[Artificial Neuron|
 
 In biology, a neuron serves as the basic building block of the nervous system. It is a specialized cell that is capable of transmitting electrical signals and communicating with other cells. Neurons are responsible for processing and transmitting information throughout the body, and they play a crucial role in various functions such as movement, sensation, and cognition.
 
-Where in machine learning we would have thought of the connections between neurons as weights, in biology these connections are called [[Synapses]]. These synapses are the points of communication between neurons, where electrical signals are transmitted from one neuron to another. The strength of these connections can change over time, allowing for learning and memory formation.
+Where in machine learning we would have thought of the connections between neurons as weights, in biology these connections are called [[Synapses]]. These synapses are the points of communication between neurons, where electrical signals are transmitted from one neuron to another. The strength of these connections can change over time, allowing for learning and [[Memory Formation]].
 
 ---
 
