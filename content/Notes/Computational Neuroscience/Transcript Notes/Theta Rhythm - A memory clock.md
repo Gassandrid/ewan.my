@@ -7,7 +7,7 @@ tags:
   - artem-kirsanov
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-04-03
+updated: 2025-04-05
 ---
 
 _study notes for a [[Artem Kirsanov]] [video](https://youtu.be/5CxSoFK5tOQ?si=xNx2_g403li49K1i)_
@@ -85,7 +85,43 @@ Aside from that quick detour, let us assume that for the most part, the [[Medial
 
 ## Functions of the Theta Wave
 
+Just like any other brain rhythm, Theta is not always present.
 
+Theta Rhythm is observed under some specific physiological states, namely periods of locomotion(aka running), exploratory sniffing, and various environment related behaviors.o
+
+One example might be when an animal is grooming itself, it is unlikely that Theta activity would be present at all, or at the very least, under very sparse bursts. You wouldn't note the slow frequency component in this case.
+
+But when this animal starts engaging in an activity such as running or for the search of food, it's [[Hippocampus]] would light up the rhytmic theta wave.
+
+[[Spacial Navigation]] is closely linked to [[Memory Formation]](as they are both functions of the Hippocampus), and this makes sense for a lot of creatures. Say you are a mouse, and you find a food source by taking a specific route to find it. It is evolutionarily beneficial to take special note of a route like this so that the mouse can retrieve it next time.
+
+> While the specifics are up for discussion, [[Artem Kirsanov|Artem]] seeks to make the argument that the central purpose of **theta rhythm** is to provide a computational mechanism to **construct** and **retrieve** memory traces.
+
+For the purpose of explaining what he means here, let's think of a [[Memory]] as a **temporal** sequence of neuronal patterns activating one after another.  Each one of these patterns is a **collection** of neuronal assemblies, which together form an **integrated representation** of the world.
+
+![[Screenshot 2025-04-05 at 2.43.48 PM.png]] 
+
+This "integrated representation" has the feature of encoding different modalities of a given experience.
+
+This could be things like the **current position**, **sensory cues**, the **emotional state** at that time, the **social interactions** in that given place/experience... The list goes on.
+
+Each of these "modalities" has a **corresponding pattern** of brain activity, a "neural fingerprint" of sorts that uniquely identifies this given information source.
+
+A great example of this is another video made by Artem(which I plan on writing a note on, if not done already) about [[Place cells: How your brain creates maps of abstract spaces|Place Cells]], which are neurons that essentially associate certain behavior with a given location. Each of these Place Cells has a **preferred location** in which they tend to fire. Bringing all these place cells together, we get something of a "code" of physical position.
+
+---
+
+However, the [[Hippocampus]] has been shown to encode much more than just spatial variables, things like **sound frequencies**, and even the **identities** of certain people(in the case of humans at the least).
+
+These all come together to form a modality rich experience that represents all of the different sources of information for a given episodic memory.
+
+But to form an integrated representation for the external world, the brain has the problem of **unifying** these different modalities into a single "picture". **Theta Rhythm** has the purpose of ensuring that all these separate components link together to form a unified memory.
+
+In addition to the "assembly" of a unified memory, another problem that the brain has to solve is the arrangement of these instantaneous representations into a meaningful **temporal sequence**, to form a meaningful memory which unfolds in time.
+
+![[Screenshot 2025-04-05 at 3.19.03 PM.png]]
+
+This so-called **sequence organization**(a one dimensional process) is vital for [[Spacial Navigation]], as each trajectory/path is made up of a sequence of activated place cells.
 
 [^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 https://pubmed.ncbi.nlm.nih.gov/19881503/
 [^2]: Hummos A, Nair SS. An integrative model of the intrinsic hippocampal theta rhythm. Lytton WW, editor. PLoS ONE. 2017 https://pubmed.ncbi.nlm.nih.gov/28787026/

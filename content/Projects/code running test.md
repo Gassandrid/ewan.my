@@ -103,3 +103,7 @@ print("hello world")
 ```r-r
 print("hello world")
 ```
+
+$$
+f_{XY}(x, y) = f_X(x) \cdot f_Y(y) \quad \text{for all } x, y ] 
+$$

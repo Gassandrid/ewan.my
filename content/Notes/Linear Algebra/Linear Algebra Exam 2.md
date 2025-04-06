@@ -1,12 +1,14 @@
 ---
-date: 2025-04-03
-updated: 2025-04-03
+id: Linear Algebra Exam 2
+aliases: []
 tags:
   - math/linear-algebra
+date: 2025-04-03
 fileClass: note
+updated: 2025-04-04
 ---
 
-*a starting point for exam 2 studying*
+_a starting point for exam 2 studying_
 
 ---
 
@@ -83,5 +85,5 @@ How the exam topic will be split on the exam
 
 3. Linear Transformations
 4. Diagonalizability
-	- No deficient eigenvalues (multiplicity)
+   - No deficient eigenvalues (multiplicity)
 5. Diagonalization Process (orthogonal)
