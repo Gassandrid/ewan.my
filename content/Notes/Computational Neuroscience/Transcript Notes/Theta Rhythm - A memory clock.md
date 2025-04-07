@@ -212,11 +212,12 @@ Because neurons adjust timings of their spikes to the ticking of the [[Hippocamp
 
 ## Phase Precession
 
-```python
-import pandas as pd
 
-df = await pd.read_csv("https://gassandrid.xyz/datasets/housing.csv")
-print(df)
+
+```python-r
+import pandas as pd
+df = pd.read_csv("https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv")
+print(df.head())
 ```
 
 ---
