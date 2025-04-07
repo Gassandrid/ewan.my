@@ -212,6 +212,13 @@ Because neurons adjust timings of their spikes to the ticking of the [[Hippocamp
 
 ## Phase Precession
 
+```python
+import pandas as pd
+
+df = await pd.read_csv("https://gassandrid.xyz/datasets/housing.csv")
+print(df)
+```
+
 ---
 
 [^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 https://pubmed.ncbi.nlm.nih.gov/19881503/
