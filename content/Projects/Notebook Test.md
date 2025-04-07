@@ -32,11 +32,7 @@ from pyodide.http import open_url
 
 url = "https://gassandrid.xyz/datasets/housing.csv"
 
-try:
-    data = pd.read_csv(open_url(url))
-    print(data.head())  # Print the first few rows to verify
-except Exception as e:
-    print(f"An error occurred: {e}")
+data = pd.read_csv(open_url(url))
 ```
 
 ---
