@@ -1,6 +1,12 @@
 ---
 date: 2025-04-07
 updated: 2025-04-07
+tags:
+  - generated
+---
+
+This is a simple AI generated test to see if I can use my site like a Jupyter notebook. I have always thought the IPYNB format to be a bit verbose to include Markdown, as Markdown has its own built-in code cell system. This is like running a docker container inside a docker container.
+
 ---
 
 We will be examining the well known **California Housing dataset**
