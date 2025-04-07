@@ -555,6 +555,8 @@ img_str
 
            editorInstance.setSize(null, '150px');
 
+          const codeBlock = editorInstance.getWrapperElement();
+
           // Refresh editor after slight delay to ensure layout calculation
           // setTimeout(() => editorInstance.refresh(), 50);
 
