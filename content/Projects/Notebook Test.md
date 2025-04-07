@@ -32,7 +32,7 @@ from pyodide.http import open_url
 
 url = "https://gassandrid.xyz/datasets/housing.csv"
 
-data = pd.read_csv(open_url(url))
+df = pd.read_csv(open_url(url))
 ```
 
 ---
