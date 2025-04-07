@@ -212,12 +212,28 @@ Because neurons adjust timings of their spikes to the ticking of the [[Hippocamp
 
 ## Phase Precession
 
+We have already talked about how a **path** through an environment can be represented sequence of [[Place cells: How your brain creates maps of abstract spaces|place cell]] activations(the specialized neurons that encode physical location and subsequent behavior).
+
+Each of those cells has a prefferend pathc of ground, called the **place field**, where if fires most actively
+
+```python
+import micropip
+await micropip.install("pandas")
+await micropip.install("pyodide")
 
 
-```python-r
 import pandas as pd
-df = pd.read_csv("https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv")
-print(df.head())
+from pyodide.http import pyfetch
+from io import StringIO
+
+async def load_csv():
+    response = await pyfetch("https://raw.githubusercontent.com/Gassandrid/gassandrid.xyz/v4/content/datasets/housing.csv")
+    text = await response.string()
+    df = pd.read_csv(StringIO(text))
+    print(df.head())
+
+await load_csv()
+
 ```
 
 ---

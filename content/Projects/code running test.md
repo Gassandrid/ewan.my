@@ -1,6 +1,6 @@
 ---
 date: 2024-12-10
-updated: 2025-04-06
+updated: 2025-04-07
 title: code running test
 password: testing
 ---
@@ -94,17 +94,17 @@ plt.axvline(0, color='black',linewidth=0.5)
 plt.show()
 ```
 
-## For R:
+## Pandas URL Stuff
 
-```r
-print("hello world")
+```python-r
+import pandas as pd
+from pyodide.http import open_url
+
+url = "https://gassandrid.xyz/datasets/housing.csv"
+
+try:
+    data = pd.read_csv(open_url(url))
+    print(data.head())  # Print the first few rows to verify
+except Exception as e:
+    print(f"An error occurred: {e}")
 ```
-
-
-```r-r
-print("hello world")
-```
-
-$$
-f_{XY}(x, y) = f_X(x) \cdot f_Y(y) \quad \text{for all } x, y ] 
-$$
