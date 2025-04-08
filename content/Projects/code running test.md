@@ -1,6 +1,6 @@
 ---
 date: 2024-12-10
-updated: 2025-04-07
+updated: 2025-04-08
 title: code running test
 password: testing
 ---
@@ -107,4 +107,136 @@ try:
     print(data.head())  # Print the first few rows to verify
 except Exception as e:
     print(f"An error occurred: {e}")
+```
+
+---
+
+## Animate and 3d Tests
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from mpl_toolkits.mplot3d import Axes3D
+
+# Set up the figure
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+# Constants (in astronomical units)
+AU = 149.6e6  # 1 AU in kilometers
+EARTH_DISTANCE = 1.0  # Earth's distance from Sun (1 AU)
+MARS_DISTANCE = 1.524  # Mars' distance from Sun (1.524 AU)
+
+# Create orbit paths
+theta = np.linspace(0, 2*np.pi, 1000)
+
+# Earth's orbit
+earth_x = EARTH_DISTANCE * np.cos(theta)
+earth_y = EARTH_DISTANCE * np.sin(theta)
+earth_z = np.zeros_like(theta)
+
+# Mars' orbit
+mars_x = MARS_DISTANCE * np.cos(theta)
+mars_y = MARS_DISTANCE * np.sin(theta)
+mars_z = np.zeros_like(theta)
+
+# Plot the Sun
+ax.scatter([0], [0], [0], color='yellow', s=300, label='Sun')
+
+# Plot Earth's orbit
+ax.plot(earth_x, earth_y, earth_z, color='blue', linestyle='dashed', alpha=0.7)
+
+# Plot Mars's orbit
+ax.plot(mars_x, mars_y, mars_z, color='red', linestyle='dashed', alpha=0.7)
+
+# Starting positions (arbitrarily chosen for visualization)
+earth_pos = np.radians(0)  # Earth starting position
+mars_pos = np.radians(44)  # Mars at position for optimal transfer
+
+# Plot Earth and Mars
+earth = ax.scatter(
+    EARTH_DISTANCE * np.cos(earth_pos),
+    EARTH_DISTANCE * np.sin(earth_pos),
+    0, color='blue', s=100, label='Earth'
+)
+mars = ax.scatter(
+    MARS_DISTANCE * np.cos(mars_pos),
+    MARS_DISTANCE * np.sin(mars_pos),
+    0, color='red', s=80, label='Mars'
+)
+
+# Calculate transfer orbit (Hohmann transfer)
+# Semi-major axis of the transfer orbit
+a_transfer = (EARTH_DISTANCE + MARS_DISTANCE) / 2
+# Eccentricity of the transfer orbit
+ecc = (MARS_DISTANCE - EARTH_DISTANCE) / (MARS_DISTANCE + EARTH_DISTANCE)
+
+# Create transfer orbit path
+transfer_theta = np.linspace(0, np.pi, 1000)  # Half an ellipse
+transfer_r = a_transfer * (1 - ecc**2) / (1 + ecc * np.cos(transfer_theta))
+transfer_x = transfer_r * np.cos(transfer_theta)
+transfer_y = transfer_r * np.sin(transfer_theta)
+transfer_z = np.zeros_like(transfer_theta)
+
+# Rotate the transfer orbit to match Earth's departure position
+rotation_angle = earth_pos
+rotation_matrix = np.array([
+    [np.cos(rotation_angle), -np.sin(rotation_angle), 0],
+    [np.sin(rotation_angle), np.cos(rotation_angle), 0],
+    [0, 0, 1]
+])
+
+rotated_points = np.dot(rotation_matrix, np.vstack([transfer_x, transfer_y, transfer_z]))
+transfer_x, transfer_y, transfer_z = rotated_points
+
+# Plot transfer orbit
+ax.plot(transfer_x, transfer_y, transfer_z, color='green', linewidth=2, label='Transfer Orbit')
+
+# Calculate spacecraft trajectory points for animation
+num_frames = 100
+spacecraft_x = transfer_x[::10][:num_frames]  # Sample points along transfer orbit
+spacecraft_y = transfer_y[::10][:num_frames]
+spacecraft_z = transfer_z[::10][:num_frames]
+
+# Initial spacecraft point
+spacecraft = ax.scatter(
+    spacecraft_x[0], spacecraft_y[0], spacecraft_z[0],
+    color='white', edgecolor='black', s=80, label='Spacecraft'
+)
+
+# Trajectory line (will be updated during animation)
+trajectory, = ax.plot([], [], [], color='green', linewidth=1, alpha=0.5)
+
+# Set plot limits and labels
+ax.set_xlim(-2, 2)
+ax.set_ylim(-2, 2)
+ax.set_zlim(-0.5, 0.5)
+ax.set_xlabel('X (AU)')
+ax.set_ylabel('Y (AU)')
+ax.set_zlabel('Z (AU)')
+ax.set_title('Earth to Mars Trajectory')
+
+# Add legend
+ax.legend(loc='upper right')
+
+# Animation update function
+def update(frame):
+    # Update spacecraft position
+    spacecraft._offsets3d = ([spacecraft_x[frame]], [spacecraft_y[frame]], [spacecraft_z[frame]])
+    
+    # Update trajectory line
+    trajectory.set_data(spacecraft_x[:frame+1], spacecraft_y[:frame+1])
+    trajectory.set_3d_properties(spacecraft_z[:frame+1])
+    
+    return spacecraft, trajectory
+
+# Create animation
+ani = FuncAnimation(fig, update, frames=num_frames, interval=50, blit=False)
+
+# Add text indicating travel time
+ax.text2D(0.05, 0.95, "Travel Time: ~9 months", transform=ax.transAxes)
+
+plt.tight_layout()
+plt.show()
 ```
