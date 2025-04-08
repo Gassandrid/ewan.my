@@ -113,7 +113,7 @@ except Exception as e:
 
 ## Animate and 3d Tests
 
-```python
+```python-r
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
