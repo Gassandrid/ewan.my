@@ -1,6 +1,6 @@
 ---
 date: 2025-01-15
-updated: 2025-02-20
+updated: 2025-04-08
 title: Planner Overview
 ---
 
@@ -34,3 +34,4 @@ Must reach roughly 1000 points overall, meaning 250 on each module to get an A+ 
 
 ## Total
 
+739
