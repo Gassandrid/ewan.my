@@ -1,6 +1,6 @@
 ---
 date: 2025-04-07
-updated: 2025-04-07
+updated: 2025-04-09
 ---
 
 >[!Abstract] Definition for a Generation Function
@@ -49,4 +49,48 @@ $$
 
 you can also get $E(X^{2})$:
 
+---
+
+## New Exercise
+
+> [!Example]
+Starting at `6:00AM`, birds perch on a power line with time between consecutive birds is exponential with an average of 7.5 minutes.
+
+> [!Abstract] Hint
+> 
+> From this we can note that we will use:
+>
+> $$
+> X \approx Exp(.133) \quad\text{ for } \lambda
+> $$
+>
+> And we can use the exponential equation:
+>
+> $$
+> E(x) = 7.5 = \frac{1}{\lambda} \Rightarrow \lambda = 0.133 = \frac{1}{7.5}
+> $$
+
+1. Given that there has not been a bird perched in the previous 5 minutes, what is the probability that a bird will not perch in the next 10 minutes.
+
 $$
+P(X > 15 \mid X > 5) = \frac{P(X > 15 \cap X > 5)}{P(X > 5)}
+$$
+
+We will use the [[Memoryless Property For Exponentials]]
+
+$$
+\begin{align*}
+P(X>10 + 5) \mid X > 5) &= P(X>10) \\
+&= 1-F(10) \\
+&= 1 - (1-e^{-0.133(10)}) \\
+&= e^{-.133(10)}= \boxed{0.2636}
+\end{align*}
+$$
+
+2. How many birds are expected to perch in the next hour?
+
+We expect that 1 bird will perch every `7.5` minutes, and thus we will switch to **poisson**.
+$$
+E(X) = \frac{60 \text{ minutes}}{7.5\text{ minutes}} = \text{8 birds in an hour } = \lambda_{P}
+$$
+
