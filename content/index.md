@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-04-08
+updated: 2025-04-09
 fileClass: navigation
 ---
 
@@ -110,11 +110,13 @@ fileClass: navigation
 
 # Hello! My name is Ewan
 
-I am a second year student at the [[University Of Vermont]] studying Computer Science. I have a big passion and desire to specialize in [[Computational Neuroscience]], [[Artificial Intelligence]], and [[Mathematics]]. In addition I also enjoy a variety of other subtopics within Computer Science, such as embedded engineering and robotics.
+You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work! Either way, welcome to my digital garden!
+
+I’m a second-year Computer Science student at the [[University of Vermont]] with a growing passion for [[Computational Neuroscience]], [[Artificial Intelligence]], and [[Mathematics]]. I love exploring how brains and machines overlap, and I’m also into tinkering with hardware—things like embedded systems, robotics, and anything that involves code meeting the physical world.
 
 ## Thoughts 🏡
 
-I have really been focusing on my **neuroscience** research right now, the brain is quite an interesting system!
+I have recently been finding peace by spending my time studying the biological side of **neuroscience**, the brain is quite an interesting system!
 
 I am really liking the german word *waldeinsamkeit*
 
