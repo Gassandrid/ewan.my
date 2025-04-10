@@ -5,7 +5,7 @@ tags:
   - cs/theory
 date: 2025-04-08
 fileClass: note
-updated: 2025-04-08
+updated: 2025-04-10
 ---
 
 It is an unfortunate fact that there are some problems that cannot be solved by any algorithm. These problems are undecidable. The most famous example of an undecidable problem is the Halting Problem, which states that there is no algorithm that can determine whether a given program will halt or run forever.
@@ -70,9 +70,4 @@ $$
 Our theorem right now is that $A_{DFA}$ is decidable
 
 ---
-
-## Proof Idea: Construct a TM that Simulates DFA B on Input $\omega$ and Reports the Result.
-
-- Either $B$ accepts $\omega$ ( then $\langle B, \omega \rangle$ in $A_{DFA}$) **or**
-- B does not accept $\omega$ ( then $\langle B, \omega \rangle$ not in $A_{DFA}$)
 
