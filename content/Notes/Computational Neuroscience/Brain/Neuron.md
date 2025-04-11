@@ -4,10 +4,10 @@ aliases:
 tags:
   - todo
   - biology
-  - neuroscience
+  - neuroscience/neurons
 date: 2025-03-25
 title: Neuron
-updated: 2025-04-06
+updated: 2025-04-11
 fileClass: note
 ---
 
@@ -30,3 +30,7 @@ The machine we call the brain isnt really the **general purpose** machine we thi
 ### Pacemaker Neurons
 
 One example of this is found in the [[Medial Septum]], which contains a type of neuron called [[Pacemaker Neurons]]. Pacemaker neurons are responsible for generating rhythmic patterns of activity in the brain, such as the theta rhythm that is associated with memory and navigation.
+
+### Purkinje Neurons
+
+[[Purkinje Neurons]] are a very dense and large neuron found in the **cerebellar cortex**

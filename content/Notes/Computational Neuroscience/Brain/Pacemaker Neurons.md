@@ -1,10 +1,10 @@
 ---
 title: Pacemaker Neurons
 date: 2025-03-25
-updated: 2025-04-06
+updated: 2025-04-11
 tags:
-  - neuroscience
   - biology
+  - neuroscience/neurons
 fileClass: note
 ---
 

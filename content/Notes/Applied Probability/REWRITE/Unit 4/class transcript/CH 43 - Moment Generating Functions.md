@@ -1,13 +1,16 @@
 ---
+id: CH 43 - Moment Generating Functions
+aliases: []
+tags: []
 date: 2025-04-07
-updated: 2025-04-09
+updated: 2025-04-11
 ---
 
->[!Abstract] Definition for a Generation Function
+> [!Abstract] Definition for a Generation Function
 > If $a_{1},a_{2},\dots, a_{n}$ is an interesting sequence of numbers from which we want to build a generating function $g(t)$, we write:
 >
 > $$
-> g(t) = \sum_{j=0}^\infty \frac{a_{j}}{j!} t^j = \frac{a_{0}}{0!}t^0 + \frac{a_{1}}{1!}t^1 + \frac{a_{2}}{2!}t^2 + \frac{a_{3}}{3!}t^3 +  \dots + \frac{a_{n}}{n!}t^n 
+> g(t) = \sum_{j=0}^\infty \frac{a_{j}}{j!} t^j = \frac{a_{0}}{0!}t^0 + \frac{a_{1}}{1!}t^1 + \frac{a_{2}}{2!}t^2 + \frac{a_{3}}{3!}t^3 +  \dots + \frac{a_{n}}{n!}t^n
 > $$
 
 We get something like:
@@ -26,13 +29,13 @@ $$
 = a_{0}
 $$
 
-same would yield for $a_{1}$. 
+same would yield for $a_{1}$.
 
 ---
 
 ## Moment Generating Functions
 
->[!Abstract] Definition for a Moment Generating Funciton
+> [!Abstract] Definition for a Moment Generating Funciton
 > The moment generating function $M_{X}(t)$ of a random variable $X$ is equal to the expected value of $e^{tX}$:
 >
 > $$
@@ -54,10 +57,10 @@ you can also get $E(X^{2})$:
 ## New Exercise
 
 > [!Example]
-Starting at `6:00AM`, birds perch on a power line with time between consecutive birds is exponential with an average of 7.5 minutes.
+> Starting at `6:00AM`, birds perch on a power line with time between consecutive birds is exponential with an average of 7.5 minutes.
 
 > [!Abstract] Hint
-> 
+>
 > From this we can note that we will use:
 >
 > $$
@@ -90,7 +93,35 @@ $$
 2. How many birds are expected to perch in the next hour?
 
 We expect that 1 bird will perch every `7.5` minutes, and thus we will switch to **poisson**.
+
 $$
 E(X) = \frac{60 \text{ minutes}}{7.5\text{ minutes}} = \text{8 birds in an hour } = \lambda_{P}
+$$
+
+Now that we have the average number of birds per hour, we can use the Poisson distribution to find the probability of a certain number of birds perching in the next hour.
+
+$$
+\begin{align*}
+P(X = k) &= \frac{e^{-\lambda} \lambda^k}{k!}\\
+\end{align*}
+$$
+
+For example, the probability of exactly 8 birds perching in the next hour is:
+
+$$
+\begin{align*}
+P(X = 8) &= \frac{e^{-8} 8^8}{8!}\\
+&\approx 0.1396
+\end{align*}
+$$
+
+And the probability of at least 10 birds perching in the next hour is:
+
+$$
+\begin{align*}
+P(X \geq 10) &= 1 - P(X \leq 9)\\
+&= 1 - \sum\_{k=0}^{9}\frac{e^{-8}8^k}{k!}\\
+&\approx 0.2798
+\end{align*}
 $$
 
