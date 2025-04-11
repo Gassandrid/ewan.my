@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-04-09
+updated: 2025-04-11
 fileClass: navigation
 ---
 
@@ -116,7 +116,7 @@ I’m a second-year Computer Science student at the [[University of Vermont]] wi
 
 ## Thoughts 🏡
 
-I have recently been finding peace by spending my time studying the biological side of **neuroscience**, the brain is quite an interesting system!
+I have recently been finding peace by spending my time studying the biological side of **neuroscience**, the brain is quite an interesting system! As far as theory goes I am really interested in [[Theta Rhythm - A memory clock|theta rhythm]] at the moment.
 
 I am really liking the german word *waldeinsamkeit*
 
@@ -128,11 +128,12 @@ Investing in 3d printing and such, liking the idea of bringing the open-source/d
 
 ## Current Projects 💾
 
+**[[Migrating my Quartz, DARS, and media to one big Homelab Server|Homelab]]** - an evolution of [[DARS]] that interfaces the llm bindings I developed to control all my self hosted services in addition to my room.
+
+
 **[[DARS]] - Dormitory Automated Residential System**
 
 A model replica of TARS from interstellar, built for the purpose of mapping natural human language to discrete functional output through the use of LLM's and microcontrollers.
-
-**[[Migrating my Quartz, DARS, and media to one big Homelab Server|Homelab]]** - an evolution of [[DARS]] that interfaces the llm bindings I developed to control all my self hosted services in addition to my room.
 
 ## About Me ⛵️
 
