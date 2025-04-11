@@ -1,9 +1,10 @@
 ---
 id: Firing Rate Approximation
-aliases: []
+aliases: 
 tags:
   - neuroscience
   - cs/python
+  - todo
 date: 2025-04-11
 updated: 2025-04-11
 ---
@@ -11,6 +12,13 @@ updated: 2025-04-11
 This serves as a simple notebook for implementing the different kinds of Firing Rate Approximation Functions as defined in [[1.2 - Spike Trains and Firing Rates]].
 
 In most cases you would be doing this for multiple [[Neuron]]s, but here we will just do one like the Textbook's figures.
+
+**Module Imports:**
+```python-r
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
 
 ---
 
