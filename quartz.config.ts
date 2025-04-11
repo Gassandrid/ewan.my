@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     },
 
     locale: "en-US",
-    baseUrl: "gassandrid.xyz",
+    baseUrl: "ewan.my",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: true,
