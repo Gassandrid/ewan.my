@@ -170,3 +170,12 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
+
+
+---
+
+## Sliding Window Gaussian
+
+The next step after this is quite clear - the sliding window provides the precision we need, but due to the rectangular shape it retains those jagged edges from the bin method.
+
+
