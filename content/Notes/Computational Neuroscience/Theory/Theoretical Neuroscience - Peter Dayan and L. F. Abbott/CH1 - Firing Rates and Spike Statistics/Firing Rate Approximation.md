@@ -6,7 +6,7 @@ tags:
   - cs/python
   - todo
 date: 2025-04-11
-updated: 2025-04-11
+updated: 2025-04-13
 ---
 
 This serves as a simple notebook for implementing the different kinds of Firing Rate Approximation Functions as defined in [[1.2 - Spike Trains and Firing Rates]].
@@ -171,11 +171,47 @@ plt.grid(True)
 plt.show()
 ```
 
-
 ---
 
 ## Sliding Window Gaussian
 
 The next step after this is quite clear - the sliding window provides the precision we need, but due to the rectangular shape it retains those jagged edges from the bin method.
 
+For our Gaussian Kernel, we will use the following formula:
+
+$$
+r(t) = \sum_{i} \frac{1}{\sqrt{ 2\pi }\sigma} \exp\left( - \frac{(t-t_{i})^2}{2\sigma^2} \right)
+$$
+
+```python-r
+window_size = 0.1  # 100 ms full width
+sigma = window_size / 2.355  # convert FWHM to std (approximation for Gaussian)
+
+def extract_spike_times(data, neuron_idx):
+    return data['time'][data[f'neuron_{neuron_idx}'] == 1].values
+
+def gaussian_sliding_rate(spike_times, eval_times, sigma):
+    rate = np.zeros_like(eval_times, dtype=float)
+    norm_factor = 1 / (sigma * np.sqrt(2 * np.pi))
+    
+    for i, t in enumerate(eval_times):
+        rate[i] = np.sum(norm_factor * np.exp(-0.5 * ((t - spike_times) / sigma)**2))
+
+    return rate
+
+# plotting
+plt.figure(figsize=(6, 2))
+for i in range(min(5, num_neurons)):
+    spike_times = extract_spike_times(data, i)
+    eval_times = np.arange(0, duration, dt)
+    rate = gaussian_sliding_rate(spike_times, eval_times, sigma)
+    plt.plot(eval_times, rate, label=f'Neuron {i}')
+
+plt.xlabel('Time (s)')
+plt.ylabel('Firing Rate (Hz)')
+plt.title(f'Sliding Window (Gaussian) Firing Rate, σ = {sigma:.3f} s')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
 
