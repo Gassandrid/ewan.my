@@ -1,11 +1,12 @@
 ---
 date: 2025-04-11
-updated: 2025-04-11
+updated: 2025-04-14
 tags:
   - biology
   - neuroscience
-  - todo
+  - todo/neuro
 ---
+ 
 
 ![[Pasted image 20250411134040.png]]
 

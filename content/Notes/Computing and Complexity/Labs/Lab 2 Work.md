@@ -1,7 +1,9 @@
 ---
 date: 2025-01-30
-updated: 2025-03-18
+updated: 2025-04-13
 title: Lab 2 Work
+tags:
+  - cs/theory
 ---
 ```mermaid
 stateDiagram-v2

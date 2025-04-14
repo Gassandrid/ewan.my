@@ -1,11 +1,12 @@
 ---
 id: Homework 2 - DFA and NFA Construction
 aliases: []
-tags: []
+tags:
+  - cs/theory
 author: Ewan Pedersen
 date: 2025-02-07
 title: Homework 2 - DFA and NFA Construction
-updated: 2025-02-10
+updated: 2025-04-13
 ---
 
 > **Abstract**

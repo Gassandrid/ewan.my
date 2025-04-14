@@ -2,13 +2,14 @@
 id: Hippocampus
 aliases: 
 tags:
-  - todo
   - neuroscience
   - biology/region
+  - todo/neuro
 date: 2025-03-31
 fileClass: note
-updated: 2025-04-11
+updated: 2025-04-14
 ---
+ 
 
 The hippocampus serves as a critical section of the brain responsible for a variety of tasks, namely [[Memory Formation]], [[Spacial Navigation]], and [[Sequence Learning]].
 

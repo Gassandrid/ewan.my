@@ -1,10 +1,11 @@
 ---
 date: 2025-04-02
-updated: 2025-04-02
+updated: 2025-04-14
 tags:
   - math/linear-algebra
+  - todo/math
 ---
-*for [3b1b series on youtube](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)*
+*for [3b1b series on youtube](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)* 
 
 These notes are unrelated to my [[University Of Vermont|University]] course on the subject, however they are also a useful tool for me to study for the class and as such I will be keeping them in the same folder.
 
@@ -24,4 +25,3 @@ These **Transcript Notes** are for [[3Blue1Brown]]'s Series on youtube titled "E
 
 - [ ] [[Chapter 5 - Three Dimensional Linear Transformations]]
 
-a

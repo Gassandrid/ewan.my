@@ -1,8 +1,9 @@
 ---
 date: 2024-09-12
-updated: 2024-10-05
+updated: 2025-04-13
+tags:
+  - cs/web
 ---
-# Internet-Related Programming Overview
 
 This overview provides a summary of various protocols and methods used in internet-related programming. Each method is detailed in separate notes linked below.
 
@@ -17,6 +18,7 @@ This overview provides a summary of various protocols and methods used in intern
 ---
 
 ### HTTP Requests
+
 HTTP (Hypertext Transfer Protocol) is essential for data communication on the web.
 
 - [Python: `requests` library](HTTP Requests#Python)
@@ -27,6 +29,7 @@ HTTP (Hypertext Transfer Protocol) is essential for data communication on the we
 ---
 
 ### WebSockets
+
 WebSockets provide full-duplex communication over a single TCP connection.
 
 - [JavaScript: WebSocket API](WebSockets.md#JavaScript)
@@ -36,6 +39,7 @@ WebSockets provide full-duplex communication over a single TCP connection.
 ---
 
 ### SSH
+
 SSH is used for secure connections to remote servers.
 
 - [Python: `paramiko` library](SSH.md#Python)
@@ -44,6 +48,7 @@ SSH is used for secure connections to remote servers.
 ---
 
 ### Sockets
+
 Sockets allow for low-level network communication.
 
 - [Python: `socket` library](Sockets.md#Python)
@@ -52,6 +57,7 @@ Sockets allow for low-level network communication.
 ---
 
 ### Other Protocols
+
 Other useful protocols for various purposes.
 
 - [FTP: File Transfer Protocol](Other Protocols#FTP)

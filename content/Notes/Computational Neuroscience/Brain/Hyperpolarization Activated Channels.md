@@ -1,9 +1,8 @@
 ---
-date: 2025-04-11
+date: 2025-04-14
 updated: 2025-04-14
 tags:
-  - neuroscience/neurons
   - biology
   - todo/neuro
 ---
-  
+   

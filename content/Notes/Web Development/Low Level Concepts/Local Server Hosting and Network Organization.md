@@ -1,9 +1,10 @@
 ---
 id: Local Server Hosting and Network Organization
 aliases: 
-tags: 
+tags:
+  - cs/web
 date: 2024-09-12
-updated: 2024-10-05
+updated: 2025-04-13
 ---
 
 ## Local Server Hosting
@@ -31,7 +32,7 @@ python3 -m http.server 8000
 
 4. **Access the server**: Open a browser and navigate to `http://<your-local-ip>:8000`.
 
-### [[SSH]] into Your Local Server
+### [[SSH]] Into Your Local Server
 
 #### Ensure SSH Server is Running
 
@@ -151,7 +152,7 @@ sudo tcpdump -i eth0
 
 ### Advanced Topics
 
-#### HTTP/2 and HTTP/3
+#### HTTP/2 And HTTP/3
 
 - **HTTP/2**: Multiplexing, header compression, efficient use of resources.
 - **HTTP/3**: Based on QUIC, reduced latency, improved security.

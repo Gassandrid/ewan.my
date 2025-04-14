@@ -1,6 +1,6 @@
 ---
 id: Firing Rate Approximation
-aliases: 
+aliases: []
 tags:
   - neuroscience
   - cs/python
@@ -14,6 +14,7 @@ This serves as a simple notebook for implementing the different kinds of Firing 
 In most cases you would be doing this for multiple [[Neuron]]s, but here we will just do one like the Textbook's figures.
 
 **Module Imports:**
+
 ```python-r
 import numpy as np
 import pandas as pd
@@ -193,7 +194,7 @@ def extract_spike_times(data, neuron_idx):
 def gaussian_sliding_rate(spike_times, eval_times, sigma):
     rate = np.zeros_like(eval_times, dtype=float)
     norm_factor = 1 / (sigma * np.sqrt(2 * np.pi))
-    
+
     for i, t in enumerate(eval_times):
         rate[i] = np.sum(norm_factor * np.exp(-0.5 * ((t - spike_times) / sigma)**2))
 
@@ -215,3 +216,10 @@ plt.grid(True)
 plt.show()
 ```
 
+---
+
+## Half Window Gaussian
+
+For biological neurons, however, the firing rate is not symmetric around the spike time. The firing rate is often higher before the spike than after it. This is due to the refractory period of the neuron, which is a period of time after a spike during which the neuron is less likely to fire again.
+
+Not to mention, neurons can only utilize spikes that have happened before the current time, so we need to take that into account as well

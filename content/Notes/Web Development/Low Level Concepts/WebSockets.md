@@ -1,13 +1,16 @@
 ---
 date: 2024-09-12
-updated: 2024-10-05
+updated: 2025-04-13
+tags:
+  - cs/web
 ---
-# WebSockets
 
 WebSockets provide a full-duplex communication channel over a single TCP connection, allowing real-time interaction between a client and a server.
 
 ## JavaScript
+
 Using the WebSocket API:
+
 ```javascript
 let socket = new WebSocket("ws://example.com/socket");
 
