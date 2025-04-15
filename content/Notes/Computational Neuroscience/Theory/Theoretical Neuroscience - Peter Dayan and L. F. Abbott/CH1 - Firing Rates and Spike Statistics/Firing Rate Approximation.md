@@ -6,7 +6,7 @@ tags:
   - cs/python
   - todo
 date: 2025-04-11
-updated: 2025-04-13
+updated: 2025-04-15
 ---
 
 This serves as a simple notebook for implementing the different kinds of Firing Rate Approximation Functions as defined in [[1.2 - Spike Trains and Firing Rates]].
@@ -181,7 +181,7 @@ The next step after this is quite clear - the sliding window provides the precis
 For our Gaussian Kernel, we will use the following formula:
 
 $$
-r(t) = \sum_{i} \frac{1}{\sqrt{ 2\pi }\sigma} \exp\left( - \frac{(t-t_{i})^2}{2\sigma^2} \right)
+r(t) = \sum_{i} \frac{1}{\sqrt{ 2\pi }\sigma} \exp\left( - \frac{(t-t_{i})^2}{2\sigma^2} \right) 
 $$
 
 ```python-r
@@ -218,8 +218,53 @@ plt.show()
 
 ---
 
-## Half Window Gaussian
+## Causal Window Function
 
 For biological neurons, however, the firing rate is not symmetric around the spike time. The firing rate is often higher before the spike than after it. This is due to the refractory period of the neuron, which is a period of time after a spike during which the neuron is less likely to fire again.
 
-Not to mention, neurons can only utilize spikes that have happened before the current time, so we need to take that into account as well
+A postsynaptic neuron monitoring the spike train of a presynaptic cell has access only to spikes that have previously occurred. Therefore, an approximation of the firing rate at a given time should use a window function that "vanishes" when its argument is negative. We call this window function a **causal**.
+
+For this, we will use one called the $\alpha$ function:
+
+$$
+w(\tau) = [\alpha^{2} \tau \exp(-\alpha \tau)]_{+}
+$$
+
+Where the $[]_{+}$ notation represents the half-wave rectification operation, aka only positives:
+
+$$
+[z]_{+}= \begin{cases}
+z & if \ z \geq 0 \\ \\
+0 & otherwise
+\end{cases}
+$$
+
+```python-r
+def alpha_sliding_rate(spike_times, eval_times, alpha):
+    rate = np.zeros_like(eval_times, dtype=float)
+
+    for i, t in enumerate(eval_times):
+        tau = t - spike_times
+        valid = tau >= 0  # causal: only consider past spikes
+        tau = tau[valid]
+        rate[i] = np.sum(alpha**2 * tau * np.exp(-alpha * tau))
+
+    return rate
+	
+alpha = 30
+plt.figure(figsize=(6, 2))
+
+for i in range(min(5, num_neurons)):
+    spike_times = extract_spike_times(data, i)
+    eval_times = np.arange(0, duration, dt)
+    rate = alpha_sliding_rate(spike_times, eval_times, alpha)
+    plt.plot(eval_times, rate, label=f'Neuron {i}')
+
+plt.xlabel('Time (s)')
+plt.ylabel('Firing Rate (AU)')
+plt.title(f'Causal Sliding Window (Alpha Function), α = {alpha}')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
