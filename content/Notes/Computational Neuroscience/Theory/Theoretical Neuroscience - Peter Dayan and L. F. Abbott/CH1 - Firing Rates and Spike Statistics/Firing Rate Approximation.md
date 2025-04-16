@@ -1,10 +1,9 @@
 ---
 id: Firing Rate Approximation
-aliases: []
+aliases: 
 tags:
   - neuroscience
   - cs/python
-  - todo
 date: 2025-04-11
 updated: 2025-04-15
 ---
@@ -268,3 +267,4 @@ plt.grid(True)
 plt.show()
 ```
 
+You will note that this tends to peak later than the previous approximations when a temporally symmetric window function is used.

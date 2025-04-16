@@ -1,0 +1,5 @@
+---
+date: 2025-04-16
+updated: 2025-04-16
+---
+**Although the Biden Administration had engaged internationally on issues of climate change, the first Trump Administration vacated the important U.S. role in advancing measures to deal with climate change.  Statements by President Trump on social media and media reports indicate the second Trump Administration will take a tack on this important manner similar to that of the first Trump Administration.  Meanwhile, the People's Republic is increasingly playing a leadership role on the international stage in moving international cooperation in dealing with climate change forward.  China has taken important steps to develop its non-fossil fuel sectors of its energy economy, and its leadership recognizes that the astounding economic development that has propelled China forward has also resulted in significant environmental problems.  What do you think, is it likely that China will be able to accomplish its sustainability goals nationally and internationally without fully allowing information critical of state-owned industries and government leaders to circulate freely on the Internet?**
