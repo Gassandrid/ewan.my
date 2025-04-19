@@ -9,7 +9,6 @@ const Cv: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
   return (
     <div class={classNames(displayClass, "cv")}>
       <a href="https://cv.ewan.my" class="toggle" tabIndex={-1}>
-        :
         <label for="darkmode-toggle" tabIndex={-1}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
