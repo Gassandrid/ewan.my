@@ -5,8 +5,8 @@ tags:
   - artem-kirsanov
   - todo/neuro
 date: 2024-10-28
-updated: 2025-04-14
-title: Differential Equations in Neuroscience
+updated: 2025-04-22
+fileClass: transcript
 ---
 *study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)* 
  

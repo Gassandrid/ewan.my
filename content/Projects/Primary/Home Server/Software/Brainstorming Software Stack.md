@@ -1,13 +1,16 @@
 ---
 date: 2025-01-02
-updated: 2025-02-21
+updated: 2025-04-18
 tags:
   - cs
   - projects/homelab/software
 type: project
 title: Brainstorming Software Stack
 ---
- 
+
+ Found a great list of usefull software services to run:
+
+ https://github.com/TechHutTV/homelab
 
 Looking for a general purpose Linux sandbox hosting environment, containers,
 

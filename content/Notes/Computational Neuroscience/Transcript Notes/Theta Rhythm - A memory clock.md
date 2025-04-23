@@ -6,7 +6,8 @@ tags:
   - artem-kirsanov
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-04-10
+updated: 2025-04-22
+fileClass: transcript
 ---
 
 _study notes for a [[Artem Kirsanov]] [video](https://youtu.be/5CxSoFK5tOQ?si=xNx2_g403li49K1i)_.
