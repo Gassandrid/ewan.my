@@ -1,6 +1,6 @@
 ---
 date: 2025-04-19
-updated: 2025-04-19
+updated: 2025-04-24
 tags:
   - projects/homelab
 ---
@@ -42,3 +42,4 @@ from a [reddit post](https://www.reddit.com/r/homelab/comments/1jzx5gq/what_do_y
 another youtube video I found that might be nice for 3d printing a rack:
 
 https://youtu.be/5E0M4s17r-U?si=IW4Q_g8fqnQG_7CR
+

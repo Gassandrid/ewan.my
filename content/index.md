@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-04-14
+updated: 2025-04-23
 fileClass: navigation
 ---
 
@@ -128,8 +128,13 @@ Investing in 3d printing and such, liking the idea of bringing the open-source/d
 
 ## Current Projects 💾
 
-**[[Migrating my Quartz, DARS, and media to one big Homelab Server|Homelab]]** - an evolution of [[DARS]] that interfaces the llm bindings I developed to control all my self hosted services in addition to my room.
+**Youtube Videos** - Using MANIM
 
+While notes are great, nothing gets concepts across like animated videos, and [[3Blue1Brown]]'s are known to be some of the best for learning mathematics. I am now using his [[Manim]] library to create my own for the basics of [[Computational Neuroscience]].
+
+**[[Migrating my Quartz, DARS, and media to one big Homelab Server|Homelab]] - a bunch of old computers clustered together**
+
+An evolution of [[DARS]] that interfaces the llm bindings I developed to control all my self hosted services in addition to my room.
 
 **[[DARS]] - Dormitory Automated Residential System**
 

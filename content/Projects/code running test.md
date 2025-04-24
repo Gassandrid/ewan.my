@@ -1,6 +1,6 @@
 ---
 date: 2024-12-10
-updated: 2025-04-08
+updated: 2025-04-24
 title: code running test
 password: testing
 ---
@@ -112,6 +112,44 @@ except Exception as e:
 ---
 
 ## Animate and 3d Tests
+
+3d:
+
+```python-r
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+
+# Create grid
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+x, y = np.meshgrid(x, y)
+
+# Bowl shape (z = x^2 + y^2)
+z = x**2 + y**2
+
+# Create figure
+fig = plt.figure()
+ax = fig.add_subplot(111, projection="3d")
+
+# Plot contour map
+contour = ax.contour(x, y, z, levels=[5, 10, 15, 20, 25], cmap="viridis", extend3d=True)
+ax.clabel(contour, inline=True, fontsize=10)
+
+# Set labels
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+
+# Add title
+ax.set_title("3D Contour Map of Bowl Shape")
+
+# Show plot
+plt.show()
+```
+
+
+3d + animated:
 
 ```python-r
 import numpy as np
