@@ -142,7 +142,7 @@ A model replica of TARS from interstellar, built for the purpose of mapping natu
 
 ## About Me ⛵️
 
-Outside of Computer Science, my main interests are [[Sailing]], [[Health]], and [[Woodwork]].
+Outside of Computer Science, my main interests are [[Sailing]], [[Health|Fitness/Health]], and [[Woodwork]].
 
 Recently have picked up a habit of [[On Touch Typing]], and have quickly become addicted [MonkeyType](https://monkeytype.com/profile/Gassandrid), currently at 181 words per minute!
 
