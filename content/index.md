@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-04-23
+updated: 2025-04-28
 fileClass: navigation
 ---
 
@@ -142,7 +142,7 @@ A model replica of TARS from interstellar, built for the purpose of mapping natu
 
 ## About Me ⛵️
 
-Outside of Computer Science, my main interests are [[Sailing]], [[Health|Health/Fitness]], and [[Woodwork]]/Engineering
+Outside of Computer Science, my main interests are [[Sailing]], [[Health]], and [[Woodwork]].
 
 Recently have picked up a habit of [[On Touch Typing]], and have quickly become addicted [MonkeyType](https://monkeytype.com/profile/Gassandrid), currently at 181 words per minute!
 
