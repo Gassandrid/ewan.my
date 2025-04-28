@@ -1,6 +1,6 @@
 ---
 date: 2024-12-06
-updated: 2025-02-12
+updated: 2025-04-26
 tags:
   - seed
   - todo
@@ -11,6 +11,6 @@ title: Axel Pedersen - In Memoriam
 
 ---
 
-## An Eccentric Life
+My Grandfather was quite the character. He was quite the character and rather eccentric, but also one of the smartest men I have known. 
 
-My grandfather,
+He was a hoarder, and had enough coffee mate in his flat to last him several decades.

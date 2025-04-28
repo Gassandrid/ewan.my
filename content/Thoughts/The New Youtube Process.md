@@ -1,8 +1,9 @@
 ---
 date: 2025-04-13
-updated: 2025-04-13
+updated: 2025-04-25
 tags:
   - seed
+  - youtube
 ---
 
 I have been thinking about how I can amplify my learning, especially in cases where I dont really feel like learning. I have already taken quite a bit of action to "train" my youtube feed to be productive, and this has actually worked quite well.
