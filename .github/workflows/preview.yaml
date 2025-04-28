@@ -1,0 +1,46 @@
+name: Build Preview Deployment
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch:
+
+jobs:
+  build-preview:
+    if: ${{ github.repository == 'jackyzha0/quartz' }}
+    runs-on: ubuntu-latest
+    name: Build Preview
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+
+      - name: Check types and style
+        run: npm run check
+
+      - name: Build Quartz
+        run: npx quartz build -d docs -v
+
+      - name: Publish to Cloudflare Pages
+        uses: AdrianGonz97/refined-cf-pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: quartz
+          directory: public
