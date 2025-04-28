@@ -3,9 +3,9 @@ id: Types Of Models
 aliases: 
 tags: 
 date: 2024-09-12
-updated: 2024-10-22
+updated: 2025-04-28
 ---
-[]()
+
 ### 1. **Supervised Learning Models**
 
 - **Overview:**
@@ -113,7 +113,7 @@ updated: 2024-10-22
   - **VGG:** Known for its simplicity and effectiveness.
   - **ResNet:** Introduces skip connections to address the vanishing gradient problem.
 
-### 10. **Advanced and Emerging Models**
+### 10. **Advanced And Emerging Models**
 
 - **Diffusion Models:**
   - Overview: Generate data by learning to reverse a process that gradually adds noise to data.

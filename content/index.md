@@ -136,7 +136,7 @@ While notes are great, nothing gets concepts across like animated videos, and [[
 
 An evolution of [[DARS]] that interfaces the llm bindings I developed to control all my self hosted services in addition to my room.
 
-**[[DARS]] - Dormitory Automated Residential System**
+ [[DARS]] - **Dormitory Automated Residential System**
 
 A model replica of TARS from interstellar, built for the purpose of mapping natural human language to discrete functional output through the use of LLM's and microcontrollers.
 
