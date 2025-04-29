@@ -2,8 +2,7 @@
 date: 2024-09-12
 tags:
   - cs/web
-  - todo
-updated: 2025-04-25
+updated: 2025-04-28
 ---
 
 *this information comes from [this video](https://www.youtube.com/watch?v=D26sUZ6DHNQ)*
@@ -68,8 +67,38 @@ It starts with the creation of a **listening socket**, which gets bound to a spe
 
 Once A client initiates a connection, the server accepts and creates a new socket instance dedicated to that client. The origional listening socket goes back to listening for requests.
 
-![[Screenshot 2025-04-25 at 4.15.32 PM.png]]
+![[Screenshot 2025-04-25 at 4.15.32 PM.png]] ^475fe5
 
 The new socket on the other hand becomes the channel for all communication with that specific client. This enables the server to handle multiple different clients concurrently, each with its own socket. This can be accomplished with multithreading in **synchronous** setups, where each client is handled by a thread or process, however this does not scale well.
 
-For high performance systems like **API**s or Game Servers,
+For high performance systems like **API**s or Game Servers, this limitation can be minimized by using techniques such as **Non-Blocking IO** or **even-driven architectures**. This allows a single thread or several to manage thousands of open sockets concurrently. Usually this is done with the system calls **Select, poll, or epoll(more performant)**.
+
+Event notification mechanisms are much more performant and drastically reduce CPU usage and latency. This approach is used by NGinx, node, etc.
+
+Returning to the [[Sockets#^475fe5|above]] diagram, the client connects to the server and iniates a connection to the servers IP and Port. If we are using the TCP method, it initiates the 3 way handshake, and once connected the client can read and write as if working with a file. In fact for Unix systems, sockets are treated as *file descriptors*, meaning they can be used with the most common syscalls like *read* and *write*. 
+
+After the communication is completed, both the server and client are expected to close their connection. If not closed properly, it will unnecessarily expend computer resources.
+
+Sockets are differentiated by a 5 tuple:
+
+![[Screenshot 2025-04-28 at 3.34.03 PM.png]]
+
+This complexity ensures no duplicate sockets, and allows for two machine to have multiple connections over the same port. (eg, multiple connections on one machine to example.com)
+
+---
+
+## Unix Domain Sockets (UDS)
+
+These are not network sockets. They are solely used for inter-process communication and not exposed by an IP and PORT.
+
+Instead, UDS utilizes a file path on the file system as the address (eg /tmp/app.sock as address).
+
+They are much faster than network sockets as they lack the overhead associated with networking and ip routing. Many popular speed-oriented services like **Postgres** and **Redis** default to UDS if possible, where performance is critical.
+
+---
+
+Sockets are everywhere, and used in practically everything we know of.
+
+While can be used for intra-machine communication, they are primarily used over the HTTP protocol.
+
+This doesn't mean that this is the only way to use sockets to send data( you could just send the raw data over local network, depending on how safe you think it is ), but the http protocol is well established and easier to work with.
