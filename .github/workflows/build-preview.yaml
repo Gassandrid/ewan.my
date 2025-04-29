@@ -36,11 +36,8 @@ jobs:
       - name: Build Quartz
         run: npx quartz build -d docs -v
 
-      - name: Publish to Cloudflare Pages
-        uses: AdrianGonz97/refined-cf-pages-action@v1
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: quartz
-          directory: public
+          name: preview-build
+          path: public
