@@ -72,7 +72,7 @@ sys.stderr = io.StringIO()
 
                   // common packages
                   console.log('Loading common Python packages...');
-                  await pyodideInstance.loadPackage(['matplotlib', 'numpy', 'pandas', 'scipy', 'sympy', 'scikit-learn', 'seaborn', 'torch']);
+                  await pyodideInstance.loadPackage(['matplotlib', 'numpy', 'pandas', 'scipy', 'sympy', 'scikit-learn']);
                   console.log('Common packages loaded.');
 
                   console.log('Setting up global stdout/stderr redirection...');
