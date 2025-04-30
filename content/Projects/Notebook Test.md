@@ -1,6 +1,6 @@
 ---
 date: 2025-04-07
-updated: 2025-04-07
+updated: 2025-04-30
 tags:
   - generated
 ---
@@ -30,7 +30,7 @@ Importing:
 import pandas as pd
 from pyodide.http import open_url
 
-url = "https://gassandrid.xyz/datasets/housing.csv"
+url = "https://ewan.my/datasets/housing.csv"
 
 df = pd.read_csv(open_url(url))
 ```
