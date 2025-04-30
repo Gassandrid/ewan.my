@@ -1,8 +1,9 @@
 ---
 id: Markov Chains Explained - 1
-aliases: []
+aliases: 
 tags:
   - math/linear-algebra
+  - youtube
 date: 2025-04-29
 fileClass: transcript
 updated: 2025-04-30
@@ -188,3 +189,64 @@ $$
 
 We have extracted the second row of the transition matrix, which happens to represent the probabilities of future foods given it is a pizza day.
 
+Now, if you take this resulting value and put it in the place of the initial $\pi_{0}$ matrix:
+
+$$
+\pi_{1}A = \begin{bmatrix}
+0.3 & 0 & 0.7
+\end{bmatrix} \begin{bmatrix}
+0.2 & 0.6 & 0.2 \\
+0.3 & 0 & 0.7 \\
+0.5 & 0 & 0.5
+\end{bmatrix} = \begin{bmatrix}
+0.41 & 0.18 & 0.41
+\end{bmatrix}
+$$
+
+We get this new interesting value. What does it mean? Let's repeat this a few more time for the next few iterations of $\pi$:
+
+$$
+\pi_{2}A = \begin{bmatrix}
+0.41 & 0.18 & 0.41
+\end{bmatrix} \begin{bmatrix}
+0.2 & 0.6 & 0.2 \\
+0.3 & 0 & 0.7 \\
+0.5 & 0 & 0.5
+\end{bmatrix} = \begin{bmatrix}
+0.34 & 0.25 & 0.41
+\end{bmatrix}
+$$
+
+Notice how this seems to be getting closer and closer to the **stationary state**? Thats because it is! 
+
+If there exists a stationary state for this initial choice, then after repeating the process several times, the resultant matrix will converge on a stationary value. Eventually, the output vector will be **identical** to the input vector.
+
+Denoting this special row vector as $\pi$ we can write(for a converging stationary state):
+
+$$
+\pi A = \pi
+$$
+
+As Linear Algebra students, we will recognize this as similar to the *eigenvector equation*:
+
+$$
+Av=\lambda v
+$$
+
+Just by considering $\lambda=1$ and reversing the order of multiplication, we get our **equilibrium state equation**.
+
+How do we interpret this? **We imagine $\pi$ is a left eigenvector of matrix $A$**, with the eigenvalue equal to 1.
+
+The eigenvector in this approach must also satisfy another condition: the elements of $\pi$ must add up to 1( as it is a probability distribution ).
+
+$$
+\pi[1] + \pi[2] + \pi[3] = 1
+$$
+
+After solving these two equation, we are left with the finalized **stationary state**:
+
+$$
+\pi = \begin{bmatrix}
+\frac{25}{71} & \frac{15}{71} & \frac{31}{71}
+\end{bmatrix}
+$$
