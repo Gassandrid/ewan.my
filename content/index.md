@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-04-28
+updated: 2025-05-01
 fileClass: navigation
 ---
 
@@ -110,19 +110,19 @@ fileClass: navigation
 
 # Hello! My name is Ewan
 
-You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work! Either way, welcome to my digital garden!
+You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work. Either way, welcome to my digital garden.
 
 I’m a second-year Computer Science student at the [[University Of Vermont]] with a growing passion for [[Computational Neuroscience]], [[Artificial Intelligence]], and [[Mathematics]]. I love exploring how brains and machines overlap, and I’m also into tinkering with hardware—things like embedded systems, robotics, and anything that involves code meeting the physical world.
 
 ## Thoughts 🏡
 
-I have recently been finding peace by spending my time studying the biological side of **neuroscience**, the brain is quite an interesting system! As far as theory goes I am really interested in [[Theta Rhythm - A memory clock|theta rhythm]] at the moment.
+I have recently been finding peace by spending my time studying the biological side of **neuroscience**, the brain is quite an interesting system. As far as theory goes I am really interested in [[Theta Rhythm - A memory clock|theta rhythm]] at the moment.
 
 I am really liking the german word *waldeinsamkeit*
 
 Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering.
 
-*give this song a listen to!*
+*give this song a listen to*
 
 ![[Daft Punk - Veridis Quo.mp3]]
 

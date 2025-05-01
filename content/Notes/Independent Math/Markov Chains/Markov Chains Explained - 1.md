@@ -6,7 +6,7 @@ tags:
   - youtube
 date: 2025-04-29
 fileClass: transcript
-updated: 2025-04-30
+updated: 2025-05-01
 ---
 
 _for a [Normalized Nerd](https://youtu.be/i3AkTO9HLXo?si=0HlExQr2nVNWsNEG) video_
