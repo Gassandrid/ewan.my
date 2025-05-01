@@ -3,7 +3,8 @@ import { Root } from "mdast"
 import { visit } from "unist-util-visit"
 
 let blockCounter = 0
-const generateBlockId = () => `py-block-${blockCounter++}`
+const generateBlockId = () =>
+  `py-block-${Date.now().toString(36)}-${Math.random().toString(36).substring(2, 10)}`
 
 export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
   name: "RunPythonPlugin",
