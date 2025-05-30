@@ -144,7 +144,7 @@ def get_file_history(file_path, days=None):
 def calculate_daily_word_counts(days=None):
     """Calculate how many words were written per day based on git history."""
     tracked_files = get_git_tracked_markdown_files()
-    daily_deltas = defaultdict(int)
+    daily_stats = {}
     file_histories = {}
     
     print(f"Analyzing {len(tracked_files)} markdown files tracked by git...")
@@ -164,17 +164,47 @@ def calculate_daily_word_counts(days=None):
             newer_commit = history[j]
             older_commit = history[j + 1]
             
+            # Get commit info
+            commit_hash, commit_date, new_word_count = newer_commit
+            _, _, old_word_count = older_commit
+            
             # Only count positive changes (words added)
-            word_delta = max(0, newer_commit[2] - older_commit[2])
+            word_delta = max(0, new_word_count - old_word_count)
             if word_delta > 0:
-                daily_deltas[newer_commit[1]] += word_delta
+                # Initialize daily stats if this is the first entry for this day
+                if commit_date not in daily_stats:
+                    daily_stats[commit_date] = {
+                        'total_words': 0,
+                        'files': {},
+                        'commits': set(),
+                        'largest_file': ('', 0),
+                        'most_improved_file': ('', 0),
+                    }
+                
+                # Update daily stats
+                daily_stats[commit_date]['total_words'] += word_delta
+                daily_stats[commit_date]['commits'].add(commit_hash)
+                
+                # Track per-file contributions
+                if file_path not in daily_stats[commit_date]['files']:
+                    daily_stats[commit_date]['files'][file_path] = 0
+                daily_stats[commit_date]['files'][file_path] += word_delta
+                
+                # Update largest file if needed
+                if daily_stats[commit_date]['files'][file_path] > daily_stats[commit_date]['most_improved_file'][1]:
+                    daily_stats[commit_date]['most_improved_file'] = (file_path, daily_stats[commit_date]['files'][file_path])
     
-    return daily_deltas, file_histories
+    # Create a simple version with just total counts for backward compatibility
+    daily_deltas = {date: stats['total_words'] for date, stats in daily_stats.items()}
+    
+    return daily_deltas, daily_stats, file_histories
 
 def main():
     parser = argparse.ArgumentParser(description='Calculate words written in markdown files using git history.')
     parser.add_argument('--days', type=int, help='Number of days to look back in history')
     parser.add_argument('--current', action='store_true', help='Display current word count summary')
+    parser.add_argument('--detail', action='store_true', help='Show detailed file breakdown for each day')
+    parser.add_argument('--top', type=int, default=3, help='Number of files to show in detailed view (default: 3)')
     args = parser.parse_args()
 
     if args.current:
@@ -197,35 +227,81 @@ def main():
     
     # Calculate daily word counts based on git history
     print("\n=== Daily Writing Statistics ===")
-    daily_deltas, _ = calculate_daily_word_counts(args.days)
+    daily_deltas, daily_stats, _ = calculate_daily_word_counts(args.days)
     
     if not daily_deltas:
         print("\nNo word count changes found in git history.")
         return
         
     # Sort by date
-    sorted_days = sorted(daily_deltas.keys(), key=lambda x: date_parser.parse(x), reverse=True)
+    sorted_days = sorted(daily_stats.keys(), key=lambda x: date_parser.parse(x), reverse=True)
     
     # Calculate totals
     total_days = len(sorted_days)
     total_added = sum(daily_deltas.values())
     avg_per_day = total_added / total_days if total_days > 0 else 0
     
+    # Calculate unique files modified across all days
+    all_files = set()
+    for day in sorted_days:
+        all_files.update(daily_stats[day]['files'].keys())
+    
     # Print results
     print(f"\nAnalyzed period: {sorted_days[-1]} to {sorted_days[0]} ({total_days} days)")
     print(f"Total words written: {total_added:,}")
     print(f"Average words per day: {avg_per_day:,.1f}")
+    print(f"Total unique files modified: {len(all_files)}")
+    
+    # Find most productive day
+    most_productive = max(sorted_days, key=lambda x: daily_stats[x]['total_words']) if sorted_days else None
+    if most_productive:
+        print(f"Most productive day: {most_productive} with {daily_stats[most_productive]['total_words']:,} words")
+    
+    # Find day with most files edited
+    if sorted_days:
+        most_files_day = max(sorted_days, key=lambda x: len(daily_stats[x]['files']))
+        print(f"Day with most files edited: {most_files_day} ({len(daily_stats[most_files_day]['files'])} files)")
     
     print("\nDaily breakdown:")
     print("----------------")
     for day in sorted_days:
-        print(f"{day}: {daily_deltas[day]:,} words")
-    
-    # Find most productive day
-    if sorted_days:
-        most_productive = max(sorted_days, key=lambda x: daily_deltas[x])
-        print(f"\nMost productive day: {most_productive} with {daily_deltas[most_productive]:,} words")
+        stats = daily_stats[day]
+        print(f"\n{day}: {stats['total_words']:,} words across {len(stats['files'])} files ({len(stats['commits'])} commits)")
+        
+        if args.detail:
+            # Show the top files by word count for this day
+            sorted_files = sorted(stats['files'].items(), key=lambda x: x[1], reverse=True)
+            print(f"  Top {min(args.top, len(sorted_files))} files:")
+            for file_path, count in sorted_files[:args.top]:
+                # Shorten file path for display if it's very long
+                display_path = file_path
+                if len(display_path) > 60:
+                    display_path = "..." + display_path[-57:]
+                print(f"    {count:,} words: {display_path}")
+
+def print_help():
+    """Print a help message with usage examples."""
+    print("""
+Usage examples:
+--------------
+# Get daily word counts for all time:
+python totalWordsWritten.py
+
+# Get daily word counts for the last 30 days:
+python totalWordsWritten.py --days 30
+
+# Get daily word counts with detailed file breakdown:
+python totalWordsWritten.py --detail
+
+# Show current word count summary along with daily statistics:
+python totalWordsWritten.py --current
+
+# Show detailed breakdown with customized number of files:
+python totalWordsWritten.py --detail --top 5
+""")
 
 if __name__ == "__main__":
     main()
+    # Uncomment the following line to show help message at the end
+    # print_help()
 

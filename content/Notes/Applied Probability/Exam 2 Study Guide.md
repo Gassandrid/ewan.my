@@ -1,6 +1,6 @@
 ---
 date: 2025-03-03
-updated: 2025-03-05
+updated: 2025-05-07
 title: Exam 2 Study Guide
 tags:
   - generated
@@ -72,24 +72,3 @@ For the Exam on Wednesday, March 5.
 - Work with joint and conditional probabilities.
 - Familiarize yourself with expectation and variance calculations.
 - Use properties of independence and covariance to simplify problems.
-
-
-```mermaid
-stateDiagram
-    [*] --> NULL: Start
-    NULL --> ID: SELECT let go
-    ID --> NULL: SELECT held for one second
-    NULL --> YSM: Accounts exist
-    NULL --> [*]: No accounts stored
-
-    YSM --> PEN: RIGHT Pressed
-    PEN --> MSM: RIGHT Pressed
-    MSM --> TAX: RIGHT Pressed
-    TAX --> MPC: RIGHT Pressed
-
-    PEN --> YSM: LEFT Pressed
-    MSM --> PEN: LEFT Pressed
-    TAX --> MSM: LEFT Pressed
-    MPC --> TAX: LEFT Pressed
-```
-

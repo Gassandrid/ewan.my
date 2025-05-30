@@ -11,13 +11,13 @@ updated: 2025-05-01
 
 _for a [Normalized Nerd](https://youtu.be/i3AkTO9HLXo?si=0HlExQr2nVNWsNEG) video_
 
-Markhov chains are used for everything - statistics, biology, and machine learning of course. They allow for some very interesting probability theory.
+Markov chains are used for everything - statistics, biology, and machine learning of course. They allow for some very interesting probability theory.
 
 Let's start with an example.
 
 ---
 
-Imagine there is a restaurant that serves 3 different kinds of foods: **burger**, **pizza**, and **hotdog**. However, they have a weird rule where they only serve one of these 3 items on any given day. And, it depends what they served yesterday.
+Imagine there is a restaurant that serves 3 different kinds of foods: **burger**, **pizza**, and **hot-dog**. However, they have a weird rule where they only serve one of these 3 items on any given day. And, it depends on what they served yesterday.
 
 Essentially, if you know the probabilities and what they served today, you could predict what they will serve tomorrow.
 
@@ -123,9 +123,9 @@ Running this, we find that the items converge to some interesting and quite spec
 
 $$
 \begin{align*}
-P(burger): 0.3502 \\
-P(pizza): 0.2109 \\
-P(hotdog): 0.4389 \\
+P(burger): 0.3521 \\
+P(pizza): 0.2112 \\
+P(hotdog): 0.4366 \\
 \end{align*}
 $$
 
@@ -251,4 +251,14 @@ $$
 \end{bmatrix}
 $$
 
-why
+Converting to decimal:
+
+$$
+\pi = \begin{bmatrix}
+0.35211 & 0.21127 & 0.43662
+\end{bmatrix}
+$$
+
+Very similar to our brute force approach!
+
+Using this technique, we can also find out if there are **more than one** stationary state. This can be done, as you might expect, by finding out if there exists any more than one eigenvectors! Very nice.

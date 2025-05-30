@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-05-01
+updated: 2025-05-14
 fileClass: navigation
 ---
 
@@ -116,9 +116,7 @@ I’m a second-year Computer Science student at the [[University Of Vermont]] wi
 
 ## Thoughts 🏡
 
-I have recently been finding peace by spending my time studying the biological side of **neuroscience**, the brain is quite an interesting system. As far as theory goes I am really interested in [[Theta Rhythm - A memory clock|theta rhythm]] at the moment.
-
-I am really liking the german word *waldeinsamkeit*
+Currently reading **Gödel, Escher, Bach**. But for more textbook reading I am currently studying [[Theoretical Neuroscience Textbook|Theoretical Neuroscience by Peter Dayan and L. F. Abbott]].
 
 Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering.
 

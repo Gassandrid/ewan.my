@@ -1,7 +1,7 @@
 ---
 fileClass: note
 date: 2025-04-23
-updated: 2025-04-25
+updated: 2025-05-08
 tags:
   - statistics/applied-probability
 ---
@@ -44,6 +44,35 @@ $$
 E(X \mid Y) = \int_{-\infty}^\infty x f_{X \mid Y}(x \mid y) \ dx
 $$
 
+We are also given some new **Key Properties:**
+
+- **Linearity:**  
+
+  $$
+    E\bigl[aX + bZ \mid Y\bigr]
+    =a\,E[X\mid Y]+b\,E[Z\mid Y].
+  $$
+
+- **Tower Law (Iterated Expectation):**  
+
+$$
+   E\bigl[E[X\mid Y]\bigr]
+   =E[X].
+$$
+
+- **Taking Out What’s Known:**  
+  If $g$ is a function of $Y$, then  
+
+  $$
+    E\bigl[g(Y)\,X \mid Y\bigr]
+    =g(Y)\,E[X\mid Y].
+  $$
+
+- **Non‐negativity:**  
+  If $X\ge0$ almost surely, then $E[X\mid Y]\ge0$ almost surely.
+
+---
+
 > [!Example]
 > Let $x$ and $y$ have a joint uniform distribution on the triangle with corners $(0,2),(2,0)$ and the origin.
 
@@ -80,3 +109,32 @@ Now we want the **total duration:**
 $$
 Y = X_{1} + X_{2} \to Y
 $$
+
+---
+
+> **Solution:**  
+>-  Joint density:  
+>
+>   $\displaystyle f_{X_1,X_2}(x_1,x_2)=\lambda^2e^{-\lambda(x_1+x_2)}.$  
+>
+>- Sum density (Erlang–2):  
+>
+>   $\displaystyle f_Y(y)=\lambda^2\,y\,e^{-\lambda y}.$  
+>
+>- Conditional density:  
+>
+>   $\displaystyle f_{X_1\mid Y}(x_1\mid y)=\frac{\lambda^2e^{-\lambda y}}{\lambda^2y\,e^{-\lambda y}} >   =\frac1y,\;0<x_1<y.$
+>
+>- Hence  
+>
+> $$
+
+      E[X_1\mid Y=y]
+      =\int_{0}^{y}x_1\,\frac1y\,dx_1
+      =\frac y2,
+
+ $$
+>
+>   so $E[X_1\mid Y=38]=19$ min.
+
+

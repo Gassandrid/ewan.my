@@ -3,7 +3,7 @@ id: CH 43 - Moment Generating Functions
 aliases: []
 tags: []
 date: 2025-04-07
-updated: 2025-04-11
+updated: 2025-05-22
 ---
 
 > [!Abstract] Definition for a Generation Function
@@ -124,4 +124,5 @@ P(X \geq 10) &= 1 - P(X \leq 9)\\
 &\approx 0.2798
 \end{align*}
 $$
+
 
