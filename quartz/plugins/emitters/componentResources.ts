@@ -128,14 +128,8 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       const umamiScript = document.createElement("script");
       umamiScript.src = "${cfg.analytics.host ?? "https://analytics.umami.is"}/script.js";
       umamiScript.setAttribute("data-website-id", "${cfg.analytics.websiteId}");
-      umamiScript.setAttribute("data-auto-track", "false");
+      umamiScript.setAttribute("data-auto-track", "true");
       umamiScript.defer = true;
-      umamiScript.onload = () => {
-        umami.track();
-        document.addEventListener("nav", () => {
-          umami.track();
-        });
-      };
 
       document.head.appendChild(umamiScript);
     `)
@@ -165,14 +159,10 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       posthog.init('${cfg.analytics.apiKey}', {
         api_host: '${cfg.analytics.host ?? "https://app.posthog.com"}',
         capture_pageview: false,
-      })\`
-      posthogScript.onload = () => {
+      });
+      document.addEventListener('nav', () => {
         posthog.capture('$pageview', { path: location.pathname });
-      
-        document.addEventListener('nav', () => {
-          posthog.capture('$pageview', { path: location.pathname });
-        });
-      };
+      })\`
 
       document.head.appendChild(posthogScript);
     `)
