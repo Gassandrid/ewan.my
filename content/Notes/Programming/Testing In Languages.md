@@ -1,20 +1,19 @@
 ---
 date: 2024-09-02
-updated: 2024-09-02
+updated: 2025-06-02
 ---
-# Unit Testing and Test-Driven Development (TDD)
-
-## Overview
 
 ### Unit Testing
-Unit testing involves testing individual units or components of a software application in isolation. The goal is to verify that each unit of the software performs as expected. A unit is the smallest testable part of an application, such as a function, method, or class.
 
-**Benefits of Unit Testing:**
+Unit testing involves the porcess of testing individual units or components of a software application in isolation. The goal is to verify that each unit of the software performs as expected. A unit is the smallest testable part of an application, such as a function, method, or class.
+
+**Benefits**
 - **Ensures Code Quality:** By testing each component in isolation, you can catch bugs early in the development process.
 - **Simplifies Refactoring:** With a robust set of unit tests, you can confidently refactor code without fear of breaking existing functionality.
 - **Documentation:** Unit tests can serve as a form of documentation, showing how the individual units are supposed to behave.
 
 ### Test-Driven Development (TDD)
+
 Test-Driven Development is a software development process where you write tests before writing the code that needs to be tested. The TDD cycle typically follows these steps:
 
 1. **Write a Test:** Start by writing a test for the next piece of functionality you want to add.
@@ -28,7 +27,7 @@ Test-Driven Development is a software development process where you write tests 
 - **Prevents Over-Engineering:** By focusing on the simplest solution to pass the test, TDD helps in avoiding unnecessary complexity.
 - **Continuous Feedback:** Immediate feedback ensures that the code is working as expected.
 
-## Examples in Different anage
+## Examples in Different Anage
 
 ### Python with `unittest`
 
@@ -75,7 +74,7 @@ test('checks if a number is even', () => {
 });
 ```
 
-### C++ with `Catch2`
+### C++ With `Catch2`
 
 **Example Function:**
 
@@ -139,4 +138,5 @@ public class MathUtilsTest {
 4. **Mock External Dependencies:** When testing a unit that relies on external services or systems, use mocks or stubs to simulate those dependencies.
 
 ## Conclusion
+
 Unit Testing and Test-Driven Development are essential practices in modern software development. By writing tests early and often, you can ensure that your code is reliable, maintainable, and less prone to bugs.
