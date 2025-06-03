@@ -1,6 +1,6 @@
 ---
 date: 2024-10-15
-updated: 2025-03-31
+updated: 2025-06-02
 tags:
   - todo
 title: The Link Index
@@ -30,3 +30,5 @@ I do a of [[Computational Neuroscience]] work with [[Artem Kirsanov]]'s videos, 
 ---
 
 ## Projects
+
+*todo*

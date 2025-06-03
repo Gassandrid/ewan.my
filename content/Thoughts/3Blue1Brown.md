@@ -1,7 +1,7 @@
 ---
 fileClass: person
 date: 2025-04-02
-updated: 2025-04-02
+updated: 2025-06-02
 tags:
   - math
   - seed
@@ -19,4 +19,20 @@ He is also responsible for the creation of the [[Manim]] python animation librar
 	- great series utilizing the visualization properties of [[Manim]] to describe the concepts of linear algebra in an intuitive way
 	- linear transformations, matrix operations, determinant, eigen vectors/values, abstract vector spaces
 	- [link](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+
+
+
+```mermaid
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+```
 
