@@ -1,7 +1,7 @@
 ---
 title: REGEX Reference
 date: 2025-02-24
-updated: 2025-02-24
+updated: 2025-06-11
 tags:
   - cs
   - generated
@@ -85,3 +85,39 @@ Very simple generated markdown reference for REGEX Pattern Matching Shorthands a
 |`\[\[(.*?)\]\]`|Wiki links and captures link text|
 
 This sheet should help with most regex-related tasks in Obsidian, whether searching, replacing, or structuring notes!
+
+```mermaid
+graph TD
+    subgraph Encoder
+        direction TB
+        A[Input Embedding] --> B(Positional Encoding);
+        B --> C{Multi-Head<br>Attention};
+        C --> D(Add & Norm);
+        D --> E{Feed Forward};
+        E --> F(Add & Norm);
+        F --> G((Encoder Output));
+    end
+
+    subgraph Decoder
+        direction TB
+        H[Output Embedding] --> I(Positional Encoding);
+        I --> J{Masked Multi-Head<br>Attention};
+        J --> K(Add & Norm);
+        G --> L{Multi-Head<br>Attention};
+        K --> L;
+        L --> M(Add & Norm);
+        M --> N{Feed Forward};
+        N --> O(Add & Norm);
+    end
+    
+    O --> P[Linear];
+    P --> Q[Softmax];
+    Q --> R((Final Output Probabilities));
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style H fill:#f9f,stroke:#333,stroke-width:2px
+    style R fill:#ccf,stroke:#333,stroke-width:2px
+    style G fill:#ccf,stroke:#333,stroke-width:2px
+
+```
+

@@ -5,12 +5,12 @@ tags:
   - neuroscience
   - cs/python
 date: 2025-04-11
-updated: 2025-04-15
+updated: 2025-06-11
 ---
 
 This serves as a simple notebook for implementing the different kinds of Firing Rate Approximation Functions as defined in [[1.2 - Spike Trains and Firing Rates]].
 
-In most cases you would be doing this for multiple [[Neuron]]s, but here we will just do one like the Textbook's figures.
+In most cases you would be doing this for multiple [[Neuron]]s, but here we will just do one like the Textbook's figures. 
 
 **Module Imports:**
 
