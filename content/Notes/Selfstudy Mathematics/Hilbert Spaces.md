@@ -21,4 +21,17 @@ We could just as easily use any other two vectors to form our coordinate system(
 
 ![[Screenshot 2025-06-13 at 2.34.15 PM.png]]
 
-Within the field of [[Essence of Linear Algebra|Linear Algebra]], we would say that these two vectors are [[Orthogonality|Orthogonal]].
+Within the field of [[Essence of Linear Algebra|Linear Algebra]], we would say that these two vectors are [[Orthogonality|Orthogonal]] to each other.
+
+And, since any other vector in the plane can be expressed as some combination of these two vectors:
+
+![[Screenshot 2025-06-17 at 2.22.07 PM.png]]
+
+Then they form an **orthogonal basis**
+
+$$
+\hat{r},\hat{s}\text{  form an orthogonal basis}
+$$
+
+But if that these basis vectors also have a length of $1$, they would also form an **orthonormal basis.**
+
