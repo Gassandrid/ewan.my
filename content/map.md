@@ -3,7 +3,7 @@ date: 2024-10-15
 updated: 2025-06-02
 tags:
   - todo
-title: The Link Index
+title: Link Index
 fileClass: navigation
 ---
 

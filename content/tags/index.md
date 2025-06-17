@@ -1,5 +1,5 @@
 ---
-title: The Tag Index
+title: Tag Index
 date: 2025-03-31
 updated: 2025-04-14
 ---

@@ -1,5 +1,5 @@
 ---
-title: The Folder Index
+title: Folder Index
 date: 2025-03-31
 updated: 2025-05-30
 ---
