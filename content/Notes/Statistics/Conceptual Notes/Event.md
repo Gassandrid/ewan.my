@@ -1,8 +1,8 @@
 ---
 date: 2024-09-12
 tags:
-  - statistics
-updated: 2024-10-08
+  - math/statistics
+updated: 2025-06-21
 ---
 # Event in Statistics
 

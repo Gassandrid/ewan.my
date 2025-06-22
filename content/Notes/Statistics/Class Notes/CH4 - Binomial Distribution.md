@@ -2,9 +2,9 @@
 id: CH4 - Binomial Distribution
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2024-09-12
-updated: 2024-12-13
+updated: 2025-06-21
 ---
 
 # Binomial Distribution

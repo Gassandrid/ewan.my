@@ -2,10 +2,10 @@
 id: CH12 - Expected Values Continued
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2025-02-12
 title: CH12 - Expected Values Continued
-updated: 2025-03-19
+updated: 2025-06-21
 ---
 
 This lesson will continue the discussion of expected values, focusing on the expected value of sums and constants.

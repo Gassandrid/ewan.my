@@ -1,8 +1,8 @@
 ---
 date: 2025-04-07
-updated: 2025-04-07
+updated: 2025-06-21
 tags:
-  - statistics/applied-probability
+  - math/statistics/applied-probability
 fileClass: note
 ---
 

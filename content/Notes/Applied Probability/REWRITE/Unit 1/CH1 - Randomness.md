@@ -2,10 +2,10 @@
 id: CH1 - Randomness
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2025-01-13
 title: CH1 - Randomness
-updated: 2025-01-16
+updated: 2025-06-21
 ---
 
 Randomness refers to the inherent unpredictability of a sequence of events. In statistics, randomness is a key concept that underlies many statistical methods and procedures. Understanding randomness is essential for interpreting data and making informed decisions based on statistical analyses.

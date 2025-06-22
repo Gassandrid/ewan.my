@@ -2,10 +2,10 @@
 id: Electrodes
 aliases: []
 tags:
-  - neuroscience
+  - comp-neuro
   - todo/neuro
 date: 2025-04-23
-updated: 2025-04-28
+updated: 2025-06-19
 ---
 
 sharp and patch electrodes... etc

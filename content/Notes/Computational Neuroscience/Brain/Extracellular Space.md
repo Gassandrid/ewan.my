@@ -2,11 +2,11 @@
 id: Extracellular Space
 aliases: []
 tags:
-  - neuroscience
+  - comp-neuro
   - biology
 date: 2025-02-03
 title: Extracellular Space
-updated: 2025-02-03
+updated: 2025-06-19
 ---
 
 **Extracellular Space** is essentially referring to a part of a multicellular organism ( for us in neuroscience, this will only be for humans ) usually outside of the plasma membranes of the cell and occupied by fluid.

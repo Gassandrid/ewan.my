@@ -2,10 +2,10 @@
 id: CH9 - Independence and Conditioning
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2025-02-05
 title: CH9 - Independence and Conditioning
-updated: 2025-02-05
+updated: 2025-06-21
 ---
 
 Let's say that we have 2 discrete random variables $A$ $B$.

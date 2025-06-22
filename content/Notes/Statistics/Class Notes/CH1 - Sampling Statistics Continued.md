@@ -3,11 +3,10 @@ id: CH2 - Sampling Statistics Continued
 aliases: 
 tags:
   - latex
-  - standardDev
   - python
-  - statistics
+  - math/statistics
 date: 2024-09-12
-updated: 2024-10-08
+updated: 2025-06-21
 ---
 
 > How do we find the standard deviation of a sample?
@@ -18,6 +17,7 @@ updated: 2024-10-08
 The standard deviation of a sample is a measure of the amount of variation or dispersion of a set of values. It is calculated as the square root of the variance, which is the average of the squared differences from the mean.
 
 Here's the formula for standard deviation (σ):
+
 $$ \sigma = \sqrt{\frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N}} $$
 
 Where:
@@ -82,7 +82,7 @@ $$ \text{Variance} = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} = \frac{16 + 4 + 0 
 
 So, the variance of our sample is 8.
 
-### Calculating Variance, Standard Deviation, and more using the TI 84 Calculator
+### Calculating Variance, Standard Deviation, and More Using the TI 84 Calculator
 
 In [[1 Variable Stats On Calculator]], I discuss how you can use the 1-Var Stats function on the TI-84 Plus CE to calculate the mean, sum of x, sum of x squared, sample standard deviation, population standard deviation, and more for a single-variable data set. This is a useful tool for quickly obtaining these statistics for your data.
 

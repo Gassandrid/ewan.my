@@ -2,11 +2,11 @@
 id: Event
 aliases: []
 tags:
-  - statistics
+  - math/statistics
   - todo/stats
 date: 2025-01-31
 title: Event
-updated: 2025-05-07
+updated: 2025-06-21
 ---
 
 An event is a set of outcomes of an experiment to which a probability is assigned.

@@ -1,10 +1,10 @@
 ---
 tags:
   - todo/neuro
-  - neuroscience
+  - comp-neuro
   - biology/region
 date: 2025-04-14
-updated: 2025-04-14
+updated: 2025-06-19
 ---
  
 

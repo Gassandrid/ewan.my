@@ -1,10 +1,9 @@
 ---
 title: Artificial Intelligence
 date: 2025-02-05
-updated: 2025-03-11
+updated: 2025-06-19
 tags:
-  - ai
-  - cs
+  - cs/ai
 ---
 
 I am sure by now we are all very familiar with "AI" in our day to day lives. Although it is just machine learning at the moment, there is no doubt that these advanced statistical models have had quite the effect on society.

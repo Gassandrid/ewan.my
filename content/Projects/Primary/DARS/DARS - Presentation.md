@@ -1,12 +1,14 @@
 ---
 date: 2024-12-01
 tags:
-  - dars
-  - embedded
-updated: 2024-12-04
+  - projects/dars
+  - cs/embedded
+updated: 2025-06-20
 ---
 
 I am sure we are all aware of how language models like GPT have taken off in recent years. They have opened up a world of possibilities through the medium of natural language, with a lot of opportunity to rework/replace a lot of software defined natural language tools.
+
+ 
 
 The idea of voice assistants have always interested me. We have all seen movies like Iron Man where these advanced, human-like voice assistants interact with people very naturally.
 

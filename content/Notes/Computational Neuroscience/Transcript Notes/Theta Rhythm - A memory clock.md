@@ -2,11 +2,11 @@
 id: Theta Rhythm - A memory clock
 aliases: 
 tags:
-  - neuroscience
+  - comp-neuro
   - artem-kirsanov
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-04-22
+updated: 2025-06-19
 fileClass: transcript
 ---
 

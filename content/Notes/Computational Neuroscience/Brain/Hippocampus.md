@@ -2,12 +2,12 @@
 id: Hippocampus
 aliases: 
 tags:
-  - neuroscience
+  - comp-neuro
   - biology/region
   - todo/neuro
 date: 2025-03-31
 fileClass: note
-updated: 2025-04-14
+updated: 2025-06-19
 ---
  
 

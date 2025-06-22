@@ -1,9 +1,9 @@
 ---
 fileClass: note
 date: 2025-03-31
-updated: 2025-03-31
+updated: 2025-06-21
 tags:
-  - statistics
+  - math/statistics
 ---
 
 *practice - will go problem by problem solving*

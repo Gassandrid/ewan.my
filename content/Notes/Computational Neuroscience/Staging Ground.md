@@ -1,13 +1,13 @@
 ---
 title: Staging Ground
 date: 2025-03-25
-updated: 2025-04-23
+updated: 2025-06-19
 tags:
-  - computational-neuroscience
   - todo
+  - comp-neuro
 ---
 
-For staging and planning topic to investigated in the field of [[Computational Neuroscience]]. 
+For staging and planning topic to investigated in the field of [[Computational Neuroscience]].  
 
 ---
 

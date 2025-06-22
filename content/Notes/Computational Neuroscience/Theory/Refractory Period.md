@@ -1,9 +1,9 @@
 ---
 date: 2025-04-23
-updated: 2025-06-12
+updated: 2025-06-19
 tags:
   - todo/neuro
-  - neuroscience/theory
+  - comp-neuro/theory
 fileClass: note
 ---
 

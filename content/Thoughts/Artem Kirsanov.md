@@ -1,10 +1,10 @@
 ---
 date: 2024-10-28
 tags:
-  - neuroscience
+  - comp-neuro
   - cs
   - sapling
-updated: 2025-04-02
+updated: 2025-06-19
 title: Artem Kirsanov
 fileClass: person
 ---

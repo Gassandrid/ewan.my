@@ -2,9 +2,9 @@
 id: CH2 - Random Variables
 aliases: 
 tags:
-  - statistics
+  - math/statistics
 date: 2024-09-12
-updated: 2025-02-03
+updated: 2025-06-21
 ---
 
 # CH2.4 - Random Variables (RVs)

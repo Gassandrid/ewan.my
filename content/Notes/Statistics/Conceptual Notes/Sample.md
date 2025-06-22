@@ -1,8 +1,8 @@
 ---
 date: 2024-09-12
 tags:
-  - statistics
-updated: 2024-10-08
+  - math/statistics
+updated: 2025-06-21
 ---
 # Samples in Statistics
 - **Sample**: A sample is a subset of a population selected for measurement, observation, or questioning, to provide statistical information about the population.

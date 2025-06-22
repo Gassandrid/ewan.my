@@ -2,9 +2,9 @@
 id: CH5 - Confidence Intervals
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2024-10-23
-updated: 2024-12-13
+updated: 2025-06-21
 ---
 
 ## Research Question

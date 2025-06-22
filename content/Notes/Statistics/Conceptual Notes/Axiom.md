@@ -1,8 +1,8 @@
 ---
 date: 2024-09-12
 tags:
-  - statistics
-updated: 2025-01-16
+  - math/statistics
+updated: 2025-06-21
 title: Axiom
 ---
 

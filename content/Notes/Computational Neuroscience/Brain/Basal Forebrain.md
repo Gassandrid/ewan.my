@@ -1,9 +1,9 @@
 ---
 date: 2025-03-24
-updated: 2025-04-14
+updated: 2025-06-19
 title: Basal Forebrain
 tags:
-  - neuroscience
+  - comp-neuro
   - todo
   - biology/region
   - todo/neuro

@@ -3,10 +3,10 @@ id: Dendrites
 aliases: []
 tags:
   - biology
-  - neuroscience
+  - comp-neuro
 date: 2025-03-30
 fileClass: note
-updated: 2025-03-30
+updated: 2025-06-19
 ---
 
 ![[Pasted image 20250330145358.png]]

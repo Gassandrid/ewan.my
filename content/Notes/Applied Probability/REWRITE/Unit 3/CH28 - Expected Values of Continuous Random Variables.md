@@ -2,9 +2,9 @@
 id: CH28 - Expected Values of Continuous Random Variables
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2025-03-26
-updated: 2025-05-08
+updated: 2025-06-21
 ---
 
 As the title suggests, this chapter is about the expected values of continuous random variables.

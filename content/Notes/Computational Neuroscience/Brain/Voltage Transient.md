@@ -1,9 +1,9 @@
 ---
 date: 2025-03-29
-updated: 2025-03-29
+updated: 2025-06-19
 tags:
   - biology
-  - neuroscience
+  - comp-neuro
 fileClass: note
 ---
  

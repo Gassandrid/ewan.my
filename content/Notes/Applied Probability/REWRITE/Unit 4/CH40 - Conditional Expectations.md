@@ -1,9 +1,9 @@
 ---
 fileClass: note
 date: 2025-04-23
-updated: 2025-05-08
+updated: 2025-06-21
 tags:
-  - statistics/applied-probability
+  - math/statistics/applied-probability
 ---
 
 **Let's Recall the Following:**

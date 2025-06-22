@@ -1,11 +1,11 @@
 ---
 tags:
-  - dars
+  - projects/dars
 date: 2024-11-21
-updated: 2024-11-21
+updated: 2025-06-20
 ---
 
-The wood box demo serves as a chassis test, as visual appeal isn't the biggest priority to me right now! What's more important is the capabilities, of this box.
+The wood box demo serves as a chassis test, as visual appeal isn't the biggest priority to me right now! What's more important is the capabilities, of this box. 
 
 - 2 tb hard rive
 - ESP-32

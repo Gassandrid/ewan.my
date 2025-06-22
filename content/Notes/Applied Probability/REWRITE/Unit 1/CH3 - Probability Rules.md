@@ -2,10 +2,10 @@
 id: CH3 - Probability Rules
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2025-01-24
 title: CH3 - Probability Rules
-updated: 2025-01-24
+updated: 2025-06-21
 ---
 
 This lesson will cover rules like the **general multiplication rule**, **conditional probability**, and **independence**.

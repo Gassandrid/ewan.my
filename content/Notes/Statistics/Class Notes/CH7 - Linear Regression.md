@@ -2,10 +2,10 @@
 id: CH7 - Linear Regression
 aliases: []
 tags:
-  - statistics
+  - math/statistics
   - engineering
 date: 2024-11-14
-updated: 2024-12-13
+updated: 2025-06-21
 ---
 
 # Chapter 7: Linear Regression

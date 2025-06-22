@@ -3,10 +3,10 @@ id: Brahms - Agent Oriented Programming
 aliases: 
 tags:
   - cs
-  - ai
   - generated
+  - cs/ai
 date: 2024-10-17
-updated: 2025-03-03
+updated: 2025-06-19
 title: Brahms - Agent Oriented Programming
 ---
 

@@ -1,9 +1,10 @@
 ---
 tags:
-  - dars
+  - projects/dars
 date: 2024-11-21
-updated: 2024-11-21
+updated: 2025-06-20
 ---
+
 Two main parts to the LLM structure behind DARS.
 
 ## Frontend
@@ -13,6 +14,7 @@ A silly way to put it, but the frontend is responsible for the personality and a
 Uses Ollama 3.1 8B
 
 Speech recognition is handled by Vosk
+
 ## Backend
 
 Includes a variety of API's to give DARS all the resources it needs for web related activity. But more importantly, this will give us access to the very high parameter language models that are hosted elsewhere, as unfortunately the frontend LLM is limited to 8B parameters due to Raspberry Pi restrictions.

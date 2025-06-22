@@ -2,10 +2,10 @@
 id: CH1 - DeMorgan's In Detail
 aliases: []
 tags:
-  - statistics
+  - math/statistics
 date: 2025-01-15
 title: CH1 - DeMorgan's In Detail
-updated: 2025-01-16
+updated: 2025-06-21
 ---
 
 Just as a refresher:

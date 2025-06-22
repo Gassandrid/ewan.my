@@ -2,10 +2,10 @@
 id: Memory Formation
 aliases: []
 tags:
-  - neuroscience/theory
+  - comp-neuro/theory
 date: 2025-04-06
 fileClass: note
-updated: 2025-04-06
+updated: 2025-06-19
 ---
 
 Memory formation is a complex and not completely understood process that describes the brain's ability to encode, consolidate, and retrieve information.

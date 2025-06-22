@@ -1,9 +1,9 @@
 ---
 date: 2025-06-06
-updated: 2025-06-07
+updated: 2025-06-19
 tags:
   - todo/neuro
-  - neuroscience/neurons
+  - comp-neuro/neurons
 ---
 
 ![[Pasted image 20250606131359.png]]

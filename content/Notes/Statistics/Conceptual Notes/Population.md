@@ -2,9 +2,9 @@
 id: Population
 aliases: 
 tags:
-  - statistics
+  - math/statistics
 date: 2024-09-12
-updated: 2024-10-08
+updated: 2025-06-21
 ---
 
 # Population in Statistics

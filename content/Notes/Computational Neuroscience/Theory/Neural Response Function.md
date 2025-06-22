@@ -1,10 +1,10 @@
 ---
 date: 2025-04-05
-updated: 2025-06-12
+updated: 2025-06-19
 fileClass: note
 tags:
   - math/calculus
-  - neuroscience/theory
+  - comp-neuro/theory
 ---
 
 The **Neural Response Function** is quite simply just the sum of all [[Dirac Delta Function]]'s for a number $n$ neuron spikes over a  certain time. 
