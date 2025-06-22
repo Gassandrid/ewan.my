@@ -52,7 +52,7 @@ sys.stderr = io.StringIO()
               }
               if (isPyodideLoading) {
                 console.log('Pyodide load already in progress, waiting...');
-                return pyodideLoadPromise; // Wait for the existing promise
+                return pyodideLoadPromise; 
               }
 
               console.log('Starting Pyodide load...');
@@ -139,12 +139,14 @@ sys.stderr = io.StringIO()
 
 
               textElement.innerHTML = ''; 
+              textElement.classList.remove('error', 'success'); 
               plotElement.innerHTML = ''; 
               plotElement.style.display = 'none'; 
 
               playIcon.style.display = 'none';
               spinner.style.display = 'inline-block';
               button.disabled = true;
+              button.classList.add('loading');
 
               try {
                 console.log('Executing Python code for block:', blockId);
@@ -169,7 +171,7 @@ sys.stderr = io.StringIO()
                  if (result !== undefined && result !== null) {
                     outputContent += '\\nResult: ' + result.toString();
                 }
-                textElement.textContent = outputContent; // Use textContent for safety
+                textElement.textContent = outputContent; 
 
                 let figureExists = pyodideInstance.runPython(\`
 import matplotlib.pyplot as plt
@@ -204,15 +206,19 @@ img_str
                      console.log('No active Matplotlib figures detected.');
                 }
 
+                
+                textElement.classList.add('success');
 
               } catch (error) {
                 console.error('Error running Python code in block ' + blockId + ':', error);
                 textElement.textContent = '--- PYTHON ERROR --- \\n' + error.message;
+                textElement.classList.add('error');
               } finally {
                 console.log('Finished execution for block:', blockId);
-                playIcon.style.display = 'inline'; // Use 'inline' consistently
+                playIcon.style.display = 'inline'; 
                 spinner.style.display = 'none';
-                button.disabled = false; // Re-enable button
+                button.disabled = false; 
+                button.classList.remove('loading');
                 outputWrapper.classList.add('expanded');
               }
             }
@@ -231,197 +237,15 @@ img_str
       ],
       css: [
         {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css",
-          loadTime: "beforeDOMReady",
-          contentType: "external",
+          content: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css",
         },
         {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-palenight.min.css",
-          loadTime: "beforeDOMReady",
-          contentType: "external",
+          content:
+            "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-palenight.min.css",
         },
         {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/base16-light.min.css",
-          loadTime: "beforeDOMReady",
-          contentType: "external",
-        },
-        {
-          contentType: "inline",
-          loadTime: "beforeDOMReady",
-          style: `
-              /* Styles from your original block, potentially move to global CSS */
-               .spinner {
-                 display: none; /* Hide by default */
-                 width: 16px; /* Match icon size */
-                 height: 16px; /* Match icon size */
-                 border: 2px solid #f3f3f3; /* Light grey circle */
-                 border-top: 2px solid #bd93f9; /* Theme color spinner */
-                 border-radius: 50%;
-                 animation: spin 1s linear infinite;
-                 vertical-align: middle; /* Align with icon */
-               }
-               @keyframes spin {
-                 0% { transform: rotate(0deg); }
-                 100% { transform: rotate(360deg); }
-               }
-               .play-icon {
-                 width: 16px; /* Consistent size */
-                 height: 16px;
-                 vertical-align: middle;
-                 display: inline; /* Default state */
-               }
-               .python-run-button:disabled .play-icon {
-                 /* Optional: slightly grey out icon when disabled */
-                 /* filter: grayscale(50%); */
-               }
-               .python-run-button:disabled {
-                  cursor: not-allowed; /* Indicate disabled state */
-               }
-
-               .python-output {
-                 display: none; /* Managed by expanded class */
-                 margin-top: 10px;
-                 padding: 10px;
-                 background-color: rgba(128, 128, 128, 0.5); /* grey and mostly transparent */
-                 border: 2px solid rgba(64, 64, 64, 0.8); /* darker gray and less transparent border */
-                 border-radiums: 10px; /* rounded corners */
-               }
-               .python-output.visible {
-                 display: block; /* make visible after running */
-               }
-
-
-                 .code-wrapper { /* Added wrapper div */
-                    margin-bottom: 1rem; /* Space between blocks */
-                 }
-                 .code-block {
-                   max-width: 800px;
-                   width: 100%;
-                   background-color: #282a36;
-                   border-radius: 0.5rem;
-                   overflow: hidden; /* Important for rounded corners with CodeMirror */
-                   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                   position: relative; /* Needed for gradient */
-                 }
-                 .code-header {
-                   display: flex;
-                   justify-content: space-between;
-                   align-items: center;
-                   padding: 0.5rem 1rem;
-                   background-color: #44475a;
-                   border-bottom: 1px solid #6272a4;
-                 }
-                 .code-language {
-                   color: #f8f8f2;
-                   font-family: monospace;
-                   font-size: 0.875rem;
-                 }
-                 .code-actions {
-                   display: flex;
-                   gap: 0.5rem;
-                 }
-                 .code-actions button {
-                   background: none;
-                   border: none;
-                   color: #bd93f9;
-                   cursor: pointer;
-                   padding: 0.25rem;
-                   transition: color 0.2s;
-                   display: flex; /* Align icon/spinner */
-                   align-items: center;
-                 }
-                 .code-actions button:hover:not(:disabled) {
-                   color: #ff79c6;
-                 }
-                 .code-content {
-                   position: relative; /* For gradient */
-                   height: 150px; /* Initial collapsed height */
-                   transition: height 0.3s ease-in-out;
-                   overflow: hidden;
-                   /* CodeMirror will handle background */
-                 }
-                 .code-content.expanded {
-                   height: auto; 
-                   max-height: 600px;
-                   overflow-y: auto;
-                 }
-                 .CodeMirror {
-                   height: 100%; 
-                   /* background: #282a36 !important; 
-                 }
-                 .code-gradient {
-                   position: absolute;
-                   bottom: 0;
-                   left: 0;
-                   right: 0;
-                   height: 2rem;
-                   background: linear-gradient( to top, rgba(40, 42, 54, 1), rgba(40, 42, 54, 0) );
-                   pointer-events: none;
-                   z-index: 1; 
-                   transition: opacity 0.3s ease-in-out;
-                 }
-                 .code-content.expanded .code-gradient {
-                    opacity: 0; 
-                 }
-
-                 .output-wrapper {
-                   max-height: 0;
-                   overflow: hidden;
-                   transition: max-height 0.4s ease-in-out;
-                   background-color: #282a36; 
-                   border-radius: 0 0 0.5rem 0.5rem; 
-                   margin-top: -1px; 
-                   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-                 }
-                 .output-wrapper.expanded {
-                   max-height: 500px; 
-                   overflow-y: auto; 
-                 }
-                 .output-header {
-                   display: flex;
-                   justify-content: space-between;
-                   align-items: center;
-                   padding: 0.5rem 1rem;
-                   background-color: #44475a; 
-                   border-bottom: 1px solid #6272a4; 
-                 }
-                 .output-title {
-                   color: #f8f8f2;
-                   font-family: monospace;
-                   font-size: 0.875rem;
-                 }
-                 .close-output-btn {
-                   background: none;
-                   border: none;
-                   color: #bd93f9;
-                   cursor: pointer;
-                   padding: 0.25rem;
-                   transition: color 0.2s;
-                   display: flex;
-                   align-items: center;
-                 }
-                 .close-output-btn:hover {
-                   color: #ff79c6;
-                 }
-                 .output-content {
-                    color: #f8f8f2;
-                    font-family: monospace;
-                    font-size: 0.875rem;
-                    padding: 0.5rem 1rem; /* Padding for text/plots */
-                    white-space: pre-wrap; /* Wrap text output */
-                    word-break: break-all; /* Break long words */
-                 }
-                 .python-plot img {
-                    max-width: 100%;
-                    height: auto;
-                    display: block;
-                    margin-top: 0.5rem; 
-                    background: white; 
-                    padding: 5px;
-                    border-radius: 3px;
-                 }
-
-            `,
+          content:
+            "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/base16-light.min.css",
         },
       ],
     }
@@ -476,7 +300,7 @@ img_str
 (function() {
   // --- Script specific to block ${id} ---
 
-  const blockId = '${id}'; // Store ID for easy reference
+  const blockId = '${id}'; 
   const codeContent = document.getElementById('codeContent-' + blockId);
   const codeTextarea = document.getElementById('codeTextarea-' + blockId);
   const codeGradient = document.getElementById('codeGradient-' + blockId);
@@ -515,14 +339,14 @@ img_str
       ]
   };
   const svgPlay = {
-      attrs: { xmlns: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 24 24', fill: 'currentColor', stroke: 'currentColor', 'stroke-width': '1', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, // Changed fill/stroke
+      attrs: { xmlns: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 24 24', fill: 'currentColor', stroke: 'currentColor', 'stroke-width': '1', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, 
       children: [ { tag: 'polygon', attrs: { points: '5 3 19 12 5 21 5 3' } } ]
   };
   const svgExpand = {
       attrs: { xmlns: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
       children: [ { tag: 'polyline', attrs: { points: '6 9 12 15 18 9' } } ] 
   };
-   const svgCollapse = { // New: Up arrow
+   const svgCollapse = { 
       attrs: { xmlns: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
       children: [ { tag: 'polyline', attrs: { points: '18 15 12 9 6 15' } } ]
   };
@@ -579,7 +403,51 @@ img_str
 
       expandBtn.addEventListener('click', () => {
           isExpanded = !isExpanded;
-          codeContent.classList.toggle('expanded', isExpanded);
+          
+          if (isExpanded) {
+              
+              codeContent.style.height = 'auto';
+              codeContent.classList.add('expanded');
+              
+              
+              const naturalHeight = codeContent.scrollHeight;
+              const targetHeight = Math.min(naturalHeight, 600); 
+              
+              
+              codeContent.style.height = '150px';
+              
+              
+              codeContent.offsetHeight;
+              
+              
+              codeContent.style.height = targetHeight + 'px';
+              
+              
+              setTimeout(() => {
+                  if (isExpanded) {
+                      codeContent.style.height = 'auto';
+                  }
+              }, 400);
+          } else {
+              
+              const currentHeight = codeContent.scrollHeight;
+              codeContent.style.height = currentHeight + 'px';
+              
+              
+              codeContent.offsetHeight;
+              
+              
+              codeContent.style.height = '150px';
+              codeContent.classList.remove('expanded');
+              
+              
+              setTimeout(() => {
+                  if (!isExpanded) {
+                      codeContent.style.height = '150px';
+                  }
+              }, 400);
+          }
+          
           codeGradient.style.opacity = isExpanded ? '0' : '1'; 
 
           expandBtn.innerHTML = ''; 
@@ -598,9 +466,11 @@ img_str
       copyBtn.addEventListener('click', () => {
           if (!editorInstance) return;
           navigator.clipboard.writeText(editorInstance.getValue()).then(() => {
+              copyBtn.classList.add('copied');
               copyBtn.innerHTML = ''; 
               copyBtn.appendChild(createSvgElement(svgCheck)); 
               setTimeout(() => {
+                  copyBtn.classList.remove('copied');
                   copyBtn.innerHTML = ''; 
                   copyBtn.appendChild(createSvgElement(svgCopy)); 
               }, 1500); 
@@ -621,9 +491,10 @@ img_str
       });
 
       closeOutputBtn.addEventListener('click', () => {
-          textOutput.innerHTML = ''; // Clear text
-          plotOutput.innerHTML = ''; // Clear plot
-          outputWrapper.classList.remove('expanded'); // Collapse the output area
+          textOutput.innerHTML = ''; 
+          textOutput.classList.remove('error', 'success'); 
+          plotOutput.innerHTML = ''; 
+          outputWrapper.classList.remove('expanded'); 
       });
   }
 
