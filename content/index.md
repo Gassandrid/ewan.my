@@ -4,7 +4,7 @@ aliases:
 tags: 
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-05-14
+updated: 2025-06-22
 fileClass: navigation
 ---
 
@@ -116,7 +116,7 @@ I’m a second-year Computer Science student at the [[University Of Vermont]] wi
 
 ## Thoughts 🏡
 
-Currently reading **Gödel, Escher, Bach**. But for more textbook reading I am currently studying [[Theoretical Neuroscience Textbook|Theoretical Neuroscience by Peter Dayan and L. F. Abbott]].
+Currently reading [[Gödel, Escher, Bach]]. But for more textbook reading I am currently studying [[Theoretical Neuroscience Textbook|Theoretical Neuroscience by Peter Dayan and L. F. Abbott]].
 
 Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering.
 
@@ -142,16 +142,11 @@ A model replica of TARS from interstellar, built for the purpose of mapping natu
 
 Outside of Computer Science, my main interests are [[Sailing]], [[Health|Fitness/Health]], and [[Woodwork]].
 
-Recently have picked up a habit of [[On Touch Typing]], and have quickly become addicted [MonkeyType](https://monkeytype.com/profile/Gassandrid), currently at 181 words per minute!
+I am an obsessive **competitive typer**, mainly through the website [monkeytype](https://monkeytype.com/). Currently at **189WPM**. Combining this with [VIM Motions Everwhere](https://www.youtube.com/watch?v=sqm4-B07LsE), I have found I can use a computer faster than anyone else I know.
 
-While I have spent most my life in the United States, I am actually a tri-citizen! I am [[South Africa|South African]], American, and British!
+While I have spent most my life in the United States, I am actually a tri-citizen( [[South Africa|South African]], American, and British).
 
-I love building and tinkering! While doing some construction work, I found a interest and skill in building my own things and projects!
-
->[!Info]- Photo
-> ![[IMG_1992 1.jpg|350]]
-
-I love to chat about philosophy! Let's start a conversation!
+I also enjoy the more engineering side of my fields, this mainly consists of 3d printing and CNC work, but I do a lot of circuits work as well.
 
 ## About This Garden 🪴
 

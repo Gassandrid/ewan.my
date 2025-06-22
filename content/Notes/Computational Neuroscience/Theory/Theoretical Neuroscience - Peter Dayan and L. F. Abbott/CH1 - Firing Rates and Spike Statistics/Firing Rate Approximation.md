@@ -5,7 +5,7 @@ tags:
   - comp-neuro
   - cs/python
 date: 2025-04-11
-updated: 2025-06-19
+updated: 2025-06-22
 ---
 
 This serves as a simple notebook for implementing the different kinds of Firing Rate Approximation Functions as defined in [[1.2 - Spike Trains and Firing Rates]].
