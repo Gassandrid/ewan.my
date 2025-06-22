@@ -1,7 +1,7 @@
 ---
 fileClass: note
 date: 2025-04-23
-updated: 2025-06-21
+updated: 2025-06-22
 tags:
   - math/statistics/applied-probability
 ---
@@ -22,10 +22,6 @@ $$
 
 $$
 E(x) = \int_{-\infty}^\infty x \cdot \frac{x\cdot f_{X}(x)}{x-1} dx
-$$
-
-$$
-i\hbar\frac{\partial}{\partial t}\Psi (r,t)=- \frac{\hbar^2}{2m} \nabla^2 \Psi(r,t) + V (r,t) \Psi (r,t)
 $$
 
 ---
