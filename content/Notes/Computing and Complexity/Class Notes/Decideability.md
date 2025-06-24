@@ -5,7 +5,7 @@ tags:
   - cs/theory
 date: 2025-04-08
 fileClass: note
-updated: 2025-04-10
+updated: 2025-06-24
 ---
 
 It is an unfortunate fact that there are some problems that cannot be solved by any algorithm. These problems are undecidable. The most famous example of an undecidable problem is the Halting Problem, which states that there is no algorithm that can determine whether a given program will halt or run forever.
@@ -68,6 +68,3 @@ A_{DFA} = \{  \langle B, \omega \rangle \mid \text{B is a DFA that accepts strin
 $$
 
 Our theorem right now is that $A_{DFA}$ is decidable
-
----
-

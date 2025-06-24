@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2025-06-22
+updated: 2025-06-24
 tags:
   - math/analysis
   - todo/math
@@ -89,3 +89,9 @@ But also less conventional sets, like $n\times n$ matrices, and even functions a
 > Things get a little more abstract from this point forward, so always try to keep the 2-dimensional case in the back of your mind, that is the intuitive picture.
 
 ---
+
+$$
+\dots \leftarrow \{ \text{actual hilber space stuff} \}
+$$
+
+^b106fc

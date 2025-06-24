@@ -5,7 +5,7 @@ tags:
   - cs/theory
 date: 2025-02-18
 title: Day 9
-updated: 2025-03-27
+updated: 2025-06-24
 ---
 
 This class will cover non regular languages, and context free grammars.
@@ -14,7 +14,7 @@ This class will cover non regular languages, and context free grammars.
 
 ## Non Regular Languages
 
-Recall the [[Day 2#^c46864|Pigeonhole Principle]]:
+Recall the [[Day 2 - Deterministic Finite Automata#^c46864|Pigeonhole Principle]]:
 
 - $n$ pigeonholes $m>n$ pigeons
 - at least one pigeonhole with no pigeon

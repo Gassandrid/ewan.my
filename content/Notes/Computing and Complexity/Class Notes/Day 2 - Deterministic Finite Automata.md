@@ -5,10 +5,10 @@ tags:
   - cs/theory
 date: 2025-01-16
 title: Day 2
-updated: 2025-03-27
+updated: 2025-06-24
 ---
 
-In this class we will continue our work on [[Day 1#Deterministic Finite Automata|Deterministic Finite Automata]], where we will examine tools like Regex to help to understand this agents.
+In this class we will continue our work on [[Day 1 - Introduction to Computing#Deterministic Finite Automata|Deterministic Finite Automata]], where we will examine tools like Regex to help to understand this agents.
 
 ---
 

@@ -5,7 +5,7 @@ tags:
   - cs/theory
 date: 2025-01-21
 title: Day 3
-updated: 2025-03-27
+updated: 2025-06-24
 ---
  
 
@@ -21,7 +21,7 @@ $$
 M_{DFA} = \left( Q, \sum, \delta, q_{0}, F\right)
 $$
 
-We define each of the variables in the [[Day 2#Deterministic Finite Automata Continued|DFA Definition]].
+We define each of the variables in the [[Day 2 - Deterministic Finite Automata#Deterministic Finite Automata Continued|DFA Definition]].
 
 Today we will re-examine equivalent representations:
 

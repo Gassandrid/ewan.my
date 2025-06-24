@@ -1,6 +1,6 @@
 ---
 date: 2025-06-23
-updated: 2025-06-23
+updated: 2025-06-24
 tags:
   - projects/crdg-math
   - todo/math/crdg
@@ -14,14 +14,17 @@ The simple goal is to construct pseudo-replicas of what we would consider "norma
 
 This would start with [[Defining The Problem]], which would provide a grounds for construction to math/computer functions.
 
+For practical purposes, an Excalidraw billboard will be used for actually designing the game's machines, but I want to eventually build this out in a mathematical syntax to express them. After the syntax is defined, it should then be pretty easy to bridge any standard automata into the world of this game.
+
 $$
 \dots \leftarrow\{ \text{mathematicsl functions} \}
 $$
 
 ^088eff
-
 ---
 
 ## Task List
 
 - [ ] [[Defining The Problem]]
+- [ ] [[Syntax Construction]]
+
