@@ -3,6 +3,7 @@ date: 2025-06-23
 updated: 2025-06-23
 tags:
   - projects/crdg-math
+  - todo/math/crdg
 ---
 
 The goal of this is kind of to bring the field of theoretical computer science ( [[Turing Machines]], etc ) to completely new set of standard electronics ( at least from real life ), so I could eventually build real computing structures in this game I play.
