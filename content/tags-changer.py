@@ -21,7 +21,7 @@ def replace_tags(path):
         mod = False
         for i in range(1, end):
             if 'statistics' in lines[i]:
-                new = lines[i].replace('statistics', 'math/statistics')
+                new = lines[i].replace('ai', 'cs/ai')
                 if new != lines[i]:
                     lines[i] = new
                     mod = True

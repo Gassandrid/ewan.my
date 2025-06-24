@@ -1,0 +1,25 @@
+---
+date: 2025-06-23
+updated: 2025-06-23
+tags:
+  - seed
+  - todo/refList
+---
+
+You might see something of the sort of:
+
+$$
+\dots
+$$
+
+or:
+
+$$
+\dots \leftarrow \{ \text{some text or expression here for semactincs} \}
+$$
+
+These are my new todo block management system. A common theme among them is their tag expression in obsidian that helps me track what I have to do easily.
+
+I most is done out of public notes, but I try to leave some semantics there regardless to explain possible trails in incomplete notes.
+
+I just call this my Ref List, and thus any todo tags on a note ( that you might have noticed to be quite empty or blank ).
