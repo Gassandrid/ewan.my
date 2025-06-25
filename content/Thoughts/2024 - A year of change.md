@@ -1,9 +1,8 @@
 ---
 date: 2025-01-01
-updated: 2025-03-19
+updated: 2025-06-25
 tags:
   - seed
-  - todo
 title: 2024 - A year of change
 ---
 
@@ -27,4 +26,4 @@ A big thing I struggled with at the beginning of the year was a sense of work et
 
 But later in the year I finally started to get my act together when it comes to note-taking. That is a bit of an understatement, as I frankly fell in love with writing and documenting everything. The benefits of obsidian really started to show for me, where I felt a genuine desire to write down more and expand beyond just class notes and journaling.
 
-
+Overall, I cant say this was even close to one of the best years of my life, but coming out of it I feel more prepared and sure of what I want to do than ever before.
