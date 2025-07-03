@@ -1,6 +1,6 @@
 ---
 date: 2025-01-01
-updated: 2025-06-25
+updated: 2025-06-26
 tags:
   - seed
 title: 2024 - A year of change

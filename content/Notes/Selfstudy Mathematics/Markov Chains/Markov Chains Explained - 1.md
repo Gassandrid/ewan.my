@@ -6,10 +6,9 @@ tags:
   - youtube
 date: 2025-04-29
 fileClass: transcript
-updated: 2025-05-01
+updated: 2025-06-27
+source: https://youtu.be/i3AkTO9HLXo?si=0HlExQr2nVNWsNEG
 ---
-
-_for a [Normalized Nerd](https://youtu.be/i3AkTO9HLXo?si=0HlExQr2nVNWsNEG) video_
 
 Markov chains are used for everything - statistics, biology, and machine learning of course. They allow for some very interesting probability theory.
 
@@ -25,7 +24,7 @@ Let's say we are given a graph with all 3 foods, with arrows pointing to other f
 
 If we are on **pizza** today, we can predict that there is a $70\%$ chance of having **hotdogs** tomorrow.
 
-![[Screenshot 2025-04-29 at 1.29.21 PM.png]]
+![[Screenshot 2025-06-26 at 10.09.56 PM.png]]
 
 While quite a simple diagram, this is actually a complete Markov chain!
 

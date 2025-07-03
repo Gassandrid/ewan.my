@@ -2,11 +2,10 @@
 date: 2024-10-04
 tags:
   - generated
-updated: 2024-10-04
+updated: 2025-07-02
 ---
-## Overview
 
-In a binary search tree (BST), nodes are arranged such that:
+In a binary search tree with the following rules:
 
 - The left child of a node contains a value smaller than the node.
 - The right child of a node contains a value greater than the node.
@@ -20,7 +19,7 @@ There are four common tree traversal methods and two important search strategies
 5. **Breadth-First Search (BFS)**
 6. **Depth-First Search (DFS)**
 
-### Example Tree
+## Example
 
 We will be using this tree to illustrate the different strategies you can use to navigate a BST.
 
@@ -29,6 +28,7 @@ We will be using this tree to illustrate the different strategies you can use to
 ---
 
 ## 1. In-order Traversal
+
 In-order traversal visits nodes in ascending order (for a BST).
 
 > **Algorithm**:  
@@ -55,6 +55,7 @@ void inOrder(Node* root) {
 ---
 
 ## 2. Pre-order Traversal
+
 Pre-order traversal visits the root before its subtrees.
 
 > **Algorithm**:  
@@ -81,6 +82,7 @@ void preOrder(Node* root) {
 ---
 
 ## 3. Post-order Traversal
+
 Post-order traversal visits the root after its subtrees.
 
 > **Algorithm**:  
@@ -107,6 +109,7 @@ void postOrder(Node* root) {
 ---
 
 ## 4. Level-order Traversal
+
 Level-order traversal visits nodes level by level.
 
 > **Algorithm**:  
@@ -138,6 +141,7 @@ void levelOrder(Node* root) {
 ---
 
 ## 5. Breadth-First Search (BFS)
+
 Breadth-First Search explores the tree level by level, starting at the root.
 
 **Example for the given tree:**
@@ -168,6 +172,7 @@ bool BFS(Node* root, int target) {
 ---
 
 ## 6. Depth-First Search (DFS)
+
 Depth-First Search explores the tree as deep as possible before backtracking.
 
 **DFS - Pre-order example for the given tree:**
@@ -192,6 +197,7 @@ bool DFS(Node* root, int target) {
 ## Inserting Elements into an Empty Binary Search Tree
 
 When inserting elements into an empty BST:
+
 - Recursively place a node into the correct position, adhering to the BST property.
 
 **Example insertion sequence:**

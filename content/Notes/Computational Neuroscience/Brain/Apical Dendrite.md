@@ -5,8 +5,6 @@ tags:
   - todo/neuro
   - biology
   - comp-neuro/neurons/dendrites
-completed: false
 ---
 
  
-

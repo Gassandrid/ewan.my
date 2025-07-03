@@ -1,7 +1,7 @@
 ---
 title: Brainstorming Hardware Stack
 date: 2025-01-02
-updated: 2025-02-21
+updated: 2025-07-03
 tags:
   - projects/homelab/hardware
 ---
