@@ -253,9 +253,12 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
   // update allFiles and then allSlugs with the consistent view of content map
   ctx.allFiles = Array.from(contentMap.keys())
   ctx.allSlugs = ctx.allFiles.map((fp) => slugifyFilePath(fp as FilePath))
-  const processedFiles = Array.from(contentMap.values())
-    .filter((file) => file.type === "markdown")
-    .map((file) => file.content)
+  let processedFiles = filterContent(
+    ctx,
+    Array.from(contentMap.values())
+      .filter((file) => file.type === "markdown")
+      .map((file) => file.content),
+  )
 
   let emittedFiles = 0
   for (const emitter of cfg.plugins.emitters) {
