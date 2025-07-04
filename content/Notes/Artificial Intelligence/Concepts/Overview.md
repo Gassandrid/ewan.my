@@ -1,6 +1,6 @@
 ---
 date: 2024-09-12
-updated: 2025-03-25
+updated: 2025-07-03
 ---
 
 ### 1. **Understanding Neural Networks**
@@ -22,7 +22,7 @@ updated: 2025-03-25
     - Common types: Sigmoid, ReLU, Tanh, Softmax, etc.
 - **Learning Process**
     - How neurons learn (weight adjustments)
-    - [[Gradient descent]] and backpropagation (coming soon)
+    - [[Gradient Descent]] and backpropagation (coming soon)
 
 ### 3. **Designing the Architecture**
 

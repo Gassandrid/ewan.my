@@ -1,7 +1,7 @@
 ---
 title: Artificial Intelligence
 date: 2025-02-05
-updated: 2025-06-19
+updated: 2025-07-03
 tags:
   - cs/ai
 ---
@@ -30,4 +30,4 @@ Transformers changed this in the fact that a large portion of the training and i
 
 ## Some AI Notes
 
-I take machine learning notes in my free time, and they can be found under [[Notes/Artificial Intelligence/conceptual notes/Overview|Overview|the conceptual notes]]. I plan to do some more notes regarding [[3Blue1Brown]]'s videos on how transformers work, but those have yet to be done as seen under the **Transformers** heading of this note.
+I take machine learning notes in my free time, and they can be found under [[Notes/Artificial Intelligence/Concepts/Overview|Overview|the conceptual notes]]. I plan to do some more notes regarding [[3Blue1Brown]]'s videos on how transformers work, but those have yet to be done as seen under the **Transformers** heading of this note.
