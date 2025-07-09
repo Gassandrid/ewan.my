@@ -1,10 +1,8 @@
 ---
-id: Cardinality
-aliases: 
 tags:
   - math/sets
 date: 2025-07-03
-updated: 2025-07-03
+updated: 2025-07-08
 fileClass: note
 ---
 

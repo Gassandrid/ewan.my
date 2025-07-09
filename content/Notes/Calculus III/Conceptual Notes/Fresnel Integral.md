@@ -1,11 +1,11 @@
 ---
 date: 2024-10-07
 tags:
-  - math
-updated: 2024-10-25
+  - math/calculus
+updated: 2025-07-06
 ---
 
-The **Fresnel integrals** are a pair of transcendental functions that arise in the study of wave optics, particularly in problems involving diffraction and interference. These integrals are defined as follows:
+The **Fresnel integrals** are a pair of transcendental functions that arise in the study of wave optics, particularly in problems involving diffraction and interference. These integrals are defined as follows: 
 
 $$
 S(x) = \int_0^x \sin\left( \frac{\pi t^2}{2} \right) dt

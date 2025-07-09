@@ -5,10 +5,10 @@ tags:
   - cs/theory
 date: 2025-01-30
 title: Day 6
-updated: 2025-03-27
+updated: 2025-07-08
 ---
 
-This class will discuss the conversion of an NFA to equivelant DFA by subset construction algorithm.
+This class will discuss the conversion of an NFA to equivalent DFA by subset construction algorithm.
 
 ---
 
