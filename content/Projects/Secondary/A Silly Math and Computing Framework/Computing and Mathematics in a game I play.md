@@ -1,6 +1,6 @@
 ---
 date: 2025-06-23
-updated: 2025-07-07
+updated: 2025-07-15
 tags:
   - projects/crdg-math
   - todo/math/crdg
@@ -13,9 +13,3 @@ What makes this weird? Well, this game has some odd quicks/bucks when it comes t
 The simple goal is to construct pseudo-replicas of what we would consider "normal" logic parts of our world.
 
 For practical purposes, an Excalidraw billboard will be used for actually designing the game's machines, but I want to eventually build this out in a mathematical syntax to express them. After the syntax is defined, it should then be pretty easy to bridge any standard automata into the world of this game.
-
-$$
-\dots \leftarrow\{ \text{mathematicsl functions} \}
-$$
-
-^088eff

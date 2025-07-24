@@ -1,6 +1,6 @@
 ---
 date: 2025-04-05
-updated: 2025-04-05
+updated: 2025-07-18
 tags:
   - math/calculus
 ---
@@ -36,7 +36,7 @@ $$
 \int_{-\infty}^\infty \delta(x) dx = 1
 $$
 
-As a interactive desmos graph:
+As a interactive desmos graph(*approximation*):
 
 > [!Info] Desmos
 > <iframe src="https://www.desmos.com/calculator/hp1mkjfpir" width=600 height="400" ></iframe>

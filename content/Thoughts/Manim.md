@@ -6,6 +6,8 @@ tags:
   - seed
 updated: 2025-02-06
 title: Manim
+fileClass:
+  - software
 ---
 
 ![[Pasted image 20241028124902.png]]

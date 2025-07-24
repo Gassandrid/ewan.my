@@ -1,6 +1,6 @@
 ---
 date: 2025-07-09
-updated: 2025-07-09
+updated: 2025-07-11
 tags:
   - math/topology
 fileClass: note
@@ -30,9 +30,6 @@ $$
 \underbrace{ HC(x) }_{ \text{hilbert curve} }=\lim_{ n \to \infty } \underbrace{ PHC_{n}(x) }_{ \text{points of hilbert as coordinates} }
 $$
 
-
 Other space filling curve options don't have this property, and natural number mappings will jump around and never find a stable value.
 
 It is for this reason, that we can prove that as the Hilbert Curve approaches infinite precision, there exists a mapping of all natural numbers to the 2d coordinate plane, such that every point in the plane has a natural number associated with it.
-
- 

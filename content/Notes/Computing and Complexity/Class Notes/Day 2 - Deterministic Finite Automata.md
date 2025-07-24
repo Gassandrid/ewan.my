@@ -5,7 +5,7 @@ tags:
   - cs/theory
 date: 2025-01-16
 title: Day 2
-updated: 2025-06-24
+updated: 2025-07-23
 ---
 
 In this class we will continue our work on [[Day 1 - Introduction to Computing#Deterministic Finite Automata|Deterministic Finite Automata]], where we will examine tools like Regex to help to understand this agents.
@@ -261,10 +261,3 @@ Let's try and make this machine, given that we can only construct it out of the 
 We have no ram, no stack, no nothing we know? How do we do this?
 
 Let's define $q_{0}$ as the start state, and $F$ as the set of accepting states.
-
-```mermaid
-graph LR
-   q0 --> q1
-   q1 --> q0
-```
-

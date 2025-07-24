@@ -5,7 +5,7 @@ tags:
   - math/statistics
 date: 2025-02-03
 title: CH7 - Discrete Random Variables
-updated: 2025-06-21
+updated: 2025-07-22
 ---
 
 Discusses the concept of discrete random variables and their probability distributions.
