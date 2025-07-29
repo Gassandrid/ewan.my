@@ -1,9 +1,10 @@
 ---
 date: 2025-02-12
-updated: 2025-02-21
+updated: 2025-07-26
 tags:
   - seed
   - projects/homelab/software
+  - cs/homelab
 title: Docker Swarm as an alternative to proxmox
 ---
 *[article](https://medium.com/@georgeveersingh27/docker-compose-vs-docker-swarm-choosing-the-right-orchestration-tool-bdaf3b52e9a2) discussed* 

@@ -1,10 +1,10 @@
 ---
 title: Proxmox on old Macbooks
 date: 2025-01-02
-updated: 2025-02-21
+updated: 2025-07-26
 tags:
-  - cs
   - projects/homelab/software
+  - cs/homelab
 ---
   
  

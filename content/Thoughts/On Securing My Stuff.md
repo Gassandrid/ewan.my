@@ -1,9 +1,9 @@
 ---
 date: 2025-04-24
-updated: 2025-04-24
-tags:
-  - seed
+updated: 2025-07-26
+tags: [seed, cs/crypto]
 ---
+ 
 
  For almost as long as I can remember, I have used one or two passwords for just about every account of mine. This was a TERRIBLE idea, and was worsened by the fact that these lone passwords were not very good to begin with.
 

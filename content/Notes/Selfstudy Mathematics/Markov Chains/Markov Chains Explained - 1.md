@@ -1,14 +1,14 @@
 ---
 id: Markov Chains Explained - 1
 aliases: 
-tags:
-  - math/linear-algebra
-  - youtube
+tags: [youtube, math/linear-algebra/markhov-chains]
 date: 2025-04-29
-fileClass: transcript
-updated: 2025-06-27
+fileClass:
+  - transcript
+updated: 2025-07-28
 source: https://youtu.be/i3AkTO9HLXo?si=0HlExQr2nVNWsNEG
 ---
+ 
 
 Markov chains are used for everything - statistics, biology, and machine learning of course. They allow for some very interesting probability theory.
 

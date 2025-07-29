@@ -6,7 +6,7 @@ tags:
   - seed
   - math/logic
 date: 2025-06-24
-updated: 2025-06-24
+updated: 2025-07-26
 ---
 
 The MU puzzle is a formal system created by Douglas Hofstadter in [[Gödel, Escher, Bach]]. It is a simple set of rules that can be used to manipulate strings of characters. The goal is to determine whether the string `MI` can be transformed into the string `MU` using the rules of the system.
