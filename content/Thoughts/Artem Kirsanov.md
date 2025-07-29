@@ -1,13 +1,12 @@
 ---
 date: 2024-10-28
-tags:
-  - comp-neuro
-  - cs
-  - sapling
-updated: 2025-06-19
+tags: [comp-neuro, cs, sapling, people]
+updated: 2025-07-28
 title: Artem Kirsanov
-fileClass: person
+fileClass:
+  - person
 ---
+ 
 
 Artem Kirsanov is a Computational Neuroscientist I watch, who makes great videos on [[Machine Learning]], [[Computational Neuroscience|Neuroscience]], and even [[Digital Garden|my style of notetaking!]]
 

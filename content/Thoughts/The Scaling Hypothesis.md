@@ -2,12 +2,11 @@
 id: The Scaling Hypothesis
 aliases: 
 tags:
-  - cs
-  - ai
   - seed
+  - cs/ai
 date: 2025-02-04
 title: The Scaling Hypothesis
-updated: 2025-02-06
+updated: 2025-07-28
 ---
 
 In the era of transformer based language models, there has been one trend that has stood out above all others: the belief that scaling these models will improve purely as a result of scaling. It is a controversial theory, as many believe that it is a matter of architecture.

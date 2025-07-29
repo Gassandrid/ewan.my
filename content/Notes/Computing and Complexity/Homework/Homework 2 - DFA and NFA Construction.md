@@ -6,7 +6,7 @@ tags:
 author: Ewan Pedersen
 date: 2025-02-07
 title: Homework 2 - DFA and NFA Construction
-updated: 2025-04-13
+updated: 2025-07-28
 ---
 
 > **Abstract**
@@ -92,7 +92,7 @@ $$
 
 *see figure 1*
 
-![[Screenshot 2025-02-10 at 8.30.33 PM.png|Problem 1 State Diagram]]
+![[Screenshot 2025-02-10 at 8.30.33 PM.png|200|Problem 1 State Diagram]]
 
 ---
 
@@ -352,24 +352,31 @@ since the b route goes to 2 and 3
 ### Defining New DFA
 
 1. We define the **start state** as $\{ 1 \}$
+
 2. Going from $\{ 1 \}$ to:
 	- $a$: $\delta(1,a) = \{ 3 \}$
 	- $b$: $\delta(1,b) = \{ \emptyset  \}$
+
 3. Going from $\{ 3 \}$ to:
 	- $a$: $\delta(3,a) = \{ 2 \}$
 	- $b$: $\delta(3,b) = \{ 3,2 \}$
+
 4.  Going from $\{ 2 \}$ to: ( note we define this as accept state )
 	- $a$: $\delta(2,a) = \{ 1 \}$
 	- $b$: $\delta(2,b) = \{ \emptyset \}$
+
 5. Going from $\{ 2,3 \}$ to: ( also contains accept state )
 	- $a$: $\delta(2,a) \cup \delta(3,a) = \{ 1,2 \}$
 	- $b$: $\delta(2,b) \cup \delta(3,b) = \emptyset \cup \{ 3,2 \} \to \{ 3,2 \}$
+
 6. Going from $\{ 1,2 \}$ to: (also contains accept state )
 	- $a$: $\delta(1,a) \cup \delta(2,a) =\{ 1,3 \}$
 	- $b$: $\delta(1,b) \cup \delta(2,b) =\emptyset \cup \emptyset \to \emptyset$
+
 7. Going from $1,3$ to:
 	- $a$: $\delta(1,a) \cup \delta(3,a) = \{2,3 \}$
 	- $b$: $\delta(1,b) \cup \delta(3,b) = \emptyset \cup \{ 2,3 \} \to \{ 2,3 \}$
+
 8. For Dead States $\emptyset$:
 	- for $a$ and $b$: $\delta(\emptyset, b) = \{\emptyset\}$
 

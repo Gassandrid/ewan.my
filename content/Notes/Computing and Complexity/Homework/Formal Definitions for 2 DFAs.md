@@ -1,13 +1,11 @@
 ---
 title: Formal Definitions for 2 DFAs
-author: Ewan Pedersen
+author:
+  - Ewan Pedersen
 date: 2025-01-26
-updated: 2025-01-26
+updated: 2025-07-28
+abstract: This document provides formal definitions for both the DFAs provided for HW1 assignment, and includes generated state diagrams.
 ---
-
-> **Abstract**
-
-> This document provides formal definitions for both the DFAs provided for HW1 assignment, and includes generated state diagrams.
 
 ---
 
