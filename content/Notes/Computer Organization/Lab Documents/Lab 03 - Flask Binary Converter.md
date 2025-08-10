@@ -1,12 +1,12 @@
 ---
 date: 2024-10-03
 tags:
-  - web
-  - python
   - cs/embedded
   - university
-updated: 2025-03-31
-fileClass: note
+  - cs/web
+updated: 2025-08-03
+fileClass:
+  - note
 ---
 
 > [!abstract] Student Information

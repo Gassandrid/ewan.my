@@ -2,9 +2,8 @@
 id: CH2 - Sampling Statistics Continued
 aliases: 
 tags:
-  - latex
-  - python
   - math/statistics
+  - cs/python
 date: 2024-09-12
 updated: 2025-06-21
 ---

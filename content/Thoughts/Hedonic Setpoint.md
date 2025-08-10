@@ -1,9 +1,9 @@
 ---
 id: Hedonic Setpoint
-aliases: []
+aliases: 
 tags:
   - philosophy
-  - posthumanism
+  - transhumanism
 date: 2025-02-27
 title: Hedonic Setpoint
 updated: 2025-03-03

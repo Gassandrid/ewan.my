@@ -2,10 +2,8 @@
 id: CH1 - Categorical Variable
 aliases: 
 tags:
-  - chart
-  - boxplot
-  - python
   - math/statistics
+  - cs/python
 date: 2024-09-12
 updated: 2025-06-21
 ---
