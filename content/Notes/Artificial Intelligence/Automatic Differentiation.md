@@ -31,7 +31,9 @@ $$
 f(x) = e^{2x}-x^3 \to f'(x)=2e^{2x}-3x^2
 $$
 
-```python
+**Becomes:**
+
+```python-r
 def f(x):
 	return np.exp(2*x) - x**3
 
@@ -41,3 +43,13 @@ def f_prime(x):
 print(f(10))
 print(f_prime(10))
 ```
+
+However, this gets quite tedious for complicated functions. We need an automated approach.
+
+### Some Automated Approaches
+
+There are several others ways for automating differentiation, [[Automatic Differentiation]] just happens to be one of these methods.
+
+#### Numerical Differentiation
+
+**Numerical Differentiation** uses *finite differences* to approximate the derivative. The simplest definition of this 
