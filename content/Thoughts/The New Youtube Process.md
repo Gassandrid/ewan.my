@@ -1,6 +1,6 @@
 ---
 date: 2025-04-13
-updated: 2025-04-25
+updated: 2025-08-12
 tags:
   - seed
   - youtube
@@ -13,6 +13,9 @@ But the way we know we absorb knowledge is by writing about it. I have been payi
 Very important, however, is that I dont just write a very in depth transcript note like I do for the neuroscience notes. I am not here to nitpick every detail. This is more to write about my *thoughts* on the video, and not the **exact** details within it.
 
 ---
+
+>[!Warning] Some Changes
+> While this remains mostly the same, something I will be doing now is making a *new* note for any of these given youtube videos, and then referencing them to my local clippings `source` metadata tag.
 
 ## For Any given Video
 

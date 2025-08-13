@@ -3,6 +3,8 @@ date: 2025-04-05
 updated: 2025-07-18
 tags:
   - math/calculus
+fileClass:
+  - note
 ---
 
 The **Dirac Delta Function** is a distribution over a curve to represent a **unit impulse**. Essentially, it is a generalized function on the real numbers, which has a value of zero at all places except at zero itself.

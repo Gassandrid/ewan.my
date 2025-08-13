@@ -1,10 +1,7 @@
 ---
 date: 2024-09-12
-updated: 2024-10-05
+updated: 2025-08-11
 ---
-## Activation Functions in Neural Networks
-
-### Overview
 
 Activation functions are essential components of neural networks that determine whether a neuron should be activated or not. They introduce non-linearity into the model, enabling it to learn complex patterns and relationships in data. Without activation functions, the neural network would behave like a linear model, regardless of its depth.
 

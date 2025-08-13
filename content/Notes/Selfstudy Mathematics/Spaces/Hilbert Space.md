@@ -4,8 +4,9 @@ updated: 2025-07-15
 tags:
   - math/analysis
   - todo/math
-source: https://www.youtube.com/watch?v=FFPXm-tuOt8
-fileClass: transcript
+source: "[[What is a Hilbert Space?]]"
+fileClass:
+  - transcript
 ---
 
 > What is a Hilbert Space? **David Hilbert** and **John von Neumann** both played played key roles in the development of Hilbert Spaces, with Hilbert laying much of the groundwork and von Neumann finishing it off by giving the first complete definition of them. These spaces then quickly became useful in areas like Quantum Mechanics, the physics of heat transfer, and even modeling sound waves.

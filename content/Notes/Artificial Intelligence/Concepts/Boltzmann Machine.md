@@ -1,11 +1,9 @@
 ---
 date: 2024-09-12
-updated: 2025-07-03
+updated: 2025-08-11
 ---
 
 ![[Pasted image 20240924102913.png]]
-
-## Overview
 
 A Boltzmann Machine is a type of stochastic (randomly determined) neural network that is used to model probability distributions over binary-valued patterns. It's a foundational model in the field of probabilistic graphical models and deep learning. It is named after the Boltzmann distribution in statistical mechanics.
 
@@ -13,7 +11,7 @@ The Boltzmann Machien is an evolution of the ideas presented by the memory model
 
 ### Key Components
 
-- **Neurons**: The basic units of a Boltzmann Machine, which are typically binary, meaning they can take on a value of either 0 or 1.
+- **[[Neurons]]**: The basic units of a Boltzmann Machine, which are typically binary, meaning they can take on a value of either 0 or 1.
 - **Weights**: Connections between neurons have weights, which determine the strength and direction of their interaction.
 - **Energy Function**: The state of the network is characterized by an energy function, which the network seeks to minimize.
 
