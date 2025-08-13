@@ -34,6 +34,8 @@ $$
 **Becomes:**
 
 ```python-r
+import numpy as np
+
 def f(x):
 	return np.exp(2*x) - x**3
 

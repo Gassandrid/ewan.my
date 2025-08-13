@@ -1,9 +1,14 @@
 ---
 id: Is the Universe a Deterministic System?
-aliases: []
-tags: [seed, books/geb, philosophy]
+aliases: 
+tags:
+  - seed
+  - books/geb
+  - philosophy
 date: 2025-07-26
 updated: 2025-08-03
+fileClass:
+  - note
 ---
  
 
