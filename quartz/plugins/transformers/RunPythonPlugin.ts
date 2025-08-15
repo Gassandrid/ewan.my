@@ -33,10 +33,12 @@ export const RunPythonPlugin: QuartzTransformerPlugin = () => ({
           loadTime: "afterDOMReady",
           script: `
             console.log('Global Pyodide script initializing...');
-            let pyodideInstance = null;
-            let isPyodideLoading = false;
-            let pyodideLoadPromise = null;
-            let capturedOutput = { stdout: '', stderr: '' };
+            
+            // Make everything truly global
+            window.pyodideInstance = window.pyodideInstance || null;
+            window.isPyodideLoading = window.isPyodideLoading || false;
+            window.pyodideLoadPromise = window.pyodideLoadPromise || null;
+            window.codeMirrorInstances = window.codeMirrorInstances || {};
 
             const pythonStdoutRedirect = \`
 import sys
@@ -46,20 +48,22 @@ sys.stderr = io.StringIO()
             \`;
 
             async function loadPyodideGlobal() {
-              if (pyodideInstance) {
-                console.log('Pyodide already loaded.');
-                return pyodideInstance;
+              if (window.pyodideInstance) {
+                console.log('Pyodide already loaded globally.');
+                return window.pyodideInstance;
               }
-              if (isPyodideLoading) {
+              if (window.isPyodideLoading) {
                 console.log('Pyodide load already in progress, waiting...');
-                return pyodideLoadPromise; 
+                return window.pyodideLoadPromise; 
               }
 
-              console.log('Starting Pyodide load...');
-              isPyodideLoading = true;
+              console.log('Starting Pyodide global load...');
+              window.isPyodideLoading = true;
+              
+              // Disable all current buttons
               document.querySelectorAll('.python-run-button').forEach(btn => btn.disabled = true);
 
-              pyodideLoadPromise = new Promise(async (resolve, reject) => {
+              window.pyodideLoadPromise = new Promise(async (resolve, reject) => {
                 try {
                   if (typeof loadPyodide === 'undefined') {
                     console.error('loadPyodide function not found. Ensure pyodide.js is loaded.');
@@ -67,34 +71,52 @@ sys.stderr = io.StringIO()
                     return;
                   }
 
-                  pyodideInstance = await loadPyodide({
-                  });
+                  window.pyodideInstance = await loadPyodide({});
                   console.log('Pyodide core loaded successfully.');
 
-                  // common packages
+                  // Load common packages
                   console.log('Loading common Python packages...');
-                  await pyodideInstance.loadPackage(['matplotlib', 'numpy', 'pandas', 'scipy', 'sympy', 'scikit-learn']);
+                  await window.pyodideInstance.loadPackage(['matplotlib', 'numpy', 'pandas', 'scipy', 'sympy', 'scikit-learn']);
                   console.log('Common packages loaded.');
 
                   console.log('Setting up global stdout/stderr redirection...');
-                  pyodideInstance.runPython(pythonStdoutRedirect);
+                  window.pyodideInstance.runPython(pythonStdoutRedirect);
                   console.log('Global redirection setup complete.');
 
+                  console.log('Pyodide fully initialized globally.');
+                  window.isPyodideLoading = false;
 
-                  console.log('Pyodide fully initialized.');
-                  isPyodideLoading = false;
+                  // Enable all buttons across the entire site
+                  enableAllPythonButtons();
 
-                  document.querySelectorAll('.python-run-button').forEach(btn => btn.disabled = false);
-                  console.log('Python run buttons enabled.');
-
-                  resolve(pyodideInstance);
+                  resolve(window.pyodideInstance);
                 } catch (error) {
                   console.error('Error loading Pyodide or packages:', error);
-                  isPyodideLoading = false;
+                  window.isPyodideLoading = false;
                   reject(error);
                 }
               });
-              return pyodideLoadPromise;
+              return window.pyodideLoadPromise;
+            }
+
+            function enableAllPythonButtons() {
+              console.log('Enabling all Python run buttons globally...');
+              document.querySelectorAll('.python-run-button').forEach(btn => {
+                btn.disabled = false;
+              });
+            }
+
+            // Check for buttons that need enabling (for navigation/preloading scenarios)
+            function checkAndEnableButtons() {
+              if (window.pyodideInstance) {
+                console.log('Pyodide ready, ensuring all buttons are enabled...');
+                enableAllPythonButtons();
+              } else if (!window.isPyodideLoading) {
+                console.log('Pyodide not loaded, starting load...');
+                loadPyodideGlobal().catch(err => {
+                  console.error("Pyodide load failed:", err);
+                });
+              }
             }
 
             async function executePythonBlock(blockId) {
@@ -115,28 +137,30 @@ sys.stderr = io.StringIO()
 
               const code = editorInstance.getValue();
 
-              if (!pyodideInstance && !isPyodideLoading) {
-                  console.log('Pyodide not loaded, initiating load...');
-                  try {
-                    await loadPyodideGlobal(); 
-                  } catch (error) {
-                    console.error('Failed to load Pyodide for execution:', error);
-                    textElement.textContent = 'Error: Pyodide failed to load. ' + error.message;
-                    outputWrapper.classList.add('expanded');
-                    return; 
+              // Ensure Pyodide is ready
+              if (!window.pyodideInstance) {
+                  if (window.isPyodideLoading) {
+                     console.log('Pyodide is loading, waiting to execute...');
+                     try {
+                        await window.pyodideLoadPromise; 
+                     } catch (error) {
+                        console.error('Pyodide loading failed while waiting:', error);
+                        textElement.textContent = 'Error: Pyodide failed to load. ' + error.message;
+                        outputWrapper.classList.add('expanded');
+                        return; 
+                     }
+                  } else {
+                      console.log('Pyodide not loaded, initiating load...');
+                      try {
+                        await loadPyodideGlobal(); 
+                      } catch (error) {
+                        console.error('Failed to load Pyodide for execution:', error);
+                        textElement.textContent = 'Error: Pyodide failed to load. ' + error.message;
+                        outputWrapper.classList.add('expanded');
+                        return; 
+                      }
                   }
-              } else if (isPyodideLoading) {
-                 console.log('Pyodide is loading, waiting to execute...');
-                 try {
-                    await pyodideLoadPromise; 
-                 } catch (error) {
-                    console.error('Pyodide loading failed while waiting:', error);
-                    textElement.textContent = 'Error: Pyodide failed to load. ' + error.message;
-                    outputWrapper.classList.add('expanded');
-                    return; 
-                 }
               }
-
 
               textElement.innerHTML = ''; 
               textElement.classList.remove('error', 'success'); 
@@ -151,14 +175,14 @@ sys.stderr = io.StringIO()
               try {
                 console.log('Executing Python code for block:', blockId);
 
-                pyodideInstance.runPython('sys.stdout.seek(0); sys.stdout.truncate(0); sys.stderr.seek(0); sys.stderr.truncate(0)');
+                window.pyodideInstance.runPython('sys.stdout.seek(0); sys.stdout.truncate(0); sys.stderr.seek(0); sys.stderr.truncate(0)');
 
-                await pyodideInstance.loadPackagesFromImports(code);
+                await window.pyodideInstance.loadPackagesFromImports(code);
 
-                let result = await pyodideInstance.runPythonAsync(code);
+                let result = await window.pyodideInstance.runPythonAsync(code);
 
-                let stdout = pyodideInstance.runPython('sys.stdout.getvalue()');
-                let stderr = pyodideInstance.runPython('sys.stderr.getvalue()');
+                let stdout = window.pyodideInstance.runPython('sys.stdout.getvalue()');
+                let stderr = window.pyodideInstance.runPython('sys.stderr.getvalue()');
 
                 let outputContent = '';
                 if (stdout) {
@@ -168,25 +192,25 @@ sys.stderr = io.StringIO()
                     outputContent += '\\n--- STDERR ---\\n' + stderr;
                 }
 
-                 if (result !== undefined && result !== null) {
+                 if (result !== undefined ? result !== null : false) {
                     outputContent += '\\nResult: ' + result.toString();
                 }
                 textElement.textContent = outputContent; 
 
-                let figureExists = pyodideInstance.runPython(\`
+                let figureExists = window.pyodideInstance.runPython(\`
 import matplotlib.pyplot as plt
 len(plt.get_fignums()) > 0
                 \`);
 
                 if (figureExists) {
                   console.log('Matplotlib figure detected, generating plot image...');
-                  let plotData = pyodideInstance.runPython(\`
+                  let plotData = window.pyodideInstance.runPython(\`
 import io
 import base64
 import matplotlib.pyplot as plt
 
 buf = io.BytesIO()
-plt.savefig(buf, format='png', bbox_inches='tight') # Use tight bbox
+plt.savefig(buf, format='png', bbox_inches='tight')
 buf.seek(0)
 img_str = base64.b64encode(buf.read()).decode('UTF-8')
 plt.close() 
@@ -206,7 +230,6 @@ img_str
                      console.log('No active Matplotlib figures detected.');
                 }
 
-                
                 textElement.classList.add('success');
 
               } catch (error) {
@@ -223,14 +246,50 @@ img_str
               }
             }
 
-             document.addEventListener('DOMContentLoaded', () => {
-                console.log('DOM Content Loaded, initiating Pyodide load...');
-                 loadPyodideGlobal().catch(err => {
-                    console.error("Initial Pyodide load failed:", err);
-                 });
+            // Make the execution function globally available
+            window.executePythonBlock = executePythonBlock;
 
-                 window.codeMirrorInstances = window.codeMirrorInstances || {};
-             });
+            // Initial setup and page visibility handling
+            function initializePage() {
+              console.log('Initializing page for Pyodide...');
+              checkAndEnableButtons();
+            }
+
+            // Event listeners for various page scenarios
+            document.addEventListener('DOMContentLoaded', initializePage);
+            
+            document.addEventListener('visibilitychange', () => {
+              if (!document.hidden) {
+                console.log('Page became visible, checking buttons...');
+                setTimeout(checkAndEnableButtons, 200);
+              }
+            });
+
+            window.addEventListener('focus', () => {
+              console.log('Window focused, checking buttons...');
+              setTimeout(checkAndEnableButtons, 200);
+            });
+
+            window.addEventListener('popstate', () => {
+              console.log('Navigation detected, checking buttons...');
+              setTimeout(checkAndEnableButtons, 300);
+            });
+
+            // Override history methods to catch programmatic navigation
+            (function() {
+              const originalPushState = history.pushState;
+              const originalReplaceState = history.replaceState;
+              
+              history.pushState = function() {
+                originalPushState.apply(history, arguments);
+                setTimeout(checkAndEnableButtons, 300);
+              };
+              
+              history.replaceState = function() {
+                originalReplaceState.apply(history, arguments);
+                setTimeout(checkAndEnableButtons, 300);
+              };
+            })();
 
           `,
         },
@@ -362,9 +421,8 @@ img_str
         ]
     };
 
-
   function initializeEditorWhenReady() {
-      if (typeof CodeMirror !== 'undefined') {
+      if (typeof CodeMirror !== 'undefined' ? Boolean(codeTextarea) : false) {
           console.log('CodeMirror ready for block:', blockId);
           editorInstance = CodeMirror.fromTextArea(codeTextarea, {
             mode: 'python',
@@ -382,18 +440,19 @@ img_str
 
           const codeBlock = editorInstance.getWrapperElement();
 
-          // Refresh editor after slight delay to ensure layout calculation
-          // setTimeout(() => editorInstance.refresh(), 50);
-
            editorInstance.on('focus', () => codeBlock.classList.add('cm-focused'));
            editorInstance.on('blur', () => codeBlock.classList.remove('cm-focused'));
+
+           // Check if Pyodide is ready and enable button if so
+           if (window.pyodideInstance) {
+               runBtn.disabled = false;
+           }
 
       } else {
           console.log('CodeMirror not ready yet for block ' + blockId + ', retrying...');
           setTimeout(initializeEditorWhenReady, 100);
       }
   }
-
 
   function setupButtons() {
       copyBtn.appendChild(createSvgElement(svgCopy));
@@ -405,23 +464,15 @@ img_str
           isExpanded = !isExpanded;
           
           if (isExpanded) {
-              
               codeContent.style.height = 'auto';
               codeContent.classList.add('expanded');
-              
               
               const naturalHeight = codeContent.scrollHeight;
               const targetHeight = Math.min(naturalHeight, 600); 
               
-              
               codeContent.style.height = '150px';
-              
-              
               codeContent.offsetHeight;
-              
-              
               codeContent.style.height = targetHeight + 'px';
-              
               
               setTimeout(() => {
                   if (isExpanded) {
@@ -429,17 +480,11 @@ img_str
                   }
               }, 400);
           } else {
-              
               const currentHeight = codeContent.scrollHeight;
               codeContent.style.height = currentHeight + 'px';
-              
-              
               codeContent.offsetHeight;
-              
-              
               codeContent.style.height = '150px';
               codeContent.classList.remove('expanded');
-              
               
               setTimeout(() => {
                   if (!isExpanded) {
@@ -481,8 +526,8 @@ img_str
 
       runBtn.addEventListener('click', () => {
          console.log('Run button clicked for block:', blockId);
-         if (typeof executePythonBlock === 'function') {
-             executePythonBlock(blockId); 
+         if (typeof window.executePythonBlock === 'function') {
+             window.executePythonBlock(blockId); 
          } else {
              console.error('Global executePythonBlock function not found!');
              textOutput.textContent = 'Error: Execution environment not ready.';
