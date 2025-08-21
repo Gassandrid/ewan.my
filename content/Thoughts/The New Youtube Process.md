@@ -1,6 +1,6 @@
 ---
 date: 2025-04-13
-updated: 2025-08-12
+updated: 2025-08-16
 tags:
   - seed
   - youtube
@@ -25,7 +25,7 @@ This is the tool I just installed for capturing the content of web pages. This d
 
 2. **Gestation**
 
-These notes will remain in this folder for some time, and every time I find myself with some free time I will turn to the todo tags, and clean up the web clipping content with my own personal thoughts. Like I said, this will mostly be the things that I thought and felt about the video, but I will also go over the content roughly. I will return to this every now and then, and because of the clippings the notes will have all the right metadata and structure that they need. They will also get the "youtube" tag.
+These notes will remain in this folder for some time, and every time I find myself with some free time I will turn to the todo tags, and clean up the web clipping content with my own personal thoughts. Like I said, this will mostly be the things that I thought and felt about the video, but I will also go over the content roughly. I will return to this every now and then, and because of the clippings the notes will have all the right metadata and structure that they need. 
 
 3. **Maturity**
 

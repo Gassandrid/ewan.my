@@ -1,12 +1,12 @@
 ---
 title: How to self study pure math - a step-by-step guide
-source: https://www.youtube.com/watch?v=byNaO_zn2fI&t=40s
+source:
+  - https://www.youtube.com/watch?v=byNaO_zn2fI&t=40s
 published: 
 created: 2025-04-25
 description: This video has a list of books, videos, and exercises that goes through the undergrad pure mathematics curriculum from start to finish. REAL ANALYSISBook:...
 tags:
-  - youtube
-  - resource/math
+  - youtube/math
 date: 2025-04-25
 updated: 2025-04-25
 ---

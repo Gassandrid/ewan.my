@@ -1,12 +1,14 @@
 ---
 id: Markov Chains Explained - 1
 aliases: 
-tags: [youtube, math/linear-algebra/markhov-chains]
+tags:
+  - math/linear-algebra/markhov-chains
 date: 2025-04-29
 fileClass:
   - transcript
-updated: 2025-07-28
-source: https://youtu.be/i3AkTO9HLXo?si=0HlExQr2nVNWsNEG
+updated: 2025-08-16
+source:
+  - "[[Markov Chains Clearly Explained! Part - 1]]"
 ---
  
 

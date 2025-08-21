@@ -23,7 +23,7 @@ In terms of the [[Basal Forebrain]], the medial septum is a part of the **septal
 
 ### Medial Septum Nucleus
 
-The medial septum nucleaus (MSN) plays a crucial part in the formation of [[Theta Rhythm - A memory clock|theta waves]] in the [[Hippocampus]].
+The medial septum nucleaus (MSN) plays a crucial part in the formation of [[Theta Rhythm|theta waves]] in the [[Hippocampus]].
 
 More specifically, [GABAergic](https://en.wikipedia.org/wiki/GABAergic "GABAergic") cells of the medial septum that act as theta pacemakers target [dentate gyrus](https://en.wikipedia.org/wiki/Dentate_gyrus "Dentate gyrus"), CA3, and CA1 interneurons. Pacemaking MS interneurons express [hyperpolarization-activated cyclic nucleotide-gated](https://en.wikipedia.org/wiki/HCN_channel "HCN channel") (HCN) channels which likely, at least partially, mediate their pacemaker properties.[^1]
 
