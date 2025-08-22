@@ -1,11 +1,11 @@
 ---
 date: 2024-10-17
 tags:
-  - python
-  - web
   - cs/embedded
   - university
-updated: 2025-03-31
+  - cs/web
+  - cs/python
+updated: 2025-08-21
 fileClass: note
 ---
 

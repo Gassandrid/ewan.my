@@ -1,10 +1,11 @@
 ---
 date: 2024-08-24
 tags:
-  - cryptography
-  - cs
-updated: 2024-10-18
+  - cs/crypto
+  - todo/cs
+updated: 2025-08-21
 ---
+
 ## RSA Encryption
 
 ### Overview
@@ -41,22 +42,34 @@ RSA (Rivest-Shamir-Adleman) is a widely used asymmetric encryption algorithm. It
     - **Message M:** The plaintext message, which must be converted to a numeric value m (0 ≤ m < n).
     - **Encryption:**
         
+
         java
+
         
+
         Copy code
+
         
+
         `Ciphertext c = m^e mod n`
+
         
     - The ciphertext c is sent to the recipient.
 3. **Decrypting a Message:**
     
     - **Decryption:**
         
+
         java
+
         
+
         Copy code
+
         
+
         `Message m = c^d mod n`
+
         
     - The recipient uses their private key (d, n) to decrypt the ciphertext and retrieve the original message.
 
@@ -71,22 +84,34 @@ RSA (Rivest-Shamir-Adleman) is a widely used asymmetric encryption algorithm. It
     - **Hash the Message:** The original message is hashed using a cryptographic hash function (e.g., SHA-256).
     - **Sign the Hash:**
         
+
         bash
+
         
+
         Copy code
+
         
+
         `Signature s = hash^d mod n`
+
         
     - The sender transmits both the original message and the signature.
 3. **Verifying the Signature:**
     
     - **Verification:**
         
+
         lua
+
         
+
         Copy code
+
         
+
         `Hash = s^e mod n`
+
         
     - The recipient hashes the received message and compares it to the decrypted hash from the signature.
     - If the hashes match, the signature is valid, confirming that the message was not tampered with and was indeed sent by the owner of the private key.

@@ -3,7 +3,6 @@ date: 2025-04-02
 updated: 2025-04-23
 tags:
   - math/linear-algebra
-  - 3blue1brown
   - todo/math
 fileClass: note
 ---

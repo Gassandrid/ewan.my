@@ -4,8 +4,9 @@ updated: 2025-04-18
 tags:
   - cs
   - projects/homelab/software
-type: project
 title: Brainstorming Software Stack
+fileClass:
+  - note
 ---
 
  Found a great list of usefull software services to run:

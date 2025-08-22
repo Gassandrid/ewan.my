@@ -1,6 +1,6 @@
 ---
 date: 2024-10-15
-updated: 2025-06-02
+updated: 2025-08-21
 tags:
   - todo
 title: Link Index
@@ -21,7 +21,7 @@ You can check out <a href="tags/math">#math</a> for most of the notes, a more th
 
 ### Statistics for Engineering
 
-Like Calc 3, you can go to <a href="tags/statistics">#statistics</a>, but I also made an [[Statistics Index|organizer]]
+Like Calc 3, you can go to <a href="tags/statistics">statistics</a>, but I also made an [[Statistics Index|organizer]]
 
 ### Independent Math
 

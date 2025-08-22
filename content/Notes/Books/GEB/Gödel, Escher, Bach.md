@@ -1,10 +1,12 @@
 ---
 date: 2025-06-13
-updated: 2025-08-13
+updated: 2025-08-21
 tags:
   - books/geb
 fileClass:
   - book
+author:
+  - "[[Douglas Hofstadter]]"
 ---
 
 ![[Pasted image 20250613090016.png]]

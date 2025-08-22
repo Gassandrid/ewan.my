@@ -2,10 +2,10 @@
 id: Scribing
 aliases: []
 tags:
-  - cybersecurity
+  - cs/cybersecurity
 date: 2025-03-02
 title: Scribing
-updated: 2025-03-02
+updated: 2025-08-21
 ---
 
 ## What Are Our Main Interests?

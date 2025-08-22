@@ -3,7 +3,7 @@ title: Discussion Question 1
 date: 2025-01-29
 updated: 2025-01-30
 tags:
-  - cybersecurity
+  - cs/cybersecurity
 ---
 *Human Rights advocates and Sustainability advocates are sometimes separated because they work in different silos; the human rights field tends to be more oriented on legal and social policy issues, and sustainability is often more geared towards some aspect of physical science or engineering.*
 

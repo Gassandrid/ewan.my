@@ -3,7 +3,7 @@ date: 2025-01-27
 updated: 2025-01-27
 title: Interview Template
 tags:
-  - cybersecurity
+  - cs/cybersecurity
 ---
 
 ## Role Player Question Template

@@ -1,7 +1,10 @@
 ---
 date: 2024-08-09
-updated: 2024-08-09
+updated: 2025-08-21
+tags:
+  - cs/software
 ---
+
 # AGE (CLI App)
 
 ## Overview
@@ -35,17 +38,25 @@ For other platforms, follow the instructions provided on the [AGE GitHub page](h
 
 1. **Encrypting a File:**
     
+
     To encrypt a file using AGE:
+
     
+
     `age -o encrypted.txt.age -r RECIPIENT_PUBLIC_KEY file.txt`
+
     
     - `-o encrypted.txt.age` specifies the output file name.
     - `-r RECIPIENT_PUBLIC_KEY` is the public key of the recipient. You can use your own key if encrypting for yourself.
 2. **Decrypting a File:**
     
+
     To decrypt a file:
+
     
+
     `age -d -i PRIVATE_KEY_FILE -o decrypted.txt encrypted.txt.age`
+
     
     - `-d` indicates decryption.
     - `-i PRIVATE_KEY_FILE` specifies the private key file.
@@ -55,19 +66,31 @@ For other platforms, follow the instructions provided on the [AGE GitHub page](h
 
 1. **Generating a Key Pair:**
     
+
     To generate a new key pair:
+
     
+
     `age-keygen -o key.txt`
+
     
+
     This will create a key file containing both the private and public keys. The public key can be shared with others to allow them to encrypt files for you.
+
     
 2. **Extracting the Public Key:**
     
+
     If you have a private key file and want to extract the public key:
+
     
+
     `age-keygen -y key.txt`
+
     
+
     This command outputs the public key associated with the private key.
+
     
 
 ## Encrypting for Multiple Recipients

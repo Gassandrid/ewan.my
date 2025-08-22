@@ -1,10 +1,11 @@
 ---
 date: 2024-08-24
 tags:
-  - cryptography
-  - cs
-updated: 2024-10-18
+  - cs/crypto
+  - todo/cs
+updated: 2025-08-21
 ---
+
 ## Hashing
 
 ### Overview
@@ -25,7 +26,6 @@ Hashing is a process that transforms input data of any size into a fixed-size st
     - Even a small change in the input data will produce a vastly different hash value (this is called the avalanche effect).
 
 ### Common Hash Functions
-
 
 1. **MD5 (Message Digest Algorithm 5):**
     

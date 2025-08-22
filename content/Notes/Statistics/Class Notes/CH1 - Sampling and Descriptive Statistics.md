@@ -1,20 +1,19 @@
 ---
 id: CH1 - Sampling and Descriptive Statistics
-aliases: 
+aliases:
 tags:
-  - sampling
-  - data
-  - latex
   - math/statistics
+  - university
 date: 2024-09-12
-updated: 2025-06-21
+updated: 2025-08-21
 ---
+
 # CH1 - Sampling and Descriptive Statistics
 
 > How do we get data?
 > How do we describe data?
 
-## 1.1 sampling
+## 1.1 Sampling
 
 **[[Population]]:** the entire collection of objects or outcomes about which information is sought
 
@@ -30,7 +29,10 @@ Our best tool to get a representative sample is SIMPLE RANDOM SAMPLE(SRS).
 
 An SRS of size "n" is a sample chosen by a method in which each collection of n population items is equally likely to occur.
 
-$$ \binom{50}{5} = 2,118,760 $$
+$$
+ \binom{50}{5} = 2,118,760 
+$$
+
 This is the number of ways to choose 5 items from a population of 50 items, where the order of selection does not matter.
 
 ---
@@ -49,7 +51,10 @@ Every time you take a number, the results will vary. This is known as Natural Sa
 - B: Out of State
 
 **Calculations:**
-$$ \hat{p} = \frac{x}{n} = \frac{7}{50} = 0.14 $$
+
+$$
+ \hat{p} = \frac{x}{n} = \frac{7}{50} = 0.14 
+$$
 
 From the poll, we can infer that 14% of the population is out of state. However, this might not be the case as the sample is not representative.
 
@@ -67,10 +72,16 @@ From the poll, we can infer that 14% of the population is out of state. However,
 **Calculations**:
 
 Sample:
-$$ \hat{p} = \frac{x}{n} = \frac{46}{50} = 0.92 $$
+
+$$
+ \hat{p} = \frac{x}{n} = \frac{46}{50} = 0.92 
+$$
 
 Full Population:
-$$ p = \frac{x}{N} = \frac{1372}{10925} = 0.126 $$
+
+$$
+ p = \frac{x}{N} = \frac{1372}{10925} = 0.126 
+$$
 
 From the poll, we can infer that 92% of the population is in CEMS. However, this might not be the case as the sample is not representative. Why is this the case?
 
@@ -82,6 +93,7 @@ From the poll, we can infer that 92% of the population is in CEMS. However, this
 **Understanding the difference between Tangible and Conceptual Population**
 
 When we say "All UVM undergrads", we are talking about a conceptual population. This is not tangible. We cannot measure this population.
+
 When we say "STAT2430A", we are talking about a tangible population. This is measurable.
 
 When measurements are taken from a process under identical experimental conditions, we consider the measurements to be an SRS of the population.

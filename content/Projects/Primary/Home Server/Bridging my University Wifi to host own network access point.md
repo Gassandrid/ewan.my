@@ -1,11 +1,10 @@
 ---
 date: 2025-01-24
-updated: 2025-02-04
+updated: 2025-08-21
 title: Bridging my University Wifi to host own network access point
 tags:
-  - networking
-  - cs
   - projects/homelab
+  - cs/networking
 ---
 
 This was quite a difficult process, and is still currently in progress to an extent. While difficult, it was absolutely necessary to get my IOT devices up and running with internet connection
@@ -19,4 +18,3 @@ My [[University Of Vermont|University]], while providing strong and easy to use 
 ---
 
 ## The (Maybe?) Solution
-
