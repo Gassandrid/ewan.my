@@ -1,0 +1,71 @@
+; BUDGET for college expenses payed by Heather and Liam
+~ monthly from 2025-08-24
+    Expenses:college      $500.00
+    Liabilities:chase-credit-card   -$500.00
+    [budget]
+
+
+; RECURRING PAYMENTS
+
+
+; Gym Membership - Payed for by Ewan alone
+~ monthly from 2025/09/01
+    Expenses:gym                      $45.00
+    Liabilities:chase-credit-card
+
+
+; PRIMARY TRANSACTIONS
+
+2025-08-22 starting balances
+    Assets:wells-fargo-checking         6517.44
+    Equity:start                       -6517.44
+
+; old bill for apartment setup - payed out of pocket by ewan but will be reimbursed by heather and liam
+2025-08-22 starting balances
+    Expenses:college:apartment          75.00
+    Assets:wells-fargo-checking        -75.00
+
+; dad input for college 3,500
+2025-08-22 transfer from dad
+    Assets:wells-fargo-checking         3500.00
+    Equity:dad                         -3500.00
+
+; ejenta paycheck 1661.90
+2025-08-23 ejenta paycheck
+    Assets:wells-fargo-checking         1661.90
+    Income:ejenta                      -1661.90
+
+; college tuition 6527.00
+2025-08-23 college tuition payment
+    Expenses:tuition           6527.00
+    Assets:wells-fargo-checking        -6527.00
+
+; walgreens 
+2025-08-23 walgreens retinol cream
+    Expenses:college:medical            38.01
+    Assets:wells-fargo-checking        -38.01
+
+; costco
+2025-08-24 costco food run
+    Expenses:college:food                49.80
+    Assets:wells-fargo-checking         -49.80
+
+2025-08-24 office desk and lamp amazon
+    Expenses:college:apartment           64.17
+    Liabilities:chase-credit-card            -64.17
+
+2025-08-24 first night pizza
+    Expenses:college:food              16.16
+    Liabilities:chase-credit-card          -16.16
+
+2025-08-24 groceries city market
+    Expenses:college:food              70.65
+    Liabilities:chase-credit-card          -70.65
+
+2025-08-24 long ethernet cable and adapter
+    Expenses:personal                     32.08
+    Assets:wells-fargo-checking          -32.08
+
+2025-08-24 initial YMCA payment
+    Expenses:gym                            48.04
+    Liabilities:chase-credit-card          -48.04

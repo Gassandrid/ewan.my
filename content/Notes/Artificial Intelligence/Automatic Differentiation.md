@@ -4,11 +4,12 @@ aliases: []
 tags:
   - cs/ai/gradient-descent
   - math/calculus
+  - todo/math
 date: 2025-08-13
 fileClass:
   - note
 source: "[[What is Automatic Differentiation?]]"
-updated: 2025-08-13
+updated: 2025-08-25
 ---
 
 Automatic differentiation (AD) is a computational technique used to evaluate the derivative of a function specified by a computer program. It is particularly useful in machine learning and optimization tasks, where gradients are needed for algorithms like gradient descent.
@@ -55,3 +56,5 @@ There are several others ways for automating differentiation, [[Automatic Differ
 #### Numerical Differentiation
 
 **Numerical Differentiation** uses *finite differences* to approximate the derivative. The simplest definition of this 
+
+#### Symbolic Evalutation
