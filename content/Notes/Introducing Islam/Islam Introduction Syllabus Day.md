@@ -69,5 +69,4 @@ Most Muslims are **not** Arabs, nor is Arabic their primary language.
 
 ### The United States
 
-
-Muslims speak all kinds of languages, represnt many ethniciities, and are ==Athe most diverse religion in the USA!==. 
+Muslims speak all kinds of languages, represent many ethnicities, and are ==The most diverse religion in the USA!==. 

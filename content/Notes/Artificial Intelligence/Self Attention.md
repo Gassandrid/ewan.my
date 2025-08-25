@@ -1,6 +1,6 @@
 ---
 date: 2025-08-23
-updated: 2025-08-23
+updated: 2025-08-25
 fileClass:
   - note
 tags:
@@ -146,6 +146,18 @@ The next step is quite trivial, we compute how well a key matches with a value b
 
 >[!Note] Please Note
 > In this case, we are modeling for a **single head** attention mechanism. In practice, this is often scaled up to **multi head** attention to utilize parallelization as much as possible.
+
+There is one more step in this process, and that is to take the [[Softmax]] of every **column** of the "table" we have created.
+
+$$
+Softmax(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}
+$$
+
+This means that every column will contain a series of values somewhere $0 \leq j \leq  1$, where each column's values will add up to $1$.
+
+What we have essentially created here is a probability distribution for each words' relative importance to every other word.
+
+This is where the final step of the attention block comes in: the **Value Matrix**
 
 [^1]: In practical cases, *position* would be embedded in a much more abstract way than just having its index at the top. We will also be representing all tokens as full words for brevity
 [^2]: Li, X. L., Thickstun, J., Gulrajani, I., Liang, P., & Hashimoto, T. B. (2022). _Diffusion-LM Improves Controllable Text Generation_ (No. arXiv:2205.14217). arXiv. [https://doi.org/10.48550/arXiv.2205.14217](https://doi.org/10.48550/arXiv.2205.14217)
