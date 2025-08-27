@@ -1,6 +1,6 @@
 ---
 date: 2025-08-23
-updated: 2025-08-25
+updated: 2025-08-26
 fileClass:
   - note
 tags:
@@ -9,6 +9,7 @@ tags:
   - todo/cs/ai
 source:
   - "[[Attention in transformers, visually explained - DL6]]"
+  - "[[Attention Is All You Need]]"
 related:
   - "[[Softmax]]"
 ---
@@ -30,7 +31,7 @@ $$
 
 This is necessary as right now, these vectors only contain a 1-to-1 correspondence for the word they represent, with no regard for the context of the sentence, which can vastly change the meaning:
 
-*this case is a $\mathbb{R}^2$ mapping of the vector space, in practice this is extremely high dimensional embedding*
+_this case is a $\mathbb{R}^2$ mapping of the vector space, in practice this is extremely high dimensional embedding_
 
 ![[VectorEmbeddingMeaning.png]]
 
@@ -47,7 +48,7 @@ Given some sentence we are looking embed the meaning of:
 $$
 \begin{matrix}
 The & quick & brown & fox & jumps & over & the & lazy & dog \\
-\downarrow & \downarrow &\downarrow &\downarrow &\downarrow &\downarrow &\downarrow &\downarrow &\downarrow 
+\downarrow & \downarrow &\downarrow &\downarrow &\downarrow &\downarrow &\downarrow &\downarrow &\downarrow
 \\
 \begin{bmatrix}
 0.2 \\
@@ -114,7 +115,7 @@ For example, the second "**the**" has no real affect on the meaning of the **bro
 
 Another approach could be using a [[Parse Trees for Natural Language Processing|Parse Tree]] to structurally represent the sentence by labeling of subjects vs predicates, etc. While this has been a technique in papers investigating Diffusion as a Language Modeling technique,[^2] **Transformers** make use of something new altogether.
 
-To start, we introduce something called the **Query Matrix**. This can be thought of as every **token** asking every other **token** "hey, how much do you relate to me?". Each token in our vocabulary will have its own own learned matrix parameters, in the case of *GPT3* this was a 128 dimensional vector.
+To start, we introduce something called the **Query Matrix**. This can be thought of as every **token** asking every other **token** "hey, how much do you relate to me?". Each token in our vocabulary will have its own own learned matrix parameters, in the case of _GPT3_ this was a 128 dimensional vector.
 
 To get this query vector, the embedding of the token is multiplied by a learned matrix $W_{Q}$, which then yields the query vector for that token, $\vec{Q}_{i}$:
 
@@ -144,7 +145,7 @@ The next step is quite trivial, we compute how well a key matches with a value b
 | lazy  | $\vdots$                        | $\vdots$                        |         |         |         |         |         |         | $\vdots$                        |
 | dog   | $\vec{Q}_{n} \cdot \vec{K}_{1}$ | $\vec{Q}_{n} \cdot \vec{K}_{2}$ | $\dots$ | $\dots$ | $\dots$ | $\dots$ | $\dots$ | $\dots$ | $\vec{Q}_{n} \cdot \vec{K}_{n}$ |
 
->[!Note] Please Note
+> [!Note] Please Note
 > In this case, we are modeling for a **single head** attention mechanism. In practice, this is often scaled up to **multi head** attention to utilize parallelization as much as possible.
 
 There is one more step in this process, and that is to take the [[Softmax]] of every **column** of the "table" we have created.
@@ -157,7 +158,33 @@ This means that every column will contain a series of values somewhere $0 \leq j
 
 What we have essentially created here is a probability distribution for each words' relative importance to every other word.
 
-This is where the final step of the attention block comes in: the **Value Matrix**
+This is where the final step of the attention block comes in: the **Value Matrix**.
 
-[^1]: In practical cases, *position* would be embedded in a much more abstract way than just having its index at the top. We will also be representing all tokens as full words for brevity
+This is again computed in the same way as the query and key matrices, with its own learned matrix $W_{V}$:
+
+$$
+W_{V} \times \vec{E}_{i} = \vec{V}_{i}
+$$
+
+The value matrix will be a lot bigger in shape than the previous two
+
+
+As defined in the now famous paper **Attention is All You Need**,[^3] this whole process is represented as one "trivial" equation:
+
+$$
+Attention(Q,K,V) = softmax\left( \frac{QK^T}{\sqrt{ d_{k} }} \right) V
+$$
+
+--- 
+
+## Extending to Multi-Headed Attention
+
+$$
+todo\dots
+$$
+
+
+[^1]: In practical cases, _position_ would be embedded in a much more abstract way than just having its index at the top. We will also be representing all tokens as full words for brevity
 [^2]: Li, X. L., Thickstun, J., Gulrajani, I., Liang, P., & Hashimoto, T. B. (2022). _Diffusion-LM Improves Controllable Text Generation_ (No. arXiv:2205.14217). arXiv. [https://doi.org/10.48550/arXiv.2205.14217](https://doi.org/10.48550/arXiv.2205.14217)
+[^3]: Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2023). _Attention Is All You Need_ (No. arXiv:1706.03762). arXiv. [https://doi.org/10.48550/arXiv.1706.03762](https://doi.org/10.48550/arXiv.1706.03762)
+

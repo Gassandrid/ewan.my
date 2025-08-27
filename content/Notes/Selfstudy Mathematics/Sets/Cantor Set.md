@@ -6,7 +6,7 @@ tags:
 date: 2025-08-13
 fileClass:
   - note
-updated: 2025-08-13
+updated: 2025-08-26
 ---
 
 The **Cantor Set** is a classic example of a set that is uncountably infinite, yet has measure zero. It is constructed by repeatedly removing the middle third of intervals, leading to a fractal structure.
@@ -21,3 +21,5 @@ $$
 C = \bigcap_{n=0}^\infty C_n,
 \quad \text{where } C_0 = [0,1] \text{ and } C_{n+1} = \tfrac{1}{3}C_n \cup \left(\tfrac{2}{3} + \tfrac{1}{3}C_n\right).
 $$
+
+As follows, the **Cantor set** has a [[Cardinality]] equal to that of the [[Cardinality]] of the continuum, which is the [[Cardinality]] of all real numbers denoted $C \in \mathbb{R}$.

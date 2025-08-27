@@ -69,3 +69,7 @@
 2025-08-24 initial YMCA payment
     Expenses:gym                            48.04
     Liabilities:chase-credit-card          -48.04
+
+2025-08-26 haircut
+    Expenses:college:haircut                   35
+    Liabilities:chase-credit-card             -35

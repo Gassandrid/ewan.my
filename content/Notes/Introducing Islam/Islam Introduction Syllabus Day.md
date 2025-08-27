@@ -4,6 +4,7 @@ fileClass:
   - lectureNote
 tags:
   - university
+  - religion/islam
 course: "[[Introducing Islam]]"
 lesson:
   - lecture
@@ -21,14 +22,7 @@ updated: 2025-08-25
 
 ## Class Structure
 
-Every single class has homework. Reading complex arguments, histories, facts; reading  
-primary, secondary, and tertiary sources is both how you will get information in this class—  
-but also how you practice the skills needed to do critical thinking and analytical work in any  
-classroom, any workplace.  
-You are to read your readings before class, so that you are prepared to learn from lecture  
-and discussion that day.  
-Written assignments or quizzes are listed in the “graded assignments” column. And I’ve  
-included tips for reading or tackling the assignment in the “hot tips” column
+Every single class has homework. Reading complex arguments, histories, facts; reading primary, secondary, and tertiary sources is both how you will get information in this class— but also how you practice the skills needed to do critical thinking and analytical work in any classroom, any workplace. You are to read your readings before class, so that you are prepared to learn from lecture and discussion that day. Written assignments or quizzes are listed in the “graded assignments” column. And I’ve included tips for reading or tackling the assignment in the “hot tips” column
 
 ---
 
