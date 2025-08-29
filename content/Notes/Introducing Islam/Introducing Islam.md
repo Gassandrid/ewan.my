@@ -14,7 +14,7 @@ credits: 3
 source:
   - https://brightspace.uvm.edu/d2l/home/126921
 date: 2025-08-21
-updated: 2025-08-25
+updated: 2025-08-29
 ---
 
 ## Course Description from Brightspace
