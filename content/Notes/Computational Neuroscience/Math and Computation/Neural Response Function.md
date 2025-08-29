@@ -1,7 +1,7 @@
 ---
 date: 2025-04-05
 updated: 2025-06-19
-fileClass: note
+class: note
 tags:
   - math/calculus
   - comp-neuro/theory

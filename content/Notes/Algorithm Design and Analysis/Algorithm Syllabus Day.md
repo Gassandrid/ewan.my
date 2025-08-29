@@ -1,9 +1,10 @@
 ---
-fileClass:
+class:
   - note
   - lectureNote
 tags:
   - university
+  - cs/theory
 course: "[[Algorithm Design and Analysis]]"
 lesson:
   - lecture

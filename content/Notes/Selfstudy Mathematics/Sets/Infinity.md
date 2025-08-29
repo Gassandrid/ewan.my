@@ -3,7 +3,7 @@ tags:
   - math/sets
 date: 2025-08-13
 updated: 2025-08-13
-fileClass:
+class:
   - note
 ---
 

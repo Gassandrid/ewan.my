@@ -3,7 +3,7 @@ date: 2025-06-13
 updated: 2025-08-21
 tags:
   - books/geb
-fileClass:
+class:
   - book
 author:
   - "[[Douglas Hofstadter]]"

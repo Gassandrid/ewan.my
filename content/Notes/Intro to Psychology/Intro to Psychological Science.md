@@ -1,8 +1,9 @@
 ---
-fileClass:
+class:
   - course
 tags:
   - university
+  - psych
 code: PSYS1400B
 professor: "[[Nicole Breslend]]"
 crn: "95517"
@@ -13,7 +14,7 @@ credits: 3
 source:
   - https://brightspace.uvm.edu/d2l/home/129322
 date: 2025-08-21
-updated: 2025-08-26
+updated: 2025-08-28
 ---
 
 ## Course Description

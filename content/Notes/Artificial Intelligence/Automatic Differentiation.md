@@ -6,7 +6,7 @@ tags:
   - math/calculus
   - todo/math
 date: 2025-08-13
-fileClass:
+class:
   - note
 source: "[[What is Automatic Differentiation?]]"
 updated: 2025-08-25

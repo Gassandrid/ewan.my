@@ -4,7 +4,7 @@ date: 2025-01-02
 updated: 2025-08-21
 tags:
   - projects/homelab
-fileClass:
+class:
   - note
 ---
 

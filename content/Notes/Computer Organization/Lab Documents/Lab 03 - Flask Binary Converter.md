@@ -5,7 +5,7 @@ tags:
   - university
   - cs/web
 updated: 2025-08-03
-fileClass:
+class:
   - note
 ---
 

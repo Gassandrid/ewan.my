@@ -19,7 +19,7 @@ After a good amount of thought, I have found that it is most realistic for me to
 
 And thus, I will either buy a **DeskPi** 10 inch T1 rack, or print my own from scratch. The desk pi solution looks really nice and clean, but for 140$, I think it is a bit much for what is essentially a hunk of metal. 
 
-The 3d printed solution looks a lot more appealing to me right now, as I not only get full control over how it is designed but also the fact that a 10inch rack is the perfect size for a single printer build place ( $256mm^3$).
+The 3d printed solution looks a lot more appealing to me right now, as I not only get full control over how it is designed but also the fact that a 10inch rack is the perfect size for a single printer build place ( $256mm^3$). ^a1bbd8
 
 **Some Reference Photos:**
 

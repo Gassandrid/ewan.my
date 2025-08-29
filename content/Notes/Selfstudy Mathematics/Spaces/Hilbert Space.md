@@ -5,7 +5,7 @@ tags:
   - math/analysis
   - todo/math
 source: "[[What is a Hilbert Space?]]"
-fileClass:
+class:
   - transcript
 ---
 

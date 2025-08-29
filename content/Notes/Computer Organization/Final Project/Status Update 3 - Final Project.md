@@ -3,7 +3,7 @@ date: 2024-11-11
 tags:
   - cs/embedded
 updated: 2025-03-31
-fileClass: note
+class: note
 ---
 
 # Final Project Status Update 3

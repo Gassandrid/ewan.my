@@ -1,5 +1,5 @@
 ---
-fileClass:
+class:
   - person
 date: 2025-04-02
 updated: 2025-08-19

@@ -3,7 +3,7 @@ date: 2025-06-26
 updated: 2025-06-26
 tags:
   - math/linear-algebra
-fileClass: note
+class: note
 ---
 
 >[!Abstract] Definition

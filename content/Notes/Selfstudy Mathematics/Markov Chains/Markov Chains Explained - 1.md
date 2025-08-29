@@ -1,10 +1,10 @@
 ---
 id: Markov Chains Explained - 1
-aliases: 
+aliases:
 tags:
   - math/linear-algebra/markhov-chains
 date: 2025-04-29
-fileClass:
+class:
   - transcript
 updated: 2025-08-16
 source:

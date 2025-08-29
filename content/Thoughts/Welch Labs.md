@@ -1,7 +1,7 @@
 ---
 date: 2025-08-19
 updated: 2025-08-19
-fileClass:
+class:
   - person
 birthdate: 01/01/2000
 relationship: influencer

@@ -1,11 +1,11 @@
 ---
 id: Status Update 2 - Final Project
-aliases: 
+aliases:
 tags:
   - cs/embedded
 date: 2024-10-10
 updated: 2025-03-31
-fileClass: note
+class: note
 ---
 
 > [!abstract] Student Information

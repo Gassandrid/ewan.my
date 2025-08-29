@@ -5,7 +5,7 @@ tags:
   - university
 updated: 2025-03-31
 title: Lab 07 - Storing Temperature Data
-fileClass: note
+class: note
 ---
 
 > [!abstract] Student Information

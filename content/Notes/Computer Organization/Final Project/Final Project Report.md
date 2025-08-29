@@ -1,11 +1,11 @@
 ---
 id: Final Project Report
-aliases: 
+aliases:
 tags:
   - cs/embedded
 date: 2024-12-04
 updated: 2025-03-31
-fileClass: note
+class: note
 ---
 <body style="margin: 0; font-family: 'Helvetica', sans-serif; background: linear-gradient(to bottom right, #4e54c8, #8f94fb); display: flex; justify-content: center; align-items: center; height: 100vh; color: white;">
     <div style="text-align: center; background: rgba(114, 135, 253, 0.6); padding: 50px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);">

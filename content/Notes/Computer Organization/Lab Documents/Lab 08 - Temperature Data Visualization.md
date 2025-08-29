@@ -4,7 +4,7 @@ updated: 2025-03-31
 tags:
   - cs/embedded
   - university
-fileClass: note
+class: note
 ---
 
 > [!abstract] Student Information

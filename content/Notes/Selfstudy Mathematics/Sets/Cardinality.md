@@ -3,7 +3,7 @@ tags:
   - math/sets
 date: 2025-07-03
 updated: 2025-07-13
-fileClass: note
+class: note
 ---
 
 In Layman's terms, cardinality is a way to measure the "size" of a set, which can be finite or infinite.

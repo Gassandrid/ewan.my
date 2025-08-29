@@ -1,5 +1,5 @@
 ---
-fileClass:
+class:
   - note
   - lectureNote
 tags:
@@ -13,7 +13,7 @@ source:
   - https://brightspace.uvm.edu/d2l/le/content/126921/Home
 related:
 date: 2025-08-25
-updated: 2025-08-25
+updated: 2025-08-27
 ---
 
 *Syllabus Introduction class, namely introducing people and the style of the class.*
@@ -45,7 +45,7 @@ A key property of this is that everyone values different things at a different s
 >  **Islam**: the *religion*
 > **Muslim**: a *person* who follows Islam
 > **Allah:** the name for *a* God in Arabic
-> **Qur'an:** Islam's holiest text
+> **[[Qur'an]]:** Islam's holiest text
 
 #### Some Denominations
 

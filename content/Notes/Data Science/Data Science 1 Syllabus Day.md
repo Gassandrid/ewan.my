@@ -1,5 +1,5 @@
 ---
-fileClass:
+class:
   - note
   - lectureNote
 tags:

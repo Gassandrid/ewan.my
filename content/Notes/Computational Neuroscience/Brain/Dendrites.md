@@ -5,7 +5,7 @@ tags:
   - biology
   - comp-neuro
 date: 2025-03-30
-fileClass: note
+class: note
 updated: 2025-06-19
 ---
 

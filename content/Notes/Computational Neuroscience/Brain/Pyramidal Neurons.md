@@ -4,7 +4,7 @@ updated: 2025-08-26
 tags:
   - todo/neuro
   - comp-neuro/neurons
-fileClass:
+class:
   - note
 source:
   - "[[Why Different Neuron Parts Learn Differently?]]"

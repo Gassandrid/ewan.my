@@ -1,9 +1,12 @@
 ---
 id: The Stolen Necklace Problem
 aliases: []
-tags: [math/topology, seed, todo/math]
+tags:
+  - math/topology
+  - seed
+  - todo/math
 date: 2025-08-19
-fileClass:
+class:
   - note
 source:
   - "[[Using topology for discrete problems - The Borsuk-Ulam theorem and stolen necklaces]]"

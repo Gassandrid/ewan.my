@@ -4,7 +4,7 @@ updated: 2025-04-23
 tags:
   - math/linear-algebra
   - todo/math
-fileClass: note
+class: note
 ---
 
 Assuming you are already familiar with vectors or looked at the [[Chapter 1 - Vectors|previous chapter]]... 

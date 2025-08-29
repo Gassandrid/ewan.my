@@ -3,7 +3,7 @@ date: 2024-10-25
 tags:
   - cs/embedded
 updated: 2025-03-31
-fileClass: note
+class: note
 ---
 
 > [!abstract] Student Information

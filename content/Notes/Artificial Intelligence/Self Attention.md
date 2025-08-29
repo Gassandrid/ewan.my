@@ -1,7 +1,7 @@
 ---
 date: 2025-08-23
 updated: 2025-08-26
-fileClass:
+class:
   - note
 tags:
   - math/linear-algebra
@@ -167,6 +167,10 @@ W_{V} \times \vec{E}_{i} = \vec{V}_{i}
 $$
 
 The value matrix will be a lot bigger in shape than the previous two
+
+$$
+\dots
+$$
 
 
 As defined in the now famous paper **Attention is All You Need**,[^3] this whole process is represented as one "trivial" equation:

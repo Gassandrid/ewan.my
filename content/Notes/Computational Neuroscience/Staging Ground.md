@@ -5,7 +5,7 @@ updated: 2025-07-07
 tags:
   - todo
   - comp-neuro
-fileClass: planner
+class: planner
 ---
 
 For staging and planning topic to investigated in the field of [[Computational Neuroscience]].  

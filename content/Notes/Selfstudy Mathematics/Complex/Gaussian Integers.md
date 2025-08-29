@@ -3,10 +3,10 @@ id: Gaussian Integers
 aliases: []
 tags:
   - math/complex
-date: "2025-08-11"
-fileClass:
+date: 2025-08-11
+class:
   - note
-updated: "2025-08-11"
+updated: 2025-08-11
 ---
 
 Gaussian integers are complex numbers of the form $a + bi$ where both $a$ and $b$ are integers. They form a ring, denoted by $\mathbb{Z}[i]$, which is the set of all Gaussian integers.

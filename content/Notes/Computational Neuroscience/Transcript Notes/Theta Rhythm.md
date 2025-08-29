@@ -7,7 +7,7 @@ tags:
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
 updated: 2025-08-20
-fileClass: transcript
+class: transcript
 source:
   - "[[Theta rhythm A Memory Clock]]"
 ---

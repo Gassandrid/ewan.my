@@ -1,6 +1,6 @@
 ---
 id: Neuron
-aliases: 
+aliases:
 tags:
   - biology
   - comp-neuro/neurons
@@ -8,7 +8,7 @@ tags:
 date: 2025-03-25
 title: Neuron
 updated: 2025-06-19
-fileClass: note
+class: note
 ---
  
 

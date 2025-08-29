@@ -6,7 +6,7 @@ tags:
   - seed
 updated: 2025-02-06
 title: Manim
-fileClass:
+class:
   - software
 ---
 

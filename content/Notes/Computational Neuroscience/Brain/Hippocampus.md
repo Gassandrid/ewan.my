@@ -1,12 +1,12 @@
 ---
 id: Hippocampus
-aliases: 
+aliases:
 tags:
   - comp-neuro
   - biology/region
   - todo/neuro
 date: 2025-03-31
-fileClass: note
+class: note
 updated: 2025-06-19
 ---
  

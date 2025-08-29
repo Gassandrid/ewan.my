@@ -1,9 +1,10 @@
 ---
-fileClass:
+class:
   - note
   - lectureNote
 tags:
   - university
+  - psych
 course: "[[Intro to Psychological Science]]"
 lesson:
   - lecture

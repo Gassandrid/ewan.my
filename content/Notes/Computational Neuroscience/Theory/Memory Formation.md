@@ -4,7 +4,7 @@ aliases: []
 tags:
   - comp-neuro/theory
 date: 2025-04-06
-fileClass: note
+class: note
 updated: 2025-06-19
 ---
 

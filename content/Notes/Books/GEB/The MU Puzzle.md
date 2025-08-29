@@ -1,13 +1,13 @@
 ---
 id: The MIU Puzzle
-aliases: 
+aliases:
 tags:
   - books/geb
   - seed
   - math/logic
 date: 2025-06-24
 updated: 2025-08-13
-fileClass:
+class:
   - note
 ---
 

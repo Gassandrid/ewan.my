@@ -1,5 +1,5 @@
 ---
-fileClass:
+class:
   - course
 tags:
   - university

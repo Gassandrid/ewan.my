@@ -4,7 +4,7 @@ tags:
   - cs/graphics
 date: 2025-07-09
 updated: 2025-07-22
-fileClass: note
+class: note
 ---
 
 The **Bézier curve** is a parametric curve often used for computer graphics. It is part of the family of **spline curves**, useful for defining paths using a set of control points.

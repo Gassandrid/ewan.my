@@ -3,7 +3,7 @@ date: 2025-07-09
 updated: 2025-07-11
 tags:
   - math/topology
-fileClass: note
+class: note
 ---
 
 The **Hilbert Curve** is a space filling fractal pattern with the purpose of mapping all natural numbers onto the 2d plane.

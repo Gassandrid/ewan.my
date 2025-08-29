@@ -6,7 +6,7 @@ tags:
   - seed
   - philosophy
   - people
-fileClass:
+class:
   - person
 birthdate: 01/01/2000
 relationship: influencer

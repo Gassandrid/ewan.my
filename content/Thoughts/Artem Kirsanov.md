@@ -7,7 +7,7 @@ tags:
   - people
 updated: 2025-08-19
 title: Artem Kirsanov
-fileClass:
+class:
   - person
 relationship: influencer
 sex: male

@@ -1,5 +1,5 @@
 ---
-fileClass: note
+class: note
 date: 2025-03-31
 updated: 2025-06-21
 tags:

@@ -1,5 +1,5 @@
 ---
-fileClass:
+class:
   - note
   - lectureNote
 tags:
@@ -10,6 +10,7 @@ lesson:
   - lecture
 lecture-number: 1
 source:
+  - https://brightspace.uvm.edu/content/enforced/130568-202509-A4-Crosslisted/BIOL%201400%201_Course%20Intro.pdf?ou=130568
 related:
 date: 2025-08-25
 updated: 2025-08-25

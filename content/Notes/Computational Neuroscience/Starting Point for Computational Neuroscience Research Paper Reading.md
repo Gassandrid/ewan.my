@@ -7,7 +7,7 @@ tags:
   - comp-neuro
   - cs
   - todo
-fileClass: planner
+class: planner
 ---
 
 These are just some papers that I found that are not too complex for me to get into, but have a great deal of useful material for me to investigate. These are just for reading and documenting, but not for [[On Reimplementing Papers|Paper Reimplementation]] as those should be more computer science related.

@@ -5,7 +5,7 @@ tags:
   - cs
   - projects/homelab/software
 title: Brainstorming Software Stack
-fileClass:
+class:
   - note
 ---
 

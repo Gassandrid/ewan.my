@@ -5,7 +5,7 @@ updated: 2025-08-21
 tags:
   - seed
   - cs/homelab
-fileClass:
+class:
   - note
 ---
 

@@ -4,7 +4,7 @@ aliases: []
 tags:
   - math/linear-algebra
 date: 2025-04-03
-fileClass: note
+class: note
 updated: 2025-04-04
 ---
 

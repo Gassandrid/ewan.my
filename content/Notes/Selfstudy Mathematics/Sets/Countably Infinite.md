@@ -4,7 +4,7 @@ aliases: []
 tags:
   - math/sets
 date: 2025-08-13
-fileClass:
+class:
   - note
 updated: 2025-08-13
 ---

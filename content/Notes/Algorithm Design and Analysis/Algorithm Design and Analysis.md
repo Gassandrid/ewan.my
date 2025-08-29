@@ -1,9 +1,9 @@
 ---
-fileClass:
+class:
   - course
 tags:
   - university
-  - todo/courses
+  - cs/theory
 code: CS3240B
 professor: "[[Byung Lee]]"
 crn: "93084"
@@ -13,7 +13,7 @@ image:
 credits: 3
 source:
 date: 2025-08-21
-updated: 2025-08-26
+updated: 2025-08-28
 ---
 
 ## Course Description

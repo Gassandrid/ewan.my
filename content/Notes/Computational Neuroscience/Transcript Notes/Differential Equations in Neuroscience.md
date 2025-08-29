@@ -6,7 +6,7 @@ tags:
   - todo/neuro
 date: 2024-10-28
 updated: 2025-06-19
-fileClass: transcript
+class: transcript
 ---
 *study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)* 
  

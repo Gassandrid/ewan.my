@@ -3,7 +3,7 @@ date: 2025-04-07
 updated: 2025-06-21
 tags:
   - math/statistics/applied-probability
-fileClass: note
+class: note
 ---
 
 Given Formula

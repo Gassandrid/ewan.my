@@ -3,7 +3,7 @@ date: 2025-04-05
 updated: 2025-07-18
 tags:
   - math/calculus
-fileClass:
+class:
   - note
 ---
 

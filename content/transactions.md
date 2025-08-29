@@ -73,3 +73,19 @@
 2025-08-26 haircut
     Expenses:college:haircut                   35
     Liabilities:chase-credit-card             -35
+
+2025-08-27 personal apartment stuff and roomate orders
+    Expenses:personal                    106.53
+    Assets:wells-fargo-checking         -106.53
+
+2025-08-27 poster ebay
+    Expenses:personal                     19.21
+    Assets:wells-fargo-checking          -19.21
+
+2025-08-27 Liam Monthly Debit Transfer
+    Assets:wells-fargo-checking             250
+    Equity:dad                             -250
+
+2025-08-27 Heather Monthly Debit Transfer
+    Assets:wells-fargo-checking             250
+    Equity:mom                             -250

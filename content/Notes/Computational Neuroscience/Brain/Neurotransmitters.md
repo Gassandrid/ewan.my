@@ -5,7 +5,7 @@ tags:
   - biology
   - comp-neuro
   - todo/neuro
-fileClass: note
+class: note
 ---
 
  

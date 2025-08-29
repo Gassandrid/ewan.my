@@ -1,11 +1,11 @@
 ---
 id: index
-aliases: 
-tags: 
+aliases:
+tags:
 date: 2024-10-02
 title: Hello! My name is Ewan
 updated: 2025-06-22
-fileClass: navigation
+class: navigation
 ---
 
 <div>

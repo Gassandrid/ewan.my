@@ -6,7 +6,7 @@ tags:
   - cs/web
   - cs/python
 updated: 2025-08-21
-fileClass: note
+class: note
 ---
 
 > [!abstract] Student Information

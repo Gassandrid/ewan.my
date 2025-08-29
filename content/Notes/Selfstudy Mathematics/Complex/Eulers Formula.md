@@ -6,7 +6,7 @@ created: 2025-04-25
 source: "[[The most beautiful equation in math, explained visually Euler’s Formula]]"
 date: 2025-06-21
 updated: 2025-08-12
-fileClass:
+class:
   - transcript
 ---
 

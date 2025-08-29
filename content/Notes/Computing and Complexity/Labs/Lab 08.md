@@ -5,7 +5,7 @@ tags:
   - cs/theory
 author: Ewan Pedersen, Mason Ritchie, Vikyat Mulpuri
 date: 2025-04-01
-fileClass: note
+class: note
 title: Lab 08
 updated: 2025-04-01
 ---
