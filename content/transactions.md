@@ -89,3 +89,27 @@
 2025-08-27 Heather Monthly Debit Transfer
     Assets:wells-fargo-checking             250
     Equity:mom                             -250
+
+2025-08-29 city market food
+    Expenses:college:food                   20.13
+    Liabilities:chase-credit-card          -20.13
+
+2025-08-29 hannaford food bulk
+    Expenses:college:food                   98.36
+    Liabilities:chase-credit-card          -98.36
+
+2025-08-30 table
+    Expenses:college:apartment            53.49
+    Assets:wells-fargo-checking          -53.49
+
+2025-08-30 washing liquid allergy
+    Expenses:college:apartment              12.81
+    Liabilities:chase-credit-card          -12.81
+
+2025-08-31 room electrical essentials
+    Expenses:college:apartment              69.27
+    Liabilities:chase-credit-card          -69.27
+
+2025-08-31 psychology textbook
+    Expenses:college:textbooks              78.06
+    Liabilities:chase-credit-card          -78.06

@@ -1,11 +1,13 @@
 ---
 title: WLED Strips With Home Assistant
 date: 2025-01-24
-updated: 2025-02-21
+updated: 2025-08-31
 tags:
   - home-assistant
   - cs
   - projects/homelab/hardware
+class:
+  - note
 ---
  
 
@@ -20,3 +22,27 @@ I have a large strip of rgbLED lights that I got off of Ali express for quite ch
 But once I get that configured sorted via [[Bridging my University Wifi to host own network access point]], this should no longer be a problem.
 
 Once that is sorted, I plan to use something called the [WLED](https://kno.wled.ge/) Project, which allows one to host a web server to control addressable LED Strips, and has great support for 
+
+---
+
+## Workflow and Links
+
+**A good tutorial on setting up WLED:**
+https://www.youtube.com/watch?v=exAWzMfmwQ8
+
+Eventually I would like to connect this to [[Home Assistant]] when I get the chance, along with some **smart plugs** for controlling main room lights as well.
+
+**A good wall plug toggle**:
+https://www.amazon.com/dp/B07YDC6D4D
+
+---
+
+## Plug and Play Options no manual
+
+**Chip**
+
+https://www.amazon.com/MagWLED-1-Controller-USB-C-Delivery-Pre-Installed/dp/B0CYKYDH64?=&linkCode=sl1&tag=chrismaher-20&linkId=f586149456f1cbfb60ed65270fdd9698&language=en_US
+
+**Power**
+
+https://www.amazon.com/gp/product/B0CQ4P2T8H?ie=UTF8&th=1&linkCode=sl1&tag=chrismaher-20&linkId=5bf39c5edcc24cb2a1b6930dc064d70f&language=en_US&ref_=as_li_ss_tl

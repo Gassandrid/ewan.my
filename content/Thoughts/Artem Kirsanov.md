@@ -9,7 +9,7 @@ updated: 2025-08-19
 title: Artem Kirsanov
 class:
   - person
-relationship: influencer
+relationship: influencer/youtuber
 sex: male
 image: https://yt3.googleusercontent.com/WvyHMOzKntZKuHQg27TKR-sW7Jm7WYNVkfDd9jr0cWnjwZ-kt8HufKKQnAjTO94HKxLpcLM0Dg=s900-c-k-c0x00ffffff-no-rj
 ---

@@ -4,7 +4,7 @@ updated: 2025-08-19
 class:
   - person
 birthdate: 01/01/2000
-relationship: influencer
+relationship: influencer/youtuber
 sex: male
 tags:
   - people

@@ -5,7 +5,7 @@ tags:
   - cs/theory
 date: 2025-01-14
 title: Day 1
-updated: 2025-03-27
+updated: 2025-09-01
 ---
 
 This class will discuss important concepts such as **what can be computed**, **automata**, and what is considered a **model of computation**.

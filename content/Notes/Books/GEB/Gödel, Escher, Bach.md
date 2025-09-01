@@ -11,7 +11,7 @@ author:
 
 ![[Pasted image 20250613090016.png]]
 
-> **Gödel, Escher, Bach**( often abbreviated as **GEB**), is a non fiction book written by American cognitive scientist *Douglas Hofstadter*. Through examples from the lives of the mathematician *Kurt Gödel*, the artist *M.C. Escher*, and the classical composer *Johann Sebastian Bach*, Hofstadter seeks to explore the nature of intelligence, symmetry, and mathematics.
+> **Gödel, Escher, Bach**( often abbreviated as **GEB**), is a non fiction book written by American cognitive scientist [[Douglas Hofstadter]]. Through examples from the lives of the mathematician *Kurt Gödel*, the artist *M.C. Escher*, and the classical composer *Johann Sebastian Bach*, Hofstadter seeks to explore the nature of intelligence, symmetry, and mathematics.
 
 I was recommended I read this book, both by a friend from University, and by my father and step-father. It is quite deep, but seeks answer some of the questions I have had about the nature of human intelligence, through the familiar language of mathematics and logic.
 

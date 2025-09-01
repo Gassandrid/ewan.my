@@ -9,7 +9,7 @@ tags:
 class:
   - person
 birthdate: 01/01/2000
-relationship: influencer
+relationship: influencer/youtuber
 sex: male
 image: "[[exurbin.png]]"
 ---

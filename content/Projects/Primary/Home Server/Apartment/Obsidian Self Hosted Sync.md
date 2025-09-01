@@ -1,8 +1,10 @@
 ---
 date: 2025-04-18
-updated: 2025-04-18
+updated: 2025-08-31
 tags:
   - projects/homelab/software
+class:
+  - note
 ---
  
 

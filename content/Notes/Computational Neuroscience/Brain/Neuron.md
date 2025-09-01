@@ -7,7 +7,7 @@ tags:
   - todo/neuro
 date: 2025-03-25
 title: Neuron
-updated: 2025-06-19
+updated: 2025-09-01
 class: note
 ---
  

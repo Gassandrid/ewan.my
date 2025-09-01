@@ -6,7 +6,6 @@ tags:
   - seed
   - comp-neuro
   - cs
-  - todo
 class: planner
 ---
 

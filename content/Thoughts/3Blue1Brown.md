@@ -8,7 +8,7 @@ tags:
   - seed
   - people
 image: https://m.media-amazon.com/images/M/MV5BZWRlZjBkY2YtNDVhMy00YThkLWFhMWItMGYyMjEzYzJhZmM5XkEyXkFqcGc@._V1_.jpg
-relationship: influencer
+relationship: influencer/youtuber
 sex: male
 ---
 
