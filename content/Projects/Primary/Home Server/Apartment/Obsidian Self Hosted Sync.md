@@ -13,3 +13,5 @@ Looking into sync options for my obsidian vault. I have been using the obsidian 
 Found this setup using the **LiveSync** plugin:
 
 https://www.reddit.com/r/selfhosted/comments/1eo7knj/guide_obsidian_with_free_selfhosted_instant_sync/
+
+This requires we have a [[Reverse Proxy]] set up, or something of the sort like [[Cloudflare Tunnels]]

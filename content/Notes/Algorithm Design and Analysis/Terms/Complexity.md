@@ -2,9 +2,10 @@
 class:
   - note
   - lectureNote
+  - definition
 tags:
   - university
-  - cs/theory
+  - cs/theory/theorem
 course: "[[Algorithm Design and Analysis]]"
 lesson:
   - lecture

@@ -1,6 +1,6 @@
 ---
 date: 2025-08-28
-updated: 2025-08-28
+updated: 2025-09-02
 class:
   - note
   - lectureNote
@@ -79,7 +79,7 @@ A perfect example of this is the Titanic, where the ship was said to be "unsinka
 
 ![[Pasted image 20250828122258.png]]
 
-### How do we overcome these challenges?
+### How Do We Overcome These Challenges?
 
 **Critical Thinking** is the scientific attitude that psychologists use to overcome these biases.
 

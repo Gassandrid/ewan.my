@@ -1,6 +1,6 @@
 ---
 date: 2025-08-28
-updated: 2025-08-28
+updated: 2025-09-02
 class:
   - note
   - lectureNote
@@ -107,21 +107,20 @@ Looks quite similar! But with one obvious change.
 
 ---
 
-## Representing Graphs with Adjacency Matrices
+## Alternative Representation
 
-Graphs can be represented in various ways, and one common method is using an **adjacency matrix**. An adjacency matrix is a 2D array where the rows and columns represent the vertices of the graph, and the entries indicate whether there is an edge between the vertices.
+Graphs can be represented in various ways, and one common method is using an **[[Adjacency Matrix]]**. An adjacency matrix is a 2D array where the rows and columns represent the vertices of the graph, and the entries indicate whether there is an edge between the vertices.
 
-Going back to our [[Graphs#^4ae3bd|undirected graph example]], we can represent this as a matrix:
+Another way to represent them is with an [[Adjacency List]]. Like the adjacency matrix, it represents which vertices are connected to which other vertices, but does so in a more space-efficient manner for sparse graphs.
 
-$$
-A_{directed} = \begin{bmatrix}
-0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 \\
-0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-\end{bmatrix}
-$$
+### Comparing [[Complexity]] of the Two
+
+| [[Complexity]]    | [[Adjacency Matrix]] | [[Adjacency List]] |
+| ----------------- | -------------------- | ------------------ |
+| Storage space     | $\Theta(n^2)$        | $\Theta(m+n)$      |
+| Check edge$(u,v)$ | $\Theta(1)$          | $O(n)$             |
+| Find all edges    | $\Theta(n^2)$        | $\Theta(m+n)$      |
+
+**Side note:**
+- As a graph becomes dense, $\Theta(m+n)$ approaches $\Theta(n^2)$ because $m$ approaches $\Theta(n^2)$
+- As a graph becomes sparse, $\Theta(m+n)$ approaches $\Theta(n)$ because approaches $\Theta(n)$
