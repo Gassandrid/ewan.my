@@ -1,7 +1,7 @@
 ---
 tags: [project/homelab/rack]
 date: 2025-08-31
-updated: 2025-08-31
+updated: 2025-09-03
 ---
 
 *this is now the main page for work on the 3d printed 10 inch rack*
@@ -27,7 +27,32 @@ As the [makerworld page](https://makerworld.com/en/models/1381701-saturn-v-u-diy
 ### Filament
 
 - [x] black pla (already have)
-- [ ] white pla
+- [x] white pla
+
+### Pieces to Print
+
+- [x] 1 - Front rails x 2
+- [x] 2 - Front rails x 2
+- [x] 3 - Side rail x 1
+- [x] 4 - Side rail x 1
+- [ ] 5 - Side rail x 1
+- [ ] 6 - Side rail x 1
+- [ ] 7 - Side mounting x 1
+- [ ] 8 - Side mounting x 1
+- [ ] 9 - Side mounting x 1
+- [ ] 10 - Side mounting x 1
+- [ ] 11 - Side panel 2u wavy x 1
+- [ ] 12 - Side panel 2u wavy x 1
+- [ ] 13 - Side panel 2u door x 1
+- [ ] 14 - Side panel 2u door x 1
+- [ ] 15 - Side panel 4u x 1 
+- [ ] 16 - Side panel 4u x 1 
+- [ ] 17 - Mounting clip x 24
+- [ ] 18 - Handle x 2
+
+### Assembly Manual
+
+![[Assembly Manual.pdf]]
 
 ---
 

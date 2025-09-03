@@ -1,9 +1,9 @@
 ---
 tags:
-  - math/splines
   - cs/graphics
+  - math/splines/bezier
 date: 2025-07-09
-updated: 2025-07-22
+updated: 2025-09-02
 class: note
 ---
 

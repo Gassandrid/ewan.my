@@ -10,6 +10,7 @@ lesson:
   - lecture
 lecture-number: 3
 source:
+  - https://brightspace.uvm.edu/d2l/le/content/129322/viewContent/2303569/View
 related:
 date: 2025-09-02
 updated: 2025-09-02
@@ -44,7 +45,7 @@ There is a **crisis** in psych, as nobody wants to fund a study that finds nothi
 
 **Theory**: studying more leads to better test grades
 
-**Hypothesis**: students who study science more than 6 hours per day will do better on their sicece test than those who spend less that 5 hours per day studying for science.
+**Hypothesis**: students who study science more than 6 hours per day will do better on their science test than those who spend less that 5 hours per day studying for science.
 
 **Data**: track the number of hours spent studying for science for each senior level student in one high school and then collect all of their final science tests scores
 

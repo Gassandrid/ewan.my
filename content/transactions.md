@@ -113,3 +113,7 @@
 2025-08-31 psychology textbook
     Expenses:college:textbooks              78.06
     Liabilities:chase-credit-card          -78.06
+
+2025-09-03 city market milk eggs etc
+    Expenses:college:food                   16.75
+    Liabilities:chase-credit-card          -16.75
