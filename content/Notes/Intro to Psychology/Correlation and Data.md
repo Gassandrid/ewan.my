@@ -154,10 +154,14 @@ _For this to work, we need to use the right research design._
 
 **Experimental Group:** a group or condition in which the hypothesized cause (i.e. the independent variable) is present. Also known as the "treatment group".
 
-**Control Group:** a gropu or condition in which the hypothesized cause (i.e. the independent variable) is not present
+**Control Group:** a group or condition in which the hypothesized cause (i.e. the independent variable) is not present
 
-- **Placebo condition:** a gropu or condition in whihc people expect to receive a treatment but are exposed to only an inver version, such as a _sugar pill_
+- **Placebo condition:** a group or condition in which people expect to receive a treatment but are exposed to only an inert version, such as a _sugar pill_
 
 #### Double Blind Procedures
 
 This is where neither the participants nor the researchers know who is in which group until after the data is collected. This helps to eliminate bias.
+
+---
+
+*from this point forward in the lecture, just refer to [[CH1 - Sampling and Descriptive Statistics]] basics from [[Statistics Index|Statistics for Engineering]]*

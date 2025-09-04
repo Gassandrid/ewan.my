@@ -4,7 +4,7 @@ aliases:
 tags:
   - math/statistics
 date: 2024-09-12
-updated: 2025-06-21
+updated: 2025-09-04
 ---
 
 # CH2.3 - Conditional Probability and Independence
@@ -12,10 +12,14 @@ updated: 2025-06-21
 This section covers conditional probability and independence. Conditional probability is the probability of an event given that another event has occurred. Independence is when the occurrence of one event does not affect the probability of another event.
 
 ---
+
 ## Example
 
 > [!Example]
-> $$ p(A|B) = \frac{p(A \cap B)}{p(B)} $$
+>
+> $$
+>  p(A|B) = \frac{p(A \cap B)}{p(B)} 
+> $$
 
 This probability is an Intersection and joint probability, think of multiply, but only if you can answer the following question.
 
@@ -40,14 +44,32 @@ Here are some examples of independent events:
 Going back to the question, lets look at the possible answers.
 
 > [!success] Option 1: Yes
-> $$ p(A \cap B) = p(A) \times p(B) $$
-> $$ p(Ace \cap nAce2) = p(Ace) \times p(Ace2) $$
-> $$ p(A \cap B) = \frac{4}{52} \times \frac{4}{52} $$
+>
+> $$
+>  p(A \cap B) = p(A) \times p(B) 
+> $$
+>
+> $$
+>  p(Ace \cap nAce2) = p(Ace) \times p(Ace2) 
+> $$
+>
+> $$
+>  p(A \cap B) = \frac{4}{52} \times \frac{4}{52} 
+> $$
 
 > [!failure] Option 2: No
-> $$ p(A \cap B) \neq p(A) \times p(B) $$
-> $$ p(Ace \cap nAce2) \neq p(Ace) \times p(Ace2) $$
-> $$ p(A \cap B) = \frac{4}{52} \times \frac{4}{51} $$
+>
+> $$
+>  p(A \cap B) \neq p(A) \times p(B) 
+> $$
+>
+> $$
+>  p(Ace \cap nAce2) \neq p(Ace) \times p(Ace2) 
+> $$
+>
+> $$
+>  p(A \cap B) = \frac{4}{52} \times \frac{4}{51} 
+> $$
 
 Lets tackle a practice problem now.
 
@@ -70,17 +92,35 @@ Lets tackle a practice problem now.
 
 > [!info] Length
 > Probability of a Long Call
-> $$ p(L) = \frac{40}{100} = 0.4 $$
+>
+> $$
+>  p(L) = \frac{40}{100} = 0.4 
+> $$
+>
 > Probability of a Brief Call
-> $$ p(B) = \frac{60}{100} = 0.6 $$
+>
+> $$
+>  p(B) = \frac{60}{100} = 0.6 
+> $$
 
 > [!info] Handoffs
 > Probability of Zero Handoffs
-> $$ p(H0) = \frac{50}{100} = 0.5 $$
+>
+> $$
+>  p(H0) = \frac{50}{100} = 0.5 
+> $$
+>
 > Probability of One Handoff
-> $$ p(H1) = \frac{20}{100} = 0.2 $$
+>
+> $$
+>  p(H1) = \frac{20}{100} = 0.2 
+> $$
+>
 > Probability of More than One Handoff
-> $$ p(H2) = \frac{30}{100} = 0.3 $$
+>
+> $$
+>  p(H2) = \frac{30}{100} = 0.3 
+> $$
 
 2.
 
@@ -93,40 +133,82 @@ Calculating for the following probabilities:
 - Probability of Zero Handoffs given a Long Call
 
 > [!info] P ( \* | L)
-> $$ p(H0|L) = \frac{10}{40} = 0.25 $$
-> $$ p(H1|L) = \frac{10}{40} = 0.25 $$
-> $$ p(H2|L) = \frac{20}{40} = 0.5 $$
+>
+> $$
+>  p(H0|L) = \frac{10}{40} = 0.25 
+> $$
+>
+> $$
+>  p(H1|L) = \frac{10}{40} = 0.25 
+> $$
+>
+> $$
+>  p(H2|L) = \frac{20}{40} = 0.5 
+> $$
 
 - Probability of Zero Handoffs given a Brief Call
 
 > [!info] P ( \* | B)
-> $$ p(H0|B) = \frac{40}{60} = 0.67 $$
-> $$ p(H1|B) = \frac{10}{60} = 0.17 $$
-> $$ p(H2|B) = \frac{10}{60} = 0.17 $$
+>
+> $$
+>  p(H0|B) = \frac{40}{60} = 0.67 
+> $$
+>
+> $$
+>  p(H1|B) = \frac{10}{60} = 0.17 
+> $$
+>
+> $$
+>  p(H2|B) = \frac{10}{60} = 0.17 
+> $$
 
 - Probability of a Long Call given Zero Handoffs
 
 > [!info] P ( \* | H0)
-> $$ p(L|H0) = \frac{10}{50} = 0.2 $$
-> $$ p(B|H0) = \frac{40}{50} = 0.8 $$
+>
+> $$
+>  p(L|H0) = \frac{10}{50} = 0.2 
+> $$
+>
+> $$
+>  p(B|H0) = \frac{40}{50} = 0.8 
+> $$
 
 - Probability of a Brief Call given Zero Handoffs
 
 > [!info] P ( \* | H1)
-> $$ p(L|H1) = \frac{10}{20} = 0.5 $$
-> $$ p(B|H1) = \frac{10}{20} = 0.5 $$
+>
+> $$
+>  p(L|H1) = \frac{10}{20} = 0.5 
+> $$
+>
+> $$
+>  p(B|H1) = \frac{10}{20} = 0.5 
+> $$
 
 - Probability of a Long Call given More than One Handoff
 
 > [!info] P ( \* | H2)
-> $$ p(L|H2) = \frac{20}{30} = 0.67 $$
-> $$ p(B|H2) = \frac{10}{30} = 0.33 $$
+>
+> $$
+>  p(L|H2) = \frac{20}{30} = 0.67 
+> $$
+>
+> $$
+>  p(B|H2) = \frac{10}{30} = 0.33 
+> $$
 
 **Bringing it all together, let's calculate the following:**
 
 > [!success] Final Calculations
-> $$ P(L) = 0.4 $$
-> $$ P(B) = 0.6 $$
+>
+> $$
+>  P(L) = 0.4 
+> $$
+>
+> $$
+>  P(B) = 0.6 
+> $$
 
 ### Segmented Bar Chart with Matplotlib
 
@@ -171,14 +253,20 @@ Conditionals are _Similar_ to Marginals, there is no association between the two
 
 ---
 
-## Showing Mathematically: are two events independent
+## Showing Mathematically: Are Two Events Independent
 
 Lets find a random combination from that table and determine if they are independent.
 
 > [!question]
 > Are L and H0 independent of each other?
-> $$ p(L \cap H0) = p(L) \times p(H0) $$
-> $$ 10/100 = (\frac{40}{100}) \times (\frac{50}{100}) $$
+>
+> $$
+>  p(L \cap H0) = p(L) \times p(H0) 
+> $$
+>
+> $$
+>  10/100 = (\frac{40}{100}) \times (\frac{50}{100}) 
+> $$
 
 Therefore, $P(L \cap H0)$ is $\color{red}{not\ independent}$
 
@@ -193,7 +281,7 @@ Therefore, $P(L \cap H0)$ is $\color{red}{not\ independent}$
 > - both will need repair?
 > - at least one car will need repair?
 
-### Probability table
+### Probability Table
 
 | X   | p(x) |
 | --- | ---- |
@@ -205,17 +293,26 @@ Therefore, $P(L \cap H0)$ is $\color{red}{not\ independent}$
 1. **Neither will need repair**
 
 > [!success] Correct Answer
-> $$ P(x1 = 0, x2 = 0) = P(x1 = 0) \times P(x2 = 0) = 0.72 \times 0.72 = 0.5184 $$
+>
+> $$
+>  P(x1 = 0, x2 = 0) = P(x1 = 0) \times P(x2 = 0) = 0.72 \times 0.72 = 0.5184 
+> $$
 
 2. **Both will need repair**
 
 > [!success] Correct Answer
-> $$ P(x1 \ge 1, x2 \ge 1) = P(x1 \ge 1) \times P(x2 \ge 1) = 0.28 \times 0.28 = 0.0784 $$
+>
+> $$
+>  P(x1 \ge 1, x2 \ge 1) = P(x1 \ge 1) \times P(x2 \ge 1) = 0.28 \times 0.28 = 0.0784 
+> $$
 
 3. **At least one car will need repair**
 
 > [!success] Correct Answer
-> $$ P(x1 \ge 1, x2 \ge 1) = 1 - P(x1 = 0, x2 = 0) = 1 - 0.5184 = 0.4816 $$
+>
+> $$
+>  P(x1 \ge 1, x2 \ge 1) = 1 - P(x1 = 0, x2 = 0) = 1 - 0.5184 = 0.4816 
+> $$
 
 ## Example - Independence
 
@@ -255,22 +352,47 @@ From the tree diagram, we can calculate the following:
 1. **Probability of Drawing an Orange Ball**
 
 > [!success] Correct Answer
-> $$ P(O) = \frac{3}{10} = 0.3 $$
-> $$ P(O) = \frac{2}{9} = 0.2222 $$
-> $$ P(O) = \frac{3}{9} = 0.3333 $$
+>
+> $$
+>  P(O) = \frac{3}{10} = 0.3 
+> $$
+>
+> $$
+>  P(O) = \frac{2}{9} = 0.2222 
+> $$
+>
+> $$
+>  P(O) = \frac{3}{9} = 0.3333 
+> $$
 
 2. **Probability of Drawing a Red Ball**
 
 > [!success] Correct Answer
-> $$ P(R) = \frac{5}{10} = 0.5 $$
-> $$ P(R) = \frac{5}{9} = 0.5556 $$
-> $$ P(R) = \frac{4}{9} = 0.4444 $$
+>
+> $$
+>  P(R) = \frac{5}{10} = 0.5 
+> $$
+>
+> $$
+>  P(R) = \frac{5}{9} = 0.5556 
+> $$
+>
+> $$
+>  P(R) = \frac{4}{9} = 0.4444 
+> $$
 
 3. **Probability of Drawing a Blue Ball**
 
 > [!success] Correct Answer
-> $$ P(B) = \frac{2}{10} = 0.2 $$
-> $$ P(B) = \frac{2}{9} = 0.2222 $$
-> $$ P(B) = \frac{1}{9} = 0.1111 $$
-
-
+>
+> $$
+>  P(B) = \frac{2}{10} = 0.2 
+> $$
+>
+> $$
+>  P(B) = \frac{2}{9} = 0.2222 
+> $$
+>
+> $$
+>  P(B) = \frac{1}{9} = 0.1111 
+> $$
