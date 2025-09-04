@@ -4,9 +4,11 @@ class:
   - lectureNote
 tags:
   - university
+  - psych
+  - math/statistics
 course: "[[Intro to Psychological Science]]"
 lesson:
-  - lecture/homework/video/presentation/etc
+  - lecture
 lecture-number: 4
 source:
 related:
@@ -134,3 +136,15 @@ We **cannot** deduce causation PURELY from the correlation, in order for that to
 > No! There could be a third variable, such as **interest in human behavior** that causes both of these things to happen.
 
 This is why we cannot conclude causation from correlation alone. Third variables can always be at play.
+
+---
+
+## Research Designs
+
+*For this to work, we need to use the right research design.*
+
+**Experimental research:** research conducted in way that supports causal statements by manipulating a variable hypothesized to be causal and assessing its effects on a measured variable.
+
+### Experiments Reduce This Problem
+
+**Random Assignment:** a procedure used in experimental research in which a random method is used to decide which participants will receive each level of the independent variable
