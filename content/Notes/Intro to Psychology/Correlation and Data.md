@@ -19,7 +19,7 @@ _underlining the difference between correlation vs causaation, etc_
 
 ---
 
-## Scatter plots Visually Show Us a Correlation
+## Scatter Plots Visually Show Us a Correlation
 
 A _scatter plot_ is a type of graph in which data from correlational studies can be presented to visualize the relationship between two variables. The x-axis represents values for one variable, and the y-axis represents values for the other variable.
 
@@ -45,6 +45,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+How does the classification of scatterplot dot distribution (weak, moderate, strong) influence the accuracy of predictions in correlation analysis across different contexts such as academic performance and behavioral assessments?
+
 ---
 
 ## Strength of Correlations
@@ -53,3 +55,74 @@ Positive and negative correlations allow predictions of a person's score on one 
 
 - the stronger a correlation is, the more accurate predictions can be (ranges from $-1$ to $+1$)
 - the strength of the relationship between variables is indicated by spread of the dots on the scatterplot and can be classified as **weak, moderate, or strong**
+
+How does the classification of scatterplot dot distribution (weak, moderate, strong) influence the accuracy of predictions in correlation analysis across different contexts such as academic performance and behavioral assessments?
+
+Weak correlations have a lot of scatter, and strong correlations have little scatter.
+
+```python-r
+# 3 simple scatter plots showing weak, moderate, and strong correlations
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Set a random seed for reproducibility
+rng = np.random.default_rng(42)
+n = 100
+
+# Generate a common X variable
+x = rng.uniform(0, 10, n)
+
+# Helper to generate Y with controllable noise (affects correlation strength)
+def make_y(x_vals, slope, noise_std, rng):
+    noise = rng.normal(0, noise_std, size=x_vals.shape)
+    return slope * x_vals + noise
+
+# Create datasets with weak, moderate, and strong correlations
+y_weak = make_y(x, slope=1.0, noise_std=5.0, rng=rng)
+y_moderate = make_y(x, slope=1.0, noise_std=2.0, rng=rng)
+y_strong = make_y(x, slope=1.0, noise_std=0.5, rng=rng)
+
+# Compute Pearson r for annotation
+def r_value(a, b):
+    return float(np.corrcoef(a, b)[0, 1])
+
+r_w = r_value(x, y_weak)
+r_m = r_value(x, y_moderate)
+r_s = r_value(x, y_strong)
+
+# Plot
+fig, axes = plt.subplots(1, 3, figsize=(12, 4), sharex=True, sharey=True)
+scatter_kwargs = dict(color="teal", alpha=0.8, edgecolors="white", linewidths=0.5)
+
+axes[0].scatter(x, y_weak, **scatter_kwargs)
+axes[0].set_title(f"Weak (r={r_w:.2f})")
+axes[0].set_ylabel("Y")
+axes[0].grid(True, linestyle="--", alpha=0.3)
+
+axes[1].scatter(x, y_moderate, **scatter_kwargs)
+axes[1].set_title(f"Moderate (r={r_m:.2f})")
+axes[1].grid(True, linestyle="--", alpha=0.3)
+
+axes[2].scatter(x, y_strong, **scatter_kwargs)
+axes[2].set_title(f"Strong (r={r_s:.2f})")
+axes[2].grid(True, linestyle="--", alpha=0.3)
+
+for ax in axes:
+    ax.set_xlabel("X")
+
+fig.suptitle("Scatterplots Showing Correlation Strengths", y=1.02)
+plt.tight_layout()
+plt.show()
+```
+
+### To Conclude Causation
+
+We **cannot** deduce causation PURELY from the correlation, in order for that to happen, **3** things must be met:
+
+1. two variables must be correlated
+2. one variable must precede the other
+3. no other variable can be causing the correlation
+
+### We CANNOT Rule out Alternative Explanations in Correlational Studies
+
+**Third-variable problem(or confounds):** a limitation of correlational studies which occurs when the observed correlation between two variables is explained by the influence of some third, unmeasured variable.
