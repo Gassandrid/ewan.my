@@ -117,3 +117,7 @@
 2025-09-03 city market milk eggs etc
     Expenses:college:food                   16.75
     Liabilities:chase-credit-card          -16.75
+
+2025-09-03 biology course textbook program
+    Expenses:college:textbooks             123.04
+    Liabilities:chase-credit-card         -123.04

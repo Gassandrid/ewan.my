@@ -9,7 +9,7 @@ date: 2025-08-13
 class:
   - note
 source: "[[What is Automatic Differentiation?]]"
-updated: 2025-08-25
+updated: 2025-09-04
 ---
 
 Automatic differentiation (AD) is a computational technique used to evaluate the derivative of a function specified by a computer program. It is particularly useful in machine learning and optimization tasks, where gradients are needed for algorithms like gradient descent.
@@ -55,6 +55,34 @@ There are several others ways for automating differentiation, [[Automatic Differ
 
 #### Numerical Differentiation
 
-**Numerical Differentiation** uses *finite differences* to approximate the derivative. The simplest definition of this 
+**Numerical Differentiation** uses *finite differences* to approximate the derivative. The simplest definition of this comes from the *limit definition* of the derivative.
 
-#### Symbolic Evalutation
+$$
+f: \mathbb{R}^n \to \mathbb{R}
+$$
+
+For a partial derivative, we set up something like the following:
+
+$$
+\frac{ \partial f }{ \partial x_{i} } \approx \frac{f(x+h\overbrace{ e_{i} }^{ i_{th} \text{ unit vector} })-f(x)}{\underbrace{ h }_{ \text{step size} }}
+$$
+
+Where $e_{i}$ is just the unit vector along the $i_{th}$ axis, and $h$ is the step size(usually a very small fraction).
+
+While this method is a simple one, some issues arise with **accuracy and numerical stability**.
+
+One of these possible issues involves **truncation error**; we are trying to approximate a limit as $\lim_{ h \to 0 }$, but we are using some *nonzero* $h$. The *tangent line will approach a decreasing truncation error*, but this eventually leads to a new issue of **rounding error**, involving floating point arithmetic.  
+
+When using this approach we will have to balance these two for the best minimum:
+
+![[truncationvsroudning.png]]
+
+[[Machine Learning]] does not have an issue with rounding error, namely because precision is not the primary objective, as [[Gradient Descent]] only uses a *noisy estimation* of the gradient.
+
+The issue arises in the fact that this requires $O(n)$ evaluations which is a time [[Complexity]] that scales poorly for millions of parameters.
+
+$$
+e_{1},e_{2},e_{3},\dots,e_{n}
+$$
+
+#### Symbolic Evaluation

@@ -74,3 +74,10 @@ Hydrogen bonds are a type of non-covalent bond that occurs when a hydrogen atom 
 
 > [!Example]
 > hydrogen bonds between water molecules
+
+#### Van der Waals Interactions
+
+These interactions are charecterized by a VERY TEMPORARY opposite charge on two atoms that are very close to each other. These interactions are important in biology because they help to stabilize the structure of proteins and nucleic acids.
+
+> [!Example]
+> Van der Waals interactions between the non-polar regions of molecules

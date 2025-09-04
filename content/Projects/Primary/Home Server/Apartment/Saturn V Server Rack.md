@@ -35,8 +35,8 @@ As the [makerworld page](https://makerworld.com/en/models/1381701-saturn-v-u-diy
 - [x] 2 - Front rails x 2
 - [x] 3 - Side rail x 1
 - [x] 4 - Side rail x 1
-- [ ] 5 - Side rail x 1
-- [ ] 6 - Side rail x 1
+- [x] 5 - Side rail x 1
+- [x] 6 - Side rail x 1
 - [ ] 7 - Side mounting x 1
 - [ ] 8 - Side mounting x 1
 - [ ] 9 - Side mounting x 1
@@ -54,6 +54,10 @@ As the [makerworld page](https://makerworld.com/en/models/1381701-saturn-v-u-diy
 
 ![[Assembly Manual.pdf]]
 
+### Extra Parts
+
+I like some of the ideas for mountings from [this video](https://www.youtube.com/watch?v=t5ZMkzbdSR8), namely the ones for the mini pcs, will look into them.
+
 ---
 
 ## Hardware
@@ -61,3 +65,7 @@ As the [makerworld page](https://makerworld.com/en/models/1381701-saturn-v-u-diy
 For hardware I can stick with the **Mini PC** i have for now, but eventually want to invest in a full solution like the video below:
 
 https://www.youtube.com/watch?v=wbRViRwflbI
+
+I want to implement 3d min pc nodes with the structure from [[This homelab setup is my favorite one yet.]]
+
+I am thinking of two [[Venus UM790 Pro Mini PC]]'s and a mini nas like the [[Beelink ME Mini NAS]] which is perfect for a 10 inch rack.

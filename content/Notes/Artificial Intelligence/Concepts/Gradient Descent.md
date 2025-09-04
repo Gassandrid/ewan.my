@@ -1,6 +1,11 @@
 ---
 date: 2024-10-06
-updated: 2024-10-06
+updated: 2025-09-04
+class:
+  - note
+tags:
+  - cs/ai/backpropagation
+  - math/calculus/multivariable
 ---
 
 Gradient Descent is an optimization algorithm used to minimize the cost function by iteratively adjusting the model's parameters.
@@ -15,11 +20,15 @@ When training a model, the goal is to minimize the **cost function** (or **loss 
 > Think of the cost function as a hilly terrain. Gradient Descent helps you "walk down the hill" to find the lowest point (global minimum).
 
 ### 1. The Cost Function
+
 The cost function is denoted as $J(\theta)$ and depends on the model parameters $\theta$.  Our goal is to minimize $J(\theta)$.
 
-$$ J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2 $$
+$$
+ J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2 
+$$
 
 Where:
+
 - $m$ is the number of training examples.
 - $h_\theta(x^{(i)})$ is the hypothesis (or prediction) for input $x^{(i)}$.
 - $y^{(i)}$ is the actual target value for $x^{(i)}$
@@ -28,9 +37,12 @@ Where:
 
 At each iteration, Gradient Descent updates the parameters using the formula:
 
-$$ \theta := \theta - \alpha \frac{\partial}{\partial \theta} J(\theta) $$
+$$
+ \theta := \theta - \alpha \frac{\partial}{\partial \theta} J(\theta) 
+$$
 
 Where:
+
 - $\alpha$ is the **learning rate**, controlling the step size.
 - $\frac{\partial}{\partial \theta} J\theta$ is the **gradient** of the cost function with respect to $\theta$.
 
@@ -60,4 +72,3 @@ Gradient Descent converges when the updates to $\theta$ become very small, i.e.,
 
 > [!info] **Additional Reading**
 > - Explore different variants of Gradient Descent, such as Momentum, RMSProp, and Adam, to improve convergence speed and stability.
-

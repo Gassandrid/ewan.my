@@ -2,7 +2,7 @@
 tags:
   - projects/homelab/software
 date: 2025-08-31
-updated: 2025-09-03
+updated: 2025-09-04
 class:
   - note
 ---
@@ -19,8 +19,10 @@ For the new modern [[Saturn V Server Rack]] that I am building, I want to rethin
 
 ### Obsidian LiveSync
 
-## Hardware
+### PiHole
 
-I want to implement 3d min pc nodes with the structure from [[This homelab setup is my favorite one yet.]]
+https://hub.docker.com/r/pihole/pihole
 
-I am thinking of two [[Venus UM790 Pro Mini PC]]'s and a mini nas like the [[Beelink ME Mini NAS]] which is perfect for a 10 inch rack.
+### N8N
+
+https://n8n.io/
