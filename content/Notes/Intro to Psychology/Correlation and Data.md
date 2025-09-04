@@ -126,3 +126,11 @@ We **cannot** deduce causation PURELY from the correlation, in order for that to
 ### We CANNOT Rule out Alternative Explanations in Correlational Studies
 
 **Third-variable problem(or confounds):** a limitation of correlational studies which occurs when the observed correlation between two variables is explained by the influence of some third, unmeasured variable.
+
+> [!Example]
+> Say that there is an observed correlation between people **becoming psych majors** and people who **take pysch 1**. Does this mean that taking psych 1 causes people to become psych majors?
+
+> [!Success]- Solution
+> No! There could be a third variable, such as **interest in human behavior** that causes both of these things to happen.
+
+This is why we cannot conclude causation from correlation alone. Third variables can always be at play.
