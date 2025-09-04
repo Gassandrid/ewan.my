@@ -141,10 +141,23 @@ This is why we cannot conclude causation from correlation alone. Third variables
 
 ## Research Designs
 
-*For this to work, we need to use the right research design.*
+_For this to work, we need to use the right research design._
 
 **Experimental research:** research conducted in way that supports causal statements by manipulating a variable hypothesized to be causal and assessing its effects on a measured variable.
 
 ### Experiments Reduce This Problem
 
 **Random Assignment:** a procedure used in experimental research in which a random method is used to decide which participants will receive each level of the independent variable
+
+- random assignment is an essential element of an experiment because it allows researchers to assume the people in the groups are similar, on average, at the beginning of the experiments
+- this serves to isolate the manipulated variable
+
+**Experimental Group:** a group or condition in which the hypothesized cause (i.e. the independent variable) is present. Also known as the "treatment group".
+
+**Control Group:** a gropu or condition in which the hypothesized cause (i.e. the independent variable) is not present
+
+- **Placebo condition:** a gropu or condition in whihc people expect to receive a treatment but are exposed to only an inver version, such as a _sugar pill_
+
+#### Double Blind Procedures
+
+This is where neither the participants nor the researchers know who is in which group until after the data is collected. This helps to eliminate bias.
