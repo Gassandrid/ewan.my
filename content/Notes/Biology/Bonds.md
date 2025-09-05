@@ -13,16 +13,16 @@ source:
 related:
 author:
 date: 2025-09-03
-updated: 2025-09-03
+updated: 2025-09-05
 ---
 
-_Cells are the fundamental units of life, which will be structuring our lessons in Biology from this point onward_
-
-## Overview
+*Bonds are used for explaining cells, and as such a quick explanation is needed*:
 
 There is a 3 level hierarchy of cells, namely molecules, cells, and organisms. Molecules are the smallest level of organization, and they make up cells. Cells are the basic unit of life, and they make up organisms. Organisms are made up of one or more cells.
 
 ![[Screenshot 2025-09-03 at 1.20.53 PM.png]]
+
+---
 
 ### Structure Of an Atom
 
@@ -75,9 +75,17 @@ Hydrogen bonds are a type of non-covalent bond that occurs when a hydrogen atom 
 > [!Example]
 > hydrogen bonds between water molecules
 
-#### Van der Waals Interactions
+#### Van Der Waals Interactions
 
 These interactions are charecterized by a VERY TEMPORARY opposite charge on two atoms that are very close to each other. These interactions are important in biology because they help to stabilize the structure of proteins and nucleic acids.
 
 > [!Example]
 > Van der Waals interactions between the non-polar regions of molecules
+
+---
+
+> [!Question]
+> Think about the three main types of noncovalent bonds - hydrogen bonds, ionic bonds, and van der Waals interactions. Which type is the strongest? Weakest?
+
+> [!Success]- Answer
+> The strongest type of noncovalent bond is the ionic bond, followed by the hydrogen bond, and the weakest type is the van der Waals interaction. However, it's important to note that in biological systems, the strength of these bonds can be influenced by the surrounding environment, such as the presence of water.
