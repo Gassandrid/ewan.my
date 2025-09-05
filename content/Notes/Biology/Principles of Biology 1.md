@@ -13,7 +13,9 @@ credits: 4
 source:
   - https://brightspace.uvm.edu/d2l/home/130568
 date: 2025-08-21
-updated: 2025-08-29
+updated: 2025-09-05
+related:
+  - "[[Principles of Biology LAB]]"
 ---
 
 The entry point for my Biological work in the field of [[Computational Neuroscience]]. While my work will mainly be theoretical, it is important to understand the biology concepts that my field often abstracts over.

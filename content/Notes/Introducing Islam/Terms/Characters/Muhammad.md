@@ -13,7 +13,7 @@ lecture-number: 1
 source:
 related:
 date: 2025-08-29
-updated: 2025-08-29
+updated: 2025-09-05
 ---
 
 ![[Muhammad.png]]
@@ -37,6 +37,6 @@ At age 40, Muhammad began receiving revelations from God (Allah) while meditatin
 
 ---
 
-First wife was [[Khadija]], didnt have any other wife until after she had died.
+## Notable Details from Life
 
-
+First wife was [[Khadija]], didnt have any other wife until **after** she had died.

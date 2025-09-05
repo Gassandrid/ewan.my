@@ -165,3 +165,15 @@ This is where neither the participants nor the researchers know who is in which 
 ---
 
 *from this point forward in the lecture, just refer to [[CH1 - Sampling and Descriptive Statistics]] basics from [[Statistics Index|Statistics for Engineering]]*
+
+---
+
+## Research Ethics
+
+Psychological researchers are expected to treat those they study with respect and fairness and to minimize harm inflicted.
+
+**Autonomy**: each research participant has the right ot decide about participating without intimidation or coercion
+- **Informed Consent:** an essential application of the ethical principle of autonomy in which a research participant is educated on the procedures, risks, and potential benefits of taking part in study before choosing to do so.
+- special care must be taken to maintain autonomy in vulnerable populations
+
+

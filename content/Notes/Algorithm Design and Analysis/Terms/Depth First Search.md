@@ -19,12 +19,16 @@ author:
   - "[[Ewan Pedersen]]"
 ---
 
-**Depth Firsth Search(DFS)** is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
+**Depth-First Search (DFS)** is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at a designated start node (or an arbitrary node in a general graph) and explores as far as possible along each branch before backtracking.
 
 ## Properties
 
-- For each $i,L_{i}$ consists of all nodes at distance exactly $i$ edges from $s$.
-- There is a path from $s$ to $t$ $\iff$ $d(t) < \infty$.
+- DFS produces a DFS forest on $V$ via the predecessor relation; in an undirected graph, each tree corresponds to a connected component.
+- Each vertex $v$ receives discovery time $d[v]$ and finish time $f[v]$; the intervals $[d[u], f[u]]$ satisfy the parenthesis property (either disjoint or one properly contains the other).
+- Edge classification in directed graphs: tree, back, forward, cross; in undirected graphs, every non-tree edge is a back edge.
+- In a DAG, ordering vertices by decreasing finish time yields a valid topological order.
+
+### Pseudocode
 
 ![[Screenshot 2025-09-02 at 11.06.43 AM.png]]
 

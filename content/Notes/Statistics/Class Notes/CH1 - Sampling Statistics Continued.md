@@ -5,7 +5,7 @@ tags:
   - math/statistics
   - cs/python
 date: 2024-09-12
-updated: 2025-06-21
+updated: 2025-09-05
 ---
 
 > How do we find the standard deviation of a sample?
@@ -17,7 +17,9 @@ The standard deviation of a sample is a measure of the amount of variation or di
 
 Here's the formula for standard deviation (σ):
 
-$$ \sigma = \sqrt{\frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N}} $$
+$$
+ \sigma = \sqrt{\frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N}}  
+$$
 
 Where:
 
@@ -37,7 +39,9 @@ Let's consider a simple example with a sample of five values: 2, 4, 6, 8, 10.
 
 First, we calculate the mean (μ):
 
-$$ \mu = \frac{\sum\_{i=1}^{N} x_i}{N} = \frac{2 + 4 + 6 + 8 + 10}{5} = 6 $$
+$$
+ \mu = \frac{\sum\_{i=1}^{N} x_i}{N} = \frac{2 + 4 + 6 + 8 + 10}{5} = 6 
+$$
 
 Next, we calculate the squared differences from the mean:
 
@@ -49,11 +53,15 @@ Next, we calculate the squared differences from the mean:
 
 Then, we calculate the average of these squared differences (this is the variance):
 
-$$ \text{Variance} = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} = \frac{16 + 4 + 0 + 4 + 16}{5} = 8 $$
+$$
+ \text{Variance} = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} = \frac{16 + 4 + 0 + 4 + 16}{5} = 8 
+$$
 
 Finally, we take the square root of the variance to get the standard deviation:
 
-$$ \sigma = \sqrt{\text{Variance}} = \sqrt{8} \approx 2.83 $$
+$$
+ \sigma = \sqrt{\text{Variance}} = \sqrt{8} \approx 2.83 
+$$
 
 So, the standard deviation of our sample is approximately 2.83.
 
@@ -63,7 +71,9 @@ Variance is a statistical measurement that describes the spread of data points i
 
 Here's the formula for variance:
 
-$$ \sigma^2 = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} $$
+$$
+ \sigma^2 = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} 
+$$
 
 Where:
 
@@ -77,7 +87,9 @@ Variance is used to see how individual numbers relate to each other within a dat
 
 Continuing with our previous example where we had a sample of five values: 2, 4, 6, 8, 10. We calculated the variance as:
 
-$$ \text{Variance} = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} = \frac{16 + 4 + 0 + 4 + 16}{5} = 8 $$
+$$
+ \text{Variance} = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} = \frac{16 + 4 + 0 + 4 + 16}{5} = 8 
+$$
 
 So, the variance of our sample is 8.
 
