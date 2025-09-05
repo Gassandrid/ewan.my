@@ -5,6 +5,7 @@ class:
   - definition
 tags:
   - university
+  - religion/islam
 course: "[[Introducing Islam]]"
 lesson:
   - lecture

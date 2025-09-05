@@ -50,8 +50,8 @@ A key property of this is that everyone values different things at a different s
 #### Some Denominations
 
 >[!Abstract] Main Denominations
-> **Sunni**: a denomination (or group) of Muslims represents the majority of Muslims $80\%$
-> **Shi'i**: a denomination of Muslims, represents the largest minority of Muslims ($18\%$)
+> **[[Sunni]]**: a denomination (or group) of Muslims represents the majority of Muslims $80\%$
+> **[[Shi'i]]**: a denomination of Muslims, represents the largest minority of Muslims ($18\%$)
 
 #### Arab Vs Arabic
 
