@@ -13,7 +13,7 @@ source:
   - https://brightspace.uvm.edu/d2l/le/content/126921/Home
 related:
 date: 2025-08-25
-updated: 2025-08-27
+updated: 2025-09-08
 ---
 
 *Syllabus Introduction class, namely introducing people and the style of the class.*

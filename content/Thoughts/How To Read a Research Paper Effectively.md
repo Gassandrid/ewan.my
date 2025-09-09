@@ -1,6 +1,6 @@
 ---
 date: 2025-02-07
-updated: 2025-02-10
+updated: 2025-09-05
 tags:
   - seed
   - academia
@@ -108,3 +108,8 @@ Once you have set up your [[How To Read a Research Paper Effectively#Have a Clea
 	- keep your **mental filter** on while doing this, try to see the big picture of authors approach
 3.  
 
+---
+
+## IMportant Tnoteoo
+
+make sure to "prod" at the papers you read and investigate, this is how you become a reserarher

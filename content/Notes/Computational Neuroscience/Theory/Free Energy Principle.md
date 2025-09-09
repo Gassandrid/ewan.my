@@ -5,17 +5,19 @@ tags:
   - comp-neuro/theory
   - math/information
 source:
-  - https://www.nature.com/articles/nrn2787
+  - "[[The free-energy principle a unified brain theory? - Nature Reviews Neuroscience]]"
 related:
 author:
   - "[[Ewan Pedersen]]"
 date: 2025-09-05
-updated: 2025-09-05
+updated: 2025-09-08
 ---
 
 The **Free Energy Principle** is a mathematical principle borrowed from *information theory*. It theorizes that the universal goal of living systems is to minimize a quantity of "free energy" in order to maintain their existence in a dynamic world.[^1]
 
 The "free energy" quantity can be though of as an **Isomorphism** to the idea of "Entropy" as a quantity in Information Theory.
+
+![[FreeEnergyDiagram.png]]
 
 ---
 

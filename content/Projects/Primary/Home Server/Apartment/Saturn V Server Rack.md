@@ -1,7 +1,7 @@
 ---
 tags: [project/homelab/rack]
 date: 2025-08-31
-updated: 2025-09-03
+updated: 2025-09-07
 ---
 
 *this is now the main page for work on the 3d printed 10 inch rack*
@@ -68,4 +68,10 @@ https://www.youtube.com/watch?v=wbRViRwflbI
 
 I want to implement 3d min pc nodes with the structure from [[This homelab setup is my favorite one yet.]]
 
-I am thinking of two [[Venus UM790 Pro Mini PC]]'s and a mini nas like the [[Beelink ME Mini NAS]] which is perfect for a 10 inch rack.
+I am thinking of two [[Venus UM790 Pro Mini PC]]'s and a mini nas like the [[Beelink ME Mini NAS]] which is perfect for a 10 inch rack. However, I do not yet have a need for any more compute, so the **priority would be setting up the mini nas beelink.**
+
+---
+
+## Software
+
+Software is documented at [[Saturn Rack Software]], but the main things would be some basic NAS/cloud storage tech, but also room for experiments etc.
