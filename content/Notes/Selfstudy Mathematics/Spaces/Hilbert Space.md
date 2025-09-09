@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2025-07-15
+updated: 2025-09-09
 tags:
   - math/analysis
   - todo/math
@@ -90,3 +90,26 @@ But also less conventional sets, like $n\times n$ matrices, and even functions a
 > Things get a little more abstract from this point forward, so always try to keep the 2-dimensional case in the back of your mind, that is the intuitive picture.
 
 ---
+
+## Essence of a Hilbert Space
+
+Beyond the requirements of a **Vector Space**, a Hilbert space has two more requirements that must be satisfied, namely:
+
+$$
+1. \text{A hilbert space is complete}
+2. \text{}
+$$
+
+To understand what the first rule means by "complete", lets consider the case of **polynomial functions**.
+
+A *polynomial* is any function that can be presented in the form:
+
+$$
+p(x) = \underbrace{ a_{n}x^n + a_{n-1}x^{n-1} + \dots + a_{1}x+a_{0} }_{ \text{where } a_{n}, a_{n-1}, \dots, a_{1},a_{0} \text{ are real numbers} }
+$$
+
+*Polynomials* form a vectors space, $P(\mathbb{R})$, with basis:
+
+$$
+\{ x^0, x^1, x^2, x^3, x^4, x^5,\dots \}
+$$
