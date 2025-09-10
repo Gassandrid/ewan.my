@@ -13,7 +13,7 @@ source:
 related:
 author:
 date: 2025-09-05
-updated: 2025-09-08
+updated: 2025-09-10
 ---
 
 _to define the charecteristics of a cell, we will be using the model of a factory, as a factory needs:_
@@ -82,4 +82,6 @@ Chains of amino acids connected by covalent bonds are called **polypeptides**.
 
 ## Cell Types
 
-[[Prokaryotic Cells]]
+[[Prokaryotic Cells]] - are simpler and smaller, lacking a nucleus and membrane-bound [[Organelles]].
+
+[[Eukaryotic Cells]] - are more complex, with a nucleus and various membrane-bound [[Organelles]].

@@ -3,11 +3,10 @@ class:
   - note
 tags:
   - math/calculus/differential
-  - math/statistics/normal
+  - math/statistics/stochastic
 source:
+  - https://en.wikipedia.org/wiki/Stochastic_differential_equation
 related:
-author:
-  - "[[Ewan Pedersen]]"
 date: 2025-09-09
 updated: 2025-09-09
 ---
@@ -36,7 +35,7 @@ Where:
 
 ## Python Implementation
 
-This example simulates multiple paths of an Ornstein-Uhlenbeck process, a common type of SDE used in various fields such as finance and physics. The Ornstein-Uhlenbeck process is defined by the SDE:
+This example simulates multiple paths of an Ornstein-Uhlenbeck process, a common type of SDE used in various fields such as finance and physics.[^1] The Ornstein-Uhlenbeck process is defined by the SDE:
 
 ```python-r
 import numpy as np
@@ -116,3 +115,5 @@ print(f"Theoretical long-term mean: {mu}")
 print(f"Mean reversion parameter θ: {theta}")
 print(f"Volatility σ: {sigma}")
 ```
+
+[^1]: https://en.wikipedia.org/wiki/Stochastic_differential_equation

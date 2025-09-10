@@ -1,9 +1,12 @@
 ---
 title: Vectors
 date: 2025-01-27
-updated: 2025-04-02
+updated: 2025-09-10
 tags:
   - math/linear-algebra
+class:
+  - note
+  - lectureNote
 ---
 
 Let us note that everything we have looked at about Vectors thus far dont apply as well to Linear Algebra. We will be examining the "new" way of thinking about these constructs.

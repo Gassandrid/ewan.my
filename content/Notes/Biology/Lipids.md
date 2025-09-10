@@ -17,7 +17,7 @@ date: 2025-09-08
 updated: 2025-09-08
 ---
 
-**Lipids** are a diverse group of organic molecules that are primarily composed of carbon (C), hydrogen (H), and oxygen (O) atoms, with a much lower proportion of oxygen compared to carbohydrates. They are hydrophobic or amphipathic, meaning they do not dissolve well in water but can interact with both water and non-polar substances. Lipids play crucial roles in energy storage, cell membrane structure, and signaling.
+**Lipids** are a diverse group of organic molecules that are primarily composed of carbon (C), hydrogen (H), and oxygen (O) atoms, with a much lower proportion of oxygen compared to [[carbohydrates]]. They are hydrophobic or amphipathic, meaning they do not dissolve well in [[water]] but can interact with both [[water]] and non-polar substances. Lipids play crucial roles in energy storage, [[cell]] membrane structure, and signaling.
 
 ---
 
@@ -30,7 +30,7 @@ Main functions of lipids in biological systems include:
 
 ## Overview
 
-Lipids are largely hydrophobic (non-polar) molecules; many are amphipathic (having both hydrophobic tails and hydrophilic heads). The hydrophobic effect drives their self-assembly in water, enabling membranes, vesicles, and lipid–protein complexes. Compared to [[Carbohydrates]], lipids are more reduced (higher energy density) and are therefore the dominant long-term energy store in animals.
+Lipids are largely hydrophobic (non-polar) molecules; many are amphipathic (having both hydrophobic tails and hydrophilic heads). The hydrophobic effect drives their self-assembly in [[water]], enabling membranes, vesicles, and lipid–protein complexes. Compared to [[Carbohydrates]], lipids are more reduced (higher energy density) and are therefore the dominant long-term energy store in animals.
 
 ### Building Blocks: Fatty Acids and Glycerol
 
@@ -47,7 +47,7 @@ Lipids are largely hydrophobic (non-polar) molecules; many are amphipathic (havi
 - Triacylglycerols (TAGs): primary energy storage; stored in adipocytes; mobilized via lipases; yield ~9 kcal/g.
 - Phospholipids (glycerophospholipids, sphingomyelin): amphipathic; major membrane components; headgroups include choline, ethanolamine, serine, inositol.
 - Sterols (e.g., cholesterol): planar, rigid ring system; modulates membrane fluidity and permeability; precursor for steroid hormones and bile acids.
-- Glycolipids: lipids with carbohydrate headgroups (often sphingolipids) important for cell–cell recognition and signaling at the outer leaflet.
+- Glycolipids: lipids with carbohydrate headgroups (often sphingolipids) important for [[cell]]–[[cell]] recognition and signaling at the outer leaflet.
 - Eicosanoids (from arachidonic acid): local signaling molecules (prostaglandins, thromboxanes, leukotrienes) affecting inflammation, vascular tone, and platelet function.
 - Fat-soluble vitamins: A, D, E, K are isoprenoid-derived lipids with roles in vision, calcium homeostasis, antioxidant protection, and coagulation.
 
@@ -60,12 +60,12 @@ In aqueous environments lipids spontaneously organize to minimize free energy:
 - Liposomes/vesicles: closed bilayers enclosing an aqueous lumen; basis for trafficking and drug delivery.
 
 > [!Warning] FYI
-> The hydrophobic effect is largely entropy-driven: water becomes less ordered when nonpolar surfaces cluster. Lipids do not “attract” each other strongly; they reduce the ordering penalty of surrounding water.
+> The hydrophobic effect is largely entropy-driven: [[water]] becomes less ordered when nonpolar surfaces cluster. Lipids do not “attract” each other strongly; they reduce the ordering penalty of surrounding [[water]].
 
 ## Biological Membranes
 
 - Fluid mosaic model: a 2D fluid bilayer of lipids with embedded proteins; components diffuse laterally, while transverse flip-flop is slow and often enzyme-mediated (flippases, floppases, scramblases).
-- Asymmetry: inner vs outer leaflet composition differs (e.g., PS, PE enriched cytosolic side; PC, sphingomyelin outer side); glycolipids face the extracellular space.
+- Asymmetry: inner vs outer leaflet composition differs (e.g., PS, PE enriched cytosolic side; PC, sphingomyelin outer side); glycolipids face the [[extracellular space]].
 - Cholesterol buffers fluidity: restrains movement (reduces permeability) at high T; prevents tight packing and preserves fluidity at low T.
 - Lipid rafts: ordered microdomains enriched in cholesterol and sphingolipids, proposed to organize signaling complexes.
 - Permeability barrier: bilayers are selectively permeable—small nonpolar molecules pass readily, ions and polar solutes require transport proteins.
@@ -86,12 +86,12 @@ In aqueous environments lipids spontaneously organize to minimize free energy:
 
 - Steroid hormones (e.g., cortisol, estradiol, testosterone) derive from cholesterol and act via nuclear receptors to regulate gene expression.
 - Eicosanoids act locally and rapidly; NSAIDs (e.g., aspirin) target cyclooxygenases involved in prostaglandin synthesis.
-- Glycolipids contribute to cell identity and immune recognition (e.g., blood group antigens).
+- Glycolipids contribute to [[cell]] identity and immune recognition (e.g., blood group antigens).
 
-## Intermolecular Forces and Water
+## Intermolecular Forces and [[Water]]
 
-- Hydrophobic effect drives aggregation in water; van der Waals interactions stabilize packed tails.
-- Hydrogen bonding occurs among headgroups and with water; electrostatic interactions among charged headgroups influence packing and protein binding.
+- Hydrophobic effect drives aggregation in [[water]]; van der Waals interactions stabilize packed tails.
+- Hydrogen bonding occurs among headgroups and with [[water]]; electrostatic interactions among charged headgroups influence packing and protein binding.
 
 ## Summary
 
