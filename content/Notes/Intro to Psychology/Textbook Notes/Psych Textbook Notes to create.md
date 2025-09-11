@@ -45,10 +45,10 @@ author:
 
 ## Nervous System
 
-1. [ ] [[Central Nervous System]] (CNS) 
-	- [ ] Comprises the brain and spinal cord
-	- [ ] Controls voluntary movements, thoughts, emotions, and other bodily functions
-2. [ ] [[Peripheral Nervous System]] (PNS) 
+1. [x] [[Central Nervous System]] (CNS) 
+	- [x] Comprises the brain and spinal cord
+	- [x] Controls voluntary movements, thoughts, emotions, and other bodily functions
+2. [x] [[Peripheral Nervous System]] (PNS) 
 	- [ ] Extends from the CNS to the rest of the body 
 	- [ ] Includes:
 	    - [ ] **[[Somatic Nervous System]]:** Controls voluntary movements, such as muscle contractions 

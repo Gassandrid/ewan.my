@@ -60,7 +60,7 @@ A typical CNN architecture consists of several layers, each with a specific role
 
 ### 3. **Pooling Layers**
    - Down-sample feature maps to reduce their spatial dimensions.
-   - Common pooling operations include Max Pooling and Average Pooling.
+   - Common pooling operations include [[Max Pooling]] and Average Pooling.
 
 ### 4. **Fully Connected Layers**
    - Flatten the final feature maps and pass them through dense layers.

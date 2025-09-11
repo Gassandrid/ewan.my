@@ -37,9 +37,9 @@ As the [makerworld page](https://makerworld.com/en/models/1381701-saturn-v-u-diy
 - [x] 4 - Side rail x 1
 - [x] 5 - Side rail x 1
 - [x] 6 - Side rail x 1
-- [ ] 7 - Side mounting x 1
-- [ ] 8 - Side mounting x 1
-- [ ] 9 - Side mounting x 1
+- [x] 7 - Side mounting x 1
+- [x] 8 - Side mounting x 1
+- [x] 9 - Side mounting x 1
 - [ ] 10 - Side mounting x 1
 - [ ] 11 - Side panel 2u wavy x 1
 - [ ] 12 - Side panel 2u wavy x 1
