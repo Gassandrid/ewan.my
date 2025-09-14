@@ -228,6 +228,19 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       \`
       document.head.appendChild(matomoScript);
     `)
+  } else if (cfg.analytics?.provider === "vercel") {
+    /**
+     * script from {@link https://vercel.com/docs/analytics/quickstart?framework=html#add-the-script-tag-to-your-site|Vercel Docs}
+     */
+    componentResources.beforeDOMLoaded.push(`
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    `)
+    componentResources.afterDOMLoaded.push(`
+      const vercelInsightsScript = document.createElement("script")
+      vercelInsightsScript.src = "/_vercel/insights/script.js"
+      vercelInsightsScript.defer = true
+      document.head.appendChild(vercelInsightsScript)
+    `)
   }
 
   if (cfg.enableSPA) {
