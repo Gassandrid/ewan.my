@@ -2,6 +2,7 @@
 date: 2024-10-04
 tags:
   - generated
+  - university
 updated: 2025-07-02
 ---
 

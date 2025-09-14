@@ -3,6 +3,7 @@ id: Final Project Report
 aliases:
 tags:
   - cs/embedded
+  - university
 date: 2024-12-04
 updated: 2025-03-31
 class: note

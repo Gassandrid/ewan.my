@@ -1,7 +1,7 @@
 ---
 tags: [project/homelab/rack]
 date: 2025-08-31
-updated: 2025-09-07
+updated: 2025-09-11
 ---
 
 *this is now the main page for work on the 3d printed 10 inch rack*
@@ -40,8 +40,8 @@ As the [makerworld page](https://makerworld.com/en/models/1381701-saturn-v-u-diy
 - [x] 7 - Side mounting x 1
 - [x] 8 - Side mounting x 1
 - [x] 9 - Side mounting x 1
-- [ ] 10 - Side mounting x 1
-- [ ] 11 - Side panel 2u wavy x 1
+- [x] 10 - Side mounting x 1
+- [x] 11 - Side panel 2u wavy x 1
 - [ ] 12 - Side panel 2u wavy x 1
 - [ ] 13 - Side panel 2u door x 1
 - [ ] 14 - Side panel 2u door x 1

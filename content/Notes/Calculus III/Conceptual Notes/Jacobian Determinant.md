@@ -3,7 +3,8 @@ date: 2024-10-31
 tags:
   - math
   - generated
-updated: 2024-10-31
+  - university
+updated: 2025-09-12
 ---
 
 > [!info] **Overview**
@@ -38,19 +39,23 @@ $$
 > $$
 > \frac{\partial u}{\partial x} = 2x, \quad \frac{\partial u}{\partial y} = -2y
 > $$
+>
 > $$
 > \frac{\partial v}{\partial x} = 2y, \quad \frac{\partial v}{\partial y} = 2x
 > $$
 >
 > The Jacobian matrix is:
+>
 > $$
 > J = \begin{pmatrix} 2x & -2y \\ 2y & 2x \end{pmatrix}
 > $$
-> 
+>
 > The determinant of $J$ is:
+>
 > $$
 > \det(J) = (2x)(2x) - (-2y)(2y) = 4x^2 + 4y^2 = 4(x^2 + y^2)
 > $$
+>
 > Thus, $\left| \det(J) \right| = 4(x^2 + y^2)$.
 
 ### Properties of the Jacobian Determinant

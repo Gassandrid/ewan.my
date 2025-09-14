@@ -1,7 +1,10 @@
 ---
 id: Mid Term Practice
 aliases: []
-tags: []
+tags:
+  - junk
+  - math/calculus
+  - university
 date: 2024-10-14
 updated: 2024-10-14
 ---

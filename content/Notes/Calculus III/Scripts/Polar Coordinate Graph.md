@@ -1,6 +1,10 @@
 ---
 date: 2024-10-09
 updated: 2024-10-28
+tags:
+  - math/calculus
+  - cs/python
+  - university
 ---
 ## Abstract
 

@@ -1,8 +1,14 @@
 ---
 date: 2024-12-10
-updated: 2024-12-10
+updated: 2025-09-12
+tags:
+  - cs/python
+  - math/calculus
+  - university
 ---
+
 I couldn't quite get the graph to represent what I wanted, but here is the attempt regardless. I am not annotating it much more than this, as you are welcome to check out the [[15.1.2 - Iterated Integrals#Proof of Fubini's Theorem|hand drawn reference]]
+
 ## Code
 
 ```python-r

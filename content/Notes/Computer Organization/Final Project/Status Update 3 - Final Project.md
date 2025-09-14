@@ -2,6 +2,7 @@
 date: 2024-11-11
 tags:
   - cs/embedded
+  - university
 updated: 2025-03-31
 class: note
 ---

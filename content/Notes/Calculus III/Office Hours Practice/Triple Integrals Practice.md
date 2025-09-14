@@ -1,6 +1,10 @@
 ---
 date: 2024-10-28
 updated: 2024-10-28
+tags:
+  - math/calculus
+  - junk
+  - university
 ---
 > [!Info] Desmos
 > <iframe src="https://www.desmos.com/calculator/win3io2qrs" width=600 height="400" ></iframe>

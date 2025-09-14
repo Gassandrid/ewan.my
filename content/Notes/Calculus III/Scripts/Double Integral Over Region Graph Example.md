@@ -1,8 +1,12 @@
 ---
 date: 2024-10-04
-updated: 2024-10-04
+updated: 2025-09-12
+tags:
+  - math/calculus
+  - cs/python
+  - university
 ---
-```python
+```python-r
 import micropip
 await micropip.install("matplotlib")
 await micropip.install("numpy")
@@ -46,4 +50,3 @@ ax.set_zlabel('Z-axis')
 plt.show()
 
 ```
-

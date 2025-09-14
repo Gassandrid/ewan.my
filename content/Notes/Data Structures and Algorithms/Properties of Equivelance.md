@@ -3,6 +3,7 @@ id: Properties of Equivelance
 aliases: []
 tags:
   - dsa
+  - university
 date: 2024-12-10
 updated: 2024-12-10
 ---

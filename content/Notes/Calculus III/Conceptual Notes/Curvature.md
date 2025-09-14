@@ -1,7 +1,8 @@
 ---
 date: 2024-09-24
 tags:
-  - math
+  - math/calculus
+  - university
 updated: 2024-10-25
 ---
 

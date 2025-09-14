@@ -3,6 +3,7 @@ id: Final Project Proposal and Pitch
 aliases:
 tags:
   - cs/embedded
+  - university
 date: 2024-12-10
 updated: 2025-03-31
 class: note

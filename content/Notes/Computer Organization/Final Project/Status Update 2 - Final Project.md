@@ -3,6 +3,7 @@ id: Status Update 2 - Final Project
 aliases:
 tags:
   - cs/embedded
+  - university
 date: 2024-10-10
 updated: 2025-03-31
 class: note

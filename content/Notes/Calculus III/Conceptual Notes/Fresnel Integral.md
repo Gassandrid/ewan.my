@@ -2,6 +2,7 @@
 date: 2024-10-07
 tags:
   - math/calculus
+  - university
 updated: 2025-07-06
 ---
 

@@ -1,6 +1,9 @@
 ---
 date: 2024-11-18
 updated: 2024-11-18
+tags:
+  - math/calculus/vector
+  - university
 ---
 
 

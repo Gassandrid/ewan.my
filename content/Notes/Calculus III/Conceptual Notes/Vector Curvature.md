@@ -1,6 +1,7 @@
 ---
 tags:
   - math
+  - university
 date: 2024-09-25
 updated: 2025-01-27
 ---

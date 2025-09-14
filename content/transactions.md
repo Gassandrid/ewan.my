@@ -121,3 +121,15 @@
 2025-09-03 biology course textbook program
     Expenses:college:textbooks             123.04
     Liabilities:chase-credit-card         -123.04
+
+2025-09-07 city market food
+    Expenses:college:food                    8.98
+    Liabilities:chase-credit-card           -8.98
+
+2025-09-09 city market food
+    Expenses:college:food                   25.99
+    Liabilities:chase-credit-card          -25.99
+
+2025-09-11 city market food
+    Expenses:college:food                   15.17
+    Liabilities:chase-credit-card          -15.17
