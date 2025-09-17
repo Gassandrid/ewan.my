@@ -23,4 +23,4 @@ As noted from the [[Islam Introduction Syllabus Day|first day]], a **Muslim** is
 > [!Abstract] Main Definitions
 > **Islam**: the _religion_
 > **Muslim**: a _person_ who follows Islam
-> **Allah:** the name for _a_ God in Arabic
+> **[[Allah]]:** the name for _a_ God in Arabic

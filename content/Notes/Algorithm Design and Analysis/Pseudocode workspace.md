@@ -5,6 +5,7 @@ class:
   - note
 tags:
   - cs/theory/algorithms
+  - university
 ---
 
 https://saswat.padhi.me/pseudocode.js/

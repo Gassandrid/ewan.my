@@ -1,6 +1,6 @@
 ---
 date: 2025-09-10
-updated: 2025-09-10
+updated: 2025-09-15
 class:
   - note
   - lectureNote
@@ -23,3 +23,6 @@ author:
 	-  poetry, dancing, music, meditation, asceticism - on top of "regular" practices
 - before ~1850-1900, this was a *primary* way [[Muslim]]s engaged in practices
 - [[Sunni]], [[Shi'i]]: anyone can be Sufi
+
+
+**Dhikr** or **zikr**: rememberance; a name for the worship services of Sufi practitioners

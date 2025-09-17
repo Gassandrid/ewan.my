@@ -13,6 +13,8 @@ related:
   - "[[Graphs#Alternative Representation]]"
 source:
   - "[[Pseudocode workspace]]"
+tags:
+  - university
 ---
 
 ---

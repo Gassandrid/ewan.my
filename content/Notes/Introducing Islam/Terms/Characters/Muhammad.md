@@ -22,7 +22,7 @@ updated: 2025-09-05
 
 A _perfect_ human being, the ideal muslim, and the "seal of the prophets" - meaning no more prophets will come after him. Not God, not an angel, not a saint, not a mystic, not a guru.
 
-At age 40, Muhammad began receiving revelations from God (Allah) while meditating, through the angel Gabriel (Jabreel).
+At age 40, Muhammad began receiving revelations from God ([[Allah]]) while meditating, through the angel Gabriel (Jabreel).
 
 ---
 

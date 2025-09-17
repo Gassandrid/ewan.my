@@ -110,7 +110,7 @@ class: navigation
 
 # Hello! My name is Ewan
 
-You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work. Either way, welcome to my digital garden.
+You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work. Either way, welcome to my [[digital garden]].
 
 I’m a second-year Computer Science student at the [[University Of Vermont]] with a growing passion for [[Computational Neuroscience]], [[Artificial Intelligence]], and [[Mathematics]]. I love exploring how brains and machines overlap, and I’m also into tinkering with hardware—things like embedded systems, robotics, and anything that involves code meeting the physical world.
 

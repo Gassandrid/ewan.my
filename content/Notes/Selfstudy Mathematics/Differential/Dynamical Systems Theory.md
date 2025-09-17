@@ -9,6 +9,8 @@ related:
 author:
 date: 2025-09-12
 updated: 2025-09-14
+aliases:
+  - Chaos Theory
 ---
 
 **Dynamical Systems Theory** is the study of systems that evolve over time according to a set of rules. It is a branch of mathematics that deals with the behavior of complex systems and how they change over time.

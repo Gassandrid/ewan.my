@@ -44,7 +44,7 @@ A key property of this is that everyone values different things at a different s
 >[!Abstract] Main Definitions
 >  **Islam**: the *religion*
 > **Muslim**: a *person* who follows Islam
-> **Allah:** the name for *a* God in Arabic
+> **[[Allah]]:** the name for *a* God in Arabic
 > **[[Qur'an]]:** Islam's holiest text
 
 #### Some Denominations

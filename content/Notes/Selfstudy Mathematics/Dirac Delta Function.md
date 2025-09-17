@@ -1,6 +1,6 @@
 ---
 date: 2025-04-05
-updated: 2025-07-18
+updated: 2025-09-16
 tags:
   - math/calculus
 class:

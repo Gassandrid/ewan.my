@@ -1,6 +1,6 @@
 ---
 date: 2025-09-08
-updated: 2025-09-08
+updated: 2025-09-15
 class:
   - note
   - lectureNote
@@ -56,6 +56,11 @@ author:
 		- [ ] The autonomic nervous system is further divided into:
 		    - [ ] **[[Sympathetic Nervous System]]:** Activates the "fight or flight" response 
 			- [ ] **[[Parasympathetic Nervous System]]:** Calms the body down after a stressful situation
+
+## More Brain
+
+- [ ] [[Dorsal Pathway]] - where and how to interact with
+- [ ] [[Ventral Pathway]] - what an object is
 
 ## Imaging
 

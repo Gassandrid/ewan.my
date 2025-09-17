@@ -24,7 +24,7 @@ updated: 2025-09-05
 **fiqh** is how humans _interpret_ said Law, with all the flaws and limitations that come with being human.
 
 - people get sick and need drugs, we protect people and keep them safe. In Iran, you can get permission from someone called a "Marja" to use drugs for medical purposes.
-- "all my mistakes are mine, all my good deeds are from Allah"
+- "all my mistakes are mine, all my good deeds are from [[Allah]]"
 
 Together, these are a system that reflects how [[Muslim]]s make sense of a whole host of ideals, ideas, and practices.
 

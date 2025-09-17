@@ -10,7 +10,7 @@ related:
 author:
   - "[[Ewan Pedersen]]"
 date: 2025-09-05
-updated: 2025-09-08
+updated: 2025-09-16
 ---
 
 The **Free Energy Principle** is a mathematical principle borrowed from *information theory*. It theorizes that the universal goal of living systems is to minimize a quantity of "free energy" in order to maintain their existence in a dynamic world.[^1]
