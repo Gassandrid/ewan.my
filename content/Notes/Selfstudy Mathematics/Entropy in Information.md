@@ -9,7 +9,7 @@ source:
 related:
 author:
 date: 2025-09-15
-updated: 2025-09-15
+updated: 2025-09-17
 ---
 
 Entropy is a very simple concept, but it has a lot of depth. It is a measure of uncertainty or randomness in a system. In information theory, entropy quantifies the amount of information contained in a message or data source. The more uncertain or random the data, the higher the entropy.
@@ -18,7 +18,7 @@ Entropy is a very simple concept, but it has a lot of depth. It is a measure of 
 
 ## Quantifying Surprise
 
-Entropy in a sense is the [[CH28 - Expected Values of Continuous Random Variables|expected value]] of **\*surprise**. If you have a fair coin, the outcome of a flip is uncertain, and thus has high entropy. If you have a biased coin that always lands on heads, the outcome is certain, and thus has low entropy.
+Entropy in a sense is the [[CH28 - Expected Values of Continuous Random Variables|expected value]] of **surprise**. If you have a fair coin, the outcome of a flip is uncertain, and thus has high entropy. If you have a biased coin that always lands on heads, the outcome is certain, and thus has low entropy.
 
 Surprise should be high when something unlikely happens, and low when something likely happens. The key difference between surprise and probability is that surprise is inversely related to probability, AND that compounding suprise is additive, not multiplicative.
 
@@ -33,7 +33,7 @@ Where $s$ is the [[Notes/Statistics/Conceptual Notes/Event|event]], $P(s)$ is th
 What you will notice is that for an example where someone gets a 1 on a 6 sided die 3 times in a row, the probability is:
 
 $$
-p(x=1,3) = \frac{1}{6^3}
+p(x=1,3) = \frac{1}{6^3} 
 $$
 
 But the surprise would instead be:
@@ -42,7 +42,7 @@ $$
 h(x=1,3) = -\log_2\left(\frac{1}{6^3}\right) = 3 \cdot -\log_2\left(\frac{1}{6}\right) = 3 \cdot \log_2(6)
 $$
 
-In essence, the logarithm turns the multiplication of probabilities into an addition of surprise.
+In essence, the logarithm turns the multiplication of probabilities into an addition of surprise. In the case of **rolling 3 dice**, the surprise would be that 3 times that of a single dice, whereas the probability of seeing that particular combination is instead $\frac{1}{216}$.
 
 ---
 
