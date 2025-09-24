@@ -1,19 +1,23 @@
 ---
-date: 2025-09-16
-updated: 2025-09-16
-class:
-  - note
+id: Cross Entropy
+aliases: []
 tags:
   - math/statistics/entropy
   - math/information
   - todo/math
+class:
+  - note
+date: "2025-09-16"
 source:
   - "[[The Key Equation Behind Probability]]"
-related:
-author:
+updated: "2025-09-19"
 ---
 
 **Cross Entropy** builds on the concept of [[Entropy in Information]] by measuring the difference between two probability distributions. While entropy quantifies the uncertainty within a single distribution, cross entropy evaluates how one distribution diverges from another.
+
+**Why have this?**
+
+In an ideal world, we would have access to the underlying [[Probability Distribution]] used to create our sample, making entropy very easy to calculate. But in reality, we dont have this perfect [[Probability Distribution]], and thus we need an approximation. What cross entropy allows us to do is compare the true distribution (which we may not know) with an estimated distribution (which we do know).
 
 ---
 
@@ -59,3 +63,13 @@ The value of cross entropy indicates how well the predicted distribution $Q$ app
 
 > [!Warning] Important t
 > **Cross Entropy is NOT Symmetric**: Note that cross entropy is not symmetric, meaning that $H(P, Q)$ is not necessarily equal to $H(Q, P)$. This asymmetry reflects the fact that the roles of the true and estimated distributions are different in the calculation.
+
+---
+
+## Properties of Cross Entropy
+
+One imortant property is that the cross entropy $H(P, Q)$ is always greater than or equal to the entropy $H(P)$ of the true distribution $P$. This is because using an estimated distribution $Q$ can never reduce the uncertainty inherent in the true distribution $P$.
+
+$$
+H(P, Q) \geq H(P)
+$$

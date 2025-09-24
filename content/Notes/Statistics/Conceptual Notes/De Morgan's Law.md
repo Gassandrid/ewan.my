@@ -2,6 +2,7 @@
 date: 2024-09-12
 tags:
   - math/statistics
+  - university
 updated: 2025-06-21
 ---
 # De Morgan's Law in Statistics

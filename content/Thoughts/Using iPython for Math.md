@@ -1,9 +1,11 @@
 ---
 date: 2024-10-03
 tags:
-  - python
-updated: 2024-10-03
+  - cs/python
+  - math
+updated: 2025-09-22
 ---
+
 I have recently started to like using ipython to do a lot of things I used to use tools like Jupyter, Desmos, and Mathematica for. And through this, I have found a powerful new tool to add to my collection.
 
 ## The Beauty Of the Command Line
@@ -16,7 +18,7 @@ But the biggest pitfall has always been interactive python development, with thi
 
 ---
 
-## The pitfall of Text Buffers
+## The Pitfall of Text Buffers
 
 Neovim, despite being easily one of the most customizable IDE's there are, is still only a text buffer. And even with programs like Neovide which seek to fix this pitfall, there are some GUI-related things it cannot do easily. 
 
@@ -24,11 +26,11 @@ The thing that this has hurt the most for me, has been Jupyter Notebooks. As som
 
 ---
 
-## How iPython fits into this
+## How iPython Fits into This
 
 iPython, while still only being a text buffer, allows me to keep this interpreter conversation style within the terminal. 
 
-### But Ewan, how does this fix Jupyter Problem?
+### But Ewan, how Does This Fix Jupyter Problem?
 
 *Doesn't this mean it has the same problem that you had before, and you cant really blend your code the same way?*
 
@@ -55,7 +57,7 @@ NameError: name 'y' is not defined
 
 ---
 
-## Doing math with iPython
+## Doing Math with iPython
 
 The thing that sealed the deal for me was one iPython extension: Copilot.
 

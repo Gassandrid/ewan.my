@@ -2,10 +2,10 @@
 id: Sorting Algorithms
 aliases: []
 tags:
-  - dsa
   - university
+  - cs/theory/algorithms
 date: 2024-12-10
-updated: 2024-12-10
+updated: 2025-09-22
 ---
 
 Sorting algorithms serve as one of the most fundamental components within modern software infrastructure. Many data structures and other algorithms rely on the data being sorted, and being able to do that either quickly, efficiently, or safely cannot be undermined.

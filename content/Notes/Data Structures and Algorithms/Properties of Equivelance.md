@@ -2,10 +2,10 @@
 id: Properties of Equivelance
 aliases: []
 tags:
-  - dsa
   - university
+  - cs/theory/algorithms
 date: 2024-12-10
-updated: 2024-12-10
+updated: 2025-09-22
 ---
 
 In layman's terms:

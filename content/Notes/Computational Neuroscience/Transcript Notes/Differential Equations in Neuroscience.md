@@ -1,12 +1,13 @@
 ---
 tags:
-  - math
   - comp-neuro
-  - artem-kirsanov
   - todo/neuro
+  - math/calculus/differential
 date: 2024-10-28
-updated: 2025-06-19
+updated: 2025-09-22
 class: transcript
+source:
+  - "[[Differential Equations - The Language of Change]]"
 ---
 *study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)* 
  

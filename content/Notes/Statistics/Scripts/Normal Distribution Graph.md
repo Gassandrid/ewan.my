@@ -1,8 +1,9 @@
 ---
 tags:
-  - python
+  - university
+  - cs/python
 date: 2024-10-15
-updated: 2024-10-17
+updated: 2025-09-22
 ---
 
 ## Image

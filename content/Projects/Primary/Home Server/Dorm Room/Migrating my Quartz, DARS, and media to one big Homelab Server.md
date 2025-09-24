@@ -1,7 +1,7 @@
 ---
 title: Migrating my Quartz, DARS, and media to one big Homelab Server
 date: 2025-01-02
-updated: 2025-08-21
+updated: 2025-09-19
 tags:
   - projects/homelab
 class:
@@ -34,12 +34,9 @@ I have both several Raspberry Pi's, and also several machines that would inevita
 
 ## Tasks
 
-- [ ] [[Brainstorming Software Stack]]
-- [ ] [[Brainstorming Hardware Stack]]
+- [x] [[Brainstorming Software Stack]]
+- [x] [[Brainstorming Hardware Stack]]
 	- rPi project, also new mini pc, old laptops, etc. any computer I can get my hands on.
-- [ ] [[Using old computers as nodes]]
-- [ ] [[Using rPi's for home assistant]]
-- [ ] [[Running Local ML Models on the Lab]]
 - [x] [[Proxmox on old Macbooks]]
 
 ---

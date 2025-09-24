@@ -1,8 +1,9 @@
 ---
 id: Population
-aliases: 
+aliases:
 tags:
   - math/statistics
+  - university
 date: 2024-09-12
 updated: 2025-06-21
 ---

@@ -1,7 +1,8 @@
 ---
 id: CH6 - Chi Squared Tests
 aliases: []
-tags: []
+tags:
+  - university
 date: 2024-12-13
 updated: 2024-12-13
 ---

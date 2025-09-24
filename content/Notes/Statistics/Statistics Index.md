@@ -1,6 +1,8 @@
 ---
 date: 2024-09-12
 updated: 2025-01-31
+tags:
+  - university
 ---
 # Statistics Notes
 

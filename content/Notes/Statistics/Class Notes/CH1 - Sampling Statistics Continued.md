@@ -1,9 +1,10 @@
 ---
 id: CH2 - Sampling Statistics Continued
-aliases: 
+aliases:
 tags:
   - math/statistics
   - cs/python
+  - university
 date: 2024-09-12
 updated: 2025-09-05
 ---

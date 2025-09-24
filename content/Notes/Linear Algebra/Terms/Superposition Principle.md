@@ -1,12 +1,11 @@
 ---
 id: Superposition Principle
-aliases: 
+aliases:
 tags:
-  - terms
   - math/linear-algebra
 date: 2025-02-03
 title: Superposition Principle
-updated: 2025-04-02
+updated: 2025-09-22
 ---
 
 The superposition principle states that the response of a linear system to a sum of multiple inputs is the sum of the responses to each input separately. In other words, if a system is linear, it satisfies the principle of superposition. This principle is widely used in physics and engineering to analyze and solve problems involving linear systems.

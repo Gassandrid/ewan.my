@@ -3,6 +3,7 @@ id: CH5 - Confidence Intervals
 aliases: []
 tags:
   - math/statistics
+  - university
 date: 2024-10-23
 updated: 2025-06-21
 ---

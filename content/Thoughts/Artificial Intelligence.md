@@ -1,7 +1,7 @@
 ---
 title: Artificial Intelligence
 date: 2025-02-05
-updated: 2025-07-03
+updated: 2025-09-22
 tags:
   - cs/ai
 ---
@@ -18,16 +18,22 @@ I believe finding the "real" sources of intelligence within our own human brains
 
 ---
 
+## Temporal Dynamics
+
+A recent interest of mine under the field of [[Machine Learning]] has been looking at models that have neuronal synchronization through time being the primary mechanism for feature encoding. This has the advantage of being more biologically accurate, and possibly might lead to better thinking models that "reason through time". A good example of one of these models are [[Continuous Thought Machines]].
+
+---
+
 ## Transformers
 
 Transformers are essentially what led to machine learning as we know it becoming mainstream. While attempts to create language models had been undertaken before(LSTM, etc), they all faced the problem of scaling, where it would very quickly become unfeasible to train these models.
 
 Transformers changed this in the fact that a large portion of the training and inference algorithms could be accelerated via parallelization, aka using GPUs.
 
-[[Understanding Transformers]], and other notes go over the mechanisms in which this can be done, from the attention blocks to the MLP layers, to the nature of large language model word meaning embeddings.
+[[Self Attention]], and other notes go over the mechanisms in which this can be done, from the attention blocks to the MLP layers, to the nature of large language model word meaning embeddings.
 
 ---
 
 ## Some AI Notes
 
-I take machine learning notes in my free time, and they can be found under [[Notes/Artificial Intelligence/Concepts/Overview|Overview|the conceptual notes]]. I plan to do some more notes regarding [[3Blue1Brown]]'s videos on how transformers work, but those have yet to be done as seen under the **Transformers** heading of this note.
+I take machine learning notes in my free time, and they can be found under [[AI Overview|Overview|the conceptual notes]]. I plan to do some more notes regarding [[3Blue1Brown]]'s videos on how transformers work, but those have yet to be done as seen under the **Transformers** heading of this note.

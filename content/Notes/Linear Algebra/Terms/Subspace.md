@@ -1,8 +1,7 @@
 ---
 id: Subspace
-aliases: 
+aliases:
 tags:
-  - terms
   - math/linear-algebra
 date: 2025-02-03
 title: Subspace

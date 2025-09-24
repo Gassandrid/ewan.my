@@ -1,6 +1,6 @@
 ---
 date: 2025-09-08
-updated: 2025-09-15
+updated: 2025-09-23
 class:
   - note
   - lectureNote
@@ -21,27 +21,27 @@ author:
 
 ## Parts of Brain
 
-- [ ] [[Forebrain#Neocortex]]
-	- [ ] [[Occipital Lobe]]
-	- [ ] [[Temporal Lobe]]
-	- [ ] [[Parietal Lobe]]
-	- [ ] [[Frontal Lobe]]
-	- [ ] [[Insular Lobe]]
-- [ ] [[Forebrain#Subcortex]]
-	- [ ] [[Hippocampus]]
-	- [ ] [[Amygdala]]
-	- [ ] [[Basal Ganglia]]
-	- [ ] [[Thalamus]]
-	- [ ] [[Hypothalamus]]
-- [ ] [[Midbrain]]
-	- [ ] [[Tegmentum]]
-	- [ ] [[Ventral tegmental area]]
-	- [ ] [[Substantia nigra]]
-- [ ] [[Hindbrain]]
-	- [ ] [[Pons]]
-	- [ ] [[Medulla oblongata]]
-	- [ ] [[Reticular Formation]]
-	- [ ] [[Cerebellum]]
+- [ ] [[Forebrain#Neocortex]] - Higher-order functions like thought, language, and sensory perception.
+	- [ ] [[Occipital Lobe]] - Processes visual information. 👀
+	- [ ] [[Temporal Lobe]] - Processes sounds, memory, and language comprehension. 👂
+	- [ ] [[Parietal Lobe]] - Integrates sensory information (touch, temperature) and spatial awareness.
+	- [ ] [[Frontal Lobe]] - Manages executive functions: planning, decision-making, and personality. 🧠
+	- [ ] [[Insular Lobe]] - Involved in emotion, self-awareness, and internal body sensations.
+- [ ] [[Forebrain#Subcortex]] - Structures below the cortex handling memory, emotion, and drives.
+	- [ ] [[Hippocampus]] - Forms new memories and is key for spatial navigation. 🗺️
+	- [ ] [[Amygdala]] - The brain's emotional center, especially for fear and aggression.
+	- [ ] [[Basal Ganglia]] - Controls voluntary motor movements, habit formation, and procedural learning.
+	- [ ] [[Thalamus]] - Acts as the main relay station for sensory information. 📮
+	- [ ] [[Hypothalamus]] - Regulates basic drives like hunger, thirst, and body temperature.
+- [ ] [[Midbrain]] - Connects the forebrain and hindbrain; involved in vision, hearing, and movement.
+	- [ ] [[Tegmentum]] - Controls basic body and limb movements.
+	- [ ] [[Ventral tegmental area]] - A key part of the brain's reward and motivation circuit (dopamine). ✨
+	- [ ] [[Substantia nigra]] - Important for reward and fluid movement (dopamine).
+- [ ] [[Hindbrain]] - Manages vital autonomic functions for survival.
+	- [ ] [[Pons]] - Relays signals between the cerebrum and cerebellum; involved in sleep and facial sensation.
+	- [ ] [[Medulla oblongata]] - Controls involuntary functions like heartbeat and breathing. ❤️
+	- [ ] [[Reticular Formation]] - A network for arousal, consciousness, and the sleep-wake cycle. 😴
+	- [ ] [[Cerebellum]] - Coordinates fine motor control, balance, and posture. 🤸‍♀️
 
 ## Nervous System
 

@@ -9,7 +9,7 @@ updated: 2025-08-14
 
 A **canon** is a piece of music in which a melody is played and then imitated by one or more voices or instruments. The term is often used to describe a specific type of musical form where the same melody is repeated at different pitches or times.
 
-![[Pasted image 20250814105419.png]]
+![[Canon.png]]
 
 ---
 

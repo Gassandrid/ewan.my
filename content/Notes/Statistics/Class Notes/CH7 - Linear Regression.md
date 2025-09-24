@@ -4,6 +4,7 @@ aliases: []
 tags:
   - math/statistics
   - engineering
+  - university
 date: 2024-11-14
 updated: 2025-06-21
 ---

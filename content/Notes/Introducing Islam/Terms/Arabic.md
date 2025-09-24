@@ -2,7 +2,6 @@
 class:
   - note
   - lectureNote
-  - definition
 tags:
   - university
   - religion/islam/arabic

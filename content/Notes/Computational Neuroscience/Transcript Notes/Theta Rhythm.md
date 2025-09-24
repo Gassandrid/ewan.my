@@ -3,10 +3,9 @@ id: Theta Rhythm - A memory clock
 aliases:
 tags:
   - comp-neuro
-  - artem-kirsanov
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-08-20
+updated: 2025-09-22
 class: transcript
 source:
   - "[[Theta rhythm A Memory Clock]]"
@@ -109,7 +108,7 @@ This could be things like the **current position**, **sensory cues**, the **emot
 
 Each of these "modalities" has a **corresponding pattern** of brain activity, a "neural fingerprint" of sorts that uniquely identifies this given information source.
 
-A great example of this is another video made by Artem(which I plan on writing a note on, if not done already) about [[Place cells: How your brain creates maps of abstract spaces|Place Cells]], which are neurons that essentially associate certain behavior with a given location. Each of these Place Cells has a **preferred location** in which they tend to fire. Bringing all these place cells together, we get something of a "code" of physical position.
+A great example of this is another video made by Artem(which I plan on writing a note on, if not done already) about [[Place cells]], which are neurons that essentially associate certain behavior with a given location. Each of these Place Cells has a **preferred location** in which they tend to fire. Bringing all these place cells together, we get something of a "code" of physical position.
 
 ---
 

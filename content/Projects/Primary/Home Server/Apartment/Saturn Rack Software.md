@@ -2,7 +2,7 @@
 tags:
   - projects/homelab/software
 date: 2025-08-31
-updated: 2025-09-04
+updated: 2025-09-23
 class:
   - note
 ---
@@ -18,6 +18,10 @@ For the new modern [[Saturn V Server Rack]] that I am building, I want to rethin
 ### NextCloud
 
 ### Obsidian LiveSync
+
+## DNS/Networking
+
+### NginX [[Reverse Proxy]]
 
 ### PiHole
 

@@ -12,12 +12,12 @@ related:
 author:
   - "[[Douglas Hofstadter]]"
 date: 2025-09-03
-updated: 2025-09-03
+updated: 2025-09-22
 ---
 
 The _Little Harmonic Labyrinth_ means several things in this context. On the one hand, it is a semi niche piece of music composed **Sebastian Bach**.
 
-But in the context of [[Gödel Escher Bach]], it is a chapter dedicated to a dialogue between [[Achilles]] and [[The Tortoise]] about **recursion** and **self-reference**.
+But in the context of [[Gödel, Escher, Bach]], it is a chapter dedicated to a dialogue between [[Achilles]] and [[The Tortoise]] about **recursion** and **self-reference**.
 
 ---
 

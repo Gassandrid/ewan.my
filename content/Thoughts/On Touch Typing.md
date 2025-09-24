@@ -1,10 +1,9 @@
 ---
 date: 2025-02-24
-updated: 2025-02-24
+updated: 2025-09-22
 title: On Touch Typing
 tags:
   - seed
-  - productivity
 ---
 
 [[Typing]] for me has grown from a skill that I needed to learn regarding my career, to something that has drastically changed the way I get work done.
