@@ -28,3 +28,9 @@ updated: "2025-09-24"
 Energy released by electron transfer reactions between photosystems (through ETC) used to form **Proton Gradient** across thylakoid membrane.
 
 Proton gradient used to make ATP via **ATP Synthase**.
+
+
+---
+
+## Similarties and DIfferences between Glycolosis and 
+
