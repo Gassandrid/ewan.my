@@ -123,3 +123,52 @@ $$
 
 - $P(x\mid d):$ defines the likelihood of clue $d$ pointing to card $x$
 - $P(Y=1 \mid x)$ is 1 if $x\in T$, otherwise it is 0
+
+Another much simpler scoring function can be achieved using the **log-likelihood** ratio:
+
+$$
+S(d) = \log \frac{P(d \mid T)}{P(d \mid E)}
+$$
+
+Where $P(d \mid T)$ is defined as:
+
+$$
+P(d \mid T) = \frac{1}{|T|} \sum P(d \mid t)
+$$
+
+and $P(d \mid E)$ as:
+
+$$
+P(d\mid E) = \frac{1}{|E|} \sum P(d \mid e)
+$$
+
+Essentially, we are balancing *how much more the given clue matches with **targets** vs **enemies***.
+
+If $S(d) > 0$, then the clue carries a net positive in information for targets, and the magnitude defines the strength of the clue.
+
+Now, the key challenge is to balance our coverage maximizing algorithm with target-enemy ratio.
+
+This gives us two important properties:
+
+$$
+\begin{align*}
+min_{t \in T} P(d \mid t) \geq threshold \\
+max_{e \in E} P (d \mid e) \quad penalty
+\end{align*}
+$$
+
+We can use this to assemble a final scoring function:
+
+$$
+Score(d) = I(Y ; d) \approx \log \frac{P(d \mid T)}{P(d \mid E)} \cdot Coverage(d)
+$$
+
+Where **Coverage** is defined as:
+
+$$
+Coverage(d) = min_{t}(d \mid t)
+$$
+
+*ensuring all targets are hit*
+
+and **log-ratio** is defined as the information gain *against* enemies.
