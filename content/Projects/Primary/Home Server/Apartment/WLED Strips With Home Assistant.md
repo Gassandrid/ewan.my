@@ -1,7 +1,7 @@
 ---
 title: WLED Strips With Home Assistant
 date: 2025-01-24
-updated: 2025-09-22
+updated: 2025-09-30
 tags:
   - cs
   - projects/homelab/hardware

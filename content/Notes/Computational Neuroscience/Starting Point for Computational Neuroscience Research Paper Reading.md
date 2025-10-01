@@ -1,7 +1,7 @@
 ---
 title: Starting Point for Computational Neuroscience Research Paper Reading
 date: 2025-02-11
-updated: 2025-07-07
+updated: 2025-09-29
 tags:
   - seed
   - comp-neuro

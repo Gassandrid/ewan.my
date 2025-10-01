@@ -8,11 +8,11 @@ tags:
   - todo/cs/ai
 class:
   - note
-date: "2025-09-19"
+date: 2025-09-22
 source:
   - "[[How Neural Networks Handle Probabilities]]"
   - "[[Variational Autoencoders - Generative AI Animated]]"
-updated: "2025-09-22"
+updated: 2025-09-25
 ---
 
 **Variational Autoencoders (VAE)** fundametally transform the goal of neural networks from learning a direct mapping from inputs to outputs, to learning a probabilistic representation of the data. This is achieved by encoding the input data into a latent space defined by a probability distribution, typically a Gaussian distribution characterized by its mean and variance.
@@ -60,3 +60,5 @@ $$
 $$
 
 Because given **any** logarithmic function, taking the midpoint of two values and then applying the logarithm will always be greater than or equal to applying the logarithm to each value and then taking the midpoint.
+
+

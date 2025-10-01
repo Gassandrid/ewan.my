@@ -1,10 +1,12 @@
 ---
 id: Parallax
-aliases: 
+aliases:
 tags:
   - astronomy
 date: 2024-09-12
 updated: 2025-04-13
+class:
+  - note
 ---
 
 # Parallax in Astronomy

@@ -2,9 +2,13 @@
 tags:
   - seed
 date: 2025-07-28
-updated: 2025-07-28
+updated: 2025-09-29
 class:
   - note
+source:
+  - "[[Uncreated Notes]]"
+related:
+author:
 ---
 
 I have a bit of a problem - I really love the idea of setting off tasks to do later by linking to a note that doesn't exist.
@@ -28,3 +32,7 @@ This also integrates nicely with my already in place "todo" tag system. If I imm
 This also gives me the opportunity to populate the task with some gibberish fleeting thoughts so that I can recover the goal easier. 
 
 And, for a little extra bonus, it makes the graph view look cooler 😎
+
+---
+
+Now, it is a fact that no matter what, **Uncreated Notes** will end up existing, just because of how I write notes + how the Obsidian Web Clipper captures Authors. The important thing to do is to address them as they come, and dedicate some amount of time to [[Private/Garden Tending|Garden Tending]] every now and then.

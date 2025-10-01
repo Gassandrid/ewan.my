@@ -5,6 +5,7 @@ class:
 tags:
   - university
   - biology
+  - todo/biology
 course: "[[Principles of Biology 1]]"
 lesson:
   - lecture

@@ -1,6 +1,6 @@
 ---
 date: 2025-01-04
-updated: 2025-04-28
+updated: 2025-09-29
 title: Python Libraries to Learn
 tags:
   - cs/python
@@ -20,6 +20,7 @@ I know a lot of these libraries already, but I like writing down references anyw
 - [ ] [[Numpy]]
 - [ ] [[SciPy]]
 - [ ] [[SymPy]]
+- [ ] [[TransformerLens]] - good for [[Mechanistic Interpretability]] research in ai
 
 **Stats:**
 - [ ] [[Pandas]]
@@ -35,6 +36,11 @@ https://neuralensemble.org/
 - [ ] [[Elephant]]
 - [ ] [[NEST]]
 - [ ] [[Nengo]] (maybe, I dont know if it is still relavent)
+
+**Misc**:
+- [ ] [[yt-dlp]]
+
+**Ai**:
 
 ---
 
@@ -96,13 +102,9 @@ https://neuralensemble.org/
 If you only want a "working core" you can expand later:
 
 - `numpy`, `scipy`, `matplotlib`, `pandas`
-    
 - `brian2`, `neo`, `elephant`
-    
 - `sympy`, `jax`
-    
 - `seaborn`, `h5py`, `scikit-learn`
-    
 - `dask` (for larger data)
 
 ---

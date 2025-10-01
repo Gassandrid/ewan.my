@@ -1,6 +1,6 @@
 ---
 date: 2024-09-12
-updated: 2025-09-22
+updated: 2025-09-29
 class:
   - navigation
 tags:
@@ -11,6 +11,8 @@ tags:
 
 >[!Warning] Important
 >A **very** old overview of the starting point for my [[Machine Learning]] work. This was before I had a large graph network, and wanted to introduce structure to the notes. For more modern notes, they can be found more organically litered throughout the [[Artificial Intelligence]] directory
+>
+> In addition, a lot of this was AI generated, which I have sort of moved on from nowadays as I find more use in writing the notes myself.
 
 ## Neurons
 
@@ -82,4 +84,4 @@ I have also layed out the workflow for how to design a model to fit a certain ta
 - [[Variational Autoencoder]]
 	- Changes the task of a neural network from predicting some exact output parameters to preciting a probability distribution, and then randomly sampling from said distribution.
 - [[Boltzmann Machine]]
-- [[Diffusion]]
+- [[Diffusion in Machine Learning]]

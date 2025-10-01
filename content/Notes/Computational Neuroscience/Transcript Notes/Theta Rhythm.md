@@ -5,8 +5,10 @@ tags:
   - comp-neuro
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-09-22
-class: transcript
+updated: 2025-09-29
+class:
+  - transcript
+  - note
 source:
   - "[[Theta rhythm A Memory Clock]]"
 ---
@@ -130,7 +132,7 @@ This so-called **sequence organization**(a one dimensional process) is vital for
 
 To cement these concepts properly, lets work with an example:
 
-> [!Example] > **Alice** and **Bob** are childhood friends who have not seen each other in a very long time.
+> [!Example] **Alice** and **Bob** are childhood friends who have not seen each other in a very long time.
 >
 > One day, they randomly bump into each other in the bank. But, given that both were busy, they thought it best to go and meet up later at their **favorite coffee shop** to catch up with each other.
 >
@@ -212,7 +214,7 @@ Because neurons adjust timings of their spikes to the ticking of the [[Hippocamp
 
 ## Phase Precession
 
-We have already talked about how a **path** through an environment can be represented sequence of [[Place cells: How your brain creates maps of abstract spaces|place cell]] activations(the specialized neurons that encode physical location and subsequent behavior).
+We have already talked about how a **path** through an environment can be represented sequence of [[Place Cells|place cell]] activations(the specialized neurons that encode physical location and subsequent behavior).
 
 Each of those cells has a preffered patch of ground, called the **place field**, where if fires most actively.
 

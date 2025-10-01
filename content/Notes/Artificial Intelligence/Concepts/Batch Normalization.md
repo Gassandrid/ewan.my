@@ -1,7 +1,10 @@
 ---
 date: 2024-09-12
-updated: 2024-10-14
+updated: 2025-09-29
+tags:
+  - cs/ai/layer
 ---
+
 # Batch Normalization
 
 ![[Screenshot 2024-09-17 at 10.22.04 AM.png]]
@@ -20,6 +23,7 @@ Batch Normalization (BN) is a technique used in deep learning to improve the tra
 ## How It Works
 
 BN normalizes the output of a layer by adjusting and scaling the activations based on the statistics of the mini-batch. The main steps include:
+
 1. **Calculate Mean**: Compute the mean of the mini-batch for each feature.
 2. **Calculate Variance**: Compute the variance of the mini-batch for each feature.
 3. **Normalize**: Subtract the mean from the input and divide by the variance to standardize the values.
@@ -32,6 +36,7 @@ $$
 $$
 
 where:
+
 - $x^{(i)}$ is the input for the $i_{th}$ neuron in the layer.
 - \( \mu_B \) is the mean of the mini-batch.
 - \( \sigma_B^2 \) is the variance of the mini-batch.
@@ -46,11 +51,13 @@ where:
 - **Regularization**: BN adds a slight regularization effect, making models less prone to overfitting, although this does not replace other regularization techniques.
 
 ## Limitations
+
 - **Batch Dependence**: BN works best with large batch sizes. Small batches may lead to inaccurate statistics (mean and variance).
 - **Complexity**: Adds computational overhead since it requires maintaining additional moving averages of batch statistics during training.
 - **Training and Inference Difference**: During inference, BN uses running averages of the mean and variance computed during training, which may lead to performance drops if batch statistics are not well-calibrated.
 
 ## Code Example (PyTorch)
+
 ```python
 import torch
 import torch.nn as nn

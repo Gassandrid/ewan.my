@@ -1,10 +1,12 @@
 ---
 id: Telescopes
-aliases: 
+aliases:
 tags:
   - astronomy
 date: 2024-09-12
-updated: 2025-04-13
+updated: 2025-09-29
+class:
+  - note
 ---
 
 # Telescopes in Astronomy

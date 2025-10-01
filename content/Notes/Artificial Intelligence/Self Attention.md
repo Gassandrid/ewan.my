@@ -1,6 +1,6 @@
 ---
 date: 2025-08-23
-updated: 2025-08-26
+updated: 2025-09-25
 class:
   - note
 tags:
@@ -14,7 +14,7 @@ related:
   - "[[Softmax]]"
 ---
 
-Assuming that we are working with a [[Large Language Models|Large Language Model]], and as such we have already associated an [[Embedding Vector]] to each [[Token]] based on its learned value and its position, the next logical step would be to allow these new vectors to "soak up" more knowledge about the words around them.
+Assuming that we are working with a [[Large Language Model|Large Language Model]], and as such we have already associated an [[Embedding Vector]] to each [[Token]] based on its learned value and its position, the next logical step would be to allow these new vectors to "soak up" more knowledge about the words around them.
 
 $$
 Token[\text{"Tower"}] \to \begin{bmatrix}
@@ -172,7 +172,6 @@ $$
 \dots
 $$
 
-
 As defined in the now famous paper **Attention is All You Need**,[^3] this whole process is represented as one "trivial" equation:
 
 $$
@@ -187,8 +186,6 @@ $$
 todo\dots
 $$
 
-
 [^1]: In practical cases, _position_ would be embedded in a much more abstract way than just having its index at the top. We will also be representing all tokens as full words for brevity
 [^2]: Li, X. L., Thickstun, J., Gulrajani, I., Liang, P., & Hashimoto, T. B. (2022). _Diffusion-LM Improves Controllable Text Generation_ (No. arXiv:2205.14217). arXiv. [https://doi.org/10.48550/arXiv.2205.14217](https://doi.org/10.48550/arXiv.2205.14217)
 [^3]: Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2023). _Attention Is All You Need_ (No. arXiv:1706.03762). arXiv. [https://doi.org/10.48550/arXiv.1706.03762](https://doi.org/10.48550/arXiv.1706.03762)
-

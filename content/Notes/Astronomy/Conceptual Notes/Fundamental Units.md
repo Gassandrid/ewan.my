@@ -1,13 +1,16 @@
 ---
 id: Fundamental Units
-aliases: 
+aliases: []
 tags:
   - astronomy
-date: 2024-09-12
-updated: 2025-04-13
+  - physics
+class:
+  - note
+date: "2024-09-12"
+updated: "2025-09-29"
 ---
 
-# Fundamental Units of Physics And Astronomy
+Fundamental Units have a very important role in Astronomy and just about every other field of science. They provide a standardized way to measure and describe physical quantities, allowing scientists to communicate their findings accurately and consistently.
 
 ## Length
 

@@ -1,13 +1,20 @@
 ---
 date: 2024-09-12
-updated: 2025-08-11
+updated: 2025-09-29
+class:
+  - note
+tags:
+  - cs/ai
+source:
+related:
+author:
 ---
 
 ![[Pasted image 20240924102913.png]]
 
 A Boltzmann Machine is a type of stochastic (randomly determined) neural network that is used to model probability distributions over binary-valued patterns. It's a foundational model in the field of probabilistic graphical models and deep learning. It is named after the Boltzmann distribution in statistical mechanics.
 
-The Boltzmann Machien is an evolution of the ideas presented by the memory modelling [[Hopfield Networks]]. By just adding the two important concepts of stochastically and hidden units, just about any Hopfield Network can be transformed into a Boltzmann Machine
+The Boltzmann Machine is an evolution of the ideas presented by the memory modelling [[Hopfield Networks]]. By just adding the two important concepts of stochastically and hidden units, just about any Hopfield Network can be transformed into a Boltzmann Machine
 
 ### Key Components
 
@@ -25,7 +32,7 @@ $$
   P(\text{state}) = \frac{e^{-E(\text{state})}}{Z} cX
 $$
 
-  where \( E(\text{state}) \) is the energy of the state, and \( Z \) is the partition function, which normalizes the probabilities.
+  where $E(\text{state})$ is the energy of the state, and $Z$ is the partition function, which normalizes the probabilities.
 
 - **Lower Energy States**: States with lower energy are more probable. The learning process involves adjusting the weights to lower the energy of desired states, making them more likely.
 

@@ -1,25 +1,26 @@
 ---
 id: Meridian
-aliases: 
-tags: [astronomy]
+aliases: []
+tags:
+  - astronomy
+class:
+  - note
 date: 2024-09-12
-updated: 2024-10-05
+updated: 2025-09-29
+related:
+  - "[[Zenith]]"
+  - "[[Celestial Equator]]"
+  - "[[Transit(Astronomy)]]"
 ---
- 
-
-# Meridian
-
-## Definition
 
 The **meridian** in astronomy is an imaginary great circle on the celestial sphere that passes through the **celestial poles** and the **zenith** of a particular location on Earth. It effectively divides the sky into eastern and western halves.
 
-## Key Concepts
+---
+
+## Some Variations
 
 - **Local Meridian**: This is the meridian specific to the observer’s location. It connects the north and south points on the horizon with the zenith directly overhead.
 - **Celestial Meridian**: This meridian extends beyond the local horizon, intersecting with the celestial poles.
-
-## Related Terms
-
 - **Zenith**: The point directly above the observer, which the meridian passes through.
 - **Celestial Equator**: The imaginary projection of Earth’s equator onto the celestial sphere, which crosses the meridian.
 - **Transit**: A celestial object is said to be in transit when it crosses the local meridian.

@@ -1,8 +1,9 @@
 ---
 tags:
-  - projects/homelab
+  - engineering/3dprinting
+  - projects/homelab/hardware
 date: 2025-08-31
-updated: 2025-09-22
+updated: 2025-09-30
 ---
 
 *this is now the main page for work on the 3d printed 10 inch rack*

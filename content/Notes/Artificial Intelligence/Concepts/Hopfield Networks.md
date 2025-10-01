@@ -1,7 +1,15 @@
 ---
 date: 2024-09-12
-updated: 2025-03-25
+updated: 2025-09-29
 title: Hopfield Networks
+class:
+  - note
+tags:
+  - cs/ai
+source:
+related:
+author:
+  - "[[John Hopfield]]"
 ---
 
 A Hopfield Network is a type of recurrent artificial neural network that serves as a content-addressable memory system with binary threshold nodes. It was introduced by John Hopfield in 1982 and is known for its ability to store and retrieve patterns, acting somewhat like an associative memory.
@@ -21,8 +29,11 @@ A Hopfield Network is a type of recurrent artificial neural network that serves 
 - The network's state is described by an energy function, similar to a Boltzmann Machine. The network evolves over time to minimize this energy, moving towards stable states, known as **attractors**.
 - The energy function for a Hopfield Network is given by:  
 
-  $$E = -\frac{1}{2} \sum_{i \neq j} w_{ij} s_i s_j$$
+  $$
 
+E = -\frac{1}{2} \sum_{i \neq j} w_{ij} s_i s_j
+
+$$
   where $w_{ij}$ is the weight between neurons $i$ and $j$, and $s_i$ and $s_j$ are the states of the respective neurons.
 
 ### Stability and Convergence
@@ -32,13 +43,14 @@ A Hopfield Network is a type of recurrent artificial neural network that serves 
 
 ## Learning in Hopfield Networks
 
-	### Hebbian Learning Rule
+### Hebbian Learning Rule
 - The weights in a Hopfield Network are typically determined using Hebbian learning, which can be summarized as: "cells that fire together wire together."
 - For a set of patterns $\{x^1, x^2, \dots, x^p\}$, the weight matrix $W$  is defined as:
+$$
+
+  w_{ij} = \sum_{\mu=1}^{p} x_i^\mu x_j^\mu
 
 $$
-  w_{ij} = \sum_{\mu=1}^{p} x_i^\mu x_j^\mu
-  $$
 
   where $x_i^\mu$ is the state of neuron $i$ in pattern $\mu$.
 

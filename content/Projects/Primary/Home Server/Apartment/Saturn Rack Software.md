@@ -2,18 +2,24 @@
 tags:
   - projects/homelab/software
 date: 2025-08-31
-updated: 2025-09-23
+updated: 2025-09-30
 class:
   - note
 ---
 
 For the new modern [[Saturn V Server Rack]] that I am building, I want to rethink the software stack from the ground up.
 
+See [[Master Homelab Architecture]]
+
 ---
 
 ## Storage Related
 
-### TrueNAS
+### [[Samba]] (nas software)
+
+- [x] done
+
+### [[GitTea]]
 
 ### NextCloud
 

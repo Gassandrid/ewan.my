@@ -5,12 +5,15 @@ tags:
 created: 2025-04-25
 source: "[[The most beautiful equation in math, explained visually Euler’s Formula]]"
 date: 2025-06-21
-updated: 2025-08-12
+updated: 2025-09-24
 class:
   - transcript
 ---
 
 _for a [Welch Labs](https://www.youtube.com/watch?v=f8CXG7dS-D0) video_
+
+>[!note]
+> *This is less like my standard math notes, and more like a "story" of eulers formula. It is by far the most elegant math formulation, so I think that fits.*
 
 There is a really beautiful concept in the world of [[Mathematics]] that the fundamental equations and functions on the $xy$ plane are just a small part of a more elegant, complete picture of higher dimensional mathematics.
 
