@@ -7,6 +7,8 @@ author:
   - "[[M.C. Escher]]"
 related:
 tags:
+  - books/geb
+  - art/escher
 class:
   - note
   - art

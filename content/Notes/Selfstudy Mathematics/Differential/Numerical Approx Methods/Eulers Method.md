@@ -8,12 +8,18 @@ class:
 date: 2025-10-02
 source:
   - "[[Why Runge-Kutta is SO Much Better Than Euler's Method somepi]]"
-updated: 2025-10-02
+updated: 2025-10-07
 ---
 
 The most basic of the ODE approximation methods, **Euler's Method** is a first-order numerical procedure for solving ordinary differential equations (ODEs) with a given initial value.
 
 The essential idea is to use the slope of the function at a known point to estimate the value of the function at the next point. E.g., you calculate the slope, take a step in that direction, and repeat. This is actually pretty accurate for small steps, but the error accumulates quickly over larger intervals. A good example of it blowing up is with sine waves/spring predication, the errors compounds and the wave amplitude blows up out of control.
+
+A general formula for RK1 Eulers Method could look like:
+
+$$
+y_{n+1} = y_n + h f(t_n, y_n)
+$$
 
 ![[EulerMethod.png]]
 

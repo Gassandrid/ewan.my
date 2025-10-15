@@ -1,12 +1,12 @@
 ---
 id: Brahms - Agent Oriented Programming
-aliases: 
+aliases:
 tags:
-  - cs
   - generated
   - cs/ai
+  - ejenta
 date: 2024-10-17
-updated: 2025-06-19
+updated: 2025-10-06
 title: Brahms - Agent Oriented Programming
 ---
 

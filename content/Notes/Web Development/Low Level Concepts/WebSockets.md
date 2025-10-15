@@ -1,8 +1,9 @@
 ---
 date: 2024-09-12
-updated: 2025-04-13
+updated: 2025-10-15
 tags:
   - cs/web
+  - generated
 ---
 
 WebSockets provide a full-duplex communication channel over a single TCP connection, allowing real-time interaction between a client and a server.
@@ -69,4 +70,3 @@ func main() {
   log.Printf("recv: %s", message)
 }
 ```
-

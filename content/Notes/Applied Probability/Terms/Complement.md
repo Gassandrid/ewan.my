@@ -1,9 +1,9 @@
 ---
 id: Complement
-aliases: 
+aliases:
 tags:
   - math/statistics
-  - todo/stats
+  - todo/math/statistics
 date: 2025-01-31
 title: Complement
 updated: 2025-06-21

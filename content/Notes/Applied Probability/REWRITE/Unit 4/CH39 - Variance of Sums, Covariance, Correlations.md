@@ -1,9 +1,15 @@
 ---
 id: CH39 - Variance of Sums, Covariance, Correlations
 aliases: []
-tags: []
+tags:
+  - math/statistics/random-variables
 date: 2025-04-23
-updated: 2025-05-06
+updated: 2025-10-15
+class:
+  - note
+source:
+related:
+author:
 ---
 
 Essential reasoning for this chapter is that for expected value calculations:

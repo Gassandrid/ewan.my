@@ -1,13 +1,18 @@
 ---
 id: Local Server Hosting and Network Organization
-aliases: 
+aliases:
 tags:
   - cs/web
+  - cs/homelab
+  - generated
 date: 2024-09-12
-updated: 2025-04-13
+updated: 2025-10-15
 ---
 
-## Local Server Hosting
+>[!Warning] FYI...
+> This is kinda all AI generated slop. When I was starting out in my rudimentary web development learning, I was also starting obsidian notes, and thus wanted the structure without the work. Be warned...
+
+---
 
 ### Using Python (Simple HTTP Server)
 
@@ -195,4 +200,3 @@ print(response)
 - **Documentation**:
   - Official docs for tools like cURL, Wireshark, tcpdump.
   - RFC documents for detailed protocol specifications.
-

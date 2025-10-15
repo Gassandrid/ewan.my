@@ -3,6 +3,10 @@ date: 2024-08-09
 updated: 2025-08-21
 tags:
   - cs/software
+  - cs/crypto
+source:
+related:
+  - "[[Gpg]]"
 ---
 
 # AGE (CLI App)

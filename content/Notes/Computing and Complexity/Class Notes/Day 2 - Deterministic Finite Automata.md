@@ -1,6 +1,7 @@
 ---
 id: Day 2
-aliases: 
+aliases:
+  - Pigeonhole Principle
 tags:
   - cs/theory
 date: 2025-01-16

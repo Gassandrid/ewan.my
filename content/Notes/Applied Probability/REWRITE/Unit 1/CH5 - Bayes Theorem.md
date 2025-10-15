@@ -2,13 +2,20 @@
 id: CH5 - Bayes Theorem
 aliases: []
 tags:
-  - math/statistics
+  - math/statistics/bayesian
 date: 2025-01-24
 title: CH5 - Bayes Theorem
-updated: 2025-06-21
+updated: 2025-10-15
+class:
+  - note
+source:
+related:
+author:
 ---
 
 This note discusses the **Bayes Theorem** and how it can be used to calculate conditional probabilities.
+
+This should be noted as the theorem used in statistics as a tool to solve probability equations. For the field of statistics where Bayes' Theorem is treated as the underlying principle of probability, see [[Bayesian Inference]].
 
 ---
 

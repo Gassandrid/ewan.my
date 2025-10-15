@@ -1,11 +1,20 @@
 ---
 date: 2024-09-12
-updated: 2025-04-13
+updated: 2025-10-15
 tags:
   - cs/web
+  - generated
+class:
+  - note
+  - navigation
+source:
+related:
+author:
 ---
 
 This overview provides a summary of various protocols and methods used in internet-related programming. Each method is detailed in separate notes linked below.
+
+---
 
 ## Protocols and Methods
 
@@ -13,9 +22,6 @@ This overview provides a summary of various protocols and methods used in intern
 - [[WebSockets]]
 - [[SSH]]
 - [[Sockets]]
-- [[Other Protocols]]
-
----
 
 ### HTTP Requests
 
@@ -26,8 +32,6 @@ HTTP (Hypertext Transfer Protocol) is essential for data communication on the we
 - [Go: `net/http` package](HTTP Requests#Go)
 - [C/C++: `libcurl` library](HTTP Requests#C/C++)
 
----
-
 ### WebSockets
 
 WebSockets provide full-duplex communication over a single TCP connection.
@@ -36,8 +40,6 @@ WebSockets provide full-duplex communication over a single TCP connection.
 - [Python: `websockets` library](WebSockets.md#Python)
 - [Go: `gorilla/websocket` package](WebSockets.md#Go)
 
----
-
 ### SSH
 
 SSH is used for secure connections to remote servers.
@@ -45,16 +47,12 @@ SSH is used for secure connections to remote servers.
 - [Python: `paramiko` library](SSH.md#Python)
 - [Go: `golang.org/x/crypto/ssh` package](SSH.md#Go)
 
----
-
 ### Sockets
 
 Sockets allow for low-level network communication.
 
 - [Python: `socket` library](Sockets.md#Python)
 - [C: `sys/socket.h` library](Sockets.md#C)
-
----
 
 ### Other Protocols
 

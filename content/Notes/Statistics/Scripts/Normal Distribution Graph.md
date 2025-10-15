@@ -3,7 +3,7 @@ tags:
   - university
   - cs/python
 date: 2024-10-15
-updated: 2025-09-22
+updated: 2025-10-15
 ---
 
 ## Image
@@ -12,14 +12,7 @@ updated: 2025-09-22
 
 ## Code
 
-```python
-import micropip
-await micropip.install("numpy")
-await micropip.install("matplotlib")
-await micropip.install("scipy")
-```
-
-```python
+```python-r
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm

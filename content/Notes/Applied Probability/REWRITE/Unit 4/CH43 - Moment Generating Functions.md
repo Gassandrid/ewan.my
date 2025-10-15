@@ -1,9 +1,10 @@
 ---
 id: CH 43 - Moment Generating Functions
 aliases: []
-tags: []
+tags:
+  - math/statistics/applied-probability
 date: 2025-04-07
-updated: 2025-05-22
+updated: 2025-10-15
 ---
 
 > [!Abstract] Definition for a Generation Function
@@ -124,5 +125,3 @@ P(X \geq 10) &= 1 - P(X \leq 9)\\
 &\approx 0.2798
 \end{align*}
 $$
-
-

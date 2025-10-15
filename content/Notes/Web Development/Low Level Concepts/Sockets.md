@@ -2,10 +2,14 @@
 date: 2024-09-12
 tags:
   - cs/web
-updated: 2025-04-28
+updated: 2025-10-15
+class:
+  - note
+source:
+  - https://www.youtube.com/watch?v=D26sUZ6DHNQ
+related:
+author:
 ---
-
-*this information comes from [this video](https://www.youtube.com/watch?v=D26sUZ6DHNQ)*
 
 In layman terms, **Sockets** serve to enable communication between different **processes,** either on the same machine or over a network. For either of these example, each side(process) of that communication will create a socket
 

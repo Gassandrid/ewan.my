@@ -1,6 +1,13 @@
 ---
 date: 2025-04-09
-updated: 2025-04-28
+updated: 2025-10-15
+class:
+  - note
+tags:
+  - math/statistics/applied-probability
+source:
+related:
+author:
 ---
 
 If $X \sim \text{Exponential}(\lambda)$, then:
@@ -22,7 +29,9 @@ $$
 
 **For CDF:**
 
-$$P(X>x)=1−FX(x)=e−λxP(X > x) = 1 - F_X(x) = e^{-\lambda x}$$
+$$
+P(X>x)=1−FX(x)=e−λxP(X > x) = 1 - F_X(x) = e^{-\lambda x}
+$$
 
 **Proof:**
 
@@ -46,4 +55,3 @@ This property is ideal for **Poisson** Problems:
 - Time between radioactive decays
 - Time between customer arrivals
 - Time until hardware failure
-

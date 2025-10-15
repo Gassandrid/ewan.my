@@ -1,9 +1,17 @@
 ---
 id: Canon
 aliases: []
-tags: [seed, music/classical, books/geb]
+tags:
+  - seed
+  - music/classical
+  - books/geb
 date: 2025-08-14
 updated: 2025-08-14
+class:
+  - note
+related:
+  - "[[Fugue]]"
+  - "[[Little Harmonic Labyrinth#Music]]"
 ---
  
 

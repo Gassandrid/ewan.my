@@ -3,7 +3,12 @@ id: Uncountably Infinite
 aliases: []
 tags: []
 date: 2025-08-13
-updated: 2025-08-13
+updated: 2025-10-09
+class:
+  - note
+source:
+related:
+author:
 ---
 
 _Uncountably Infinite_ sets are infinite sets that cannot be put into a one-to-one correspondence with the natural numbers. Equivalently, they cannot be listed in a sequence $a_1,a_2,\dots$ that contains every element exactly once.
@@ -12,7 +17,7 @@ _Uncountably Infinite_ sets are infinite sets that cannot be put into a one-to-o
 
 ## Formal Definition
 
-A set $A$ is uncountable if it is infinite and there is no bijection
+A set $A$ is uncountable if it is infinite and there is no [[bijection]]
 
 $$
  f: \mathbb N \to A.
@@ -40,8 +45,7 @@ $$
 |\mathcal P(\mathbb N)| = |\{0,1\}^{\mathbb N}| = |(0,1)| = |\mathbb R| = 2^{\aleph_0}.
 $$
 
-4. The [[Cantor Set]] is uncountable, as it contains all binary sequences of infinite length, which can be put in bijection with $\{0,1\}^{\mathbb N}$.
-
+4. The [[Cantor Set]] is uncountable, as it contains all binary sequences of infinite length, which can be put in [[bijection]] with $\{0,1\}^{\mathbb N}$.
 5. For any $n\in\mathbb N_{\ge 1}$, $\mathbb R^n$ is uncountable and $|\mathbb R^n|=|\mathbb R|$.
 
 ## Cantor’s Diagonal Argument (Uncountability of $(0,1)$)
@@ -88,7 +92,7 @@ $$
 |(a,b)| = |\mathbb R|,\quad a<b.
 $$
 
-  One explicit bijection from $(0,1)$ to $\mathbb R$ is
+  One explicit [[bijection]] from $(0,1)$ to $\mathbb R$ is
 
 $$
 \phi:(0,1)\to\mathbb R,\quad \phi(t)=\tan\!\big(\pi(t-\tfrac12)\big).
@@ -106,5 +110,5 @@ $$
 
 1. **Diagonalization**: Show any attempted enumeration misses an element via a diagonal construction.
 2. **Power-set argument**: Inject $\mathcal P(\mathbb N)$ into your set and use $|\mathcal P(\mathbb N)|=2^{\aleph_0}$.
-3. **Bijections** with known uncountable sets: Exhibit a bijection with $(0,1)$ or $\mathbb R$.
+3. **Bijections** with known uncountable sets: Exhibit a [[bijection]] with $(0,1)$ or $\mathbb R$.
 4. **Cardinal arithmetic**: Show $|A|\ge|\{0,1\}^{\mathbb N}|$ or $|A|\ge|\mathcal P(\mathbb N)|$.

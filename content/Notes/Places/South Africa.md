@@ -2,7 +2,7 @@
 date: 2024-10-17
 tags:
   - seed
-  - places
+  - places/south-africa
 updated: 2025-07-28
 title: South Africa
 ---

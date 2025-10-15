@@ -5,7 +5,7 @@ updated: 2025-08-21
 tags:
   - seed
   - philosophy
-  - people
+  - people/online
 class:
   - person
 birthdate: 01/01/2000

@@ -3,7 +3,7 @@ date: 2025-06-23
 updated: 2025-06-23
 tags:
   - seed
-  - todo/refList
+  - junk
 ---
 
 You might see something of the sort of:
@@ -23,3 +23,7 @@ These are my new todo block management system. A common theme among them is thei
 I most is done out of public notes, but I try to leave some semantics there regardless to explain possible trails in incomplete notes.
 
 I just call this my Ref List, and thus any todo tags on a note ( that you might have noticed to be quite empty or blank ).
+
+---
+
+NVM, I kind of just decided todo tags is enough for me. I still believe that [[Why uncreated notes don't work|uncreated notes]] suck, but I just create them.

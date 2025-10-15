@@ -22,6 +22,6 @@ $$
 
 ---
 
-A fascinating aspect of infinite sets is that we can establish a one-to-one correspondence (bijection) between seemingly different infinite sets. For instance, consider mapping the natural numbers $\mathbb{N} = \{1, 2, 3, \ldots\}$ to the set of even natural numbers $2\mathbb{N} = \{2, 4, 6, \ldots\}$ using the function $f(n) = 2n$. This mapping shows that both sets have the same cardinality $\aleph_0$, even though $2\mathbb{N}$ appears to be a "proper subset" of $\mathbb{N}$. This counterintuitive result illustrates how our finite intuitions break down with infinite sets, leading to complications like Hilbert's Hotel paradox, where properties that seem obvious for finite collections no longer hold when dealing with infinite quantities.
+A fascinating aspect of infinite sets is that we can establish a one-to-one correspondence ([[bijection]]) between seemingly different infinite sets. For instance, consider mapping the natural numbers $\mathbb{N} = \{1, 2, 3, \ldots\}$ to the set of even natural numbers $2\mathbb{N} = \{2, 4, 6, \ldots\}$ using the function $f(n) = 2n$. This mapping shows that both sets have the same cardinality $\aleph_0$, even though $2\mathbb{N}$ appears to be a "proper subset" of $\mathbb{N}$. This counterintuitive result illustrates how our finite intuitions break down with infinite sets, leading to complications like Hilbert's Hotel paradox, where properties that seem obvious for finite collections no longer hold when dealing with infinite quantities.
 
 ![[Screenshot 2025-07-03 at 11.24.03 AM.png]]

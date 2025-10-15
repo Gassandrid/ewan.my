@@ -7,10 +7,10 @@ birthdate: 01/01/2000
 relationship: influencer/youtuber
 sex: male
 tags:
-  - people
   - seed
   - math
   - cs/ai
+  - people/online
 image: https://yt3.googleusercontent.com/RFCKJgHcSbN14fHQn-Xhwzch3xgbwxh15edMdiYZbslxMrU-Y-gFEOPGdIy3Cot0oVAr8E0Dow=s900-c-k-c0x00ffffff-no-rj
 ---
 

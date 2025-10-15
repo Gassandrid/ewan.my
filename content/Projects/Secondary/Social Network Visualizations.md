@@ -1,11 +1,11 @@
 ---
 title: Social Network Visualizations
 date: 2025-02-24
-updated: 2025-09-22
+updated: 2025-10-13
 tags:
   - projects
-  - todo
   - cs/python
+  - working/cs
 ---
 *[repo](https://github.com/Gassandrid/DiscordSocialNetwork) for the project*
 

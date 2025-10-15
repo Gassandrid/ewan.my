@@ -15,7 +15,7 @@ This is also known as a **Syntax Tree** for fields like **Formal Linguistics** a
 
 ![[Screenshot 2025-08-12 at 3.07.37 PM.png]]
 
-For [[Large Language Models]], parse trees can be used to guide the generation of text in a way that adheres to specific syntactic structures. This can be particularly useful in applications where the structure of the output is important, such as in legal or technical writing.
+For [[Large Language Model|Large Language Models]], parse trees can be used to guide the generation of text in a way that adheres to specific syntactic structures. This can be particularly useful in applications where the structure of the output is important, such as in legal or technical writing.
 
 In a paper from 2022,[^1] researchers introduced a method called Diffusion-LM, which uses diffusion models to generate text that follows a specified parse tree. This approach allows for more controlled text generation, enabling the model to produce outputs that are not only coherent but also syntactically correct according to the desired structure.
 

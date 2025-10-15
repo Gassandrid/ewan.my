@@ -15,7 +15,7 @@ _Countably Infinite_ sets are a fundamental concept in set theory, representing 
 
 ## Formal Definition
 
-A set $A$ is countably infinite if there exists a bijection
+A set $A$ is countably infinite if there exists a [[bijection]]
 
 $$
  f:\mathbb N \to A.
@@ -33,13 +33,13 @@ Notes on notation: $\mathbb N=\{0,1,2,\dots\}$ (or $\{1,2,3,\dots\}$ by conventi
 
 ### Equivalent Characterizations
 
-- There is an injection $A \hookrightarrow \mathbb N$ and a surjection $\mathbb N \twoheadrightarrow A$ (by Schröder–Bernstein this implies a bijection).
+- There is an injection $A \hookrightarrow \mathbb N$ and a surjection $\mathbb N \twoheadrightarrow A$ (by Schröder–Bernstein this implies a [[bijection]]).
 - $A$ can be enumerated by an algorithm that outputs $a_1,a_2,\dots$ (not necessarily efficiently), with every element appearing at some finite stage.
 
 ### Some Core Examples
 
 - $\mathbb N$ is countably infinite (identity map).
-- $\mathbb Z$ is countably infinite via the bijection
+- $\mathbb Z$ is countably infinite via the [[bijection]]
 
 $$
 f(0)=0,\quad f(2k)=k,\quad f(2k-1)=-k\quad (k\ge 1),
@@ -53,7 +53,7 @@ $$
   \pi(a,b)=\tfrac12(a+b)(a+b+1)+b,
 $$
 
-which is a bijection $\mathbb N\times\mathbb N\to\mathbb N$.
+which is a [[bijection]] $\mathbb N\times\mathbb N\to\mathbb N$.
 
 - $\mathbb Q$ is countable: enumerate reduced fractions with positive denominator by diagonals
 
@@ -83,7 +83,7 @@ in increasing $p+q$, then interleave signs and insert $0$.
 
 ## Prooving a Set is Countable
 
-1. Construct an explicit bijection $f:\mathbb N\to A$; or equivalently, give an enumeration $a_1,a_2,\dots$.
+1. Construct an explicit [[bijection]] $f:\mathbb N\to A$; or equivalently, give an enumeration $a_1,a_2,\dots$.
 2. Reduce to known countable sets by building injections/surjections to/from $\mathbb N$, $\mathbb Z$, $\mathbb N^k$, or $\mathbb Q$.
 3. Use closure properties: subsets, finite products, and countable unions of countable sets are countable.
 
