@@ -11,14 +11,11 @@
 
   & > .callout-content {
     display: grid;
-    transition: grid-template-rows 0.3s ease;
+    transition: grid-template-rows 0.1s cubic-bezier(0.02, 0.01, 0.47, 1);
+    overflow: hidden;
 
-    & > .callout-content-inner {
-      overflow: hidden;
-
-      & > :first-child {
-        margin-top: 0;
-      }
+    & > :first-child {
+      margin-top: 0;
     }
   }
 
@@ -121,8 +118,19 @@
     --callout-icon: var(--callout-icon-quote);
   }
 
-  &.is-collapsed > .callout-title > .fold-callout-icon {
-    transform: rotateZ(-90deg);
+  &.is-collapsed {
+    & > .callout-title > .fold-callout-icon {
+      transform: rotateZ(-90deg);
+    }
+
+    .callout-content > :first-child {
+      transition:
+        height 0.1s cubic-bezier(0.02, 0.01, 0.47, 1),
+        margin 0.1s cubic-bezier(0.02, 0.01, 0.47, 1);
+      overflow-y: clip;
+      height: 0;
+      margin-top: -1rem;
+    }
   }
 }
 

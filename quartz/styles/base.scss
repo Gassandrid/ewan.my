@@ -62,6 +62,7 @@ ul,
 .typst-doc * {
   overflow-wrap: anywhere;
   /* tr and td removed from list of selectors for overflow-wrap, allowing them to use default 'normal' property value */
+  text-wrap: pretty;
 }
 
 .math {
@@ -228,7 +229,7 @@ a {
     }
 
     & .sidebar {
-      gap: 2rem;
+      gap: 1.2rem;
       top: 0;
       box-sizing: border-box;
       padding: $topSpacing 2rem 2rem 2rem;

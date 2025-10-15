@@ -8,24 +8,23 @@
   }
 
   & > .search-button {
-    background-color: color-mix(in srgb, var(--lightgray) 60%, var(--light));
-    border: none;
+    background-color: transparent;
+    border: 1px var(--lightgray) solid;
     border-radius: 4px;
     font-family: inherit;
     font-size: inherit;
     height: 2rem;
-    padding: 0;
+    padding: 0 1rem 0 0;
     display: flex;
     align-items: center;
     text-align: inherit;
     cursor: pointer;
     white-space: nowrap;
     width: 100%;
-    justify-content: space-between;
 
     & > p {
       display: inline;
-      padding: 0 1rem;
+      color: var(--gray);
     }
 
     & svg {
@@ -36,7 +35,7 @@
 
       .search-path {
         stroke: var(--darkgray);
-        stroke-width: 2px;
+        stroke-width: 1.5px;
         transition: stroke 0.5s ease;
       }
     }

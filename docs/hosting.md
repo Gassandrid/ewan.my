@@ -15,7 +15,7 @@ However, if you'd like to publish your site to the world, you need a way to host
 ## Cloudflare Pages
 
 1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/) and select your account.
-2. In Account Home, select **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
+2. In Account Home, select **Compute (Workers)** > **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
 3. Select the new GitHub repository that you created and, in the **Set up builds and deployments** section, provide the following information:
 
 | Configuration option   | Value              |

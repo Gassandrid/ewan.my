@@ -5,6 +5,7 @@ export default {
     title: "بدون عنوان",
     description: "توضیح خاصی اضافه نشده است",
   },
+  direction: "rtl" as const,
   components: {
     callout: {
       note: "یادداشت",

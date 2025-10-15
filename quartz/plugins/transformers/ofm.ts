@@ -488,16 +488,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                     {
                       data: { hProperties: { className: ["callout-content"] }, hName: "div" },
                       type: "blockquote",
-                      children: [
-                        {
-                          data: {
-                            hProperties: { className: ["callout-content-inner"] },
-                            hName: "div",
-                          },
-                          type: "blockquote",
-                          children: [...calloutContent],
-                        },
-                      ],
+                      children: [...calloutContent],
                     },
                   ]
                 }
