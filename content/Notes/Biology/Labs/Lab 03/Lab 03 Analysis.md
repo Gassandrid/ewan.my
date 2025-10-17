@@ -8,7 +8,7 @@ author:
   - Caroline Covlin
 date: 2025-09-25
 title: Paramecium Investigations
-updated: 2025-09-26
+updated: 2025-10-17
 ---
 
 ## Background and Hypothesis

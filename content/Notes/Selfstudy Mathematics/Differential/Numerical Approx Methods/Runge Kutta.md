@@ -8,7 +8,7 @@ class:
 date: 2025-10-07
 source:
   - "[[Why Runge-Kutta is SO Much Better Than Euler's Method somepi]]"
-updated: 2025-10-07
+updated: 2025-10-15
 ---
 
 **Runge Kutta** is a [[Ordinary Differential Equation]] approximation method known for its accuracy to efficiency ratio. It is a type of **single-step method**, meaning it only uses information from the current point to estimate the next point, rather than relying on multiple previous points.

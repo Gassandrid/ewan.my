@@ -9,7 +9,7 @@ source:
 related:
 author:
 date: 2025-10-09
-updated: 2025-10-09
+updated: 2025-10-15
 ---
 
 **Principle Component Analysis** is a [[Latent Space]] visualization technique for linear pattern extraction and dimensionality reduction. It transforms high-dimensional data into a lower-dimensional space while preserving as much variance as possible.
@@ -18,13 +18,13 @@ For a two dimensional example mapping onto a line, you can think of PCA as findi
 
 ![[PrinceCompANal.png]]
 
-In the context of **linear algebra**, the **Principle Component** can be thought of as the eigenvector corresponding to the largest eigenvalue of the data's covariance matrix. This eigenvector points in the direction of maximum variance in the data.
+In the context of **linear algebra**, the **Principle Component** can be thought of as the eigenvector corresponding to the largest eigenvalue of the data's [[covariance]] matrix. This eigenvector points in the direction of maximum variance in the data.
 
 ---
 
 ## Computation
 
-The first step in computing **Principle Component Analysis** is to find the _covariance matrix_.
+The first step in computing **Principle Component Analysis** is to find the _[[covariance]] matrix_.
 
 This can be calculated by first centering your data, this means calculating the mean of every variable and then substracting that mean from each datapoint
 
@@ -47,7 +47,7 @@ x_{n}-\bar{x} & y_{n}-\bar{y}
 \end{align*}
 $$
 
-And then calculating the covariance matrix:
+And then calculating the [[Covariance]] matrix:
 
 $$
 \text{Cov}(X) = \frac{1}{n-1} X^T X
