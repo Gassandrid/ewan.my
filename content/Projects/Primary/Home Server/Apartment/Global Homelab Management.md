@@ -1,6 +1,6 @@
 ---
 date: 2025-10-16
-updated: 2025-10-16
+updated: 2025-10-17
 class:
   - note
 tags:
@@ -74,4 +74,4 @@ What I have so far is this directory listing for the hosts:
 │       └── tysis.md
 ```
 
-However I would like to have stuff beyond the
+However I would like to have stuff beyond the specific config files of each machine. This would also streamline the declaration/sharing of key variable names/datastores, things like micro docker service addresses and whatnot. Makes sharing services with clients on the [[Tailscale]] network nice and easy.

@@ -52,3 +52,19 @@ And then calculating the [[Covariance]] matrix:
 $$
 \text{Cov}(X) = \frac{1}{n-1} X^T X
 $$
+
+After obtaining the covariance matrix, the next step is to compute its eigenvalues and eigenvectors. The eigenvectors represent the directions of maximum variance (the principal components), while the eigenvalues indicate the magnitude of variance along those directions.
+
+$$
+\text{Cov}(X) v = \lambda v
+$$
+
+**where**:
+
+- $v$ is an eigenvector
+- $\lambda$ is the corresponding eigenvalue
+- $Cov(X)$ is the covariance matrix of the dataset
+
+These eigenvectors(our principle components) are then sorted in descending order based on their corresponding eigenvalues. The top $k$ eigenvectors (where $k$ is the desired number of dimensions) are selected to form a new feature space.
+
+Finally, the original data is projected onto this new feature space by multiplying the centered data matrix by the matrix of selected eigenvectors:

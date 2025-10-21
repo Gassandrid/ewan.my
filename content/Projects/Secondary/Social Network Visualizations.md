@@ -6,6 +6,8 @@ tags:
   - projects
   - cs/python
   - working/cs
+class:
+  - note
 ---
 *[repo](https://github.com/Gassandrid/DiscordSocialNetwork) for the project*
 

@@ -5,15 +5,13 @@ tags:
   - comp-neuro
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-09-29
+updated: 2025-10-21
 class:
   - transcript
   - note
 source:
   - "[[Theta rhythm A Memory Clock]]"
 ---
-
-_study notes for a [[Artem Kirsanov]] [video](https://youtu.be/5CxSoFK5tOQ?si=xNx2_g403li49K1i)_.
 
 Recently, there have been some significant advancements in decoding the hippocampus, and how it is involved in memory. This is a very complex structure, and it is not yet fully understood. However, we do know that the hippocampus is involved in the formation of new memories, and the retrieval of old ones.
 
