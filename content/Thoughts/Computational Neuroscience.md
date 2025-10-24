@@ -7,10 +7,10 @@ tags:
   - sapling
 date: 2025-01-31
 title: Computational Neuroscience
-updated: 2025-09-05
+updated: 2025-10-23
 ---
 
-**Computational Neuroscience** is an emerging field that combines the study of the brain and nervous system with computer science and mathematical modeling. Computational neuroscience is a subfield of neuroscience that focuses on the development of mathematical models and computational techniques to understand the brain's function and behavior. By using computational models, researchers can simulate and analyze complex neural systems, helping to uncover the underlying mechanisms of brain function, and hopefully one day arrive at a universal theory of brain function. 
+**Computational Neuroscience** is an emerging field that combines the study of the brain and nervous system with computer science and mathematical modeling. Computational neuroscience is a subfield of neuroscience that focuses on the development of mathematical models and computational techniques to understand the brain's function and behavior. By using computational models, researchers can simulate and analyze complex neural systems, helping to uncover the underlying mechanisms of brain function, and hopefully one day arrive at a universal theory of brain function.
 
 ---
 
@@ -24,7 +24,7 @@ But a question that has always intrigued my mind is the puzzle of our own intell
 
 For me, this involves investigating a fundamental problem with modern [[Machine Learning]]:
 
-> Would making neural networks more biologically plau
+> Would making neural networks more biologically plausible help in acurately modelling the human mind? Is there a funademntal component of human intelligence(say [[Temporal Dynamics]], or neuromodulation) that is missing from current AI systems?
 
 This has always been a neuroscience problem, which, unfortunately, involved a lot of biology and chemistry. And, despite my love for computer science and Artificial Intelligence, I feel as though the field of AI is going in the direction of advanced data science and statistics( which is still very cool! ), rather than the understanding of the human mind.
 

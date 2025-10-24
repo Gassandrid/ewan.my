@@ -4,6 +4,7 @@ class:
 tags:
   - cs/software
   - seed
+  - cs/workflow
 source:
   - https://neovim.io/
 related:

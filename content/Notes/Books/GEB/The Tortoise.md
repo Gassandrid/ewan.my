@@ -20,5 +20,3 @@ updated: 2025-09-04
 The Tortoise can be considered something of a co "protagonist" for the points explained in the book. For each new concept introduced by [[Douglas Hofstadter]] before or afterhand, there often a dialogue between [[Achilles]] and [[The Tortoise]] in a bizarre situation.
 
 A classic example can be seen from the [[Little Harmonic Labyrinth]] dialogue, which follows the two characters down a path of "dimension reduction"
-
-dfsd

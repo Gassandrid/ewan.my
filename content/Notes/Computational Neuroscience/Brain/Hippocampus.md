@@ -4,10 +4,10 @@ aliases:
 tags:
   - comp-neuro
   - biology/region
-  - todo/neuro
+  - working/neuro
 date: 2025-03-31
 class: note
-updated: 2025-06-19
+updated: 2025-10-23
 ---
  
 

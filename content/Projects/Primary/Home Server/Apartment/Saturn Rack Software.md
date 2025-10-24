@@ -2,7 +2,7 @@
 tags:
   - projects/homelab/software
 date: 2025-08-31
-updated: 2025-10-21
+updated: 2025-10-23
 class:
   - note
 ---
@@ -22,6 +22,14 @@ See [[Master Homelab Architecture]] for private version.
 ### [[GitTea]]
 
 ### NextCloud
+
+$$
+y''+y=\sin (x)
+$$
+
+$$
+y_{p}
+$$
 
 ### Obsidian LiveSync
 
