@@ -5,7 +5,6 @@ tags:
   - math/information
   - math/statistics/entropy
   - cs/ai/latent-space
-  - todo/cs/ai
 class:
   - note
 date: 2025-09-22
@@ -15,7 +14,7 @@ source:
 updated: 2025-09-25
 ---
 
-**Variational Autoencoders (VAE)** fundametally transform the goal of neural networks from learning a direct mapping from inputs to outputs, to learning a probabilistic representation of the data. This is achieved by encoding the input data into a latent space defined by a probability distribution, typically a Gaussian distribution characterized by its mean and variance.
+**Variational Autoencoders (VAE)** fundamentally transform the goal of neural networks from learning a direct mapping from inputs to outputs, to learning a probabilistic representation of the data. This is achieved by encoding the input data into a latent space defined by a probability distribution, typically a Gaussian distribution characterized by its mean and variance.
 
 This is especially useful for generative tasks like diffusion models, where the goal is to generate new data samples that resemble the training data, but are not identical to any specific training example. By sampling from the learned latent space, VAEs can produce diverse outputs that capture the underlying structure of the data. Now, instaed of generating a single output for a given input, the model takes a sample from its learned probabilisty distribution, allowing for variability and creativity in the generated outputs.
 

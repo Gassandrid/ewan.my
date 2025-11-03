@@ -13,7 +13,7 @@ source:
 related:
 author:
 date: 2025-09-29
-updated: 2025-09-29
+updated: 2025-10-24
 ---
 
 ***Enzymes** are [[Proteins]] that increase the rates of chemical reactions in [[Cell]]s.*

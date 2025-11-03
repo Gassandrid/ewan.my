@@ -10,7 +10,7 @@ tags:
 course: "[[Introducing Islam]]"
 lesson:
   - lecture/homework/video/presentation/etc
-lecture-number: 1
+lecture-number: 6
 source:
 related:
 author:

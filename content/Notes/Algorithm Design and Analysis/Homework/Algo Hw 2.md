@@ -3,8 +3,13 @@ title: Homework 2 - DFA and NFA Construction
 author:
   - Ewan Pedersen
 date: 2025-09-19
-updated: 2025-09-19
+updated: 2025-10-29
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequatesteps discussed. Submit your homework via Brightspace as one PDF or Word document.
+class:
+  - note
+  - export
+tags:
+  - cs/theory/algorithms
 ---
 
 ---

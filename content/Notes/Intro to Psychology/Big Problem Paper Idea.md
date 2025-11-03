@@ -2,8 +2,8 @@
 class:
   - note
 tags:
-  - psych
   - university
+  - psych/big-problem
 source:
 related:
 author:

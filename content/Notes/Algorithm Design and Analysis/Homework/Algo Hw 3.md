@@ -1,13 +1,17 @@
 ---
 id: Algo Hw 3
 aliases: []
-tags: []
+tags:
+  - cs/theory/algorithms
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Brightspace as one PDF or Word document.
 author:
   - Ewan Pedersen
 date: 2025-09-26
 title: Homework 3
-updated: 2025-09-26
+updated: 2025-10-29
+class:
+  - note
+  - export
 ---
 
 ---

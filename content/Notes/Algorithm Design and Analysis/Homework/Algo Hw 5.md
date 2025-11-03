@@ -5,6 +5,11 @@ author:
 date: 2025-10-10
 updated: 2025-10-10
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Brightspace as one PDF or Word document.
+class:
+  - note
+  - export
+tags:
+  - cs/theory/algorithms
 ---
 
 ---

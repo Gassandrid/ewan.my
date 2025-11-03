@@ -2,10 +2,11 @@
 author:
   - Ewan Pedersen
 date: 2025-09-09
-updated: 2025-09-12
+updated: 2025-10-29
 title: Homework 1 Written
 class:
-  - document
+  - note
+  - export
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Blackboard as one PDF or Word document.
 related:
   - "[[Adjacency List]]"
@@ -15,6 +16,7 @@ source:
   - "[[Pseudocode workspace]]"
 tags:
   - university
+  - cs/theory/algorithms
 ---
 
 ---

@@ -6,6 +6,7 @@ tags:
   - todo/neuro
   - comp-neuro/neurons
 source:
+  - "[[Place cells - How your brain creates maps of abstract spaces]]"
 related:
 author:
 date: 2025-09-19
