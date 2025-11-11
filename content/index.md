@@ -112,7 +112,7 @@ class: navigation
 
 You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work. Either way, welcome to my [[digital garden]].
 
-I’m a second-year Computer Science student at the [[University Of Vermont]] with a growing passion for [[Computational Neuroscience]], [[Artificial Intelligence]], and [[Mathematics]]. I love exploring how brains and machines overlap, and I’m also into tinkering with hardware—things like embedded systems, robotics, and anything that involves code meeting the physical world.
+I’m a third-year Computer Science student at the [[University Of Vermont]] with a growing passion for [[Computational Neuroscience]], [[Mathematics]], and [[Artificial Intelligence]]. I love exploring how brains and machines overlap, and I’m also into tinkering with hardware—things like embedded systems, robotics, and anything that involves code meeting the physical world.
 
 >[!Warning] Important
 > This website is mainly based around the obsidian **directed graph**, meaning the most interesting stuff here can only be seen with the visualizations. If you are on computer, you may have to try doing `cmd + -` or `ctrl + -` to view the sidebars, and on mobile it should be at the bottom of the page(although might be very laggy).
@@ -121,7 +121,9 @@ I’m a second-year Computer Science student at the [[University Of Vermont]] wi
 
 Currently reading [[Gödel, Escher, Bach]]. But for more textbook reading I am currently studying [[Theoretical Neuroscience Textbook|Theoretical Neuroscience by Peter Dayan and L. F. Abbott]].
 
-Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering.
+Quite obsessed with learning concepts from [[Variational Inference]], namely applications of [[Evidence Lower Bound]] and [[Cross Entropy]] for temporal models like [[Continuous Thought Machines]].
+
+Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering. 
 
 *give this song a listen to*
 

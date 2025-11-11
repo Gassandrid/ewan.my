@@ -3,7 +3,7 @@ tags:
   - engineering/3dprinting
   - projects/homelab/hardware
 date: 2025-08-31
-updated: 2025-10-21
+updated: 2025-11-11
 ---
 
 My current primary **homelab** as per se - it is feature complete in terms of hardware now, the only thing I could really see to add now would be a zig-bee dongle and and SDR for passive RF monitoring. Most work now consists of [[Saturn Rack Software]].
@@ -11,6 +11,8 @@ My current primary **homelab** as per se - it is feature complete in terms of ha
 ---
 
 ## Finished Product
+
+![[saturnRack.png]]
 
 ---
 

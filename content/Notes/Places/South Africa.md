@@ -3,10 +3,12 @@ date: 2024-10-17
 tags:
   - seed
   - places/south-africa
-updated: 2025-11-07
+  - places
+updated: 2025-11-11
 title: South Africa
-location:
-  - -33.75060017854275,18.67736208106319
+coordinates: -33.79059, 19.07431
+icon: landmark
+color: red
 ---
 
 Most of my family comes from South Africa, as my parents(despite only meeting in the United States) are both from there!

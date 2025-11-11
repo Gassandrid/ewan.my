@@ -9,7 +9,7 @@ related:
 author:
 description:
 date: 2025-11-06
-updated: 2025-11-09
+updated: 2025-11-11
 aliases:
   - UMAP
 "related:":
@@ -17,7 +17,7 @@ aliases:
   - "[[Principle Component Analysis]]"
 ---
 
-**Uniform Manifold Approximation and Projection(UMAP)**, much like [[T-distributed stochastic neighbor embedding|t-SNE]], has the goal of modeling the distances between points in high-dimensional space in a lower-dimensional space, while preserving local structure. However, UMAP is generally faster and scales better to large datasets compared to t-SNE, while also preserving more of the global structure of the data. It does this by attemping to build a graph model instead of a gaussian like SNE.
+**Uniform Manifold Approximation and Projection(UMAP)**, much like [[T-distributed stochastic neighbor embedding|t-SNE]], has the goal of modeling the distances between points in high-dimensional space in a lower-dimensional space, while preserving local structure. However, UMAP is generally faster and scales better to large datasets compared to [[T-distributed stochastic neighbor embedding|t-SNE]], while also preserving more of the global structure of the data. It does this by attemping to build a graph model instead of a gaussian like SNE.
 
 Unlike both [[Principle Component Analysis]] and [[T-distributed stochastic neighbor embedding]], UMAP has an exceptional ability to preserve the structure of the data in a way where you can understand the higher dimensional shape. A great example is mapping a 3d point cloud of a familiar object (like a mammoth) to $\mathbb{R}^2$:
 
@@ -40,8 +40,8 @@ $$
 **where:**
 
 - $d(x_i, x_j)$ is the distance between points
-- $\rho_i$ is the distance to the nearest neighbor of $x_i$ (ensures local connectivity)
-- $\sigma_i$ is a normalization factor chosen so that $\sum_j w(x_i, x_j) = \log_2(k)$
+- $\rho_i$ is the distance to the nearest neighbor of $x_i$ (ensures local [[connectivity]])
+- $\sigma_i$ is a [[normalization]] factor chosen so that $\sum_j w(x_i, x_j) = \log_2(k)$
 
 The weights are then symmetrized using a fuzzy set union:
 
@@ -57,7 +57,7 @@ $$
 q_{ij} = \left(1 + a \cdot ||y_i - y_j||^{2b}\right)^{-1}
 $$
 
-where $a$ and $b$ are hyperparameters controlling the shape of the embedding (typically $a \approx 1.93$ and $b \approx 0.79$ for 2D embeddings). These are determined by the `min_dist` parameter, which controls how tightly points can be packed together.
+where $a$ and $b$ are hyperparameters controlling the shape of the embedding (typically $a \approx 1.93$ and $b \approx 0.79$ for 2D embeddings). These are determined by the `min_dist` [[parameter]], which controls how tightly points can be packed together.
 
 ### Optimization Objective
 
@@ -67,7 +67,7 @@ $$
 C = \sum_{i,j} w_{ij} \log\left(\frac{w_{ij}}{q_{ij}}\right) + (1-w_{ij})\log\left(\frac{1-w_{ij}}{1-q_{ij}}\right)
 $$
 
-This is optimized using stochastic gradient descent with negative sampling for efficiency. The gradient with respect to the low-dimensional coordinates is:
+This is optimized using stochastic [[gradient descent]] with negative sampling for efficiency. The gradient with respect to the low-dimensional coordinates is:
 
 $$
 \frac{\partial C}{\partial y_i} = \sum_{j \in N(i)} \frac{-2ab||y_i-y_j||^{2b-2}}{1 + a||y_i-y_j||^{2b}}(y_i - y_j)w_{ij} - \sum_{j \notin N(i)} \frac{2b}{(0.001 + ||y_i-y_j||^2)(1 + a||y_i-y_j||^{2b})}(y_i - y_j)(1-w_{ij})
@@ -87,7 +87,7 @@ $min-dist$: minimum value between points in low dim space.
 
 You want to get a sense of global/local structure like [[T-distributed stochastic neighbor embedding|t-SNE]], without the huge performance cost. However, it is still vulnerable to hyperparameter sensitivity, where outputs may differ greatly through tiny changes to inputs.
 
-### Some Use Cases in Computational Neuroscience
+### Some Use Cases in [[Computational Neuroscience]]
 
 UMAP has become increasingly popular in neuroscience for:
 
