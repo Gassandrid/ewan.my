@@ -4,9 +4,13 @@ aliases:
 tags:
   - places/california
 date: 2025-07-28
-updated: 2025-07-28
+updated: 2025-11-07
 class:
   - place
+location:
+  - 38.03265337627563,-122.90147719088614
+country: "[[United States]]"
+city: "[[San Francisco]]"
 ---
 
 ![[Pasted image 20250728190727.png]]

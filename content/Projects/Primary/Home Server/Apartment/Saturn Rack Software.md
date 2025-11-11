@@ -2,7 +2,7 @@
 tags:
   - projects/homelab/software
 date: 2025-08-31
-updated: 2025-10-23
+updated: 2025-11-04
 class:
   - note
 ---
@@ -19,7 +19,7 @@ See [[Master Homelab Architecture]] for private version.
 
 - [x] done
 
-### [[GitTea]]
+### [[Gitea]]
 
 ### NextCloud
 

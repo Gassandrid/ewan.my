@@ -22,7 +22,7 @@ In an ideal world, we would have access to the underlying [[Probability Distribu
 
 ### How Can We Quantify the Difference between Two Probability Distributions?
 
-We extend apon the idea of **cross entropy** with something call **Kullback-Leibler Divergence** ([[KL Divergence]]), which measures how one probability distribution diverges from a second, expected probability distribution.
+We extend apon the idea of **cross entropy** with something call **Kullback-Leibler Divergence** ([[Kullback-Leibler Divergence]]), which measures how one probability distribution diverges from a second, expected probability distribution.
 
 ## Formal Definition
 

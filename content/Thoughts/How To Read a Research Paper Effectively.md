@@ -4,7 +4,6 @@ updated: 2025-09-05
 tags:
   - seed
   - academia
-  - todo
 title: How To Read a Research Paper Effectively
 ---
 *notes for an [Artem Kirsanov](https://www.youtube.com/watch?v=4yOm4kklKIA&t=291s) video*

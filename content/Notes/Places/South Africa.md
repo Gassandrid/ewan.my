@@ -3,8 +3,10 @@ date: 2024-10-17
 tags:
   - seed
   - places/south-africa
-updated: 2025-07-28
+updated: 2025-11-07
 title: South Africa
+location:
+  - -33.75060017854275,18.67736208106319
 ---
 
 Most of my family comes from South Africa, as my parents(despite only meeting in the United States) are both from there!

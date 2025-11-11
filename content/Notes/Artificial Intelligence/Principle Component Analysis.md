@@ -7,9 +7,12 @@ tags:
 source:
   - "[[Latent Space Visualisation PCA, t-SNE, UMAP  Deep Learning Animated]]"
 related:
+  - "[[T-distributed Stochastic Neighbor Embedding]]"
 author:
 date: 2025-10-09
-updated: 2025-10-15
+updated: 2025-11-06
+aliases:
+  - PCA
 ---
 
 **Principle Component Analysis** is a [[Latent Space]] visualization technique for linear pattern extraction and dimensionality reduction. It transforms high-dimensional data into a lower-dimensional space while preserving as much variance as possible.
@@ -68,3 +71,11 @@ $$
 These eigenvectors(our principle components) are then sorted in descending order based on their corresponding eigenvalues. The top $k$ eigenvectors (where $k$ is the desired number of dimensions) are selected to form a new feature space.
 
 Finally, the original data is projected onto this new feature space by multiplying the centered data matrix by the matrix of selected eigenvectors:
+
+For a $\mathbb{R}^2$ dataset:
+
+$$
+P = \begin{bmatrix}
+v_{x} & v_{y}
+\end{bmatrix}
+$$

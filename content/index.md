@@ -4,7 +4,7 @@ aliases:
 tags:
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-09-04
+updated: 2025-11-11
 class: navigation
 ---
 
@@ -113,6 +113,9 @@ class: navigation
 You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work. Either way, welcome to my [[digital garden]].
 
 I’m a second-year Computer Science student at the [[University Of Vermont]] with a growing passion for [[Computational Neuroscience]], [[Artificial Intelligence]], and [[Mathematics]]. I love exploring how brains and machines overlap, and I’m also into tinkering with hardware—things like embedded systems, robotics, and anything that involves code meeting the physical world.
+
+>[!Warning] Important
+> This website is mainly based around the obsidian **directed graph**, meaning the most interesting stuff here can only be seen with the visualizations. If you are on computer, you may have to try doing `cmd + -` or `ctrl + -` to view the sidebars, and on mobile it should be at the bottom of the page(although might be very laggy).
 
 ## Thoughts 🏡
 

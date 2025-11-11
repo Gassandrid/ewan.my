@@ -5,7 +5,6 @@ updated: 2025-06-19
 tags:
   - biology
   - comp-neuro/neurons
-  - todo/neuro
 class: note
 ---
  

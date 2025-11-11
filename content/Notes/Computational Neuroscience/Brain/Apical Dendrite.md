@@ -5,6 +5,12 @@ tags:
   - todo/neuro
   - biology
   - comp-neuro/neurons/dendrites
+class:
+  - note
+source:
+related:
+author:
+description:
 ---
 
  

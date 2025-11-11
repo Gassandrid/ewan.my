@@ -5,13 +5,14 @@ tags:
   - math/information
   - math/statistics/entropy
   - cs/ai/latent-space
+  - cs/ai/variational
 class:
   - note
 date: 2025-09-22
 source:
   - "[[How Neural Networks Handle Probabilities]]"
   - "[[Variational Autoencoders - Generative AI Animated]]"
-updated: 2025-09-25
+updated: 2025-11-05
 ---
 
 **Variational Autoencoders (VAE)** fundamentally transform the goal of neural networks from learning a direct mapping from inputs to outputs, to learning a probabilistic representation of the data. This is achieved by encoding the input data into a latent space defined by a probability distribution, typically a Gaussian distribution characterized by its mean and variance.
@@ -48,16 +49,24 @@ $$
 
 ---
 
-## Evidence Lower Bound (ELBO)
+## Training Objective: The ELBO
 
-It can be quite difficult to train a VAE directly by maximizing the marginal likelihood $p_{\theta}(x)$, because it involves integrating over all possible values of the latent variables $z$. Instead, we optimize a lower bound on the marginal likelihood called the **Evidence Lower Bound (ELBO)**.
+It is intractable to train a VAE directly by maximizing the marginal likelihood $p_{\theta}(x)$, because it involves integrating over all possible values of the latent variables $z$. Instead, we optimize a lower bound on the log marginal likelihood called the **[[Evidence Lower Bound]]** (ELBO).
 
-Using something called **Jensen's Inequality**, we can be certain that:
+The ELBO can be written as:
 
 $$
-\log p_{\theta}(x) \geq \mathbb{E}_{q_{\phi}(z|x)}\left[\log \frac{p_{\theta}(x,z)}{q_{\phi}(z|x)}\right]
+\mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_{\phi}(z|x)}\left[\log p_{\theta}(x|z)\right] - D_{KL}(q_{\phi}(z|x) \| p_{\theta}(z))
 $$
 
-Because given **any** logarithmic function, taking the midpoint of two values and then applying the logarithm will always be greater than or equal to applying the logarithm to each value and then taking the midpoint.
+This decomposes into two intuitive terms:
 
+- **Reconstruction term**: How well we can reconstruct $x$ from the latent code $z$
+- **Regularization term**: How close our learned posterior $q_{\phi}(z|x)$ is to the prior $p_{\theta}(z)$
 
+The ELBO satisfies $\log p_{\theta}(x) \geq \mathcal{L}(\theta, \phi; x)$, with the gap being exactly the KL divergence between the approximate and true posteriors. By maximizing the ELBO, we simultaneously:
+
+1. Improve the generative model (increase log evidence)
+2. Make the approximate posterior closer to the true posterior
+
+For a detailed derivation, intuition, and the reparameterization trick, see [[Evidence Lower Bound]].

@@ -4,4 +4,5 @@ tags:
   - cs/crypto
   - todo/cs
 updated: 2024-10-18
+description: american encryption standard, symmetric
 ---
