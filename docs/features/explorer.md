@@ -162,7 +162,7 @@ You can access the tags of a file by `node.data.tags`.
 Component.Explorer({
   filterFn: (node) => {
     // exclude files with the tag "explorerexclude"
-    return node.data.tags?.includes("explorerexclude") !== true
+    return node.data?.tags?.includes("explorerexclude") !== true
   },
 })
 ```

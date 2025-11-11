@@ -27,6 +27,8 @@ import lt from "./locales/lt-LT"
 import fi from "./locales/fi-FI"
 import no from "./locales/nb-NO"
 import id from "./locales/id-ID"
+import kk from "./locales/kk-KZ"
+import he from "./locales/he-IL"
 
 export const TRANSLATIONS = {
   "en-US": enUs,
@@ -78,6 +80,8 @@ export const TRANSLATIONS = {
   "fi-FI": fi,
   "nb-NO": no,
   "id-ID": id,
+  "kk-KZ": kk,
+  "he-IL": he,
 } as const
 
 export const defaultTranslation = "en-US"

@@ -137,12 +137,16 @@ button.desktop-explorer {
   }
 
   .folder-outer {
+    visibility: collapse;
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out;
+    transition-property: grid-template-rows, visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
   }
 
   .folder-outer.open {
+    visibility: visible;
     grid-template-rows: 1fr;
   }
 

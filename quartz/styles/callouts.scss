@@ -123,13 +123,22 @@
       transform: rotateZ(-90deg);
     }
 
-    .callout-content > :first-child {
-      transition:
-        height 0.1s cubic-bezier(0.02, 0.01, 0.47, 1),
-        margin 0.1s cubic-bezier(0.02, 0.01, 0.47, 1);
-      overflow-y: clip;
-      height: 0;
-      margin-top: -1rem;
+    .callout-content {
+      & > * {
+        transition:
+          height 0.1s cubic-bezier(0.02, 0.01, 0.47, 1),
+          margin 0.1s cubic-bezier(0.02, 0.01, 0.47, 1),
+          padding 0.1s cubic-bezier(0.02, 0.01, 0.47, 1);
+        overflow-y: clip;
+        height: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+      & > :first-child {
+        margin-top: -1rem;
+      }
     }
   }
 }

@@ -25,6 +25,7 @@
     & > p {
       display: inline;
       color: var(--gray);
+      text-wrap: unset;
     }
 
     & svg {

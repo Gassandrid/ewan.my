@@ -50,6 +50,11 @@ export type Analytics =
   | {
       provider: "vercel"
     }
+  | {
+      provider: "rybbit"
+      siteId: string
+      host?: string
+    }
 
 export interface GlobalConfiguration {
   pageTitle: string
