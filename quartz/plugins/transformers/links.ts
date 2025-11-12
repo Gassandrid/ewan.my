@@ -167,6 +167,22 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
   }
 }
 
+// Extract arXiv ID from various URL formats
+export function extractArxivId(url: string): string | null {
+  const patterns = [
+    /arxiv\.org\/abs\/([0-9]+\.[0-9]+)/i,
+    /arxiv\.org\/pdf\/([0-9]+\.[0-9]+)/i,
+    /arxiv\.org\/(?:abs|pdf)\/([a-z-]+\/[0-9]+)/i, // old format
+  ]
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern)
+    if (match) return match[1]
+  }
+
+  return null
+}
+
 declare module "vfile" {
   interface DataMap {
     links: SimpleSlug[]

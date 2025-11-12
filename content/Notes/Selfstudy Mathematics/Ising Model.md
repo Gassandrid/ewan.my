@@ -1,6 +1,6 @@
 ---
 date: 2025-11-07
-updated: 2025-11-07
+updated: 2025-11-11
 class:
   - note
 tags:
@@ -22,7 +22,7 @@ The **Ising Model** is also what inspired [[John Hopfield]] to create [[Hopfield
 
 ---
 
-However, its applicability extends beyond magnetism and physics itself. The **Ising Model** introduced the idea of a "critical point," a concept that has been influential in [[Computational Neuroscience|computational neuroscience]], where neuronal avalanches exhibit similar phase transition behavior. Good example from paper [[Neuronal Avalanches in Neocortical Circuits - PMC]]
+However, its applicability extends beyond magnetism and physics itself. The **Ising Model** introduced the idea of a "critical point," a concept that has been influential in [[Computational Neuroscience|computational neuroscience]], where neuronal avalanches exhibit similar phase transition behavior. Good example from paper [@beggsNeuronalAvalanchesNeocortical2003]
 
 The characteristics of this "critical point" are that the "patterns" we see are **scale-invariant**, meaning they look similar regardless of the scale at which we observe them. This property is crucial in understanding complex systems, as it suggests that the same underlying principles govern behavior across different scales.
 

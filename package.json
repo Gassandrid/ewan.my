@@ -35,6 +35,9 @@
     "quartz": "./quartz/bootstrap-cli.mjs"
   },
   "dependencies": {
+    "@citation-js/core": "^0.7.21",
+    "@citation-js/plugin-bibtex": "^0.7.21",
+    "@citation-js/plugin-doi": "^0.7.21",
     "@clack/prompts": "^0.11.0",
     "@expo/spawn-async": "^1.7.2",
     "@floating-ui/dom": "^1.7.4",
@@ -47,6 +50,7 @@
     "cli-spinner": "^0.2.10",
     "d3": "^7.9.0",
     "esbuild-sass-plugin": "^3.3.1",
+    "fast-xml-parser": "^4.5.3",
     "flexsearch": "^0.8.205",
     "github-slugger": "^2.0.0",
     "globby": "^15.0.0",
@@ -54,6 +58,7 @@
     "hast-util-to-html": "^9.0.5",
     "hast-util-to-jsx-runtime": "^2.3.6",
     "hast-util-to-string": "^3.0.1",
+    "hastscript": "^9.0.1",
     "is-absolute-url": "^5.0.0",
     "js-yaml": "^4.1.0",
     "lightningcss": "^1.30.2",

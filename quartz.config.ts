@@ -74,6 +74,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest", lazyLoad: true }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Citations({ bibliography: "./content/References.bib" }),
       Plugin.RunPythonPlugin(),
       Plugin.NotebookEmbedding(),
       // Staticrypt(),
