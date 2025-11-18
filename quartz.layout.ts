@@ -60,10 +60,11 @@ export const defaultContentPageLayout: PageLayout = {
     //   Component.DesktopOnly(Component.RecentNotes({ title: "Most recent", limit: 5 })),
     // ),
     Component.Graph(),
+    Component.DesktopOnly(Component.QuartzTOC()),
     // Component.DesktopOnly(Component.SidebarNav()),
   ],
   right: [
-    Component.DesktopOnly(Component.TableOfContents()),
+    // Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
     Component.DesktopOnly(
       Component.Explorer({

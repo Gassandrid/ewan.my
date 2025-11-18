@@ -1,0 +1,103 @@
+@use "../../styles/variables.scss" as *;
+
+.quartztoc {
+    --indicator-position: 4.5rem;
+    --fill-width: 1rem;
+    --button-height: 0.6rem;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* min-width: var(--indicator-position); */
+    /* min-width: var(--indicator-position); */
+    margin: 1rem 0 1rem -1rem;
+    /* Reduced negative margin */
+    padding: 0;
+    /* Align to left edge */
+    text-align: left;
+    /* Ensure no centered text inheritance */
+    align-self: flex-start !important;
+    width: calc(100% + 1rem);
+    /* Adjusted width */
+}
+
+nav#quartztoc-vertical {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Remove fixed positioning */
+    position: relative;
+    cursor: pointer;
+    align-items: flex-start;
+    /* Force buttons to left */
+
+    button.toc-item {
+        display: inline-flex;
+        border: none;
+        background: inherit;
+        height: var(--button-height);
+        max-width: var(--fill-width);
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        /* Align content inside button to left */
+        /* text-indent: 1rem; */
+        /* Removed to prevent indentation */
+        padding: 0;
+        margin: 0.1rem 0;
+
+        transform-origin: center;
+        transition: transform 0.3s ease;
+
+        /* Base state for lines */
+        &>.fill {
+            opacity: 0.35;
+            background-color: var(--dark);
+            height: 3px;
+            width: 100%;
+            min-width: var(--fill-width);
+
+            /* Start scaled down, script will handle the wave */
+            transform: scaleX(1);
+            transform-origin: 0 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        &>.indicator {
+            display: inline-block;
+            font-family: var(--bodyFont);
+            position: absolute;
+            padding-left: 3.5rem;
+            /* Increased separation further */
+            white-space: nowrap;
+            left: 100%;
+            /* Position to the right of the bar */
+            top: 50%;
+            transform: translateY(-50%) scale(0.65);
+            /* Start smaller */
+            transform-origin: left center;
+            height: auto;
+            color: var(--dark);
+            opacity: 0.25;
+            /* Start dimmer */
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            pointer-events: none;
+            font-size: 0.9rem;
+        }
+
+        /* Remove hover effect since we use script */
+        /* &:hover {
+            &>.indicator {
+                display: inline-block;
+                opacity: 1;
+            }
+        } */
+
+        /* Active state styling if needed, though script handles scale */
+        &.in-view {
+            &>.fill {
+                opacity: 0.75;
+            }
+        }
+    }
+}

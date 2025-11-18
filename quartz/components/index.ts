@@ -18,6 +18,7 @@ import Search from "./Search"
 import Footer from "./Footer"
 import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
+import QuartzTOC from "./QuartzTOC"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
@@ -51,6 +52,7 @@ export {
   Footer,
   DesktopOnly,
   MobileOnly,
+  QuartzTOC,
   RecentNotes,
   NotFound,
   Breadcrumbs,
