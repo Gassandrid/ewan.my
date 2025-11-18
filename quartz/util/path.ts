@@ -1,4 +1,5 @@
 import { slug as slugAnchor } from "github-slugger"
+export { slugAnchor }
 import type { Element as HastElement } from "hast"
 import { clone } from "./clone"
 

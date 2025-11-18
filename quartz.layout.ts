@@ -34,10 +34,17 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
+      component: Component.Breadcrumbs({
+        spacerSymbol: "❯",
+        rootName: "Home",
+        resolveFrontmatterTitle: true,
+        showCurrentPage: true,
+        leadingWindow: 1,
+        trailingWindow: 1,
+      }),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
+    Component.Row([Component.Darkmode(), Component.Search()]),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -53,7 +60,7 @@ export const defaultContentPageLayout: PageLayout = {
     //   Component.DesktopOnly(Component.RecentNotes({ title: "Most recent", limit: 5 })),
     // ),
     Component.Graph(),
-    Component.DesktopOnly(Component.SidebarNav()),
+    // Component.DesktopOnly(Component.SidebarNav()),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
@@ -114,8 +121,15 @@ export const defaultContentPageLayout: PageLayout = {
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
-    Component.Breadcrumbs(),
-    Component.Row([Component.Cv(), Component.Map(), Component.Darkmode(), Component.Search()]),
+    Component.Breadcrumbs({
+      spacerSymbol: "❯",
+      rootName: "Home",
+      resolveFrontmatterTitle: true,
+      showCurrentPage: true,
+      leadingWindow: 1,
+      trailingWindow: 1,
+    }),
+    Component.Row([Component.Darkmode(), Component.Search()]),
     Component.ArticleTitle(),
   ],
   left: [Component.MobileOnly(Component.Spacer())],

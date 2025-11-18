@@ -1,3 +1,19 @@
+type EventType = HTMLElementEventMap[keyof HTMLElementEventMap]
+type EventHandlers<E extends EventType> = (evt: E) => any | void
+
+export function registerEvents<
+  T extends Document | HTMLElement | null,
+  E extends keyof HTMLElementEventMap,
+>(element: T, ...events: [E, EventHandlers<HTMLElementEventMap[E]>][]) {
+  if (!element) return
+
+  events.forEach(([event, cb]) => {
+    const listener: EventListener = (evt) => cb(evt as HTMLElementEventMap[E])
+    element.addEventListener(event, listener)
+    window.addCleanup(() => element.removeEventListener(event, listener))
+  })
+}
+
 export function registerEscapeHandler(outsideContainer: HTMLElement | null, cb: () => void) {
   if (!outsideContainer) return
   function click(this: HTMLElement, e: HTMLElementEventMap["click"]) {
@@ -43,4 +59,23 @@ export async function fetchCanonical(url: URL): Promise<Response> {
   const text = await res.clone().text()
   const [_, redirect] = text.match(canonicalRegex) ?? []
   return redirect ? fetch(`${new URL(redirect, url)}`) : res
+}
+
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number,
+): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout> | null = null
+
+  return function (this: any, ...args: Parameters<T>) {
+    const context = this
+
+    if (timeout !== null) {
+      clearTimeout(timeout)
+    }
+
+    timeout = setTimeout(() => {
+      func.apply(context, args)
+    }, wait)
+  }
 }

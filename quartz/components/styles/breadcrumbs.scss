@@ -1,22 +1,112 @@
+@use "../../styles/variables.scss" as *;
+
 .breadcrumb-container {
   margin: 0;
-  margin-top: 0.75rem;
   padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  font-weight: 300;
+  font-style: italic;
+  font-family: var(--headerFont);
+
+  @media all and ($mobile) {
+    .breadcrumb-element {
+      display: none;
+
+      // Show first and last item only on mobile
+      &:first-child,
+      &:last-child {
+        display: flex;
+      }
+    }
+  }
 }
 
 .breadcrumb-element {
-  p {
-    margin: 0;
-    margin-left: 0.5rem;
-    padding: 0;
-    line-height: normal;
-  }
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  & > a {
+    text-decoration: none;
+
+    &:hover {
+      color: var(--darkgray);
+      text-decoration: underline;
+      background: initial;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-left: 0.25rem;
+    padding: 0;
+    line-height: normal;
+  }
+}
+
+.breadcrumb-overflow {
+  position: relative;
+
+  & > .breadcrumb-overflow-trigger {
+    background: none;
+    border: 0;
+    padding: 0 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    line-height: 1;
+
+    &:focus-visible {
+      outline: 2px solid var(--secondary);
+      outline-offset: 2px;
+    }
+  }
+
+  & > .breadcrumb-overflow-menu {
+    display: none;
+  }
+}
+
+.breadcrumb-overflow-floating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+  font-family: var(--headerFont);
+  font-style: italic;
+  background-color: var(--light);
+  border: 1px solid var(--lightgray);
+  box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.15);
+  width: max-content;
+  z-index: 1200;
+  position: fixed;
+  pointer-events: auto;
+  align-items: flex-start;
+
+  & > a {
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.5rem;
+    align-self: flex-start;
+    width: max-content;
+    max-width: 100%;
+
+    &:hover {
+      background: var(--lightgray);
+      color: var(--dark);
+      text-decoration: underline;
+    }
+  }
 }

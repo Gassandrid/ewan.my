@@ -300,7 +300,7 @@ img_str
         },
         {
           content:
-            "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-palenight.min.css",
+            "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/gruvbox-dark.min.css",
         },
         {
           content:
@@ -352,7 +352,7 @@ img_str
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material-palenight.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/gruvbox-dark.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/base16-light.min.css" />
 
 <script>
@@ -398,7 +398,7 @@ img_str
       ]
   };
   const svgPlay = {
-      attrs: { xmlns: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 24 24', fill: 'currentColor', stroke: 'currentColor', 'stroke-width': '1', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, 
+      attrs: { xmlns: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, 
       children: [ { tag: 'polygon', attrs: { points: '5 3 19 12 5 21 5 3' } } ]
   };
   const svgExpand = {
@@ -426,7 +426,7 @@ img_str
           console.log('CodeMirror ready for block:', blockId);
           editorInstance = CodeMirror.fromTextArea(codeTextarea, {
             mode: 'python',
-            theme: 'material-palenight',
+            theme: 'gruvbox-dark',
             lineNumbers: true,
             lineWrapping: true,
             readOnly: false,

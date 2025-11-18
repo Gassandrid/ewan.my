@@ -1,0 +1,216 @@
+@use "../../styles/variables.scss" as *;
+
+$sidenote-accent: var(--tertiary);
+$sidenote-secondary: var(--secondary);
+$sidenote-surface: var(--light);
+$sidenote-surface-muted: var(--lightgray);
+$sidenote-border-color: var(--gray);
+$sidenote-width: 17rem;
+$sidenote-spacing: 1rem;
+$sidenote-border-radius: 0.2rem;
+$sidenote-transition:
+  border-color 0.2s ease,
+  background-color 0.2s ease;
+$sidenote-inline-font-size: 0.9em;
+$sidenote-inline-font-size-mobile: 0.85em;
+$sidenote-code-font-size: 0.85em;
+$sidenote-offset-right: $sidenote-width + calc(1 * $sidenote-spacing);
+$sidenote-offset-left: $sidenote-width + calc(3 * $sidenote-spacing);
+$sidenote-label-border-width: 0.2rem;
+$sidenote-content-border-width: 0.075rem;
+
+@mixin media-query($query) {
+  @media all and #{$query} {
+    @content;
+  }
+}
+
+.sidenote {
+  cursor: pointer;
+
+  &:hover {
+    .sidenote-label:not([data-auto]) {
+      border-bottom-color: $sidenote-accent;
+      border-bottom-style: solid;
+      background-color: color-mix(in srgb, $sidenote-accent 10%, $sidenote-surface);
+    }
+
+    ~ .sidenote-content {
+      border-color: $sidenote-accent;
+      border-style: dashed;
+      background-color: color-mix(in srgb, $sidenote-accent 10%, $sidenote-surface);
+    }
+  }
+}
+
+.sidenote:has(+ .sidenote-content:hover),
+.sidenote:has(+ .sidenote-content:focus-within) {
+  .sidenote-label:not([data-auto]) {
+    border-bottom-color: $sidenote-accent;
+    border-bottom-style: solid;
+    background-color: color-mix(in srgb, $sidenote-accent 10%, $sidenote-surface);
+  }
+}
+
+.sidenote-label {
+  border-bottom: $sidenote-label-border-width dashed $sidenote-accent;
+  position: relative;
+  color: $sidenote-accent;
+  transition: $sidenote-transition;
+
+  &[data-auto] {
+    border-bottom: none;
+  }
+
+  &[data-inline] {
+    cursor: pointer;
+  }
+
+  &.active .sidenote-arrow-down {
+    transform: rotate(180deg);
+  }
+}
+
+.sidenote-arrow {
+  display: none;
+  margin-left: 0.25em;
+  vertical-align: middle;
+  color: $sidenote-accent;
+  pointer-events: none;
+
+  &.sidenote-arrow-down {
+    width: 8px;
+    height: 5px;
+  }
+}
+
+.sidenote-label[data-inline] .sidenote-arrow-down {
+  display: inline-block;
+}
+
+// reset positioning when nested within collapse-header
+.collapse-shell > * {
+  .sidenote-content {
+    &.sidenote-right {
+      right: -$sidenote-offset-right;
+    }
+
+    &.sidenote-left {
+      left: -$sidenote-offset-left;
+    }
+  }
+}
+
+.sidenote-content {
+  display: none;
+  position: absolute;
+  width: $sidenote-width;
+  box-sizing: border-box;
+  margin-top: -1.02rem;
+  background-color: $sidenote-surface;
+  z-index: 10;
+  line-height: 1.5;
+  transition: $sidenote-transition;
+  font-size: $sidenote-inline-font-size;
+  padding: $sidenote-spacing;
+  border: $sidenote-content-border-width solid $sidenote-border-color;
+  border-radius: $sidenote-border-radius;
+
+  &:hover,
+  &:focus-within {
+    border-color: $sidenote-accent;
+    border-style: dashed;
+    background-color: color-mix(in srgb, $sidenote-accent 10%, $sidenote-surface);
+  }
+
+  &.sidenote-right {
+    right: calc($sidenote-offset-right / 2) + 0.5;
+  }
+
+  &.sidenote-left {
+    left: calc($sidenote-offset-left / 2) - 0.5;
+  }
+
+  &.sidenote-inline {
+    position: static;
+    width: 100%;
+    margin: 1rem 0;
+    margin-top: 0.5rem;
+  }
+
+  p {
+    margin: 0.5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $sidenote-secondary;
+    text-decoration: underline;
+
+    &:hover {
+      color: $sidenote-accent;
+    }
+  }
+
+  code {
+    font-size: $sidenote-code-font-size;
+    padding: 0.1em 0.3em;
+    background-color: $sidenote-surface-muted;
+    border-radius: $sidenote-border-radius;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  .sidenote-separator {
+    display: block;
+    margin: 0.75rem 0;
+    border: none;
+    border-top: $sidenote-content-border-width solid $sidenote-border-color;
+  }
+
+  .sidenote-linked-notes {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: $sidenote-secondary;
+    font-style: italic;
+
+    a {
+      color: $sidenote-secondary;
+      text-decoration: underline;
+
+      &:hover {
+        color: $sidenote-accent;
+      }
+    }
+  }
+}
+
+@include media-query($tablet) {
+  .sidenote-content:not(.sidenote-inline) {
+    display: none !important;
+  }
+}
+
+@include media-query($mobile) {
+  .sidenote-content:not(.sidenote-inline) {
+    display: none !important;
+  }
+
+  .sidenote-content.sidenote-inline {
+    width: 100%;
+    font-size: $sidenote-inline-font-size-mobile;
+  }
+}

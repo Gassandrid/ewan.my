@@ -27,6 +27,7 @@ import { toHast } from "mdast-util-to-hast"
 import { toHtml } from "hast-util-to-html"
 import { capitalize } from "../../util/lang"
 import { PluggableList } from "unified"
+import { remarkSidenote } from "../../extensions/micromark-extension-ofm-sidenotes"
 
 export interface Options {
   comments: boolean
@@ -537,6 +538,9 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           }
         })
       }
+
+      // sidenote parser for {{sidenotes...}} syntax
+      plugins.push(remarkSidenote)
 
       return plugins
     },

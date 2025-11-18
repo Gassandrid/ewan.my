@@ -51,17 +51,18 @@
   position: relative;
   background: none;
   border: none;
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   margin: 0;
   text-align: inherit;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   & svg {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: calc(50% - 10px);
+    width: 18px;
+    height: 18px;
     fill: var(--darkgray);
     transition: opacity 0.1s ease;
   }
