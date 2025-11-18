@@ -20,7 +20,7 @@ function setupQuartzTOC() {
                 }
                 const indicator = btn.querySelector(".indicator") as HTMLElement
                 if (indicator) {
-                    indicator.style.transform = "translateY(-50%) scale(0.65)"
+                    indicator.style.transform = "scale(0.65)"
                     indicator.style.opacity = "0.25"
                     indicator.style.fontWeight = "400"
                 }
@@ -63,7 +63,7 @@ function setupQuartzTOC() {
                 const textSigma = 24
                 const indScale = indMinScale + (indMaxScale - indMinScale) * Math.exp(-Math.pow(distance, 2) / (2 * Math.pow(textSigma, 2)))
 
-                indicator.style.transform = `translateY(-50%) scale(${indScale})`
+                indicator.style.transform = `scale(${indScale})`
                 indicator.style.opacity = isButton ? "1" : "0.25" // Dimmer inactive
                 indicator.style.fontWeight = isButton ? "600" : "400"
             }

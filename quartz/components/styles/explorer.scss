@@ -1,12 +1,14 @@
 @use "../../styles/variables.scss" as *;
 
 @media all and ($mobile) {
-  .page > #quartz-body {
+  .page>#quartz-body {
+
     // Shift page position when toggling Explorer on mobile.
-    & > :not(.sidebar.left:has(.explorer)) {
+    &> :not(.sidebar.left:has(.explorer)) {
       transition: transform 300ms ease-in-out;
     }
-    &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
+
+    &.lock-scroll> :not(.sidebar.left:has(.explorer)) {
       transform: translateX(100dvw);
       transition: transform 300ms ease-in-out;
     }
@@ -20,7 +22,7 @@
       margin: 0;
     }
 
-    .hide-until-loaded ~ .explorer-content {
+    .hide-until-loaded~.explorer-content {
       display: none;
     }
   }
@@ -33,8 +35,10 @@
 
   min-height: 1.2rem;
   flex: 0 1 auto;
+
   &.collapsed {
     flex: 0 1 1.2rem;
+
     & .fold {
       transform: rotateZ(-90deg);
     }
@@ -84,7 +88,7 @@
     pointer-events: all;
     transition: transform 0.35s ease;
 
-    & > polyline {
+    &>polyline {
       pointer-events: none;
     }
   }
@@ -100,6 +104,10 @@ button.desktop-explorer {
   color: var(--dark);
   display: flex;
   align-items: center;
+  width: 100%;
+  /* Ensure full width */
+  justify-content: flex-end;
+  /* Move arrow to right */
 
   & h2 {
     font-size: 1rem;
@@ -113,8 +121,10 @@ button.desktop-explorer {
   overflow: hidden;
   overflow-y: auto;
   margin-top: 0.5rem;
+  padding-right: 1rem;
+  /* Space for the spine */
 
-  &.collapsed > .overflow::after {
+  &.collapsed>.overflow::after {
     opacity: 0;
   }
 
@@ -124,14 +134,67 @@ button.desktop-explorer {
     padding: 0;
     overscroll-behavior: contain;
 
-    & li > a {
+    /* Main Spine */
+    border-right: 2px solid var(--lightgray);
+
+    & li {
+      margin-bottom: 0.5rem;
+      /* Add spacing to prevent overlap */
+    }
+
+    & li>a {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
+      display: flex;
+      align-items: center;
+      padding-right: 0.5rem;
+      /* Gap before line hits spine */
+      overflow: hidden;
+      /* Ensure container clips */
+
+      &>.text {
+        /* Text Truncation & Ellipsis */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* Use ellipsis instead of fade to avoid hiding short text */
+        flex: 0 1 auto;
+        /* Allow shrinking */
+        min-width: 0;
+        /* Allow shrinking below content size */
+        margin-right: 0.5rem;
+        /* Space between text and line */
+      }
+
+      /* Horizontal Line */
+      &::after {
+        content: "";
+        flex: 1 0 auto;
+        /* Grow to fill space, don't shrink below min-width */
+        height: 2px;
+        background: var(--lightgray);
+        margin-left: 0;
+        /* Margin handled by text margin-right */
+        opacity: 0.5;
+        transition: background-color 0.2s ease, opacity 0.2s ease;
+        min-width: 1.5rem;
+        /* Ensure line is always visible even with long text */
+      }
+
+      &:hover::after {
+        background: var(--secondary);
+        opacity: 1;
+      }
 
       &.active {
         opacity: 1;
         color: var(--tertiary);
+
+        &::after {
+          background: var(--tertiary);
+          opacity: 1;
+        }
       }
     }
   }
@@ -150,11 +213,19 @@ button.desktop-explorer {
     grid-template-rows: 1fr;
   }
 
-  .folder-outer > ul {
+  /* Nested Lists: Reverse Indentation */
+  .folder-outer>ul {
     overflow: hidden;
-    margin-left: 6px;
-    padding-left: 0.8rem;
-    border-left: 1px solid var(--lightgray);
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+
+    /* New Spine for Subfolder */
+    border-right: 2px solid var(--lightgray);
+    margin-right: 1.5rem;
+    /* Indent from the right */
+    padding-right: 0;
+    /* Connects directly to parent line effectively */
   }
 }
 
@@ -163,8 +234,30 @@ button.desktop-explorer {
   display: flex;
   align-items: center;
   user-select: none;
+  padding-right: 0.5rem;
+  overflow: hidden;
+  /* Ensure container clips */
 
-  & div > a {
+  /* Horizontal Line for Folders */
+  &::after {
+    content: "";
+    flex: 1 0 auto;
+    /* Grow, don't shrink below min */
+    height: 2px;
+    background: var(--lightgray);
+    margin-left: 0;
+    opacity: 0.5;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    min-width: 1.5rem;
+    /* Ensure line is visible */
+  }
+
+  &:hover::after {
+    background: var(--secondary);
+    opacity: 1;
+  }
+
+  & div>a {
     color: var(--secondary);
     font-family: var(--headerFont);
     font-size: 0.95rem;
@@ -173,11 +266,23 @@ button.desktop-explorer {
     display: inline-block;
   }
 
-  & div > a:hover {
+  & div>a:hover {
     color: var(--tertiary);
   }
 
-  & div > button {
+  & div {
+    flex: 0 1 auto;
+    /* Allow shrinking */
+    min-width: 0;
+    /* Allow shrinking below content size */
+    overflow: hidden;
+    display: flex;
+    /* Ensure button fills it */
+    margin-right: 0.5rem;
+    /* Space before line */
+  }
+
+  & div>button {
     color: var(--dark);
     background-color: transparent;
     border: none;
@@ -189,6 +294,11 @@ button.desktop-explorer {
     align-items: center;
     font-family: var(--headerFont);
 
+    /* Ensure button takes available space but respects flex layout */
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+
     & span {
       font-size: 0.95rem;
       display: inline-block;
@@ -197,6 +307,12 @@ button.desktop-explorer {
       margin: 0;
       line-height: 1.5rem;
       pointer-events: none;
+
+      /* Text Truncation & Ellipsis for Folders */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
     }
   }
 }
@@ -208,9 +324,11 @@ button.desktop-explorer {
   transition: transform 0.3s ease;
   backface-visibility: visible;
   flex-shrink: 0;
+  /* Optional: Hide icon if user wants pure lines */
+  /* display: none; */
 }
 
-li:has(> .folder-outer:not(.open)) > .folder-container > svg {
+li:has(> .folder-outer:not(.open))>.folder-container>svg {
   transform: rotate(-90deg);
 }
 
@@ -223,7 +341,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     &.collapsed {
       flex: 0 0 34px;
 
-      & > .explorer-content {
+      &>.explorer-content {
         transform: translateX(-100vw);
         visibility: hidden;
       }
@@ -232,7 +350,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     &:not(.collapsed) {
       flex: 0 0 34px;
 
-      & > .explorer-content {
+      &>.explorer-content {
         transform: translateX(0);
         visibility: visible;
       }

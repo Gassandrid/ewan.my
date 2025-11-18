@@ -35,8 +35,12 @@ nav#quartztoc-vertical {
         display: inline-flex;
         border: none;
         background: inherit;
-        height: var(--button-height);
-        max-width: var(--fill-width);
+        height: 1.5rem;
+        /* Increased hit area */
+        width: 100%;
+        /* Full width for easier clicking */
+        max-width: none;
+        /* Remove restriction */
         position: relative;
         align-items: center;
         justify-content: flex-start;
@@ -44,7 +48,10 @@ nav#quartztoc-vertical {
         /* text-indent: 1rem; */
         /* Removed to prevent indentation */
         padding: 0;
-        margin: 0.1rem 0;
+        margin: 0;
+        /* Removed vertical margin as height handles spacing */
+        cursor: pointer;
+        /* Ensure pointer cursor */
 
         transform-origin: center;
         transition: transform 0.3s ease;
@@ -54,27 +61,47 @@ nav#quartztoc-vertical {
             opacity: 0.35;
             background-color: var(--dark);
             height: 3px;
-            width: 100%;
+            width: var(--fill-width);
+            /* Fixed width */
             min-width: var(--fill-width);
+            flex: 0 0 auto;
+            /* Don't shrink or grow */
+            border-radius: 1px;
+            /* Slight rounding */
 
             /* Start scaled down, script will handle the wave */
             transform: scaleX(1);
             transform-origin: 0 0;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.2s ease;
+        }
+
+        /* Hover feedback */
+        &:hover {
+            &>.fill {
+                background-color: var(--secondary);
+                /* Change color on hover */
+                opacity: 0.8;
+            }
+        }
+
+        /* Active/Click feedback */
+        &:active {
+            transform: scale(0.99);
+            /* Subtle press effect on whole row */
         }
 
         &>.indicator {
             display: inline-block;
             font-family: var(--bodyFont);
-            position: absolute;
+            position: relative;
+            /* Flow with the button */
             padding-left: 3.5rem;
-            /* Increased separation further */
+            /* Spacing from bar */
             white-space: nowrap;
-            left: 100%;
-            /* Position to the right of the bar */
-            top: 50%;
-            transform: translateY(-50%) scale(0.65);
-            /* Start smaller */
+            left: auto;
+            top: auto;
+            transform: scale(0.65);
+            /* Start smaller, no translate needed */
             transform-origin: left center;
             height: auto;
             color: var(--dark);
@@ -82,16 +109,9 @@ nav#quartztoc-vertical {
             /* Start dimmer */
             transition: transform 0.2s ease, opacity 0.2s ease;
             pointer-events: none;
+            /* Clicks go to button */
             font-size: 0.9rem;
         }
-
-        /* Remove hover effect since we use script */
-        /* &:hover {
-            &>.indicator {
-                display: inline-block;
-                opacity: 1;
-            }
-        } */
 
         /* Active state styling if needed, though script handles scale */
         &.in-view {
@@ -99,5 +119,17 @@ nav#quartztoc-vertical {
                 opacity: 0.75;
             }
         }
+
+        /* Hierarchy: Shorten left side for subheadings */
+        @for $i from 3 through 6 {
+            &.depth-#{$i}>.fill {
+                $indent: (
+                    $i - 2) * 0.25rem;
+                width: calc(var(--fill-width) - #{$indent}
+            );
+            min-width: calc(var(--fill-width) - #{$indent});
+            margin-left: $indent;
+        }
     }
+}
 }
