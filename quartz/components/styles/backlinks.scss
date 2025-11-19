@@ -1,24 +1,178 @@
 @use "../../styles/variables.scss" as *;
 
 .backlinks {
+  display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 
-  & > h3 {
+  &>h3 {
     font-size: 1rem;
     margin: 0;
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    /* Connect title to the tree spine */
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      /* Align with the spine */
+      bottom: -0.5rem;
+      width: 2px;
+      height: 0.5rem;
+      background: var(--lightgray);
+    }
   }
 
-  & > ul.overflow {
+  &>ul.overflow {
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0;
+    margin: 0;
     max-height: calc(100% - 2rem);
     overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* Gap handled by padding/height */
 
-    & > li {
-      & > a {
-        background-color: transparent;
+    /* Hover Logic for Path Highlighting */
+    /* Default: All gray */
+    /* Parent Hover: All Orange */
+    /* Item Hover: Reset subsequent to Gray */
+
+    &:hover {
+      &>li::after {
+        background-color: var(--tertiary);
       }
+    }
+
+    &>li {
+      position: relative;
+      padding-left: 1.5rem;
+      /* Space for the curve */
+      margin-bottom: 0;
+      min-height: 2rem;
+      /* Ensure height for curve */
+      display: flex;
+      align-items: flex-start;
+      /* Align to top for multi-line text */
+      padding-top: 0.2rem;
+      /* Slight offset for text alignment */
+
+      /* The Curve Connector (Top part of spine + Curve) */
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0.5rem;
+        /* Spine alignment */
+        top: 0;
+        width: 1rem;
+        /* Width of the curve */
+        height: 1.2rem;
+        /* Fixed height to align with first line of text */
+        border-left: 2px solid var(--lightgray);
+        border-bottom: 2px solid var(--lightgray);
+        border-bottom-left-radius: 0.75rem;
+        /* The curve radius */
+        transition: border-color 0.2s ease;
+        margin-top: -2px;
+        /* Pull up slightly to connect with previous */
+        z-index: 2;
+        /* Always on top of the straight spine */
+      }
+
+      /* Connecting line for subsequent items (The straight vertical spine) */
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        /* Start at top to cover full height behind curve */
+        bottom: -0.5rem;
+        /* Extend down into next item to ensure overlap */
+        width: 2px;
+        background: var(--lightgray);
+        margin-left: -1px;
+        /* Center on the 2px border */
+        transition: background-color 0.2s ease;
+        z-index: 1;
+        /* Behind the curve (which is z-index 2) */
+      }
+
+      /* Hide spine on the LAST ACTUAL ITEM */
+      /* OverflowList adds a sentinel <li class="overflow-end"> at the end. */
+      /* So the last actual item is nth-last-child(2). */
+      &:nth-last-child(2)::after {
+        display: none;
+      }
+
+      /* Also hide it on last-child just in case OverflowList isn't used or behaves differently */
+      &:last-child::after {
+        display: none;
+      }
+
+      /* Fix for the very first item: It needs to connect to the title */
+      &:first-child::before {
+        height: 1.2rem;
+        top: 0;
+      }
+
+      /* Hide the sentinel item visually just in case */
+      &.overflow-end {
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        height: 0;
+      }
+
+      /* Hover Effects */
+      &:hover {
+
+        /* Highlight current curve */
+        &::before {
+          border-color: var(--tertiary);
+          z-index: 2;
+          /* Bring to front */
+        }
+
+        /* Highlight text */
+        &>a {
+          color: var(--tertiary);
+          opacity: 1;
+        }
+
+        /* Reset the spine AFTER this item to gray */
+        &::after {
+          background-color: var(--lightgray) !important;
+        }
+
+        /* Reset all subsequent items' spines to gray */
+        &~li::after {
+          background-color: var(--lightgray) !important;
+        }
+      }
+
+      &>a {
+        background-color: transparent;
+        display: block;
+        padding: 0.2rem 0.5rem;
+        /* Padding around text */
+        color: var(--dark);
+        opacity: 0.75;
+        transition: color 0.2s ease, opacity 0.2s ease;
+        text-decoration: none;
+        font-weight: $semiBoldWeight;
+        line-height: 1.4;
+        /* Good line height for reading */
+        margin-top: -0.2rem;
+        /* Align text baseline with connector */
+      }
+    }
+
+    /* Highlight title connector when hovering the list */
+    &:hover>h3::after {
+      background-color: var(--tertiary);
+      transition: background-color 0.2s ease;
     }
   }
 }
