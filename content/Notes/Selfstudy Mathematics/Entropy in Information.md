@@ -9,7 +9,7 @@ source:
 related:
 author:
 date: 2025-09-15
-updated: 2025-09-17
+updated: 2025-11-14
 ---
 
 Entropy is a very simple concept, but it has a lot of depth. It is a measure of uncertainty or randomness in a system. In information theory, entropy quantifies the amount of information contained in a message or data source. The more uncertain or random the data, the higher the entropy.

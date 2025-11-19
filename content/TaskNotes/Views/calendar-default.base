@@ -1,0 +1,30 @@
+filters:
+  and:
+    - note.class == "task"
+views:
+  - type: tasknotesCalendar
+    name: Calendar
+    order:
+      - status
+      - priority
+      - due
+      - scheduled
+      - projects
+      - contexts
+      - file.name
+      - recurrence
+      - complete_instances
+    options:
+      showScheduled: true
+      showDue: true
+      showRecurring: true
+      showTimeEntries: true
+      showTimeblocks: true
+      showPropertyBasedEvents: true
+      calendarView: timeGridWeek
+      customDayCount: 3
+      firstDay: 0
+      slotMinTime: 06:00:00
+      slotMaxTime: 22:00:00
+      slotDuration: 00:30:00
+    calendarView: timeGridWeek

@@ -1,6 +1,6 @@
 ---
 date: 2024-09-12
-updated: 2025-09-29
+updated: 2025-11-14
 title: Hopfield Networks
 class:
   - note
@@ -23,8 +23,6 @@ A Hopfield Network is a type of recurrent artificial neural network that serves 
 - **No Self-Loops**: There are no self-connections in a Hopfield Network, so a neuron's state does not directly influence itself.
 
 ## Dynamics and Energy Function
-
-### Energy Landscape
 
 - The network's state is described by an energy function, similar to a Boltzmann Machine. The network evolves over time to minimize this energy, moving towards stable states, known as **attractors**.
 - The energy function for a Hopfield Network is given by:  

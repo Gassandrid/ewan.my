@@ -5,13 +5,37 @@ tags:
   - comp-neuro
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-10-21
+updated: 2025-11-18
 class:
   - transcript
   - note
 source:
   - "[[Theta rhythm A Memory Clock]]"
 ---
+```base
+filters:
+  and:
+    - this.file.hasLink(file)
+    - file.path != this.file.path
+    - or:
+        - file.ext == "png"
+        - and:
+            - file.ext == "md"
+            - file.folder == "02. Notes/Excalidraw"
+formulas:
+  is_excalidraw_md: file.ext == "md" && file.folder == "02. Notes/Excalidraw"
+  Image_Source: if(formula.is_excalidraw_md, file(file.path.replace(".md", ".png")), file)
+  Cover: image(formula.Image_Source)
+views:
+  - type: cards
+    name: Figures
+    order: []
+    image: formula.Cover
+    cardSize: 110
+    imageAspectRatio: 0.55
+    imageFit: contain
+
+```
 
 Recently, there have been some significant advancements in decoding the hippocampus, and how it is involved in memory. This is a very complex structure, and it is not yet fully understood. However, we do know that the hippocampus is involved in the formation of new memories, and the retrieval of old ones.
 
@@ -260,5 +284,5 @@ And, to top it all off, this **Theta Wave** is also responsible for the **Phase 
 
 ---
 
-[^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 https://pubmed.ncbi.nlm.nih.gov/19881503/
-[^2]: Hummos A, Nair SS. An integrative model of the intrinsic hippocampal theta rhythm. Lytton WW, editor. PLoS ONE. 2017 https://pubmed.ncbi.nlm.nih.gov/28787026/
+[^1]: Goutagny R, Jackson J, Williams S. Self-generated theta oscillations in the hippocampus. Nat Neurosci. 2009 <https://pubmed.ncbi.nlm.nih.gov/19881503/>
+[^2]: Hummos A, Nair SS. An integrative model of the intrinsic hippocampal theta rhythm. Lytton WW, editor. PLoS ONE. 2017 <https://pubmed.ncbi.nlm.nih.gov/28787026/>

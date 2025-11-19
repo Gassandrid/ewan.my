@@ -1,0 +1,26 @@
+filters:
+  and:
+    - note.class == "task"
+views:
+  - type: tasknotesKanban
+    name: Kanban Board
+    filters:
+      and:
+        - contexts.contains("college")
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - status
+      - priority
+      - due
+      - scheduled
+      - projects
+      - contexts
+      - file.name
+      - recurrence
+      - complete_instances
+    options:
+      columnWidth: 280
+      hideEmptyColumns: false
+    columnOrder: '{"note.status":["none","in-progress","open","done"]}'

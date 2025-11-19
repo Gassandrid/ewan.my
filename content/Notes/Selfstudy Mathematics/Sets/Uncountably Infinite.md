@@ -17,7 +17,7 @@ _Uncountably Infinite_ sets are infinite sets that cannot be put into a one-to-o
 
 ## Formal Definition
 
-A set $A$ is uncountable if it is infinite and there is no [[bijection]]
+A set $A$ is uncountable if it is infinite and there is no [[Bijection]]
 
 $$
  f: \mathbb N \to A.

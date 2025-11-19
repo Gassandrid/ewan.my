@@ -4,7 +4,7 @@ aliases:
 tags:
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-11-11
+updated: 2025-11-13
 class: navigation
 ---
 
@@ -178,5 +178,3 @@ You can view the [[tags/index|Tags Index]](also accesible via left sidebar for d
 And for links I have created a [[map|starting point]] to navigate the vault, but this is somewhat difficult to traverse as I cant really control the structure(read [[index#^5348ae|here]] again). A better way to traverse links is with the **Graph** on the left sidebar(for desktop) or at the bottom of the page(for mobile/tablet). You can click the button at the top right of the graph to maximize it and explore the full garden.
 
 You can also **Search** for notes/tags/folders using the Search button or `CMD+K` or `CRTL+K`.
-
-*try doing `cmd + -` or `ctrl + -` to view the sidebars!*

@@ -1,0 +1,30 @@
+filters:
+  and:
+    - note.class == "task"
+views:
+  - type: tasknotesMiniCalendar
+    name: Due
+    order:
+      - status
+      - priority
+      - due
+      - scheduled
+      - projects
+      - contexts
+      - file.name
+      - recurrence
+      - complete_instances
+    sort:
+      - property: due
+        direction: ASC
+    dateProperty: due
+  - type: tasknotesMiniCalendar
+    name: Scheduled
+    order: []
+    dateProperty: scheduled
+  - type: tasknotesMiniCalendar
+    name: Created
+    dateProperty: file.ctime
+  - type: tasknotesMiniCalendar
+    name: Modified
+    dateProperty: file.mtime

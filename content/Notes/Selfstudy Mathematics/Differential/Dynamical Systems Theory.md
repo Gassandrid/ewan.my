@@ -8,7 +8,7 @@ source:
 related:
 author:
 date: 2025-09-12
-updated: 2025-09-14
+updated: 2025-11-18
 aliases:
   - Chaos Theory
 ---
@@ -27,7 +27,7 @@ For [[Computational Neuroscience]], Dynamical Systems Theory is particularly rel
 
 ![[Pasted image 20250912133313.png]]
 
-These kind of manfiold embeddings only emerge because we have paired many different state variables as dimensions in a high dimensional space. This is a common technique in Dynamical Systems Theory, where we often study the behavior of systems in high-dimensional spaces. Then, we can get a visual understanding of the system's behavior by projecting it onto a lower-dimensional space using techniques like [[UMAP]].
+These kind of manfiold embeddings only emerge because we have paired many different state variables as dimensions in a high dimensional space. This is a common technique in Dynamical Systems Theory, where we often study the behavior of systems in high-dimensional spaces. Then, we can get a visual understanding of the system's behavior by projecting it onto a lower-dimensional space using techniques like [[Uniform Manifold Approximation and Projection|UMAP]].
 
 ---
 

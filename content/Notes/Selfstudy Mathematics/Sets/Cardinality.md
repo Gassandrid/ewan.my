@@ -2,7 +2,7 @@
 tags:
   - math/sets
 date: 2025-07-03
-updated: 2025-07-13
+updated: 2025-11-18
 class: note
 ---
 

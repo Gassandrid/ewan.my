@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2025-09-03
+updated: 2025-11-18
 tags:
   - books/geb
   - philosophy
@@ -14,7 +14,9 @@ image: "[[GebCover.png]]"
 source:
   - https://www.physixfan.com/wp-content/files/GEBen.pdf
 genre:
-  - nonfiction
+  - Mathematics
+  - Nonfiction
+description: an investigation of the nature of the mind and human conciousness through the creative endeavors of Kurt Godel, MC Escher, and Sebastian Bach
 ---
 
 ![[GebCover.png]]
