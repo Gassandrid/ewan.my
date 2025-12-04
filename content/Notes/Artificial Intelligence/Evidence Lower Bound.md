@@ -42,6 +42,7 @@ $$
 
 This integral is typically **intractable** for complex models because it requires integrating over all possible latent configurations. We need an alternative approach.
 
+
 ---
 
 ## Variational Inference Solution

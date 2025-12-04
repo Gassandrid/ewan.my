@@ -5,11 +5,12 @@ tags:
   - cs/ai/latent-space
   - math/topology
 source:
+  - "[[Latent Space Visualisation PCA, t-SNE, UMAP  Deep Learning Animated]]"
 related:
 author:
 description:
 date: 2025-11-06
-updated: 2025-11-13
+updated: 2025-12-04
 aliases:
   - UMAP
 "related:":

@@ -21,7 +21,7 @@ These "spin" values are both influenced by their nearest neighbors and an extern
 The **Ising Model** is also what inspired [[John Hopfield]] to create [[Hopfield Networks]], the precursor to modern Neural Networks. These would mimic the Ising Model in that it could use this energy minimization to "remember" patterns.
 
 ---
-
+	
 However, its applicability extends beyond magnetism and physics itself. The **Ising Model** introduced the idea of a "critical point," a concept that has been influential in [[Computational Neuroscience|computational neuroscience]], where neuronal avalanches exhibit similar phase transition behavior. Good example from paper [@beggsNeuronalAvalanchesNeocortical2003]
 
 The characteristics of this "critical point" are that the "patterns" we see are **scale-invariant**, meaning they look similar regardless of the scale at which we observe them. This property is crucial in understanding complex systems, as it suggests that the same underlying principles govern behavior across different scales.

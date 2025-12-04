@@ -8,7 +8,7 @@ source:
 related:
 author:
 date: 2025-10-02
-updated: 2025-11-08
+updated: 2025-11-23
 ---
 
 The **Crank–Nicolson method** is a numerical technique used to solve partial differential equations (PDEs), particularly the heat equation. It is an implicit finite difference method that is unconditionally stable and second-order accurate in both time and space.
