@@ -8,6 +8,13 @@ export interface ColorScheme {
   tertiary: string
   highlight: string
   textHighlight: string
+  rust?: string
+  clay?: string
+  ochre?: string
+  sage?: string
+  pine?: string
+  slate?: string
+  mauve?: string
 }
 
 interface Colors {
@@ -154,6 +161,13 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
   --textHighlight: ${theme.colors.lightMode.textHighlight};
+  --rust: ${theme.colors.lightMode.rust};
+  --clay: ${theme.colors.lightMode.clay};
+  --ochre: ${theme.colors.lightMode.ochre};
+  --sage: ${theme.colors.lightMode.sage};
+  --pine: ${theme.colors.lightMode.pine};
+  --slate: ${theme.colors.lightMode.slate};
+  --mauve: ${theme.colors.lightMode.mauve};
 
   --titleFont: "${getFontSpecificationName(theme.typography.title || theme.typography.header)}", ${DEFAULT_SANS_SERIF};
   --headerFont: "${getFontSpecificationName(theme.typography.header)}", ${DEFAULT_SANS_SERIF};
@@ -171,6 +185,13 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.darkMode.tertiary};
   --highlight: ${theme.colors.darkMode.highlight};
   --textHighlight: ${theme.colors.darkMode.textHighlight};
+  --rust: ${theme.colors.darkMode.rust};
+  --clay: ${theme.colors.darkMode.clay};
+  --ochre: ${theme.colors.darkMode.ochre};
+  --sage: ${theme.colors.darkMode.sage};
+  --pine: ${theme.colors.darkMode.pine};
+  --slate: ${theme.colors.darkMode.slate};
+  --mauve: ${theme.colors.darkMode.mauve};
 }
 `
 }

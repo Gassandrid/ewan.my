@@ -27,8 +27,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Bricolage Grotesque",
-        body: "Bricolage Grotesque",
+        header: "Lexend Deca",
+        body: "Lexend Deca",
         code: "JetBrains Mono",
       },
 
@@ -43,6 +43,13 @@ const config: QuartzConfig = {
           tertiary: "#8b7f73",
           highlight: "rgba(166, 124, 109, 0.1)",
           textHighlight: "#f4d9c688",
+          rust: "#bf6159",
+          clay: "#c78d75",
+          ochre: "#cc9e54",
+          sage: "#869c7a",
+          pine: "#56706b",
+          slate: "#728c99",
+          mauve: "#9d868e",
         },
 
         darkMode: {
@@ -55,6 +62,13 @@ const config: QuartzConfig = {
           tertiary: "#a89a8d",
           highlight: "rgba(197, 155, 141, 0.12)",
           textHighlight: "#d4a58888",
+          rust: "#db8e88",
+          clay: "#deaea0",
+          ochre: "#e0bc7e",
+          sage: "#aebd9f",
+          pine: "#8daeb3",
+          slate: "#9bb0bd",
+          mauve: "#c9b1b9",
         },
       },
     },

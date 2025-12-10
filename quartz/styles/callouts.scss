@@ -35,24 +35,24 @@
   --callout-icon-fold: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
 
   &[data-callout] {
-    --color: #448aff;
-    --border: #448aff44;
-    --bg: #448aff10;
+    --color: var(--slate);
+    --border: color-mix(in srgb, var(--slate) 27%, transparent);
+    --bg: color-mix(in srgb, var(--slate) 6%, transparent);
     --callout-icon: var(--callout-icon-note);
   }
 
   &[data-callout="abstract"] {
-    --color: #00b0ff;
-    --border: #00b0ff44;
-    --bg: #00b0ff10;
+    --color: var(--pine);
+    --border: color-mix(in srgb, var(--pine) 27%, transparent);
+    --bg: color-mix(in srgb, var(--pine) 6%, transparent);
     --callout-icon: var(--callout-icon-abstract);
   }
 
   &[data-callout="info"],
   &[data-callout="todo"] {
-    --color: #00b8d4;
-    --border: #00b8d444;
-    --bg: #00b8d410;
+    --color: var(--pine);
+    --border: color-mix(in srgb, var(--pine) 27%, transparent);
+    --bg: color-mix(in srgb, var(--pine) 6%, transparent);
     --callout-icon: var(--callout-icon-info);
   }
 
@@ -61,39 +61,39 @@
   }
 
   &[data-callout="tip"] {
-    --color: #00bfa5;
-    --border: #00bfa544;
-    --bg: #00bfa510;
+    --color: var(--sage);
+    --border: color-mix(in srgb, var(--sage) 27%, transparent);
+    --bg: color-mix(in srgb, var(--sage) 6%, transparent);
     --callout-icon: var(--callout-icon-tip);
   }
 
   &[data-callout="success"] {
-    --color: #09ad7a;
-    --border: #09ad7144;
-    --bg: #09ad7110;
+    --color: var(--sage);
+    --border: color-mix(in srgb, var(--sage) 27%, transparent);
+    --bg: color-mix(in srgb, var(--sage) 6%, transparent);
     --callout-icon: var(--callout-icon-success);
   }
 
   &[data-callout="question"] {
-    --color: #dba642;
-    --border: #dba64244;
-    --bg: #dba64210;
+    --color: var(--ochre);
+    --border: color-mix(in srgb, var(--ochre) 27%, transparent);
+    --bg: color-mix(in srgb, var(--ochre) 6%, transparent);
     --callout-icon: var(--callout-icon-question);
   }
 
   &[data-callout="warning"] {
-    --color: #db8942;
-    --border: #db894244;
-    --bg: #db894210;
+    --color: var(--clay);
+    --border: color-mix(in srgb, var(--clay) 27%, transparent);
+    --bg: color-mix(in srgb, var(--clay) 6%, transparent);
     --callout-icon: var(--callout-icon-warning);
   }
 
   &[data-callout="failure"],
   &[data-callout="danger"],
   &[data-callout="bug"] {
-    --color: #db4242;
-    --border: #db424244;
-    --bg: #db424210;
+    --color: var(--rust);
+    --border: color-mix(in srgb, var(--rust) 27%, transparent);
+    --bg: color-mix(in srgb, var(--rust) 6%, transparent);
     --callout-icon: var(--callout-icon-failure);
   }
 
@@ -106,9 +106,9 @@
   }
 
   &[data-callout="example"] {
-    --color: #7a43b5;
-    --border: #7a43b544;
-    --bg: #7a43b510;
+    --color: var(--mauve);
+    --border: color-mix(in srgb, var(--mauve) 27%, transparent);
+    --bg: color-mix(in srgb, var(--mauve) 6%, transparent);
     --callout-icon: var(--callout-icon-example);
   }
 
