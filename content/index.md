@@ -110,7 +110,7 @@ class: navigation
 
 ---
 
-Hi, my name is Ewan. I'm a third-year Computer Science student at the [[University Of Vermont]] obsessed where my focus is [[Computational Neuroscience]], [[Mathematics]], and how brains and machines overlap. You can reach me via email or find me tinkering on my [[Saturn V Server Rack|homelab]].
+Hi, my name is Ewan. I'm a third-year Computer Science student at the [[University Of Vermont]] where my focus is [[Computational Neuroscience]], [[Mathematics]], and how brains and machines overlap. You can reach me via email or find me tinkering on my [[Saturn V Server Rack|homelab]].
 
 I'm currently reading [[Gödel, Escher, Bach]] / my [[Theoretical Neuroscience Textbook]], and conducting independent interpretability research on [[Continuous Thought Machines]]. I spend most of my time analyzing how my brain evolves through the content it consumes and output I produce - modeling 2 years of git commit across my **Obsidian vault** alongside **ActivityWatch** computer usage data, noisy but interesting EEG equipment, and eye tracking to map the semantic phase space of human cognition.
 
