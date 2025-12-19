@@ -299,7 +299,7 @@ export function renderPage(
       </body>
       {pageResources.js
         .filter((resource) => resource.loadTime === "afterDOMReady")
-        .map((res) => JSResourceToScriptElement(res))}
+        .map((res) => JSResourceToScriptElement(res, true))}
     </html>
   )
 
