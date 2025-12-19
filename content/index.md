@@ -4,7 +4,7 @@ aliases:
 tags:
 date: 2024-10-02
 title: Hello! My name is Ewan
-updated: 2025-11-13
+updated: 2025-12-19
 class: navigation
 ---
 
@@ -108,73 +108,12 @@ class: navigation
 >
 </div>
 
-# Hello! My name is Ewan
+Hi, my name is Ewan. I'm a third-year Computer Science student at the [[University Of Vermont]] obsessed where my focus is [[Computational Neuroscience]], [[Mathematics]], and how brains and machines overlap. You can reach me via email or find me tinkering on my [[Saturn V Server Rack|homelab]].
 
-You may or may not know me from [[San Francisco]] or Vermont. Or maybe you know me from some online work. Either way, welcome to my [[digital garden]].
+I'm currently reading [[Gödel, Escher, Bach]] / my [[Theoretical Neuroscience Textbook]], and conducting independent interpretability research on [[Continuous Thought Machines]]. I spend most of my time analyzing how my brain evolves through the content it consumes and output I produce - modeling 2 years of git commit across my **Obsidian vault** alongside **ActivityWatch** computer usage data, noisy but interesting EEG equipment, and eye tracking to map the semantic phase space of human cognition.
 
-I’m a third-year Computer Science student at the [[University Of Vermont]] with a growing passion for [[Computational Neuroscience]], [[Mathematics]], and [[Artificial Intelligence]]. I love exploring how brains and machines overlap, and I’m also into tinkering with hardware—things like embedded systems, robotics, and anything that involves code meeting the physical world.
+I maintain a sprawling [[Saturn V Server Rack|homelab]] for LLM inference/interpretability and **quantified self infrastructure**, I consider myself a competitive typer at 189wpm in combination with keyboard-centric computer interaction(**yes I use vim btw**). I track everything: vault activity, commits, health biomarkers, cognitive patterns$\dots$ because I believe measurement is the first step toward optimization. I'm deeply interested in [[Longevity]], [[Transhumanism]], and novel techniques for biologically plausible machine learning algorithms(whether that be via a temporal dimension, [[Active Inference]]/local autonomy, or both).
 
->[!Warning] Important
-> This website is mainly based around the obsidian **directed graph**, meaning the most interesting stuff here can only be seen with the visualizations. If you are on computer, you may have to try doing `cmd + -` or `ctrl + -` to view the sidebars, and on mobile it should be at the bottom of the page(although might be very laggy).
+I'm a tri-citizen (South African, American, British) who loves [[Sailing]], [[Woodwork]], and bringing the open-source development cycle to the physical world through 3D printing.
 
-## Thoughts 🏡
-
-Currently reading [[Gödel, Escher, Bach]]. But for more textbook reading I am currently studying [[Theoretical Neuroscience Textbook|Theoretical Neuroscience by Peter Dayan and L. F. Abbott]].
-
-Quite obsessed with learning concepts from [[Variational Inference]], namely applications of [[Evidence Lower Bound]] and [[Cross Entropy]] for temporal models like [[Continuous Thought Machines]].
-
-Investing in 3d printing and such, liking the idea of bringing the open-source/development cycle of software to the world of engineering. 
-
-*give this song a listen to*
-
-![[Daft Punk - Veridis Quo.mp3]]
-
-## Current Projects 💾
-
-**Youtube Videos** - Using MANIM
-
-While notes are great, nothing gets concepts across like animated videos, and [[3Blue1Brown]]'s are known to be some of the best for learning mathematics. I am now using his [[Manim]] library to create my own for the basics of [[Computational Neuroscience]].
-
-**[[Migrating my Quartz, DARS, and media to one big Homelab Server|Homelab]] - a bunch of old computers clustered together**
-
-An evolution of [[DARS]] that interfaces the llm bindings I developed to control all my self hosted services in addition to my room.
-
- [[DARS]] - **Dormitory Automated Residential System**
-
-A model replica of TARS from interstellar, built for the purpose of mapping natural human language to discrete functional output through the use of LLM's and microcontrollers.
-
-## About Me ⛵️
-
-Outside of Computer Science, my main interests are [[Sailing]], [[Health|Fitness/Health]], and [[Woodwork]].
-
-I am an obsessive **competitive typer**, mainly through the website [monkeytype](https://monkeytype.com/). Currently at **189WPM**. Combining this with [VIM Motions Everwhere](https://www.youtube.com/watch?v=sqm4-B07LsE), I have found I can use a computer faster than anyone else I know.
-
-While I have spent most my life in the United States, I am actually a tri-citizen( [[South Africa|South African]], American, and British).
-
-I also enjoy the more engineering side of my fields, this mainly consists of 3d printing and CNC work, but I do a lot of circuits work as well.
-
-## About This Garden 🪴
-
-This is my version of what is called a [[Digital Garden]]( and yes, every digital garden mentions what a digital garden is)
-
-I started this as a way to organize my thoughts. My brain is all over the place, and it brings me great discomfort when I have an idea and am not able to act on it in that immediate moment. To solve this, I just write down just about any idea I can think of, and let the organization sort itself out naturally(thanks to links, discussed below).
-
-## Navigation
-
-My notes use 3 forms of organization to categorize my thoughts:
-
-- **Folders** are what you know from the filesystem, the most structured way of organization but often quite rigid. They are best for laying the groundwork of your notetaking journey.
-- **Tags** are the in between. They are much less structured than folders, as notes with a tag can be anywhere in the Garden regardless of folder. They are used for organizing by genre and topic, and provide a more flexible and dynamic structure.
-- **Links** are how your own brain organizes information. It has no initial structure, as it forms through the natural process of taking notes( say you are writing a note on Elephants, and you recall a time you saw elephants in South Africa, you would link them together). Links are great because it is your brains own innate organization of knowledge, but they take time to form and are difficult to create when you are just starting. ^5348ae
-
-![[Screenshot 2025-03-31 at 11.47.22 AM.png]]
-
-I have created Index pages for each method of organization. 
-
-There is a [[folders|Folder]] Index, although there isn't much to display as I only have 3 root folders. 
-
-You can view the [[tags/index|Tags Index]](also accesible via left sidebar for desktop users), which has a listing of all tags and their subtags(where some have have notes attached to them). 
-
-And for links I have created a [[map|starting point]] to navigate the vault, but this is somewhat difficult to traverse as I cant really control the structure(read [[index#^5348ae|here]] again). A better way to traverse links is with the **Graph** on the left sidebar(for desktop) or at the bottom of the page(for mobile/tablet). You can click the button at the top right of the graph to maximize it and explore the full garden.
-
-You can also **Search** for notes/tags/folders using the Search button or `CMD+K` or `CRTL+K`.
+This is my [[Digital Garden]], a living knowledge base where I organize thoughts through links rather than rigid structure. My hope is by imprinting my mind I can gain novel insight into the underlying influences which shape me in the hopes of discovering new tunable parameters.

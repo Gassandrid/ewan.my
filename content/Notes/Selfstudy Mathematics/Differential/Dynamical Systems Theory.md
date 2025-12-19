@@ -3,12 +3,13 @@ class:
   - note
 tags:
   - math/calculus/differential
+  - todo/math
 source:
   - "[[Chaos Theory the language of (in)stability]]"
 related:
 author:
 date: 2025-09-12
-updated: 2025-11-18
+updated: 2025-12-14
 aliases:
   - Chaos Theory
 ---
@@ -63,3 +64,15 @@ $$
 ---
 
 ## Attractors
+
+Attractor serve as a way to summarize the long-term behavior of a dynamical system. They represent the states or sets of states that the system tends to evolve towards over time, regardless of its initial conditions.
+
+The most well known is the [[Lorenz Attractor]], which arises from a simplified model of atmospheric convection. It is defined by the following set of differential equations:
+
+$$
+\begin{align}
+\dot{x} &= \sigma (y - x) \\
+\dot{y} &= x (\rho - z) - y \\
+\dot{z} &= xy - \beta z
+\end{align}
+$$

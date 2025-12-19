@@ -1,25 +1,17 @@
 ---
 date: 2024-09-12
-updated: 2024-10-20
+updated: 2025-12-07
+class:
+  - note
+tags:
+  - cs/ai/latent-space
 ---
 
 Latent variables are variables that are not directly observed but are inferred from other observable variables in the model. They play a crucial role in generative models, where the goal is to generate data from a learned distribution.
 
-> [!abstract] **Definition**
-> Latent variables are hidden variables that influence the observed data but are not directly measurable. They allow generative models to learn complex distributions by capturing hidden structure.
-
-## Why Latent Variables Matter
-
-Latent variables are important because they allow generative models to:
-
-- Capture complex patterns in the data.
-- Generate new samples from the learned distribution.
-- Enable dimensionality reduction by mapping data into a latent space.
-
-### Examples of Latent Variable Models
-
-1. **Variational Autoencoders (VAEs)**: A VAE learns to encode data into a lower-dimensional latent space and then decodes from that space to reconstruct the original data.
-2. **Generative Adversarial Networks (GANs)**: GANs use latent variables to map random noise vectors to generated data.
+ **Variational Autoencoders (VAEs)**: A VAE learns to encode data into a lower-dimensional latent space and then decodes from that space to reconstruct the original data.
+ 
+ **Generative Adversarial Networks (GANs)**: GANs use latent variables to map random noise vectors to generated data.
 
 ## Mathematical Representation
 
@@ -36,12 +28,12 @@ $$
 
 In this formulation, $z$ captures the hidden factors that influence the observed data $x$. The model learns the distribution $p(x|z)$ that maps latent variables to observable data.
 
-> [!note] **Latent Space Interpretation**
+> [!note] **[[Latent Space]] Interpretation**
 > The latent space is typically a lower-dimensional representation of the data. In VAEs, this space is continuous, while in GANs, the latent space is often a high-dimensional noise vector.
 
 ## Role in Inference
 
-In generative models, the latent variables are usually inferred by maximizing the likelihood of the observed data. For example, in VAEs, we optimize the evidence lower bound (ELBO) to estimate the parameters of the model:
+In generative models, the latent variables are usually inferred by maximizing the likelihood of the observed data. For example, in [[Variational Autoencoder]]s, we optimize the evidence lower bound ([[Evidence Lower Bound]]) to estimate the parameters of the model:
 
 $$
 \mathcal{L}_{\text{ELBO}} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - \text{KL}(q(z|x) \parallel p(z))

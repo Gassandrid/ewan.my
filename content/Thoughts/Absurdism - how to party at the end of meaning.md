@@ -7,7 +7,7 @@ updated: 2025-02-06
 title: Absurdism - how to party at the end of meaning
 ---
 
-Absurdism, founded by [[Albert Camau]], dictates that we should accept the absurd situation that we as humans are in, that being:
+Absurdism, founded by [[Albert Camus]], dictates that we should accept the absurd situation that we as humans are in, that being:
 
 > Humanity is doomed to seek purpose in a world that has none to offer
 

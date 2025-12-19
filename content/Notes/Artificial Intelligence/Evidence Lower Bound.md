@@ -19,7 +19,7 @@ related:
   - "[[Jensen's Inequality]]"
   - "[[Variational Inference]]"
   - "[[Variational Autoencoder]]"
-updated: 2025-11-06
+updated: 2025-12-16
 ---
 
 The **Evidence Lower Bound (ELBO)** is the core quantity in variational inference and the key optimization objective for training [[Variational Autoencoder|Variational Autoencoders]]. It provides a tractable lower bound on the log marginal likelihood (the "evidence") of observed data. 
@@ -42,7 +42,6 @@ $$
 
 This integral is typically **intractable** for complex models because it requires integrating over all possible latent configurations. We need an alternative approach.
 
-
 ---
 
 ## Variational Inference Solution
@@ -61,7 +60,7 @@ However, computing this directly still requires knowing $p_{\theta}(z|x)$, which
 
 ## Deriving the ELBO
 
-Starting from the KL divergence and using Bayes' rule, we can derive a useful relationship:
+Given the [[Kullback-Leibler Divergence]] in combination with Bayes' rule, an interesting relationship can be derived:
 
 $$
 \begin{align}

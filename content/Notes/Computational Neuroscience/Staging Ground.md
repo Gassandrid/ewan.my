@@ -14,7 +14,7 @@ For staging and planning topic to investigated in the field of [[Computational N
 
 ## Theoretical
 
-### Default Mode Network (DMN)
+### [[Default Mode Network]] (DMN)
 
 A brain network active during rest and internal mental processes, including mind-wandering, memory retrieval, and social cognition, and is deactivated during externally focused tasks. 
 

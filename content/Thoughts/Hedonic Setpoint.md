@@ -13,7 +13,7 @@ The _Hedonic Cycle_, also known as the _Hedonic Treadmill_ or _Hedonic Adaptatio
 
 ---
 
-Essentially, despite all that goes in on our lives, we will return to some emotional baseline that is predetermined genetically. And, unfortunately, this genetic trait has quite a range for people, meaning many will be predispositioned for an overall unhappier life.
+Essentially, despite all that goes in on our lives, we will return to some emotional baseline that is predetermined genetically. And, unfortunately, this genetic trait has quite a range for people, meaning many will be predisposition for an overall unhappier life.
 
 This is a very interesting concept to me, as it seems to be a very deterministic view of the world. It seems to suggest that no matter what we do, we will always return to some baseline level of happiness. This is a very depressing thought, as it suggests that we can never truly be happy, no matter what we do.
 

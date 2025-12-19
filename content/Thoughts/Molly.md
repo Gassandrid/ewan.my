@@ -1,9 +1,16 @@
 ---
 date: 2025-04-14
-updated: 2025-04-14
+updated: 2025-12-04
 tags:
-  - todo
   - seed
+  - sailing
+class:
+  - note
+source:
+related:
+author:
+  - "[[Axel Pedersen]]"
+description:
 ---
 
 For the last 40 Years of my [[Axel Pedersen - In Memoriam|grandfathers]]' life, **Molly** was his passion project.

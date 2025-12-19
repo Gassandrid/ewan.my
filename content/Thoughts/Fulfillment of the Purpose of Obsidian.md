@@ -1,6 +1,6 @@
 ---
 date: 2025-09-02
-updated: 2025-09-02
+updated: 2025-12-15
 class:
   - journal
 tags:
@@ -8,7 +8,6 @@ tags:
 source:
 related:
 author:
-  - "[[Ewan Pedersen]]"
 ---
 
 It has been roughly **2 years** since I started taking notes with obsidian. It didnt start out fast, in fact most of the notes at the beginning were **AI generated** and not well thought out. I was chasing the goal, and not the journey.

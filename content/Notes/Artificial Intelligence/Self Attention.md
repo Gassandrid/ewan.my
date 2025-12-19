@@ -29,6 +29,8 @@ $$
 
 [^1]
 
+
+
 This is necessary as right now, these vectors only contain a 1-to-1 correspondence for the word they represent, with no regard for the context of the sentence, which can vastly change the meaning:
 
 _this case is a $\mathbb{R}^2$ mapping of the vector space, in practice this is extremely high dimensional embedding_

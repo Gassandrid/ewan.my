@@ -9,7 +9,6 @@ date: 2025-04-14
 updated: 2025-09-01
 title: Amygdala
 author:
-  - Ewan Pedersen
 embedded:
 ---
 

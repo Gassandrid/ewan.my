@@ -5,14 +5,16 @@ tags:
   - math/statistics
   - university
 date: 2024-09-12
-updated: 2025-06-21
+updated: 2025-12-16
+class:
+  - note
+source:
+related:
+author:
+description:
 ---
 
-# Probability In statistics
-
----
-
-## Basic idea
+## Essence
 
 **Experiment**: a process the results in an outcome that cannot be predicted in advance with certainty.
 
@@ -29,6 +31,7 @@ updated: 2025-06-21
 Back to the examples:
 
 Let even `A` be the roll of 1, `A`={1}
+
 Let event `E` be an even role, `E`={2,4,6}
 
 ---
@@ -132,7 +135,7 @@ plt.show()
 
 Lets examine the ideas DeMorgans Law presents.
 
-## Quantification vs Complement
+## Quantification Vs Complement
 
 | Quantification | Complement            |
 | -------------- | --------------------- |

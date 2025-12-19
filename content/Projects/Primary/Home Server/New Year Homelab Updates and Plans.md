@@ -29,7 +29,7 @@ This consists of 3 sub projects, a few of which I have already planned out:
 - [[Home Server Ip Cameras]]
 
 [[Home Assistant]] security will be a nice feature for monitoring interesting happenings outside my room, but beyond home assistant it will also be a nice way for me to test machine learning models with computer vision data, etc.
-- this could also involve the raspberry pi camera module that i have lying around, good stuff to play around with before [[Sprinter Van Plan]] stuff
+- this could also involve the raspberry pi camera module that i have lying around, good stuff to play around with before [[Sprinter Van Plan 1]] stuff
 
 I have added some products I would like to get to my obsidian db, namely [[CX820 IP Camera]] and [[Kasa Smart Plug]]
 

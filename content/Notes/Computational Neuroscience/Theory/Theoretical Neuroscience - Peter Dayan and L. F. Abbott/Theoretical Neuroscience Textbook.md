@@ -1,9 +1,20 @@
 ---
 title: Theoretical Neuroscience - Peter Dayan and L. F. Abbott
 date: 2025-03-29
-updated: 2025-06-19
+updated: 2025-12-18
 tags:
   - comp-neuro
+  - books
+class:
+  - book
+  - note
+source:
+image:
+author:
+  - "[[Peter Dayan]]"
+  - "[[L. F. Abbott]]"
+genre:
+description:
 ---
 
 *Theoretical neuroscience provides a quantitative basis for describing what nervous systems do, determining how they function, and uncovering the general principles by which they operate. This text introduces the basic mathematical and computational methods of theoretical neuroscience and presents applications in a variety of areas including vision, sensory-motor integration, development, learning, and memory.*
