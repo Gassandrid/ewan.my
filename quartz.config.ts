@@ -27,9 +27,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Lexend Deca",
-        body: "Lexend Deca",
-        code: "JetBrains Mono",
+        header: "Fraunces",
+        body: "PP Neue Montreal",
+        code: "IBM Plex Mono",
       },
 
       colors: {
