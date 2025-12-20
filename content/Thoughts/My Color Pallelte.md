@@ -1,6 +1,6 @@
 ---
 date: 2025-12-09
-updated: 2025-12-19
+updated: 2025-12-20
 class:
   - note
 tags:
@@ -37,3 +37,10 @@ Headers: Fraunces
 Body: PP Neue Montreal
 
 Code: IBM Plex Mono
+
+## SVG Logo
+
+![[Zb81o501.svg]]
+
+![[FreeSample-Vectorizer-io-Logo_4.svg]]
+

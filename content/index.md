@@ -116,6 +116,6 @@ I'm currently reading [[Gödel, Escher, Bach]] / my [[Theoretical Neuroscience T
 
 I maintain a sprawling [[Saturn V Server Rack|homelab]] for LLM inference/interpretability and **quantified self infrastructure**, I consider myself a competitive typer at 189wpm in combination with keyboard-centric computer interaction(**yes I use vim btw**). I track everything: vault activity, commits, health biomarkers, cognitive patterns$\dots$ because I believe measurement is the first step toward optimization. I'm deeply interested in [[Longevity]], [[Transhumanism]], and novel techniques for biologically plausible machine learning algorithms(whether that be via a temporal dimension, [[Active Inference]]/local autonomy, or both).
 
-I'm a tri-citizen (South African, American, British) who loves [[Sailing]], [[Woodwork]], and bringing the open-source development cycle to the physical world through 3D printing.
+I'm a tri-citizen (South African, American, British) who loves [[Sailing]], [[Woodwork]], and bringing the open-source development cycle to the physical world through [[3d Printing]]. I am also quite the coffee snob and have the most ridiculous [[Espresso]] setup in my bedroom, next to all the servers and lab equipment.
 
 This is my [[Digital Garden]], a living knowledge base where I organize thoughts through links rather than rigid structure. My hope is by imprinting my mind I can gain novel insight into the underlying influences which shape me in the hopes of discovering new tunable parameters.

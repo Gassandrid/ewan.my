@@ -6,12 +6,13 @@ tags:
 source:
   - https://yana-log.net/notes/vault/Default-Mode-Network/#:~:text=undefined/
   - https://en.wikipedia.org/wiki/Default_mode_network
+  - "[[The Unique Cytoarchitecture and Wiring of The Default Mode Network]]"
 related:
   - "[[Executive Network]]"
 author:
 description:
 date: 2025-12-19
-updated: 2025-12-19
+updated: 2025-12-20
 ---
 
 ![[defModeNetwork.png]]

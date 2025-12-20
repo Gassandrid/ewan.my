@@ -10,7 +10,7 @@ related:
 author:
 description:
 date: 2025-12-19
-updated: 2025-12-19
+updated: 2025-12-20
 ---
 
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
@@ -33,9 +33,9 @@ However, active engagement puts you in circumstances much like real world proble
 
 ### Active Mode
 
-- active vs passive modes of consumption
-	- any type of content can be consumed in these modes (youtube is usually passive, but if you engage/capture content then you are consuming actively)
-	- Academic papers are reading and have to be engaged with actively to understand, whereas novella and some books (maybe even GEB) *can* be actively engaged with but also tend to explain themselves to you, doing the engagement for you.
+Active mode represents a state of mind where you have to reread/rewatch said content, gradually building up your internel representation and integrating external research into a piece(learning about a papers concepts, etc), and taking notes for the sake of thinking through a particular concept. It is a lot harder, and takes a lot more motivation to get started on, but represents a kind of work in which you engage with content as if you are solving a problem in of itself. 
+
+Any type of content can be consumed in these modes (youtube is usually passive, but if you engage/capture content then you are consuming actively). Academic papers are reading and have to be engaged with actively to understand, whereas novella and some books (maybe even GEB) *can* be actively engaged with but also tend to explain themselves to you, doing the engagement for you.
 
 ---
 
@@ -44,3 +44,19 @@ However, active engagement puts you in circumstances much like real world proble
 - categories of content
 	- reading, watching, and "trees"
 	- trees are laberythns, these can be "rabbit holes" of content acitivty online(following hyperlinks and building the representation), evergreen notes, AND obsidian vaults.
+
+Beyond the more novel "modes" framework, I also need to consider the types of content that I am being exposed to. I have found that for myself and others of my generation, videos and explainers have taken hold more often than classical literature. I use to think this was the problem, but looking at the actual content, there are youtube videos that are much longer form, and take on the style of a college lecture which require active mode engagement. Inversely, I find that while reading is a really good hobby and makes me think in ways that I love, a lot of reading doesnt make me engage with content and just lets my [[Default Mode Network]] wander about the elegance of the ideas presented. While I love it, I have found that [[Gödel, Escher, Bach]] has me in this state of thinking rather than having to puzzle over the contents of a excerpt.
+
+---
+
+## How Do I Fix My Content Consumption
+
+I have already taken the first step, which is cutting out ultra short form content like instagram reels. While there were a lot of interesting math reels there that explained concepts effectively and intuitively, I have found it has lead me to "vibing out" the shortest path to understanding without really engaging with the tasks the content demands.
+
+Obviously I need to find a way to not only balance categories of content ( some reading, some watching, and some traversing ), but also the modes of content ( long form youtube lectures, real papers and textbooks instead of "enjoyment" reading ).
+
+I think the best solution, while still a little jank, is to create a kanban board for things that I am consuming. This is a necessary middle ground as I need to be able to return to a piece of content without forgetting about it halfway, which happens so often with anything longer than 10 minutes. For active mode consumption content, you **NEED** to return to it several times, each time with a new pair of eyes, until you build that passive-adjacent intuition for the material.
+
+The kanban board will have to serve as a "curation" of content to *focus* on 
+
+In addition, because of the nature of active mode consumption, the tasks will have to support expansion of research into supplemental material. A great example is [[Default Mode Network]] research, as while I have started with the works from [[Yana Log Notes]] and Wikipedia, it has become apparent that watching other long form lectures like [[The Unique Cytoarchitecture and Wiring of The Default Mode Network]], while still dense and difficult, are needed for that intuitive understanding. Thus, these "curation" cards on the kanban may contain **multiple** pieces of media 
