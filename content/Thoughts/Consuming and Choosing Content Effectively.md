@@ -10,7 +10,7 @@ related:
 author:
 description:
 date: 2025-12-19
-updated: 2025-12-20
+updated: 2025-12-21
 ---
 
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
@@ -60,3 +60,14 @@ I think the best solution, while still a little jank, is to create a kanban boar
 The kanban board will have to serve as a "curation" of content to *focus* on 
 
 In addition, because of the nature of active mode consumption, the tasks will have to support expansion of research into supplemental material. A great example is [[Default Mode Network]] research, as while I have started with the works from [[Yana Log Notes]] and Wikipedia, it has become apparent that watching other long form lectures like [[The Unique Cytoarchitecture and Wiring of The Default Mode Network]], while still dense and difficult, are needed for that intuitive understanding. Thus, these "curation" cards on the kanban may contain **multiple** pieces of media 
+
+### Kanban Bases Organization
+
+This will be entirely replacing the old "Learning" kanban board I had before, as that developed into an obsessive backlog of stuff I never look at. We have bases for video and content discovery now, mainly [[Youtube.base]] and [[Papers.base]].
+
+I will label consumption as either (Active) or (Passive). The **priority** will indicate the time sink required, eg an hour long youtube video would be high, a [[Yana Log Notes]] post will be medium, and a sub 10 minute video will be low. This is independent of consumption mode.
+
+**None:** Not started at all, ideas for content
+**Open:** HAS been started, but not consuming at this exact moment( eg GEB or a long paper )
+**In Progress:** working on at this very moment
+**Done:** Done reading ONLY, for writing we refer to captures as sub tasks

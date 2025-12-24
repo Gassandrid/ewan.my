@@ -4,8 +4,9 @@ updated: 2025-12-18
 class:
   - note
 tags:
-  - todo/cs/ai
   - cs/ai/diffusion
+  - cs/ai/variational
+  - math/information
 source:
   - "[[Denoising Diffusion Probabilistic Models]]"
 related:

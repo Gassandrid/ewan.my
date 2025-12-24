@@ -1,6 +1,6 @@
 ---
 date: 2025-12-09
-updated: 2025-12-20
+updated: 2025-12-21
 class:
   - note
 tags:
@@ -40,7 +40,4 @@ Code: IBM Plex Mono
 
 ## SVG Logo
 
-![[Zb81o501.svg]]
-
-![[FreeSample-Vectorizer-io-Logo_4.svg]]
-
+![[logoSVG.svg]]

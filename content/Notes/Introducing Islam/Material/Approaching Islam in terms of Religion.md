@@ -9,12 +9,12 @@ description: Avoiding the traps of sensational political exposes and specialized
 tags:
   - books
 class:
-  - book
+  - clipping
 completed: false
 watched: false
 related:
 date: 2025-09-08
-updated: 2025-09-08
+updated: 2025-12-21
 ---
 
 We only read chapter two for class [[Introducing Islam]], and it is contained here:
