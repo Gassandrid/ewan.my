@@ -7,8 +7,8 @@ import fs from "fs"
 export function escapePath(fp) {
   return fp
     .replace(/\\ /g, " ") // unescape spaces
-    .replace(/^".*"$/, "$1")
-    .replace(/^'.*"$/, "$1")
+    .replace(/^"(.*)"$/, "$1")
+    .replace(/^'(.*)'$/, "$1")
     .trim()
 }
 
