@@ -6,8 +6,7 @@ class:
 tags:
   - math/statistics/bayesian
   - math/calculus/differential
-  - todo/math/statistics
-  - todo/math/differential
+  - math/control/kalman
 source:
   - "[[Visually Explained Kalman Filters]]"
   - https://en.wikipedia.org/wiki/Kalman_filter
