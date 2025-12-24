@@ -1,89 +1,91 @@
 /*! MIT License
  * Copyright (c) 2018 GitHub Inc.
  * https://github.com/primer/primitives/blob/main/LICENSE
+ *
+ * Custom theme for ewan.my - Dark Mode
  */
 
 main {
-  --color-prettylights-syntax-comment: #8b949e;
-  --color-prettylights-syntax-constant: #79c0ff;
-  --color-prettylights-syntax-entity: #d2a8ff;
-  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
-  --color-prettylights-syntax-entity-tag: #7ee787;
-  --color-prettylights-syntax-keyword: #ff7b72;
-  --color-prettylights-syntax-string: #a5d6ff;
-  --color-prettylights-syntax-variable: #ffa657;
-  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
-  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-comment: #a89a8d;
+  --color-prettylights-syntax-constant: #8daeb3;
+  --color-prettylights-syntax-entity: #c9b1b9;
+  --color-prettylights-syntax-storage-modifier-import: #d4cec7;
+  --color-prettylights-syntax-entity-tag: #aebd9f;
+  --color-prettylights-syntax-keyword: #db8e88;
+  --color-prettylights-syntax-string: #e0bc7e;
+  --color-prettylights-syntax-variable: #deaea0;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #db8e88;
+  --color-prettylights-syntax-invalid-illegal-text: #ebe7e1;
   --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
-  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
-  --color-prettylights-syntax-carriage-return-bg: #b62324;
-  --color-prettylights-syntax-string-regexp: #7ee787;
-  --color-prettylights-syntax-markup-list: #f2cc60;
-  --color-prettylights-syntax-markup-heading: #1f6feb;
-  --color-prettylights-syntax-markup-italic: #c9d1d9;
-  --color-prettylights-syntax-markup-bold: #c9d1d9;
-  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-carriage-return-text: #ebe7e1;
+  --color-prettylights-syntax-carriage-return-bg: #db8e88;
+  --color-prettylights-syntax-string-regexp: #aebd9f;
+  --color-prettylights-syntax-markup-list: #e0bc7e;
+  --color-prettylights-syntax-markup-heading: #9bb0bd;
+  --color-prettylights-syntax-markup-italic: #d4cec7;
+  --color-prettylights-syntax-markup-bold: #d4cec7;
+  --color-prettylights-syntax-markup-deleted-text: #db8e88;
   --color-prettylights-syntax-markup-deleted-bg: #67060c;
-  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-text: #aebd9f;
   --color-prettylights-syntax-markup-inserted-bg: #033a16;
-  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-text: #e0bc7e;
   --color-prettylights-syntax-markup-changed-bg: #5a1e02;
-  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
-  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
-  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
-  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
-  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
-  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
-  --color-btn-text: #d4d4d4; /* --darkgray */
-  --color-btn-bg: #161618; /* --light */
-  --color-btn-border: rgb(240, 246, 252 / 10%); /* --dark */
+  --color-prettylights-syntax-markup-ignored-text: #d4cec7;
+  --color-prettylights-syntax-markup-ignored-bg: #8daeb3;
+  --color-prettylights-syntax-meta-diff-range: #c9b1b9;
+  --color-prettylights-syntax-brackethighlighter-angle: #6b6158;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #6b6158;
+  --color-prettylights-syntax-constant-other-reference-link: #9bb0bd;
+  --color-btn-text: #d4cec7; /* --darkgray */
+  --color-btn-bg: #1a1714; /* --light */
+  --color-btn-border: rgba(235, 231, 225, 0.1); /* --dark */
   --color-btn-shadow: 0 0 transparent;
   --color-btn-inset-shadow: 0 0 transparent;
-  --color-btn-hover-bg: #30363d;
-  --color-btn-hover-border: #8b949e;
-  --color-btn-active-bg: hsl(212deg 12% 18% / 100%);
-  --color-btn-active-border: #6e7681;
-  --color-btn-selected-bg: #161b22;
-  --color-btn-primary-text: #fff;
-  --color-btn-primary-bg: #84a59d; /* --tertiary */
-  --color-btn-primary-border: rgb(240, 246, 252 / 10%); /* --dark */
+  --color-btn-hover-bg: #2a2520;
+  --color-btn-hover-border: #6b6158;
+  --color-btn-active-bg: #2a2520;
+  --color-btn-active-border: #6b6158;
+  --color-btn-selected-bg: #2a2520;
+  --color-btn-primary-text: #ebe7e1;
+  --color-btn-primary-bg: #a89a8d; /* --tertiary */
+  --color-btn-primary-border: rgba(235, 231, 225, 0.1); /* --dark */
   --color-btn-primary-shadow: 0 0 transparent;
   --color-btn-primary-inset-shadow: 0 0 transparent;
-  --color-btn-primary-hover-bg: #7b97aa; /* --secondary */
-  --color-btn-primary-hover-border: rgb(240, 246, 252 / 10%); /* --dark */
-  --color-btn-primary-selected-bg: #7b97aa; /* --secondary */
+  --color-btn-primary-hover-bg: #c59b8d; /* --secondary */
+  --color-btn-primary-hover-border: rgba(235, 231, 225, 0.1); /* --dark */
+  --color-btn-primary-selected-bg: #c59b8d; /* --secondary */
   --color-btn-primary-selected-shadow: 0 0 transparent;
-  --color-btn-primary-disabled-text: rgba(33, 32, 32, 0.5);
-  --color-btn-primary-disabled-bg: rgb(35 134 54 / 60%);
-  --color-btn-primary-disabled-border: rgb(240 246 252 / 10%);
-  --color-action-list-item-default-hover-bg: rgb(177 186 196 / 12%);
-  --color-segmented-control-bg: rgb(110 118 129 / 10%);
-  --color-segmented-control-button-bg: #0d1117;
-  --color-segmented-control-button-selected-border: #6e7681;
-  --color-fg-default: #ebebec; /* --dark */
-  --color-fg-muted: #d4d4d4; /* --darkgray */
-  --color-fg-subtle: #d4d4d4; /* --darkgray */
-  --color-canvas-default: #0d1117;
-  --color-canvas-overlay: #161b22;
-  --color-canvas-inset: #010409;
-  --color-canvas-subtle: #161b22;
-  --color-border-default: #30363d;
-  --color-border-muted: #21262d;
-  --color-neutral-muted: rgb(110 118 129 / 40%);
-  --color-accent-fg: #2f81f7;
-  --color-accent-emphasis: #1f6feb;
-  --color-accent-muted: rgb(56 139 253 / 40%);
-  --color-accent-subtle: rgb(56 139 253 / 10%);
-  --color-success-fg: #3fb950;
-  --color-attention-fg: #d29922;
-  --color-attention-muted: rgb(187 128 9 / 40%);
-  --color-attention-subtle: rgb(187 128 9 / 15%);
-  --color-danger-fg: #f85149;
-  --color-danger-muted: rgb(248 81 73 / 40%);
-  --color-danger-subtle: rgb(248 81 73 / 10%);
+  --color-btn-primary-disabled-text: rgba(212, 206, 199, 0.5);
+  --color-btn-primary-disabled-bg: rgba(168, 154, 141, 0.6);
+  --color-btn-primary-disabled-border: rgba(235, 231, 225, 0.1);
+  --color-action-list-item-default-hover-bg: rgba(197, 155, 141, 0.12);
+  --color-segmented-control-bg: rgba(107, 97, 88, 0.1);
+  --color-segmented-control-button-bg: #1a1714;
+  --color-segmented-control-button-selected-border: #6b6158;
+  --color-fg-default: #ebe7e1; /* --dark */
+  --color-fg-muted: #d4cec7; /* --darkgray */
+  --color-fg-subtle: #6b6158; /* --gray */
+  --color-canvas-default: #1a1714; /* --light */
+  --color-canvas-overlay: #2a2520; /* --lightgray */
+  --color-canvas-inset: #1a1714;
+  --color-canvas-subtle: #2a2520;
+  --color-border-default: #2a2520;
+  --color-border-muted: #2a2520;
+  --color-neutral-muted: rgba(107, 97, 88, 0.4);
+  --color-accent-fg: #9bb0bd; /* --slate */
+  --color-accent-emphasis: #8daeb3; /* --pine */
+  --color-accent-muted: rgba(155, 176, 189, 0.4);
+  --color-accent-subtle: rgba(155, 176, 189, 0.1);
+  --color-success-fg: #aebd9f; /* --sage */
+  --color-attention-fg: #e0bc7e; /* --ochre */
+  --color-attention-muted: rgba(224, 188, 126, 0.4);
+  --color-attention-subtle: rgba(224, 188, 126, 0.15);
+  --color-danger-fg: #db8e88; /* --rust */
+  --color-danger-muted: rgba(219, 142, 136, 0.4);
+  --color-danger-subtle: rgba(219, 142, 136, 0.1);
   --color-primer-shadow-inset: 0 0 transparent;
-  --color-scale-gray-7: #21262d;
-  --color-scale-blue-8: #0c2d6b;
+  --color-scale-gray-7: #2a2520;
+  --color-scale-blue-8: #8daeb3;
 
   /*! Extensions from @primer/css/alerts/flash.scss */
   --color-social-reaction-bg-hover: var(--color-scale-gray-7);

@@ -145,10 +145,14 @@ audio::-webkit-media-controls-panel {
   font-size: 0.9rem;
 }
 
-.article-title,
+.article-title-group,
 .content-meta,
 .tags {
   padding-left: 2rem;
+}
+
+.article-title-group .article-title {
+  padding-left: 0;
 }
 
 .forced-row {
@@ -601,5 +605,98 @@ html.reading-mode .sidebar.reading-mode-active .toc-clone {
 @media ($desktop) {
   .footer {
     padding-top: 8rem !important;
+  }
+}
+
+// Rainbow tag cycling through color palette
+.tags {
+  a.internal.tag-link {
+    transition: all 0.2s ease;
+
+    // Cycle through the 7 custom colors (rust, clay, ochre, sage, pine, slate, mauve)
+    // Using semi-transparent backgrounds with full-opacity text
+    &[data-tag-index="0"],
+    &[data-tag-index="7"],
+    &[data-tag-index="14"],
+    &[data-tag-index="21"] {
+      background-color: color-mix(in srgb, var(--rust) 10%, transparent);
+      color: var(--rust);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--rust) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="1"],
+    &[data-tag-index="8"],
+    &[data-tag-index="15"],
+    &[data-tag-index="22"] {
+      background-color: color-mix(in srgb, var(--clay) 10%, transparent);
+      color: var(--clay);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--clay) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="2"],
+    &[data-tag-index="9"],
+    &[data-tag-index="16"],
+    &[data-tag-index="23"] {
+      background-color: color-mix(in srgb, var(--ochre) 10%, transparent);
+      color: var(--ochre);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--ochre) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="3"],
+    &[data-tag-index="10"],
+    &[data-tag-index="17"],
+    &[data-tag-index="24"] {
+      background-color: color-mix(in srgb, var(--sage) 10%, transparent);
+      color: var(--sage);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--sage) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="4"],
+    &[data-tag-index="11"],
+    &[data-tag-index="18"],
+    &[data-tag-index="25"] {
+      background-color: color-mix(in srgb, var(--pine) 10%, transparent);
+      color: var(--pine);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--pine) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="5"],
+    &[data-tag-index="12"],
+    &[data-tag-index="19"],
+    &[data-tag-index="26"] {
+      background-color: color-mix(in srgb, var(--slate) 10%, transparent);
+      color: var(--slate);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--slate) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="6"],
+    &[data-tag-index="13"],
+    &[data-tag-index="20"],
+    &[data-tag-index="27"] {
+      background-color: color-mix(in srgb, var(--mauve) 10%, transparent);
+      color: var(--mauve);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--mauve) 15%, transparent);
+      }
+    }
   }
 }
