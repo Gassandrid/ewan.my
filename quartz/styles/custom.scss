@@ -486,8 +486,76 @@ footer {
 }
 
 @media ($mobile) {
+  // Lock horizontal scrolling
+  body,
+  .page,
   .page>#quartz-body {
-    padding: 1rem;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  .page>#quartz-body {
+    padding: 0;
+  }
+
+  // Remove border and minimal padding for reader mode
+  [saved-theme="dark"] .center,
+  [saved-theme="light"] .center {
+    border: none;
+    border-radius: 0;
+    padding: 0.75rem;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  // Adjust header layout to not overflow
+  .popover-hint-ewan {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  // Minimal padding on all header elements for clean reader mode
+  .breadcrumb-container {
+    padding: 0.5rem 0.75rem 0.3rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .article-title-group {
+    padding: 0 0.75rem;
+
+    .article-title h1 {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
+  }
+
+  .content-meta {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .tags {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .forced-row {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  // Ensure page header doesn't overflow
+  .page>#quartz-body .page-header {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  // Make sure article content respects boundaries
+  article {
+    overflow-x: hidden;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
 }
 
