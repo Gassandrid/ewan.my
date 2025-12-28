@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.tags.contains("cs/ai")
+    order:
+      - file.name
+      - class
+      - updated
+      - date

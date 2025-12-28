@@ -14,7 +14,7 @@ related:
 author:
 description: extracting meaningful utility in the age of unengaged content consumption
 date: 2025-12-19
-updated: 2025-12-24
+updated: 2025-12-25
 ---
 
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
@@ -85,3 +85,9 @@ I will label consumption as either (Active) or (Passive). The **priority** will 
 **Open:** HAS been started, but not consuming at this exact moment( eg GEB or a long paper )
 **In Progress:** working on at this very moment
 **Done:** Done reading ONLY, for writing we refer to captures as sub tasks
+
+Finally, I will also be leveraging the "time tracking" feature within tasknotes to record actual timeseries data for how I engage with content. My focus is sporadic, and the prescense of a time tracker will hopefully guide me to slow and hone my focus to an instantaneous point.
+
+It should also be noted that the "captures" kanban should be reserved for completely random ideas that are not tied to content at all, whereas this base will still be about written notes but ones that incorporate one or more sources of information and where the focus is obtaining an understanding of the subject matter.
+
+In all honesty, **Captures** *should* have the potential to become Consumption tasks, as I might start with an idea to investigate something like [[Importance Sampling]], then later find some sources supporting the learning of this concept. Then the tasknote can be moved to Consumption.

@@ -5,7 +5,7 @@ tags:
   - comp-neuro
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-11-21
+updated: 2025-12-25
 class:
   - transcript
   - note
