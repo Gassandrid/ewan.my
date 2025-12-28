@@ -7,8 +7,8 @@ import { Argv } from "../../util/ctx"
 import { QuartzConfig } from "../../cfg"
 
 const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
-  // glob all non MD files in content folder and copy it over
-  return await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
+  // glob all non MD/base files in content folder and copy it over
+  return await glob("**", argv.directory, ["**/*.md", "**/*.base", ...cfg.configuration.ignorePatterns])
 }
 
 const copyFile = async (argv: Argv, fp: FilePath) => {
@@ -37,7 +37,7 @@ export const Assets: QuartzEmitterPlugin = () => {
     async *partialEmit(ctx, _content, _resources, changeEvents) {
       for (const changeEvent of changeEvents) {
         const ext = path.extname(changeEvent.path)
-        if (ext === ".md") continue
+        if (ext === ".md" || ext === ".base") continue
 
         if (changeEvent.type === "add" || changeEvent.type === "change") {
           yield copyFile(ctx.argv, changeEvent.path)

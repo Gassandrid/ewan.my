@@ -31,6 +31,8 @@ import OnlyFor from "./_OnlyFor"
 import SidebarNav from "./SidebarNav"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import BaseViewSelector from "./BaseViewSelector"
+import BaseSearchBar from "./BaseSearchBar"
 
 export {
   ArticleTitle,
@@ -66,4 +68,6 @@ export {
   SidebarNav,
   Flex,
   ConditionalRender,
+  BaseViewSelector,
+  BaseSearchBar,
 }

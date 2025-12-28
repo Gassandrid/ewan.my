@@ -89,6 +89,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.Citations({ bibliography: "./content/References.bib" }),
+      Plugin.ObsidianBases(),
       Plugin.Sidenotes(),
       Plugin.RunPythonPlugin(),
       Plugin.NotebookEmbedding(),
@@ -105,6 +106,7 @@ const config: QuartzConfig = {
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
+      Plugin.BasePage(),
       Plugin.FolderPage(),
       Plugin.TagPage(),
       Plugin.ContentIndex({
@@ -116,7 +118,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
     ],
   },
 }
