@@ -3,7 +3,15 @@ date: 2024-10-01
 tags:
   - math
   - university
-updated: 2024-10-25
+  - math/calculus
+  - math/sets
+updated: 2025-12-31T19:19:46+02:00
+class:
+  - note
+source:
+related:
+author:
+description:
 ---
 
 > [!note] **Cartesian Product**
@@ -36,11 +44,15 @@ $$
 > 
 > The Cartesian product is not commutative: $A \times B \neq B \times A$. This means that:
 >
-> $$ A \times B \neq B \times A $$
+> $$
+>  A \times B \neq B \times A 
+> $$
 >
 > In particular:
 >
-> $$ A \times B \neq B \times A \text{ unless } A = B $$
+> $$
+>  A \times B \neq B \times A \text{ unless } A = B 
+> $$
 
 ---
 

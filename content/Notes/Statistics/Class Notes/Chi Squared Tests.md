@@ -1,10 +1,18 @@
 ---
 id: CH6 - Chi Squared Tests
-aliases: []
+aliases:
+  - Chi Squared
 tags:
   - university
+  - math/statistics
 date: 2024-12-13
-updated: 2024-12-13
+updated: 2026-01-10T10:46:25+02:00
+class:
+  - note
+source:
+related:
+author:
+description: a "goodness of fit" test for comparing two distributions
 ---
 
 There are two kinds of Chi Squared Tests we should be familiar with:

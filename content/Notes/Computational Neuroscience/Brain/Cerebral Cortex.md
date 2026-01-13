@@ -1,8 +1,8 @@
 ---
 date: 2025-04-14
-updated: 2025-06-19
+updated: 2026-01-12T11:34:13-05:00
 tags:
   - biology/region
-  - comp-neuro
   - todo/neuro
+  - comp-neuro/brain
 ---

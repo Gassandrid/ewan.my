@@ -23,7 +23,7 @@ related:
 
 ### Neuronal Synchronization
 
-Given that we want the model's relationship with data to not only depend on a single *snapshot* of the network state, but to also build complex [[temporal dynamics]] through which time dependency can emerge as a variable in the latent space.
+Given that we want the model's relationship with data to not only depend on a single *snapshot* of the network state, but to also build complex [[Temporal Dynamics]] through which time dependency can emerge as a variable in the latent space.
 
 We do this by first collecting all the post activations $z^t$ into a "post activation history":
 

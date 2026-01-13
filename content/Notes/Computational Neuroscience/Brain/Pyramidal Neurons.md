@@ -3,7 +3,7 @@ date: 2025-06-06
 updated: 2025-08-26
 tags:
   - todo/neuro
-  - comp-neuro/neurons
+  - comp-neuro/brain
 class:
   - note
 source:

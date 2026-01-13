@@ -2,8 +2,16 @@
 tags:
   - engineering/3dprinting
   - projects/homelab/hardware
+  - cs/homelab
 date: 2025-08-31
-updated: 2025-12-19
+updated: 2026-01-12T10:24:14-05:00
+class:
+  - note
+source:
+related:
+author:
+description:
+aliases:
 ---
 
 My current primary **homelab** as per se - it is feature complete in terms of hardware now, the only thing I could really see to add now would be a zig-bee dongle and and SDR for passive RF monitoring. Most work now consists of [[Saturn Rack Software]].
@@ -11,6 +19,8 @@ My current primary **homelab** as per se - it is feature complete in terms of ha
 ---
 
 ## Finished Product
+
+Now that the server rack has been completed, the main task is to build the [[Brainstorming Software Stack|Software Stack]],  such that all computers are being evenly distributed. The [[Cyr]] mini pc has the most ram and is the most capable pc in terms of compute, so most services should be focused there. [[Tysis]] is the NAS, only has an intel n100 and thus docker services should not be hosted here, instead having cyr services point to tysis for their data stores.
 
 ![[saturnRack.png]]
 

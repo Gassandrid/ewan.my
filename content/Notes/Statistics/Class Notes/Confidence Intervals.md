@@ -5,7 +5,13 @@ tags:
   - math/statistics
   - university
 date: 2024-10-23
-updated: 2025-06-21
+updated: 2026-01-09T11:30:50+02:00
+class:
+  - note
+source:
+related:
+author:
+description:
 ---
 
 ## Research Question
@@ -60,8 +66,9 @@ Where:
 
    $$
    \hat{p} ~ N(p, \sqrt{\frac{p(1-p)}{n}})
-   $$
 
+
+$$
    Where:
 
    - $p$ = population proportion
@@ -69,16 +76,21 @@ Where:
 
 2. Calculate the standard error (SE):
 
-   $$
-   \sigma = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
-   $$
+   
+$$
 
+   \sigma = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+
+$$
    For confidence intervals, $\sigma \approx SE(\hat{p})$.
 
 3. Use the formula for a confidence interval:
-   $$
+   
+$$
+
    \hat{p} \pm z \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
-   $$
+
+$$
    Where $z$ is the critical value for the desired confidence level.
 
 ### Confidence Levels and Critical Values
@@ -86,18 +98,26 @@ Where:
 Common critical values for the $z$-score:
 
 - **95% Confidence Level**:
-  $$
-  C = 95\% \rightarrow \frac{\alpha}{2} = 0.025 \rightarrow z_{.025} = | invNorm(0.025) | = 1.96
-  $$
-- **90% Confidence Level**:
-  $$
-  C = 90\% \rightarrow \frac{\alpha}{2} = 0.05 \rightarrow z_{.05} = | invNorm(0.05) | = 1.645
-  $$
-- **80% Confidence Level**:
-  $$
-  C = 80\% \rightarrow \frac{\alpha}{2} = 0.10 \rightarrow z_{.10} = | invNorm(0.10) | = 1.282
-  $$
+  
+$$
 
+  C = 95\% \rightarrow \frac{\alpha}{2} = 0.025 \rightarrow z_{.025} = | invNorm(0.025) | = 1.96
+
+$$
+- **90% Confidence Level**:
+  
+$$
+
+  C = 90\% \rightarrow \frac{\alpha}{2} = 0.05 \rightarrow z_{.05} = | invNorm(0.05) | = 1.645
+
+$$
+- **80% Confidence Level**:
+  
+$$
+
+  C = 80\% \rightarrow \frac{\alpha}{2} = 0.10 \rightarrow z_{.10} = | invNorm(0.10) | = 1.282
+
+$$
 > [!Note] Observation
 > As the confidence level increases, the margin of error also increases. This means we gain confidence but lose precision.
 
@@ -110,7 +130,10 @@ Confidence intervals provide a range within which we expect the true population 
 For example:
 
 - If $\hat{p} = 0.45$ with $E = 0.03$, the 95% confidence interval is:
-  $$
+  
+$$
+
   0.45 \pm 0.03 = [0.42, 0.48]
-  $$
+
+$$
   This means we are 95% confident the true population proportion lies within this range.

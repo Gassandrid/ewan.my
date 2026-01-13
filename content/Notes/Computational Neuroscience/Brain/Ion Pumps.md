@@ -4,6 +4,7 @@ aliases: []
 tags:
   - biology
   - working/neuro
+  - comp-neuro/brain
 date: 2025-04-22
 updated: 2025-04-22
 ---

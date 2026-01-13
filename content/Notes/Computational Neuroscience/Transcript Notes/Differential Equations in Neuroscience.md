@@ -14,7 +14,7 @@ source:
 
 ## Abstract
 
-This video covers **Dynamical Systems Theory**, and how it can be used to model the behavior of systems in which time is a factor.
+This video covers **[[Dynamical Systems Theory]]**, and how it can be used to model the behavior of systems in which time is a factor.
 
 Looking at a Neuron, how can we apply this?
 
@@ -23,7 +23,7 @@ Looking at a Neuron, how can we apply this?
 
 **Neurons are temporal computers**. Unlike the contrary, neurons don't only have "inputs" and "outputs" as factors, but also what that neuron was doing **1 millisecond ago, 1 second ago, or even minutes before**.
 
-This is exactly what **Dynamical Systems Theory** is all about. This will cover differential equations, limit cycles, equilibrium points, and phase portraits.
+This is exactly what **[[Dynamical Systems Theory]]** is all about. This will cover differential equations, limit cycles, equilibrium points, and phase portraits.
 
 We will learn the fundamentals in this note, and later apply it to **Neuronal Dynamics**
 
@@ -31,7 +31,7 @@ We will learn the fundamentals in this note, and later apply it to **Neuronal Dy
 
 ## State Variables
 
-At its core, **Dynamical Systems Theory** is about studying things that change. This can be anything from a neuron firing, to a population of bacteria, or even a leaf floating in the water. 
+At its core, **[[Dynamical Systems Theory]]** is about studying things that change. This can be anything from a neuron firing, to a population of bacteria, or even a leaf floating in the water. 
 
 > [!Warning]
 > The KEY is having a way to describe the system state at any given point.

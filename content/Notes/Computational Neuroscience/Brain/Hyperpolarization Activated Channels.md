@@ -4,5 +4,6 @@ updated: 2025-04-14
 tags:
   - biology
   - todo/neuro
+  - comp-neuro/brain
 ---
    

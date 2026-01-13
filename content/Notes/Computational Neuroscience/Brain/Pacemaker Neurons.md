@@ -1,10 +1,10 @@
 ---
 title: Pacemaker Neurons
 date: 2025-03-25
-updated: 2025-06-19
+updated: 2026-01-12T10:53:30-05:00
 tags:
   - biology
-  - comp-neuro/neurons
+  - comp-neuro/brain
 class: note
 ---
  

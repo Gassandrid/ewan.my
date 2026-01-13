@@ -4,7 +4,7 @@ class:
 tags:
   - todo/uncreated
   - todo/neuro
-  - comp-neuro/neurons
+  - comp-neuro/brain
 source:
   - "[[Place cells - How your brain creates maps of abstract spaces]]"
 related:

@@ -2,13 +2,16 @@
 tags:
   - seed
 date: 2025-07-28
-updated: 2025-09-29
+updated: 2026-01-09T11:31:13+02:00
 class:
   - note
 source:
   - "[[Uncreated Notes]]"
 related:
 author:
+aliases:
+  - Uncreated Notes
+  - Uncreated Note
 ---
 
 I have a bit of a problem - I really love the idea of setting off tasks to do later by linking to a note that doesn't exist.

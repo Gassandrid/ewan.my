@@ -1,6 +1,6 @@
 ---
 date: 2025-10-29
-updated: 2025-11-05
+updated: 2026-01-12T09:53:19-05:00
 class:
   - note
 tags:
@@ -88,21 +88,23 @@ Where:
 
 ---
 
-## Mathematical Intuition
+## Intuition
 
-### Bayesian Perspective
+### From a Bayesian point of view
 
-The Kalman Filter is the optimal Bayesian estimator for linear-Gaussian systems. At each step, we're computing:
+The Kalman Filter is the optimal Bayesian filter for linear-Gaussian systems. At each step, we are looking to find:
 
 $$
 p(\mathbf{x}_k | \mathbf{z}_{1:k}) \propto p(\mathbf{z}_k | \mathbf{x}_k) \cdot p(\mathbf{x}_k | \mathbf{z}_{1:k-1})
 $$
 
+**Where**:
+
 - **Prior**: $p(\mathbf{x}_k | \mathbf{z}_{1:k-1})$ comes from the prediction step
 - **Likelihood**: $p(\mathbf{z}_k | \mathbf{x}_k)$ is the observation model
 - **Posterior**: $p(\mathbf{x}_k | \mathbf{z}_{1:k})$ is our updated belief after seeing $\mathbf{z}_k$
 
-Because both distributions are Gaussian, their product is also Gaussian, and we can compute it in closed form.
+The product of any two gaussians will always be a gaussian, so we can compute the closed form solution
 
 ### The Kalman Gain Intuition
 
@@ -172,18 +174,8 @@ Suppose we measure $z_1 = 1.5$ (true position is 1, but measurement is noisy).
 
 Notice: the filter not only updated the position estimate but also inferred the velocity!
 
-### Visualization Interpretation
+For this to work we will need to update the predict step with the newly balanced dynamical system equation:
 
-Over time, the Kalman Filter produces:
-
-1. **Smoother trajectory**: The filtered estimate is less noisy than raw measurements
-2. **Decreasing uncertainty**: The covariance $\mathbf{P}_k$ shrinks as more measurements arrive
-3. **Velocity inference**: Even though we only measure position, the filter estimates velocity from the pattern of position changes
-
-The filter balances:
-
-- Physical model (constant velocity) vs. measurements
-- High measurement noise ($R=4$) means trusting the model more
-- As uncertainty decreases, the Kalman gain decreases, and updates become more conservative
-
-This is why Kalman Filters are so powerful: they optimally fuse noisy data with a model of system dynamics to produce the best possible estimate.
+$$
+\int_{0}^{\infty} \nabla g(x_{n}^{k}) d \theta
+$$

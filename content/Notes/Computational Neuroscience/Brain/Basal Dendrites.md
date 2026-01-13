@@ -2,9 +2,9 @@
 class:
   - note
 tags:
-  - comp-neuro/neurons/dendrites
   - biology/region
   - todo/comp-neuro
+  - comp-neuro/brain
 source:
 related:
 author:

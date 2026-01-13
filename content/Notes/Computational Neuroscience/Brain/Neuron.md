@@ -3,8 +3,8 @@ id: Neuron
 aliases:
 tags:
   - biology
-  - comp-neuro/neurons
   - todo/neuro
+  - comp-neuro/brain
 date: 2025-03-25
 title: Neuron
 updated: 2025-09-01

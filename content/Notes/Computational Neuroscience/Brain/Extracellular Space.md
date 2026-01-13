@@ -6,7 +6,13 @@ tags:
   - biology
 date: 2025-02-03
 title: Extracellular Space
-updated: 2025-06-19
+updated: 2026-01-10T10:47:59+02:00
+class:
+  - note
+source:
+related:
+author:
+description:
 ---
 
 **Extracellular Space** is essentially referring to a part of a multicellular organism ( for us in neuroscience, this will only be for humans ) usually outside of the plasma membranes of the cell and occupied by fluid.

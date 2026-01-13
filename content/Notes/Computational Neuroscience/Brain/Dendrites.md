@@ -6,7 +6,7 @@ tags:
   - comp-neuro
 date: 2025-03-30
 class: note
-updated: 2025-06-19
+updated: 2026-01-10T12:00:42+02:00
 ---
 
 ![[Pasted image 20250330145358.png]]

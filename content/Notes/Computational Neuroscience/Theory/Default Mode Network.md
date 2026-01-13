@@ -12,7 +12,7 @@ related:
 author:
 description:
 date: 2025-12-19
-updated: 2025-12-20
+updated: 2026-01-12T09:51:26-05:00
 ---
 
 ![[defModeNetwork.png]]

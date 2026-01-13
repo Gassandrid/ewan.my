@@ -2,10 +2,10 @@
 id: Theta Rhythm - A memory clock
 aliases:
 tags:
-  - comp-neuro
+  - comp-neuro/theory
 date: 2025-02-03
 title: Theta Rhythm - A memory clock
-updated: 2025-12-25
+updated: 2026-01-12T11:30:45-05:00
 class:
   - transcript
   - note

@@ -14,7 +14,7 @@ related:
 author:
 description: extracting meaningful utility in the age of unengaged content consumption
 date: 2025-12-19
-updated: 2025-12-25
+updated: 2026-01-08T13:45:06+02:00
 ---
 
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
@@ -91,3 +91,5 @@ Finally, I will also be leveraging the "time tracking" feature within tasknotes 
 It should also be noted that the "captures" kanban should be reserved for completely random ideas that are not tied to content at all, whereas this base will still be about written notes but ones that incorporate one or more sources of information and where the focus is obtaining an understanding of the subject matter.
 
 In all honesty, **Captures** *should* have the potential to become Consumption tasks, as I might start with an idea to investigate something like [[Importance Sampling]], then later find some sources supporting the learning of this concept. Then the tasknote can be moved to Consumption.
+
+Also, as a way to leverage my new ideas about [[Note updates as links to daily notes]], it would be neat for consumption tasks to accumulate backlinks to daily notes as minature "daily log" for research and thoughts, until that content eventually sprouts into a note of its own.

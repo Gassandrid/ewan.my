@@ -2,10 +2,10 @@
 id: Electrodes
 aliases: []
 tags:
-  - comp-neuro
   - todo/neuro
+  - comp-neuro/equipment
 date: 2025-04-23
-updated: 2025-06-19
+updated: 2026-01-12T11:33:38-05:00
 ---
 
 sharp and patch electrodes... etc

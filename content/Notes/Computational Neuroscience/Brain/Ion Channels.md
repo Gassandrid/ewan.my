@@ -3,8 +3,8 @@ id: Ion Channels
 aliases: []
 tags:
   - biology
-  - comp-neuro
   - todo/neuro
+  - comp-neuro/brain
 date: 2025-04-11
 updated: 2025-06-19
 ---

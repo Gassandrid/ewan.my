@@ -4,7 +4,7 @@ class:
 tags:
   - todo/uncreated
   - todo/neuro
-  - comp-neuro/neurons
+  - comp-neuro/brain
 source:
 related:
 author:
