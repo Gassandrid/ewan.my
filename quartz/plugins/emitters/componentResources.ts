@@ -5,8 +5,11 @@ import { QuartzEmitterPlugin } from "../types"
 import spaRouterScript from "../../components/scripts/spa.inline"
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
+// @ts-ignore
+import lorenzScript from "../../components/scripts/lorenzBackground.inline"
 import styles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
+import lorenzStyle from "../../components/styles/lorenzBackground.scss"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzComponent } from "../../components/types"
 import {
@@ -78,6 +81,10 @@ async function joinScripts(scripts: string[]): Promise<string> {
 
 function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
+
+  // Lorenz background animation
+  componentResources.afterDOMLoaded.push(lorenzScript)
+  componentResources.css.push(lorenzStyle)
 
   // popovers
   if (cfg.enablePopovers) {
