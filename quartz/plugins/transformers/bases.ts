@@ -49,7 +49,7 @@ const parseBaseConfig = (yamlContent: string): BaseFile => {
   const properties = normalizeProperties(parsed.properties)
 
   return {
-    filters: parseFilter(parsed.filters),
+    filters: parsed.filters ? parseFilter(parsed.filters) : undefined,
     views: parseViews(parsed.views),
     properties,
     summaries: parsed.summaries,

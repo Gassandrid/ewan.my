@@ -38,7 +38,7 @@ export interface SummaryDefinition {
 }
 
 export interface BasesConfigFile {
-  filters: BaseFilter
+  filters?: BaseFilter
   views: BasesConfigFileView[]
   properties?: Record<string, PropertyConfig>
   summaries?: Record<string, string>

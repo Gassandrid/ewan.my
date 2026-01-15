@@ -719,7 +719,16 @@ function buildCards(
     const toRelativeFromSlug = (target: string): string => {
       // absolute external URL: keep as-is
       if (isAbsoluteURL(target)) return target
-      // turn into a site slug and then into a relative URL
+
+      // Check if it's just a filename (no path separators)
+      // If so, assume it's in the Attachments folder
+      if (!target.includes('/') && !target.includes('\\')) {
+        // It's just a filename, prepend Attachments/
+        const imgSlug = slugifyFilePath(('Attachments/' + target) as FilePath)
+        return resolveRelative(currentSlug, imgSlug)
+      }
+
+      // Otherwise, use the target as-is
       const imgSlug = slugifyFilePath(target as FilePath)
       return resolveRelative(currentSlug, imgSlug)
     }
@@ -731,8 +740,8 @@ function buildCards(
         if (wl) {
           const inner = wl[1]
           const { target } = splitTargetAndAlias(inner)
-          const { slug } = normalizeTargetSlug(target, currentSlug)
-          imageUrl = resolveRelative(currentSlug, slug)
+          // Use toRelativeFromSlug to handle images properly
+          imageUrl = toRelativeFromSlug(target)
         } else {
           imageUrl = toRelativeFromSlug(imageValue)
         }
@@ -744,8 +753,8 @@ function buildCards(
           if (wl) {
             const inner = wl[1]
             const { target } = splitTargetAndAlias(inner)
-            const { slug } = normalizeTargetSlug(target, currentSlug)
-            imageUrl = resolveRelative(currentSlug, slug)
+            // Use toRelativeFromSlug to handle images properly
+            imageUrl = toRelativeFromSlug(target)
           } else {
             imageUrl = toRelativeFromSlug(first)
           }
@@ -812,14 +821,14 @@ function buildCards(
           {
             href,
             "data-slug": slug,
-            style: {
-              "background-image": `url(${imageUrl})`,
-              "background-size": "cover",
-              top: "0px",
-              "inset-inline": "0px",
-            },
           },
-          [],
+          [
+            h("img.base-card-image", {
+              src: imageUrl,
+              alt: title,
+              loading: "lazy",
+            }),
+          ],
         ),
       )
     }
@@ -1001,7 +1010,7 @@ async function* emitBaseViewsForFile(
     slug: resolveViewSlug(baseSlug, view.name, idx),
   }))
 
-  const baseMatchedFiles = evaluateFilter(config.filters, allFiles)
+  const baseMatchedFiles = config.filters ? evaluateFilter(config.filters, allFiles) : allFiles
 
   for (const [viewIndex, view] of config.views.entries()) {
     const slug = resolveViewSlug(baseSlug, view.name, viewIndex)

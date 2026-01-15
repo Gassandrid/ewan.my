@@ -46,7 +46,7 @@ function buildInlineBaseTable(
     }
   }
 
-  const matchedFiles = evaluateFilter(config.filters, allFiles)
+  const matchedFiles = config.filters ? evaluateFilter(config.filters, allFiles) : allFiles
   const sortedFiles = applySorting(matchedFiles, view.sort || [], allFiles)
   const limitedFiles = view.limit ? sortedFiles.slice(0, view.limit) : sortedFiles
 
