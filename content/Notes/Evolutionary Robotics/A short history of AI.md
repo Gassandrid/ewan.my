@@ -70,3 +70,54 @@ Thinking about the interface is now even more problematic than the prior questio
 ## Input First, then Processing, then Output
 
 From the time of the [[Turing Machines|Turing Machine]], the very idea of computation has been based on a simple notion of input first, then processing, then output. This is the basis of the **von Neumann architecture** that underpins most modern computers.
+
+### Fast Foward to 1956
+
+The Dartmouth Summer Research Conference on Artificial Intelligence (1956) **Origin of the word “artificial intelligence”**.
+
+The proposal for the conference stated:
+
+> We propose that a 2 month, 10 man study of artificial intelligence be carried out during the summer of 1956 at Dartmouth College in Hanover, New Hampshire. The study is to proceed on the basis of the conjecture that every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it.
+>
+> An attempt will be made to find how to make machines use language, form abstractions and concepts, solve kinds of problems now reserved for humans, and improve themselves.
+>
+> We think that a significant advance can be made in one or more of these problems if a carefully selected group of scientists work on it together for a summer.
+
+In Laymanns terms, **every thing that a human can do, a computer can do** given enough time and resources. Not only that, but they should be able to **improve themselves**.
+
+Safe to say, they did not figure out Artificial Intelligence that summer.
+
+Among the attendees were John McCarthy (who coined the term "Artificial Intelligence"), Marvin Minsky, Nathaniel Rochester, and Claude Shannon(founder of [[Information Theory]]). They are considered the founding fathers of AI.
+
+### Goals of Artificial Intelligence
+
+1. Understand the biological systems
+
+Mother nature has done an excellent job of creating intelligent systems (humans, animals). By studying these systems, we can gain insights into how intelligence works and apply those principles to artificial systems. Term **bioinspiration** will pop up a lot.
+
+2. Distill out the general principles of intelligent behavior
+
+Our ancestors evolved an exceptional shoulder joint to throw spears accurately. Very awesome, but do we need to build robots that can throw spears? No. We need to distill out the general principles of intelligent behavior that can be applied across a wide range of tasks and environments.
+
+3. Apply these principles to build intelligent artifacts
+
+What do we need to actually build intelligent systems? Maybe a brain that can **predict sensory input** (if you are a fan of the [[Bayesian Brain]] and [[Free Energy Principle]] theories).
+
+### Eliza
+
+Created in 1966 by Joseph Weizenbaum, **Eliza** was one of the first chatbots. It simulated a Rogerian psychotherapist by using pattern matching and substitution to respond to user inputs.
+
+It was a very simplistic system, but it was able to convince some users that they were talking to a real person. This led to discussions about the nature of intelligence and whether machines could truly understand human language.
+
+> [!Abstract] Dialogue Example
+>
+> **User**: I am feeling sad.
+> **Eliza**: Why are you feeling sad?
+> **User**: Because my dog died.
+> **Eliza**: I'm sorry to hear that. How long have you had your dog
+> **User**: For 10 years.
+> **Eliza**: Tell me more about your dog.
+
+The program would parse the sentence looking for **pronoun**, **verbs**, and **nouns**, and then use a set of pre-defined rules to generate a response. For example, if the user said "I am feeling sad", Eliza would recognize the pronoun "I" and the verb "am feeling", and respond with "Why are you feeling sad?".
+
+The lesson? Humans often **anthropomorphize** machines, attributing human-like qualities to them even when they are not present. This can lead to misunderstandings about the capabilities of AI systems.

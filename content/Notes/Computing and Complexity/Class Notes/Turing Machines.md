@@ -67,3 +67,5 @@ q_1 & 1 & q_1 & 1 & R \\
 \hline
 \end{array}
 $$
+
+This table tells us that if the machine is in state $q_0$ and reads a 0, it will transition to state $q_1$, write a 1 on the tape, and move the read/write head to the right.
