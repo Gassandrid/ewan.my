@@ -1,11 +1,12 @@
 ---
 id: Turing Machines
-aliases: []
+aliases:
+  - Turing Machine
 tags:
   - cs/theory
 date: 2025-04-03
 class: note
-updated: 2025-04-03
+updated: 2026-01-15T08:53:46-05:00
 ---
 
 Turing Machines are the next step in the evolution of automata. They are a theoretical model of computation that can simulate any algorithm.
@@ -49,3 +50,20 @@ There are also multiple [[Turing Machine Variants]], but that is for another tim
 ---
 
 ## Transition Function in Depth
+
+The transition function $\delta$ takes the current state and the symbol under the read/write head as input, and produces a new state, a symbol to write on the tape, and a direction to move the read/write head (left or right).
+
+We can represent the transition function as a table:
+
+$$
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{Current State} & \text{Read Symbol} & \text{New State} & \text{Write Symbol} & \text{Direction} \\
+\hline
+q_0 & 0 & q_1 & 1 & R \\
+q_0 & 1 & q_2 & 0 & L \\
+q_1 & 0 & q_0 & 0 & R \\
+q_1 & 1 & q_1 & 1 & R \\
+\hline
+\end{array}
+$$

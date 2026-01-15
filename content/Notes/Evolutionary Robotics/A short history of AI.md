@@ -13,7 +13,7 @@ related:
 author:
 description:
 date: 2026-01-15T08:29:40-05:00
-updated: 2026-01-15T08:35:33-05:00
+updated: 2026-01-15T08:52:56-05:00
 ---
 
 ## A short Recap
@@ -44,3 +44,29 @@ _Every time the robot gets closer to the reward (in this case, grabbing the blue
 > - It is only optimizing for a very specific fitness metric, which in this case is minimizing the distance between the blue block and the ball on its back. This can also lead to **perverse instantiations** where the robot finds a loophole in the fitness function to get a high score without actually performing the desired task.
 
 AIs are like teenagers, they will do what you ask exactly, not what you want them to do. Instructions have to be very precise.
+
+---
+
+## I Think, Therefore I Am
+
+> _Cognito, ergo sum_
+>
+> **René Descartes, 1637**
+
+This famous philosophical statement by Descartes emphasizes the act of thinking as proof of existence. In the context of AI, it raises questions about whether machines that can think or simulate thought processes can be considered to possess consciousness or self-awareness.
+
+There is an emphasis on the pronoun **I**, in essence we cannot trust that anything beyond our own mind exists. Everything else, including my body, we are not so sure about.
+
+### Why Talk about This?
+
+Descartes cleaves the world into two distinct substances: the mind (res cogitans) and the body (res extensa). This dualistic view has influenced philosophical discussions about the nature of consciousness and the mind-body problem.
+
+We call this **Cartesian Dualism**: the mind body _problem_. Why is it a problem? Because if the mind and body are separate, how do they interact? How can a non-physical mind influence a physical body, and vice versa?
+
+Thinking about the interface is now even more problematic than the prior question of whether the mind and body are separate.
+
+---
+
+## Input First, then Processing, then Output
+
+From the time of the [[Turing Machines|Turing Machine]], the very idea of computation has been based on a simple notion of input first, then processing, then output. This is the basis of the **von Neumann architecture** that underpins most modern computers.
