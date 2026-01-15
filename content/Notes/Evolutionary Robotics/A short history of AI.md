@@ -4,6 +4,8 @@ class:
   - lectureNote
 tags:
   - university
+  - cs/robotics
+  - cs/ai/evolution
 course: "[[Evolutionary Robotics]]"
 lesson:
   - lecture
@@ -13,7 +15,7 @@ related:
 author:
 description:
 date: 2026-01-15T08:29:40-05:00
-updated: 2026-01-15T08:52:56-05:00
+updated: 2026-01-15T09:33:12-05:00
 ---
 
 ## A short Recap
@@ -121,3 +123,53 @@ It was a very simplistic system, but it was able to convince some users that the
 The program would parse the sentence looking for **pronoun**, **verbs**, and **nouns**, and then use a set of pre-defined rules to generate a response. For example, if the user said "I am feeling sad", Eliza would recognize the pronoun "I" and the verb "am feeling", and respond with "Why are you feeling sad?".
 
 The lesson? Humans often **anthropomorphize** machines, attributing human-like qualities to them even when they are not present. This can lead to misunderstandings about the capabilities of AI systems.
+
+### The Turing Test
+
+Hence to say, if it is this easy to fool humans into thinking they are talking to a human, how do we actually test for intelligence in machines?
+
+Up until quite recently, the most widely accepted test for machine intelligence was the **Turing Test**, proposed by Alan Turing in 1950.
+
+The test is quite simple: a human judge engages in a natural language conversation with both a human and a machine, without knowing which is which. If the judge cannot reliably distinguish between the human and the machine, the machine is said to have passed the Turing Test.
+
+![[turingTest.png]]
+
+#### The Chinese Room Argument
+
+The Turing Test has been criticized for not truly measuring intelligence or understanding. One of the most famous critiques is the **Chinese Room Argument**, proposed by philosopher John Searle in 1980.
+
+> Imagine a person who does not understand Chinese is locked in a room. They have a set of rules (a program) that allows them to manipulate Chinese symbols based on the input they receive. To an outside observer, it may appear that the person in the room understands Chinese, as they can produce appropriate responses to Chinese questions. However, the person inside the room does not actually understand the language; they are simply following syntactic rules.
+
+Do they really understand Chinese? No, they are just manipulating symbols based on rules. This suggests that passing the Turing Test does not necessarily imply true understanding or consciousness.
+
+![[chineseRoomARgument.png]]
+
+Some suggest that intelligence to solve this arrises from levels of abstraction, where the system is not just manipulating symbols, but also has a model of the world and can reason about it.
+
+_This reminds me of the [[Aunt Hillary]] dialogue from [[Gödel, Escher, Bach]] by [[Douglas Hofstadter]]. Aunt Hillary is an anthill that can simulate human conversation by following a set of rules. Aunt Hillary understands the rules, but her components (the ants) do not. There are several levels of abstraction in between the ants and aunt Hillary that allow for this emergent behavior. You could not understand Charles Dickens with just a knowledge of the set of symbols of letters._
+
+---
+
+## Vehicles
+
+A book by Valentino Braitenberg, **Vehicles** introduces a series of (hypothetical) simple robots that seem, to the outside observer, to exhibit complex behavior. The complex behavior does not come from a complex brain, but from a simple agent interacting with a rich environment.
+
+### Vehicle 1: Getting around
+
+A single sensor is attached to a single motor. Propulsion of the motor is proportional to the signal detected by the sensor. The vehicle moves towards the source of the signal. It will always move in a straight line towards the source, slowing down in the cold spots and speeding up in the hot spots.
+
+> _Imagine, now, what you would think if you saw such a vehicle swimming around in a pond. It is restless, you would say, and does not like warm water. But it is quite stupid, since it is not able to turn back to the nice cold spot it overshot in its restless ness. Anyway, you would say, it is ALIVE, since you have never seen a particle of dead matter move around quite like that._
+>
+> **Braitenberg**
+
+### Vehicle 2: Fear and aggression
+
+Each vehicle has two sensors and two motors. Still a directly proportionate relationship between the signal strength and force of the motor.
+
+**The aggressor**: Left sensor is attached ot the right motor, and the right sensor is attached to the left motor. Will charge the light if it’s dead-ahead; Will charge the light if it’s off to the side; Will eventually hit it, as long as the light stays in the vicinity.
+
+> [!Question] Change: swap sensor and motor pairings
+>
+> **How will this vehicle behave?**
+>
+> Now it seems to avoid the light source. It _fears_ the light. But how can a robot of this complexity show aggression or fear?
