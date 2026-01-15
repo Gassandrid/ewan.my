@@ -9,10 +9,18 @@ source:
 related:
 author:
 date: 2025-09-30
-updated: 2025-12-17
+updated: 2026-01-14T09:57:42-05:00
 ---
 
 This is a simple note in its use, but I just wanted to clarify to myself when to use tasknotes tasks and when to just write notes.
+
+## [[01-14-2026]] Update
+
+On further thoughts, having a whole note dedicated to a (usually) simple task is rather overkill. Not only that, but I find that I loose the "chain of thought" for when I want to conduct task work in a linear manner. I still want to use tasknotes for long term "collections" of tasks, things like a full peptide purchase plan require a step by step plan with brainstorming within. That is a great fit for a tasknote, as it is not "wrapping" around another note without adding any further context.
+
+### The Move to short Term Focus
+
+I have struggled with the idea of using a [[Homepage]], but now I feel like I have a proper use for it. Instead of filling it with BS anime girls everywhere and bases for books im clearly not reading, I want to use it purely as a "scratchpad" for ideas I am having *right now*. This allows me to not only keep track of moment by moment linear taskflows, but also to collect and control what Tasknotes I am working on.
 
 ## [[12-17-2025]] Update
 

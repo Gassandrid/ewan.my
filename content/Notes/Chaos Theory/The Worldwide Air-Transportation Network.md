@@ -10,7 +10,7 @@ date: 2026-01-13T10:16:47-05:00
 updated: 2026-01-13T10:17:43-05:00
 ---
 
-## The Logistic Map
+## The [[Logistic Map]]
 
 The logistic map is a one-dimensional discrete time dynamical system that is defined by the equation (For more information about this dynamical system check out the [Wikipedia article](https://en.wikipedia.org/wiki/Logistic_map)): 
 

@@ -11,7 +11,7 @@ author:
 description:
 aliases:
 date: 2026-01-13T10:28:17-05:00
-updated: 2026-01-13T11:03:13-05:00
+updated: 2026-01-13T11:16:16-05:00
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lesson:
   - lecture
@@ -72,18 +72,19 @@ This involves running multiple simulations of the system with slightly varied in
 
 Define $f^k(x)$ to be the result of applying the function $f$ to the initial state $x$ a total of $k$ times.
 
-Given an initial condition  (IC) $x$, we would like to characterize the system for large $k$. Think of the $\lim_{ k \to \infty }$.
+Given an initial condition (IC) $x$, we would like to characterize the system for large $k$. Think of the $\lim_{ k \to \infty }$.
 
->[!Example] The Logistic Growth Function
+> [!Example] The Logistic Growth Function
 > Oftentimes takes the form:
 >
 > $$
 > g_{a}(x) = ax(1-x)
->$$
+> $$
 >
 > A is a parameter, so letting $a=2$, given an initial condition $x$, what is its long term outcome? Let $x_{0}=0.01 \ or \ \frac{1}{100}$. Its long term shape looks like the desmos graph below.
 
 > [!Info] Desmos
+>
 > <iframe src="https://www.desmos.com/calculator/1vsj8uf3a4" width=600 height="400" ></iframe>
 
 We can also solve this analytically, for example after we have assumed $x_{0}$ we can find $x_{1}$ by:
@@ -93,3 +94,15 @@ x_{1} = 2\left( \frac{1}{100} \right) \left( 1-\frac{1}{100} \right) = \frac{2}{
 $$
 
 This would take quite a while though, so oftentimes we use computers to solve this. This is called **iterating the map**.
+
+### The Interesting Thing
+
+You might notice for the graph above, the maximum extrema seems to lie on the coordinates $\left(  \frac{1}{2}, \frac{1}{2} \right)$. The **fundamental idea** behind a [[Logistic Map]] is that the maximum extrema is a fixed point, meaning that if we start at that point, we will always end up there. In other words:
+
+$$
+g_{2} \left( \frac{1}{2} \right) = \frac{1}{2}
+$$
+
+By taking discrete approximation steps, we notice this "staircase" pattern emerging, where we can see how the function iterates towards the fixed point. You will also notice that if we plot the line $y=x$, the points where the function intersects this line are the fixed points of the system.
+
+![[logmap.png]]
