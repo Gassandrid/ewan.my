@@ -14,7 +14,7 @@ related:
 author:
 description:
 date: 2026-01-15T10:25:05-05:00
-updated: 2026-01-15T11:16:30-05:00
+updated: 2026-01-15T11:19:41-05:00
 ---
 
 Resuming work on [[Linear Systems]] regarding the [[Logistic Map]] using a [[Cobweb Plot]]:
@@ -65,8 +65,8 @@ The **fixed point [[Repelling fixed point|Source]]s are**: $x=0$
 > If $|f'(p)| <1 \Rightarrow p$ is a [[Attracting fixed point|sink]].
 >
 > If $|f'(p)| > 1 \Rightarrow p$ is a [[Repelling fixed point|Source]].
-
-If $|f'(p)| =1$, we need more information.
+> 
+> If $|f'(p)| =1$, we need more information.
 
 Origin is a "neutral" fixed point, all other $x \in \mathbb{R}$ are period 2. In essence, some starting position will take a minute to read the period two orbit, whereas others like $p_{1}$ will already be on the period two orbit.
 

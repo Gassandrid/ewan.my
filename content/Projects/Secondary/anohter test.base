@@ -1,11 +1,12 @@
 views:
-  - type: table
+  - type: cards
     name: Table
     filters:
       and:
-        - file.tags.contains("cs/ai")
+        - "!image.isEmpty()"
     order:
       - file.name
       - class
       - updated
       - date
+    image: note.image

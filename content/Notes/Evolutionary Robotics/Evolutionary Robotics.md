@@ -1,12 +1,12 @@
 ---
 status: open
 priority: normal
-scheduled: 2026-01-13T08:30
+scheduled: 2026-01-20T08:30
 contexts:
   - college
 timeEstimate: 70
 dateCreated: 2026-01-13T08:29:09.790-05:00
-dateModified: 2026-01-13T15:00:27.495-05:00
+dateModified: 2026-01-15T13:16:05.013-05:00
 reminders:
   - id: rem_1768310891707_u4y988pnw
     type: relative
@@ -33,6 +33,10 @@ description:
 date: 2026-01-13T08:29:09-05:00
 updated: 2026-01-13T08:34:31-05:00
 recurrence: DTSTART:20260113;FREQ=WEEKLY;BYDAY=TU,TH
+complete_instances:
+  - 2026-01-13
+  - 2026-01-15
+skipped_instances: []
 ---
 
 ## Syllabus
