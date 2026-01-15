@@ -31,11 +31,100 @@ const DEFAULT_PARAMS: LorenzParams = {
   maxOpacity: 0.85,
 }
 
+// Check if we're on mobile
+function isMobile(): boolean {
+  return window.innerWidth <= 800
+}
+
+// Create the control panel UI
+function createControlPanel(params: LorenzParams, onReset: () => void): HTMLElement | null {
+  if (isMobile()) return null
+
+  // Remove existing panel if present
+  const existing = document.getElementById("lorenz-controls")
+  if (existing) existing.remove()
+
+  const container = document.createElement("div")
+  container.id = "lorenz-controls"
+
+  const tab = document.createElement("div")
+  tab.className = "controls-tab"
+  tab.textContent = "Flow Settings"
+  tab.addEventListener("click", () => {
+    container.classList.toggle("open")
+  })
+
+  const panel = document.createElement("div")
+  panel.className = "controls-panel"
+
+  const title = document.createElement("h4")
+  title.textContent = "Lorenz Flow"
+  panel.appendChild(title)
+
+  // Define sliders with their ranges
+  const sliders: { key: keyof LorenzParams; label: string; min: number; max: number; step: number }[] = [
+    { key: "sigma", label: "Sigma (σ)", min: 1, max: 30, step: 0.5 },
+    { key: "rho", label: "Rho (ρ)", min: 1, max: 50, step: 0.5 },
+    { key: "beta", label: "Beta (β)", min: 0.1, max: 10, step: 0.1 },
+    { key: "timeScale", label: "Speed", min: 0.1, max: 2, step: 0.1 },
+    { key: "turbulenceAmount", label: "Turbulence", min: 0, max: 1.5, step: 0.05 },
+    { key: "maxLineLength", label: "Vector Length", min: 0.1, max: 1.5, step: 0.05 },
+    { key: "maxOpacity", label: "Intensity", min: 0.1, max: 1, step: 0.05 },
+  ]
+
+  for (const slider of sliders) {
+    const group = document.createElement("div")
+    group.className = "control-group"
+
+    const label = document.createElement("label")
+    label.textContent = slider.label
+    group.appendChild(label)
+
+    const input = document.createElement("input")
+    input.type = "range"
+    input.min = String(slider.min)
+    input.max = String(slider.max)
+    input.step = String(slider.step)
+    input.value = String(params[slider.key])
+    group.appendChild(input)
+
+    const valueDisplay = document.createElement("div")
+    valueDisplay.className = "control-value"
+    valueDisplay.textContent = String(params[slider.key])
+    group.appendChild(valueDisplay)
+
+    input.addEventListener("input", () => {
+      const value = parseFloat(input.value)
+      ;(params as Record<string, number>)[slider.key] = value
+      valueDisplay.textContent = value.toFixed(2)
+    })
+
+    panel.appendChild(group)
+  }
+
+  // Reset button
+  const resetBtn = document.createElement("button")
+  resetBtn.className = "control-reset"
+  resetBtn.textContent = "Reset to Default"
+  resetBtn.addEventListener("click", onReset)
+  panel.appendChild(resetBtn)
+
+  container.appendChild(tab)
+  container.appendChild(panel)
+  document.body.appendChild(container)
+
+  return container
+}
+
 function createLorenzBackground() {
+  // Skip on mobile
+  if (isMobile()) return
+
   const canvas = document.getElementById("lorenz-canvas") as HTMLCanvasElement | null
   if (!canvas) return
 
-  const params = DEFAULT_PARAMS
+  // Mutable params object
+  const params: LorenzParams = { ...DEFAULT_PARAMS }
 
   // Setup renderer
   const renderer = new THREE.WebGLRenderer({
@@ -203,6 +292,12 @@ function createLorenzBackground() {
 
   // Handle resize with debouncing
   function handleResize() {
+    // If resized to mobile, cleanup
+    if (isMobile()) {
+      cleanup?.()
+      return
+    }
+
     renderer.setSize(window.innerWidth, window.innerHeight)
     setupCamera()
 
@@ -214,6 +309,33 @@ function createLorenzBackground() {
       setupCamera()
     }, 250)
   }
+
+  // Reset params to defaults
+  function resetParams() {
+    Object.assign(params, DEFAULT_PARAMS)
+    // Update slider values in UI
+    const controls = document.getElementById("lorenz-controls")
+    if (controls) {
+      const inputs = controls.querySelectorAll("input[type=range]")
+      const values = controls.querySelectorAll(".control-value")
+      const keys: (keyof LorenzParams)[] = [
+        "sigma",
+        "rho",
+        "beta",
+        "timeScale",
+        "turbulenceAmount",
+        "maxLineLength",
+        "maxOpacity",
+      ]
+      inputs.forEach((input, i) => {
+        ;(input as HTMLInputElement).value = String(params[keys[i]])
+        values[i].textContent = String(params[keys[i]])
+      })
+    }
+  }
+
+  // Create control panel
+  const controlPanel = createControlPanel(params, resetParams)
 
   // Initial setup
   createFlowPointGrid()
@@ -266,7 +388,7 @@ function createLorenzBackground() {
   animate()
 
   // Cleanup function (for SPA navigation)
-  return () => {
+  const cleanup = () => {
     cancelAnimationFrame(animationId)
     window.removeEventListener("resize", handleResize)
     if (resizeTimeout) {
@@ -283,7 +405,10 @@ function createLorenzBackground() {
         point.line.material.dispose()
       }
     }
+    if (controlPanel) controlPanel.remove()
   }
+
+  return cleanup
 }
 
 // Initialize on DOM load
@@ -296,15 +421,22 @@ document.addEventListener("nav", () => {
     cleanup = undefined
   }
 
+  // Skip on mobile
+  if (isMobile()) return
+
   // Initialize new instance
   cleanup = createLorenzBackground()
 })
 
 // Also initialize on first load
 if (document.readyState === "complete" || document.readyState === "interactive") {
-  cleanup = createLorenzBackground()
+  if (!isMobile()) {
+    cleanup = createLorenzBackground()
+  }
 } else {
   document.addEventListener("DOMContentLoaded", () => {
-    cleanup = createLorenzBackground()
+    if (!isMobile()) {
+      cleanup = createLorenzBackground()
+    }
   })
 }
