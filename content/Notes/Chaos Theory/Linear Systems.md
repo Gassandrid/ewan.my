@@ -11,7 +11,7 @@ author:
 description:
 aliases:
 date: 2026-01-13T10:28:17-05:00
-updated: 2026-01-13T11:16:16-05:00
+updated: 2026-01-15T10:16:23-05:00
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lesson:
   - lecture
@@ -90,7 +90,7 @@ Given an initial condition (IC) $x$, we would like to characterize the system fo
 We can also solve this analytically, for example after we have assumed $x_{0}$ we can find $x_{1}$ by:
 
 $$
-x_{1} = 2\left( \frac{1}{100} \right) \left( 1-\frac{1}{100} \right) = \frac{2}{100} \cdot \frac{99}{100} = \frac{198}{200}
+x_{1} = 2\left( \frac{1}{100} \right) \left( 1-\frac{1}{100} \right) = \frac{2}{100} \cdot \frac{99}{100} = \frac{198}{10,000}
 $$
 
 This would take quite a while though, so oftentimes we use computers to solve this. This is called **iterating the map**.
