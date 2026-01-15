@@ -173,3 +173,5 @@ Each vehicle has two sensors and two motors. Still a directly proportionate rela
 > **How will this vehicle behave?**
 >
 > Now it seems to avoid the light source. It _fears_ the light. But how can a robot of this complexity show aggression or fear?
+
+**The point**: Complex, human-like emotion and behavior can arise from simple systems interacting with a rich environment. It brings into question our own understanding of intelligence and consciousness.
