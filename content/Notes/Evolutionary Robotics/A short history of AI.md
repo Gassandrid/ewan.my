@@ -15,7 +15,7 @@ related:
 author:
 description:
 date: 2026-01-15T08:29:40-05:00
-updated: 2026-01-15T09:33:12-05:00
+updated: 2026-01-15T09:42:46-05:00
 ---
 
 ## A short Recap
@@ -162,7 +162,7 @@ A single sensor is attached to a single motor. Propulsion of the motor is propor
 >
 > **Braitenberg**
 
-### Vehicle 2: Fear and aggression
+### Vehicle 2: Fear and Aggression
 
 Each vehicle has two sensors and two motors. Still a directly proportionate relationship between the signal strength and force of the motor.
 
@@ -175,3 +175,17 @@ Each vehicle has two sensors and two motors. Still a directly proportionate rela
 > Now it seems to avoid the light source. It _fears_ the light. But how can a robot of this complexity show aggression or fear?
 
 **The point**: Complex, human-like emotion and behavior can arise from simple systems interacting with a rich environment. It brings into question our own understanding of intelligence and consciousness.
+
+---
+
+## Connectionism
+
+In the 1980s, the `if then else` modal had been exhasperated. Researchers began to explore alternative approaches to AI, leading to the development of **connectionism**.
+
+In essence, there seems to be a "flow" of sensory input, parrelel, that is processed in a distributed manner, leading to motor output.
+
+![[Connectionism.png]]
+
+This was the birth of Artificial Neural Networks (ANNs), which are inspired by the structure and function of biological neural networks in the brain.
+
+After this, we entered an **AI Winter**, a period of reduced funding and interest in AI research due to unmet expectations and limitations of early AI systems.
