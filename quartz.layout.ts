@@ -23,9 +23,6 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/gassandrid",
-      Instagram: "https://instagram.com/ewan_pedersen",
-      MonkeyType: "https://monkeytype.com/profile/Gassandrid",
-      LinkedIn: "https://www.linkedin.com/in/ewan-pedersen-711368293/",
     },
   }),
 }
