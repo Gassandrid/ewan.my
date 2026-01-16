@@ -3,10 +3,11 @@ views:
     name: Table
     filters:
       and:
-        - "!image.isEmpty()"
+        - class.contains("book")
     order:
       - file.name
-      - class
-      - updated
-      - date
+      - author
+      - description
+      - genre
+      - tags
     image: note.image

@@ -2,11 +2,10 @@
 id: Amygdala
 aliases:
 tags:
-  - biology/region
-  - comp-neuro
-  - working/neuro
+  - comp-neuro/brain/region
+  - biology
 date: 2025-04-14
-updated: 2025-09-01
+updated: 2026-01-15T15:41:44-05:00
 title: Amygdala
 author:
 embedded:

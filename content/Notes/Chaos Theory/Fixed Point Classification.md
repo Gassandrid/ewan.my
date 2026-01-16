@@ -14,7 +14,7 @@ related:
 author:
 description:
 date: 2026-01-15T10:25:05-05:00
-updated: 2026-01-15T11:19:41-05:00
+updated: 2026-01-15T15:46:11-05:00
 ---
 
 Resuming work on [[Linear Systems]] regarding the [[Logistic Map]] using a [[Cobweb Plot]]:
@@ -45,7 +45,7 @@ $$
 
 > [!Info] Desmos
 >
-> <iframe src="https://www.desmos.com/calculator/blpccewhqe" width=600 height="400" ></iframe>
+> <iframe src="https://www.desmos.com/calculator/mqr1jsj7l9" width=600 height="400" ></iframe>
 
 The **fixed point [[Attracting fixed point|sink]]s are**: $x = \pm 1$
 

@@ -1,11 +1,9 @@
 ---
 date: 2025-03-24
-updated: 2025-06-19
+updated: 2026-01-15T15:42:17-05:00
 title: Basal Forebrain
 tags:
-  - comp-neuro
-  - todo
-  - biology/region
+  - comp-neuro/brain/region
   - todo/neuro
 ---
 *A term loosely used to describe the area of the brain superior to the optic chiasm.* These structures are located in the forebrain to the front of and below the striatum.

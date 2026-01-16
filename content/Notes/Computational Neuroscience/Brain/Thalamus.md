@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - comp-neuro
-  - biology/region
+  - comp-neuro/brain/region
 source:
 related:
 author:

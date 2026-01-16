@@ -3,11 +3,11 @@ id: Fugue
 aliases: []
 tags: [music/classical, seed, books/geb]
 date: 2025-08-14
-updated: 2025-08-14
+updated: 2026-01-16T11:52:48-05:00
 ---
  
 
-A **fugue** is a musical composition characterized by the systematic repetition of a principal theme (subject) in simultaneous lines (voices). It is a complex form of counterpoint, where the subject is introduced by one voice and then imitated by others at different pitches. It is related to contrapuntal forms such as a [[Canon]], but unlike a strict canon, where voices follow the same melody at fixed intervals, a fugue introduces a subject that is answered and developed through varied entries across voices.
+A **fugue** is a musical composition characterized by the systematic repetition of a principal theme (subject) in simultaneous lines (voices). It is a complex form of counterpoint, where the subject is introduced by one voice and then imitated by others at different pitches. It is related to contrapuntal forms such as a [[personal canon]], but unlike a strict canon, where voices follow the same melody at fixed intervals, a fugue introduces a subject that is answered and developed through varied entries across voices.
 
  
 

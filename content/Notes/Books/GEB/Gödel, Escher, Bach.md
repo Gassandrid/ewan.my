@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2025-12-22
+updated: 2026-01-16T17:38:53-05:00
 tags:
   - books/geb
   - philosophy
@@ -14,6 +14,7 @@ author:
 image: "[[GebCover.png]]"
 source:
   - https://www.physixfan.com/wp-content/files/GEBen.pdf
+  - Paperback
 genre:
   - Mathematics
   - Nonfiction

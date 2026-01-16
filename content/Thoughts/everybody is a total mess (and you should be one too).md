@@ -1,10 +1,9 @@
 ---
 title: everybody is a total mess (and you should be one too)
 date: 2025-03-05
-updated: 2026-01-15T15:35:08-05:00
+updated: 2026-01-15T19:01:24-05:00
 tags:
   - philosophy
-  - todo
 source:
   - https://www.youtube.com/watch?v=0y6wiBzPMSI
 class:

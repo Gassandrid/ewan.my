@@ -1,10 +1,9 @@
 ---
 date: 2025-04-14
-updated: 2025-06-19
+updated: 2026-01-15T15:41:59-05:00
 tags:
-  - biology/region
-  - comp-neuro
-  - working/neuro
+  - comp-neuro/brain/region
+  - biology
 ---
 
  The *Anterior Hypothalamus* is primarily responsible for body temperature regulation( cooling in particular ). It does this by utilizing special temperature sensitive neurons which can detect and respond to changes in body temperature, and elicit response behavior like sweating.
@@ -22,4 +21,3 @@ It includes a few notable **Nuclei**:
 - anterior hypothalamic nucleus
 - suprachiasmatic nucleus
 - paraventricular nucleus
-

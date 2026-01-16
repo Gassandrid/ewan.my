@@ -11,7 +11,7 @@ author:
 description:
 aliases:
 date: 2026-01-13T10:28:17-05:00
-updated: 2026-01-15T10:16:23-05:00
+updated: 2026-01-16T09:46:57-05:00
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lesson:
   - lecture
@@ -33,7 +33,9 @@ $$
 Where $A$ is a transformation matrix that describes how the balls move on the table. When the edge of the table is hit, the balls bounce off in a predictable manner, which can be described by the matrix $A$.
 
 > [!Abstract] Edward Lorenz (1917 - 2008)
+>
 > ![[edwardlorenz.png|100]]
+>
 > **Chaos**: When the present determines the future, but the approximate present does not approximately determine the future:
 
 ---

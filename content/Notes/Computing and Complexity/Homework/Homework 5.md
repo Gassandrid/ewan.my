@@ -1,10 +1,9 @@
 ---
 date: 2025-04-30
-updated: 2025-05-01
+updated: 2026-01-16T12:06:00-05:00
 author: Ewan Pedersen
 title: Homework 5
 ---
-
 
 ## Problem 01
 
@@ -103,14 +102,18 @@ Assume for the following questions that this Turing Machine starts wtih an *enti
 >Consider this context-free grammar:
 >
 >$$
+
 \begin{align*}
+
 S &\to A | B \\
+
 A &\to 11A | B | \epsilon \\
+
 B &\to 11A | 0B | \epsilon
+
 \end{align*}
+
 $$
-
-
 1. Describe the language of this CFG in plain English (but be precise!).
 
 Given a grammar $G=\{ w \in \{ 0,1 \}^{*} |\text{ every maximal block of consecutive 1's in w has an even length} \}$
@@ -122,13 +125,15 @@ This grammar is essentially meaning that there is no word in $L$ has a string of
 We know that a CFG is ambigious if a string has two seperate parse trees.
 
 This grammar is ambigous because there are many different parse trees, even for an empty word:
-
 $$
+
 S \to A \to \epsilon
-$$
 
 $$
+$$
+
 S \to B \to \epsilon
+
 $$
 
 are both derivations for $\epsilon$, meaning they both have two different productions, and thus the parse trees are different.

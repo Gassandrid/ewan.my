@@ -3,7 +3,7 @@ id: Hippocampus
 aliases:
 tags:
   - comp-neuro
-  - biology/region
+  - comp-neuro/brain/region
   - working/neuro
 date: 2025-03-31
 class: note

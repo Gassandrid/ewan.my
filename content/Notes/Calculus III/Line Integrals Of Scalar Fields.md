@@ -1,0 +1,314 @@
+---
+id: 16.2a - Line Integrals Of Scalar Fields
+date: 2024-11-06
+tags:
+  - math/calculus/vector
+  - university
+updated: 2025-09-05
+class:
+  - note
+---
+
+Suppose the curve $C$ in the xy-plane has the vector equation $\vec{r}(t) = \langle x(t),y(t) \rangle$. Suppose $C$ lies below the surface $z=f(x,y)$, and consider the problem of find the area of the **"sheet"** between the $C$ and the **surface**.
+
+> [!Info] Sketch
+> ![[Screenshot 2024-11-06 at 12.12.04 PM.png|350]]
+
+- $C$ is a curve in the xy-plane
+- The blue space curve $L$ lives on the surface $z=f(x,y)$. It is the curve obtained by lifting $C$ to the surface
+- WE seek the **area of the sheet** between $C$ and $L$.
+
+We proceed the dividing $C$ into n sub-arcs. This is achieved by sub-dividing the parameter interval $[a,b]$ into n sub-intervals of width $\Delta t = \frac{(b-a)}{n}$.
+
+> [!Info] Sketch
+> ![[Screenshot 2024-11-06 at 12.14.58 PM.png|350]]
+
+The point $t_{i}$ in the parameter interval corresponds to the point on $C$ with position vector $P_{i}= \langle x(t_{i}), y(t_{i}) \rangle$
+
+Let $\Delta \partial_{i}$ denote the length of the sub-arc between $P_{i}$ and $P_{i-1}$.
+
+**Then:**
+
+The area of the portion of the sheet above $\Delta \partial_{i}$ is approximately the area of the rectangle whose width is the length of $\Delta \partial_{i}$, and whose height is $f(x,y)$ evaluated at $P_{i}$. We obtain the **area of the sheet** by summing up all of these smaller portions of the sheet:
+
+$$
+Area \ of \ Sheet = \sum_{i=1}^n f(x(t_{i}),y(t_{i})) \ \Delta \partial_{i}
+$$
+
+[^1]
+
+_But we already know $\Delta \partial i$ is the arc length differential(see [[13.3 - Arc Length|section 13.3a]])_
+
+$$
+\Delta \partial i = \sqrt{ (\dot{x}(t_{i}))^2 + (\dot{y}(t_{i}))^2 } \Delta t
+$$
+
+[^2]
+
+where the "dot" notation means "derivative with respect to t", i.e. $\dot{x} = \frac{dx}{dt}$. Substituting [^2] into [^1] and taking the limit $n \to \infty$ yields an integral:
+
+$$
+Area \ of \ Sheet = \int_{a}^b f(x(t),y(t))\sqrt{ \dot{x}^2 + \dot{y}^2 } \ dt
+$$
+
+This particular integral is called the [[Line Integral]]:
+
+> [!Info] Definition
+> If $f$ is defined on the curve $C$ given by $\vec{r}(t)= \langle x(t), y(t) \rangle$, $t \in [a,b]$, then the **line integral** of $f$ along $C$ is:
+>
+> $$
+> \int_{C} f(x,y) \ d\partial = \int_{a}^b f(x(t),y(t))\sqrt{ \dot{x}^2 +\dot{y}^2 } \ dt
+> $$
+
+---
+
+> [!Abstract] Remarks
+>
+> 1. When the differential is $d\partial$, this is called the line integral with respect to arc length. We will see other types of line integrals later on in this lecture.
+> 2. The expression on the left hand side tells us what a line integral means: add up all the **length elements $d\partial$** and multiply by their heights.
+> 3. **Cleaning up notation:** If $\vec{r}(t) = \langle x(t),y(t) \rangle$, then $| \vec{r}(t) | = \sqrt{ \dot{x}^2 + \dot{y}^2 }$, so we get:
+>
+> $$
+> \int_{C} f(x,y) \ d\partial = \int_{a}^b f( \vec{r}(t)) \cdot |\vec{r}'(t)| \ dt
+> $$
+
+---
+
+## Examples
+
+> [!Example]
+> Find the area of the surface extending upward from the circle $x_{6}2 + y^2 = 1$ in the xy-plane to the parabolic cylinder $z=1-x^2$
+
+> [!Success]- Solution
+> We are finding the area of the "sheet" between the surface $z=1-x^2$ and the circle $x^2 + y^2 = 1$ in the xy-plane. We therefore seek the line integral $\int_{C} \ d\partial$, where $C$ is the unit circle and $f(x,y)=1-x^2$
+>
+> > [!Info] Sketch
+> >
+> > ![[Screenshot 2024-11-06 at 12.48.07 PM.png|350]]
+
+Now we know what we are looking for, let's go through the steps to evaluate:
+
+1. Parameterize $C$
+   - This is done by $\vec{r}(t) = \langle \cos t, \sin t \rangle$, $t \in [0,2\pi]$
+2. Compute the Arc Length differential
+
+$$
+d\partial = | \vec{r}'(t) | dt = | \langle-\sin t, \cos t \rangle | dt
+$$
+
+$$
+= \sqrt{ \sin^2t+\cos^2t } \ dt = dt
+$$
+
+3. Evaluate the line integral
+
+$$
+\int_{C} f(x,y) d\partial = \int_{0}^{2\pi} (1-x^2) \ d\partial
+$$
+
+$$
+\int_{0}^1 \int_{0}^1 \frac{1}{1-xy} \ dx \ dy = \sum_{n=1}^\infty \frac{1}{n^2}
+$$
+
+_substitute in $d\partial = dt$ and $x=\cos t$_
+
+$$
+= \int_{0}^{2\pi}(1-\cos^2t) \ d t
+$$
+
+$$
+= \int_{0}^{2\pi}\sin^2t \ dt = \frac{1}{2} \int_{0}^{2\pi}1-\cos2t \ dt
+$$
+
+_remark: $\int_{0}^{2\pi}\sin^2\theta \ d\theta = \int_{0}^{2\pi}\cos^2 \theta \ d\theta = \pi$_
+
+$$
+= \left( \frac{1}{2} \right)(2\pi) = \pi
+$$
+
+---
+
+## Line Integrals in Space
+
+The concept of a [[Line Integral]] can be extended to space curves of the form $\vec{r}(t) = \langle x(t), y(t), z(t) \rangle$, $t \in [a,b]$:
+
+$$
+\int_{C}f(x,y,z) \ d\partial = \int_{a}^b f(x(t),y(t),z(t))\sqrt{ \dot{x}^2+ \dot{y}^2 + \dot{z}^2 } \ dt
+$$
+
+$$
+= \int_{a}^b f( \vec{r}(t)) \ | \ \vec{r}'(t) \ | \ dt
+$$
+
+The analogy of the "area of the sheet" is now difficult because the "height" of the sheet is now in 4D. **Instead, we can interpret the line integral as the mass of a thin wire with shape $C$ and linear density function $f(x,y,z)$**
+
+_why?_ Because:
+
+$$
+(Linear \ Density) = \frac{mass}{length} \to mass = (Density)(Length)
+$$
+
+In the expression $\int_{C}f(x,y,z) \ d\partial$, $d\partial$ represents the length of a small piece of wire; so, if $f$ is density, $f \cdot d\partial$ is the mass of that piece. The integrand sign means "add up all the mass elements," yielding the total mass.
+
+> [!Example]
+> A helix-shaped wire described by $\vec{r}(t) = \langle\cos t, \sin t, t \rangle$, $t \in [0,2\pi]$, has linear density function $f(x,y,z) = y\sin z$. Find the mass of the wire.
+
+> [!Success]- Solution
+> We seek the line integral $\int_{C}y\sin z \ d\partial$, where $C$ is the helix. The arc length differential is:
+>
+> $$
+> d\partial = \sqrt{ \dot{x}^2 + \dot{y}^2 + \dot{z}^2 } \ dt = \sqrt{ \sin^2t + \cos^2t +1  } \ dt = \sqrt{ 2 } \ dt
+> $$
+>
+> The line integral (and mass) is therefore:
+>
+> $$
+> \int_{C}y\sin z \ d\partial = \int_{0}^{2\pi} \sin^2t \cdot \sqrt{ 2 } \ dt = \sqrt{ 2 }\pi
+> $$
+
+---
+
+## Line Integrals with respect to X, Y, or Z
+
+So far, we have defined the line integral with respect to arc length, $d\partial$. Now we define the line integral with respect to $x,y, or z$:
+
+$$
+\int_{C}f(x,y,z) \ dx = \int_{a}^b f(x,y,z) \dot{x}(t) \ dt,
+$$
+
+$$
+\int_{C} f(x,y,z) \ dy = \int_{a}^b f(x,y,z) \dot{y}(t) \ dt,
+$$
+
+$$
+\int_{C} f(x,y,z) \ dz = \int_{a}^b f(x,y,z) \dot{z}(t) \ dt.
+$$
+
+> [!Abstract] Remarks
+>
+> 1. To obtain the formulae on the right, we observe:
+>
+> $$
+> \dot{x}(t) = \frac{dx}{dt} \to dx = \dot{x}(t) \ dt
+> $$
+>
+> 2. The geometric interpretation is less intuitive than the line integral with respect to arc length. The line integral with respect to x, for example, can be interpreted as the **area of the projection of the sheet onto the xz-plane** ( see the beginning for the sheet sketch, and then imagine that pushing against the xz-plane).
+> 3. The utility of this type of integral will become apparent when we study line integrals of vector fields; for now, we are learning the mechanics of working with them.
+
+> [!Example]
+> Evaluate $\int_{C}y^2 \ dx + \int_{C} x \ dy$ for the following paths:
+> a. $c$ is the line segment from $(-5,-3)$ to $(0,2)$
+> b. $c$ is the line segment from $(0,2)$ to $(-5,-3)$
+> c. $c$ is the arc of the parabola $x = 4 - y^2$ from $(-5,-3)$ to $(0,2)$.
+
+> [!Warning] Remark
+> Linearity holds for line integrals so it will be easier to find
+>
+> $$
+> \int_{C} y^2 \ dx + x \ dy
+> $$
+>
+> Which is only one integral instead
+
+### A.
+
+We need to find a vector parameterization of the segment. Recall that the line segment joining $\vec{r}_{0} = \langle x_{0},y_{0} \rangle$ and $\vec{r}_{1}=\langle x_{1},y_{1} \rangle$ is $\vec{r}(t) = (1-t) \vec{r}_{0}+ t \vec{r}_{1}$, where $t \in [0,1]$. So, we get:
+
+$$
+\begin{align*}
+\vec{r}(t) &= (1-t) \langle -5, -3 \rangle + t \langle 0, 2 \rangle \\
+           &= \langle -5 + 5t, -3 + 3t \rangle + \langle 0, 2t \rangle \\
+           &= \langle -5 + 5t, -3 + 5t \rangle \\
+           &= \langle x(t), y(t) \rangle
+\end{align*}
+$$
+
+Therefore:
+
+$$
+\begin{align*}
+\int_{C} y^2 \ dx + x \ dy &= \int_{0}^1 (-3+5t)^2(5) + (-5+5t)(5) \ dt \\
+&= 5 \int_{0}^1 9 - 30t + 25t^2 - 5 + 5t \\
+& = 5 \int_{0}^1 25t^2 - 25t + 4 \ dt \\
+&= - \frac{5}{6}
+\end{align*}
+$$
+
+### B.
+
+This is the same path, but we have reversed direction:
+
+We start at $(0,2)$ and end at $(-5,-3)$, so:
+
+$$
+\begin{align*}
+\vec{r}(t) &= (1-t)\langle 0,2 \rangle + t \langle -5, -3 \rangle \\
+&= \langle 0,2-2t \rangle + \langle -5t, -3t \rangle \\
+&= \langle -5t, 2-5t \rangle = \langle x(t), y(t) \rangle, \ \ t \in [0,1]
+\end{align*}
+$$
+
+Therefore, the line integral is:
+
+$$
+\begin{align*}
+\int_{C}y^2 \ dx + x \ dy &= \int_{0}^1 (2-t_{5})^2(-5) + (-5t)(5) \ dt \\
+&= -5 \int_{0}^1 (2-5t)^2 - 5t \ dt \\
+&= -5 \int_{0}^1 4 - 20t + 25t^2-5t \\
+&= -5 \int_{0}^1 25t^2 - 25t + 4 \ dt  \\
+&= \frac{5}{6}
+\end{align*}
+$$
+
+### C.
+
+Parameterize the parabola by $x=4-y^2$, $y=y$, $y \in [-3,2]$:
+
+$$
+\begin{align*}
+\int_{C} y^2 \ dx + x \ dy &= \int_{-3}^2 y^2 (-2y)+(4-y^2)(1) \ dy \\
+&= \int_{-3}^2 -2y^2 + 4-y^2 \ dy \\
+&= \frac{245}{6}
+\end{align*}
+$$
+
+---
+
+## Properties of Line Integrals
+
+1. A parameterization $\vec{r}(t)$ of $C$ comes with an orientation. In the previous example [[16.2a - Line Integrals Of Scalar Fields#A.|A]] and [[16.2a - Line Integrals Of Scalar Fields#B.|B]], we had:
+
+> [!Info] Sketch
+> ![[Screenshot 2024-11-08 at 12.15.08 PM.png|350]]
+
+If $-C$ denotes $C$ but traversed "backwards", then the previous example suggests:
+
+$$
+\int_{-C}f(x,y) \ dx = - \int_{C}f(x,y) \ dx
+$$
+
+[^3]
+
+_i.e._ **reversing the orientation of $C$ flips the sign of the line integral.** ( This is the same idea as reversing the order of integration; one way, the $\Delta x$ values are negative. )
+
+> [!Warning] Note
+> [^3] is true for the line integral with respect to $x,y, or \ z$, but **not** with respect to arc length. This is because arc length is independent of the orientation of the path; **always** a positive quantity
+
+2. Suppose $C$ is a finite union of paths.
+
+> [!Info] Sketch
+> ![[Screenshot 2024-11-08 at 12.21.46 PM.png|350]]
+
+To find $\int_{C}f \ d\partial$ (or dx), we add up the line integral of each piece, _e.g._
+
+$$
+\int_{C}f \ d \partial = \int_{C_{1}}f \ d \partial + \int_{C_{2}}f \ d \partial + \dots + \int_{C_{4}}f \ d \partial
+$$
+
+---
+
+[^1]: Area of Sheet Formula
+
+[^2]: Arc Length Differential
+
+[^3]: Inverse Line Integral
