@@ -315,7 +315,7 @@ img_str
       () => (tree: Root, _file) => {
         blockCounter = 0
         visit(tree, "code", (node, index, parent) => {
-          if (node.lang === "python-r" && parent?.children && index !== undefined) {
+          if (node.lang === "python" && parent?.children && index !== undefined) {
             const id = generateBlockId()
 
             const htmlContent = `
