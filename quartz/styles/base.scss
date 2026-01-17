@@ -7,7 +7,7 @@
 html {
   scroll-behavior: smooth;
   text-size-adjust: none;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100vw;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -349,6 +349,10 @@ a {
       @media all and ($mobile) {
         margin-top: 0;
         padding: 0;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: var(--light);
       }
     }
 

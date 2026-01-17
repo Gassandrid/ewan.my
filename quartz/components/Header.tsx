@@ -9,8 +9,13 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   gap: 1.5rem;
+
+  @media (max-width: 600px) {
+    margin: 0;
+    gap: 0.75rem;
+  }
 }
 
 header h1 {
