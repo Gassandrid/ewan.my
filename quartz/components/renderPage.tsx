@@ -270,6 +270,11 @@ export function renderPage(
           <Body {...componentData}>
             {LeftComponent}
             <div class="center">
+              <div class="sticky-header-bar">
+                {beforeBody.slice(0, 2).map((BodyComponent) => (
+                  <BodyComponent {...componentData} />
+                ))}
+              </div>
               <div class="page-header">
                 <Header {...componentData}>
                   {header.map((HeaderComponent) => (
@@ -277,10 +282,6 @@ export function renderPage(
                   ))}
                 </Header>
                 <div class="popover-hint popover-hint-ewan">
-                  {beforeBody.slice(0, 2).map((BodyComponent) => (
-                    <BodyComponent {...componentData} />
-                  ))}
-                  <div style={{ width: "100%" }} class="ewan-divider"></div>
                   {slug !== "index" &&
                     beforeBody
                       .slice(2)
