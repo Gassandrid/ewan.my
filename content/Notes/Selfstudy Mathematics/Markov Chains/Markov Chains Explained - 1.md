@@ -6,7 +6,7 @@ tags:
 date: 2025-04-29
 class:
   - transcript
-updated: 2025-08-16
+updated: 2026-01-17T07:58:23-05:00
 source:
   - "[[Markov Chains Clearly Explained! Part - 1]]"
 ---
@@ -75,7 +75,7 @@ The more interesting question though, is what do these probabilities **converge*
 
 Let's approach this with a brute force python implementation:
 
-```python-r
+```python
 import random
 
 # verbose, but clear

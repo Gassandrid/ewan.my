@@ -4,9 +4,14 @@ date: 2024-11-25
 tags:
   - math/calculus/multivariable
   - university
-updated: 2025-09-05
+updated: 2026-01-16T22:39:12-05:00
 class:
   - note
+source:
+related:
+author:
+description: Green's Theorem relates a line integral around a simple closed curve C to a double integral over the plane region D bounded by C.
+aliases:
 ---
 
 Let $C$ be a simple closed curve and let $\mathcal{D}$ be the region bounded by $C$. We say $C$ has **positive orientation** if $C$ is traversed in the **counterclockwise** direction.

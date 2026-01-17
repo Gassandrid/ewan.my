@@ -4,9 +4,14 @@ date: 2024-11-18
 tags:
   - math/calculus/vector
   - university
-updated: 2025-09-05
+updated: 2026-01-16T22:40:30-05:00
 class:
   - note
+source:
+related:
+author:
+description: The Fundamental Theorem for Line Integrals states that the line integral of a conservative vector field depends only on the values of its potential function at the endpoints of the path.
+aliases:
 ---
 
 ## Abstract

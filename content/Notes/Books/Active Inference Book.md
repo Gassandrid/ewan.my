@@ -9,7 +9,7 @@ tags:
 source:
   - https://direct.mit.edu/books/oa-monograph/5299/Active-InferenceThe-Free-Energy-Principle-in-Mind
   - Paperback
-image: "[[ActInferenceBook.png]]"
+image: "[[Attachments/ActInferenceBook.png]]"
 author:
   - "[[Thomas Parr]]"
   - "[[Giovanni Pezzulo]]"
@@ -25,4 +25,4 @@ reading: false
 completed: false
 ---
 
-![[ActInferenceBook.png]]
+![[Attachments/ActInferenceBook.png]]

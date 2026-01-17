@@ -5,7 +5,7 @@ tags:
   - math/statistics
   - university
 date: 2024-09-12
-updated: 2025-06-21
+updated: 2026-01-17T07:58:48-05:00
 ---
 
 # CH2.4 - Random Variables (RVs)
@@ -17,7 +17,7 @@ Random variables play an important part in probability theory, and they are used
 
 ---
 
-## How do we represent random variables?
+## How Do We Represent Random Variables?
 
 Random variables are represented by capital letters, such as X, Y, or Z. They are used to represent the outcomes of random experiments, and they can take on different values depending on the outcome of the experiment.
 
@@ -54,7 +54,7 @@ The probability model for the random variable X is given by the probability mass
 
 _python script for plotting PMF and CDF_
 
-```python-r
+```python
 import matplotlib.pyplot as plt
 
 # Data from the table
@@ -85,7 +85,6 @@ ax2.legend(loc='upper right')
 plt.show()
 ```
 
-
 > [!Info] Definition
 > **Fulcrum**: The balancing point of a lever
 
@@ -93,7 +92,9 @@ plt.show()
 
 Lets represent this with an equation.
 
-$$ E(X) = \mu\_{x} = \sum x \cdot p(x) $$
+$$
+ E(X) = \mu\_{x} = \sum x \cdot p(x) 
+$$
 
 Now let's make a table of the values.
 
@@ -110,15 +111,19 @@ Now let's make a table of the values.
 
 **Result**: The expected value of the random variable X is 1.3, which represents the average number of eggs in the osprey nest.
 
-$$ E(X) = \sum x \cdot p(x) = 0 \cdot .2 + 1 \cdot .4 + 2 \cdot .3 + 3 \cdot .1 = 1.3 $$
+$$
+ E(X) = \sum x \cdot p(x) = 0 \cdot .2 + 1 \cdot .4 + 2 \cdot .3 + 3 \cdot .1 = 1.3 
+$$
 
 ---
 
-## What this example tells us?
+## What This Example Tells Us?
 
 Spread/Variability of the RV's probability model is the variance.
 
-$$ Variance = Var(x) = V(X) = \sum (x - \mu)^2 \cdot p(x) $$
+$$
+ Variance = Var(x) = V(X) = \sum (x - \mu)^2 \cdot p(x) 
+$$
 
 This equation gives us the spread or variability of the probability model of the random variable X. The variance measures how much the values of X deviate from the expected value $\mu$.
 
@@ -138,7 +143,9 @@ _vertex form of the parabola_
 
 - $y = a(x-h)^2 + k$ -> $y = 1.5 - 6(x-50)^2$
 
-$$ f(x) = \begin{cases} 1.5-6(x-50.0)^2, & \text{for } 49.5 \leq x \leq 50.5 \\ 0, & \text{otherwise} \end{cases} $$
+$$
+ f(x) = \begin{cases} 1.5-6(x-50.0)^2, & \text{for } 49.5 \leq x \leq 50.5 \\ 0, & \text{otherwise} \end{cases} 
+$$
 
 **Graping the PDF with the following python script**
 

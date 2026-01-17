@@ -1,12 +1,12 @@
 ---
 status: open
 priority: normal
-scheduled: 2026-01-15T14:50:00
+scheduled: 2026-01-20T14:50:00
 contexts:
   - college
 timeEstimate: 75
 dateCreated: 2026-01-13T15:07:28.552-05:00
-dateModified: 2026-01-15T13:16:01.533-05:00
+dateModified: 2026-01-16T17:52:57.975-05:00
 reminders:
   - id: rem_1768334833457_gbzjl8pqn
     type: relative
@@ -36,6 +36,7 @@ author:
 description:
 complete_instances:
   - 2026-01-13
+  - 2026-01-15
 skipped_instances: []
 ---
 
