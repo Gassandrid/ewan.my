@@ -1,11 +1,11 @@
 ---
 date: 2025-10-16
-updated: 2025-10-17
+updated: 2026-01-18T08:29:09-05:00
 class:
   - note
 tags:
   - cs/homelab/monitoring
-  - projects/homelab
+  - projects/homelab/apartment
 source:
 related:
   - "[[Master Homelab Architecture]]"

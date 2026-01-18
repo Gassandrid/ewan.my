@@ -1,6 +1,6 @@
 ---
 date: 2025-01-24
-updated: 2025-08-21
+updated: 2026-01-18T08:31:07-05:00
 title: Bridging my University Wifi to host own network access point
 tags:
   - projects/homelab
@@ -18,3 +18,5 @@ My [[University Of Vermont|University]], while providing strong and easy to use 
 ---
 
 ## The (Maybe?) Solution
+
+

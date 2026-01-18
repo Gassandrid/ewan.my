@@ -1,5 +1,5 @@
 ---
-title: GEB Cover
+title: Cover of Gödel Escher Bach
 class:
   - curation
 media-type: png

@@ -1,5 +1,5 @@
 ---
-title:
+title: The Hero with 1000 DIagnosable Disorders
 class:
   - curation
 media-type: webp

@@ -1,8 +1,9 @@
 ---
 date: 2025-04-19
-updated: 2025-04-24
+updated: 2026-01-18T08:30:10-05:00
 tags:
   - projects/homelab
+  - projects/homelab/dorm
 ---
 
 Things have been going quite well! I have reached a point where I am using my home server collection to host a lot of my services, and while my university wifi has certainly been restricting, I have been able to host just about everything I have needed. 
@@ -41,5 +42,4 @@ from a [reddit post](https://www.reddit.com/r/homelab/comments/1jzx5gq/what_do_y
 
 another youtube video I found that might be nice for 3d printing a rack:
 
-https://youtu.be/5E0M4s17r-U?si=IW4Q_g8fqnQG_7CR
-
+<https://youtu.be/5E0M4s17r-U?si=IW4Q_g8fqnQG_7CR>

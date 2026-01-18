@@ -9,7 +9,7 @@ tags:
 source:
   - https://direct.mit.edu/books/oa-monograph/5299/Active-InferenceThe-Free-Energy-Principle-in-Mind
   - Paperback
-image: "[[Attachments/ActInferenceBook.png]]"
+image: "[[InferenceActiveBook.png]]"
 author:
   - "[[Thomas Parr]]"
   - "[[Giovanni Pezzulo]]"
@@ -19,7 +19,7 @@ genre:
   - Nonfiction
 description: the free energy principle in mind, brain, and behavior
 date: 2025-11-18
-updated: 2026-01-16T15:36:59-05:00
+updated: 2026-01-17T12:07:41-05:00
 progress:
 reading: false
 completed: false

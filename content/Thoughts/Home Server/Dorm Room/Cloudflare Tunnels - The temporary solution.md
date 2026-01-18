@@ -1,11 +1,11 @@
 ---
 title: Cloudflare Tunnels - The temporary solution
 date: 2025-03-21
-updated: 2025-03-23
+updated: 2026-01-18T08:30:47-05:00
 tags:
   - projects/homelab/software
-  - cs
   - todo
+  - cs/web/tunneling
 ---
 
  While the home server project has been going well as far as local deployments, I have yet to properly expose this network to the internet, for a few reasons.

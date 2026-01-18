@@ -1,6 +1,6 @@
 ---
 date: 2025-12-09
-updated: 2025-12-21
+updated: 2026-01-18T08:21:43-05:00
 class:
   - note
 tags:
@@ -34,10 +34,6 @@ This is my new color palette for all things web design and branding. This is the
 
 Headers: Fraunces
 
-Body: PP Neue Montreal
+Body: Geist
 
 Code: IBM Plex Mono
-
-## SVG Logo
-
-![[logoSVG.svg]]

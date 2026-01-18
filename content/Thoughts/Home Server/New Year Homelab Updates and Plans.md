@@ -2,8 +2,9 @@
 tags:
   - projects/homelab
   - cs/homelab
+  - projects/homelab/apartment
 date: 2025-08-27
-updated: 2025-08-31
+updated: 2026-01-18T08:29:05-05:00
 class:
   - note
 ---
@@ -29,6 +30,7 @@ This consists of 3 sub projects, a few of which I have already planned out:
 - [[Home Server Ip Cameras]]
 
 [[Home Assistant]] security will be a nice feature for monitoring interesting happenings outside my room, but beyond home assistant it will also be a nice way for me to test machine learning models with computer vision data, etc.
+
 - this could also involve the raspberry pi camera module that i have lying around, good stuff to play around with before [[Sprinter Van Plan 1]] stuff
 
 I have added some products I would like to get to my obsidian db, namely [[CX820 IP Camera]] and [[Kasa Smart Plug]]
@@ -56,7 +58,7 @@ These will still be used, but not really as servers as they are not capable **at
 
 I have gotten quite tired of the git sync for obsidian when working with mobile, it really doesnt work and I am tired of it. I plan to implement this with some selfhosted bucket, following the guide below:
 
-https://www.reddit.com/r/selfhosted/comments/1eo7knj/guide_obsidian_with_free_selfhosted_instant_sync/
+<https://www.reddit.com/r/selfhosted/comments/1eo7knj/guide_obsidian_with_free_selfhosted_instant_sync/>
 
 ### Cloud Services
 

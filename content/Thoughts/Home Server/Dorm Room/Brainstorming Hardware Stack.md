@@ -4,6 +4,7 @@ date: 2025-01-02
 updated: 2025-07-03
 tags:
   - projects/homelab/hardware
+  - projects/homelab/dorm
 ---
 
 To start this great project of mine, Im going to just be using what I already have. While I do plan to invest in some proper homelab hardware in the distant future, that doesnt offset the fact that it will be ridiculously expensive.

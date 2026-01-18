@@ -5,6 +5,7 @@ updated: 2025-07-26
 tags:
   - projects/homelab/software
   - cs/homelab
+  - projects/homelab/dorm
 ---
   
  

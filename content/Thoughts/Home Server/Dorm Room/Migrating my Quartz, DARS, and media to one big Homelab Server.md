@@ -4,6 +4,7 @@ date: 2025-01-02
 updated: 2025-09-19
 tags:
   - projects/homelab
+  - projects/homelab/dorm
 class:
   - note
 ---

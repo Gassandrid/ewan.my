@@ -1,9 +1,10 @@
 ---
 date: 2025-01-02
-updated: 2026-01-12T10:24:32-05:00
+updated: 2026-01-18T08:28:44-05:00
 tags:
   - cs
   - projects/homelab/software
+  - projects/homelab/dorm
 title: Brainstorming Software Stack
 class:
   - note

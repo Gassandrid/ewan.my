@@ -4,10 +4,11 @@ aliases: []
 tags:
   - projects/homelab/software
   - cs/homelab/monitoring
+  - projects/homelab/apartment
 class:
   - note
 date: 2025-10-01
-updated: 2025-10-01
+updated: 2026-01-18T08:29:28-05:00
 ---
 
 My old homelab in my dorm room was all over the place, in both hardware and software. On the software side, I kind of just found services that I wanted and hosted the docker container with no foundation.
@@ -34,11 +35,11 @@ It runs on port `3000`.
 
 ### [[Grafana]]
 
-Graphana is a well known service for visualizing metrics. I use it to visualize all the metrics collected by Prometheus, and the running docker containers on each machine. Its dashboard is available at http://lab.ewan.my/grafana and it also runs on port `3000`.
+Graphana is a well known service for visualizing metrics. I use it to visualize all the metrics collected by Prometheus, and the running docker containers on each machine. Its dashboard is available at <http://lab.ewan.my/grafana> and it also runs on port `3000`.
 
 ### [[Prometheus]]
 
-Prometheus is a metrics collection and alerting service. It scrapes metrics from various endpoints, including the node-exporter, cAdvisor, and CoreDNS, and stores them in a time-series database. Its dashboard is available at http://lab.ewan.my:9090/ ( even though it should be behind the reverse proxy, I havent set that up yet ).
+Prometheus is a metrics collection and alerting service. It scrapes metrics from various endpoints, including the node-exporter, cAdvisor, and CoreDNS, and stores them in a time-series database. Its dashboard is available at <http://lab.ewan.my:9090/> ( even though it should be behind the reverse proxy, I havent set that up yet ).
 
 ### Node-exporter
 

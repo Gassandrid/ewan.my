@@ -1,7 +1,7 @@
 ---
 title: Using Bare Metal Nixos and Debian Over Proxmox
 date: 2025-01-28
-updated: 2025-02-21
+updated: 2026-01-18T08:30:29-05:00
 tags:
   - cs
   - projects/homelab/software

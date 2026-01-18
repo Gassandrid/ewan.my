@@ -1,8 +1,11 @@
 ---
-title: 'A new idea - 3d printed 10" rack'
+title: A new idea - 3d printed 10" rack
 date: 2025-02-04
 updated: 2025-02-04
-tags: [cs, projects/homelab/hardware]
+tags:
+  - projects/homelab/hardware
+  - projects/homelab/dorm
+  - cs/homelab
 ---
 
 I was watching [this video](https://www.youtube.com/watch?v=t5ZMkzbdSR8), and, given that I now have a 3d printer, I think this would be a great option for the laptop stack.

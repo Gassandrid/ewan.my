@@ -1,8 +1,8 @@
 ---
-title:
+title: Elegant
 class:
   - curation
-media-type: "webp"
+media-type: webp
 image: "[[Attachments/Curation/ElegantlyArtistic.webp]]"
 source:
 related:
