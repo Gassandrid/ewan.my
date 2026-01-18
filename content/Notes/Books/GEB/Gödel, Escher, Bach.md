@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2026-01-18T09:57:47-05:00
+updated: 2026-01-18T10:15:40-05:00
 tags:
   - books/geb
   - philosophy
@@ -11,7 +11,7 @@ class:
   - book
 author:
   - "[[Douglas Hofstadter]]"
-image: "[[Attachments/Curation/GEBCover.png]]"
+image: "[[GebCover.png]]"
 source:
   - https://www.physixfan.com/wp-content/files/GEBen.pdf
   - Paperback
@@ -24,7 +24,7 @@ reading: true
 completed: false
 ---
 
-![[Attachments/Curation/GEBCover.png]]
+![[GebCover.png]]
 
 > **Gödel, Escher, Bach**( often abbreviated as **GEB**), is a non fiction book written by American cognitive scientist [[Douglas Hofstadter]]. Through examples from the lives of the mathematician *Kurt Gödel*, the artist *M.C. Escher*, and the classical composer *Johann Sebastian Bach*, Hofstadter seeks to explore the nature of intelligence, symmetry, and mathematics.
 
