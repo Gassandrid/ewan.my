@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2026-01-17T11:43:02-05:00
+updated: 2026-01-18T09:57:47-05:00
 tags:
   - books/geb
   - philosophy
@@ -31,5 +31,3 @@ completed: false
 I was recommended I read this book, both by a friend from University, and by my father and step-father. It is quite deep, but seeks answer some of the questions I have had about the nature of human intelligence, through the familiar language of mathematics and logic.
 
 It is unlike anything I have ever read before in its structure, where there initially doesn't appear to be any meaningful connection within the chaotic slew of snippets from the lives of the aforementioned figures. However, I am slowly starting to get the full picture, and have found special interest in the mathematical nature of Bach's compositions.
-
----
