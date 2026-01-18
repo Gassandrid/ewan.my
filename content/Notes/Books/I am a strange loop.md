@@ -17,7 +17,7 @@ progress:
 reading: false
 completed: false
 date: 2026-01-16T17:36:01-05:00
-updated: 2026-01-16T17:38:42-05:00
+updated: 2026-01-18T12:09:49-05:00
 ---
 
 ![[strangeLoop.png]]

@@ -19,10 +19,10 @@ genre:
   - Nonfiction
 description: the free energy principle in mind, brain, and behavior
 date: 2025-11-18
-updated: 2026-01-17T12:07:41-05:00
+updated: 2026-01-18T12:07:54-05:00
 progress:
 reading: false
 completed: false
 ---
 
-![[Attachments/ActInferenceBook.png]]
+![[InferenceActiveBook.png]]
