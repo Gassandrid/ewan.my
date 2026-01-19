@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2026-01-18T10:15:40-05:00
+updated: 2026-01-19T10:24:37-05:00
 tags:
   - books/geb
   - philosophy

@@ -2,10 +2,10 @@
 date: 2025-12-26
 description: works and people that have shaped how i think
 tags:
-  - evergreen
-  - pattern
+  - seed
+  - philosophy
 title: canon
-updated: 2026-01-16T11:45:21-05:00
+updated: 2026-01-19T10:37:17-05:00
 ---
 
 inspired by [David Cole's](http://davidcole.me/canon/) and [aarnphm's](https://notes.aarnphm.xyz/personal-canon)

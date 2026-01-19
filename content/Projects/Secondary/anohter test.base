@@ -1,8 +1,5 @@
 formulas:
-  Untitled: completed.year
-properties:
-  formula.Untitled:
-    displayName: Year Completed
+  YearCompleted: completed.year
 views:
   - type: cards
     name: Table
@@ -10,7 +7,7 @@ views:
       and:
         - class.contains("book")
     groupBy:
-      property: formula.Untitled
+      property: formula.YearCompleted
       direction: ASC
     order:
       - file.name
@@ -18,5 +15,5 @@ views:
       - description
       - genre
       - series
-      - formula.Untitled
+      - formula.YearCompleted
     image: note.image
