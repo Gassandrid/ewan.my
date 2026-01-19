@@ -270,7 +270,8 @@ function buildTableCell(
       return h("td", {}, "")
     }
 
-    const value = evaluateFormula(formula, file, allFiles)
+    // Evaluate the formula expression
+    const value = evaluateFormulaExpression(formula.expression, file, allFiles)
     if (typeof value === "boolean") {
       return h("td", {}, [renderBooleanCheckbox(value)])
     }
@@ -433,6 +434,8 @@ function applySorting(
 function groupFiles(
   files: QuartzPluginData[],
   groupBy: string | BaseGroupBy,
+  allFiles: QuartzPluginData[] = [],
+  formulas?: Record<string, FormulaDefinition>,
 ): Map<string, QuartzPluginData[]> {
   const groups = new Map<string, QuartzPluginData[]>()
 
@@ -440,7 +443,21 @@ function groupFiles(
   const direction = typeof groupBy === "string" ? "ASC" : groupBy.direction
 
   for (const file of files) {
-    const value = file.frontmatter?.[property]
+    let value: any
+
+    // Handle formula properties
+    if (property.startsWith("formula.")) {
+      const formulaName = property.slice("formula.".length)
+      const formula = formulas?.[formulaName]
+      if (formula) {
+        // Evaluate the formula expression directly
+        value = evaluateFormulaExpression(formula.expression, file, allFiles)
+      }
+    } else {
+      // Handle regular properties
+      value = resolvePropertyValue(file, property, allFiles)
+    }
+
     const key = value === undefined || value === null ? "(empty)" : String(value)
 
     if (!groups.has(key)) {
@@ -461,6 +478,70 @@ function groupFiles(
   )
 
   return sortedGroups
+}
+
+// Evaluate a formula expression like "completed.year"
+function evaluateFormulaExpression(
+  expression: string,
+  file: QuartzPluginData,
+  allFiles: QuartzPluginData[] = [],
+): any {
+  if (!expression) return undefined
+
+  const trimmed = expression.trim()
+
+  // Handle property accessor with date components (e.g., "completed.year")
+  if (trimmed.includes(".")) {
+    const parts = trimmed.split(".")
+    if (parts.length === 2) {
+      const [propertyName, accessor] = parts
+      const value = resolvePropertyValue(file, propertyName, allFiles)
+
+      if (value instanceof Date) {
+        switch (accessor) {
+          case "year":
+            return value.getFullYear()
+          case "month":
+            return value.getMonth() + 1 // JavaScript months are 0-indexed
+          case "day":
+            return value.getDate()
+          default:
+            return undefined
+        }
+      }
+
+      // Handle string dates
+      if (typeof value === "string") {
+        let parsed: Date
+
+        // Check if it's a date-only string (YYYY-MM-DD format)
+        if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+          // Parse as local date to avoid timezone issues
+          const [year, month, day] = value.split("-").map(Number)
+          parsed = new Date(year, month - 1, day)
+        } else {
+          // Parse normally for datetime strings
+          parsed = new Date(value)
+        }
+
+        if (!isNaN(parsed.getTime())) {
+          switch (accessor) {
+            case "year":
+              return parsed.getFullYear()
+            case "month":
+              return parsed.getMonth() + 1
+            case "day":
+              return parsed.getDate()
+            default:
+              return undefined
+          }
+        }
+      }
+    }
+  }
+
+  // Fallback: try to resolve as a simple property
+  return resolvePropertyValue(file, trimmed, allFiles)
 }
 
 // build summary row (tfoot) for table
@@ -510,7 +591,7 @@ function buildTable(
 
   // apply groupBy if specified - skip summaries for grouped tables
   if (view.groupBy) {
-    const groups = groupFiles(files, view.groupBy)
+    const groups = groupFiles(files, view.groupBy, allFiles, formulas)
     const allRows: any[] = []
 
     for (const [groupName, groupFiles] of groups) {
@@ -612,6 +693,7 @@ function buildList(
   currentSlug: FullSlug,
   allFiles: QuartzPluginData[],
   properties?: Record<string, PropertyConfig>,
+  formulas?: Record<string, FormulaDefinition>,
 ): any {
   const nestedProperties = view.nestedProperties === true || view.indentProperties === true
   const order = Array.isArray(view.order) && view.order.length > 0 ? view.order : ["title"]
@@ -679,7 +761,7 @@ function buildList(
   }
 
   if (view.groupBy) {
-    const groups = groupFiles(files, view.groupBy)
+    const groups = groupFiles(files, view.groupBy, allFiles, formulas)
     const groupElements: any[] = []
 
     for (const [groupName, groupedFiles] of groups) {
@@ -706,6 +788,7 @@ function buildCards(
   currentSlug: FullSlug,
   allFiles: QuartzPluginData[],
   allSlugs?: string[],
+  formulas?: Record<string, FormulaDefinition>,
 ): any {
   const imageField = view.image || "image"
 
@@ -873,7 +956,7 @@ function buildCards(
   const varStyle = styleParts.length > 0 ? styleParts.join(" ") : undefined
 
   if (view.groupBy) {
-    const groups = groupFiles(files, view.groupBy)
+    const groups = groupFiles(files, view.groupBy, allFiles, formulas)
     const groupElements: any[] = []
 
     const groupSizes = view.groupSizes as Record<string, number> | undefined
@@ -1053,10 +1136,10 @@ async function* emitBaseViewsForFile(
       )
       tree = { type: "root", children: [tableNode] }
     } else if (view.type === "list") {
-      const listNode = buildList(limitedFiles, view, slug, allFiles, config.properties)
+      const listNode = buildList(limitedFiles, view, slug, allFiles, config.properties, config.formulas)
       tree = { type: "root", children: [listNode] }
     } else if (view.type === "card" || view.type === "cards") {
-      const cardsNode = buildCards(limitedFiles, view, slug, allFiles, ctx.allSlugs)
+      const cardsNode = buildCards(limitedFiles, view, slug, allFiles, ctx.allSlugs, config.formulas)
       tree = { type: "root", children: [cardsNode] }
     } else if (view.type === "map") {
       const mapNode = buildMap(limitedFiles, view, slug, allFiles, config.properties)
