@@ -705,6 +705,7 @@ function buildCards(
   view: BaseView,
   currentSlug: FullSlug,
   allFiles: QuartzPluginData[],
+  allSlugs?: string[],
 ): any {
   const imageField = view.image || "image"
 
@@ -721,19 +722,22 @@ function buildCards(
       if (isAbsoluteURL(target)) return target
 
       // Check if it's just a filename (no path separators)
-      // If so, try to find the actual file in allFiles
+      // If so, try to find the actual file by searching all slugs
       if (!target.includes('/') && !target.includes('\\')) {
-        // Search for the file by matching the basename
-        const targetBasename = target.replace(/\.[^/.]+$/, '')
-        const foundFile = allFiles.find((f) => {
-          if (!f.slug) return false
-          const fileBasename = getFileBaseName(f.filePath as string | undefined, f.slug)
-          return fileBasename === targetBasename || fileBasename === target
-        })
+        // Remove extension from target for comparison
+        const targetWithoutExt = target.replace(/\.[^/.]+$/, '')
 
-        if (foundFile && foundFile.slug) {
-          // Use the actual file's slug
-          return resolveRelative(currentSlug, foundFile.slug as FullSlug)
+        // Search for the file in allSlugs (includes static assets like images)
+        if (allSlugs) {
+          const matchingSlug = allSlugs.find((slug) => {
+            const slugBasename = slug.split("/").pop() || slug
+            const slugWithoutExt = slugBasename.replace(/\.[^/.]+$/, '')
+            return slugWithoutExt === targetWithoutExt || slugBasename === target
+          })
+
+          if (matchingSlug) {
+            return resolveRelative(currentSlug, matchingSlug as FullSlug)
+          }
         }
 
         // Fallback: assume it's directly in the Attachments folder
@@ -1052,7 +1056,7 @@ async function* emitBaseViewsForFile(
       const listNode = buildList(limitedFiles, view, slug, allFiles, config.properties)
       tree = { type: "root", children: [listNode] }
     } else if (view.type === "card" || view.type === "cards") {
-      const cardsNode = buildCards(limitedFiles, view, slug, allFiles)
+      const cardsNode = buildCards(limitedFiles, view, slug, allFiles, ctx.allSlugs)
       tree = { type: "root", children: [cardsNode] }
     } else if (view.type === "map") {
       const mapNode = buildMap(limitedFiles, view, slug, allFiles, config.properties)
