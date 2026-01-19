@@ -20,8 +20,8 @@ genre:
   - Nonfiction
 description: an investigation of the nature of the mind and human conciousness through the creative endeavors of Kurt Godel, MC Escher, and Sebastian Bach
 progress: 328 - Ant Fugue
-reading: true
-completed: false
+status: in-progress
+completed:
 ---
 
 ![[GebCover.png]]

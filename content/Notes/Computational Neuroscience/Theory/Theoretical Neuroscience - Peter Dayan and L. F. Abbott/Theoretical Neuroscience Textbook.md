@@ -17,8 +17,8 @@ genre:
   - Educational Content
 description: introductory modeling of neural phenomena, action potentials and dynamical systems
 progress:
-reading: true
-completed: false
+status: in-progress
+completed:
 ---
 *Theoretical neuroscience provides a quantitative basis for describing what nervous systems do, determining how they function, and uncovering the general principles by which they operate. This text introduces the basic mathematical and computational methods of theoretical neuroscience and presents applications in a variety of areas including vision, sensory-motor integration, development, learning, and memory.*
 

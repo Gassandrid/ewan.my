@@ -1,13 +1,22 @@
+formulas:
+  Untitled: completed.year
+properties:
+  formula.Untitled:
+    displayName: Year Completed
 views:
   - type: cards
     name: Table
     filters:
       and:
         - class.contains("book")
+    groupBy:
+      property: formula.Untitled
+      direction: ASC
     order:
       - file.name
       - author
       - description
       - genre
-      - tags
+      - series
+      - formula.Untitled
     image: note.image
