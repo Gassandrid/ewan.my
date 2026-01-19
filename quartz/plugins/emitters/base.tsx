@@ -721,9 +721,22 @@ function buildCards(
       if (isAbsoluteURL(target)) return target
 
       // Check if it's just a filename (no path separators)
-      // If so, assume it's in the Attachments folder
+      // If so, try to find the actual file in allFiles
       if (!target.includes('/') && !target.includes('\\')) {
-        // It's just a filename, prepend Attachments/
+        // Search for the file by matching the basename
+        const targetBasename = target.replace(/\.[^/.]+$/, '')
+        const foundFile = allFiles.find((f) => {
+          if (!f.slug) return false
+          const fileBasename = getFileBaseName(f.filePath as string | undefined, f.slug)
+          return fileBasename === targetBasename || fileBasename === target
+        })
+
+        if (foundFile && foundFile.slug) {
+          // Use the actual file's slug
+          return resolveRelative(currentSlug, foundFile.slug as FullSlug)
+        }
+
+        // Fallback: assume it's directly in the Attachments folder
         const imgSlug = slugifyFilePath(('Attachments/' + target) as FilePath)
         return resolveRelative(currentSlug, imgSlug)
       }
