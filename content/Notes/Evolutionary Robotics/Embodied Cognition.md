@@ -1,6 +1,6 @@
 ---
 date: 2026-01-20T08:29:59-05:00
-updated: 2026-01-20T09:30:48-05:00
+updated: 2026-01-20T09:36:36-05:00
 class:
   - note
   - lectureNote
@@ -72,7 +72,7 @@ It would _move_ an inch, _stop_ (this is how it got the name Shakey), _perceive_
 
 ---
 
-## Free Will
+## Libet Free Will Experiment
 
 > [!Example]
 > Another aspect of human cognition: free will. Most people believe that htey have free willo
@@ -115,11 +115,37 @@ Subsumption architecture has been used to build a variety of robots, including t
 
 This brings us to the crux of the lecture: **Embodied Cognition**. What does this mean? The _machines_ that we use day by day have the aspects of cognition, but no way to interact with the world. They are disembodied. The central idea is:
 
->[!Abstact] Embodied Cognition
+> [!Abstract] Embodied Cognition
 > **the way you process information is affected by the fact that you have a body**
 
->[!Example] 
+> [!Example]
 >
-> If you have a body that can move, and you can see, then moving will cause *immediate* feedback.
+> If you have a body that can move, and you can see, then moving will cause _immediate_ feedback.
 >
-> Non-embodied technologies like computers must *wait* for feedback from another device/computer or person.
+> Non-embodied technologies like computers must _wait_ for feedback from another device/computer or person.
+
+### Situated Cognition
+
+Slightly different from embodied cognition is **Situated Cognition**, which emphasizes that cognition is not just about having a body, but also about being situated in a specific environment.
+
+> [!Abstract] Situated Cognition
+> **the way you process information is affected by the fact that you are physically situated in the world**
+
+---
+
+A complete agent is one that can properly utilize both embodied and situated cognition to achieve its goals. But they also have 3 other important properties which we will discuss next lecture:
+
+1. **They are subject to the laws of physics (by being in the world).**
+
+> [!Example]
+> We use it to move around, manipulate objects, and interact with our environment. We store potential energy in water to generate electricity.
+
+2. **They generate sensory stimulation (through behavior).**
+
+> [!Example]
+> When we move our eyes, we change the visual input to our brain. When we touch objects, we generate tactile feedback. Yet another example of the [[Free Energy Principle]] in action.
+
+3. **They affect the environment (through behavior).**
+
+> [!Example]
+> Like when we use tools to manipulate objects, or when we build structures to change our surroundings.
