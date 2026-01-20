@@ -3,7 +3,7 @@ date: 2025-10-15
 updated: 2025-10-15
 class:
   - note
-  - lectureNote
+  - lecture
 tags:
   - university
   - religion/islam

@@ -29,7 +29,7 @@ related:
 author:
 description:
 date: 2026-01-13T10:07:23-05:00
-updated: 2026-01-14T09:43:57-05:00
+updated: 2026-01-20T10:56:48-05:00
 recurrence: DTSTART:20260113;FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20260601
 complete_instances:
   - 2026-01-13
@@ -38,3 +38,18 @@ skipped_instances: []
 ---
 
 Discrete and continuous dynamical systems, Julia sets, the Mandelbrot set, period doubling, renormalization, Henon map, phase plane analysis and Lorenz equations. Credit not awarded for both MATH 5766 and MATH 3766. Prerequisites: Graduate student or Instructor permission. Cross-listed with: CSYS 5766.
+
+---
+
+## Lectures
+
+### Logistic Plots
+
+**Day 1:** [[Linear Systems]], [[Logistic Map]], [[The Worldwide Air-Transportation Network]](website)
+
+**Day 2:** [[Fixed Point Classification]]
+
+- [[Attracting fixed point]]
+- [[Repelling fixed point]]
+
+**Day 3:** [[Periodic Orbit Stability]]

@@ -6,7 +6,7 @@ tags:
   - math/linear-algebra
 class:
   - note
-  - lectureNote
+  - lecture
 ---
 
 Let us note that everything we have looked at about Vectors thus far dont apply as well to Linear Algebra. We will be examining the "new" way of thinking about these constructs.

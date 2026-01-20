@@ -1,7 +1,7 @@
 ---
 class:
   - note
-  - lectureNote
+  - lecture
 tags:
   - math/chaos
   - university

@@ -1,20 +1,18 @@
 ---
 class:
   - note
-  - lectureNote
+  - lecture
 tags:
   - university
   - math/chaos
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
-lesson:
-  - lecture
 lecture-number: 2
 source:
 related:
 author:
 description:
 date: 2026-01-15T10:25:05-05:00
-updated: 2026-01-15T15:46:11-05:00
+updated: 2026-01-20T10:12:34-05:00
 ---
 
 Resuming work on [[Linear Systems]] regarding the [[Logistic Map]] using a [[Cobweb Plot]]:

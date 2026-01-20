@@ -3,13 +3,11 @@ date: 2025-08-28
 updated: 2025-09-02
 class:
   - note
-  - lectureNote
+  - lecture
 tags:
   - university
   - psych
 course: "[[Intro to Psychological Science]]"
-lesson:
-  - lecture
 lecture-number: 2
 source:
 related:

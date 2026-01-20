@@ -7,8 +7,10 @@ tags:
   - math/chaos
 related:
 date: 2026-01-13T10:16:47-05:00
-updated: 2026-01-13T10:17:43-05:00
+updated: 2026-01-20T10:17:14-05:00
 ---
+
+see <https://synosys.github.io/viz/logistic_map/>
 
 ## The [[Logistic Map]]
 

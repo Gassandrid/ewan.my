@@ -2,11 +2,10 @@
 aliases:
   - Jinn
 date: 2025-09-03
-updated: 2025-09-03
+updated: 2026-01-20T10:12:16-05:00
 class:
   - note
-  - lectureNote
-  - definition
+  - lecture
 tags:
   - university
   - religion/islam/djinn

@@ -1,8 +1,7 @@
 ---
 class:
   - note
-  - lectureNote
-  - definition
+  - lecture
 tags:
   - university
   - cs/theory/theorem

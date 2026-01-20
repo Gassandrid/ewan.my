@@ -3,7 +3,7 @@ date: 2025-09-08
 updated: 2025-09-08
 class:
   - note
-  - lectureNote
+  - lecture
 tags:
   - university
   - biology/cells
