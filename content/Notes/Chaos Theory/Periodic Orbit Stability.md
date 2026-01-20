@@ -12,7 +12,7 @@ related:
 author:
 description:
 date: 2026-01-20T10:09:04-05:00
-updated: 2026-01-20T10:56:56-05:00
+updated: 2026-01-20T11:16:49-05:00
 jupyter:
   jupytext:
     cell_metadata_filter: -all
@@ -20,7 +20,7 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: '1.3'
+      format_version: "1.3"
       jupytext_version: 1.18.1
   kernelspec:
     display_name: Python 3
@@ -103,12 +103,14 @@ The orbit is a **source** (repelling) if the product has absolute value greater 
 As you take higher compositions ($f^3, f^4, f^7, \ldots$), the pattern continues:
 
 **For $f^n$, the fixed points include:**
+
 - All original fixed points of $f$
 - All period-2 orbits (if $n$ is even, or any multiple of 2)
 - All period-3 orbits (if $n$ is a multiple of 3)
 - Generally, all period-$k$ orbits where $k$ divides $n$
 
 **Example:** The graph of $f^6$ will intersect $y = x$ at points corresponding to:
+
 - Period-1 orbits (original fixed points)
 - Period-2 orbits ($6 = 2 \times 3$)
 - Period-3 orbits ($6 = 3 \times 2$)
@@ -134,45 +136,32 @@ composition_order = 2  # Order of composition (1 = f, 2 = f^2, etc.)
 # ====================================
 
 def logistic_map(x, r):
-    """Single iteration of logistic map: f(x) = r*x*(1-x)"""
     return r * x * (1 - x)
 
 def composed_map(x, r, n):
-    """Apply logistic map n times: f^n(x)"""
     result = x
     for _ in range(n):
         result = logistic_map(result, r)
     return result
 
-# Generate the function curve
 x_vals = np.linspace(0, 1, 1000)
 y_vals = np.array([composed_map(x, r, composition_order) for x in x_vals])
-
-# Generate cobweb plot trajectory
 x_cobweb = [x0]
 y_cobweb = [0]
 
 for i in range(n_iterations):
-    # Move vertically to the function
     x_cobweb.append(x_cobweb[-1])
     y_cobweb.append(composed_map(x_cobweb[-1], r, composition_order))
 
-    # Move horizontally to y=x line
     x_cobweb.append(y_cobweb[-1])
     y_cobweb.append(y_cobweb[-1])
 
-# Plotting
 fig, ax = plt.subplots(figsize=(10, 10))
-
-# Plot y = x line
 ax.plot([0, 1], [0, 1], 'k--', linewidth=1, label='y = x')
-
-# Plot the function
 order_label = f'f(x)' if composition_order == 1 else f'f^{composition_order}(x)'
 ax.plot(x_vals, y_vals, 'b-', linewidth=2,
         label=f'{order_label}, r = {r}')
 
-# Plot cobweb
 ax.plot(x_cobweb, y_cobweb, 'r-', linewidth=0.5, alpha=0.7)
 ax.plot(x0, 0, 'go', markersize=8, label=f'Start: x₀ = {x0}')
 
@@ -190,6 +179,7 @@ plt.show()
 ```
 
 **Try these parameter combinations:**
+
 - `r = 2.8, composition_order = 1`: Converges to fixed point
 - `r = 3.2, composition_order = 1`: Period-2 orbit (oscillates)
 - `r = 3.2, composition_order = 2`: Period-2 becomes fixed points
@@ -197,3 +187,29 @@ plt.show()
 - `r = 4.0, composition_order = 1`: Chaotic behavior
 
 ---
+
+## Logistic Map Bifurcations
+
+We talked about this on day 1, but we didnt discuss the bifurcation diagram in detail.
+
+Have a look at the interactive code block in the [[Logistic Map]] note, it should look something like:
+
+![[LogMapBirfucations.png]]
+
+Why does this happen? It relates to the stability of fixed points and periodic orbits as we vary the parameter $r$.
+
+Each time a fixed point becomes unstable (derivative magnitude exceeds 1), a new periodic orbit emerges, leading to the bifurcation structure we see.
+
+It is graphed by iterating the logistic map for many values of $r$ and plotting the long-term behavior of $x$.
+
+---
+
+## Back To Periodic Orbit Math
+
+$$
+G(x) = 4x(1-x)
+$$
+
+$G(x) = 4x(1-x)$ has a periodic orbit for every integer, all are sources. In fact, $G^{K}$ has $2^{K}$ fixed points.
+
+Because each of these fixed points is a source, the periodic orbits of $G$ are all sources as well.
