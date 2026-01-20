@@ -4,13 +4,14 @@ class:
 tags:
   - comp-neuro/theory
   - math/information
+  - math/statistics/bayesian
 source:
   - "[[The free-energy principle a unified brain theory? - Nature Reviews Neuroscience]]"
 related:
 author:
   - "[[Karl Friston]]"
 date: 2025-09-05
-updated: 2025-10-21
+updated: 2026-01-19T12:04:02-05:00
 ---
 
 The **Free Energy Principle** is a mathematical principle borrowed from _information theory_. It theorizes that the universal goal of living systems is to minimize a quantity of "free energy" in order to maintain their existence in a dynamic world.[^1]

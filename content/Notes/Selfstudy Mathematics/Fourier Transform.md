@@ -68,6 +68,12 @@ However because this is an integral, this is being done for each unit in time, f
 
 You might recognize the structure of the Fourier transform as mirrorign that of a [[Convolution]]. This is because the Fourier Transform can be thought of as a special case of convolution, where we are convolving the signal with a complex exponential function. By integrating over all time, for each frequency, we are testing different frequencies against the signal to see how much of that frequency is present in the signal.
 
+### Extra: What role does magnitude and phase play?
+
+These issues come up with techniques like [[IQ Sampling]] where we are dealing with complex signals. The Fourier Transform will yield a complex result for each frequency, which can be interpreted in terms of magnitude and phase.
+
+But in plain english, the magnitude tells us how much of that frequency is present in the signal, while the phase tells us about the timing of that frequency component relative to the start of the signal. The phase can be important in applications/radar like communications, where the timing of signals is crucial.
+
 ---
 
 ## Extentions

@@ -36,18 +36,18 @@ As for UI/middleware, there are two main options that stand out to me right now:
 
 - More recent find, seems to have all the capabilities I need and has the added bonus of looking really nice as well. Also has the most stars on github out of the 3.
 
-*I sourced my decisions from [this reddit post](https://www.reddit.com/r/LocalLLaMA/comments/1847qt6/llm_webui_recommendations/)*
+_I sourced my decisions from [this reddit post](https://www.reddit.com/r/LocalLLaMA/comments/1847qt6/llm_webui_recommendations/)_
 
 ### Choosing the Right Model
 
 This is an ever-changing choice, as the LLM landscape is quite volitile and always improving. Some reasonable choices right now are:
 
 1. Llama, 3.1 8B, 3.2 11b, etc
-	- This is a strong all around choice, 3.1 is a little dated, 11b is a good vision model
+   - This is a strong all around choice, 3.1 is a little dated, 11b is a good vision model
 2. Gemma 2 9B
-	- Great for its parameter count, id say slightly better choice than llama 3.1 right now, but if you want a strong model I would go with a little more parameters. Maybe good for one of the laptops in the [[Proxmox on old Macbooks|Proxmox Cluster]] 
+   - Great for its parameter count, id say slightly better choice than llama 3.1 right now, but if you want a strong model I would go with a little more parameters. Maybe good for one of the laptops in the [[Proxmox on old Macbooks|Proxmox Cluster]]
 3. Phi 4 14b
-	- even for its size, one of the best "reasoning" models right now. most recent so also one of the most up to date out of the bunch.
+   - even for its size, one of the best "reasoning" models right now. most recent so also one of the most up to date out of the bunch.
 
 ---
 
@@ -61,7 +61,7 @@ However the UI sphere has been a lot more confusing for me to grasp, so I am pic
 
 > [!Success] Current Choice
 
-In my opinion, this is probably the most *capable* UI as of this moment in terms of features and complexity. However, it also seems to be the most difficult to learn to use, and doesn't just "work out of the box" like a lot of the other UI's.
+In my opinion, this is probably the most _capable_ UI as of this moment in terms of features and complexity. However, it also seems to be the most difficult to learn to use, and doesn't just "work out of the box" like a lot of the other UI's.
 
 ### [mcmonkeyprojects/SwarmUI](https://github.com/mcmonkeyprojects/SwarmUI)
 
