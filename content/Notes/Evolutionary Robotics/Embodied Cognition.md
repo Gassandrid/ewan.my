@@ -1,6 +1,6 @@
 ---
 date: 2026-01-20T08:29:59-05:00
-updated: 2026-01-20T09:36:36-05:00
+updated: 2026-01-20T09:42:54-05:00
 class:
   - note
   - lectureNote
@@ -44,7 +44,7 @@ In the example below, Cog didn't have any goal, it just moved things around. Wou
 
 Cog _learned_ to associate its motor commands with the visual feedback it received. For example, when it moved its arm to the left, it would see a blob of motion on the left side of its visual field. Over time, Cog learned to predict what it would see based on its motor commands.
 
-_See [@mettaBetterVisionManipulation2003] for more_
+See [@mettaBetterVisionManipulation2003] for more.
 
 ---
 
@@ -89,7 +89,7 @@ Subjects would have already made a decision for when they were ready, _they just
 
 One possible solution could be that the "Central Coordination Factor" only gets synchronized with the motor action after the action has already been initiated unconsciously. The brain is a distributed system, but our "consciousness" might be a centralized narrative that gets updated after the fact.
 
-_See [@libetTimeConsciousIntention1983] for more._
+See [@libetTimeConsciousIntention1983] for more.
 
 ---
 
