@@ -1,6 +1,6 @@
 ---
 date: 2026-01-20T08:29:59-05:00
-updated: 2026-01-20T09:05:59-05:00
+updated: 2026-01-20T09:30:48-05:00
 class:
   - note
   - lectureNote
@@ -69,3 +69,57 @@ _Shakey the Robot_ (Stanford Research Institute, 1966-1972), was a robot that co
 It would _move_ an inch, _stop_ (this is how it got the name Shakey), _perceive_ its environment, _update_ its internal model, and then _plan_ its next move.
 
 ![[shakeyTheRobot.png]]
+
+---
+
+## Free Will
+
+> [!Example]
+> Another aspect of human cognition: free will. Most people believe that htey have free willo
+
+Researchers hooked up subjects to [[Electroencephalography|EEG]] sensors on their brain, and [[Electromyography|EMG]] sensors on their finger muscles.
+
+Subjects were given the task to, at any given time, decide the retract their index finger. They could randomly choose when to do this, but they had to remember the time on a clock when they first became aware of their intention to move their finger.
+
+Not only was there a signal in the EEG data that predicted when the subject would move their finger, but this signal occurred **several hundred milliseconds before** the subject reported being consciously aware of their intention to move.
+
+Subjects would have already made a decision for when they were ready, _they just didn't know it yet_. Quite unsettling!
+
+![[LibetFreeWillExperiment.png]]
+
+One possible solution could be that the "Central Coordination Factor" only gets synchronized with the motor action after the action has already been initiated unconsciously. The brain is a distributed system, but our "consciousness" might be a centralized narrative that gets updated after the fact.
+
+_See [@libetTimeConsciousIntention1983] for more._
+
+---
+
+## Subsumption Architecture
+
+The **Subsumption Architecture** was developed by Rodney Brooks in the 1980s as a way to build intelligent robots that could operate in complex environments without relying on high-level planning or symbolic reasoning.
+
+It got rid of planning altogether, and instead focused on building a set of simple, reactive behaviors that could be combined to produce more complex behavior.
+
+The process is as follows:
+
+1. Behaviors are arranged in parallel, not serial.
+2. One behavior is always in control at any one time.
+3. When stimuli are not present, higher levels subsume control of the robot.
+
+![[subsumptionArchitecture.png]]
+
+Subsumption architecture has been used to build a variety of robots, including the famous **Roomba** vacuum cleaner. An unintuitive but simple approach to building intelligent systems.
+
+---
+
+## Embodied Cognition
+
+This brings us to the crux of the lecture: **Embodied Cognition**. What does this mean? The _machines_ that we use day by day have the aspects of cognition, but no way to interact with the world. They are disembodied. The central idea is:
+
+>[!Abstact] Embodied Cognition
+> **the way you process information is affected by the fact that you have a body**
+
+>[!Example] 
+>
+> If you have a body that can move, and you can see, then moving will cause *immediate* feedback.
+>
+> Non-embodied technologies like computers must *wait* for feedback from another device/computer or person.
