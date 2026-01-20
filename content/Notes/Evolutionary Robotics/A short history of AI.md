@@ -15,7 +15,7 @@ related:
 author:
 description:
 date: 2026-01-15T08:29:40-05:00
-updated: 2026-01-15T09:42:46-05:00
+updated: 2026-01-20T08:42:42-05:00
 ---
 
 ## A short Recap
@@ -189,3 +189,21 @@ In essence, there seems to be a "flow" of sensory input, parrelel, that is proce
 This was the birth of Artificial Neural Networks (ANNs), which are inspired by the structure and function of biological neural networks in the brain.
 
 After this, we entered an **AI Winter**, a period of reduced funding and interest in AI research due to unmet expectations and limitations of early AI systems.
+
+---
+
+## What Ended the AI Winter?
+
+It was mostly due to **deep learning**, where we started building not only larger neural networks, but _deeper_ neural networks with many layers of interconnected nodes.
+
+This allowed for levels of abstraction where nodes in certain layers could learn to recognize simple features, while nodes in higher layers could combine these features to recognize more complex patterns.
+
+![[deepLearningNodes.png]]
+
+---
+
+## Related Subfields
+
+The graph below shows how [[Artificial Intelligence]] branches off into several related subfields, giving birth to robotics and consequently [[Evolutionary Robotics]], but on the other side we have things like [[A short history of AI#Connectionism|Connectionism]], leading to [[Computational Neuroscience]] ( my field!! ) 
+
+![[AiRoboticsSubfields.png]]
