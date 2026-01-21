@@ -1,6 +1,7 @@
 ---
 class:
   - note
+  - lecture
 tags:
   - university
   - cs/ai/linear
@@ -10,7 +11,9 @@ author:
 description:
 aliases:
 date: 2026-01-21T08:30:09-05:00
-updated: 2026-01-21T09:02:59-05:00
+updated: 2026-01-21T10:12:27-05:00
+course: "[[Machine Learning Course]]"
+lecture-number: 4
 ---
 
 We seek to build a simple linear regression model. We will have some **training data**, and we want to build a model for this data.
@@ -121,3 +124,5 @@ And our closed form solution for $\hat{\theta}$:
 $$
 \hat{\theta} = (X^{T}X)^{-1}X^{T}Y
 $$
+
+This is great, but there are a few things that make this a costly operation at large $n$. For one, taking the inverse of a matrix is a costly operation, and at very high points this closed form solution is somewhere between $O(2.4)$ and $O(3)$ (although, to be honest, it will probably still instantly, this is a two parameter operation). Additionally, if $X^{T}X$ is not invertible (i.e. singular or non-square), then this method fails. In these cases, we usually use [[Gradient Descent]], which we will discuss next class.

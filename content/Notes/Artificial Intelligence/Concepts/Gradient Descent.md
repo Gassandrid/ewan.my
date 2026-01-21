@@ -1,6 +1,6 @@
 ---
 date: 2024-10-06
-updated: 2025-09-04
+updated: 2026-01-21T09:10:48-05:00
 class:
   - note
 tags:
@@ -11,6 +11,8 @@ tags:
 Gradient Descent is an optimization algorithm used to minimize the cost function by iteratively adjusting the model's parameters.
 
 ---
+
+![[gradDescent.png]]
 
 ## Intuition Behind Gradient Descent
 
@@ -69,6 +71,3 @@ Gradient Descent converges when the updates to $\theta$ become very small, i.e.,
 3. **Mini-batch Gradient Descent**: A mix of both, using small random subsets (mini-batches) of the data for updates.
 
 ---
-
-> [!info] **Additional Reading**
-> - Explore different variants of Gradient Descent, such as Momentum, RMSProp, and Adam, to improve convergence speed and stability.

@@ -93,7 +93,7 @@ $$
 \oint_{\partial S} \vec{F} \cdot d\vec{r} = \int \int_{S} curl(\vec{F}) \cdot d\vec{S}
 $$
 
-### 1. Right-Hand Side of [[16.8 - Stokes' Theorem#We must show|(*)]]
+### 1. Right-Hand Side of [[Stokes' Theorem#We must show|(*)]]
 
 We have:
 
@@ -129,7 +129,7 @@ $$
 \end{align*}
 $$
 
-### 2. Left-Hand Side of [[16.8 - Stokes' Theorem#We must show|(*)]]
+### 2. Left-Hand Side of [[Stokes' Theorem#We must show|(*)]]
 
 Using the parameterization of $\partial S$ on the previous page, we compute the line integral directly: $(\vec{r}_{z} = \langle x(t), y(t), f(x(t),y(t)) \rangle)$
 
@@ -214,7 +214,7 @@ This equals the surface integral from [[16.8 - Stokes' Theorem#1. Right-Hand Sid
 ---
 
 > [!Abstract] Remark
-> Observe that [[16.4 Green's Theorem]] is a special case of Stokes' Theorem. If $S$ is flat, $\vec{n} = \vec{k}$, and
+> Observe that [[Green's Theorem]] is a special case of Stokes' Theorem. If $S$ is flat, $\vec{n} = \vec{k}$, and
 >
 > $$
 > \int_{\partial S} \vec{F} \cdot d\vec{r} = \int \int_{S} curl\vec{F} \cdot \vec{n} dS = \int \int_{S} curl \vec{F} \cdot \vec{k} dS

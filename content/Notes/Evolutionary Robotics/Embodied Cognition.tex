@@ -1,0 +1,484 @@
+\documentclass[11pt,a4paper]{article}
+
+% Obsidian to LaTeX Compiler - Preamble
+% Adapted from Gilles Castel's lecture notes style
+
+% Core packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Math packages
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+
+% Layout and formatting
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+
+% Graphics and colors
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,shapes,calc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\usepackage{url}
+
+% Code highlighting
+\usepackage{minted}
+
+% Boxes for callouts
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+% Quotes
+\usepackage{csquotes}
+
+% Text formatting
+\usepackage{soul}  % For highlighting (provides \hl)
+\usepackage{ulem}  % For strikethrough
+\normalem  % Prevent ulem from changing \emph
+
+% Page geometry
+\geometry{
+    a4paper,
+    margin=1in,
+    headheight=14pt
+}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    filecolor=magenta,
+    urlcolor=cyan!70!black,
+    citecolor=green!50!black,
+    pdftitle={},
+    pdfauthor={},
+}
+
+% ============================================
+% Color definitions for theorem-like boxes
+% ============================================
+
+% Primary colors
+\definecolor{notecolor}{RGB}{66, 133, 244}       % Blue
+\definecolor{examplecolor}{RGB}{52, 168, 83}     % Green
+\definecolor{warningcolor}{RGB}{234, 67, 53}     % Red
+\definecolor{successcolor}{RGB}{52, 168, 83}     % Green
+\definecolor{infocolor}{RGB}{66, 133, 244}       % Blue
+\definecolor{abstractcolor}{RGB}{156, 39, 176}   % Purple
+\definecolor{tipcolor}{RGB}{0, 150, 136}         % Teal
+\definecolor{questioncolor}{RGB}{255, 152, 0}    % Orange
+\definecolor{definitioncolor}{RGB}{63, 81, 181}  % Indigo
+\definecolor{theoremcolor}{RGB}{103, 58, 183}    % Deep Purple
+\definecolor{proofcolor}{RGB}{117, 117, 117}     % Gray
+\definecolor{quotecolor}{RGB}{158, 158, 158}     % Light Gray
+
+% ============================================
+% Theorem-like environments using tcolorbox
+% Note: Using "box" suffix to avoid conflicts with built-in LaTeX environments
+% ============================================
+
+% Note box
+\newtcolorbox{notebox}[1][Note]{
+    enhanced,
+    colback=notecolor!5,
+    colframe=notecolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=notecolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Example box
+\newtcolorbox{examplebox}[1][Example]{
+    enhanced,
+    colback=examplecolor!5,
+    colframe=examplecolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=examplecolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Warning box
+\newtcolorbox{warningbox}[1][Warning]{
+    enhanced,
+    colback=warningcolor!5,
+    colframe=warningcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=warningcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Success box
+\newtcolorbox{successbox}[1][Success]{
+    enhanced,
+    colback=successcolor!5,
+    colframe=successcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=successcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Info box
+\newtcolorbox{infobox}[1][Info]{
+    enhanced,
+    colback=infocolor!5,
+    colframe=infocolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=infocolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Abstract box
+\newtcolorbox{abstractbox}[1][Abstract]{
+    enhanced,
+    colback=abstractcolor!5,
+    colframe=abstractcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=abstractcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Tip box
+\newtcolorbox{tipbox}[1][Tip]{
+    enhanced,
+    colback=tipcolor!5,
+    colframe=tipcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=tipcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Question box
+\newtcolorbox{questionbox}[1][Question]{
+    enhanced,
+    colback=questioncolor!5,
+    colframe=questioncolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=questioncolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Definition box
+\newtcolorbox{definitionbox}[1][Definition]{
+    enhanced,
+    colback=definitioncolor!5,
+    colframe=definitioncolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=definitioncolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Theorem box
+\newtcolorbox{theorembox}[1][Theorem]{
+    enhanced,
+    colback=theoremcolor!5,
+    colframe=theoremcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=theoremcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Lemma box
+\newtcolorbox{lemmabox}[1][Lemma]{
+    enhanced,
+    colback=theoremcolor!5,
+    colframe=theoremcolor!60,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=theoremcolor!60,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Corollary box
+\newtcolorbox{corollarybox}[1][Corollary]{
+    enhanced,
+    colback=theoremcolor!5,
+    colframe=theoremcolor!40,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=theoremcolor!40,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Proof box
+\newtcolorbox{proofbox}[1][Proof]{
+    enhanced,
+    colback=proofcolor!5,
+    colframe=proofcolor!50,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=proofcolor!50,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Quote box
+\newtcolorbox{quotebox}[1][]{
+    enhanced,
+    colback=quotecolor!5,
+    colframe=quotecolor!40,
+    left=10pt,
+    right=10pt,
+    top=5pt,
+    bottom=5pt,
+    sharp corners,
+    breakable
+}
+
+% ============================================
+% Minted (code highlighting) settings
+% ============================================
+
+\setminted{
+    frame=lines,
+    framesep=2mm,
+    linenos=true,
+    fontsize=\small,
+    breaklines=true,
+    tabsize=4,
+    bgcolor=gray!5
+}
+
+% ============================================
+% Custom commands
+% ============================================
+
+% Better looking vectors
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+% Common math operators
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+
+
+% Bibliography settings
+\usepackage[backend=biber,style=authoryear,sorting=nyt]{biblatex}
+\addbibresource{/Users/gassandrid/VAULT/References.bib}
+
+
+\title{Untitled}
+\author{[]}
+\date{2026-01-20T08:29:59-05:00}
+
+\begin{document}
+
+\maketitle
+
+What does it really mean to have a body and \textit{exploit it} for intelligent action?
+
+\begin{displayquote}
+\textbf{Challenge:} How to recognize objects in a scene; where are the object’s boundaries? This problem is known as ‘image segmentation’ in the field of computer vision.
+\end{displayquote}
+
+We need to think about all the things that an intelligent agent \textit{should} be able to do. Things like \textbf{pattern recognition}.
+
+Below is a picture of \textbf{Marylin Monroe}. Can you recognize her? This is an example of older computer vision systems failing to deduce the human face in the image. Modern neural networks can easily recognize the face, thanks to advancements in Diffusion in machine learning through models like CLIP, which learned to associate an image vector with a text vector.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{aiPatternRecognition.png}
+\end{figure}
+
+\hrulefill
+
+\subsection{How to Recognize Patterns}
+
+\begin{successbox}[Solution(sort of)]
+\textbf{Cog:} cog \textit{interacts} with the scene, rather than passively observing it.
+\end{successbox}
+
+The researchers working with Cog treated Cog like a baby, as like most newborn infants it was mostly blind. Could only perceive blobs of motion.
+
+In the example below, Cog didn't have any goal, it just moved things around. Would send signals to its motors, see some blobs of motion, and when it stopped sending signals it would suddenly see nothing.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{cogRobotMotion.png}
+\end{figure}
+
+Cog \textit{learned} to associate its motor commands with the visual feedback it received. For example, when it moved its arm to the left, it would see a blob of motion on the left side of its visual field. Over time, Cog learned to predict what it would see based on its motor commands.
+
+See \cite{mettaBetterVisionManipulation2003} for more.
+
+\hrulefill
+
+\subsection{Kasparov Vs Deep Blue}
+
+An iconic and pivotal moment in AI history was when IBM's Deep Blue defeated world chess champion Garry Kasparov in 1997. This event highlighted the capabilities of AI in strategic thinking and problem-solving.
+
+\textbf{How did Deep Blue work?} It used a brute-force search algorithm called Minimax combined with Alpha-Beta Pruning to evaluate millions of possible chess positions per second. Deep Blue's strength lay in its ability to analyze vast amounts of data and make optimal decisions based on that analysis.
+
+This is an example of the cognitive ability of \textbf{Planning}, where Deep Blue would make complex plans based not only on its own planned moved, but also what it expected Kasparov to do in response(this is what Minimax does).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{KasparovVDeepBlue.png}
+\end{figure}
+
+Deep blue won its first game \textbf{February 1996}, and its first match \textbf{May, 1997}.
+
+\hrulefill
+
+\subsection{Embodied Planning}
+
+\textit{Shakey the Robot} (Stanford Research Institute, 1966-1972), was a robot that could perceive its environment, make plans, and execute actions to achieve goals. It was surrounded by bricks that it could not move, but could move itself and a few other objects. Shakey would make a rich simulation of its environment, and then plan a route to escape its invoronment.
+
+It would \textit{move} an inch, \textit{stop} (this is how it got the name Shakey), \textit{perceive} its environment, \textit{update} its internal model, and then \textit{plan} its next move.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{shakeyTheRobot.png}
+\end{figure}
+
+\hrulefill
+
+\subsection{Libet Free Will Experiment}
+
+\begin{examplebox}
+Another aspect of human cognition: free will. Most people believe that htey have free willo
+\end{examplebox}
+
+Researchers hooked up subjects to EEG sensors on their brain, and EMG sensors on their finger muscles.
+
+Subjects were given the task to, at any given time, decide the retract their index finger. They could randomly choose when to do this, but they had to remember the time on a clock when they first became aware of their intention to move their finger.
+
+Not only was there a signal in the EEG data that predicted when the subject would move their finger, but this signal occurred \textbf{several hundred milliseconds before} the subject reported being consciously aware of their intention to move.
+
+Subjects would have already made a decision for when they were ready, \textit{they just didn't know it yet}. Quite unsettling!
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{LibetFreeWillExperiment.png}
+\end{figure}
+
+One possible solution could be that the "Central Coordination Factor" only gets synchronized with the motor action after the action has already been initiated unconsciously. The brain is a distributed system, but our "consciousness" might be a centralized narrative that gets updated after the fact.
+
+See \cite{libetTimeConsciousIntention1983} for more.
+
+\hrulefill
+
+\subsection{Subsumption Architecture}
+
+The \textbf{Subsumption Architecture} was developed by Rodney Brooks in the 1980s as a way to build intelligent robots that could operate in complex environments without relying on high-level planning or symbolic reasoning.
+
+It got rid of planning altogether, and instead focused on building a set of simple, reactive behaviors that could be combined to produce more complex behavior.
+
+The process is as follows:
+
+\begin{enumerate}
+  \item Behaviors are arranged in parallel, not serial.
+  \item One behavior is always in control at any one time.
+  \item When stimuli are not present, higher levels subsume control of the robot.
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{subsumptionArchitecture.png}
+\end{figure}
+
+Subsumption architecture has been used to build a variety of robots, including the famous \textbf{Roomba} vacuum cleaner. An unintuitive but simple approach to building intelligent systems.
+
+\hrulefill
+
+\subsection{Embodied Cognition}
+
+This brings us to the crux of the lecture: \textbf{Embodied Cognition}. What does this mean? The \textit{machines} that we use day by day have the aspects of cognition, but no way to interact with the world. They are disembodied. The central idea is:
+
+\begin{abstractbox}[Embodied Cognition]
+\textbf{the way you process information is affected by the fact that you have a body}
+\end{abstractbox}
+
+\begin{examplebox}
+
+If you have a body that can move, and you can see, then moving will cause \textit{immediate} feedback.
+
+Non-embodied technologies like computers must \textit{wait} for feedback from another device/computer or person.
+\end{examplebox}
+
+\subsubsection{Situated Cognition}
+
+Slightly different from embodied cognition is \textbf{Situated Cognition}, which emphasizes that cognition is not just about having a body, but also about being situated in a specific environment.
+
+\begin{abstractbox}[Situated Cognition]
+\textbf{the way you process information is affected by the fact that you are physically situated in the world}
+\end{abstractbox}
+
+\hrulefill
+
+A complete agent is one that can properly utilize both embodied and situated cognition to achieve its goals. But they also have 3 other important properties which we will discuss next lecture:
+
+\begin{enumerate}
+  \item \textbf{They are subject to the laws of physics (by being in the world).}
+\end{enumerate}
+
+\begin{examplebox}
+We use it to move around, manipulate objects, and interact with our environment. We store potential energy in water to generate electricity.
+\end{examplebox}
+
+\begin{enumerate}
+  \item \textbf{They generate sensory stimulation (through behavior).}
+\end{enumerate}
+
+\begin{examplebox}
+When we move our eyes, we change the visual input to our brain. When we touch objects, we generate tactile feedback. Yet another example of the Free Energy Principle\footnote{\url{https://ewan.my/notes/computational-neuroscience/theory/free-energy-principle}} in action.
+\end{examplebox}
+
+\begin{enumerate}
+  \item \textbf{They affect the environment (through behavior).}
+\end{enumerate}
+
+\begin{examplebox}
+Like when we use tools to manipulate objects, or when we build structures to change our surroundings.
+\end{examplebox}
+
+
+
+\printbibliography
+
+
+\end{document}

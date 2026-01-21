@@ -1,6 +1,7 @@
 ---
 id: Variational Autoencoder
-aliases: []
+aliases:
+  - VAE
 tags:
   - math/information
   - math/statistics/entropy
@@ -12,7 +13,7 @@ date: 2025-09-22
 source:
   - "[[How Neural Networks Handle Probabilities]]"
   - "[[Variational Autoencoders - Generative AI Animated]]"
-updated: 2025-11-05
+updated: 2026-01-21T12:47:31-05:00
 ---
 
 **Variational Autoencoders (VAE)** fundamentally transform the goal of neural networks from learning a direct mapping from inputs to outputs, to learning a probabilistic representation of the data. This is achieved by encoding the input data into a latent space defined by a probability distribution, typically a Gaussian distribution characterized by its mean and variance.

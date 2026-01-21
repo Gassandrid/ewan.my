@@ -1,0 +1,385 @@
+\documentclass[11pt,a4paper]{article}
+
+% Obsidian to LaTeX Compiler - Preamble
+% Adapted from Gilles Castel's lecture notes style
+
+% Core packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Math packages
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+
+% Layout and formatting
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+
+% Graphics and colors
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,shapes,calc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\usepackage{url}
+
+% Code highlighting
+\usepackage{minted}
+
+% Boxes for callouts
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+% Quotes
+\usepackage{csquotes}
+
+% Text formatting
+\usepackage{soul}  % For highlighting (provides \hl)
+\usepackage{ulem}  % For strikethrough
+\normalem  % Prevent ulem from changing \emph
+
+% Page geometry
+\geometry{
+    a4paper,
+    margin=1in,
+    headheight=14pt
+}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    filecolor=magenta,
+    urlcolor=cyan!70!black,
+    citecolor=green!50!black,
+    pdftitle={},
+    pdfauthor={},
+}
+
+% ============================================
+% Color definitions for theorem-like boxes
+% ============================================
+
+% Primary colors
+\definecolor{notecolor}{RGB}{66, 133, 244}       % Blue
+\definecolor{examplecolor}{RGB}{52, 168, 83}     % Green
+\definecolor{warningcolor}{RGB}{234, 67, 53}     % Red
+\definecolor{successcolor}{RGB}{52, 168, 83}     % Green
+\definecolor{infocolor}{RGB}{66, 133, 244}       % Blue
+\definecolor{abstractcolor}{RGB}{156, 39, 176}   % Purple
+\definecolor{tipcolor}{RGB}{0, 150, 136}         % Teal
+\definecolor{questioncolor}{RGB}{255, 152, 0}    % Orange
+\definecolor{definitioncolor}{RGB}{63, 81, 181}  % Indigo
+\definecolor{theoremcolor}{RGB}{103, 58, 183}    % Deep Purple
+\definecolor{proofcolor}{RGB}{117, 117, 117}     % Gray
+\definecolor{quotecolor}{RGB}{158, 158, 158}     % Light Gray
+
+% ============================================
+% Theorem-like environments using tcolorbox
+% Note: Using "box" suffix to avoid conflicts with built-in LaTeX environments
+% ============================================
+
+% Note box
+\newtcolorbox{notebox}[1][Note]{
+    enhanced,
+    colback=notecolor!5,
+    colframe=notecolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=notecolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Example box
+\newtcolorbox{examplebox}[1][Example]{
+    enhanced,
+    colback=examplecolor!5,
+    colframe=examplecolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=examplecolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Warning box
+\newtcolorbox{warningbox}[1][Warning]{
+    enhanced,
+    colback=warningcolor!5,
+    colframe=warningcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=warningcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Success box
+\newtcolorbox{successbox}[1][Success]{
+    enhanced,
+    colback=successcolor!5,
+    colframe=successcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=successcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Info box
+\newtcolorbox{infobox}[1][Info]{
+    enhanced,
+    colback=infocolor!5,
+    colframe=infocolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=infocolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Abstract box
+\newtcolorbox{abstractbox}[1][Abstract]{
+    enhanced,
+    colback=abstractcolor!5,
+    colframe=abstractcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=abstractcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Tip box
+\newtcolorbox{tipbox}[1][Tip]{
+    enhanced,
+    colback=tipcolor!5,
+    colframe=tipcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=tipcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Question box
+\newtcolorbox{questionbox}[1][Question]{
+    enhanced,
+    colback=questioncolor!5,
+    colframe=questioncolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=questioncolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Definition box
+\newtcolorbox{definitionbox}[1][Definition]{
+    enhanced,
+    colback=definitioncolor!5,
+    colframe=definitioncolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=definitioncolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Theorem box
+\newtcolorbox{theorembox}[1][Theorem]{
+    enhanced,
+    colback=theoremcolor!5,
+    colframe=theoremcolor!80,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=theoremcolor!80,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Lemma box
+\newtcolorbox{lemmabox}[1][Lemma]{
+    enhanced,
+    colback=theoremcolor!5,
+    colframe=theoremcolor!60,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=theoremcolor!60,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Corollary box
+\newtcolorbox{corollarybox}[1][Corollary]{
+    enhanced,
+    colback=theoremcolor!5,
+    colframe=theoremcolor!40,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=theoremcolor!40,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Proof box
+\newtcolorbox{proofbox}[1][Proof]{
+    enhanced,
+    colback=proofcolor!5,
+    colframe=proofcolor!50,
+    fonttitle=\bfseries,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=proofcolor!50,sharp corners},
+    sharp corners,
+    breakable
+}
+
+% Quote box
+\newtcolorbox{quotebox}[1][]{
+    enhanced,
+    colback=quotecolor!5,
+    colframe=quotecolor!40,
+    left=10pt,
+    right=10pt,
+    top=5pt,
+    bottom=5pt,
+    sharp corners,
+    breakable
+}
+
+% ============================================
+% Minted (code highlighting) settings
+% ============================================
+
+\setminted{
+    frame=lines,
+    framesep=2mm,
+    linenos=true,
+    fontsize=\small,
+    breaklines=true,
+    tabsize=4,
+    bgcolor=gray!5
+}
+
+% ============================================
+% Custom commands
+% ============================================
+
+% Better looking vectors
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+% Common math operators
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+
+
+
+
+\title{Fixed Point Classification}
+\author{[]}
+\date{2026-01-15T10:25:05-05:00}
+
+\begin{document}
+
+\maketitle
+
+Resuming work on Linear Systems\footnote{\url{https://ewan.my/notes/chaos-theory/linear-systems}} regarding the Logistic Map\footnote{\url{https://ewan.my/notes/selfstudy-mathematics/logistic-map}} using a Cobweb Plot\footnote{\url{https://ewan.my/notes/selfstudy-mathematics/cobweb-plot}}:
+
+A \textbf{fixed point} is a point $p$ such that $f(p) = p$. Usually a sink/source, but due to periodic points, can be a rotation set of points.
+
+\begin{displayquote}
+The \textbf{epsilon-neighborhood} $N_{\epsilon}(p)$ of a point $p$ is the internal $\{ x \in \mathbb{R}: |x-p| < \epsilon \}$.
+\end{displayquote}
+
+\begin{displayquote}
+If $\exists \epsilon > 0 : \forall x  \in N_{\epsilon}(p)$, $\lim_{ k \to \infty }f^{k}(x) = p$ then we call $p$ a \textbf{sink} or \textbf{Attracting fixed point\footnote{\url{https://ewan.my/notes/chaos-theory/attracting-fixed-point}}}
+\end{displayquote}
+
+In plain English, if there is some neighborhood around point $p$ such that all points in that neighborhood converge to $p$ under iteration of $f$, then $p$ is a sink.
+
+\begin{displayquote}
+If $\exists \epsilon > 0 :$ all $x \in N_{\epsilon}(p)$ except $p$ eventually map outside of $N_{\epsilon}(p)$, then we call $p$ a \textbf{source} or a \textbf{Repelling fixed point\footnote{\url{https://ewan.my/notes/chaos-theory/repelling-fixed-point}}}.
+\end{displayquote}
+
+In plain English, if there is some neighborhood around point $p$ such that all points in that neighborhood (except for $p$ itself) eventually leave that neighborhood under iteration of $f$, then $p$ is a source.
+
+_For cases in this class, $\epsilon$ represents a small positive real number parameter._
+
+\hrulefill
+
+\subsection{Cubic Example}
+
+Looking at the function:
+
+\[
+f(x) = \frac{3x-x^3}{2}
+\]
+
+\begin{infobox}[Desmos]
+
+<iframe src="https://www.desmos.com/calculator/mqr1jsj7l9" width=600 height="400" ></iframe>
+\end{infobox}
+
+The \textbf{fixed point sink\footnote{\url{https://ewan.my/notes/chaos-theory/attracting-fixed-point}}s are}: $x = \pm 1$
+
+The \textbf{fixed point Source\footnote{\url{https://ewan.my/notes/chaos-theory/repelling-fixed-point}}s are}: $x=0$
+
+\textbf{Key observations:}
+
+\begin{itemize}
+  \item Sinks at $x = \pm 1$ are \textbf{super-attracting}: $f'(\pm 1) = 0$ (critical points = fixed points)
+  \item Source at $x = 0$ has $f'(0) = \frac{3}{2} > 1$ (linearly unstable)
+  \item \textbf{Odd symmetry}: $f(-x) = -f(x)$ creates symmetric basins of attraction
+  \item Topologically similar to Logistic Map\footnote{\url{https://ewan.my/notes/selfstudy-mathematics/logistic-map}} at $r=3$ (pre-chaotic regime)
+\end{itemize}
+
+\begin{abstractbox}[Theorem]
+
+Let $f$ be a smooth map (derivatives continousous), and assume $p$ is fixed point of $f$.
+
+If $|f'(p)| <1 \Rightarrow p$ is a sink\footnote{\url{https://ewan.my/notes/chaos-theory/attracting-fixed-point}}.
+
+If $|f'(p)| > 1 \Rightarrow p$ is a Source\footnote{\url{https://ewan.my/notes/chaos-theory/repelling-fixed-point}}.
+
+If $|f'(p)| =1$, we need more information.
+\end{abstractbox}
+
+Origin is a "neutral" fixed point, all other $x \in \mathbb{R}$ are period 2. In essence, some starting position will take a minute to read the period two orbit, whereas others like $p_{1}$ will already be on the period two orbit.
+
+\hrulefill
+
+\subsection{Periodic Sinks and Source}
+
+\begin{displayquote}
+Let $f$ be a map and assume $p$ is a period $k$ point. The period k orbit of $p$ is a periodic sink (source) if $p$ is a sink( source ) for the map $f^{k}$
+\end{displayquote}
+
+In plain English, if $p$ is a period $k$ point, then we can look at the $k$th iterate of $f$ and classify $p$ as a sink or source based on that.
+
+
+
+
+\end{document}

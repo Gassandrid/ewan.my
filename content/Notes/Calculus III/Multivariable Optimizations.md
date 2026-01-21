@@ -1,5 +1,5 @@
 ---
-id: Multivariable Optimizations
+id: 14.7 - Multivariable Optimizations
 aliases:
 tags:
   - math/calculus/multivariable

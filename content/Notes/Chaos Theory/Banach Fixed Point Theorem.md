@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos
+  - math/chaos/fixed-point
 source:
   - "[[Fixed Point Iteration Examples, Analysis, and the Banach Fixed Point Theorem]]"
 related:
@@ -13,7 +13,7 @@ aliases:
   - contractive mapping theorem
   - Banach–Caccioppoli theorem
 date: 2026-01-20T14:06:24-05:00
-updated: 2026-01-20T14:23:45-05:00
+updated: 2026-01-21T12:07:48-05:00
 ---
 
 _not from in class_

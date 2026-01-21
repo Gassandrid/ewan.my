@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos
+  - math/chaos/fixed-point
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 3
 source:
@@ -12,7 +12,7 @@ related:
 author:
 description:
 date: 2026-01-20T10:09:04-05:00
-updated: 2026-01-20T11:26:57-05:00
+updated: 2026-01-21T12:07:55-05:00
 jupyter:
   jupytext:
     cell_metadata_filter: -all

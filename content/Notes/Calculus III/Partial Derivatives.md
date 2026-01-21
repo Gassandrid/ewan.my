@@ -1,5 +1,5 @@
 ---
-id: Partial Derivatives
+id: 14.3 - Partial Derivatives
 aliases:
 tags:
   - math

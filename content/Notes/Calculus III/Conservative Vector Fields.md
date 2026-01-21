@@ -16,7 +16,7 @@ aliases:
 
 ## Abstract
 
-Recall from [[16.1 - Vector Fields]] that a vector field $\vec{F}$ is **conservative** if there exists a function $f$ such that $\vec{F} = \nabla f$. The function $f$ is called the **potential function**.
+Recall from [[Vector Fields]] that a vector field $\vec{F}$ is **conservative** if there exists a function $f$ such that $\vec{F} = \nabla f$. The function $f$ is called the **potential function**.
 
 > [!Example]
 > $\vec{F} (x,y) = y \vec{i} + x\vec{j}$ is conservative. The potential function is $f=xy$, because $\nabla f = \langle y,x \rangle = \vec{F}$.

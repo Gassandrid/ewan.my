@@ -119,3 +119,7 @@ I maintain a sprawling [[Saturn V Server Rack|homelab]] for LLM inference/interp
 I'm a tri-citizen (South African, American, British) who loves [[Sailing]], [[Woodwork]], and bringing the open-source development cycle to the physical world through [[3d Printing]]. I am also quite the coffee snob and have the most ridiculous [[Espresso]] setup in my bedroom, next to all the servers and lab equipment.
 
 This is my [[Digital Garden]], a living knowledge base where I organize thoughts through links rather than rigid structure. My hope is by imprinting my mind I can gain novel insight into the underlying influences which shape me in the hopes of discovering new tunable parameters.
+
+---
+
+[[Thoughts/index]]     [[Notes/index]]     [[website|How to use]]

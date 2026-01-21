@@ -3,15 +3,15 @@ class:
   - note
   - lecture
 tags:
-  - math/chaos
   - university
+  - math/chaos/fixed-point
 source:
 related:
 author:
 description:
 aliases:
 date: 2026-01-13T10:28:17-05:00
-updated: 2026-01-16T09:46:57-05:00
+updated: 2026-01-21T12:07:43-05:00
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lesson:
   - lecture
@@ -84,6 +84,12 @@ Given an initial condition (IC) $x$, we would like to characterize the system fo
 > $$
 >
 > A is a parameter, so letting $a=2$, given an initial condition $x$, what is its long term outcome? Let $x_{0}=0.01 \ or \ \frac{1}{100}$. Its long term shape looks like the desmos graph below.
+
+This is just the function for the porabola itself, but the interesting part is when we start iterating the function, meaning we take the output of the function and plug it back into itself repeatedly. This becomes:
+
+$$
+x_{n+1} = g_{2}(x_{n}) = 2x_{n}(1-x_{n})
+$$
 
 > [!Info] Desmos
 >
