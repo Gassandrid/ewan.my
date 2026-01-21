@@ -31,12 +31,22 @@ related:
 author:
 description:
 date: 2026-01-13T08:29:09-05:00
-updated: 2026-01-13T08:34:31-05:00
+updated: 2026-01-20T15:28:12-05:00
 recurrence: DTSTART:20260113;FREQ=WEEKLY;BYDAY=TU,TH
 complete_instances:
   - 2026-01-13
   - 2026-01-15
 skipped_instances: []
+---
+
+## Lectures
+
+**Day 1:** Syllabus
+
+**Day 2:** [[A short history of AI]]
+
+**Day 3:** [[Embodied Cognition]]
+
 ---
 
 ## Syllabus
@@ -45,50 +55,7 @@ Instructor: Josh Bongard jbongard@uvm.edu [Office Hours](https://docs.google.com
 
 T.A.: Nate Gaylinn nathaniel.gaylinn@uvm.edu [Office Hours](https://docs.google.com/spreadsheets/d/1URqmPok1Ih6HeJMyPv5KyyoU2mXLbLVSt5SYloUsO6E/edit?gid=1186233328#gid=1186233328).
 
-1. Description: This course will explore the automated design of autonomous machines using evolutionary algorithms. The course will cover relevant topics in evolutionary computation, artificial neural networks, robotics, biomechanics, simulation and computer designed organisms. Students will conduct a major Python programming project that will span the course and thus provide hands-on experience with the topics covered. Students will use their developed system to perform a pre-specified evolutionary robotics experiment.
-2. Learning outcomes:
-3. Ability to design and simulate robot controllers
-4. Proficiency in using robot simulation tools to test and evaluate robot performance
-5. Understanding of the limitations and challenges of robot simulation
-6. Ability to evaluate and compare the performance of different robot designs and control strategies using simulation
-7. Familiarity with different evolutionary algorithms and their strengths and weaknesses
-8. Tools: 
-9. Brightspace will store materials, accept uploaded work, and administer quizzes.
-10. Teams will be used for all Q&A between instructor, T.A. and students.
-11. In-person lectures will be recorded and made available on YouTube.
-12. Reddit will be used for providing coding assignment instructions.
-13. Google Sheets will be used for taking attendance.
-14. Students will maintain their code base on Github.
-15. No laptops or phones may be used during class to provide a distraction free classroom. All notetaking must be done with pen and paper. See [this](https://goo.gl/mdEpUH) and [this](https://goo.gl/QTTkmZ) rationale.
-16. Lectures.
-17. Each in-person lecture is recorded live and posted to YouTube right after class. During lecture, it is assumed that if you volunteer a question, or answer a question verbally during lecture, that you are tacitly agreeing to being recorded.
-18. Versions of the lecture slides are posted online before class on the [schedule](https://docs.google.com/spreadsheets/d/1zqH5Q5UP5kIOzS2l0GxbGSZkDRVODLv6hK2QTayR-4I/edit?usp=sharing). These versions are incomplete versions of those displayed by the instructor. It is expected that you annotate them as the class proceeds, or watch the video lecture after class and annotate the slides then. (For most accommodation students, this obviates the need for a note taker. However, if you still feel you need a note taker, please let the instructor know.)
-19. Optional Textbook: Floreano, D. & Mattiussi, C. (2008) Bio-Inspired Artificial Intelligence: Theories, Methods, and Technologies, MIT Press. (Selected readings will be available as PDFs.)
-20. Supplementary (Optional) Textbook: Pfeifer, R. & Bongard, J. (2007) How The Body Shapes the Way we Think: A New View of Intelligence, MIT Press. (Selected readings will be available as PDFs.)
-
-Additional readings from the current literature will be provided.
-
-  
-
-8. Prerequisites: Junior standing and programming experience, or instructor permission.
-9. Grading Scheme: The late policy for this class is as follows: material one day late, 25% deduction; two days late, 50% deduction; three days late, 100% reduction.
-
-- The percent to letter grade conversion is as follows: 
-    
-
-1. A+ (97–100), A (93–96), A- (90–92), 
-2. B+ (87–89), B (83–86), B- (80–82), 
-3. C+ (77–79), C (73–76), C- (70–72), 
-4. D+ (67–69), D (63–66), D- (60-62), 
-5. F (below 60).
-6. Ten programming assignments (10×4=40%): Over the span of ten weeks, each student will gradually build a software system that allows them to conduct an evolutionary robotics experiment. Note: Because the software will form a final, integrated system, if you fail to hand in one assignment, you must hand it in along with the new assignment the following week. 
-7. Quizzes (25%): After each class, a multiple-choice quiz will be posted on Brightspace. This quiz should only take 10 minutes, assuming that you attended the lecture or watched the recording, and that you completed the reading for that day. The quiz must be taken by 11:59pm that day.
-8. Final project (30%): Over the final four weeks of the semester, each student will use their software system to perform an evolutionary robotics experiment. Several weekly deliverables will be submitted, a written report describing the experiment will be handed in at the end of the semester, and an oral presentation will be given during the exam period.
-9. Participation (5%): Class participation counts toward your final grade. Students are permitted to miss up to and including three classes without being required to provide justification. Missed classes beyond that must be cleared with the instructor. Participation is tracked with attendance sheets.
-10. If you attend in-person lectures, an attendance sheet URL will be displayed at the beginning of class. With your device, mark yourself as present. Then, please re-stow your phone.
-11. If you watch recorded lectures, an attendance sheet URL will flash up somewhere, at random, in the recorded lecture. Mark yourself as present.
-12. This system is designed to not penalize anyone for attending remotely.
-13. It is also designed as a gentle, continuous prod to keep up with lectures and readings.
+This course will explore the automated design of autonomous machines using evolutionary algorithms. The course will cover relevant topics in evolutionary computation, artificial neural networks, robotics, biomechanics, simulation and computer designed organisms. Students will conduct a major Python programming project that will span the course and thus provide hands-on experience with the topics covered. Students will use their developed system to perform a pre-specified evolutionary robotics experiment.
 
 ## Schedule
 

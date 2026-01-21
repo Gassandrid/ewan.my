@@ -1,11 +1,22 @@
 ---
 date: 2024-09-12
-updated: 2024-10-20
+updated: 2026-01-21T08:45:46-05:00
+class:
+  - note
+tags:
+  - generated
+  - cs/ai
+source:
+related:
+author:
+description:
+aliases:
 ---
-	
-![[Pasted image 20240808140040.png]]
+
+![[LossFunctionMSE.png]]
 
 ## Loss Functions in Neural Networks
+
 ### Overview
 
 Loss functions, also known as cost functions or objective functions, are critical components in the training of neural networks. They measure the difference between the model's predictions and the actual target values, providing a way to evaluate the performance of the model. The goal of training a neural network is to minimize the loss function, thereby improving the model's accuracy.
@@ -30,9 +41,13 @@ For loss functions to be effective in any way, normalization of the data is requ
 
 - **Formula:**
     
+
     `MSE = (1/n) * Σ (yᵢ - ŷᵢ)²`
+
     
+
     where `yᵢ` is the actual value, `ŷᵢ` is the predicted value, and `n` is the number of samples.
+
 - **Use Case:**
     - Commonly used for regression tasks where the goal is to predict a continuous value.
 - **Characteristics:**
@@ -42,15 +57,12 @@ For loss functions to be effective in any way, normalization of the data is requ
 #### 2. **Cross-Entropy Loss**
 
 - **Binary Cross-Entropy:**
-    
     `L = -[y log(ŷ) + (1 - y) log(1 - ŷ)]`
-    
     where `y` is the actual label (0 or 1), and `ŷ` is the predicted probability.
 - **Categorical Cross-Entropy:**
-    
     `L = -Σ yᵢ log(ŷᵢ)`
-    
     for multi-class classification, where `yᵢ` is the one-hot encoded true label, and `ŷᵢ` is the predicted probability for class `i`.
+
 - **Use Case:**
     - Widely used in classification tasks, both binary and multi-class.
 - **Characteristics:**
@@ -61,9 +73,13 @@ For loss functions to be effective in any way, normalization of the data is requ
 
 - **Formula:**
     
+
     `L = max(0, 1 - yᵢ * ŷᵢ)`
+
     
+
     where `yᵢ` is the true label (either -1 or 1), and `ŷᵢ` is the predicted output.
+
 - **Use Case:**
     - Commonly used in Support Vector Machines (SVM) for binary classification tasks.
 - **Characteristics:**

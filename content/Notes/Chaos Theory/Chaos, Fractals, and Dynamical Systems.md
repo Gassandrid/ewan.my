@@ -29,7 +29,7 @@ related:
 author:
 description:
 date: 2026-01-13T10:07:23-05:00
-updated: 2026-01-20T10:56:48-05:00
+updated: 2026-01-20T15:04:46-05:00
 recurrence: DTSTART:20260113;FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20260601
 complete_instances:
   - 2026-01-13
@@ -53,3 +53,11 @@ Discrete and continuous dynamical systems, Julia sets, the Mandelbrot set, perio
 - [[Repelling fixed point]]
 
 **Day 3:** [[Periodic Orbit Stability]]
+
+---
+
+## External Work
+
+[[Banach Fixed Point Theorem]] - Unique fixed points in complete metric spaces.
+
+[[Cobweb Plot]] - For visualizing iterations of one-dimensional maps.

@@ -12,7 +12,7 @@ related:
 author:
 description:
 date: 2026-01-20T10:09:04-05:00
-updated: 2026-01-20T11:16:49-05:00
+updated: 2026-01-20T11:26:57-05:00
 jupyter:
   jupytext:
     cell_metadata_filter: -all
