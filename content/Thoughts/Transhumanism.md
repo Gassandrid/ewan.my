@@ -1,6 +1,6 @@
 ---
 date: 2025-11-16
-updated: 2025-12-19
+updated: 2026-01-21T19:48:52-05:00
 class:
   - note
 tags:
@@ -11,6 +11,7 @@ related:
   - "[[Longevity]]"
   - "[[On Immortality]]"
   - "[[Hedonic Setpoint#Posthumanism and the possibility of changing the Hedonic Setpoint]]"
+  - "[[LessWrong]]"
 author:
 description:
 ---
@@ -24,3 +25,5 @@ For me, transhumanism is synonymous with [[Longevity]], as these two fields go h
 It is important to note that transhumanism is not just about physical enhancement, but also about cognitive and emotional enhancement. The idea is to use technology to enhance all aspects of human life, including our mental and emotional well-being. This could involve the use of brain-computer interfaces, cognitive enhancers, and other technologies that can improve our mental capabilities.
 
 It is this area that I am particularly interested in, given my field of computational neuroscience and my desire to understand the human mind. I believe that by enhancing our cognitive abilities, we can unlock new levels of understanding and creativity that can help us solve some of the world's most pressing problems.
+
+[**Lesswrong - we have to upgrade**](https://www.lesswrong.com/posts/vEtdjWuFrRwffWBiP/we-have-to-upgrade?commentId=7PBCydEDR8zptmLQY)

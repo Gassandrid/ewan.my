@@ -4,7 +4,6 @@ description: works and people that have shaped how i think
 tags:
   - seed
   - philosophy
-title: canon
 updated: 2026-01-19T10:37:17-05:00
 ---
 
