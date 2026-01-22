@@ -1,6 +1,6 @@
 ---
 date: 2024-09-12
-updated: 2026-01-21T08:45:46-05:00
+updated: 2026-01-22T09:31:22-05:00
 class:
   - note
 tags:
@@ -11,11 +11,10 @@ related:
 author:
 description:
 aliases:
+  - Loss Function
 ---
 
 ![[LossFunctionMSE.png]]
-
-## Loss Functions in Neural Networks
 
 ### Overview
 
