@@ -1,6 +1,6 @@
 ---
 date: 2025-12-09
-updated: 2026-01-18T08:21:43-05:00
+updated: 2026-01-22T17:46:20-05:00
 class:
   - note
 tags:
@@ -35,5 +35,8 @@ This is my new color palette for all things web design and branding. This is the
 Headers: Fraunces
 
 Body: Geist
+
+- I use **PP Neue Montreal** for personal stuff, but as its a commercial license cannot use it on this website :(
+	- maybe BDO Grotesk is a good free alternative
 
 Code: IBM Plex Mono
