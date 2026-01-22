@@ -11,12 +11,14 @@ tags:
 source:
 related:
 author:
+  - Ewan Pedersen
 description:
 aliases:
 course: "[[Evolutionary Robotics]]"
 lesson:
   - lecture
 lecture-number: 3
+abstract: test abstract
 ---
 
 What does it really mean to have a body and _exploit it_ for intelligent action?
