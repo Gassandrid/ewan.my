@@ -3,7 +3,7 @@ id: index
 aliases:
 tags:
 date: 2024-10-02
-title: Hello! My name is Ewan
+title: Ewans Florilegium
 updated: 2025-12-19
 class: navigation
 ---

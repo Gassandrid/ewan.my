@@ -31,10 +31,10 @@ If it is a room control function, the Pi calls the master ESP-32 to send a signa
 **Software Stack:**
 
 - A fine-tuned local Ollama  3.1 7B for the frontend "personality" of DARS
-	- GPT 4o backend for function calling
+	- GPT 4o backend for [[Function Calling]]
 - Speech Synthesis to sound like TARS
 - Speech Recognition running Locally
-- Langroid for Function Calling and Framework
+- Langroid for [[Function Calling]] and Framework
 - Quartz for Website architecture(this website), hosted on DARS.
 
 ### Planned Features

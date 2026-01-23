@@ -11,7 +11,7 @@ class:
 
 My general idea for this "system" is that I can take all the other things that I have been wanting to do and have already done and combine it into one thing.
 
-[[DARS]] was a great starting point for this concept, as the concept summed up exactly what I wanted my home server / homelab to be, an all in one system integrated with a LLM given tools to understand the context of my infrastructure, and perform actions with those tools.
+[[DARS]] was a great starting point for this concept, as the concept summed up exactly what I wanted my home server / homelab to be, an all in one system integrated with a [[Large Language Model|LLM]] given tools to understand the context of my infrastructure, and perform actions with those tools.
 
 Right now this project is mostly just a clutter of brainstorming efforts to bring the collection together, etc.
 

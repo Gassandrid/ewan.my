@@ -15,7 +15,7 @@ This has nothing to with my [[Migrating my Quartz, DARS, and media to one big Ho
 
 ---
 
-## Local LLM
+## Local [[Large Language Model|LLM]]
 
 The inference provider isn't really a difficult choice, as Ollama.cpp and the ollama models in general just dominate in the field of local level LLMs with their modest sizing. I am only pushing for running the 8b/11b models on my own laptop, but maybe if I push hard enough I could probably squeeze out enough performance to run one of the 70b models on the home lab? Not sure yet, and if I did, it would certainly be very slow ( likely ~ `1.5 t/s` ).
 

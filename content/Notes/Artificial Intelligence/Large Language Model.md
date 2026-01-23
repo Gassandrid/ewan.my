@@ -1,6 +1,7 @@
 ---
 id: Large Language Model
-aliases: []
+aliases:
+  - LLM
 tags: []
 class:
   - note

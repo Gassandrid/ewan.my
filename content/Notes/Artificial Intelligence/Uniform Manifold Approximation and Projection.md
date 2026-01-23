@@ -41,7 +41,7 @@ $$
 **where:**
 
 - $d(x_i, x_j)$ is the distance between points
-- $\rho_i$ is the distance to the nearest neighbor of $x_i$ (ensures local [[connectivity]])
+- $\rho_i$ is the distance to the nearest neighbor of $x_i$ (ensures local [[Connectivity]])
 - $\sigma_i$ is a [[normalization]] factor chosen so that $\sum_j w(x_i, x_j) = \log_2(k)$
 
 The weights are then symmetrized using a fuzzy set union:

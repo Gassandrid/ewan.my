@@ -30,7 +30,7 @@ Transformers are essentially what led to machine learning as we know it becoming
 
 Transformers changed this in the fact that a large portion of the training and inference algorithms could be accelerated via parallelization, aka using GPUs.
 
-[[Self Attention]], and other notes go over the mechanisms in which this can be done, from the attention blocks to the MLP layers, to the nature of large language model word meaning embeddings.
+[[Self Attention]], and other notes go over the mechanisms in which this can be done, from the attention blocks to the MLP layers, to the nature of [[large language model]] word meaning embeddings.
 
 ---
 

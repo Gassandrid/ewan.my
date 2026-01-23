@@ -16,7 +16,7 @@ The last thing really missing on my [[Saturn Rack Software]] is a way to cleanly
 
 This project hopes to centralize this all under one git repo on my local computer, where I can manage every configuration file in one place. And, when I am done, I can run a new script `sync.sh` to use **rsync** to copy over all the config files to their respective machine, and rebuild.
 
-This would also make the process of completing the [[Master Homelab Architecture]] overview note a lot easier, and I could use a LLM agent to scrape the relavant info from the repo for that note. Would still have to make the main [[Whiteboard.excalidraw]] diagram myself though.
+This would also make the process of completing the [[Master Homelab Architecture]] overview note a lot easier, and I could use a [[Large Language Model|LLM]] agent to scrape the relavant info from the repo for that note. Would still have to make the main [[Whiteboard.excalidraw]] diagram myself though.
 
 ## A Rough Idea
 

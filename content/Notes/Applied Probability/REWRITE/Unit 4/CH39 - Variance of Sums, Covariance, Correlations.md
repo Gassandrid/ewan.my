@@ -38,7 +38,7 @@ This chapter will explore what we can do if we have **dependent** random variabl
 > VAR(X+Y) = VAR(X) + VAR(Y) + 2Cov(X,Y)
 > $$
 
-Essentially, the covariance term is a measure of how much $X$ and $Y$ vary together.
+Essentially, the [[covariance]] term is a measure of how much $X$ and $Y$ vary together.
 
 > [!Abstract] Definition
 > Covariance is a measure of the joint variability of two random variables. It is defined as:

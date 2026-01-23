@@ -39,7 +39,7 @@ A great way to understand the Kalman Filter is to think of it as a hidden Markov
 
 ![[IntuitionKalmanFilter.png]]
 
-The Kalman Filter operates in two stages: **predict** and **update**. At each time step $k$, we maintain an estimate of the state $\hat{\mathbf{x}}_k$ and its uncertainty (covariance) $\mathbf{P}_k$.
+The Kalman Filter operates in two stages: **predict** and **update**. At each time step $k$, we maintain an estimate of the state $\hat{\mathbf{x}}_k$ and its uncertainty ([[covariance]]) $\mathbf{P}_k$.
 
 ### Prediction Step
 
