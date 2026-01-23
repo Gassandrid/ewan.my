@@ -24,11 +24,11 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     generateSocialImages: true,
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
         header: "Fraunces",
-        body: "Geist",
+        body: "ewanfont",
         code: "IBM Plex Mono",
       },
 

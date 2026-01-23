@@ -3,9 +3,50 @@
 @use "./custom/caption-callout.scss";
 @use "./custom/infobox-callout.scss";
 @use "./pages/bases.scss";
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
-@use "./variables.scss" as *;
+
+// ewanfont
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/medium.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/semibolditalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
 
 // banner color switcher for light/darkmode
 // class is indexBanner, setting path of svg to a fill background-color
