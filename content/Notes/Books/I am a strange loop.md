@@ -14,7 +14,7 @@ genre:
   - Philosophy
 description: explores the nature of consciousness and self-reference, delving into how our minds create a sense of "I" through complex patterns of thought and perception.
 progress:
-status: none
+status: reading-list
 completed:
 date: 2026-01-16T17:36:01-05:00
 updated: 2026-01-18T12:09:49-05:00

@@ -21,7 +21,7 @@ description: the free energy principle in mind, brain, and behavior
 date: 2025-11-18
 updated: 2026-01-18T12:07:54-05:00
 progress:
-status: none
+status: reading-list
 completed:
 ---
 

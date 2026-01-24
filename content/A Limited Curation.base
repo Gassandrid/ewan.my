@@ -17,3 +17,15 @@ views:
       - series
       - formula.YearCompleted
     image: note.image
+  - type: cards
+    name: Reading List
+    filters:
+      and:
+        - class.contains("book")
+        - status == "reading-list"
+    order:
+      - file.name
+      - author
+      - genre
+      - description
+    image: note.image
