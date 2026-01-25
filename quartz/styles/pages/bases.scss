@@ -77,7 +77,8 @@
 }
 
 // Full-width layout for bases pages - hide sidebars and span full viewport
-body[data-slug$=".base"] {
+body[data-slug$=".base"],
+body[data-slug*=".base/"] {
   // Hide Lorenz flow sliders
   .lorenz-slider-left,
   .lorenz-slider-right {
