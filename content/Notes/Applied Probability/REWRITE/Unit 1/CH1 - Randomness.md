@@ -2,7 +2,7 @@
 id: CH1 - Randomness
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-01-13
 title: CH1 - Randomness
 updated: 2025-06-21

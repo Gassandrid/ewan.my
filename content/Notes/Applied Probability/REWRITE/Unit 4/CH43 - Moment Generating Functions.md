@@ -2,7 +2,7 @@
 id: CH 43 - Moment Generating Functions
 aliases: []
 tags:
-  - math/statistics/applied-probability
+  - math/probability
 date: 2025-04-07
 updated: 2025-10-15
 ---

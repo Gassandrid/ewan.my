@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - cs/ai/gradient-descent
-  - math/statistics/stochastic
+  - math/probability/stochastic
   - todo/cs/ai
 source:
   - "[[What the Books Get Wrong about AI (Double Descent)]]"

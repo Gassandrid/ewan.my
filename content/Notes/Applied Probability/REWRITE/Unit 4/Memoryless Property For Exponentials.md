@@ -4,7 +4,7 @@ updated: 2025-10-15
 class:
   - note
 tags:
-  - math/statistics/applied-probability
+  - math/probability
 source:
 related:
 author:

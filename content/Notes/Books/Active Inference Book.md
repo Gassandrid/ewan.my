@@ -4,7 +4,7 @@ class:
 tags:
   - books/fep
   - comp-neuro/theory
-  - math/statistics/bayesian
+  - math/probability/bayesian
   - books
 source:
   - https://direct.mit.edu/books/oa-monograph/5299/Active-InferenceThe-Free-Energy-Principle-in-Mind

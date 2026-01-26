@@ -4,7 +4,7 @@ updated: 2025-09-09
 class:
   - note
 tags:
-  - math/statistics/stochastic
+  - math/probability/stochastic
 source:
 related:
 author:

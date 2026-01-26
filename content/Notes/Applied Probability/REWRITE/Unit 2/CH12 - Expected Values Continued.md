@@ -2,7 +2,7 @@
 id: CH12 - Expected Values Continued
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-02-12
 title: CH12 - Expected Values Continued
 updated: 2025-06-21

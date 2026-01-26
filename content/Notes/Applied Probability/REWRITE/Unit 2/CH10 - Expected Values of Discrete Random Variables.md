@@ -2,7 +2,7 @@
 id: CH10 - Expected Values of Discrete Random Variables
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-02-07
 title: CH10 - Expected Values of Discrete Random Variables
 updated: 2025-06-21

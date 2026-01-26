@@ -2,7 +2,7 @@
 id: CH7 - Discrete Random Variables
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-02-03
 title: CH7 - Discrete Random Variables
 updated: 2025-07-22

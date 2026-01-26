@@ -2,7 +2,7 @@
 id: CH3 - Independent Events
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-01-17
 title: CH3 - Independent Events
 updated: 2025-06-21

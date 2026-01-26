@@ -3,7 +3,7 @@ id: Active Inference
 aliases: []
 tags:
   - comp-neuro/models
-  - math/statistics/bayesian
+  - math/probability/bayesian
 author:
   - "[[Karl Friston]]"
 class:

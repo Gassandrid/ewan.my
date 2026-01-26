@@ -2,7 +2,7 @@
 id: Cross Entropy
 aliases: []
 tags:
-  - math/statistics/entropy
+  - math/information/entropy
   - math/information
 class:
   - note

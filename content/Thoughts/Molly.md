@@ -13,7 +13,7 @@ author:
 description:
 ---
 
-For the last 40 Years of my [[Axel Pedersen - In Memoriam|grandfathers]]' life, **Molly** was his passion project.
+For the last 40 Years of my [[Axel - In Memoriam|grandfathers]]' life, **Molly** was his passion project.
 
 ![[Pasted image 20250414214950.png]]
 
@@ -21,9 +21,9 @@ This was not something that involved any other person in his life. He taught him
 
 Even the sails, which are such a complicated kind of craft, he specially designed for his exact boat, the exact way he wanted it.
 
-![[Pasted image 20250414215217.png]]
+![[MollyBeingBuilt.png]]
 
-![[Pasted image 20250414215232.png]]
+![[InsideMolly.png]]
 
 Now of course, as all things Axel, it was a complete mess on the inside, given that he had to have every tool he needed right at hand. And you can be damn sure he had at least 12 back scratchers in every crevice of that thing.
 

@@ -4,7 +4,7 @@ class:
 tags:
   - comp-neuro/theory
   - math/information
-  - math/statistics/bayesian
+  - math/probability/bayesian
 source:
   - "[[The free-energy principle a unified brain theory? - Nature Reviews Neuroscience]]"
 related:

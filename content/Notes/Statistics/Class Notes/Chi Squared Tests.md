@@ -4,7 +4,7 @@ aliases:
   - Chi Squared
 tags:
   - university
-  - math/statistics
+  - math/probability/statistics
 date: 2024-12-13
 updated: 2026-01-10T10:46:25+02:00
 class:

@@ -5,7 +5,7 @@ class:
 tags:
   - university
   - psych
-  - math/statistics
+  - math/probability/statistics
 course: "[[Intro to Psychological Science]]"
 lesson:
   - lecture

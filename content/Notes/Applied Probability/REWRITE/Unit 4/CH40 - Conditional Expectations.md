@@ -3,7 +3,7 @@ class: note
 date: 2025-04-23
 updated: 2025-06-22
 tags:
-  - math/statistics/applied-probability
+  - math/probability
 ---
 
 **Let's Recall the Following:**

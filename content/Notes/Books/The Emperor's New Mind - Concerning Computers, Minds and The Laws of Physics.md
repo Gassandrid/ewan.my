@@ -19,7 +19,7 @@ genre:
 description: a critique of strong AI and exploration of consciousness from a physics perspective - mind may be non-computable
 progress:
 status: reading-list
-completed: 2020-01-02
+completed:
 series:
 ---
 

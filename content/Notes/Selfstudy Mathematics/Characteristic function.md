@@ -2,7 +2,7 @@
 id: Characteristic function
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 class:
   - note
 date: 2025-09-22

@@ -2,7 +2,7 @@
 id: CH39 - Variance of Sums, Covariance, Correlations
 aliases: []
 tags:
-  - math/statistics/random-variables
+  - math/probability/random-variables
 date: 2025-04-23
 updated: 2025-10-15
 class:

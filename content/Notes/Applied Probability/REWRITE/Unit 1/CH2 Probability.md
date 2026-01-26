@@ -2,7 +2,7 @@
 id: CH2 Probability
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-01-15
 title: CH2 Probability
 updated: 2025-06-21

@@ -17,7 +17,7 @@ genre:
 description: exploring the "controlled hallucination" model of consciousness and selfhood
 progress:
 status: reading-list
-completed: 2020-01-02
+completed:
 series:
 date: 2026-01-24T10:09:20-05:00
 updated: 2026-01-24T10:12:26-05:00

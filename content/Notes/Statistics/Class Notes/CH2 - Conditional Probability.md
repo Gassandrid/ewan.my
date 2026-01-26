@@ -2,7 +2,7 @@
 id: CH2 - Conditional Probability
 aliases:
 tags:
-  - math/statistics
+  - math/probability/statistics
   - university
 date: 2024-09-12
 updated: 2025-09-04

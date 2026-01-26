@@ -2,7 +2,7 @@
 id: CH3 - Probability Rules
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-01-24
 title: CH3 - Probability Rules
 updated: 2025-06-21

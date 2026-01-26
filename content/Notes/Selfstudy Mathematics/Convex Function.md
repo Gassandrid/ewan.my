@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/statistics
+  - math/probability/statistics
 source:
 related:
 author:

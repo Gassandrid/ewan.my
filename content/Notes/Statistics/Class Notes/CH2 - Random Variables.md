@@ -2,7 +2,7 @@
 id: CH2 - Random Variables
 aliases:
 tags:
-  - math/statistics
+  - math/probability/statistics
   - university
 date: 2024-09-12
 updated: 2026-01-17T07:58:48-05:00

@@ -2,7 +2,7 @@
 id: CH9 - Calculate CDF from 1 variable and joint CDF
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-02-07
 title: CH9 - Calculate CDF from 1 variable and joint CDF
 updated: 2025-06-21

@@ -2,7 +2,7 @@
 id: Bayesian Inference
 aliases: []
 tags:
-  - math/statistics/bayesian
+  - math/probability/bayesian
 class:
   - note
 date: 2025-09-24

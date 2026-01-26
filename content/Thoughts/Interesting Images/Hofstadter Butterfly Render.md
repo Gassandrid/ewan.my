@@ -3,7 +3,7 @@ title: Render of Hofstadter Butterfly
 class:
   - curation
 media-type: png
-image: "[[Attachments/Curation/og-image.png]]"
+image: "[[hofButterFlyEwan.png]]"
 width: 3456
 height: 2234
 filesize: 13.28 MB
@@ -30,7 +30,7 @@ updated: 2026-01-20T11:10:44-05:00
 
 A piece of my own creation, wanted to encode more parameters into the Hofstadter Butterfly to enrich the color.
 
-![[Attachments/Curation/og-image.png]]
+![[hofButterFlyEwan.png]]
 
 **Shadertoy** Code:
 

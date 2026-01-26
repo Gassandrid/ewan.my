@@ -2,7 +2,7 @@
 id: CH1 - Sampling and Descriptive Statistics
 aliases:
 tags:
-  - math/statistics
+  - math/probability/statistics
   - university
 date: 2024-09-12
 updated: 2025-08-21

@@ -2,7 +2,7 @@
 id: Event
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
   - todo/math/statistics
 date: 2025-01-31
 title: Event

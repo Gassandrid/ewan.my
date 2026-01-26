@@ -2,11 +2,11 @@
 id: Laplace Distribution
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 class:
   - note
-date: "2025-10-06"
-updated: "2025-10-06"
+date: 2025-10-06
+updated: 2025-10-06
 ---
 
 The **Laplace distribution**, also known as the double exponential distribution, is a continuous probability distribution named after Pierre-Simon Laplace. It is characterized by its sharp peak at the mean and heavier tails compared to the normal distribution.

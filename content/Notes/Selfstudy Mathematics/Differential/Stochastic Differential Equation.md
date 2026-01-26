@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - math/calculus/differential
-  - math/statistics/stochastic
+  - math/probability/stochastic
 source:
   - https://en.wikipedia.org/wiki/Stochastic_differential_equation
 related:

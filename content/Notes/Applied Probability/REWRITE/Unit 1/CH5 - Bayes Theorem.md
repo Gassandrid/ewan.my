@@ -2,7 +2,7 @@
 id: CH5 - Bayes Theorem
 aliases: []
 tags:
-  - math/statistics/bayesian
+  - math/probability/bayesian
 date: 2025-01-24
 title: CH5 - Bayes Theorem
 updated: 2025-10-15

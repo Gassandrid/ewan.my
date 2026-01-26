@@ -2,7 +2,7 @@
 id: CH9 - Independence and Conditioning
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
 date: 2025-02-05
 title: CH9 - Independence and Conditioning
 updated: 2025-06-21

@@ -2,7 +2,7 @@
 id: CH1 - Categorical Variable
 aliases:
 tags:
-  - math/statistics
+  - math/probability/statistics
   - cs/python
   - university
 date: 2024-09-12

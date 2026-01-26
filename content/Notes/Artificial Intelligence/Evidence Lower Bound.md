@@ -5,8 +5,8 @@ aliases:
   - Variational Lower Bound
 tags:
   - math/information
-  - math/statistics/bayesian
-  - math/statistics/entropy
+  - math/probability/bayesian
+  - math/information/entropy
   - cs/ai/variational
   - generated
 class:

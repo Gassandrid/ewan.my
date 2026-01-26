@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/statistics/applied-probability
+  - math/probability
   - math/information
   - cs/ai/variational
 source:

@@ -2,7 +2,7 @@
 id: CH6 - Hypothesis Testing
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
   - university
 date: 2024-10-29
 updated: 2025-06-21

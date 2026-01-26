@@ -4,7 +4,7 @@ aliases:
   - VAE
 tags:
   - math/information
-  - math/statistics/entropy
+  - math/information/entropy
   - cs/ai/latent-space
   - cs/ai/variational
 class:

@@ -3,7 +3,7 @@ class: note
 date: 2025-03-31
 updated: 2025-06-21
 tags:
-  - math/statistics
+  - math/probability/statistics
 ---
 
 *practice - will go problem by problem solving*

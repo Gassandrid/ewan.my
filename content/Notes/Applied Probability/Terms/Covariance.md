@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/statistics/random-variables
+  - math/probability/random-variables
 source:
 related:
 author:

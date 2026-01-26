@@ -5,7 +5,7 @@ class:
   - note
 tags:
   - hobbies/coffee
-  - math/statistics/bayesian
+  - math/probability/bayesian
   - journal
 source:
 related:

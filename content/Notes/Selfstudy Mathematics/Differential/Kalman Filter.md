@@ -4,7 +4,7 @@ updated: 2026-01-12T09:53:19-05:00
 class:
   - note
 tags:
-  - math/statistics/bayesian
+  - math/probability/bayesian
   - math/calculus/differential
   - math/control/kalman
 source:

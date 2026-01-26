@@ -2,7 +2,7 @@
 id: CH7 - Linear Regression
 aliases: []
 tags:
-  - math/statistics
+  - math/probability/statistics
   - engineering
   - university
 date: 2024-11-14

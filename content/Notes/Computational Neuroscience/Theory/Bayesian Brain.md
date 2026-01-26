@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - comp-neuro/theory
-  - math/statistics/bayesian
+  - math/probability/bayesian
 source:
 related:
   - "[[Free Energy Principle]]"

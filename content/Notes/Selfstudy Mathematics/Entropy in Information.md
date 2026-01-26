@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/statistics/entropy
+  - math/information/entropy
   - math/information
 source:
   - "[[Entropy for Data science clearly explained]]"

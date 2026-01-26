@@ -4,7 +4,7 @@ class:
 tags:
   - math/calculus/differential/pde
   - working/math
-  - math/statistics/stochastic
+  - math/probability/stochastic
 source:
 related:
 author:
