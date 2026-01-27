@@ -8,7 +8,7 @@ source:
 related:
 author:
 date: 2025-10-08
-updated: 2025-12-16
+updated: 2026-01-26T17:06:06-05:00
 ---
 
 As it might be clear by now, I have been getting quite obsessed with collecting data about myself in every faucet. This has mostly been for health work ( tracking biomarkers, etc ), with my new [[AirGradient ONE]] air quality monitor for [[Home Assistant]]. I am also considering getting a wearable like a [[Garmin Venu 4]] so as to collect even more data day to day ( without all the unnecessary features on the more expensive Garmin wearables ).
