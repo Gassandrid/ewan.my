@@ -10,7 +10,7 @@ related:
 author:
 description:
 date: 2025-11-06
-updated: 2026-01-13T10:00:08-05:00
+updated: 2026-01-27T11:56:00-05:00
 aliases:
   - UMAP
 "related:":
@@ -52,7 +52,7 @@ $$
 
 ### Low-Dim Representation
 
-In the low-dimensional space, UMAP uses a probability distribution based on the distance between embedded points $y_i$ and $y_j$:
+For Lower Dimensions UMAP uses a probability distribution based on the distance between embedded points $y_i$ and $y_j$:
 
 $$
 q_{ij} = \left(1 + a \cdot ||y_i - y_j||^{2b}\right)^{-1}
