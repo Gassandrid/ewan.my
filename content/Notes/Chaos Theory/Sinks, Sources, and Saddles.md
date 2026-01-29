@@ -13,7 +13,7 @@ author:
 description: henon map in the context of sinks, sources, and saddles, where the fixed point is at the origin.
 aliases:
 date: 2026-01-29T10:26:19-05:00
-updated: 2026-01-29T11:14:44-05:00
+updated: 2026-01-29T11:19:26-05:00
 ---
 
 ## Sink at Origin (Stable Fixed Point)
@@ -103,4 +103,10 @@ $$
 
 **Yields:**
 
-![[stableUnstableManifolds.png]]
+> ![[stableUnstableManifolds.png]]
+>
+> _Starting from $\vec{x}_0 = (2, 0)$, successive iterations climb along the $\lambda_1$ eigenvector direction (unstable manifold). Since $\lambda_1 = \frac{3}{2} > 1$, points expand along this direction. The $\lambda_2$ eigenvector basis forms the stable manifold - points on this line contract toward the origin since $\lambda_2 = \frac{1}{2} < 1$._
+
+The trajectory reveals the saddle structure: expansion along one eigendirection, contraction along the other. Notice how $\vec{x}_0$, $\vec{x}_1$, and $\vec{x}_2$ progressively move away from the origin along the diagonal (unstable manifold). Any initial condition not precisely on the stable manifold will eventually be repelled along the unstable direction - this is why saddles are [[Sensitive Dependence on Initial Conditions|sensitive to initial conditions]]
+
+Same holds true for the [[Hénon Map]] saddle with their eigenvalue-manifold relationship. Points approach the fixed point along the stable manifold and are ejected along the unstable manifold. In chaotic systems like Henon, these manifolds fold and intersect in fractal patterns, creating the complex attractor structure.
