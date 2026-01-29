@@ -13,7 +13,7 @@ author:
 description: henon map in the context of sinks, sources, and saddles, where the fixed point is at the origin.
 aliases:
 date: 2026-01-29T10:26:19-05:00
-updated: 2026-01-29T10:48:23-05:00
+updated: 2026-01-29T11:14:44-05:00
 ---
 
 ## Sink at Origin (Stable Fixed Point)
@@ -39,3 +39,68 @@ At a source, both eigenvalues have absolute value greater than 1. Trajectories f
 > _A neighborhood N experiences both contraction and expansion. The red region shows the stable manifold (attracting direction), while the green lobes of f(N) show the unstable manifold (repelling direction). The image stretches along one axis while contracting along another._
 
 At a saddle point, one eigenvalue has $|\lambda_1| < 1$ (stable direction) and the other has $|\lambda_2| > 1$ (unstable direction). This is the most common and important case for the Henon map in its chaotic regime. The stable manifold (red) represents the set of points that approach the fixed point under forward iteration, while the unstable manifold (green lobes) represents points that approached the fixed point under backward iteration. The characteristic saddle topology - stretching in one direction, contracting in another - is fundamental to the horseshoe dynamics and chaotic behavior of the Henon map.
+
+---
+
+## Linear Maps
+
+A map $A(\vec{v})$ from $\mathbb{R}^n \to \mathbb{R}^m$ is **linear** if for each $a,b\in \mathbb{R}$ and $\vec{v}, \vec{w} \in \mathbb{R}^m$:
+
+$$
+A(a\vec{v}+b\vec{w}) = aA(\vec{v}) + bA(\vec{w})
+$$
+
+> Scaling and adding vectors before applying the map is the same as applying the map first and then scaling and adding the results.
+
+The action of a linear map can be represented by multiplciation with an $m \times m$ matrix.
+
+So... if $\vec{v}_{0}$ is an eigenvector of a matrix $A$ with an eigenvalue $\lambda$, then:
+
+$$
+\vec{v}_{1}=A\vec{v}_{0} = \lambda \vec{v}_{0}
+$$
+
+$$
+\vec{V}_{2} = A^2 \vec{v}_{0} = A(\lambda \vec{v}_{0}) = \lambda A \vec{v}_{0} = \lambda^2 \vec{v}_{0}
+$$
+
+> Applying the linear map $A$ to an eigenvector $\vec{v}_{0}$ simply scales the vector by the eigenvalue $\lambda$. Repeated applications of $A$ scale the vector by successive powers of $\lambda$.
+
+![[eigenVectorMapping.png]]
+
+Say we have the matrix:
+
+$$
+A = \begin{bmatrix}
+1 & \frac{1}{2} \\
+\frac{1}{2} & 1
+\end{bmatrix} \quad \vec{v}_{1} = \begin{bmatrix}
+1 \\
+1
+\end{bmatrix} \quad \vec{v}_{2} = \begin{bmatrix}
+1 \\
+-1
+\end{bmatrix} \quad \lambda_{1} = \frac{3}{2}, \lambda_{2}=\frac{1}{2}
+$$
+
+**Iterating the map:**
+
+$$
+\vec{x}_{0} = \begin{bmatrix}2 \\ 0\end{bmatrix}
+$$
+
+$$
+\vec{x}_{1} = A\vec{x}_{0}=\begin{bmatrix}1 & \frac{1}{2} \\ \frac{1}{2} & 1\end{bmatrix}\begin{bmatrix}2 \\ 0\end{bmatrix} =\begin{bmatrix}2 \\ 1\end{bmatrix}
+$$
+
+$$
+\vec{x}_{2} = A\vec{x}_{1}=\begin{bmatrix}1 & \frac{1}{2} \\ \frac{1}{2} & 1\end{bmatrix}\begin{bmatrix}2 \\ 1\end{bmatrix} =\begin{bmatrix}2.5 \\ 2\end{bmatrix}
+$$
+
+$$
+\dots
+$$
+
+**Yields:**
+
+![[stableUnstableManifolds.png]]

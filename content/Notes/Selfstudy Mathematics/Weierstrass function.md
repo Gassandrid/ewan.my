@@ -22,7 +22,6 @@ Originally it was defined as the Fourier series:
 
 $$
 W(x) = \sum_{n=0}^{\infty} a^n \cos(b^n \pi x)
-.
 $$
 
 **where:**
