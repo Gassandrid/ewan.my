@@ -1,9 +1,12 @@
 ---
 id: Softmax
 aliases: []
-tags: [cs/ai, math]
+tags:
+  - cs/ai
+  - math/probability
+  - math/linear-algebra
 date: 2025-08-12
-updated: 2025-09-22
+updated: 2026-01-28T08:43:06-05:00
 ---
 
 While quite a simple function, the softmax function is a crucial component in many machine learning models, particularly in classification tasks. It converts a vector of raw scores (logits) into probabilities that sum to one, making it suitable for multi-class classification problems.

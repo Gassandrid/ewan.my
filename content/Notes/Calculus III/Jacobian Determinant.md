@@ -4,11 +4,10 @@ tags:
   - math
   - generated
   - university
-updated: 2025-09-12
+updated: 2026-01-29T10:46:08-05:00
 ---
 
-> [!info] **Overview**
-> The Jacobian determinant is a concept from vector calculus that helps in transforming between coordinate systems. It represents the scaling factor of the transformation at a given point and is especially useful when changing variables in multivariable integrals.
+Concept from vector calculus that helps in transforming between coordinate systems. It represents the scaling factor of the transformation at a given point and is especially useful when changing variables in multivariable integrals.
 
 ### Definition of the Jacobian Determinant
 
@@ -18,14 +17,10 @@ $$
 J = \begin{vmatrix} \frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2} & \dots & \frac{\partial u_1}{\partial x_n} \\ \frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2} & \dots & \frac{\partial u_2}{\partial x_n} \\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial u_n}{\partial x_1} & \frac{\partial u_n}{\partial x_2} & \dots & \frac{\partial u_n}{\partial x_n} \end{vmatrix}
 $$
 
-### Key Points
-
-> [!tip] **Interpretation**
+> [!tip] Interpretation
 > The Jacobian determinant measures the rate at which area, volume, or hypervolume changes under the transformation $\mathbf{F}$. If $|\det(J)| > 1$, the transformation stretches space; if $|\det(J)| < 1$, it compresses space. When $\det(J) = 0$, the transformation is singular at that point, meaning it compresses the space completely along some dimension.
 
-### Applications
-
-#### Change of Variables in Integrals
+### Change of Variables in Integrals
 
 For a transformation from coordinates $(x, y)$ to $(u, v)$, the area element $dx\,dy$ is transformed to $| \det(J) | \, du \, dv$. Thus, when changing variables in a double integral, we use the Jacobian determinant as a correction factor:
 
@@ -58,8 +53,6 @@ $$
 >
 > Thus, $\left| \det(J) \right| = 4(x^2 + y^2)$.
 
-### Properties of the Jacobian Determinant
-
-> [!check] **Key Properties**
+> [!check] Properties
 > - **Positive or Negative Values**: The sign of the determinant indicates orientation.
 > - **Zero Determinant**: If $\det(J) = 0$ at a point, the transformation is locally non-invertible there.

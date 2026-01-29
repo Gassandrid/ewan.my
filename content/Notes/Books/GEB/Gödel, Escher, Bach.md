@@ -1,6 +1,6 @@
 ---
 date: 2025-06-13
-updated: 2026-01-19T10:24:37-05:00
+updated: 2026-01-29T10:47:02-05:00
 tags:
   - books/geb
   - philosophy
@@ -22,6 +22,10 @@ description: an investigation of the nature of the mind and human conciousness t
 progress: 328 - Ant Fugue
 status: in-progress
 completed:
+aliases:
+  - Godel Escher Bach
+  - Godel, Escher, Bach
+  - GEB
 ---
 
 ![[GebCover.png]]

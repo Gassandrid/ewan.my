@@ -3,9 +3,10 @@ date: 2024-10-29
 tags:
   - math/calculus/multivariable
   - university
-updated: 2025-09-05
+updated: 2026-01-29T10:44:57-05:00
 class:
   - note
+id: 15.9 - Jacobian
 ---
 
 Polar,  cylindrical, and spherical coordinates area form of substitution in multiple integrals. Let's recall how Polar works: 
