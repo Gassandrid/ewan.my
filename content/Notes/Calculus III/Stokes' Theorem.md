@@ -37,7 +37,7 @@ Where $\oint \vec{F} \cdot d\vec{r}$ is the **circulation around boundary** and 
 The circulation form of Green's theorem tell us the circulation throughout a **flat** surface $\mathcal{D}$ is equal to the line integral around the boundary of $\mathcal{D}$. **Stokes' Theorem** generalizes this result to higher-dimensional surfaces
 
 > [!Warning] Stoke's Theorem (Fundamental theorem for the Curl)
-> Let $S$ be an oriented surface whose boundary curve $C$ has positive boundary orientation, and let $\vec{F}$ be a vector field whose component functions have continuous partial derivatives. Then:
+> Let $S$ be an oriented surface whose boundary curve $C$ has positive boundary orientation, and let $\vec{F}$ be a vector field whose component functions have continuous [[partial derivatives]]. Then:
 >
 > $$
 > \oint \vec{F} \cdot d\vec{r} = \int \int_{S} curl(\vec{F}) \cdot d\vec{S}

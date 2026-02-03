@@ -2,6 +2,8 @@
 date: 2024-09-12
 updated: 2025-03-25
 title: Artificial Neuron
+aliases:
+  - neuron
 ---
 
 ![[Pasted image 20240808134117.png]]
@@ -50,7 +52,7 @@ In neural networks, a neuron (also called a node or unit) is the fundamental bui
     - **Sigmoid:** Squashes the output to a range between 0 and 1.
     - **ReLU:** Outputs the input directly if positive, otherwise, it outputs zero.
     - **Tanh:** Squashes the output to a range between -1 and 1.
-    - **Softmax:** Converts the outputs into probabilities that sum to 1 (typically used in the output layer for classification).
+    - **[[Softmax]]:** Converts the outputs into probabilities that sum to 1 (typically used in the output layer for classification).
 5. **Output**
     
     - **Definition:** The output of a neuron is the final result after applying the activation function.

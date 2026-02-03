@@ -39,7 +39,7 @@ $$
 \mathcal{L}_{\text{ELBO}} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - \text{KL}(q(z|x) \parallel p(z))
 $$
 
-Here, $q(z|x)$ is the approximate posterior of the latent variable, and $\text{KL}$ refers to the Kullback-Leibler divergence, which measures the difference between the approximate and true posterior distributions.
+Here, $q(z|x)$ is the approximate posterior of the latent variable, and $\text{KL}$ refers to the [[Kullback-Leibler divergence]], which measures the difference between the approximate and true posterior distributions.
 
 > [!tip] **Practical Example**
 > In practice, latent variables can represent abstract concepts like the style of an image, facial expression, or even handwriting. They allow models to disentangle different features and generate new combinations of these features.

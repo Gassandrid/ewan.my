@@ -78,7 +78,7 @@ Adding up the area elements and sending the number of elements to infinity yield
 > Where $||$ means the **absolute value** of $| \vec{r}_{u} \times \vec{r}_{v}|$.
 
 > [!Info] Remarks
-> 1. We need to assume continuity of $f$ and the partial derivatives $\vec{r}_{u} = \langle x_{u}, y_{u} \rangle$, $\vec{r}_{v} = \langle x_{v}, y_{v} \rangle$
+> 1. We need to assume continuity of $f$ and the [[partial derivatives]] $\vec{r}_{u} = \langle x_{u}, y_{u} \rangle$, $\vec{r}_{v} = \langle x_{v}, y_{v} \rangle$
 > 2. The quantity $| \vec{r}_{u} \times \vec{r}_{v} |$ is called the [[Jacobian Determinant]], which we can call $J$. In 2D, we have:
 >
 > $$

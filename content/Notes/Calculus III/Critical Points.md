@@ -34,7 +34,7 @@ Ensure you check both where the gradient equals zero and where it is undefined, 
 
 ## Second Derivative Test for Multivariable Functions
 
-To classify critical points, we use the **Hessian matrix**, which is the matrix of second-order partial derivatives:
+To classify critical points, we use the **Hessian matrix**, which is the matrix of second-order [[partial derivatives]]:
 
 $$
 H = 

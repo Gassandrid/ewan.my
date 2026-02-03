@@ -49,7 +49,7 @@ $$
 q(x_{1:T}|x_0) := \prod_{t=1}^{T} q(x_t|x_{t-1}), \quad q(x_t|x_{t-1}) := \mathcal{N}(x_t; \sqrt{1 - \beta_t} x_{t-1}, \beta_t I) \tag{2}
 $$
 
-And for our optimzation/training we take the [[Variational Inference]] approach of minimizing the [[Evidence Lower Bound]] (ELBO):
+And for our optimzation/training we take the [[Variational Inference]] approach of minimizing the [[Evidence Lower Bound]] ([[Evidence Lower Bound|ELBO]]):
 
 $$
 \mathbb{E}[-\log p_\theta(x_0)] \leq \mathbb{E}_q \left[ -\log \frac{p_\theta(x_{0:T})}{q(x_{1:T}|x_0)} \right] = \mathbb{E}_q \left[ -\log p(x_T) - \sum_{t \geq 1} \log \frac{p_\theta(x_{t-1}|x_t)}{q(x_t|x_{t-1})} \right] =: L \tag{3}

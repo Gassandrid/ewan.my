@@ -1,11 +1,12 @@
 ---
 id: 14.3 - Partial Derivatives
 aliases:
+  - Partial Derivative
 tags:
   - math
   - university
 date: 2024-12-12
-updated: 2024-12-12
+updated: 2026-02-03T09:34:00-05:00
 class:
   - note
 ---
@@ -44,33 +45,47 @@ We can also find the slope in the direction of the z-axis by taking the partial 
 
 We are given:
 
-$$ f(x,y) = x^2 y^5 $$
+$$
+ f(x,y) = x^2 y^5 
+$$
 
 Finding $f$ with respect to x:
 
-$$ f_{x} = y^5 (2x) = 2xy^5 $$
+$$
+ f_{x} = y^5 (2x) = 2xy^5 
+$$
 
 Finding $f$ with respect to y:
 
-$$ f_{y} = 5y^4x^2 $$
+$$
+ f_{y} = 5y^4x^2 
+$$
 
 **2**.
 
 Finding $\frac{\partial z}{\partial x}$ and $\frac{\partial z}{\partial y}$
 
-$$z = \frac{y^2}{(1+x^2)^3}$$
+$$
+z = \frac{y^2}{(1+x^2)^3}
+$$
 
 Lets solve.
 
-$$ \frac{\partial z}{\partial x} = y^2 \frac{\partial}{\partial x} \frac{1}{(1+x^2)} = y^2 \frac{\partial}{\partial x} (1+x)^{-3}$$
+$$
+ \frac{\partial z}{\partial x} = y^2 \frac{\partial}{\partial x} \frac{1}{(1+x^2)} = y^2 \frac{\partial}{\partial x} (1+x)^{-3}
+$$
 
 This then becomes:
 
-$$= y^2 (-3)(1+x^2)^{-4}(2x) = -\frac{6xy^2}{(1+x^2)^4}$$
+$$
+= y^2 (-3)(1+x^2)^{-4}(2x) = -\frac{6xy^2}{(1+x^2)^4}
+$$
 
 Solving for $\frac{\partial z}{\partial y}$
 
-$$ \frac{\partial z}{\partial y} = \frac{2y}{(1+x^2)^3}$$
+$$
+ \frac{\partial z}{\partial y} = \frac{2y}{(1+x^2)^3}
+$$
 
 ---
 
@@ -88,7 +103,6 @@ $$
 
 $$
 (f_{x})_{x} = f_{x x}
-
 $$
 
 $$

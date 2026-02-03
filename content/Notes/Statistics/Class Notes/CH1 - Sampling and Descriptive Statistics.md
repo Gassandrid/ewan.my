@@ -41,7 +41,7 @@ Every time you take a number, the results will vary. This is known as Natural Sa
 
 ---
 
-**Random Question**: What is the population of UVM undergrads that are out of state?
+**Random Question**: What is the population of [[University Of Vermont|UVM]] undergrads that are out of state?
 
 **Population:** all UVM undergrads
 

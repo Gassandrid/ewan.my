@@ -208,7 +208,7 @@ Because $(x-1)^2$ and $(y-3)^2$ are always non-negative, $f(x,y) \ge 4$ for all 
 
 Saddle points are points where the gradient is zero, but the point is neither a maximum nor a minimum.
 
-```python-r
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
@@ -250,7 +250,7 @@ Saddle Points present a unique challenge in optimization, as they are neither ma
 
 ### Hessian Matrix
 
-The Hessian Matrix is a square matrix of second-order partial derivatives of a scalar-valued function.
+The Hessian Matrix is a square matrix of second-order [[partial derivatives]] of a scalar-valued function.
 
 $$
 H = \begin{bmatrix} f*{xx} & f*{xy} \\ f*{yx} & f*{yy} \end{bmatrix} 

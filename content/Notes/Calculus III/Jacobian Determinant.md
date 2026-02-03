@@ -29,7 +29,7 @@ $$
 $$
 
 > [!example] **Example**
-> Consider the transformation $u = x^2 - y^2$ and $v = 2xy$. To compute the Jacobian determinant $J$ for this transformation, first find the partial derivatives:
+> Consider the transformation $u = x^2 - y^2$ and $v = 2xy$. To compute the Jacobian determinant $J$ for this transformation, first find the [[partial derivatives]]:
 >
 > $$
 > \frac{\partial u}{\partial x} = 2x, \quad \frac{\partial u}{\partial y} = -2y

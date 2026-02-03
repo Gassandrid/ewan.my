@@ -61,7 +61,7 @@ $$
 f: \mathbb{R}^n \to \mathbb{R}
 $$
 
-For a partial derivative, we set up something like the following:
+For a [[Partial Derivatives|partial derivative]], we set up something like the following:
 
 $$
 \frac{ \partial f }{ \partial x_{i} } \approx \frac{f(x+h\overbrace{ e_{i} }^{ i_{th} \text{ unit vector} })-f(x)}{\underbrace{ h }_{ \text{step size} }}

@@ -14,7 +14,7 @@ author:
 description:
 aliases:
 date: 2026-01-23T08:31:23-05:00
-updated: 2026-01-23T09:14:07-05:00
+updated: 2026-02-02T09:10:27-05:00
 ---
 
 As we discussed last lecture on [[Linear and Nonlinear Regression]], for the case of linear regression we can solve the parameters with a closed form solution. But, to introduce the concept of [[Gradient Descent]], we must build an intuition of the process.

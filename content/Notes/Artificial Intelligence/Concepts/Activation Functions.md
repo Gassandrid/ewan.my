@@ -61,7 +61,7 @@ The choice of activation function depends on the specific task and architecture 
 
 - **Sigmoid and Tanh** are more suitable for shallow networks and binary classification tasks.
 - **ReLU and its variants** (like Leaky ReLU) are generally preferred in hidden layers of deep networks due to their efficiency and ability to mitigate vanishing gradients.
-- **Softmax** is typically used in the output layer for multi-class classification tasks.
+- **[[Softmax]]** is typically used in the output layer for multi-class classification tasks.
 
 In my project, [[computer_science/python/ai_testing/xor_gate/Modeling XOR Gate]], I used ReLu for the hidden layer, but sigmoid for the output layer.
 

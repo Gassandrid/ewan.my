@@ -72,7 +72,7 @@ If you think about the plot of the two inputs on the 2d plane, you can imageine 
 
 ## Backpropagation
 
-Quite a heavy concept that we wont discuss implementation on (unless you are in the Grad group), but in essence, backpropagation allows us to learn synaptic weights and biases through training. A rough description would be it calculating the "incorrectness" of the output(called a [[Loss Function]]), finding the "rate of change" of the loss with respect to each weight and bias(partial derivatives), and then taking a step in the direction it belives will reduce the loss(the negative gradient). Think of a ball rolling down a hill, where the steepest direction is the direction of the negative gradient.
+Quite a heavy concept that we wont discuss implementation on (unless you are in the Grad group), but in essence, backpropagation allows us to learn synaptic weights and biases through training. A rough description would be it calculating the "incorrectness" of the output(called a [[Loss Function]]), finding the "rate of change" of the loss with respect to each weight and bias([[partial derivatives]]), and then taking a step in the direction it belives will reduce the loss(the negative gradient). Think of a ball rolling down a hill, where the steepest direction is the direction of the negative gradient.
 
 **Map sucess to a "hily field" of weights and biases, and then roll down the hill to find the best set of weights and biases.**
 

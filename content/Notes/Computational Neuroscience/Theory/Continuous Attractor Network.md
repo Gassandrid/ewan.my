@@ -4,15 +4,16 @@ class:
 tags:
   - comp-neuro/theory
   - todo/neuro
+  - math/chaos/attractor
 date: 2025-09-04
-updated: 2026-01-14T10:11:29-05:00
+updated: 2026-02-02T08:42:02-05:00
 source:
   - http://www.scholarpedia.org/article/Continuous_attractor_network
 related:
 author:
 ---
 
-A **Continuous Attractor Network (CAN)** is a type of neural network model that can maintain a continuous range of activity states over time. Unlike discrete attractor networks, which stabilize at specific points, CANs can represent variables that change smoothly, such as spatial position or head direction.
+A **Continuous Attractor Network (CAN)** is a type of neural network model that can maintain a continuous range of activity states over time. Unlike discrete [[Attractor Network]]s, which stabilize at specific points, CANs can represent variables that change smoothly, such as spatial position or head direction.
 
 They are particularly useful in [[Computational Neuroscience]] for modeling systems like the head direction system, grid cells in the [[Entorhinal Cortex]], and other neural representations that require continuous encoding.
 

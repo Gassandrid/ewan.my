@@ -14,7 +14,7 @@ author:
 description:
 aliases:
 date: 2026-01-29T08:32:41-05:00
-updated: 2026-01-29T09:08:06-05:00
+updated: 2026-02-03T08:51:26-05:00
 ---
 
 As computer moved from a government/corporate tool to a personal tool, there was a shift from batch processing to interactive computing. One of the fronts this was seen on is the onset of **computer graphics**. Early computer graphics were limited to simple line drawings, but as hardware improved, more complex graphics became possible.
@@ -130,7 +130,7 @@ dJointSetHingeAxis (hinge,x1,y1,z1); // set the axis of rotation for the hinge j
 
 These have to be defined before the simulation starts, and define how the bodies can move relative to each other.
 
-#### Important Part - Be aware of DEgrees of Freedom
+#### Important Part - Be Aware of DEgrees of Freedom
 
 Possibly the most important part of joints is understanding how many degrees of freedom (DOF) a joint has. This defines how many independent movements the joint allows.
 
@@ -141,7 +141,7 @@ More degrees of freedom means more complex movement, but also more complexity in
 >
 > Think about their "elbows" and "knees" - they mostly just bend in one direction, which simplifies the joint mechanics.
 
-### Geoms - how Bodies Collide
+### Geoms - how Bodies Interact
 
 **Geoms** define the shape of bodies for collision detection. They are used to determine when and how bodies collide with each other in the simulation.
 
@@ -161,3 +161,70 @@ To keep pairs from colliding:
 
 > [!Question] Why is collision detection so computationally expensive?
 > It involves checking every pair of objects in the simulation to see if they are colliding, which can be a lot of calculations, especially as the number of objects increases. Efficient algorithms and data structures are needed to manage this complexity.
+
+### Contacts - How Objects Collide
+
+Contacts define the interaction between colliding bodies. When two geoms collide, a contact point is generated, and the physics engine calculates the forces needed to resolve the collision.
+
+Something you might not be used to is the idea of **event driven programming**. Instead of operating in a linear fashion, computer keeps track of important events, and you implement functions called **callbacks** that get executed when those events happen.
+
+```cpp
+
+static void nearCallback (void *data, dGeomID o1, dGeomID o2)
+{  int i;
+
+// exit without doing anything if the two bodies are connected by a joint  dBodyID b1 = dGeomGetBody(o1);
+dBodyID b2 = dGeomGetBody(o2);
+if (b1 && b2 && dAreConnectedExcluding (b1,b2,dJointTypeContact))
+	return;
+```
+
+In ODE contacts are calculated by a callback function that is called whenever two geoms are close enough to potentially collide. The `nearCallback` function above checks if the two bodies are connected by a joint, and if not, it proceeds to calculate the contact points.
+
+### SimLoop
+
+The simulation loop is where the main simulation happens. It involves checking for collisions, updating the physics world, and rendering the objects.
+
+```cpp
+static void simLoop (int pause) {
+	dSpaceCollide (space,0,&nearCallback);
+
+	if (!pause)
+		dWorldStep(world,0.05);
+
+	dJointGroupEmpty (contactgroup);
+
+	for (int object = 0; object < totalObjects ; object++)
+
+		dsSetColor (obj[object].r, obj[object].g, obj[object].b);
+		Draw(obj[object]);
+
+}
+```
+
+We first check for collisions using `dSpaceCollide`, then if the simulation is not paused, we step the world forward in time using `dWorldStep`. Finally, we clear the contact group and render each object.
+
+### Sensors
+
+Simulating robots involves not just physical bodies, but also sensors that allow the robot to perceive its environment. Common sensors include touch sensors, distance sensors, and cameras.
+
+#### Simulating a Touch Sensor
+
+Touch sensors can be simulated by checking for collisions between the robot and other objects in the environment. When a collision is detected, the touch sensor can be activated.
+
+```cpp
+in nearCallback,
+dCollide(obj2,floor)==true?
+```
+
+#### Simulating a Light Sensor
+
+Light sensors can be simulated by calculating the distance between the light source and the sensor. The intensity of the light can be modeled to decrease with distance.
+
+```cpp
+const dReal posObj1 = dBodyGetPosition(obj1);
+
+const dReal posObj4 = dBodyGetPosition(obj4);
+
+double lightLevel = 1 / EuclideanDistance(posObj1,posObj4)2
+```

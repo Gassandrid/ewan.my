@@ -1,5 +1,5 @@
 ---
-updated: 2026-01-09T12:24:47+02:00
+updated: 2026-01-31T19:32:00-05:00
 tags:
   - seed
   - places
@@ -16,6 +16,8 @@ color: green
 icon: university
 description: my undergraduate university
 date: 2025-12-28T22:48:09+02:00
+aliases:
+  - UVM
 ---
 
 My undergraduate university. Initially came here for computer science, but am lucky to also find their neuroscience department excellent for research opportunities.

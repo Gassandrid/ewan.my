@@ -24,13 +24,13 @@ The key idea is to use a separate learning algorithm to extract model features t
 
 The primary operation is to train a sparse autoencoder on the activations of a specific layer in a neural network. The autoencoder learns to reconstruct the original activations while enforcing sparsity, meaning that only a small number of neurons are active at any given time. This encourages the autoencoder to learn more interpretable features.
 
-This can be done by taking a matrix $M$ of activations from a specific layer in the model, where each row corresponds to a different input example, and each column corresponds to a different neuron in that layer. The sparse autoencoder then learns a weight matrix $W$ such that:
+This can be done by taking a matrix $M$ of activations from a specific layer in the model, where each row corresponds to a different input example, and each column corresponds to a different [[Artificial Neuron|neuron]] in that layer. The sparse autoencoder then learns a weight matrix $W$ such that:
 
 $$
 \hat{M} = M W^T W
 $$
 
-The loss function for training the sparse autoencoder typically includes a reconstruction loss term and a sparsity penalty term, such as:
+The [[Loss Functions|loss function]] for training the sparse autoencoder typically includes a reconstruction loss term and a sparsity penalty term, such as:
 
 $$
 \text{Loss} = ||X - \hat{X}||^2 + \lambda \sum |h_i|
