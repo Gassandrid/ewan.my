@@ -228,3 +228,7 @@ const dReal posObj4 = dBodyGetPosition(obj4);
 
 double lightLevel = 1 / EuclideanDistance(posObj1,posObj4)2
 ```
+
+### Motors
+
+This isnt deploying
