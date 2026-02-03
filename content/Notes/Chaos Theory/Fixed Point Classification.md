@@ -12,8 +12,11 @@ related:
 author:
 description:
 date: 2026-01-15T10:25:05-05:00
-updated: 2026-01-20T10:12:34-05:00
+updated: 2026-02-03T10:12:54-05:00
 title: Fixed Point Classification
+aliases:
+  - Fixed Points
+  - Fixed Point
 ---
 
 Resuming work on [[Linear Systems]] regarding the [[Logistic Map]] using a [[Cobweb Plot]]:
