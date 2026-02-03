@@ -28,7 +28,7 @@ const DEFAULT_PARAMS: LorenzParams = {
   timeScale: 0.5,
   turbulenceAmount: 0.5,
   minOpacity: 0.25,
-  maxOpacity: 0.85,
+  maxOpacity: 0.75,
 }
 
 // Check if we're on mobile
@@ -62,7 +62,13 @@ function createControlPanel(params: LorenzParams, onReset: () => void): HTMLElem
   panel.appendChild(title)
 
   // Define sliders with their ranges
-  const sliders: { key: keyof LorenzParams; label: string; min: number; max: number; step: number }[] = [
+  const sliders: {
+    key: keyof LorenzParams
+    label: string
+    min: number
+    max: number
+    step: number
+  }[] = [
     { key: "sigma", label: "Sigma (σ)", min: 1, max: 30, step: 0.5 },
     { key: "rho", label: "Rho (ρ)", min: 1, max: 50, step: 0.5 },
     { key: "beta", label: "Beta (β)", min: 0.1, max: 10, step: 0.1 },
@@ -371,7 +377,8 @@ function createLorenzBackground() {
       point.line.scale.set(lineLength, 1, 1)
 
       // Update opacities based on strength
-      const dotOpacity = params.minOpacity + strength * (params.maxOpacity - params.minOpacity) * 0.3
+      const dotOpacity =
+        params.minOpacity + strength * (params.maxOpacity - params.minOpacity) * 0.3
       const lineOpacity = strength * params.maxOpacity
 
       if (point.dot.material instanceof THREE.MeshBasicMaterial) {

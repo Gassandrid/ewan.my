@@ -57,18 +57,15 @@ nav#quartztoc-vertical {
         transform-origin: center;
         transition: transform 0.3s ease;
 
-        /* Base state for lines */
+        /* Base state for lines - uses CSS mask for segmentation */
         &>.fill {
-            opacity: 0.35;
-            background-color: var(--dark);
-            height: 3px;
             width: var(--fill-width);
-            /* Fixed width */
             min-width: var(--fill-width);
             flex: 0 0 auto;
-            /* Don't shrink or grow */
+            height: 3px;
+            background-color: var(--dark);
+            opacity: 0.35;
             border-radius: 1px;
-            /* Slight rounding */
 
             /* Start scaled down, script will handle the wave */
             transform: scaleX(1);
@@ -80,7 +77,6 @@ nav#quartztoc-vertical {
         &:hover {
             &>.fill {
                 background-color: var(--secondary);
-                /* Change color on hover */
                 opacity: 0.8;
             }
         }
@@ -88,7 +84,119 @@ nav#quartztoc-vertical {
         /* Active/Click feedback */
         &:active {
             transform: scale(0.99);
-            /* Subtle press effect on whole row */
+        }
+
+        /* Segmentation based on depth using CSS mask */
+        /* depth-0 (h2) = 1 segment (solid), depth-1 (h3) = 2 segments, depth-2 (h4) = 3 segments, etc. */
+
+        /* 2 segments: 50% each with a gap in the middle */
+        &.depth-1>.fill {
+            mask-image: linear-gradient(to right,
+                black 0%, black 47%,
+                transparent 47%, transparent 53%,
+                black 53%, black 100%
+            );
+            -webkit-mask-image: linear-gradient(to right,
+                black 0%, black 47%,
+                transparent 47%, transparent 53%,
+                black 53%, black 100%
+            );
+        }
+
+        /* 3 segments: ~33% each with gaps */
+        &.depth-2>.fill {
+            mask-image: linear-gradient(to right,
+                black 0%, black 31%,
+                transparent 31%, transparent 35%,
+                black 35%, black 65%,
+                transparent 65%, transparent 69%,
+                black 69%, black 100%
+            );
+            -webkit-mask-image: linear-gradient(to right,
+                black 0%, black 31%,
+                transparent 31%, transparent 35%,
+                black 35%, black 65%,
+                transparent 65%, transparent 69%,
+                black 69%, black 100%
+            );
+        }
+
+        /* 4 segments: 25% each with gaps */
+        &.depth-3>.fill {
+            mask-image: linear-gradient(to right,
+                black 0%, black 22%,
+                transparent 22%, transparent 26%,
+                black 26%, black 48%,
+                transparent 48%, transparent 52%,
+                black 52%, black 74%,
+                transparent 74%, transparent 78%,
+                black 78%, black 100%
+            );
+            -webkit-mask-image: linear-gradient(to right,
+                black 0%, black 22%,
+                transparent 22%, transparent 26%,
+                black 26%, black 48%,
+                transparent 48%, transparent 52%,
+                black 52%, black 74%,
+                transparent 74%, transparent 78%,
+                black 78%, black 100%
+            );
+        }
+
+        /* 5 segments: 20% each with gaps */
+        &.depth-4>.fill {
+            mask-image: linear-gradient(to right,
+                black 0%, black 17%,
+                transparent 17%, transparent 20%,
+                black 20%, black 37%,
+                transparent 37%, transparent 40%,
+                black 40%, black 57%,
+                transparent 57%, transparent 60%,
+                black 60%, black 77%,
+                transparent 77%, transparent 80%,
+                black 80%, black 100%
+            );
+            -webkit-mask-image: linear-gradient(to right,
+                black 0%, black 17%,
+                transparent 17%, transparent 20%,
+                black 20%, black 37%,
+                transparent 37%, transparent 40%,
+                black 40%, black 57%,
+                transparent 57%, transparent 60%,
+                black 60%, black 77%,
+                transparent 77%, transparent 80%,
+                black 80%, black 100%
+            );
+        }
+
+        /* 6 segments: ~16.6% each with gaps */
+        &.depth-5>.fill {
+            mask-image: linear-gradient(to right,
+                black 0%, black 14%,
+                transparent 14%, transparent 17%,
+                black 17%, black 31%,
+                transparent 31%, transparent 34%,
+                black 34%, black 48%,
+                transparent 48%, transparent 51%,
+                black 51%, black 65%,
+                transparent 65%, transparent 68%,
+                black 68%, black 82%,
+                transparent 82%, transparent 85%,
+                black 85%, black 100%
+            );
+            -webkit-mask-image: linear-gradient(to right,
+                black 0%, black 14%,
+                transparent 14%, transparent 17%,
+                black 17%, black 31%,
+                transparent 31%, transparent 34%,
+                black 34%, black 48%,
+                transparent 48%, transparent 51%,
+                black 51%, black 65%,
+                transparent 65%, transparent 68%,
+                black 68%, black 82%,
+                transparent 82%, transparent 85%,
+                black 85%, black 100%
+            );
         }
 
         &>.indicator {
@@ -123,29 +231,4 @@ nav#quartztoc-vertical {
 
     }
 
-    /* Hierarchy: indent and shorten lines for deeper heading levels */
-    /* Hierarchy: indent the entire container (line + text) for deeper heading levels */
-    button.toc-item.depth-1 {
-        padding-left: 0 !important;
-    }
-
-    button.toc-item.depth-2 {
-        padding-left: 1.5rem !important;
-    }
-
-    button.toc-item.depth-3 {
-        padding-left: 3rem !important;
-    }
-
-    button.toc-item.depth-4 {
-        padding-left: 4.5rem !important;
-    }
-
-    button.toc-item.depth-5 {
-        padding-left: 6rem !important;
-    }
-
-    button.toc-item.depth-6 {
-        padding-left: 7.5rem !important;
-    }
 }
