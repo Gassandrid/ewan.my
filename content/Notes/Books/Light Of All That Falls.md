@@ -1,21 +1,20 @@
 ---
-date: 2026-01-19T10:16:24-05:00
-updated: 2026-01-19T10:19:45-05:00
+date: 2026-01-19 10:16:24-05:00
+updated: 2026-01-19 10:19:45-05:00
 class:
-  - book
+- book
 tags:
-  - books
-source:
-image: "[[lightAllFalls.png]]"
+- books
+source: null
+image: '[[lightAllFalls.png]]'
 author:
-  - "[[James Islington]]"
+- '[[James Islington]]'
 genre:
-  - Fantasy
-description: concludes James Islington's Licanius Trilogy by bringing its complex time-traveling plot to a climactic close
-progress:
+- Fantasy
+description: concludes James Islington's Licanius Trilogy by bringing its complex
+  time-traveling plot to a climactic close
+progress: null
 status: done
-completed: 2019-01-01
-series: "[[The Licanius Trilogy]]"
+series: '[[The Licanius Trilogy]]'
 ---
-
 ![[lightAllFalls.png]]

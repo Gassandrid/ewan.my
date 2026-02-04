@@ -1,33 +1,32 @@
 ---
 date: 2025-06-13
-updated: 2026-01-29T10:47:02-05:00
+updated: 2026-01-29 10:47:02-05:00
 tags:
-  - books/geb
-  - philosophy
-  - music/classical
-  - math/logic
-  - books
+- books/geb
+- philosophy
+- music/classical
+- math/logic
+- books
 class:
-  - book
+- book
 author:
-  - "[[Douglas Hofstadter]]"
-image: "[[GebCover.png]]"
+- '[[Douglas Hofstadter]]'
+image: '[[GebCover.png]]'
 source:
-  - https://www.physixfan.com/wp-content/files/GEBen.pdf
-  - Paperback
+- https://www.physixfan.com/wp-content/files/GEBen.pdf
+- Paperback
 genre:
-  - Mathematics
-  - Nonfiction
-description: an investigation of the nature of the mind and human conciousness through the creative endeavors of Kurt Godel, MC Escher, and Sebastian Bach
+- Mathematics
+- Nonfiction
+description: an investigation of the nature of the mind and human conciousness through
+  the creative endeavors of Kurt Godel, MC Escher, and Sebastian Bach
 progress: 328 - Ant Fugue
 status: in-progress
-completed:
 aliases:
-  - Godel Escher Bach
-  - Godel, Escher, Bach
-  - GEB
+- Godel Escher Bach
+- Godel, Escher, Bach
+- GEB
 ---
-
 ![[GebCover.png]]
 
 > **Gödel, Escher, Bach**( often abbreviated as **GEB**), is a non fiction book written by American cognitive scientist [[Douglas Hofstadter]]. Through examples from the lives of the mathematician *Kurt Gödel*, the artist *M.C. Escher*, and the classical composer *Johann Sebastian Bach*, Hofstadter seeks to explore the nature of intelligence, symmetry, and mathematics.

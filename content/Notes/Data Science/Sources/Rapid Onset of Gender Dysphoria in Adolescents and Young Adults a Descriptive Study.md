@@ -1,18 +1,16 @@
 ---
 source: https://www.jahonline.org/article/S1054-139X%2816%2930765-0/fulltext
 author:
-  - "[[Lisa L. Littman]]"
+- '[[Lisa L. Littman]]'
 published: 2018-08-16
 class: paper
-completed: false
-watched: false
-related:
+related: null
 tags:
-  - papers
+- papers
 date: 2025-09-02
 updated: 2025-09-22
+status: none
 ---
-
 ![[pone.0214157.s001.pdf]]
 
 ## Methods
