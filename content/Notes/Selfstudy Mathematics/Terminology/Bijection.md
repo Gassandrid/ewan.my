@@ -1,12 +1,13 @@
 ---
 id: Bijection
-aliases: []
+aliases:
+  - bijection
 tags:
   - math/terms
 class:
   - note
 date: 2025-10-06
-updated: 2026-01-10T10:47:18+02:00
+updated: 2026-02-05T09:01:58-05:00
 source:
 related:
 author:

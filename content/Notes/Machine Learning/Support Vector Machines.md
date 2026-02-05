@@ -1,14 +1,11 @@
 ---
-class:
-  - note
-tags:
-  - cs/ai
-source:
-related:
-author:
-description:
+id: Support Vector Machines
 aliases:
   - SVM
+tags:
+  - cs/ai
+class:
+  - note
 date: 2026-02-02T09:11:55-05:00
 updated: 2026-02-04T08:39:25-05:00
 ---

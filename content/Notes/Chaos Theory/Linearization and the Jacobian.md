@@ -1,23 +1,21 @@
 ---
-date: 2026-02-03T10:12:30-05:00
-updated: 2026-02-03T14:23:20-05:00
-class:
-  - note
-  - lecture
-tags:
-  - university
-course: "[[Chaos, Fractals, and Dynamical Systems]]"
-lecture-number: 7
-source:
-related:
-author:
-description:
+id: Linearization and the Jacobian
 aliases:
   - Jacobian Matrix
   - Local Linearization
   - Eigenvalue Analysis
   - Linearization
   - Hénon Map Jacobian
+tags:
+  - university
+class:
+  - note
+  - lecture
+course: "[[Chaos, Fractals, and Dynamical Systems]]"
+date: 2026-02-03T10:12:30-05:00
+description: how linear maps describe local behavior of nonlinear systems via the Jacobian matrix
+lecture-number: 7
+updated: 2026-02-03T14:23:20-05:00
 ---
 
 Linear maps describe **local behavior** of nonlinear systems. Near a fixed point, any smooth map looks linear. The [[Jacobian]] matrix(the derivative of a nonlinear map) is exactly this linear approximation. So understanding how linear maps behave (sinks, sources, saddles) directly tells us how a nonlinear system behaves near its fixed points.
@@ -89,7 +87,7 @@ where $\tan \theta = b/a$. This means $A$ **rotates** points by angle $\theta$ a
 
 ---
 
->[!Abstract] Theorem
+> [!Abstract] Theorem
 > Let $A$ be a linear map on $\mathbb{R}^m$ represented by a matrix. Then:
 >
 > 1. The origin is a [[Attracting fixed point|sink]] if all eigenvalues satisfy $|\lambda| < 1$
@@ -114,12 +112,12 @@ $$
 \mathcal{D}\vec{f}(\vec{p})=\begin{bmatrix}
 \frac{ \partial f_{1} }{ \partial x_{1} }(\vec{p})  & \frac{ \partial f_{1} }{ \partial x_{2} } (\vec{p}) & \dots & \frac{ \partial f_{1} }{ \partial x_{n} } (\vec{p}) \\
 \frac{ \partial f_{2} }{ \partial x_{1} } (\vec{p}) & \frac{ \partial f_{2} }{ \partial x_{2} }  (\vec{p})& \dots & \frac{ \partial f_{2} }{ \partial x_{n} } (\vec{p}) \\
-\vdots  &  \vdots  &  \vdots  &  \vdots  & 
+\vdots  &  \vdots  &  \vdots  &  \vdots  &
 \end{bmatrix}
 $$
 
->[!Example]
-> 
+> [!Example]
+>
 > Henon Map $f(x,y)= (a-x^2 + by, x)$
 >
 > $$

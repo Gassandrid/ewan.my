@@ -1,6 +1,7 @@
 ---
 id: Orthogonality
-aliases: 
+aliases:
+  - Orthogonal
 tags:
   - math/linear-algebra
 date: 2025-06-17

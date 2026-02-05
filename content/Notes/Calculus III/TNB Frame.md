@@ -43,7 +43,7 @@ $$\mathbf{B}(t) = \mathbf{T}(t) \times \mathbf{N}(t)
 $$
 
 - It is the cross product of the tangent and normal vectors.
-- \( \mathbf{B}(t) \) is orthogonal to both \( \mathbf{T}(t) \) and \( \mathbf{N}(t) \).
+- \( \mathbf{B}(t) \) is [[Orthogonality|orthogonal]] to both \( \mathbf{T}(t) \) and \( \mathbf{N}(t) \).
 
 ### 4. **Curvature And Torsion**
 

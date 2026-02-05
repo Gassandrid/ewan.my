@@ -19,7 +19,7 @@ related:
   - "[[Jensen's Inequality]]"
   - "[[Variational Inference]]"
   - "[[Variational Autoencoder]]"
-updated: 2026-02-04T12:47:39-05:00
+updated: 2026-02-04T13:07:54-05:00
 ---
 
 The **Evidence Lower Bound (ELBO)** is the core quantity in variational inference and the key optimization objective for training [[Variational Autoencoder|Variational Autoencoders]]. It provides a tractable lower bound on the log marginal likelihood (the "evidence") of observed data. 
@@ -84,7 +84,7 @@ $$
 \mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_{\phi}(z|x)}\left[\log p_{\theta}(x,z) - \log q_{\phi}(z|x)\right]
 $$
 
-Since $D_{KL} \geq 0$, we have:
+Since $D_{KL} \geq 0$, we get
 
 $$
 \log p_{\theta}(x) \geq \mathcal{L}(\theta, \phi; x)
@@ -94,9 +94,9 @@ The ELBO is a **lower bound** on the log evidence!
 
 ---
 
-## Alternative ELBO Forms
+## Other Forms
 
-### Reconstruction + Regularization
+### Reconstruction and Regularization
 
 The ELBO can be rewritten using the joint distribution $p_{\theta}(x,z) = p_{\theta}(x|z)p_{\theta}(z)$:
 
