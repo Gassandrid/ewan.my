@@ -159,6 +159,27 @@ function createLorenzBackground() {
   let dotGeometry: THREE.CircleGeometry | null = null
   let lineGeometry: THREE.PlaneGeometry | null = null
 
+  // Perturbation field — stored as flat Float32Arrays indexed [col * rows + row]
+  // Double-buffered so diffusion reads from old while writing to new
+  let gridCols = 0
+  let gridRows = 0
+  let perturbX: Float32Array = new Float32Array(0)
+  let perturbY: Float32Array = new Float32Array(0)
+  let tempX: Float32Array = new Float32Array(0)
+  let tempY: Float32Array = new Float32Array(0)
+
+  // Disturbance parameters
+  const DISTURB_RADIUS = 3.5 // world-space radius of influence
+  const DISTURB_STRENGTH = 5000 // force applied per second while holding
+  const DECAY_RATE = 0.6 // slow decay so disturbance lingers
+  const DIFFUSION_RATE = 18.0 // fast spread to neighbors
+
+  // Track where the pointer is being held for continuous force application
+  let pointerWorldPos: [number, number] | null = null
+  // Fast-path: skip diffusion when no perturbation is active
+  let perturbationActive = false
+  const PERTURB_EPSILON = 0.5 // threshold below which we zero out
+
   // Camera reference
   let camera: THREE.OrthographicCamera
 
@@ -209,6 +230,15 @@ function createLorenzBackground() {
     lineGeometry.translate(0.5, 0, 0)
 
     const { gridSizeX, gridSizeY } = calculateGridDimensions()
+    gridCols = gridSizeX
+    gridRows = gridSizeY
+
+    // Allocate perturbation buffers
+    const totalPoints = gridCols * gridRows
+    perturbX = new Float32Array(totalPoints)
+    perturbY = new Float32Array(totalPoints)
+    tempX = new Float32Array(totalPoints)
+    tempY = new Float32Array(totalPoints)
 
     // Create flow points to fill the screen
     for (let x = 0; x < gridSizeX; x++) {
@@ -275,7 +305,7 @@ function createLorenzBackground() {
     camera.updateProjectionMatrix()
   }
 
-  // Lorenz flow calculation - returns direction and strength
+  // Lorenz flow calculation - returns raw dx/dy and derived angle/strength
   function lorenzFlow(x: number, y: number, t: number) {
     const scale = 0.8
     const px = x * scale + Math.sin(t * 0.8) * 5.0
@@ -285,13 +315,84 @@ function createLorenzBackground() {
     const dx = params.sigma * (py - px)
     const dy = px * (params.rho - pz) - py
 
-    const angle = Math.atan2(dy, dx)
-    const magnitude = Math.sqrt(dx * dx + dy * dy)
-    // Normalize strength to 0-1 range (typical magnitude is 0-400)
-    const strength = Math.min(magnitude / 300, 1.0)
-
-    return { angle, strength }
+    return { dx, dy }
   }
+
+  // Convert screen coordinates to group-local coordinates
+  // Direct math: grid spans worldWidth x worldHeight centered at origin
+  function screenToGroupLocal(screenX: number, screenY: number): [number, number] {
+    const { worldWidth, worldHeight } = calculateGridDimensions()
+    const gx = (screenX / window.innerWidth - 0.5) * worldWidth
+    const gy = -(screenY / window.innerHeight - 0.5) * worldHeight
+    return [gx, gy]
+  }
+
+  // Apply continuous radial disturbance — only touches grid cells within radius
+  function applyDisturbance(cx: number, cy: number, dt: number) {
+    const force = DISTURB_STRENGTH * dt
+    // Convert world-space center to grid cell range
+    const halfW = (gridCols * params.spacing) / 2
+    const halfH = (gridRows * params.spacing) / 2
+    const cellRadius = Math.ceil(DISTURB_RADIUS / params.spacing)
+    const centerCol = Math.round((cx + halfW) / params.spacing)
+    const centerRow = Math.round((cy + halfH) / params.spacing)
+    const colMin = Math.max(0, centerCol - cellRadius)
+    const colMax = Math.min(gridCols - 1, centerCol + cellRadius)
+    const rowMin = Math.max(0, centerRow - cellRadius)
+    const rowMax = Math.min(gridRows - 1, centerRow + cellRadius)
+
+    for (let col = colMin; col <= colMax; col++) {
+      for (let row = rowMin; row <= rowMax; row++) {
+        const idx = col * gridRows + row
+        const [px, py] = flowPoints[idx].position
+        const dx = px - cx
+        const dy = py - cy
+        const distSq = dx * dx + dy * dy
+
+        if (distSq < DISTURB_RADIUS * DISTURB_RADIUS && distSq > 0.0001) {
+          const dist = Math.sqrt(distSq)
+          const falloff = 1 - dist / DISTURB_RADIUS
+          const strength = force * falloff * falloff
+          perturbX[idx] += (dx / dist) * strength
+          perturbY[idx] += (dy / dist) * strength
+        }
+      }
+    }
+    perturbationActive = true
+  }
+
+  // Check if an element is interactive
+  function isInteractiveElement(el: Element | null): boolean {
+    while (el) {
+      const tag = el.tagName?.toLowerCase()
+      if (
+        tag === "a" || tag === "button" || tag === "input" ||
+        tag === "textarea" || tag === "select" || tag === "label"
+      ) return true
+      if (el.id === "lorenz-controls") return true
+      if ((el as HTMLElement).getAttribute?.("role") === "button") return true
+      el = el.parentElement
+    }
+    return false
+  }
+
+  function onPointerDown(e: PointerEvent) {
+    if (isInteractiveElement(e.target as Element)) return
+    pointerWorldPos = screenToGroupLocal(e.clientX, e.clientY)
+  }
+
+  function onPointerMove(e: PointerEvent) {
+    if (!pointerWorldPos) return
+    pointerWorldPos = screenToGroupLocal(e.clientX, e.clientY)
+  }
+
+  function onPointerUp() {
+    pointerWorldPos = null
+  }
+
+  document.addEventListener("pointerdown", onPointerDown)
+  document.addEventListener("pointermove", onPointerMove)
+  document.addEventListener("pointerup", onPointerUp)
 
   // Debounce helper
   let resizeTimeout: ReturnType<typeof setTimeout> | null = null
@@ -353,30 +454,85 @@ function createLorenzBackground() {
   // Animation loop
   const clock = new THREE.Clock()
   let animationId: number
+  let lastFrameTime = 0
 
   function animate() {
     animationId = requestAnimationFrame(animate)
 
-    const time = clock.getElapsedTime() * params.timeScale
+    const elapsed = clock.getElapsedTime()
+    const rawDt = elapsed - lastFrameTime
+    lastFrameTime = elapsed
+    const dt = Math.min(rawDt, 0.05)
 
-    // Update each flow point
-    for (const point of flowPoints) {
+    const time = elapsed * params.timeScale
+
+    // --- Apply continuous force while pointer is held ---
+    if (pointerWorldPos) {
+      applyDisturbance(pointerWorldPos[0], pointerWorldPos[1], dt)
+    }
+
+    // --- Diffusion + decay (only when perturbation is active) ---
+    if (perturbationActive) {
+      const D = DIFFUSION_RATE * dt
+      const Dc = Math.min(D, 0.24)
+
+      for (let col = 0; col < gridCols; col++) {
+        for (let row = 0; row < gridRows; row++) {
+          const idx = col * gridRows + row
+          const cx = perturbX[idx]
+          const cy = perturbY[idx]
+
+          let sumX = 0, sumY = 0
+          let neighbors = 0
+          if (col > 0) { const n = (col - 1) * gridRows + row; sumX += perturbX[n]; sumY += perturbY[n]; neighbors++ }
+          if (col < gridCols - 1) { const n = (col + 1) * gridRows + row; sumX += perturbX[n]; sumY += perturbY[n]; neighbors++ }
+          if (row > 0) { const n = col * gridRows + (row - 1); sumX += perturbX[n]; sumY += perturbY[n]; neighbors++ }
+          if (row < gridRows - 1) { const n = col * gridRows + (row + 1); sumX += perturbX[n]; sumY += perturbY[n]; neighbors++ }
+
+          tempX[idx] = cx + Dc * (sumX - neighbors * cx)
+          tempY[idx] = cy + Dc * (sumY - neighbors * cy)
+        }
+      }
+
+      // Swap buffers, apply decay, and check if anything is still active
+      const decay = Math.exp(-DECAY_RATE * dt)
+      let anyActive = false
+      for (let i = 0; i < perturbX.length; i++) {
+        let vx = tempX[i] * decay
+        let vy = tempY[i] * decay
+        // Zero out tiny values so we can go idle sooner
+        if (vx * vx + vy * vy < PERTURB_EPSILON * PERTURB_EPSILON) {
+          vx = 0; vy = 0
+        } else {
+          anyActive = true
+        }
+        perturbX[i] = vx
+        perturbY[i] = vy
+      }
+      perturbationActive = anyActive
+    }
+
+    // --- Update each flow point visual ---
+    for (let i = 0; i < flowPoints.length; i++) {
+      const point = flowPoints[i]
       const [x, y] = point.position
 
-      const { angle, strength } = lorenzFlow(x, y, time)
+      const { dx: lorenzDx, dy: lorenzDy } = lorenzFlow(x, y, time)
 
-      // Add subtle turbulence
+      // Only add perturbation when active (avoids reading cold arrays)
+      const totalDx = perturbationActive ? lorenzDx + perturbX[i] : lorenzDx
+      const totalDy = perturbationActive ? lorenzDy + perturbY[i] : lorenzDy
+
       const turbulence =
         Math.sin(x * 0.5 + time * 2.0) * Math.cos(y * 0.5 + time * 1.7) * params.turbulenceAmount
-      const finalAngle = angle + turbulence
+      const finalAngle = Math.atan2(totalDy, totalDx) + turbulence
 
-      // Update line rotation and scale based on flow
+      const magnitude = Math.sqrt(totalDx * totalDx + totalDy * totalDy)
+      const strength = Math.min(magnitude / 300, 1.0)
+
       point.line.rotation.z = finalAngle
-      // Scale line length by strength (0 to maxLineLength)
-      const lineLength = strength * params.maxLineLength
-      point.line.scale.set(lineLength, 1, 1)
+      point.line.scale.set(strength * params.maxLineLength, 1, 1)
 
-      // Update opacities based on strength
       const dotOpacity =
         params.minOpacity + strength * (params.maxOpacity - params.minOpacity) * 0.3
       const lineOpacity = strength * params.maxOpacity
@@ -398,6 +554,9 @@ function createLorenzBackground() {
   const cleanup = () => {
     cancelAnimationFrame(animationId)
     window.removeEventListener("resize", handleResize)
+    document.removeEventListener("pointerdown", onPointerDown)
+    document.removeEventListener("pointermove", onPointerMove)
+    document.removeEventListener("pointerup", onPointerUp)
     if (resizeTimeout) {
       clearTimeout(resizeTimeout)
     }

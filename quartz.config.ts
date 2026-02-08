@@ -27,7 +27,7 @@ const config: QuartzConfig = {
       fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "Fraunces",
+        header: "Instrument Serif",
         body: "ewanfont",
         code: "IBM Plex Mono",
       },
