@@ -1,2 +1,0 @@
-
-Information theory and applications

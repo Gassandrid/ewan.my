@@ -1,6 +1,6 @@
 ---
 date: 2025-01-04
-updated: 2025-09-29
+updated: 2026-02-09T13:23:57-05:00
 title: Python Libraries to Learn
 tags:
   - cs/python
@@ -10,32 +10,16 @@ tags:
   - todo/math
 ---
 
-A lot of these I already know, but I thought it would be useful to have a list of not only libraries I need to learn, but their importance in doing so.
 
-I know a lot of these libraries already, but I like writing down references anyway so.....
-
-## Main Checklist for Reference Notes
-
-**Math:**
-- [ ] [[Numpy]]
-- [ ] [[SciPy]]
-- [ ] [[SymPy]]
-- [ ] [[TransformerLens]] - good for [[Mechanistic Interpretability]] research in ai
-
-**Stats:**
-- [ ] [[Pandas]]
-- [ ] [[MatPlotLib]]
-- [ ] [[PyTorch]]
-- [ ] [[Seaborn]]
-- [ ] [[Plotly]]
-- [ ] [[Scikit-Learn]]
 
 **Comp Neuro:**
 https://neuralensemble.org/
-- [ ] [[Brian2]]
-- [ ] [[Elephant]]
-- [ ] [[NEST]]
+- [ ] [[Brian2]] - best for prototyping, general comp neuro abstract modelling
+- [ ] [[Elephant]] - working with actual brain data
+- [ ] [[NEST]] - for REALLY big simulations - im talking about supercomputer level
 - [ ] [[Nengo]] (maybe, I dont know if it is still relavent)
+- [ ] [[TransformerLens]] - good for [[Mechanistic Interpretability]] research in ai
+
 
 **Misc**:
 - [ ] [[yt-dlp]]
@@ -57,47 +41,6 @@ https://neuralensemble.org/
 |**Neo**|Data structures for electrophysiology data (standardizes how spikes, events, analog signals, etc. are stored).|
 |**BindsNET**|Deep learning + spiking neural network toolkit. If you want SNNs _and_ ML connections.|
 |**PyNN**|Abstraction layer to write one code that can run on Brian2, NEST, NEURON, etc.|
-
-#### Math / Numerical Methods
-
-| Library    | Why You Need It                                                                                                            |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------- |
-| **NumPy**  | Obviously. Vectorized arrays, linear algebra, basic numerics.                                                              |
-| **SciPy**  | Signal processing, integration, ODE solvers, optimization — _especially_ important for modeling neurons and systems.       |
-| **SymPy**  | Symbolic math (algebra, calculus, solving equations symbolically). Useful for deriving equations before coding.            |
-| **JAX**    | If you want **autograd** (automatic differentiation) and **insane speedups** with GPU/TPU acceleration for numerical work. |
-| **mpmath** | Arbitrary-precision math. Helps if you need very high precision (rare but sometimes essential).                            |
-| **CVXPY**  | Convex optimization modeling, if you’re solving optimization problems (important for fitting models, control theory, etc.) |
-
----
-
-#### Data and Visualization
-
-| Library                                       | Why You Need It                                                                                                                                   |
-| :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Pandas**                                    | Essential for managing experimental data, behavioral recordings, trial logs, spike data, etc.                                                     |
-| **Matplotlib** (with **mpl_toolkits** for 3D) | Standard, but flexible enough if you get good with it (not just basic plots).                                                                     |
-| **Seaborn**                                   | Statistical data visualization built on top of matplotlib. Very clean for correlation matrices, kernel density plots, etc.                        |
-| **Plotly**                                    | If you need **interactive** 2D/3D plots (like dragging around brain activity plots).                                                              |
-| **h5py**                                      | Reading and writing `.h5` (HDF5) files. Essential when datasets get too big for CSVs and small formats.                                           |
-| **scikit-learn**                              | Standard ML algorithms and preprocessing — **not for big models**, but awesome for exploratory data work (e.g., PCA, clustering neural activity). |
-| **xarray**                                    | Multidimensional labeled arrays — great for managing very high-dimensional simulations, like time × space × neurons × trials.                     |
-| **PyTables**                                  | Advanced handling of very large datasets stored in HDF5 format.                                                                                   |
-
----
-
-## 🔥 Bonus (Power Tools You Might Not Know)
-
-| Library                     | Why You Need It                                                                                              |
-| :-------------------------- | :----------------------------------------------------------------------------------------------------------- |
-|                             | Better package management than pip/conda for scientific projects.                                            |
-| **Numba**                   | Just-in-time (JIT) compiler for speeding up inner loops that can't be vectorized.                            |
-| **dask**                    | Parallelize data operations when your data doesn't fit in memory (and way easier than pure multiprocessing). |
-| **NetworkX**                | Graph theory, essential if you're modeling brain connectivity as a network (very common).                    |
-| **PyMC** / **ArviZ**        | Bayesian modeling, probabilistic programming. Crucial for uncertainty quantification.                        |
-| **OpenAI Gym / PettingZoo** | If you later branch into neural control tasks, simulations of environments are here.                         |
-| **Scikit-image**            | For analysis if you're working with microscopy or brain imaging data.                                        |
-| **statsmodels**             | Advanced statistical tests and models, beyond what scikit-learn usually covers.                              |
 
 If you only want a "working core" you can expand later:
 

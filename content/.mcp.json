@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "obsidian-vault": {
+      "command": "python3",
+      "args": ["/Users/gassandrid/VAULT/.claude/vault_mcp_server.py"]
+    }
+  }
+}

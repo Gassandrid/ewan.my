@@ -46,6 +46,6 @@ This is a very general concept, but I am a little rough on my biology, and the n
 
 Quite similar to theoretical, but I like to think of this as more the math side of things to learn, whereas theoretical covers concepts more specifically atuned to neuroscience, aka theta rhythm.
 
-### Differential Math and The Hodgkin-Huxley Model
+### Differential Math and The [[Hodgkin Huxley Model|Hodgkin-Huxley Model]]
 
 Will eventually be covered in the [[Theoretical Neuroscience Textbook|textbook]], but honing my differential equations skill set would be a wise decision to prepare for this concept. The Hodgkin-huxley model is a bit old, but still widely considered one of the most important unifying theories of brain function.

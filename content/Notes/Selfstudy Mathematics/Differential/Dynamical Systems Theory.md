@@ -4,12 +4,13 @@ class:
 tags:
   - math/calculus/differential
   - todo/math
+  - math/chaos/dynamics
 source:
   - "[[Chaos Theory the language of (in)stability]]"
 related:
 author:
 date: 2025-09-12
-updated: 2025-12-14
+updated: 2026-02-08T08:03:54-05:00
 aliases:
   - Chaos Theory
 ---

@@ -1,6 +1,7 @@
 ---
 id: CH2 - Random Variables
 aliases:
+  - Random Variable
 tags:
   - math/probability/statistics
   - university

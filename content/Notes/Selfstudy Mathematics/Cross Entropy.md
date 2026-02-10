@@ -9,7 +9,7 @@ class:
 date: 2025-09-16
 source:
   - "[[The Key Equation Behind Probability]]"
-updated: 2025-11-11
+updated: 2026-02-09T09:00:37-05:00
 ---
 
 **Cross Entropy** builds on the concept of [[Entropy in Information]] by measuring the difference between two probability distributions. While entropy quantifies the uncertainty within a single distribution, cross entropy evaluates how one distribution diverges from another.
@@ -24,7 +24,7 @@ In an ideal world, we would have access to the underlying [[Probability Distribu
 
 We extend apon the idea of **cross entropy** with something call **Kullback-Leibler Divergence** ([[Kullback-Leibler Divergence]]), which measures how one probability distribution diverges from a second, expected probability distribution.
 
-## Formal Definition
+#### Formal Definition
 
 **Cross Entropy** between two discrete probability distributions $P$ and $Q$ over the same set of events is defined as:
 
@@ -38,7 +38,7 @@ Where:
 - $Q(x)$ is the estimated distribution (the predicted probabilities of events).
 - $b$ is the base of the logarithm, commonly 2 (bits), e (nats), or 10 (hartleys).
 
-### Example Values
+#### Example Values
 
 Let's say we have two distributions over the outcomes of a 3-sided die:
 
@@ -61,7 +61,7 @@ $$
 The value of cross entropy indicates how well the predicted distribution $Q$ approximates the true distribution $P$. A lower cross entropy value suggests that $Q$ is a better approximation of $P$, while a higher value indicates greater divergence between the two distributions.
 
 > [!Warning] Important t
-> **Cross Entropy is NOT Symmetric**: Note that cross entropy is not symmetric, meaning that $H(P, Q)$ is not necessarily equal to $H(Q, P)$. This asymmetry reflects the fact that the roles of the true and estimated distributions are different in the calculation.
+> **Cross Entropy is NOT Symmetric**: means that $H(P, Q)$ is not necessarily equal to $H(Q, P)$. This asymmetry reflects the fact that the roles of the true and estimated distributions are different in the calculation.
 
 ---
 
