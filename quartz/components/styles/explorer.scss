@@ -1,14 +1,13 @@
 @use "../../styles/variables.scss" as *;
 
 @media all and ($mobile) {
-  .page>#quartz-body {
-
+  .page > #quartz-body {
     // Shift page position when toggling Explorer on mobile.
-    &> :not(.sidebar.left:has(.explorer)) {
+    & > :not(.sidebar.left:has(.explorer)) {
       transition: transform 300ms ease-in-out;
     }
 
-    &.lock-scroll> :not(.sidebar.left:has(.explorer)) {
+    &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
       transform: translateX(100dvw);
       transition: transform 300ms ease-in-out;
     }
@@ -22,7 +21,7 @@
       margin: 0;
     }
 
-    .hide-until-loaded~.explorer-content {
+    .hide-until-loaded ~ .explorer-content {
       display: none;
     }
   }
@@ -88,7 +87,7 @@
     pointer-events: all;
     transition: transform 0.35s ease;
 
-    &>polyline {
+    & > polyline {
       pointer-events: none;
     }
   }
@@ -124,7 +123,7 @@ button.desktop-explorer {
   padding-right: 1rem;
   /* Space for the spine */
 
-  &.collapsed>.overflow::after {
+  &.collapsed > .overflow::after {
     opacity: 0;
   }
 
@@ -132,7 +131,10 @@ button.desktop-explorer {
     list-style: none;
     margin: 0;
     padding: 0;
-    overscroll-behavior: contain;
+
+    &.explorer-ul {
+      overscroll-behavior: contain;
+    }
 
     /* Main Spine */
     border-right: 2px solid var(--lightgray);
@@ -142,7 +144,7 @@ button.desktop-explorer {
       /* Add spacing to prevent overlap */
     }
 
-    & li>a {
+    & li > a {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
@@ -153,7 +155,7 @@ button.desktop-explorer {
       overflow: hidden;
       /* Ensure container clips */
 
-      &>.text {
+      & > .text {
         /* Text Truncation & Ellipsis */
         white-space: nowrap;
         overflow: hidden;
@@ -177,7 +179,9 @@ button.desktop-explorer {
         margin-left: 0;
         /* Margin handled by text margin-right */
         opacity: 0.5;
-        transition: background-color 0.2s ease, opacity 0.2s ease;
+        transition:
+          background-color 0.2s ease,
+          opacity 0.2s ease;
         min-width: 1.5rem;
         /* Ensure line is always visible even with long text */
       }
@@ -214,7 +218,7 @@ button.desktop-explorer {
   }
 
   /* Nested Lists: Reverse Indentation */
-  .folder-outer>ul {
+  .folder-outer > ul {
     overflow: hidden;
     margin-left: 0;
     padding-left: 0;
@@ -247,7 +251,9 @@ button.desktop-explorer {
     background: var(--lightgray);
     margin-left: 0;
     opacity: 0.5;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      opacity 0.2s ease;
     min-width: 1.5rem;
     /* Ensure line is visible */
   }
@@ -257,7 +263,7 @@ button.desktop-explorer {
     opacity: 1;
   }
 
-  & div>a {
+  & div > a {
     color: var(--secondary);
     font-family: var(--headerFont);
     font-size: 0.95rem;
@@ -266,7 +272,7 @@ button.desktop-explorer {
     display: inline-block;
   }
 
-  & div>a:hover {
+  & div > a:hover {
     color: var(--tertiary);
   }
 
@@ -282,7 +288,7 @@ button.desktop-explorer {
     /* Space before line */
   }
 
-  & div>button {
+  & div > button {
     color: var(--dark);
     background-color: transparent;
     border: none;
@@ -328,7 +334,7 @@ button.desktop-explorer {
   /* display: none; */
 }
 
-li:has(> .folder-outer:not(.open))>.folder-container>svg {
+li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   transform: rotate(-90deg);
 }
 
@@ -341,7 +347,7 @@ li:has(> .folder-outer:not(.open))>.folder-container>svg {
     &.collapsed {
       flex: 0 0 34px;
 
-      &>.explorer-content {
+      & > .explorer-content {
         transform: translateX(-100vw);
         visibility: hidden;
       }
@@ -350,7 +356,7 @@ li:has(> .folder-outer:not(.open))>.folder-container>svg {
     &:not(.collapsed) {
       flex: 0 0 34px;
 
-      &>.explorer-content {
+      & > .explorer-content {
         transform: translateX(0);
         visibility: visible;
       }
@@ -391,6 +397,8 @@ li:has(> .folder-outer:not(.open))>.folder-container>svg {
 
 .mobile-no-scroll {
   @media all and ($mobile) {
-    overscroll-behavior: none;
+    .explorer-content > .explorer-ul {
+      overscroll-behavior: contain;
+    }
   }
 }
