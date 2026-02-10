@@ -14,7 +14,7 @@ related:
 author:
 description: extracting meaningful utility in the age of unengaged content consumption
 date: 2025-12-19
-updated: 2026-01-08T13:45:06+02:00
+updated: 2026-02-10T14:59:11-05:00
 ---
 
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
@@ -93,3 +93,19 @@ It should also be noted that the "captures" kanban should be reserved for comple
 In all honesty, **Captures** *should* have the potential to become Consumption tasks, as I might start with an idea to investigate something like [[Importance Sampling]], then later find some sources supporting the learning of this concept. Then the tasknote can be moved to Consumption.
 
 Also, as a way to leverage my new ideas about [[Note updates as links to daily notes]], it would be neat for consumption tasks to accumulate backlinks to daily notes as minature "daily log" for research and thoughts, until that content eventually sprouts into a note of its own.
+
+%%
+Basically just complete the plan layed out in [[12-18-2025]], this is about drafting a way to balance how content is consumed.
+
+Namely, how can I keep time for myself to watch those fun educational youtube videos, but also consistently engage with difficult work like academic papers and textbooks. How do I balance that with inactive but important reading like [[Gödel, Escher, Bach]].
+
+Once this project is done, build out the daily note section along with the other daily notes before this(all south africa daily notes).
+
+We also need to balance "exploratory" content engagement, where you explore a network (either obsidain or web based), sort of like a tree data structure (you navigate links, go deep, but then go back and go down another branch). Good example is [[Yana Log Notes]], this is a gold mine of good notes for my content, but needs time to be explored.
+
+---
+
+## Implementation
+
+I think another tasknotes base view would be good with this. Balance with "captures", maybe clean up the learning section and old tasks. The base view should be more about "moving" the cards around rather than completing them, aka you set out a few knowledge sources to "progress" on a certain day and then once you have done that for a good while you move it back to the none section. Will brainstorm more.
+%%

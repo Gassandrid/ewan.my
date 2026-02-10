@@ -1,24 +1,7 @@
 ---
-status: open
-priority: normal
-contexts:
-  - college
-dateCreated: 2026-01-16T17:47:16.700-05:00
-dateModified: 2026-01-16T17:52:55.413-05:00
-reminders:
-  - id: rem_1768603622241_8fjehrlll
-    type: relative
-    relatedTo: due
-    offset: -PT15M
-class: task
+class: note
 date: 2026-01-16T17:47:16-05:00
-updated: 2026-01-16T17:51:21-05:00
-scheduled: 2026-01-19T08:30
-recurrence: DTSTART:20260116;FREQ=WEEKLY;BYDAY=MO,WE,FR;UNTIL=20260601
-complete_instances:
-  - 2026-01-12
-  - 2026-01-16
-skipped_instances: []
+updated: 2026-02-10T14:57:01-05:00
 ---
 
 ## Description

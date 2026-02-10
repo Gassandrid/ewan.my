@@ -3,6 +3,7 @@ class:
   - note
 tags:
   - comp-neuro/brain/receptor
+  - biology
 source:
 related:
   - "[[GABA]]"

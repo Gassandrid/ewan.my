@@ -3,6 +3,7 @@ class:
   - note
 tags:
   - comp-neuro/brain/neurotransmitter
+  - biology
 source:
 related:
   - "[[GABA Receptor]]"
@@ -12,7 +13,7 @@ author:
 description:
 aliases:
 date: 2026-02-07T12:19:48-05:00
-updated: 2026-02-10
+updated: 2026-02-10T15:46:28-05:00
 ---
 
 $\gamma$-Aminobutyric acid. The primary inhibitory neurotransmitter in adult mammalian [[Central Nervous System]].

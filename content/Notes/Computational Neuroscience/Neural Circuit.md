@@ -1,6 +1,6 @@
 ---
 date: 2026-01-10T11:51:36+02:00
-updated: 2026-01-12T10:37:22-05:00
+updated: 2026-02-10T15:05:09-05:00
 class:
   - note
 tags:
@@ -38,3 +38,19 @@ These tend to get quite specific for theoretical modeling purposes and oftentime
 These are vertical structures in the cerebral cortex that consist of a group of neurons that work together to process specific types of information. They are thought to be the basic functional units of the cortex.
 
 Some papers have garnered attention for the "1000 Brains Theory" of intelligence, which posits that the neocortex is made up of many such columns that work in parallel to process information.
+
+---
+
+## Primitives from [[pathakBiomimeticModelCorticostriatal2024]]
+
+[[Lateral Inhibition Primitive]]
+
+%%
+
+This is a big one. A lot of the modern papers I see focus on trying to bridge machine learning, dynamical systems, and [[Neural Circuit]] together for integrated repre%sentation notes. A good example is [[Biomimetic model of corticostriatal micro-assemblies]].
+
+Ask Gemini about learning this, see fragment [[2025-12-28-0022 full phd self study plan]] for part of the idea.
+
+<https://en.wikipedia.org/wiki/Neural_circuit>
+
+%%
