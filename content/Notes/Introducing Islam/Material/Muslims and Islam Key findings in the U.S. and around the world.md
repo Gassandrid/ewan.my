@@ -1,5 +1,6 @@
 ---
 source: https://www.pewresearch.org/short-reads/2017/08/09/muslims-and-islam-key-findings-in-the-u-s-and-around-the-world/
+created_on: "[[08-27-2025]]"
 image: https://www.google.com/s2/favicons?domain=https://www.pewresearch.org/short-reads/2017/08/09/muslims-and-islam-key-findings-in-the-u-s-and-around-the-world/&sz=256
 class:
   - website
@@ -11,7 +12,6 @@ related:
 date: 2025-08-27
 updated: 2025-08-29
 ---
-
 ![](https://www.pewresearch.org/wp-content/uploads/sites/20/2015/12/muslim_feature-jpg.webp)
 
 People at Djemaa el-Fna Square, late afternoon sun

@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-03-2025]]"
 class:
   - note
 tags:
@@ -11,7 +12,6 @@ author:
 date: 2025-10-03
 updated: 2025-10-03
 ---
-
 The **diffusion equation** is a parabolic PDE, and a [[Stochastic Differential Equation]]. It describes the [[Brownian Motion]] of several particles, particularly useful in how they collide with each other and the emergent behavior thereof.
 
 It is described usually as:

@@ -1,4 +1,5 @@
 ---
+created_on: "[[02-07-2026]]"
 class:
   - note
 tags:
@@ -15,7 +16,6 @@ aliases:
 date: 2026-02-07T12:19:48-05:00
 updated: 2026-02-10T15:46:28-05:00
 ---
-
 $\gamma$-Aminobutyric acid. The primary inhibitory neurotransmitter in adult mammalian [[Central Nervous System]].
 
 If [[Glutamate]] is the brain's accelerator, GABA is the brakes. Binds to [[GABA Receptor|GABA receptors]] (GABA$_A$, GABA$_B$, GABA$_C$).

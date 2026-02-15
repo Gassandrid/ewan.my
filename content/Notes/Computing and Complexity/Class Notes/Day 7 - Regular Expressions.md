@@ -1,5 +1,6 @@
 ---
 id: Day 7
+created_on: "[[02-04-2025]]"
 aliases: 
 tags:
   - cs/theory
@@ -7,7 +8,6 @@ date: 2025-02-04
 title: Day 7
 updated: 2025-03-27
 ---
-
 This day will discuss regular expressions, and their equivalence to NFAs/DFAs. We will also look at a new state elimination algorithm
 
 ---

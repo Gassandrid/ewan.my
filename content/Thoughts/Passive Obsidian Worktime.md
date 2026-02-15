@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-24-2026]]"
 class:
   - note
 tags: [journal/workflow]
@@ -10,7 +11,6 @@ aliases:
 date: 2026-01-24T14:31:10-05:00
 updated: 2026-01-24T14:44:28-05:00
 ---
-
 I think I have found the key to actually getting stuff done on obsidian, and it has come from not overthinking it at all.
 
 Much like the language defined in [[Consuming and Choosing Content Effectively]], **Passive** obsidian use just means "hanging around" in obsidian without any inherent goal, with little engagement much like you would with a fun little youtube video or doomscrolling. 

@@ -1,5 +1,6 @@
 ---
 date: 2025-12-09
+created_on: "[[12-09-2025]]"
 updated: 2026-01-30T08:40:30-05:00
 class:
   - note
@@ -10,7 +11,6 @@ related:
 author:
 description:
 ---
-
 This is my new color palette for all things web design and branding. This is the primary color palette behind my website, but also my new presentations and any other project I might make.
 
 | Light                                | Dark                                 | **Name**       | **Light Hex** | **Dark Hex** |

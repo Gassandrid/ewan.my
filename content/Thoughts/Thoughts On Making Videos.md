@@ -1,11 +1,11 @@
 ---
 date: 2025-04-15
+created_on: "[[04-15-2025]]"
 updated: 2025-04-15
 tags:
   - seed
   - manim
 ---
-
 From my recent work on my [[Theoretical Neuroscience Textbook]], I have had some fun reimplementing the mathematics as algorithms in an accessible note for everyone else to see. 
 
 This got me thinking about the nature of the public facing note website, and how I could both build my own understanding of the subject matter better, explain it to people, and build my resume in the process.

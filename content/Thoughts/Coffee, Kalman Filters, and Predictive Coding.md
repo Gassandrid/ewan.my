@@ -1,5 +1,6 @@
 ---
 date: 2025-12-24T00:03:00
+created_on: "[[12-24-2025]]"
 updated: 2025-12-30T13:24:50+02:00
 class:
   - note
@@ -13,7 +14,6 @@ related:
 author:
 description:
 ---
-
 Something I have recently become enamored with is the idea of modding [[Espresso]] machines with microcontrollers and digital measurements. Namely for the [[Gaggia Classic E24]], which is an established boiler-based machine, a distinct ecosystem from my thermoblock-based [[Bambino Plus]]. Currently, there are two competing modifications that have captured my interest: the [[Gaggiuino]] and the [[GaggiMate]].
 
 Both projects utilize "fly-by-wire" control, using microcontrollers to close the loop on temperature, pressure, and flow. However, where this led into a parallel of my math side is the algorithms utilized for state estimation. Namely, the [[Gaggiuino]] implementation (and another experiment surrounding "predictive puck wetting") leans heavily on a [[Kalman Filter]].

@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-12-2026]]"
 class:
   - note
 tags:
@@ -11,7 +12,6 @@ aliases:
 date: 2026-01-12T11:01:09-05:00
 updated: 2026-01-13T15:20:04-05:00
 ---
-
 I was a little on the fence about this idea, given that I already have so many systems for dealing with "capture" ideas. I have been working on using [[2025-12-27-2345 new fragment system|fragments]] as a means to capture timeseries ideas, and have an enormous, ridiculous "todo" system that I have been meaning to clean out for forever.
 
 This vastly simplifies the whole ordeal. It is a native solution that doesnt depend on a complex plugin like TaskNotes, and effectively coagulates several of my different workflow optimization techniques under one roof.

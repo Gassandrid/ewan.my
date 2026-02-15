@@ -1,5 +1,6 @@
 ---
 source: https://synosys.github.io/viz/logistic_map/
+created_on: "[[01-13-2026]]"
 image: https://www.google.com/s2/favicons?domain=https://synosys.github.io/viz/logistic_map/&sz=256
 class: website
 tags:
@@ -9,7 +10,6 @@ related:
 date: 2026-01-13T10:16:47-05:00
 updated: 2026-01-20T10:17:14-05:00
 ---
-
 see <https://synosys.github.io/viz/logistic_map/>
 
 ## The [[Logistic Map]]

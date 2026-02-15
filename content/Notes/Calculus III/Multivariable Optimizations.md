@@ -1,5 +1,6 @@
 ---
 id: 14.7 - Multivariable Optimizations
+created_on: "[[12-12-2024]]"
 aliases:
 tags:
   - math/calculus/multivariable
@@ -9,7 +10,6 @@ updated: 2026-01-16T22:38:52-05:00
 class:
   - note
 ---
-
 > [!Tip] Remember
 > Recall from Calculus 1 that if $f(x)$ has a **local maximum/minimum** at a point $x=c$, and if $f'(c)$ exists, then $f'(c) = 0$.
 

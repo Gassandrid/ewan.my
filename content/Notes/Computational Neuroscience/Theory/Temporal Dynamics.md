@@ -1,5 +1,6 @@
 ---
 date: 2025-10-23
+created_on: "[[10-23-2025]]"
 updated: 2026-01-24T19:13:08-05:00
 class:
   - note
@@ -10,7 +11,6 @@ source:
 related:
 author:
 ---
-
 **Temporal Dynamics** is a sort of umbrella term referring to how neural systems change and evolve over time. This includes the study of how neurons and neural circuits process information, respond to stimuli, and adapt through learning and plasticity.
 
 In [[Machine Learning]], we have temporal dynamics in recurrent neural networks (RNNs) and long short-term memory (LSTM) networks, which are designed to handle sequential data and capture temporal dependencies. We also have seen some novel architectures like [[Continuous Thought Machines]] that aim to model continuous temporal dynamics more effectively.

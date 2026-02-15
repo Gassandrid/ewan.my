@@ -1,5 +1,6 @@
 ---
 date: 2025-09-02
+created_on: "[[09-02-2025]]"
 updated: 2025-12-15
 class:
   - journal
@@ -9,7 +10,6 @@ source:
 related:
 author:
 ---
-
 It has been roughly **2 years** since I started taking notes with obsidian. It didnt start out fast, in fact most of the notes at the beginning were **AI generated** and not well thought out. I was chasing the goal, and not the journey.
 
 But around the same time I started note taking was when I really got into [[Typing]]. This was the frontier that allowed me to speak with my vault as if I was just thinking in my own head.

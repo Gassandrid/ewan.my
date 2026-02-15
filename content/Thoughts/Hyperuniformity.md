@@ -1,5 +1,6 @@
 ---
 date: 2026-01-28T10:20:50-05:00
+created_on: "[[01-28-2026]]"
 updated: 2026-01-28T10:26:34-05:00
 class:
   - note
@@ -15,7 +16,6 @@ author:
 description:
 aliases:
 ---
-
 While **Hyperuniformity** defined as "the suppression of density fluctuations at large length scales" is the more known use of the word, I have found its applications in the philosophy of probabiltiy and statistics to be more interesting.
 
 For as long as I have been deeply interested in [[Mathematics]], I have always wondered one thing. **How does noise and inherent randomness create order, and, paradoxically, be the key to modeling all the modern systems behind the "order" in our art?**

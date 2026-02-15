@@ -1,8 +1,8 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2024-10-20
 ---
-
 ## Overview
 Max pooling is a down-sampling technique commonly used in Convolutional Neural Networks (CNNs). The main objective of max pooling is to reduce the spatial dimensions (width and height) of the input feature maps while retaining the most important information. This operation helps in reducing computational cost, mitigating overfitting, and allowing the network to learn more abstract features.
 

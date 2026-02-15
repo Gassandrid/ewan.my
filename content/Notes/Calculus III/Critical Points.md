@@ -1,11 +1,11 @@
 ---
 date: 2024-09-27
+created_on: "[[09-27-2024]]"
 tags:
   - math
   - university
 updated: 2024-10-25
 ---
-
 > [!info] **Overview**  
 Critical points occur where the gradient of a function is zero or undefined. They help identify maxima, minima, and saddle points in multivariable functions.
 

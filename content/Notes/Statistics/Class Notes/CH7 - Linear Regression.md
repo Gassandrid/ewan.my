@@ -1,5 +1,6 @@
 ---
 id: CH7 - Linear Regression
+created_on: "[[11-14-2024]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -8,7 +9,6 @@ tags:
 date: 2024-11-14
 updated: 2025-06-21
 ---
-
 # Chapter 7: Linear Regression
 
 Linear regression is a key tool in engineering statistics for modeling and predicting relationships between variables. It allows us to analyze and quantify the relationship between an outcome (dependent variable) and one or more input factors (independent variables).

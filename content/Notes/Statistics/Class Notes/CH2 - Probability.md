@@ -1,5 +1,6 @@
 ---
 id: CH2 - Probability
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics
@@ -13,7 +14,6 @@ related:
 author:
 description:
 ---
-
 ## Essence
 
 **Experiment**: a process the results in an outcome that cannot be predicted in advance with certainty.

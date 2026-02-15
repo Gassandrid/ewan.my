@@ -1,5 +1,6 @@
 ---
 date: 2025-09-11
+created_on: "[[09-11-2025]]"
 updated: 2025-10-23
 class:
   - note
@@ -14,7 +15,6 @@ source:
   - "[[Continuous Thought Machine Deep Dive  Temporal Processing + Neural Synchronisation]]"
 related:
 ---
-
 **Continuous Thought Machines** are a new architecture where *Temporal Dynamics* are put at the forefront of the training process.
 
 ---

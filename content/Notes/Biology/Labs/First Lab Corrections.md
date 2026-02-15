@@ -1,12 +1,12 @@
 ---
 date: 2025-09-19
+created_on: "[[09-19-2025]]"
 updated: 2025-09-19
 class:
   - email
 tags:
   - junk
 ---
-
 1. review my comments
 2. revise our excel / word documents
 3. email me your files AND

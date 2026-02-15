@@ -1,12 +1,12 @@
 ---
 date: 2024-11-25
+created_on: "[[11-25-2024]]"
 tags:
   - OCD
   - sapling
 title: A desire to do more engineering
 updated: 2025-09-29
 ---
-
 Working on [[DARS]] has re-ignited my passion for the physical side of computer science. While I have always excelled at the software side of things, and while I am sure that I do want to go into a more theoretical field, I can't help but desire to do some more on hands work in my free time.
 
 The sad reality of the field of computer science, is that there is just too much going on to pay attention to it all. And for someone who is as obsessed with field ( in an almost unhealthy manner ) I often struggle to grapple with this reality.

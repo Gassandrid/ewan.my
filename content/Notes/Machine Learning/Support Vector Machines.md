@@ -1,5 +1,6 @@
 ---
 id: Support Vector Machines
+created_on: "[[02-02-2026]]"
 aliases:
   - SVM
 tags:
@@ -9,7 +10,6 @@ class:
 date: 2026-02-02T09:11:55-05:00
 updated: 2026-02-04T08:39:25-05:00
 ---
-
 **SVMs** are good generalization classifiers both in theory and in practice. Particularly works well with few samples and high dimensional data.
 
 The goal of the SVM algorithm is to find a hyperplane in an N-dimensional space (N — the number of features) that distinctly classifies the data points.

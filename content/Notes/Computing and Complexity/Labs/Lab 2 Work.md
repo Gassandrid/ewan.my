@@ -1,5 +1,6 @@
 ---
 date: 2025-01-30
+created_on: "[[01-30-2025]]"
 updated: 2025-04-13
 title: Lab 2 Work
 tags:

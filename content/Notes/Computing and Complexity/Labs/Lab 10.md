@@ -1,5 +1,6 @@
 ---
 id: Lab 10
+created_on: "[[04-17-2025]]"
 aliases: 
 tags: 
 author: Ewan Pedersen, Sylvan Franklin
@@ -7,7 +8,6 @@ title: Lab 10
 updated: 2025-04-17
 date: 2025-04-17
 ---
-
 ## Exercise 01
 
 > Let $A = \{ \langle M \rangle \mid \text{M is a DFA that doesn't accept any string containing an odd nmber of 1s} \}$

@@ -1,12 +1,12 @@
 ---
 date: 2025-01-24
+created_on: "[[01-24-2025]]"
 updated: 2026-01-18T08:31:07-05:00
 title: Bridging my University Wifi to host own network access point
 tags:
   - projects/homelab
   - cs/networking
 ---
-
 This was quite a difficult process, and is still currently in progress to an extent. While difficult, it was absolutely necessary to get my IOT devices up and running with internet connection
 
 ---

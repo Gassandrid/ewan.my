@@ -1,5 +1,6 @@
 ---
 date: 2025-11-10
+created_on: "[[11-10-2025]]"
 updated: 2025-11-10
 class:
   - note
@@ -16,7 +17,6 @@ related:
 author:
 description: early adoption of Islam by african american slaves
 ---
-
 Far from a "new" religion in USA/AMerican conteinents, tracing back so 1500s
 
 In USA< [[Muslim]]s trace histories to:

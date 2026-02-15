@@ -1,5 +1,6 @@
 ---
 id: CH10 - Expected Values of Discrete Random Variables
+created_on: "[[02-07-2025]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ date: 2025-02-07
 title: CH10 - Expected Values of Discrete Random Variables
 updated: 2025-06-21
 ---
-
 Just a practice worksheet for now, but remember:
 
 ## Expected Value of a Discrete RV

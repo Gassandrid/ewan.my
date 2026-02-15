@@ -1,5 +1,6 @@
 ---
 id: CH1 - Categorical Variable
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics

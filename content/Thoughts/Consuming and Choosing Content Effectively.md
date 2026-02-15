@@ -1,4 +1,5 @@
 ---
+created_on: "[[12-19-2025]]"
 class:
   - note
 tags:
@@ -16,7 +17,6 @@ description: extracting meaningful utility in the age of unengaged content consu
 date: 2025-12-19
 updated: 2026-02-10T14:59:11-05:00
 ---
-
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
 
 The difficulty is that I have no shortage of meaningful long term material - I keep a thorough stash of textbooks and actual books that I have just been dying to read, but I never do because of my high frequency content consumption switching. This is in addition to all the papers I have in my backlog to read.

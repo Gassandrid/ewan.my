@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2026-02-02T08:45:20-05:00
 title: Hopfield Networks
 class:
@@ -13,7 +14,6 @@ author:
 aliases:
   - Hopfield Network
 ---
-
 A Hopfield Network is a type of recurrent artificial neural network that serves as a content-addressable memory system with binary threshold nodes. It was introduced by John Hopfield in 1982 and is known for its ability to store and retrieve patterns, acting somewhat like an associative memory.
 
 ---

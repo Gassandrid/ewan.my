@@ -1,10 +1,10 @@
 ---
 date: 2024-12-02
+created_on: "[[12-02-2024]]"
 tags:
   - projects/dars
 updated: 2025-06-20
 ---
-
 ![[IMG_2329.jpeg]]
 
 ---

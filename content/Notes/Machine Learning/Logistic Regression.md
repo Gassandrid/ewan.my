@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-28-2026]]"
 class:
   - note
   - lecture
@@ -17,7 +18,6 @@ aliases:
 date: 2026-01-28T08:31:19-05:00
 updated: 2026-01-28T09:23:07-05:00
 ---
-
 **Logistic Regression** is an exceptional tool for the task of _classification_. It is particularly well-suited for scenarios where the outcome variable is categorical, such as determining whether an email is spam or not spam, or predicting whether a patient has a certain disease based on their symptoms.
 
 Takes a probabilistic approach to learning discriminative functions (i.e. a classifier) from data.

@@ -1,5 +1,6 @@
 ---
 id: Amygdala
+created_on: "[[04-14-2025]]"
 aliases:
 tags:
   - comp-neuro/brain/region
@@ -10,7 +11,6 @@ title: Amygdala
 author:
 embedded:
 ---
-
 The _Amygdala_ is primarily responsible for the processing and regulation of emotional behavior - particularly fear/anxiety/aggression. Its role is crucial in the formation of [[Episodic Memory]], specifically the emotional portion of the **integrated representation**.
 
  

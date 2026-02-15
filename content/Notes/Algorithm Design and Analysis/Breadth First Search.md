@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-02-2025]]"
 tags:
   - cs/theory/algorithms
   - university
@@ -17,7 +18,6 @@ related:
 author:
   - "[[Ewan Pedersen]]"
 ---
-
 **Breadth-First Search (BFS)** is an algorithm for traversing or searching tree or graph data structures. It starts at a selected node (often referred to as the 'root' in trees) and explores all of its neighboring nodes at the present depth prior to moving on to nodes at the next depth level.
 
 ## Properties

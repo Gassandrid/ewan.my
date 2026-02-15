@@ -1,11 +1,11 @@
 ---
+created_on: "[[07-03-2025]]"
 tags:
   - math/sets
 date: 2025-07-03
 updated: 2025-11-18
 class: note
 ---
-
 In Layman's terms, cardinality is a way to measure the "size" of a set, which can be finite or infinite.
 
 For the case of finite sets, the cardinality is the exact number of elements in that set.

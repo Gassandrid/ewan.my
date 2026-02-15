@@ -1,5 +1,6 @@
 ---
 id: Setting up a Homelab Dashboard
+created_on: "[[10-01-2025]]"
 aliases: []
 tags:
   - projects/homelab/software
@@ -10,7 +11,6 @@ class:
 date: 2025-10-01
 updated: 2026-01-18T08:29:28-05:00
 ---
-
 My old homelab in my dorm room was all over the place, in both hardware and software. On the software side, I kind of just found services that I wanted and hosted the docker container with no foundation.
 
 I didnt want to make that same mistake on the rebuild, so the first proper service I wanted to host was a homepage "foundation" to base everything off of.

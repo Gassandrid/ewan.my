@@ -1,11 +1,11 @@
 ---
 date: 2024-12-24
+created_on: "[[12-24-2024]]"
 updated: 2025-07-26
 title: 2025 Resolutions
 tags:
   - seed
 ---
-
 While it isn't exactly the new year yet, I thought I might get ahead and start brainstorming my resolutions for how I will approach the upcoming year.
 
 ---

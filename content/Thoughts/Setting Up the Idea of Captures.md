@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-11-2025]]"
 class:
   - note
   - journal
@@ -11,7 +12,6 @@ author:
 date: 2025-10-11
 updated: 2026-01-12T11:22:58-05:00
 ---
-
 I know I know, this is yet another note about taking notes and workflow stuff - it usually misses the point. By now I have done several notes on how to deal with [[Tasknotes in my workflow]] and [[Uncreated Notes]]. But it all really boils down to one simple idea, and the reason I had kanban boards in the first place.
 
 I have ideas. I dont always have time. I want to write down ideas to write about later, with just enough information so I can regain my train of thought when I return to a capture.

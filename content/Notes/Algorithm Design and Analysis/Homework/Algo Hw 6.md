@@ -1,12 +1,12 @@
 ---
 date: 2025-10-17
+created_on: "[[10-17-2025]]"
 updated: 2025-10-17
 title: Homework 6 Written
 author:
   - Ewan Pedersen
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Blackboard as one PDF or Word document.
 ---
-
 ---
 
 ## Counting Inversion: Algorithm Tracing

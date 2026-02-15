@@ -1,12 +1,12 @@
 ---
 date: 2025-04-02
+created_on: "[[04-02-2025]]"
 updated: 2025-04-23
 tags:
   - math/linear-algebra
   - todo/math
 class: note
 ---
-
 Assuming you are already familiar with vectors or looked at the [[Chapter 1 - Vectors|previous chapter]]... 
 
 To frame the idea of a vector for this content, it is best for you to think of coordinates as a **scalar**, meaning think how each values **stretches** or **squishes** vectors...

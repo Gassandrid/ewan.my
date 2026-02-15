@@ -1,12 +1,12 @@
 ---
 date: 2025-02-12
+created_on: "[[02-12-2025]]"
 updated: 2025-02-12
 tags:
   - cs/automata
   - generated
 title: Converting an NFA to a DFA
 ---
-
 This guide explains how to convert a **Nondeterministic Finite Automaton (NFA)** into a **Deterministic Finite Automaton (DFA)** using the **subset construction method** with emphasis on the **RIP steps (Reachable, Identify, Prune)**.
 
 ## **Step 1: Understanding the Given NFA**

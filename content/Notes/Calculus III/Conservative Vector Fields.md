@@ -1,5 +1,6 @@
 ---
 id: 16.3 - Conservative Vector Fields
+created_on: "[[11-18-2024]]"
 date: 2024-11-18
 tags:
   - math/calculus/vector
@@ -13,7 +14,6 @@ author:
 description: The Fundamental Theorem for Line Integrals states that the line integral of a conservative vector field depends only on the values of its potential function at the endpoints of the path.
 aliases:
 ---
-
 ## Abstract
 
 Recall from [[Vector Fields]] that a vector field $\vec{F}$ is **conservative** if there exists a function $f$ such that $\vec{F} = \nabla f$. The function $f$ is called the **potential function**.

@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-15-2026]]"
 class:
   - note
   - lecture
@@ -18,7 +19,6 @@ aliases:
   - Fixed Points
   - Fixed Point
 ---
-
 Resuming work on [[Linear Systems]] regarding the [[Logistic Map]] using a [[Cobweb Plot]]:
 
 A **fixed point** is a point $p$ such that $f(p) = p$. Usually a sink/source, but due to periodic points, can be a rotation set of points.

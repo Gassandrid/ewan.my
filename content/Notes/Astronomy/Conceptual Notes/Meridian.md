@@ -1,5 +1,6 @@
 ---
 id: Meridian
+created_on: "[[09-12-2024]]"
 aliases: []
 tags:
   - astronomy
@@ -12,7 +13,6 @@ related:
   - "[[Celestial Equator]]"
   - "[[Transit(Astronomy)]]"
 ---
-
 The **meridian** in astronomy is an imaginary great circle on the celestial sphere that passes through the **celestial poles** and the **zenith** of a particular location on Earth. It effectively divides the sky into eastern and western halves.
 
 ---

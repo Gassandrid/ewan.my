@@ -1,5 +1,6 @@
 ---
 date: 2025-10-03
+created_on: "[[10-03-2025]]"
 updated: 2025-10-03
 class:
   - note
@@ -13,7 +14,6 @@ author:
 title: Homework 4 Written
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Blackboard as one PDF or Word document.
 ---
-
 ---
 
 ## Minimum Max-lateness Job Scheduling

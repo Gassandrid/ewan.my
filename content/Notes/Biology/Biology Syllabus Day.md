@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-25-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ related:
 date: 2025-08-25
 updated: 2025-08-25
 ---
-
 Like my other course today, this is mostly a introduction to the class of [[Principles of Biology 1]].
 
 For this note, I will skip out on the introductory information of the course, and jump straight into the example case study presented in class.

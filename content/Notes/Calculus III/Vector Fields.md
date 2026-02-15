@@ -1,5 +1,6 @@
 ---
 id: 16.1 - Vector Fields
+created_on: "[[11-04-2024]]"
 date: 2024-11-04
 tags:
   - math/calculus/vector
@@ -8,7 +9,6 @@ updated: 2025-06-21
 class:
   - note
 ---
-
 A **vector field** is a function that associates a point with a vector. An example is Earth's **gravitational field**:
 
 > [!Info] Sketch

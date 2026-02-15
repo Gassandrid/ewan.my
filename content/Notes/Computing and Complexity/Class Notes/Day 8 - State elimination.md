@@ -1,5 +1,6 @@
 ---
 id: Day 8
+created_on: "[[02-06-2025]]"
 aliases: 
 tags:
   - cs/theory
@@ -7,7 +8,6 @@ date: 2025-02-06
 title: Day 8
 updated: 2025-03-27
 ---
-
 This class will discuss state elimination, more on REGEX, and how they relate to DFAs and NFAs.
 
 ---

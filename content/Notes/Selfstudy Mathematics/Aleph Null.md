@@ -1,5 +1,6 @@
 ---
 id: Aleph Null
+created_on: "[[07-03-2025]]"
 aliases:
 tags:
   - math/sets
@@ -7,7 +8,6 @@ date: 2025-07-03
 updated: 2025-07-03
 class: note
 ---
-
 Aleph Null (ℵ₀) is the [[Cardinality]] of the set of natural numbers, representing the smallest infinite cardinal number. It is used to describe the size of countably infinite sets, such as the integers and rational numbers.
 
 ## Aleph Numbers

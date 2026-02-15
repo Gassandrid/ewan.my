@@ -1,12 +1,11 @@
 ---
 date: 2024-11-18
+created_on: "[[11-18-2024]]"
 updated: 2024-11-18
 tags:
   - math/calculus/vector
   - university
 ---
-
-
 $$
 \vec{F} = \langle xye^z , 0 , yze^x \rangle
 $$

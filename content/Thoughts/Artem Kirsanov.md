@@ -1,5 +1,6 @@
 ---
 date: 2024-10-28
+created_on: "[[10-28-2024]]"
 tags:
   - comp-neuro
   - cs
@@ -13,8 +14,6 @@ relationship: influencer/youtuber
 sex: male
 image: https://yt3.googleusercontent.com/WvyHMOzKntZKuHQg27TKR-sW7Jm7WYNVkfDd9jr0cWnjwZ-kt8HufKKQnAjTO94HKxLpcLM0Dg=s900-c-k-c0x00ffffff-no-rj
 ---
- 
-
 Artem Kirsanov is a Computational Neuroscientist I watch, who makes great videos on [[Machine Learning]], [[Computational Neuroscience|Neuroscience]], and even [[Digital Garden|my style of notetaking!]]
 
 Artem's [channel](https://www.youtube.com/@ArtemKirsanov) contains videos that use the [[Manim]] animation framework in python, which is also used by [[3Blue1Brown]]

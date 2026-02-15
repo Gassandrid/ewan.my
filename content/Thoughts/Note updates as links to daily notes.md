@@ -1,5 +1,6 @@
 ---
 date: 2025-12-16
+created_on: "[[12-16-2025]]"
 updated: 2026-01-09T11:48:55+02:00
 class:
   - note
@@ -10,7 +11,6 @@ related:
 author:
 description:
 ---
-
 I have been thinking about ways to optimize time series based note taking. Now, while I do have git tracking for how I change files over time, I don't think this is descriptive enough in the content of the note itself. A recommendation I saw from the CEO of Obsidian, Kepano, mentions to link to daily notes as a means of updates. For example, if I have a journal of continuous updates to a certain project, say the Sprinter Van for example, I would write headings that link to the daily notes, even if it had nothing to do with said daily notes whatsoever.
 
 I like this idea because it allows me to have a more granular view of when I made updates to certain projects, and it also allows me to see the context of what else was going on in my life at that time. For example, if I made a note about the van on December 1st, 2025, I could link to my daily note for that day, which might include other things I was working on or thinking about.

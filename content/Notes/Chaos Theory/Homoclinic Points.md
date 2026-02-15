@@ -1,6 +1,7 @@
 ---
 date: 2026-02-10T10:11:58-05:00
-updated: 2026-02-10T11:09:42-05:00
+created_on: "[[02-10-2026]]"
+updated: 2026-02-12T10:55:53-05:00
 class:
   - note
   - lecture
@@ -15,6 +16,7 @@ author:
 description:
 aliases:
 ---
+> **Homoclinic Points** are points of intersection between the stable and unstable manifolds of a hyperbolic fixed point (or periodic orbit) in a dynamical system.
 
 Consider the [[Linearization and the Jacobian|Non Linear Map]] of the equation:
 

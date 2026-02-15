@@ -1,5 +1,6 @@
 ---
 date: 2025-08-29
+created_on: "[[08-29-2025]]"
 updated: 2025-09-26
 class:
   - note
@@ -14,7 +15,6 @@ lecture-number: 1
 source:
 related:
 ---
-
 ![[Screenshot 2025-08-29 at 12.48.28 PM.png]]
 
 [[Muhammad|Muhammad]]'s first wife, **Khadija** (c. 554-619 CE), she proposed to him. She was 40 when [[Muhammad]] was 25.

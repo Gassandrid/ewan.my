@@ -1,5 +1,6 @@
 ---
 id: Uncountably Infinite
+created_on: "[[08-13-2025]]"
 aliases: []
 tags: []
 date: 2025-08-13
@@ -10,7 +11,6 @@ source:
 related:
 author:
 ---
-
 _Uncountably Infinite_ sets are infinite sets that cannot be put into a one-to-one correspondence with the natural numbers. Equivalently, they cannot be listed in a sequence $a_1,a_2,\dots$ that contains every element exactly once.
 
 ---

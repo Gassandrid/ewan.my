@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-05-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ author:
 date: 2025-09-05
 updated: 2025-09-05
 ---
-
 _most of class was dedicated to review of Terms for upcoming quiz:_
 
 - [[Islamic Law]] - distinction between _Shari'ah_ and _Fiqh_

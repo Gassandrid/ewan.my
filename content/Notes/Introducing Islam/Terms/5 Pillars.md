@@ -1,5 +1,6 @@
 ---
 date: 2025-10-15
+created_on: "[[10-15-2025]]"
 updated: 2025-10-15
 class:
   - note
@@ -15,7 +16,6 @@ source:
 related:
 author:
 ---
-
 So, even if [[Muslim]]s **agree**  on that everything on this chart is something they all hsoudl be doing, there is **disgreement** between groups on:
 
 - what to call this 

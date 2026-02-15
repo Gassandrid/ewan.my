@@ -1,5 +1,6 @@
 ---
 date: 2025-09-19
+created_on: "[[09-19-2025]]"
 updated: 2025-09-19
 ---
 Koran By Heart (2011): Film Viewing Questions  

@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-15-2026]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ aliases:
 date: 2026-01-15T10:19:50-05:00
 updated: 2026-01-15T10:32:01-05:00
 ---
-
 Plotting mechanism for iterated one dimensional functions. A good example is the [[Logistic Map]].
 
 Usually an interation function of the form:

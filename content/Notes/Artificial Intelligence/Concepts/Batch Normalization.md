@@ -1,10 +1,10 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2025-09-29
 tags:
   - cs/ai/layer
 ---
-
 # Batch Normalization
 
 ![[Screenshot 2024-09-17 at 10.22.04 AM.png]]

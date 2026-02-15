@@ -1,5 +1,6 @@
 ---
 id: index
+created_on: "[[10-02-2024]]"
 aliases:
 tags:
 date: 2024-10-02
@@ -7,7 +8,6 @@ title: Ewans Florilegium
 updated: 2025-12-19
 class: navigation
 ---
-
 <div>
 <svg
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -122,4 +122,4 @@ This is my [[Digital Garden]], a living knowledge base where I organize thoughts
 
 ---
 
-[[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canon|Inspirations]]
+[[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canontt|Inspirations]]

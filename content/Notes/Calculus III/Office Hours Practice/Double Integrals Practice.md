@@ -1,5 +1,6 @@
 ---
 date: 2024-12-10
+created_on: "[[12-10-2024]]"
 updated: 2025-09-12
 tags:
   - junk
@@ -8,7 +9,6 @@ tags:
 class:
   - note
 ---
-
 ## Problem 1
 
 $$

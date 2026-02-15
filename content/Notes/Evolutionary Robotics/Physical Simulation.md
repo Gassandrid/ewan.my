@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-29-2026]]"
 class:
   - note
   - lecture
@@ -16,7 +17,6 @@ aliases:
 date: 2026-01-29T08:32:41-05:00
 updated: 2026-02-03T08:51:26-05:00
 ---
-
 As computer moved from a government/corporate tool to a personal tool, there was a shift from batch processing to interactive computing. One of the fronts this was seen on is the onset of **computer graphics**. Early computer graphics were limited to simple line drawings, but as hardware improved, more complex graphics became possible.
 
 ## Physical Simulation Vs Computer Graphics

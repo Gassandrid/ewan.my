@@ -1,5 +1,6 @@
 ---
 id: CH5 - Bayes Theorem
+created_on: "[[01-24-2025]]"
 aliases: []
 tags:
   - math/probability/bayesian
@@ -12,7 +13,6 @@ source:
 related:
 author:
 ---
-
 This note discusses the **Bayes Theorem** and how it can be used to calculate conditional probabilities.
 
 This should be noted as the theorem used in statistics as a tool to solve probability equations. For the field of statistics where Bayes' Theorem is treated as the underlying principle of probability, see [[Bayesian Inference]].

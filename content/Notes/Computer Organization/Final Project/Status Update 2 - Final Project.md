@@ -1,5 +1,6 @@
 ---
 id: Status Update 2 - Final Project
+created_on: "[[10-10-2024]]"
 aliases:
 tags:
   - cs/embedded
@@ -8,7 +9,6 @@ date: 2024-10-10
 updated: 2025-03-31
 class: note
 ---
-
 > [!abstract] Student Information
 > Ewan Pedersen
 > CS2210

@@ -1,5 +1,6 @@
 ---
 id: Lab 03 Analysis
+created_on: "[[09-25-2025]]"
 aliases: []
 tags: []
 abstract: Analysis of Paramecium behavior in different chemical environments.
@@ -10,7 +11,6 @@ date: 2025-09-25
 title: Paramecium Investigations
 updated: 2025-10-17
 ---
-
 ## Background and Hypothesis
 
 During our initial investigations into Paramecia within samples, we noticed a variety of interesting reactionary behavior. Namely, with samples like an _Acetate Mix_, the paramecia would move much more sporadically and _diffuse_ faster. This diffusion process was characterized by a relative forward velocity, but also a (possibly) Poisson process for changing direction.

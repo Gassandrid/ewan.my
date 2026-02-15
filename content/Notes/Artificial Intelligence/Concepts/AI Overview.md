@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2025-09-29
 class:
   - navigation
@@ -8,7 +9,6 @@ tags:
   - generated
   - junk
 ---
-
 >[!Warning] Important
 >A **very** old overview of the starting point for my [[Machine Learning]] work. This was before I had a large graph network, and wanted to introduce structure to the notes. For more modern notes, they can be found more organically litered throughout the [[Artificial Intelligence]] directory
 >

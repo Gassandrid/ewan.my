@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-25-2025]]"
 class:
   - note
 tags:
@@ -13,5 +14,4 @@ author:
 date: 2025-09-25
 updated: 2025-09-25
 ---
-
 todo... yada yada yada 

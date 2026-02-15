@@ -1,11 +1,11 @@
 ---
 class: note
+created_on: "[[08-26-2025]]"
 date: 2025-08-26
 updated: 2025-08-26
 tags:
   - math/sets
 ---
-
 There are a few common number systems we have to deal with in [[Mathematics]] with their own associated symbols.
 
 ---

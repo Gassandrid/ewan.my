@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ author:
 date: 2025-09-03
 updated: 2025-09-03
 ---
-
 _Cells are the fundamental units of life, which will be structuring our lessons in Biology from this point onward_
 
 ## Overview

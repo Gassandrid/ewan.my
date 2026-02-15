@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-27-2026]]"
 class:
   - note
 tags:
@@ -26,7 +27,6 @@ jupyter:
     name: python3
 title: Assignment 2
 ---
-
 ## Question 1
 
 > [!Question]

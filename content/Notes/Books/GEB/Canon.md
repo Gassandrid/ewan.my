@@ -1,5 +1,6 @@
 ---
 id: Canon
+created_on: "[[08-14-2025]]"
 aliases: []
 tags:
   - seed
@@ -13,8 +14,6 @@ related:
   - "[[Fugue]]"
   - "[[Little Harmonic Labyrinth#Music]]"
 ---
- 
-
 A **canon** is a piece of music in which a melody is played and then imitated by one or more voices or instruments. The term is often used to describe a specific type of musical form where the same melody is repeated at different pitches or times.
 
 ![[Canon.png]]

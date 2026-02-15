@@ -1,5 +1,6 @@
 ---
 id: CH1 - Sampling and Descriptive Statistics
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ tags:
 date: 2024-09-12
 updated: 2025-08-21
 ---
-
 # CH1 - Sampling and Descriptive Statistics
 
 > How do we get data?

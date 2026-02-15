@@ -1,5 +1,6 @@
 ---
 id: Active Inference
+created_on: "[[09-24-2025]]"
 aliases: []
 tags:
   - comp-neuro/models
@@ -15,7 +16,6 @@ source:
   - "[[Active Inference and Intentional Behaviour]]"
 updated: 2025-09-24
 ---
-
 **Active Inference** is a theoretical framework in [[Computational Neuroscience]] that describes how biological systems, particularly the brain, interact with their environment to minimize uncertainty and maintain homeostasis. It stems from the concepts of the [[Free Energy Principle]] and [[Bayesian Inference]], proposing that organisms actively infer the causes of their sensory inputs and take actions to fulfill their predictions about the world.
 
 ![[ReactiveSentientAndIntentionalBehavior.png]]

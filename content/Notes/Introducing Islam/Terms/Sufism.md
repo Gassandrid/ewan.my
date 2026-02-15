@@ -1,5 +1,6 @@
 ---
 date: 2025-09-10
+created_on: "[[09-10-2025]]"
 updated: 2025-09-15
 class:
   - note
@@ -16,8 +17,6 @@ source:
 related:
 author:
 ---
-
-
 **Sufi, Sufism**:
 - mystical Islam, a worldview ( not a denomination ) that prioritizes deep, loving relationship between God and Practitioner
 	-  poetry, dancing, music, meditation, asceticism - on top of "regular" practices

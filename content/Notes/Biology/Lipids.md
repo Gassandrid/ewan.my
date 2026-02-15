@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-08-2025]]"
 class:
   - note
   - lectureNote
@@ -16,7 +17,6 @@ author:
 date: 2025-09-08
 updated: 2025-09-08
 ---
-
 **Lipids** are a diverse group of organic molecules that are primarily composed of carbon (C), hydrogen (H), and oxygen (O) atoms, with a much lower proportion of oxygen compared to [[carbohydrates]]. They are hydrophobic or amphipathic, meaning they do not dissolve well in [[water]] but can interact with both [[water]] and non-polar substances. Lipids play crucial roles in energy storage, [[cell]] membrane structure, and signaling.
 
 ---

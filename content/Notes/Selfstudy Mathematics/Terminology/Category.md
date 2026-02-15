@@ -1,4 +1,5 @@
 ---
+created_on: "[[11-22-2025]]"
 class:
   - note
 tags:
@@ -11,7 +12,6 @@ description:
 date: 2025-11-22
 updated: 2025-11-25
 ---
-
 A **category** defines the abstraction of *composition*. We primarily understand a category as a collection of some objects which satisfy a set of formal rules concerning [[Composition]], [[Associativity]], and [[Identity]].
 
 ![[category.png]]

@@ -1,12 +1,12 @@
 ---
 id: HTTP Requests
+created_on: "[[09-12-2024]]"
 aliases: 
 tags:
   - cs/web
 date: 2024-09-12
 updated: 2025-04-13
 ---
-
 # HTTP Requests
 
 HTTP (Hypertext Transfer Protocol) is essential for data communication on the web. Below are examples of making HTTP requests in various programming languages.

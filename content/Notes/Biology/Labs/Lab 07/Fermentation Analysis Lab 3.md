@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-17-2025]]"
 class:
   - note
 tags:
@@ -11,7 +12,6 @@ date: 2025-10-17
 updated: 2025-10-17
 title: Fermentation Analysis Lab 3
 ---
-
 ## Control
 
 - Glucose at $5\%$

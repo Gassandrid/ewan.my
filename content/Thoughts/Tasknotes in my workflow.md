@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-30-2025]]"
 class:
   - note
 tags:
@@ -11,7 +12,6 @@ author:
 date: 2025-09-30
 updated: 2026-01-14T09:57:42-05:00
 ---
-
 This is a simple note in its use, but I just wanted to clarify to myself when to use tasknotes tasks and when to just write notes.
 
 ## [[01-14-2026]] Update

@@ -1,5 +1,6 @@
 ---
 title:
+created_on: "[[09-08-2025]]"
 source:
   - https://www.amazon.com/Following-Muhammad-Rethinking-Contemporary-Civilization/dp/0807855774
 author:
@@ -16,7 +17,6 @@ related:
 date: 2025-09-08
 updated: 2025-12-21
 ---
-
 We only read chapter two for class [[Introducing Islam]], and it is contained here:
 
 ![[Ernst.Ch2FM.pdf]]

@@ -1,5 +1,6 @@
 ---
 date: 2025-09-08
+created_on: "[[09-08-2025]]"
 updated: 2025-09-08
 class:
   - note
@@ -18,8 +19,6 @@ source:
 related:
 author:
 ---
-
-
 *islam* - submission
 *iman* - faith
 *ihsan* - "spiritual virtue" (prayer)

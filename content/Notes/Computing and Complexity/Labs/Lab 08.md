@@ -1,5 +1,6 @@
 ---
 id: Lab 08
+created_on: "[[04-01-2025]]"
 aliases: []
 tags:
   - cs/theory
@@ -9,7 +10,6 @@ class: note
 title: Lab 08
 updated: 2025-04-01
 ---
-
 ## Exercise 01
 
 > Examine the formal definition of a Turing Machine to answer the following questions, and explain your reasoning.

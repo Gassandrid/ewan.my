@@ -1,8 +1,8 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2024-10-20
 ---
-
 ## 1. Problem Definition
 - **Identify the Task:** Determine whether the problem is classification, regression, clustering, or another type of problem.
   - Example: Is it a linear classification problem, or does it require more complex modeling?

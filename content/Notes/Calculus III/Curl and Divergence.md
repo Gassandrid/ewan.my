@@ -1,5 +1,6 @@
 ---
 date: 2024-12-12
+created_on: "[[12-12-2024]]"
 tags:
   - math/calculus/vector
   - university
@@ -8,7 +9,6 @@ id: 16.5 - Curl and Divergence
 class:
   - note
 ---
-
 Two important operations on vector fields are **curl and divergence**. We will define them in terms of the nabla operator $\nabla$:
 
 $$

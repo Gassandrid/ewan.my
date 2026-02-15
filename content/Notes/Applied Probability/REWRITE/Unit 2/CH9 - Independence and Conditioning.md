@@ -1,5 +1,6 @@
 ---
 id: CH9 - Independence and Conditioning
+created_on: "[[02-05-2025]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ date: 2025-02-05
 title: CH9 - Independence and Conditioning
 updated: 2025-06-21
 ---
-
 Let's say that we have 2 discrete random variables $A$ $B$.
 
 Therefore, we say that:

@@ -1,5 +1,6 @@
 ---
 id: Population
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ tags:
 date: 2024-09-12
 updated: 2025-06-21
 ---
-
 # Population in Statistics
 
 - **Population** refers to the entire set of individuals, items, or data points that you are interested in studying. It represents the complete group from which you want to draw conclusions.

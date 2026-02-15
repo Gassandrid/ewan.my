@@ -1,5 +1,6 @@
 ---
 id: Bayesian Inference
+created_on: "[[09-24-2025]]"
 aliases: []
 tags:
   - math/probability/bayesian
@@ -10,7 +11,6 @@ source:
   - "[[The better way to do statistics - Bayesian 1]]"
 updated: 2025-09-24
 ---
-
 **Bayesian Inference** is the extension of Bayes' Theorem to the realm of statistical inference, allowing us to update our beliefs about unknown parameters based on observed data. It provides a coherent framework for learning from data and making predictions.
 
 Taking the well known Bayes' Theorem:

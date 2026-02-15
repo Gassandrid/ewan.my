@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-08-2025]]"
 class:
   - note
   - lecture
@@ -16,7 +17,6 @@ author:
 date: 2025-09-08
 updated: 2025-09-08
 ---
-
 The framework which says:
 
 - that all people have a religion

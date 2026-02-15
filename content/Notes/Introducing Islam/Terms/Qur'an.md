@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-27-2025]]"
 class:
   - note
   - definition
@@ -15,7 +16,6 @@ lecture-number: 2
 source:
 related:
 ---
-
 _Islam's holiest text._
 
 Holy book for [[Muslim]], primary but not only sacred source of Islam. It is noted as literally "recited", in that it is [[Muhammad]]'s recitation of the literal word of God

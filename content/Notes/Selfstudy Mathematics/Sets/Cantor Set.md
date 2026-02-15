@@ -1,5 +1,6 @@
 ---
 id: Cantor Set
+created_on: "[[08-13-2025]]"
 aliases: []
 tags:
   - math/sets
@@ -8,7 +9,6 @@ class:
   - note
 updated: 2025-08-26
 ---
-
 The **Cantor Set** is a classic example of a set that is uncountably infinite, yet has measure zero. It is constructed by repeatedly removing the middle third of intervals, leading to a fractal structure.
 
 ![[CantorSetExcalidraw.png]]

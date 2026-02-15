@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-22-2026]]"
 class:
   - note
   - lecture
@@ -17,7 +18,6 @@ lecture-number: 4
 date: 2026-01-22T08:34:57-05:00
 updated: 2026-01-22T09:40:05-05:00
 ---
-
 We return to [[A short history of AI]], were we had a brief look at **[[A short history of AI#Vehicles|Braitenberg]]** Vehicles. While we learned about how the inputs and outputs connected to form emergent behavior, we now need to generalize the concept of "neurons" and "connections" to build more complex systems.
 
 ---

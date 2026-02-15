@@ -1,5 +1,6 @@
 ---
 id: 16.2a - Line Integrals Of Scalar Fields
+created_on: "[[11-06-2024]]"
 date: 2024-11-06
 tags:
   - math/calculus/vector
@@ -8,7 +9,6 @@ updated: 2025-09-05
 class:
   - note
 ---
-
 Suppose the curve $C$ in the xy-plane has the vector equation $\vec{r}(t) = \langle x(t),y(t) \rangle$. Suppose $C$ lies below the surface $z=f(x,y)$, and consider the problem of find the area of the **"sheet"** between the $C$ and the **surface**.
 
 > [!Info] Sketch

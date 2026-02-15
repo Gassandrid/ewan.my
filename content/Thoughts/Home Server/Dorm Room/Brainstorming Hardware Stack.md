@@ -1,12 +1,12 @@
 ---
 title: Brainstorming Hardware Stack
+created_on: "[[01-02-2025]]"
 date: 2025-01-02
 updated: 2025-07-03
 tags:
   - projects/homelab/hardware
   - projects/homelab/dorm
 ---
-
 To start this great project of mine, Im going to just be using what I already have. While I do plan to invest in some proper homelab hardware in the distant future, that doesnt offset the fact that it will be ridiculously expensive.
 
 Instead, I am going to be using all of my old computers in a cluster to achieve the same result. Old laptops are great, they have a built in battery backup, draw very little power, and have a built in console for troubleshooting.

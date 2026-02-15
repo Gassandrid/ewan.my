@@ -1,5 +1,6 @@
 ---
 date: 2025-10-28
+created_on: "[[10-28-2025]]"
 updated: 2025-10-28
 class:
   - note
@@ -9,7 +10,6 @@ source:
 related:
 author:
 ---
-
 1. You are walking to class when your friend calls and asks if you can pick up a library book  
 for them on your way home. Explain how you would encode and store this information in  
 your memory using the multi-store model of memory. In your answer, describe each type of  

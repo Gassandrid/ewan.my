@@ -1,5 +1,6 @@
 ---
 date: 2026-01-19T09:51:57-05:00
+created_on: "[[01-19-2026]]"
 updated: 2026-01-19T10:47:42-05:00
 class:
   - note
@@ -13,7 +14,6 @@ description:
 aliases:
   - STFT
 ---
-
 The STFT (or often STFFT) is the blend between the Fourier Transform and the concept of time windows. It allows us to analyze how the frequency content of a signal changes over time, which is particularly useful for non-stationary signals where frequency components vary.
 
 In most practical cases, having something like a full song be converted to the frequency domain is limited in use. There are elements of the song like that notes that make proper use of frequency combinations, but in most case we take these notes to be short lived, and arranged in time. Thus, we need a way to analyze the frequency content of a signal over short time intervals.

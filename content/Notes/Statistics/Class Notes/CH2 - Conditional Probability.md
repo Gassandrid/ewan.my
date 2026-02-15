@@ -1,5 +1,6 @@
 ---
 id: CH2 - Conditional Probability
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ tags:
 date: 2024-09-12
 updated: 2025-09-04
 ---
-
 # CH2.3 - Conditional Probability and Independence
 
 This section covers conditional probability and independence. Conditional probability is the probability of an event given that another event has occurred. Independence is when the occurrence of one event does not affect the probability of another event.

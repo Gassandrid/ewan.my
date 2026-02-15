@@ -1,5 +1,6 @@
 ---
 date: 2025-08-27
+created_on: "[[08-27-2025]]"
 updated: 2025-08-27
 class:
   - note
@@ -7,7 +8,6 @@ class:
 tags:
   - biology
 ---
-
 **Gluten** is defined as an insoluble protein complex formed by mechanical manipulation of wheat proteins in the presence of water.
 
 **Glutenin** on the other hand, is a specific protein that is a major component of gluten. It is responsible for the elasticity and strength of the dough.

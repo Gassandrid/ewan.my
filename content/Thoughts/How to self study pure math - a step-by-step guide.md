@@ -1,5 +1,6 @@
 ---
 title: How to self study pure math - a step-by-step guide
+created_on: "[[04-25-2025]]"
 source:
   - https://www.youtube.com/watch?v=byNaO_zn2fI&t=40s
 published: 
@@ -10,7 +11,6 @@ tags:
 date: 2025-04-25
 updated: 2025-04-25
 ---
-
 ![](https://www.youtube.com/watch?v=byNaO_zn2fI)  
 
 ---

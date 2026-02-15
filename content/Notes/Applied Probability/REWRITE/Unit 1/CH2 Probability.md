@@ -1,5 +1,6 @@
 ---
 id: CH2 Probability
+created_on: "[[01-15-2025]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ date: 2025-01-15
 title: CH2 Probability
 updated: 2025-06-21
 ---
-
 Moving on to chapter 2, we will discuss the concept of probability. Probability is a fundamental concept in statistics that quantifies the likelihood of an event occurring. Understanding probability is essential for making informed decisions based on data and statistical analyses.
 
 ---

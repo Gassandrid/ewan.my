@@ -1,11 +1,11 @@
 ---
+created_on: "[[10-15-2024]]"
 tags:
   - university
   - cs/python
 date: 2024-10-15
 updated: 2025-10-15
 ---
-
 ## Image
 
 ![[Pasted image 20241015090052.png]]

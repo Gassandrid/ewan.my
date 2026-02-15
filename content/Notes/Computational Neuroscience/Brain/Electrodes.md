@@ -1,5 +1,6 @@
 ---
 id: Electrodes
+created_on: "[[04-23-2025]]"
 aliases: []
 tags:
   - todo/neuro
@@ -7,7 +8,6 @@ tags:
 date: 2025-04-23
 updated: 2026-01-12T11:33:38-05:00
 ---
-
 sharp and patch electrodes... etc
 
 ---

@@ -1,13 +1,12 @@
 ---
 title: Using Bare Metal Nixos and Debian Over Proxmox
+created_on: "[[01-28-2025]]"
 date: 2025-01-28
 updated: 2026-01-18T08:30:29-05:00
 tags:
   - cs
   - projects/homelab/software
 ---
- 
-
 This idea was born from the fact that during the process described in [[Bridging my University Wifi to host own network access point]], I noted that it would be quite difficult to assign static IP's without access to the router myself.
 
 Given that this is a WPA2-Enterprise University network, I doubt that I am getting acesss to that any time soon. One possibility that I looked at in that Document is the idea to use my local router to assign something of a static ip and have traffic go through there, but despite my best efforts that has not yielded any results(thanks again to WPA2-Enterprise).

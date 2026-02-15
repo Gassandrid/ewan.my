@@ -1,5 +1,6 @@
 ---
 id: Matrix Transpose
+created_on: "[[02-12-2025]]"
 aliases: 
 tags:
   - math/linear-algebra
@@ -7,7 +8,6 @@ date: 2025-02-12
 title: Matrix Transpose
 updated: 2025-04-02
 ---
-
 This lesson will cover matrix transposition, which is a fundamental operation in linear algebra. The transpose of a matrix is obtained by flipping the matrix over its diagonal. This operation is denoted by the superscript "T" or by the prime
 
 ---

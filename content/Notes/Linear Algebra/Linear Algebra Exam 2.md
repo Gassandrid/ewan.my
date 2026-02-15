@@ -1,5 +1,6 @@
 ---
 id: Linear Algebra Exam 2
+created_on: "[[04-03-2025]]"
 aliases: []
 tags:
   - math/linear-algebra
@@ -7,7 +8,6 @@ date: 2025-04-03
 class: note
 updated: 2025-04-04
 ---
-
 _a starting point for exam 2 studying_
 
 ---

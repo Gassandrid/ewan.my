@@ -1,5 +1,6 @@
 ---
 date: 2025-01-03
+created_on: "[[01-03-2025]]"
 updated: 2025-06-19
 tags:
   - seed
@@ -10,7 +11,6 @@ aliases:
   - oobabooga
   - huggingface
 ---
-
 This has nothing to with my [[Migrating my Quartz, DARS, and media to one big Homelab Server|homelab]] project, however a lot of the decisions I make might influence the [[Brainstorming Software Stack|software]] infrastructure of some of the servers.
 
 ---

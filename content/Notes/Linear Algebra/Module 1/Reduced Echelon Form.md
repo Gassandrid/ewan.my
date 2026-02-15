@@ -1,5 +1,6 @@
 ---
 id: Reduced Echelon Form
+created_on: "[[01-22-2025]]"
 aliases: 
 tags:
   - math/linear-algebra
@@ -7,7 +8,6 @@ date: 2025-01-22
 title: Reduced Echelon Form
 updated: 2025-04-02
 ---
-
 In this class, we will learn about the reduced echelon form of a matrix. The reduced echelon form is a matrix that has a variety of interesting properties.
 
 ---

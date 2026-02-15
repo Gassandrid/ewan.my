@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-27-2025]]"
 class:
   - note
   - navigation
@@ -7,7 +8,6 @@ tags:
 date: 2025-08-27
 updated: 2025-12-25
 ---
-
 *The main textbook for assigned reading.*
 
 ---

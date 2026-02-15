@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-02-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ related:
 date: 2025-09-02
 updated: 2025-09-02
 ---
-
 An adjacency list, like an [[Adjacency Matrix]], is a way of representing a graph. However, instead of using a 2D array, it uses a collection of lists or arrays to represent the connections between nodes. This representation is more space-efficient for sparse graphs, where the number of edges is much less than the maximum possible number of edges. One can picture this as looking somewhat like a [[Hash Map]].
 
 Once again consider that one [[Graphs#^4ae3bd|undirected graph example]], we can represent this as a **[[Adjacency List]]** with the following:

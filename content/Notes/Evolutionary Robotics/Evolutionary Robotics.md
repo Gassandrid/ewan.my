@@ -1,5 +1,6 @@
 ---
 status: open
+created_on: "[[01-13-2026]]"
 priority: normal
 scheduled: 2026-01-20T08:30
 contexts:
@@ -38,7 +39,6 @@ complete_instances:
   - 2026-01-15
 skipped_instances: []
 ---
-
 ## Lectures
 
 **Day 1:** Syllabus

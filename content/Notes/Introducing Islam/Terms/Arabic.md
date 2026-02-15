@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-29-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ related:
 date: 2025-08-29
 updated: 2025-08-29
 ---
-
 **Arabic** is a Semitic language spoken by Arabs and non-Arabs, but it is _not_ spoken by a vast majority of Muslims.
 
 There are several varieties of Arabic, including:

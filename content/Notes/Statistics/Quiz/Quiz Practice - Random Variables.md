@@ -1,10 +1,10 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2024-10-05
 tags:
   - university
 ---
-
 > [!info] **Instructions:**
 > Complete the following exercises and enter your answers into Blackboard. Hardcopy answers will not be accepted.
 

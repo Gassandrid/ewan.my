@@ -1,5 +1,6 @@
 ---
 date: 2025-09-02
+created_on: "[[09-02-2025]]"
 updated: 2025-09-02
 class:
   - note
@@ -15,7 +16,6 @@ lecture-number: 3
 source:
 related:
 ---
-
 Adjacency Matrix is a way of representing a graph using a 2D array. It is particularly useful for dense graphs where the number of edges is close to the maximum number of edges.
 
 Going back to a previous [[Graphs#^4ae3bd|undirected graph example]], we can represent this as a matrix:

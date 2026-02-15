@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-21-2026]]"
 class:
   - note
 tags:
@@ -13,7 +14,6 @@ aliases:
 date: 2026-01-21T08:35:45-05:00
 updated: 2026-01-21T08:36:05-05:00
 ---
-
 **Mean Squared Error (MSE)** is the standard loss function used to linear regression tasks, as it effectively measures the average of the squares of the errors—that is, the average squared difference between the predicted values and the actual values.
 
 It is defined mathematically as:

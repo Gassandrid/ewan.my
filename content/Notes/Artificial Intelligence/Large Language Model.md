@@ -1,5 +1,6 @@
 ---
 id: Large Language Model
+created_on: "[[09-25-2025]]"
 aliases:
   - LLM
 tags: []
@@ -13,7 +14,6 @@ related:
   - "[[Self Attention]]"
 author:
 ---
-
 _The architecture that kicked it all off._
 
 **Large Language Models (LLMs)** are an extension of the [[Self Attention|Transformer]] architecture, which was introduced in the paper "[Attention is All You Need](https://arxiv.org/abs/1706.03762)" by Vaswani et al. in 2017. LLMs are designed to understand and generate human-like text by leveraging vast amounts of data and computational power.

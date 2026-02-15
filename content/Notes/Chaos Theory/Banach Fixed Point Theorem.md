@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-20-2026]]"
 class:
   - note
 tags:
@@ -15,7 +16,6 @@ aliases:
 date: 2026-01-20T14:06:24-05:00
 updated: 2026-01-21T12:07:48-05:00
 ---
-
 _not from in class_
 
 The **Banach Fixed Point Theorem** is a famous result from metric space theory. It states that if you have a complete metric space and a contraction mapping on that space, then there exists a unique fixed point for that mapping.

@@ -1,5 +1,6 @@
 ---
 date: 2025-10-09
+created_on: "[[10-09-2025]]"
 updated: 2025-10-09
 class:
   - note
@@ -10,7 +11,6 @@ source:
 related:
 author:
 ---
-
 The **Latent Space** is a broadly used term to describe the high dimensional nature of data representations in machine learning models, particularly in deep learning. It refers to an abstract multi-dimensional space where complex data structures are encoded into simpler, more manageable forms.
 
 ![[latentSpaceML.png]]

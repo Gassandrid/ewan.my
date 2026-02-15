@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-15-2026]]"
 class:
   - note
   - lectureNote
@@ -17,7 +18,6 @@ description:
 date: 2026-01-15T08:29:40-05:00
 updated: 2026-01-20T08:42:42-05:00
 ---
-
 ## A short Recap
 
 We looked at flexible muscle based locomotion for bipedal creatures. This was done by creating a simulation environment where creatures with different morphologies could be evolved to walk using a genetic algorithm.

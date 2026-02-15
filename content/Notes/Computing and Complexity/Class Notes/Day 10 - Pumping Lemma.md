@@ -1,5 +1,6 @@
 ---
 id: Day 10
+created_on: "[[02-20-2025]]"
 aliases: []
 tags:
   - cs/theory
@@ -7,7 +8,6 @@ date: 2025-02-20
 title: Day 10
 updated: 2025-03-27
 ---
-
 This class will discuss the pumping lemma for regular expressions.
 
 ---

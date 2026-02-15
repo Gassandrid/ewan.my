@@ -1,5 +1,6 @@
 ---
 date: 2025-10-29
+created_on: "[[10-29-2025]]"
 updated: 2026-01-12T09:53:19-05:00
 class:
   - note
@@ -13,7 +14,6 @@ source:
 related:
 author:
 ---
-
 A **Kalman Filter** is a tool for incorporating noisy measurements over time to estimate the true state of a dynamic system. It is widely used in control systems, robotics, and signal processing.
 
 ---

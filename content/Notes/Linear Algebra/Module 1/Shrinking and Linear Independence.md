@@ -1,5 +1,6 @@
 ---
 id: Shrinking and Linear Independence
+created_on: "[[02-05-2025]]"
 aliases: 
 tags:
   - math/linear-algebra
@@ -7,7 +8,6 @@ date: 2025-02-05
 title: Shrinking and Linear Independence
 updated: 2025-04-02
 ---
-
 This class will finish our discussion on [[Superposition and Subspace#Shrinking|Shrinking]] from last class, and then will begin the discussion on Linear Independence.
 
 ---

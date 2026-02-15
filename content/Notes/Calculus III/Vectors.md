@@ -1,11 +1,11 @@
 ---
+created_on: "[[09-04-2024]]"
 tags:
   - math
   - university
 date: 2024-09-04
 updated: 2024-10-25
 ---
-
 ## How Do You "add" Two Vectors Together?
 
 ![[Pasted image 20240826123538.png]]

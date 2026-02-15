@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-22-2025]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ author:
 date: 2025-10-22
 updated: 2025-10-22
 ---
-
 **Double Descent** is a fairly recent discovery in the field of machine learning and statistics that challenges traditional notions of model complexity and generalization error. It describes a phenomenon where increasing the complexity of a model beyond a certain point can lead to a decrease in generalization error, resulting in a "double descent" curve when plotting error against model complexity.
 
 This is particularly interesting, as the models are oftentimes still doing what we consider "overfitting" in traditional statistics(by memorising the noise in the training data), yet they still manage to generalize well to unseen data.

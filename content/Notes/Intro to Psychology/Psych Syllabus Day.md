@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-26-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ related:
 date: 2025-08-26
 updated: 2025-08-26
 ---
-
 Lecture consists of mainly discussing how the class structure will be carried out, no content for syllabus day.
 
 ---

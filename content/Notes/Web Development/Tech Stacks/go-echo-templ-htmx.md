@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2025-10-15
 tags:
   - cs/web/techstacks
@@ -11,7 +12,6 @@ related:
   - "[[rust-axum-askama-htmx]]"
 author:
 ---
-
 This would be my tech stack of choice for a simple fullstack web service, if I ever find myself doing web development lol.
 
 ---

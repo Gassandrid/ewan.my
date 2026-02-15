@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-25-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ related:
 date: 2025-08-25
 updated: 2025-09-08
 ---
-
 *Syllabus Introduction class, namely introducing people and the style of the class.*
 
 ---

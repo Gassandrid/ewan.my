@@ -1,11 +1,11 @@
 ---
 date: 2025-02-24
+created_on: "[[02-24-2025]]"
 updated: 2025-09-22
 title: On Touch Typing
 tags:
   - seed
 ---
-
 [[Typing]] for me has grown from a skill that I needed to learn regarding my career, to something that has drastically changed the way I get work done.
 
 I have only been touch typing for less than a year now, and although I have been practicing way too much, I have found the benefits to be much worth the work.

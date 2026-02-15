@@ -1,4 +1,5 @@
 ---
+created_on: "[[12-26-2025]]"
 class:
   - note
 tags:
@@ -9,7 +10,6 @@ description:
 date: 2025-12-26
 updated: 2025-12-26
 ---
-
 This website uses the [quartz](https://quartz.jzhao.xyz/) static site compiler engine, which was made for [Obsidian](https://obsidian.md/) notes.
 
 **Most** of my obsidian vault is private, which is why so many of the links here are broken.

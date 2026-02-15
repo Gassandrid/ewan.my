@@ -1,12 +1,12 @@
 ---
 date: 2024-10-05
+created_on: "[[10-05-2024]]"
 updated: 2025-02-06
 title: Sailing
 tags:
   - hobbies
   - seed
 ---
-
 > [!Info]- Video
 > ![[IMG_1783 2.mov|50x50]]
 

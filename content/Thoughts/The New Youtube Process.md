@@ -1,11 +1,11 @@
 ---
 date: 2025-04-13
+created_on: "[[04-13-2025]]"
 updated: 2025-08-16
 tags:
   - seed
   - youtube
 ---
-
 I have been thinking about how I can amplify my learning, especially in cases where I dont really feel like learning. I have already taken quite a bit of action to "train" my youtube feed to be productive, and this has actually worked quite well.
 
 But the way we know we absorb knowledge is by writing about it. I have been paying a lot of attention to [[Artem Kirsanov]]'s knowledge storage method, and I think I have a rough process for how I can flag videos I like and want to understand better, and how I can write about them.

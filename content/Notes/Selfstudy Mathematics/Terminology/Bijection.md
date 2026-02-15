@@ -1,5 +1,6 @@
 ---
 id: Bijection
+created_on: "[[10-06-2025]]"
 aliases:
   - bijection
 tags:
@@ -13,7 +14,6 @@ related:
 author:
 description: mapping between two sets where each element on first set maps to exactly one element on the other
 ---
-
 A **Bijection** simply refers to a function that is both injective (one-to-one) and surjective (onto). In laymann's terms, it serves as a mapping between two sets where each element in the first set corresponds to exactly one unique element in the second set, and vice versa. This means that every element in both sets is paired with exactly one element from the other set, ensuring a perfect "one-to-one correspondence" between the two sets.
 
 ![[bijection.png]]

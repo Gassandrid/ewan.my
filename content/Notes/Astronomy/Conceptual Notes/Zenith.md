@@ -1,5 +1,6 @@
 ---
 id: Zenith
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - astronomy
@@ -8,7 +9,6 @@ updated: 2025-04-13
 class:
   - note
 ---
-
 # Zenith
 
 ## Definition

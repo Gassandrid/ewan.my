@@ -1,12 +1,12 @@
 ---
 date: 2025-12-26
+created_on: "[[12-26-2025]]"
 description: works and people that have shaped how i think
 tags:
   - seed
   - philosophy
 updated: 2026-01-19T10:37:17-05:00
 ---
-
 inspired by [David Cole's](http://davidcole.me/canon/) and [aarnphm's](https://notes.aarnphm.xyz/personal-canon)
 
 the works that rewired my brain, the people who showed me new ways of seeing. not exhaustive or ranked

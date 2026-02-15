@@ -1,5 +1,6 @@
 ---
 id: Photosynthesis
+created_on: "[[09-24-2025]]"
 aliases: []
 tags:
   - university
@@ -14,7 +15,6 @@ lesson:
   - lecture
 updated: "2025-09-24"
 ---
-
 **Photosystems:** complexes of pigments and proteins ( ensymes) that _capture light energy_ and catalyze _electron transfer reactions_
 
 - **antenna pigments** absorb _light energy_ - _transfer_ to reaction

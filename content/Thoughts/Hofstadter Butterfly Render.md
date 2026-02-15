@@ -1,5 +1,6 @@
 ---
 title: Render of Hofstadter Butterfly
+created_on: "[[01-18-2026]]"
 class:
   - curation
 media-type: png
@@ -27,7 +28,6 @@ aliases:
 date: 2026-01-18T09:14:09-05:00
 updated: 2026-01-20T11:10:44-05:00
 ---
-
 A piece of my own creation, wanted to encode more parameters into the Hofstadter Butterfly to enrich the color.
 
 ![[hofButterFlyEwan.png]]

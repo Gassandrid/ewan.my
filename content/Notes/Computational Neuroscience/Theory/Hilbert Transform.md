@@ -1,5 +1,6 @@
 ---
 date: 2025-12-07
+created_on: "[[12-07-2025]]"
 updated: 2025-12-10
 class:
   - note
@@ -13,7 +14,6 @@ related:
 author:
 description:
 ---
-
 The **Hilbert Transform** is a tool for signal processing that allows us to convert a real valued signal into its analytic representation, which is a complex-valued signal. This transformation is particularly useful for extracting instantaneous amplitude and phase information from oscillatory signals, such as neural signals in computational neuroscience.
 
 ![[hilbertExampleTransform.png]]

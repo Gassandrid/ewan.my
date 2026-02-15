@@ -1,5 +1,6 @@
 ---
 date: 2025-06-13
+created_on: "[[06-13-2025]]"
 updated: 2026-01-29 10:47:02-05:00
 tags:
 - books/geb

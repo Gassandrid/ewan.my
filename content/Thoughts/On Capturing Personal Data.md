@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-08-2025]]"
 class:
   - note
 tags:
@@ -16,7 +17,6 @@ updated: 2026-01-14T10:07:18-05:00
 aliases:
   - Quantified Self
 ---
-
 While working on a project for my class [[Brainstorming Data Science Temporal Project]], I had the opportunity to sit down and actually view the data that I had been collecting in my vault without really thinking about it. This vault contains notes yes, but also structured data for **videos** I watch,
 
 ---

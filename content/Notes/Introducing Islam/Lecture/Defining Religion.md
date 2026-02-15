@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-27-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ related:
 date: 2025-08-27
 updated: 2025-08-27
 ---
-
 *in essence, religion is too intertwined with culture for us to talk about one without mentioning the other*
 
 ---

@@ -1,8 +1,8 @@
 ---
 date: 2026-02-09T08:54:07-05:00
+created_on: "[[02-09-2026]]"
 updated: 2026-02-09T09:02:18-05:00
 ---
-
 Decision Trees are known for producing robust, *interpreable* cateogories/splits in which data is classified.
 
 ![[decTree.png]]

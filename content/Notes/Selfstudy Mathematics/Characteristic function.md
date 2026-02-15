@@ -1,5 +1,6 @@
 ---
 id: Characteristic function
+created_on: "[[09-22-2025]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -8,7 +9,6 @@ class:
 date: 2025-09-22
 updated: 2025-09-22
 ---
-
 In Layman's terms, the characteristic function is just the Fourier transform of a probability distribution. It provides a way to uniquely describe the distribution of a random variable.
 
 ![[Pasted image 20250922132141.png]]

@@ -1,4 +1,5 @@
 ---
+created_on: "[[12-05-2025]]"
 class:
   - export
 tags:
@@ -11,7 +12,6 @@ date: 2025-12-05
 updated: 2025-12-05
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Brightspace as one PDF or Word document.
 ---
-
 ---
 
 ## Self Reducibility

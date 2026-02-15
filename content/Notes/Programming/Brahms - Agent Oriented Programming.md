@@ -1,5 +1,6 @@
 ---
 id: Brahms - Agent Oriented Programming
+created_on: "[[10-17-2024]]"
 aliases:
 tags:
   - generated
@@ -9,7 +10,6 @@ date: 2024-10-17
 updated: 2025-10-06
 title: Brahms - Agent Oriented Programming
 ---
-
 > [!Note]
 > Brahms is a specialized agent-based programming language designed for modeling and simulating human work practices. It integrates multiple tools, including a compiler, virtual machine, and integrated development environment (IDE), to support agent development, simulation, and analysis.
 

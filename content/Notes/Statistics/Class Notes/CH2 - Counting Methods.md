@@ -1,5 +1,6 @@
 ---
 id: CH2 - Counting Methods
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ tags:
 date: 2024-09-12
 updated: 2025-06-21
 ---
-
 # CH2.2 - Counting Methods
 
 ---

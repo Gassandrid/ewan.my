@@ -1,5 +1,6 @@
 ---
 title: Staging Ground
+created_on: "[[03-25-2025]]"
 date: 2025-03-25
 updated: 2025-07-07
 tags:
@@ -7,7 +8,6 @@ tags:
   - comp-neuro
 class: planner
 ---
-
 For staging and planning topic to investigated in the field of [[Computational Neuroscience]].  
 
 ---

@@ -1,5 +1,6 @@
 ---
 date: 2025-06-06
+created_on: "[[06-06-2025]]"
 updated: 2025-08-26
 tags:
   - todo/neuro
@@ -9,7 +10,6 @@ class:
 source:
   - "[[Why Different Neuron Parts Learn Differently?]]"
 ---
-
 ![[Pasted image 20250606131359.png]]
 
 **Pyramidal Neurons**/cells are a special type of excitatory neuron contained within the [[Cerebral Cortex]]. They are the most populous member of the excitatory family in the brain areas they inhabit, with about $\frac{2}{3}$ of all neurons in the mammalian cerebral cortex being comprised of them.[^1]

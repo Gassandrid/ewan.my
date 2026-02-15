@@ -1,5 +1,6 @@
 ---
 id: 16.2b - Line Integrals of Vector Fields
+created_on: "[[11-11-2024]]"
 date: 2024-11-11
 tags:
   - math/calculus/vector
@@ -8,7 +9,6 @@ updated: 2025-09-05
 class:
   - note
 ---
-
 In physics, the **work** done by a constant force acting on an object taht moves along a line is defined by $W = Force \times Distance$.
 
 > [!Info] Sketch

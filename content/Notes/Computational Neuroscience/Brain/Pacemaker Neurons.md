@@ -1,5 +1,6 @@
 ---
 title: Pacemaker Neurons
+created_on: "[[03-25-2025]]"
 date: 2025-03-25
 updated: 2026-01-12T10:53:30-05:00
 tags:
@@ -7,8 +8,6 @@ tags:
   - comp-neuro/brain
 class: note
 ---
- 
-
 Pacemaker Neurons are a type of [[Neuron]] that possess the innate ability to generate a rhythmic burst of activity. This is a crucial mechanism for several rhythmic motor activities, namely **sleep**, **arousal**, and **memory**.
 
 They do this through a dynamic interplay of [[Ion Channels]], second messengers, and [[Synapses|synaptic]] inputs. 

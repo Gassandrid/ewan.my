@@ -1,12 +1,12 @@
 ---
 date: 2024-12-28
+created_on: "[[12-28-2024]]"
 updated: 2025-02-24
 tags:
   - OCD
   - seed
 title: Tech Stacks
 ---
-
 I am no web developer, but when I am going to do web development, I would prefer to use one of the following to make my UI's work.
 
 > [!Warning] Database Choice

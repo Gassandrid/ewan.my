@@ -1,12 +1,12 @@
 ---
 date: 2024-10-06
+created_on: "[[10-06-2024]]"
 tags:
   - hobbies
   - seed
 updated: 2025-02-06
 title: Woodwork
 ---
-
 I do a little bit of woodwork from time to time, and find it to be quite an enjoyable activity. Since I am in University now, I can't do proper woodwork with tools more complicated that a Chisel, but usually my [Leatherman](https://www.leatherman.com/charge-tti-832537.html) is enough for me to have a good time with it.
 
 ## Why I Do Woodwork

@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 aliases:
   - Jinn
 date: 2025-09-03
@@ -17,7 +18,6 @@ source:
 related:
 author:
 ---
-
 Djinn are _unique_ to Islam. It is not in the word "folk lore", and is also responsible for the idea of the "genie" in modern culture.
 
 They are considered a class of spirits that inhabit a hidden world known as _al ghayb_. They populate the world as **both** beneficent and malicious spirits.

@@ -1,11 +1,11 @@
 ---
 date: 2024-10-04
+created_on: "[[10-04-2024]]"
 tags:
   - generated
   - university
 updated: 2025-07-02
 ---
-
 In a binary search tree with the following rules:
 
 - The left child of a node contains a value smaller than the node.

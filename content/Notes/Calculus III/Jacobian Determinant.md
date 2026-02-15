@@ -1,12 +1,12 @@
 ---
 date: 2024-10-31
+created_on: "[[10-31-2024]]"
 tags:
   - math
   - generated
   - university
 updated: 2026-01-29T10:46:08-05:00
 ---
-
 Concept from vector calculus that helps in transforming between coordinate systems. It represents the scaling factor of the transformation at a given point and is especially useful when changing variables in multivariable integrals.
 
 ### Definition of the Jacobian Determinant

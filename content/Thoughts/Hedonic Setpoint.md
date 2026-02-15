@@ -1,5 +1,6 @@
 ---
 id: Hedonic Setpoint
+created_on: "[[02-27-2025]]"
 aliases: 
 tags:
   - philosophy
@@ -8,7 +9,6 @@ date: 2025-02-27
 title: Hedonic Setpoint
 updated: 2025-03-03
 ---
-
 The _Hedonic Cycle_, also known as the _Hedonic Treadmill_ or _Hedonic Adaptation_ describes the tendency for humans to return to a baseline emotional level, even after particularly happy or traumatic moments in ones life.
 
 ---

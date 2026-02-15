@@ -1,5 +1,6 @@
 ---
 id: The Stolen Necklace Problem
+created_on: "[[08-19-2025]]"
 aliases: []
 tags:
   - math/topology
@@ -12,7 +13,6 @@ source:
   - "[[Using topology for discrete problems - The Borsuk-Ulam theorem and stolen necklaces]]"
 updated: 2025-08-19
 ---
-
 The stolen necklace problem presents itself as a simple problem: given a necklace with `n` beads, each of which can be one of `k` colors, how many distinct necklaces can be formed?
 
 I found out about this problem while watching a video from [[3blue1brown]] on the [[Borsuk-Ulam Theorem]]. The problem is a classic example of how topology can be applied to discrete problems, and it has a surprisingly elegant solution.

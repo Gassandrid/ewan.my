@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-12-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ author:
 date: 2025-09-12
 updated: 2025-09-12
 ---
-
 ---
 
 Inosine Monophosphate

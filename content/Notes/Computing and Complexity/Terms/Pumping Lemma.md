@@ -1,12 +1,12 @@
 ---
 title: Pumping Lemma
+created_on: "[[02-20-2025]]"
 tags:
   - cs/automata
   - generated
 date: 2025-02-20
 updated: 2025-06-22
 ---
-
 The pumping lemma for regular languages is a fundamental result in automata theory. It is primarily used to prove that a given language is not regular by demonstrating that all regular languages must satisfy a particular "pumping" property.
 
 ## Formal Statement

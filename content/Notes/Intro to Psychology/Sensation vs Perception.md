@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-16-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ author:
 date: 2025-09-16
 updated: 2025-09-16
 ---
-
 ## Some Definitions
 
 **Sensation**: the process by which our sensory organs receive stimulus energies from the environment and transduce them into the electrical energy of the nervous system

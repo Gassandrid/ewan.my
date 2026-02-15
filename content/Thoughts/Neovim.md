@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-19-2025]]"
 class:
   - software
 tags:
@@ -18,7 +19,6 @@ author:
 date: 2025-09-19
 updated: 2025-09-19
 ---
-
 *Neovim* is my primary editor for general purpose text. Even when I am taking *Obsidian* notes, I oftentimes still open the underlying markdown file in neovim for a better editing experience.
 
 Neovim is an extension of *Vim*( a keyboard only editor ) integrating Lua as the plugin backend. Like *VsCode*, Neovim is super extensible and customizable.

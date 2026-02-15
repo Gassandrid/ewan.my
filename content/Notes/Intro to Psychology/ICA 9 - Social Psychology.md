@@ -1,5 +1,6 @@
 ---
 date: 2025-10-23
+created_on: "[[10-23-2025]]"
 updated: 2025-10-23
 class:
   - note
@@ -10,7 +11,6 @@ source:
 related:
 author:
 ---
-
 ## Part A
 
 1. Describe the Elaboration Likelyhood Model (make sure to define the central and peripheral routes).

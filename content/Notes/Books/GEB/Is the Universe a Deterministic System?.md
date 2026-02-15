@@ -1,5 +1,6 @@
 ---
 id: Is the Universe a Deterministic System?
+created_on: "[[07-26-2025]]"
 aliases:
 tags:
   - seed
@@ -10,8 +11,6 @@ updated: 2025-08-03
 class:
   - note
 ---
- 
-
 While reading **[[Gödel, Escher, Bach]]**, on the chapter covering formal systems and their relationship to well-formed strings ( see **[[The p-z problem]]** ), the author briefly mentioned the debate of whether the universe operates _deterministically_ or not. This particularly interested me following my work with differential equations and _chaos theory_, where I learned that even simple systems can exhibit chaotic behavior, making long-term predictions impossible despite being **deterministic** in nature. However, was this just because of the complexity of the systems I was studying, or could it be that the universe itself is _not deterministic_?
 
 ---

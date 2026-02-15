@@ -1,5 +1,6 @@
 ---
 id: Unstable Manifold
+created_on: "[[02-05-2026]]"
 aliases:
   - Unstable Manifolds
   - Unstable Direction
@@ -18,7 +19,6 @@ related:
   - "[[Sinks, Sources, and Saddles]]"
 updated: 2026-02-05T10:35:50-05:00
 ---
-
 The **unstable manifold** of a [[Saddle fixed point|saddle]] fixed point is the set of points that converge to the fixed point under backward iteration. It's the direction of expansion.
 
 For a linear map with a [[Saddle fixed point|saddle]] at the origin, the unstable manifold is the subspace spanned by eigenvectors with $|\lambda| > 1$.

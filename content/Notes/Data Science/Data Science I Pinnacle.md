@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-21-2025]]"
 class:
   - course
 tags:
@@ -16,7 +17,6 @@ source:
 date: 2025-08-21
 updated: 2025-08-26
 ---
-
 The goal of this course is to bridge the gap between model development and real-world   deployment of a data analysis project. It was designed to ensure a comprehensive   understanding of current Data Science tools and to teach how to keep up with the fast paced   gen AI world.  
 Project work will be carried throughout the whole semester within the following units:  
 

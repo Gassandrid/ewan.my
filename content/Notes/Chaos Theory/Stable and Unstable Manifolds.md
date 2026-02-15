@@ -1,5 +1,6 @@
 ---
 id: Jacob continued
+created_on: "[[02-05-2026]]"
 aliases: []
 tags:
   - university
@@ -12,7 +13,6 @@ date: 2026-02-05T10:09:33-05:00
 lecture-number: 8
 updated: 2026-02-08T10:29:45-05:00
 ---
-
 Continuing from [[Linearization and the Jacobian|last lecture:]]
 
 What about stability of period $k$ points in $\mathbb{R}^{2}$?

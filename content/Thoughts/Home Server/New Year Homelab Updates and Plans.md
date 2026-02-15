@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-27-2025]]"
 tags:
   - projects/homelab
   - cs/homelab
@@ -8,7 +9,6 @@ updated: 2026-01-18T08:29:05-05:00
 class:
   - note
 ---
-
 It has been a while since I have updated this project, as it was working as intended for the rest of my second year at the [[University Of Vermont]].
 
 However, I have moved off campus now, with a lot more space for a proper server shelf, and some new home automation features.

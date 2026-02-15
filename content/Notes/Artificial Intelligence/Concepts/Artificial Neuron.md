@@ -1,11 +1,11 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2025-03-25
 title: Artificial Neuron
 aliases:
   - neuron
 ---
-
 ![[Pasted image 20240808134117.png]]
 
 ### Overview

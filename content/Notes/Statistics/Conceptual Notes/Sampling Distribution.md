@@ -1,10 +1,10 @@
 ---
 date: 2024-10-15
+created_on: "[[10-15-2024]]"
 updated: 2024-10-15
 tags:
   - university
 ---
-
 A _sampling distribution_ refers to the probability distribution of a given sample statistic, such as the sample mean or sample proportion, calculated from multiple random samples of the same size NNN taken from a population. 
 
 

@@ -1,12 +1,12 @@
 ---
 date: 2024-09-11
+created_on: "[[09-11-2024]]"
 tags:
   - cs/embedded
   - university
 updated: 2025-03-31
 class: note
 ---
-
 > [!abstract] Student Information
 > Ewan Pedersen
 > CS2210

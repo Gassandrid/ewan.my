@@ -1,5 +1,6 @@
 ---
 id: CH2 - Random Variables
+created_on: "[[09-12-2024]]"
 aliases:
   - Random Variable
 tags:
@@ -8,7 +9,6 @@ tags:
 date: 2024-09-12
 updated: 2026-01-17T07:58:48-05:00
 ---
-
 # CH2.4 - Random Variables (RVs)
 
 > [!Info] Definition

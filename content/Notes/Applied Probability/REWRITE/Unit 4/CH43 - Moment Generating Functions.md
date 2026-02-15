@@ -1,12 +1,12 @@
 ---
 id: CH 43 - Moment Generating Functions
+created_on: "[[04-07-2025]]"
 aliases: []
 tags:
   - math/probability
 date: 2025-04-07
 updated: 2025-10-15
 ---
-
 > [!Abstract] Definition for a Generation Function
 > If $a_{1},a_{2},\dots, a_{n}$ is an interesting sequence of numbers from which we want to build a generating function $g(t)$, we write:
 >

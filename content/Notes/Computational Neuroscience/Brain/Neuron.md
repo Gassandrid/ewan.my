@@ -1,5 +1,6 @@
 ---
 id: Neuron
+created_on: "[[03-25-2025]]"
 aliases:
 tags:
   - biology
@@ -10,8 +11,6 @@ title: Neuron
 updated: 2025-09-01
 class: note
 ---
- 
-
 _While I have touched apon the abstract idea of a synthetic [[Artificial Neuron|neuron]] in the context of machine learning, I have done little to learn about the biological side of things, and how this behavior emerges from physical phenomena._
 
 ---

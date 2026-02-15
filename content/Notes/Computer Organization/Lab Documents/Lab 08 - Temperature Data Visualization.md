@@ -1,12 +1,12 @@
 ---
 date: 2024-11-07
+created_on: "[[11-07-2024]]"
 updated: 2025-03-31
 tags:
   - cs/embedded
   - university
 class: note
 ---
-
 > [!abstract] Student Information
 > Ewan Pedersen
 > 

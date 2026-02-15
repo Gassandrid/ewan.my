@@ -1,5 +1,6 @@
 ---
 date: 2024-12-03
+created_on: "[[12-03-2024]]"
 id: 16.9 - Divergence Theorem
 tags:
   - math/calculus/multivariable
@@ -8,7 +9,6 @@ updated: 2025-09-05
 class:
   - note
 ---
-
 The Divergence Theorem gives us a method for computing the outward flux of $\vec{F}$ through a **closed** surface $S$.
 
 [[14.5 - Multivariable Chain Rule]]

@@ -1,11 +1,11 @@
 ---
 date: 2025-04-19
+created_on: "[[04-19-2025]]"
 updated: 2026-01-18T08:30:10-05:00
 tags:
   - projects/homelab
   - projects/homelab/dorm
 ---
-
 Things have been going quite well! I have reached a point where I am using my home server collection to host a lot of my services, and while my university wifi has certainly been restricting, I have been able to host just about everything I have needed. 
 
 This has mostly been things like **Nextcloud** and a webui for my self-hosted models, but it has also served as a testing ground for my learning process with things like reverse proxies and other middleware solutions.

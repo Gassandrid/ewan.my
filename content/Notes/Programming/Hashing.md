@@ -1,11 +1,11 @@
 ---
 date: 2024-08-24
+created_on: "[[08-24-2024]]"
 tags:
   - cs/crypto
   - todo/cs
 updated: 2025-08-21
 ---
-
 ## Hashing
 
 ### Overview

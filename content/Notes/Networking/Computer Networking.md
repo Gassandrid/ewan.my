@@ -1,5 +1,6 @@
 ---
 status: open
+created_on: "[[01-13-2026]]"
 priority: normal
 scheduled: 2026-01-20T14:50:00
 contexts:
@@ -39,7 +40,6 @@ complete_instances:
   - 2026-01-15
 skipped_instances: []
 ---
-
 Introduction to the theoretical and pragmatic principles and practices of computer networking, with an emphasis on the TCP/IP (Internet) protocol stack, and modern techniques and concerns such as security and software defined networking. 
 
 We focus on the Internet, especially the TCP/IP protocol stack, the world-wide-web, Internet standards, and network security.  

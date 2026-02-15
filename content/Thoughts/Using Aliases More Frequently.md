@@ -1,5 +1,6 @@
 ---
 date: 2026-01-09T11:31:37+02:00
+created_on: "[[01-09-2026]]"
 updated: 2026-01-12T17:51:45-05:00
 class:
   - note
@@ -12,7 +13,6 @@ description:
 aliases:
   - Aliases
 ---
-
 I have recently realize just how usefull aliases can be when used properly. For the longest time, I had always looked at them for their face value - assigning alternative names to notes in very rare cases. But I have found them to be so much more than that.
 
 This was first realized when writing my [[Uniform Manifold Approximation and Projection|UMAP]] note. The actual title is [[Uniform Manifold Approximation and Projection]], but that is not what it is commonly known by. I set the alias there for easy searching, but realized a few things.

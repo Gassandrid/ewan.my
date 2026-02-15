@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-29-2025]]"
 class:
   - note
   - lectureNote
@@ -13,7 +14,6 @@ related:
 date: 2025-08-29
 updated: 2025-08-29
 ---
-
 _This continues from the [[Process of Science in Biology|previous lecture]] on the subject_
 
 ---

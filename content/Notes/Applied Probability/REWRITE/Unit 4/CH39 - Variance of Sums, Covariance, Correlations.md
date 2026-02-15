@@ -1,5 +1,6 @@
 ---
 id: CH39 - Variance of Sums, Covariance, Correlations
+created_on: "[[04-23-2025]]"
 aliases: []
 tags:
   - math/probability/random-variables
@@ -11,7 +12,6 @@ source:
 related:
 author:
 ---
-
 Essential reasoning for this chapter is that for expected value calculations:
 
 $$

@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-01-2025]]"
 class:
   - note
   - journal
@@ -12,7 +13,6 @@ author:
 date: 2025-10-01
 updated: 2026-01-28T09:47:31-05:00
 ---
-
 I have been thinking about how and what I actually want to capture in terms of my own data using my homelab. I love the idea of capturing what I watch, which isnt hard to do thanks to google takeout. However, I feel like this doesnt capture the full picture of my online activity, and I want to do this for other services like Instagram, twitter, etc.
 
 This is just an idea, but I have been thinking the easiest way to do all of those would just be to track the browsing history of my main computer [[Alarais]]

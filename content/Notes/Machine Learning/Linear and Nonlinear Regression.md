@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-21-2026]]"
 class:
   - note
   - lecture
@@ -15,7 +16,6 @@ updated: 2026-01-21T10:12:27-05:00
 course: "[[Machine Learning Course]]"
 lecture-number: 4
 ---
-
 We seek to build a simple linear regression model. We will have some **training data**, and we want to build a model for this data.
 
 ## Definition

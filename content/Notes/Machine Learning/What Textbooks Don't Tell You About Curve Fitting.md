@@ -1,5 +1,6 @@
 ---
 author:
+created_on: "[[01-21-2026]]"
 - '[[Artem Kirsanov]]'
 published: 2025-03-31
 source: https://www.youtube.com/watch?v=q7seckj1hwM&t=556s

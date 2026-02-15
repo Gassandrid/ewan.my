@@ -1,12 +1,12 @@
 ---
 title: REGEX Reference
+created_on: "[[02-24-2025]]"
 date: 2025-02-24
 updated: 2025-06-11
 tags:
   - cs
   - generated
 ---
-
 Very simple generated markdown reference for REGEX Pattern Matching Shorthands and whatnot.
 
 --- 

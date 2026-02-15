@@ -1,5 +1,6 @@
 ---
 id: The Golden Properties
+created_on: "[[07-03-2025]]"
 aliases:
 tags:
   - seed
@@ -8,7 +9,6 @@ date: 2025-07-03
 class: journal
 updated: 2025-07-03
 ---
-
 **Obsidian** is by far one of the most capable and customizable note-taking applications available. I have come to thoroughly enjoy the linking and tag systems, for the emergent organization they provide.
 
 However, one feature that I have never quite found a way to tame is the properties system. It is almost too flexible, and I have never been able to find a way to use it that is both useful and not overwhelming. I have tried many different approaches, but none of them have stuck.

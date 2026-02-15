@@ -1,12 +1,12 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 tags:
   - math/probability/statistics
   - university
 updated: 2025-06-21
 title: Axiom
 ---
-
 An **axiom** in statistics is a foundational, self-evident truth or assumption that forms the basis for statistical reasoning. These are accepted without proof and serve as starting points for the development of more complex theories and methods.
 
 ## Common Axioms in Probability Theory

@@ -1,5 +1,6 @@
 ---
 date: 2024-10-01
+created_on: "[[10-01-2024]]"
 tags:
   - math
   - university
@@ -13,7 +14,6 @@ related:
 author:
 description:
 ---
-
 > [!note] **Cartesian Product**
 > 
 > The **Cartesian Product** of two sets \( A \) and \( B \), denoted as \( A \times B \), is the set of all ordered pairs where the first element comes from \( A \) and the second comes from \( B \).

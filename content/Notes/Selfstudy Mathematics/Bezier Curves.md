@@ -1,4 +1,5 @@
 ---
+created_on: "[[07-09-2025]]"
 tags:
   - cs/graphics
   - math/splines/bezier
@@ -6,7 +7,6 @@ date: 2025-07-09
 updated: 2025-09-02
 class: note
 ---
-
 The **Bézier curve** is a parametric curve often used for computer graphics. It is part of the family of **spline curves**, useful for defining paths using a set of control points.
 
 The primary mechanism behind the Bézier curve is the [[Linear Interpolation]] function. [[Linear Interpolation]] takes in two points ( in the case of $\mathbb{R}^2$ ) and can _interpolate_ in between for a given parameter $t$ ( we are working with the parametric versions ):

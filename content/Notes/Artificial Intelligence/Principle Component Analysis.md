@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-09-2025]]"
 class:
   - note
 tags:
@@ -14,7 +15,6 @@ updated: 2025-11-06
 aliases:
   - PCA
 ---
-
 **Principle Component Analysis** is a [[Latent Space]] visualization technique for linear pattern extraction and dimensionality reduction. It transforms high-dimensional data into a lower-dimensional space while preserving as much variance as possible.
 
 For a two dimensional example mapping onto a line, you can think of PCA as finding the best line to fold the data onto, such that the distance from the points to the line is minimized. That "line" is the largest **principle component** of the distribution:

@@ -1,5 +1,6 @@
 ---
 date: 2025-11-04
+created_on: "[[11-04-2025]]"
 updated: 2025-11-04
 class:
   - note
@@ -10,7 +11,6 @@ source:
 related:
 author:
 ---
-
 A **Homeomorphism** is a continuous function between two topological spaces that has a continuous inverse function. In other words, if there exists a homeomorphism between two spaces, they are considered topologically equivalent, meaning they have the same topological properties.
 
 $$

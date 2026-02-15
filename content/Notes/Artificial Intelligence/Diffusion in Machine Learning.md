@@ -1,5 +1,6 @@
 ---
 date: 2025-09-29
+created_on: "[[09-29-2025]]"
 updated: 2025-12-18
 class:
   - note
@@ -12,7 +13,6 @@ source:
 related:
 author:
 ---
-
 **Diffusion** is a novel class of generatative modeling that, in most cases, work to denoise data by learning to reverse a gradual noising process. Diffusion models have recently gained significant attention in the field of machine learning, particularly for their ability to generate high-quality images, audio, and other types of data.
 
 In the world of [[Variational Inference]], diffusion models can be understood as a type of latent variable model where the latent variables represent progressively noisier versions of the data. The model is trained to predict the original data from these noisy versions, effectively learning to reverse the diffusion process.

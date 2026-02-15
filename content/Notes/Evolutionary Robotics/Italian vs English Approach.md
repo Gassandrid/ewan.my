@@ -1,5 +1,6 @@
 ---
 id: Italian vs English Approach
+created_on: "[[02-05-2026]]"
 aliases: []
 tags:
   - university
@@ -13,7 +14,6 @@ date: 2026-02-05T08:43:11-05:00
 lecture-number: 7
 updated: 2026-02-05T09:46:13-05:00
 ---
-
 There are two main approaches to evolutionary robotics: the "Italian" approach and the "English" approach. These terms were coined by Stefano Nolfi and Dario Floreano in their book _Evolutionary Robotics_ to describe different philosophies in the field.
 
 ## Italian Approach

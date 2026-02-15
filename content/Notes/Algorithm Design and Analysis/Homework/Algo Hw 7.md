@@ -1,5 +1,6 @@
 ---
 title: Homework 7 Written
+created_on: "[[10-24-2025]]"
 author:
   - Ewan Pedersen
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Brightspace as one PDF or Word document.
@@ -11,7 +12,6 @@ class:
 tags:
   - cs/theory/algorithms
 ---
-
 ---
 
 ## Integer Multiplication: Reading & Research

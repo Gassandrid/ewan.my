@@ -1,5 +1,6 @@
 ---
 date: 2025-08-28
+created_on: "[[08-28-2025]]"
 updated: 2025-09-02
 class:
   - note
@@ -12,7 +13,6 @@ lecture-number: 2
 source:
 related:
 ---
-
 - _Psychology as a science_
 - _Understanding Cognitive Bias_
 - _Scientifically Understanding Human Behavior_

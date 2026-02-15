@@ -1,4 +1,5 @@
 ---
+created_on: "[[06-21-2025]]"
 tags:
   - todo/math
   - math/complex
@@ -9,7 +10,6 @@ updated: 2025-09-24
 class:
   - transcript
 ---
-
 _for a [Welch Labs](https://www.youtube.com/watch?v=f8CXG7dS-D0) video_
 
 >[!note]

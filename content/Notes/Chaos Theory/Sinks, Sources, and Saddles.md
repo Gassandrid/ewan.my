@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-29-2026]]"
 class:
   - note
   - lecture
@@ -15,7 +16,6 @@ aliases:
 date: 2026-01-29T10:26:19-05:00
 updated: 2026-01-29T11:19:26-05:00
 ---
-
 ## Sink at Origin (Stable Fixed Point)
 
 > ![[sinkAtOriginHenon.png]]

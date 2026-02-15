@@ -1,5 +1,6 @@
 ---
 id: 14.3 - Partial Derivatives
+created_on: "[[12-12-2024]]"
 aliases:
   - Partial Derivative
 tags:
@@ -10,7 +11,6 @@ updated: 2026-02-03T09:34:00-05:00
 class:
   - note
 ---
-
 **Abstract:** We know that derivatives on the 2d plane find the slope of the line at that point, but what does the derivative find on the 3d plane?
 
 ---

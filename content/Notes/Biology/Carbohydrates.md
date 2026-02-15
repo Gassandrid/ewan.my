@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-08-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ author:
 date: 2025-09-08
 updated: 2025-09-08
 ---
-
 **Carbohydrates**, in the context of biology, are organic molecules composed of carbon (C), hydrogen (H), and oxygen (O) atoms, typically with a hydrogen to oxygen atom ratio of 2:1, similar to water (H2O). They are one of the four main types of macromolecules essential for life, alongside proteins, lipids, and nucleic acids.
 
 d

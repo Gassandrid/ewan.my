@@ -1,12 +1,12 @@
 ---
 date: 2025-06-11
+created_on: "[[06-11-2025]]"
 updated: 2025-06-11
 tags:
   - seed
   - journal
   - "#math"
 ---
-
 While I have always regarded myself as someone who loves the ideas and mechanics of mathematics, I was never really super interested in the process of doing it by hand. I have always been a visual learner, and those online explainers have provided a great foundation for my fundamental understanding of a lot of key concepts.
 
 But recently( and I'm not sure why ), I have taken an enjoyment in just learning and doing math for its own sake. More so, than even just doing things in the computer science world. Not just understanding the concepts of Calculus and Linear Algebra, but becoming obsessed with obtaining and cataloguing as much knowledge as I can on the subject.

@@ -1,5 +1,6 @@
 ---
 updated: 2026-01-31T19:32:00-05:00
+created_on: "[[12-28-2025]]"
 tags:
   - seed
   - places
@@ -19,7 +20,6 @@ date: 2025-12-28T22:48:09+02:00
 aliases:
   - UVM
 ---
-
 My undergraduate university. Initially came here for computer science, but am lucky to also find their neuroscience department excellent for research opportunities.
 
 It is located in Burlington, Vermont, a charming city with a nice lake. Also an R1 research university, so there are plenty of research opportunities for undergraduates.

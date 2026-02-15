@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-30-2025]]"
 class:
   - note
 tags:
@@ -11,7 +12,6 @@ author:
 date: 2025-09-30
 updated: 2025-09-30
 ---
-
 Now that I have finished the basis of my [[Saturn V Server Rack]], I have started to move all the computers into it with some custom shelves.
 
 ---

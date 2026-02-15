@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-28-2025]]"
 class:
   - note
   - lectureNote
@@ -15,5 +16,4 @@ related:
 date: 2025-08-28
 updated: 2025-08-28
 ---
-
 **Intuition** in psychology refers to the ability to understand or know something immediately, without the need for conscious reasoning or analysis. It is often described as a "gut feeling" or an instinctive understanding that arises spontaneously, allowing individuals to make quick judgments or decisions based on their subconscious processing of information and past experiences.

@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-15-2026]]"
 class:
   - note
 tags:
@@ -14,7 +15,6 @@ aliases:
 date: 2026-01-15T10:39:58-05:00
 updated: 2026-01-15T10:40:08-05:00
 ---
-
 A fixed point $p$ is **attracting** (or a **sink**) if $\exists \epsilon > 0 : \forall x \in N_{\epsilon}(p)$, $\lim_{ k \to \infty }f^{k}(x) = p$.
 
 In plain English, nearby points converge to $p$ under iteration.

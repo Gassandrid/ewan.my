@@ -1,5 +1,6 @@
 ---
 id: Ion Channels
+created_on: "[[04-11-2025]]"
 aliases: []
 tags:
   - biology
@@ -13,7 +14,6 @@ related:
 author:
 description:
 ---
-
 ![[Pasted image 20250411134040.png]]
 
 **Ion Channels** act as the brains of the cell, allowing ions to flow in and out of the cell. They are integral membrane proteins that form pores in the cell membrane, allowing specific ions to pass through. Ion channels are crucial for various cellular processes, including maintaining the resting membrane potential, generating action potentials, and regulating intracellular calcium levels.

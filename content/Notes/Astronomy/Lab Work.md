@@ -1,5 +1,6 @@
 ---
 date: 2024-11-21
+created_on: "[[11-21-2024]]"
 updated: 2024-11-21
 ---
 ## Calculating Scale 

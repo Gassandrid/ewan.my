@@ -1,5 +1,6 @@
 ---
 title: Kompose - Docker Compose to Kubernetes
+created_on: "[[02-04-2025]]"
 date: 2025-02-04
 updated: 2025-08-21
 tags:
@@ -8,7 +9,6 @@ tags:
 class:
   - note
 ---
-
 I work with docker a lot and, for the most part, don't really need to use Kubernetes for anything as most of my hosted services are only for my own use(namely Home Assistant, Nextcloud, etc). I have these services packaged as Docker Compose projects so that the separate containers can easily work with the other containers that they rely heavily on.
 
 **Kompose** would allow me to translate these compose projects directly to a Kubernetes Cluster without all the hassle. Namely, translating the docker compose file to the Kubernetes cluster's config file. 

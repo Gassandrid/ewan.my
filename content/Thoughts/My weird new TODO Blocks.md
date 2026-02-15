@@ -1,11 +1,11 @@
 ---
 date: 2025-06-23
+created_on: "[[06-23-2025]]"
 updated: 2025-06-23
 tags:
   - seed
   - junk
 ---
-
 You might see something of the sort of:
 
 $$

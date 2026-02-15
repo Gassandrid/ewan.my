@@ -1,5 +1,6 @@
 ---
 id: Theta Rhythm - A memory clock
+created_on: "[[02-03-2025]]"
 aliases:
 tags:
   - comp-neuro/theory
@@ -12,7 +13,6 @@ class:
 source:
   - "[[Theta rhythm A Memory Clock]]"
 ---
-
 Recently, there have been some significant advancements in decoding the hippocampus, and how it is involved in memory. This is a very complex structure, and it is not yet fully understood. However, we do know that the hippocampus is involved in the formation of new memories, and the retrieval of old ones.
 
 More specifically, looking at the brain's internal clock, the **Theta Rhythm** is a very interesting phenomenon. This is a brain wave that is present in the hippocampus, and it is associated with [[Memory Formation]] and retrieval. We believe that the theta rhythm is a clock that helps the brain to organize memories in time.

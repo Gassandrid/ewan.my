@@ -1,5 +1,6 @@
 ---
 date: 2025-09-22
+created_on: "[[09-22-2025]]"
 updated: 2025-10-16
 tags:
   - math/topology
@@ -12,7 +13,6 @@ related:
   - "[[The Stolen Necklace Problem]]"
 author:
 ---
-
 The **Borsuk-Ulam Theorem** states that for any continuous function mapping an $n$-dimensional sphere to $\mathbb{R}^n$, there exists a pair of antipodal points on the sphere that map to the same point in $\mathbb{R}^n$.
 
 $$

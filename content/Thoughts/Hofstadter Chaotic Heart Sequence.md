@@ -1,5 +1,6 @@
 ---
 date: 2026-01-16T09:56:10-05:00
+created_on: "[[01-16-2026]]"
 updated: 2026-01-16T11:08:44-05:00
 class:
   - note
@@ -26,7 +27,6 @@ jupyter:
     language: python
     name: python3
 ---
-
 Saw this sequence from **Simone Conradi** on twitter:
 
 ![](https://x.com/S_Conradi/status/1999588652255416630)

@@ -1,11 +1,11 @@
 ---
 title: Adopting the seed and sapling for notes
+created_on: "[[02-06-2025]]"
 date: 2025-02-06
 updated: 2025-02-07
 tags:
   - seed
 ---
-
 I was reading through the creator of the **Quartz** static site generator's own garden which ( appears to ) uses the zettelkasten method for note taking. 
 
 As someone who is trying to get into the idea of taking "atomic" notes, I liked how he didn't just have the "idea" tag, and instead had a few divisions according to the development state of said note.

@@ -1,5 +1,6 @@
 ---
 id: TransformerLens
+created_on: "[[09-25-2025]]"
 aliases: []
 tags:
   - cs/software
@@ -16,7 +17,6 @@ updated: 2025-09-25
 author:
   - "[[Neel Nanda]]"
 ---
-
 **TransformerLens** is a library for mechanistic interpretability of transformer models, particularly GPT-style language models. It allows users to load pre-trained models, inspect and manipulate their internal activations, and conduct experiments to understand how these models work.
 
 ---

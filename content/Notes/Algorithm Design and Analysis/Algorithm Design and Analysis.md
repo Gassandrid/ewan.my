@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-21-2025]]"
 class:
   - course
 tags:
@@ -15,7 +16,6 @@ source:
 date: 2025-08-21
 updated: 2025-08-28
 ---
-
 ## Course Description
 
 The purpose of the course is to study how to design and analyze computer program algorithms to solve real-world problems. The course will begin with a review of the concept of algorithm complexity and basic graph algorithms; and then cover algorithm design approaches such as greedy, divide and conquer, and dynamic programming; then, a network flow problem will be introduced and algorithm design by reduction to a network flow problem will be discussed; then, the notion of problem reduction will be used to discuss and prove the computational intractability (i.e., hardness) of a problem; time permitting, approaches to handling intractable problems, such as approximation algorithms and local search algorithms, will be discussed as well.  

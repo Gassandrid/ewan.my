@@ -1,5 +1,6 @@
 ---
 date: 2025-04-14
+created_on: "[[04-14-2025]]"
 updated: 2025-12-04
 tags:
   - seed
@@ -12,7 +13,6 @@ author:
   - "[[Axel Pedersen]]"
 description:
 ---
-
 For the last 40 Years of my [[Axel - In Memoriam|grandfathers]]' life, **Molly** was his passion project.
 
 ![[Pasted image 20250414214950.png]]

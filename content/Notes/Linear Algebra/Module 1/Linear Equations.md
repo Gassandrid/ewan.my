@@ -1,5 +1,6 @@
 ---
 id: Linear Equations
+created_on: "[[01-15-2025]]"
 aliases: 
 tags:
   - "#math/linear-algebra"
@@ -7,7 +8,6 @@ date: 2025-01-15
 title: Linear Equations
 updated: 2025-04-02
 ---
-
 In essence, Linear Equations are equations that represent straight lines. They are the simplest form of equations and are used to represent relationships between variables. The general form of a linear equation is outlined as follows.
 
 ---

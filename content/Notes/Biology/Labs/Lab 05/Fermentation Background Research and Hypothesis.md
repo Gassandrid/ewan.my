@@ -1,5 +1,6 @@
 ---
 id: Fermentation Background Research and Hypothesis
+created_on: "[[10-03-2025]]"
 aliases: []
 tags: []
 author:
@@ -8,7 +9,6 @@ date: 2025-10-03
 title: Fermentation Background Research and Hypothesis
 updated: 2025-10-03
 ---
-
 ## Background Information
 
 We are looking to test the condition of the **sugar type** and its affct on the rate of alchol fermentation.

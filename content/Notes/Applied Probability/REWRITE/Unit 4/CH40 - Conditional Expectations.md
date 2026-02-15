@@ -1,11 +1,11 @@
 ---
 class: note
+created_on: "[[04-23-2025]]"
 date: 2025-04-23
 updated: 2025-06-22
 tags:
   - math/probability
 ---
-
 **Let's Recall the Following:**
 
 - Expected Value Formula for Mass from [[CH11 - Expected Values]]

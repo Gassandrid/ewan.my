@@ -1,5 +1,6 @@
 ---
 id: Islamic Law
+created_on: "[[10-08-2025]]"
 aliases: []
 tags:
   - university
@@ -15,7 +16,6 @@ lesson:
   - lecture
 updated: 2025-10-08
 ---
-
 **Shari'ah** is an _ideal_ - a changing, moving understanding of what a _perfect_ interpretation of law would be.
 
 - NO DRUGS, abstinence only

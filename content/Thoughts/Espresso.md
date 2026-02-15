@@ -1,4 +1,5 @@
 ---
+created_on: "[[12-20-2025]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ description: my most snobby hobby, the engineers way of making coffee
 date: 2025-12-20
 updated: 2025-12-20
 ---
-
 While I have only really been into the espresso scene this semester(September-December 2025), I have quickly developed a deep appreciation for the art and science behind making a perfect cup of espresso. Now that I am though, it makes complete sense given my love of machinery and engineering.
 
 I love the process of "tuning the parameters" of my coffee like descending the gradient of a complex function. Adjusting grind size, dose, yield, and time to find that sweet spot where everything aligns perfectly. It's a beautiful blend of precision and creativity.

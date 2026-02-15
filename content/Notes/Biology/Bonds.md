@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ author:
 date: 2025-09-03
 updated: 2025-09-05
 ---
-
 *Bonds are used for explaining cells, and as such a quick explanation is needed*:
 
 There is a 3 level hierarchy of cells, namely molecules, cells, and organisms. Molecules are the smallest level of organization, and they make up cells. Cells are the basic unit of life, and they make up organisms. Organisms are made up of one or more cells.

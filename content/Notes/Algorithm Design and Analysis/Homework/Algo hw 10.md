@@ -1,12 +1,12 @@
 ---
 title: Homework 10 Written
+created_on: "[[11-13-2025]]"
 author:
   - Ewan Pedersen
 date: 2025-11-13
 updated: 2025-11-15
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Blackboard as one PDF or Word document.
 ---
-
 ---
 
 ## Flow Network: Concept

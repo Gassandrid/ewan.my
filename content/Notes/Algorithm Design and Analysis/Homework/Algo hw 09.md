@@ -1,5 +1,6 @@
 ---
 title: Homework 9 Written
+created_on: "[[11-06-2025]]"
 author:
   - Ewan Pedersen
 date: 2025-11-06
@@ -11,7 +12,6 @@ class:
 tags:
   - cs/theory/algorithms
 ---
-
 ---
 
 ## Sequence Alignment: Algorithm Tracing

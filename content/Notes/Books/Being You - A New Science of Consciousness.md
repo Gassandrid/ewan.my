@@ -1,5 +1,6 @@
 ---
 class:
+created_on: "[[01-24-2026]]"
 - book
 tags:
 - books

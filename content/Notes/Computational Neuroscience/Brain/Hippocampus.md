@@ -1,5 +1,6 @@
 ---
 id: Hippocampus
+created_on: "[[03-31-2025]]"
 aliases:
 tags:
   - comp-neuro
@@ -9,8 +10,6 @@ date: 2025-03-31
 class: note
 updated: 2025-10-23
 ---
- 
-
 The hippocampus serves as a critical section of the brain responsible for a variety of tasks, namely [[Memory Formation]], [[Spacial Navigation]], and [[Sequence Learning]].
 
 The Hippocampus is a key component of the [[Medial Temporal Lobe]] system, and oftentimes is modeled computationally as it plays a vital role in memory/information encoding, retrieval, and consolidation/compression.

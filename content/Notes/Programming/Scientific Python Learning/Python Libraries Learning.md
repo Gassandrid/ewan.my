@@ -1,5 +1,6 @@
 ---
 date: 2025-01-04
+created_on: "[[01-04-2025]]"
 updated: 2026-02-09T13:23:57-05:00
 title: Python Libraries to Learn
 tags:
@@ -9,9 +10,6 @@ tags:
   - todo/neuro
   - todo/math
 ---
-
-
-
 **Comp Neuro:**
 https://neuralensemble.org/
 - [ ] [[Brian2]] - best for prototyping, general comp neuro abstract modelling

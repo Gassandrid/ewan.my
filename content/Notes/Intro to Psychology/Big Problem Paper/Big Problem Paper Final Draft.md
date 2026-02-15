@@ -1,5 +1,6 @@
 ---
 date: 2025-11-17
+created_on: "[[11-17-2025]]"
 updated: 2025-11-23
 tags:
   - university
@@ -14,7 +15,6 @@ author:
 description:
 abstract:
 ---
-
 ## Introduction
 
 While the modern information age has brought mass connection and productivity never seen before, it has fundamentally altered the base environment that our brains have grown exceptionally adapted to. This novel environment, one where every interaction, thought, and task passes through the medium of a digital interface. Particularly, there has been a shift in how humans(specifically the youth) consume information, socialize, and entertain themselves - all through screens. This shift to a life characterized by mediation of computer infrastructure(both societal and individual), has drastically altered the methods in which humans learn, focus, and interact. Novel emerging evidence suggests a possibility that digital technology alters attention spans, motivation, and even cognitive architecture, particularly as screen based behavior replaces our more traditional sustained engagement model. Is this something that should be of concern? Or simply another natural evolution of the human mind adapting to new tools? Are the rapid speed-ups in both our productivity and entertainment consumption responsible for our waning attention spans? This paper explores the effects of the digital paradigm shift on human cognition, and how it has been restructured by fragmenting attention and an altered motivation. We seek to evaluate using executive function and boredom-avoidance theories to explain its development, and proposing cognitive engagement/self regulartion as a potentional solution. But beyond the modern day effects, we must also consider how this generation will evolve in the future, and what it means for the human mind.

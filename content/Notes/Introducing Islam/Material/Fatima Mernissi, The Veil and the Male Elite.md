@@ -1,5 +1,6 @@
 ---
 id: mernissi
+created_on: "[[09-29-2025]]"
 aliases: []
 tags:
   - university
@@ -17,7 +18,6 @@ source:
 related:
 author:
 ---
-
 A Feminist Interpretation of Women’s Rights in Islam, translated by Mary Jo Lakeland (New York: Basic, 1991) The question of the role of women in Islamic public life has provoked debate both within and without the community since the earliest days of the Prophet. Even as modernity and democracy begin to emerge in Muslim nations, there remains considerable resistance to women’s participation in that process. Citing the Qu'ran and the Hadith, opponents of change might appear to have an unassailable position. Yet Fatima Mernissi, in The Veil and the Male Elite, argues that calls to religious validation of misogyny are at odds with the original egalitarian intent of the Prophet.1 Analyzing these hadith and Qu'ranic sura, she notes that they emerged out of a particularly critical point in the history of Islam, when internal and external pressures threatened Muhammad, his wives and the fledgling religion. Examining the context of the writing of these passages, especially the relationship between Muhammad and his wives, she argues that these forces brought about the diminution of the original Islamic principle and created a rift between truly Islamic attitudes to women and those descended instead from pre-Islamic tribal traditions.
 
 Much of the current internal friction regarding female participation in political debate arises, Mernissi claims, from the crisis of identity besetting a Muslim society that struggles to come to terms with modernity. As the West looks to the present and to the future, she avers that Muslims obsess instead with the past, turning to tradition and especially the apparent certainties of sacred texts for strength in a changing world. Born out of the earliest days of Islam in Medina, the hadith emerged as a “formidable political weapon” in times of crisis.2 Despite the “science” of hadith interpretation, she maintains that the elite continued to use false hadith to serve their 1 Fatima Mernissi, The Veil and the Male Elite: A Feminist Interpretation of Women’s Rights in Islam, translated by Mary Jo Lakeland (New York: Basic, 1991). 2 Ibid., 33. political and economic ends. This included the disenfranchisement of women and the embedding of pre- Islamic tribal misogyny within the fabric of Islamic tradition.

@@ -1,3 +1,6 @@
+---
+created_on: "[[11-07-2025]]"
+---
 ## Tally
 
 |       | Yellow | Purple | Total |

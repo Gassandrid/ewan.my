@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-02-2025]]"
 class:
   - note
 tags:
@@ -10,7 +11,6 @@ author:
 date: 2025-10-02
 updated: 2025-11-23
 ---
-
 The **Crank–Nicolson method** is a numerical technique used to solve partial differential equations (PDEs), particularly the heat equation. It is an implicit finite difference method that is unconditionally stable and second-order accurate in both time and space.
 
 It is most often applied in fields of quantitative finance for option pricing with the [[Black-Scholes equation]], but also commonly introduced in physics problems like the [[Diffusion equation]].

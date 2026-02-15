@@ -1,5 +1,6 @@
 ---
 id: Mid Term Practice
+created_on: "[[10-14-2024]]"
 aliases: []
 tags:
   - junk
@@ -8,7 +9,6 @@ tags:
 date: 2024-10-14
 updated: 2024-10-14
 ---
-
 Use to help structure studying
 
 ## 13 - Vector Functions

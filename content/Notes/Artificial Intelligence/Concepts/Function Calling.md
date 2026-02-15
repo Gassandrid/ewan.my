@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2026-01-22T19:30:42-05:00
 tags:
   - generated
@@ -12,7 +13,6 @@ author:
 description:
 aliases:
 ---
-
 Function calling in language models refers to the ability of a model to not only generate text but also interact with external functions or APIs. This capability allows the model to perform specific tasks like retrieving data, performing calculations, or interacting with other systems, enhancing its utility beyond just text generation.
 
 It is kind of Warhammer-esque in that it is basically "talking to the machine spirit" of the [[Large Language Model]], and asking it nicely to "please return json like this and we will give you the information you need and you can do this"

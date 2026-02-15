@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-22-2026]]"
 class:
   - note
   - lecture
@@ -17,7 +18,6 @@ updated: 2026-01-22T10:54:48-05:00
 aliases:
   - SDIC
 ---
-
 **Sensitive Dependence on Initial Conditions(SDIC)**: "Butterfly Effect", this is the idea that small changes in initial conditions can lead to vastly different outcomes. In chaotic systems, even a tiny perturbation can grow exponentially over time, making long-term prediction impossible.
 
 Consider the map $f(x) = 3x (mod \ 1)$ on unit interval, Fixed point at $x=\frac{1}{2}$ and $0$. $x=1$ is identical to $x=0$

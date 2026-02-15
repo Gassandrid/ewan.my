@@ -1,5 +1,6 @@
 ---
 id: CH9 - Calculate CDF from 1 variable and joint CDF
+created_on: "[[02-07-2025]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ date: 2025-02-07
 title: CH9 - Calculate CDF from 1 variable and joint CDF
 updated: 2025-06-21
 ---
-
 This class will continue the lesson from [[CH9 - Independence and Conditioning]], where we will learn how to calculate the CDF of a single variable from the joint CDF of two variables.
 
 ---

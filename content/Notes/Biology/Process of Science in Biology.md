@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-27-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ related:
 date: 2025-08-27
 updated: 2025-08-27
 ---
-
 _underlying the scientific standard across most fields_
 
 ---

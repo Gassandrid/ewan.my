@@ -1,12 +1,11 @@
 ---
 title: My Vault as a Signature of my Life
+created_on: "[[02-07-2025]]"
 date: 2025-02-07
 updated: 2025-02-09
 tags:
   - seed
 ---
- 
-
 It's quite obvious that I write in this vault all the time. In the last few months, especially this year, I have really committed to writing a lot for the sake of myself, and I love it.
 
 But more than that, I like the idea that there is evidence of me living outside of my own thoughts. By writing down all the time, I hope that people could get a grasp of what my mind might have looked like when I was alive. Maybe someone besides me is reading this right now! That would be cool. If so, I hope you find my stuff interesting!

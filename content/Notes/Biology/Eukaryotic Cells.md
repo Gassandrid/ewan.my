@@ -1,5 +1,6 @@
 ---
 date: 2025-09-08
+created_on: "[[09-08-2025]]"
 updated: 2025-09-08
 class:
   - note
@@ -16,7 +17,6 @@ source:
 related:
 author:
 ---
-
 **Eukaryotic Cells** are a type of [[Cell]] that have a membrane-bound nucleus and other membrane-bound [[organelles]]. They are typically larger and more complex in structure than prokaryotic cells. Eukaryotic cells are found in all multicellular organisms, including plants, animals, fungi, and protists.
 
 ![[Pasted image 20250908210538.png]]

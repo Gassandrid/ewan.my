@@ -1,5 +1,6 @@
 ---
 id: Day 5
+created_on: "[[01-28-2025]]"
 aliases: 
 tags:
   - cs/theory
@@ -7,8 +8,6 @@ date: 2025-01-28
 title: Day 5
 updated: 2025-03-27
 ---
- 
-
 ## Introduction to Non-determinism
 
 ![[Pasted image 20250204090735.png]]

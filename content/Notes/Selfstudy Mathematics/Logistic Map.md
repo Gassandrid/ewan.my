@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-13-2026]]"
 class:
   - note
 tags:
@@ -25,7 +26,6 @@ jupyter:
     language: python
     name: python3
 ---
-
 A **Logistic Map** is a polynomial mapping of degree 2, often cited as an archetypal example of how complex, chaotic behavior can arise from very simple non-linear dynamical equations. It is defined by the recurrence relation:
 
 $$

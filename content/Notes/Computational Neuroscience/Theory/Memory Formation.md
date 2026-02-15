@@ -1,5 +1,6 @@
 ---
 id: Memory Formation
+created_on: "[[04-06-2025]]"
 aliases: []
 tags:
   - comp-neuro/theory
@@ -7,7 +8,6 @@ date: 2025-04-06
 class: note
 updated: 2025-06-19
 ---
-
 Memory formation is a complex and not completely understood process that describes the brain's ability to encode, consolidate, and retrieve information.
 
 There are a lot of different types of memories handled by different parts of the brain. While it is well understood that the [[Hippocampus]] is almost entirely responsible for the creation and management of long term memories, it has been shown that other mediums of of memory can be retained.

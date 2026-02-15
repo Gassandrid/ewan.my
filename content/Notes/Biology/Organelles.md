@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-10-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ author:
 date: 2025-09-10
 updated: 2025-09-10
 ---
-
 _Organelles are membrane bound compartments in [[Eukaryotic Cells]] in which specific prcesses occur. What's a benefits of having organelles?_
 
 ![[OrganellePic.png]]

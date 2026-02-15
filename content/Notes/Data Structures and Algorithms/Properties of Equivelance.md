@@ -1,5 +1,6 @@
 ---
 id: Properties of Equivelance
+created_on: "[[12-10-2024]]"
 aliases: []
 tags:
   - university
@@ -7,7 +8,6 @@ tags:
 date: 2024-12-10
 updated: 2025-09-22
 ---
-
 In layman's terms:
 
 - **Reflexive**: A is related to A.

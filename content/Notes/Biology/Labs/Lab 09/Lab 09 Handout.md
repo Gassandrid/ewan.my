@@ -1,10 +1,10 @@
 ---
 date: 2025-11-07
+created_on: "[[11-07-2025]]"
 updated: 2025-11-07
 tags:
   - biology/chromosomes
 ---
-
 1. both of the parent corn plants that produced the kernel offspring you're assesing were heterozygous for each caracter (kernel color and sugar content). The parent plants were the result of a cross between a "grandparent" plant that was true-breeding for the dominant traits for both characters (purple color and low sugar content), and a "grandparent" plant that was true-breeding for the recessive traits for both characters (yellow color and high sugar content). Based on this information, what were the genotypes and phenotypes of the "grandparent" plants?
 
 Grandparent Plant 1: DDLL

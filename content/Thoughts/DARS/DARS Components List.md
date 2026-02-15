@@ -1,11 +1,10 @@
 ---
 date: 2024-10-06
+created_on: "[[10-06-2024]]"
 tags:
   - projects/dars
 updated: 2025-06-20
 ---
- 
-
 ## Item List
 
 - **Small Screen for the phsyical appearance**

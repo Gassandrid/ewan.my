@@ -1,5 +1,6 @@
 ---
 id: CH6 - Hypothesis Testing
+created_on: "[[10-29-2024]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ tags:
 date: 2024-10-29
 updated: 2025-06-21
 ---
-
 Hypothesis Testing is about **testing a claim** about a population parameter using sample data. The claim is called the **null hypothesis**, denoted by $H_0$. The alternative hypothesis is denoted by $H_1$.
 
 [[Confidence Intervals]] and hypothesis tests will yield the same analysis by tying $c$ to the $\alpha$-level significance.

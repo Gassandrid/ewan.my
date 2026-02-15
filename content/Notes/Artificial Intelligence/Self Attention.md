@@ -1,5 +1,6 @@
 ---
 date: 2025-08-23
+created_on: "[[08-23-2025]]"
 updated: 2025-09-25
 class:
   - note
@@ -13,7 +14,6 @@ source:
 related:
   - "[[Softmax]]"
 ---
-
 Assuming that we are working with a [[Large Language Model|Large Language Model]], and as such we have already associated an [[Embedding Vector]] to each [[Token]] based on its learned value and its position, the next logical step would be to allow these new vectors to "soak up" more knowledge about the words around them.
 
 $$

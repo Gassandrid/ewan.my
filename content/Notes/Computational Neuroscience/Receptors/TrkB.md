@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-24-2026]]"
 class:
   - note
 tags:
@@ -13,7 +14,6 @@ aliases:
 date: 2026-01-24T21:40:21-05:00
 updated: 2026-01-24T21:43:50-05:00
 ---
-
 **TrkB (Tropomyosin Receptor Kinase B; Tyrosine Receptor Kinase B)**
 
 - Has highest affinity for [[BNDF]],

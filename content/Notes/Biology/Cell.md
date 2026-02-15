@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-05-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ author:
 date: 2025-09-05
 updated: 2025-09-10
 ---
-
 _to define the charecteristics of a cell, we will be using the model of a factory, as a factory needs:_
 
 - _a source of **energy** to power its operations_

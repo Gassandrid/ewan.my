@@ -1,5 +1,6 @@
 ---
 status: open
+created_on: "[[01-13-2026]]"
 priority: normal
 scheduled: 2026-01-20T10:05:00
 contexts:
@@ -29,7 +30,7 @@ related:
 author:
 description:
 date: 2026-01-13T10:07:23-05:00
-updated: 2026-01-22T16:05:30-05:00
+updated: 2026-02-12T14:23:23-05:00
 recurrence: DTSTART:20260113;FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20260601
 complete_instances:
   - 2026-01-13
@@ -45,23 +46,63 @@ Discrete and continuous dynamical systems, Julia sets, the Mandelbrot set, perio
 
 ## Lectures
 
-### Logistic Plots
-
 **Day 1:** [[Linear Systems]], [[Logistic Map]], [[The Worldwide Air-Transportation Network]](website)
 
 **Day 2:** [[Fixed Point Classification]]
-
 - [[Attracting fixed point]]
 - [[Repelling fixed point]]
+- [[Saddle fixed point]]
 
 **Day 3:** [[Periodic Orbit Stability]]
 
+**Lecture 6:** [[Sinks, Sources, and Saddles]]
+
+**Lecture 7:** [[Linearization and the Jacobian]]
+
+**Lecture 9:** [[Homoclinic Points]]
+
+**Lecture 10:** [[Chaos]]
+
 ---
 
-## External Work
+## Core Concepts
 
-[[Banach Fixed Point Theorem]] - Unique fixed points in complete metric spaces.
+### Fixed Points and Stability
 
-[[Cobweb Plot]] - For visualizing iterations of one-dimensional maps.
+- [[Fixed Point Classification]]
+- [[Attracting fixed point]]
+- [[Repelling fixed point]]
+- [[Saddle fixed point]]
+- [[Banach Fixed Point Theorem]]
 
-[[Feigenbaum Constant]]
+### Manifolds
+
+- [[Stable Manifold]]
+- [[Unstable Manifold]]
+- [[Stable and Unstable Manifolds]]
+
+### Chaos and Dynamics
+
+- [[Chaos]]
+- [[Sensitive Dependence on Initial Conditions]]
+- [[Lyapunov Exponents]]
+- [[Homoclinic Points]]
+
+### Systems and Models
+
+- [[Forced Damped Pendulum]]
+- [[Feigenbaum Constant]]
+
+### Mathematical Tools
+
+- [[Linearization and the Jacobian]]
+- [[Cobweb Plot]]
+
+---
+
+## Homework
+
+- [[Chaos HW 1]]
+- [[Chaos HW 2]]
+- [[Chaos Hw 3]]
+- [[Chaos Hw 4]]

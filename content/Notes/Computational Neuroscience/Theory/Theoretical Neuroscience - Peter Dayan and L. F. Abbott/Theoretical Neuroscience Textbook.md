@@ -1,5 +1,6 @@
 ---
 title: Theoretical Neuroscience - Peter Dayan and L. F. Abbott
+created_on: "[[03-29-2025]]"
 date: 2025-03-29
 updated: 2025-12-25
 tags:

@@ -1,4 +1,5 @@
 ---
+created_on: "[[02-10-2026]]"
 class:
   - note
 tags:
@@ -14,7 +15,6 @@ aliases:
 date: 2026-02-10
 updated: 2026-02-10
 ---
-
 Receptors that bind [[GABA]], the primary inhibitory neurotransmitter. Two primary classes differ in mechanism of action and speed, providing multi-timescale inhibition control.
 
 ---

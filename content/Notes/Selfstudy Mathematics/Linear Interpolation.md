@@ -1,5 +1,6 @@
 ---
 date: 2025-10-11
+created_on: "[[10-11-2025]]"
 updated: 2025-10-11
 class:
   - note
@@ -9,7 +10,6 @@ source:
 related:
 author:
 ---
-
 **Linear Interpolation** is a fairly simple concept. It is used to estimate values that fall between two known values. The idea is to draw a straight line between the two known points and use that line to find the value at a specific point in between.
 
 Say you have a $\mathbb{R}^1$ dimensional space with two known points: $(x_0, y_0)$ and $(x_1, y_1)$. The formula for linear interpolation to find the value $y$ at a point $x$ between $x_0$ and $x_1$ is given by:

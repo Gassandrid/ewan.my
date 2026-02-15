@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-29-2025]]"
 class:
   - note
   - export
@@ -13,7 +14,6 @@ date: 2025-10-29
 updated: 2025-10-31
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Blackboard as one PDF or Word document.
 ---
-
 ---
 
 ## Word Segmentation

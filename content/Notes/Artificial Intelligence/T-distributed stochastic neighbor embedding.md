@@ -1,4 +1,5 @@
 ---
+created_on: "[[11-05-2025]]"
 class:
   - note
 tags:
@@ -14,7 +15,6 @@ updated: 2025-11-05
 aliases:
   - t-SNE
 ---
-
 **T-sne** is a [[Latent Space]] visualization / dimensionality reduction technique particularly well-suited for high-dimensional data. It focuses on preserving local structures in the data, making it effective for visualizing clusters and patterns.
 
 In Layman's terms, it does this by computing the nearest neighbors of each point in the high dimensional space, and attempting to fine tune a model in the low dimensional space that matches these distances, such that points that were close in high-dim space remain close in low-dim space. The main difference between this (SNE) and t-SNE is that t-SNE uses a heavy-tailed distribution (Student t-distribution) in the low-dimensional space to better handle the "crowding problem", where points tend to cluster too closely together. In addition, it makes the algorithm more efficient to compute(however, still extremely computationally expensive for large datasets).

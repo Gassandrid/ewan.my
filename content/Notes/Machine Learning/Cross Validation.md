@@ -1,4 +1,5 @@
 ---
+created_on: "[[02-02-2026]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ aliases:
 date: 2026-02-02T08:31:43-05:00
 updated: 2026-02-02T09:11:53-05:00
 ---
-
 **Cross Validation** is the primary statistical method used to estimate the skill of machine learning models. It is used to protect against overfitting in a predictive model, particularly in a case where the amount of data may be limited.
 
 ---

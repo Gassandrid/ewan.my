@@ -1,5 +1,6 @@
 ---
 id: CH2 - Sampling Statistics Continued
+created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics
@@ -8,7 +9,6 @@ tags:
 date: 2024-09-12
 updated: 2025-09-05
 ---
-
 > How do we find the standard deviation of a sample?
 > Why is it important to know the standard deviation of a sample?
 

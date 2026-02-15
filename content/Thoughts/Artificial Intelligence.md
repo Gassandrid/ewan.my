@@ -1,11 +1,11 @@
 ---
 title: Artificial Intelligence
+created_on: "[[02-05-2025]]"
 date: 2025-02-05
 updated: 2025-09-22
 tags:
   - cs/ai
 ---
-
 I am sure by now we are all very familiar with "AI" in our day to day lives. Although it is just machine learning at the moment, there is no doubt that these advanced statistical models have had quite the effect on society.
 
 ---

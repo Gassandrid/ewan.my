@@ -1,5 +1,6 @@
 ---
 id: Turing Machines
+created_on: "[[04-03-2025]]"
 aliases:
   - Turing Machine
 tags:
@@ -8,7 +9,6 @@ date: 2025-04-03
 class: note
 updated: 2026-01-15T08:53:46-05:00
 ---
-
 Turing Machines are the next step in the evolution of automata. They are a theoretical model of computation that can simulate any algorithm.
 
 ---

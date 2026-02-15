@@ -1,6 +1,7 @@
 ---
 date: 2026-01-10T11:51:36+02:00
-updated: 2026-02-10T15:05:09-05:00
+created_on: "[[01-10-2026]]"
+updated: 2026-02-11T08:51:16-05:00
 class:
   - note
 tags:
@@ -13,7 +14,6 @@ description:
 aliases:
   - Neuronal Circuit
 ---
-
 In a Biological sense, a neural circuit is a local cluster of [[Neuron]]s closely connected via [[Synapses]] that carry out a specific function when activated. We like to think of these microassemblies as the higher level abstraction building blocks for complex cognitive functions, and even simple things like reflexes.
 
 Beyond the classic structures of a [[Neuron]] ( [[Notes/Computational Neuroscience/Brain/Dendrites|Dendrites]], [[Soma]], [[Axons]], and [[Synapses]] ), we also now can consider the more complex variations. Namely for **synapses** we have:
@@ -43,7 +43,15 @@ Some papers have garnered attention for the "1000 Brains Theory" of intelligence
 
 ## Primitives from [[pathakBiomimeticModelCorticostriatal2024]]
 
+[@pathakBiomimeticModelCorticostriatal2024]
+
 [[Lateral Inhibition Primitive]]
+
+
+Pathak, A., Brincat, S. L., Organtzidis, H., Strey, H. H., Senneff, S., Antzoulatos, E. G., Mujica-Parodi, L. R., Miller, E. K., & Granger, R. (2024). _Biomimetic model of corticostriatal micro-assemblies discovers new neural code_ (p. 2023.11.06.565902). bioRxiv. [https://doi.org/10.1101/2023.11.06.565902](https://doi.org/10.1101/2023.11.06.565902)
+
+
+
 
 %%
 

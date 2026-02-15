@@ -1,5 +1,6 @@
 ---
 date: 2025-09-09
+created_on: "[[09-09-2025]]"
 updated: 2025-09-09
 class:
   - note
@@ -9,7 +10,6 @@ source:
 related:
 author:
 ---
-
 **Brownian Motion** (or **Wiener Process**) is a fundamental concept in probability theory and stochastic processes. It describes the random motion of particles suspended in a fluid, but it also has applications in various fields such as physics, finance, and biology.
 
 ![[Brownian_motion_large.gif]]

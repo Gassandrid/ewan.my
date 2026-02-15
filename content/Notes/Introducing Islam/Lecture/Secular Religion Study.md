@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-29-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ related:
 date: 2025-08-29
 updated: 2025-08-29
 ---
-
 _How we can study religion without being religious ourselves, or if we are from another religion._
 
 - _descriptive vs prescriptive_

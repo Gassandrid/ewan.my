@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-26-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ author:
 date: 2025-09-26
 updated: 2025-09-26
 ---
-
 ## Glycolysis of [[Glucose]]
 
 ![[glucglycolysis.png]]

@@ -1,11 +1,11 @@
 ---
 date: 2025-01-01
+created_on: "[[01-01-2025]]"
 updated: 2025-06-26
 tags:
   - seed
 title: 2024 - A year of change
 ---
-
 2024 has by far been the most eventful year in my life, both in terms of tangible events and trends that affected me, but also for the deep, saturated changes in my own sense of self and life.
 
 2024 has been just as much of a terrible year as it has been a great one.

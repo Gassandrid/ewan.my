@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-19-2025]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ date: 2025-10-19
 updated: 2025-10-19
 abstract: Chosen Big Problem and the reasoning behind it.
 ---
-
 ---
 
 In just a few short decades, we have seen a shift like no other in the medium by which we communicate with others. Our lives have become increasingly involved in the digital realm, where attention, memory, learning, and even social interaction occur primarily through screens. 

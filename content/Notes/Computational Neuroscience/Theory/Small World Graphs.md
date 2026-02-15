@@ -1,4 +1,5 @@
 ---
+created_on: "[[11-07-2025]]"
 class:
   - note
 tags:
@@ -13,7 +14,6 @@ description: graphs with high clustering coefficient, high locality with "inform
 date: 2025-11-07
 updated: 2026-01-18T08:24:33-05:00
 ---
-
 **Small World Graphs** are a classification of graphs that have a property of "clustering" in combination with "short path lengths". This means that nodes in the graph tend to form tightly-knit groups (high clustering coefficient), while still being connected to other groups through a few long-range connections (short average path length).
 
 The key importance of small world graphs is that they tend to show up in biological, social, and technological networks. For example, social networks often exhibit small world properties, where individuals are part of close-knit communities but can also connect to distant acquaintances through a few intermediaries.

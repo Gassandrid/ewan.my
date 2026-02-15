@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 aliases:
   - Jinn
 date: 2025-09-03
@@ -18,5 +19,4 @@ source:
 related:
 author:
 ---
-
 A _Djinn Joint_ is a place in which [[Djinn]] are believed to gather, often associated with supernatural occurrences or hauntings. These locations are typically secluded or abandoned areas, such as old buildings, ruins, or natural sites like caves and forests

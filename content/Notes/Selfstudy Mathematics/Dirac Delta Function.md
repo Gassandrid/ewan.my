@@ -1,12 +1,12 @@
 ---
 date: 2025-04-05
+created_on: "[[04-05-2025]]"
 updated: 2025-09-16
 tags:
   - math/calculus
 class:
   - note
 ---
-
 The **Dirac Delta Function** is a distribution over a curve to represent a **unit impulse**. Essentially, it is a generalized function on the real numbers, which has a value of zero at all places except at zero itself.
 
 In reality, it is just a "spike" or a near direct upward line on an otherwise flat curve. The reason this is interesting is this "impossible" to model as a curve with a function, and thus we have to use calculus limits to estimate as we approach $\infty$.

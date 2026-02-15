@@ -1,5 +1,6 @@
 ---
 id: Linearization and the Jacobian
+created_on: "[[02-03-2026]]"
 aliases:
   - Jacobian Matrix
   - Local Linearization
@@ -17,7 +18,6 @@ description: how linear maps describe local behavior of nonlinear systems via th
 lecture-number: 7
 updated: 2026-02-03T14:23:20-05:00
 ---
-
 Linear maps describe **local behavior** of nonlinear systems. Near a fixed point, any smooth map looks linear. The [[Jacobian]] matrix(the derivative of a nonlinear map) is exactly this linear approximation. So understanding how linear maps behave (sinks, sources, saddles) directly tells us how a nonlinear system behaves near its fixed points.
 
 This is the bridge between linear and nonlinear dynamics.

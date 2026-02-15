@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-13-2026]]"
 class:
   - note
   - lecture
@@ -17,7 +18,6 @@ lesson:
   - lecture
 lecture-number: 1
 ---
-
 How do we go about predicting a linear system? Lets look at the example of a **billiards game**
 
 ![[billardspath.png]]

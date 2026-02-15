@@ -1,4 +1,5 @@
 ---
+created_on: "[[12-19-2025]]"
 class:
   - note
 tags:
@@ -14,7 +15,6 @@ description:
 date: 2025-12-19
 updated: 2026-01-12T09:51:26-05:00
 ---
-
 ![[defModeNetwork.png]]
 	
 The **Default Mode Network** is best described as the brain state for when a person is not focused on external world, and instead brain it at wakeful rest. Think daydreaming and mind wandering. Primary brain structures involved are [[Medial Prefrontal Cortex]], [[Posterior Cingulate Cortex]], [[Precuneus]], and [[Angular Gyrus]].

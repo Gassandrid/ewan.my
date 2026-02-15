@@ -1,5 +1,6 @@
 ---
 title: Starting Point for Computational Neuroscience Research Paper Reading
+created_on: "[[02-11-2025]]"
 date: 2025-02-11
 updated: 2025-09-29
 tags:
@@ -8,7 +9,6 @@ tags:
   - cs
 class: planner
 ---
-
 These are just some papers that I found that are not too complex for me to get into, but have a great deal of useful material for me to investigate. These are just for reading and documenting, but not for [[On Reimplementing Papers|Paper Reimplementation]] as those should be more computer science related.
 
 When doing this, I want to try applying what I learned in [[Artem Kirsanov]]'s [[How To Read a Research Paper Effectively]].

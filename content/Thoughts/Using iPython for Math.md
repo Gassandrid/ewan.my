@@ -1,11 +1,11 @@
 ---
 date: 2024-10-03
+created_on: "[[10-03-2024]]"
 tags:
   - cs/python
   - math
 updated: 2025-09-22
 ---
-
 I have recently started to like using ipython to do a lot of things I used to use tools like Jupyter, Desmos, and Mathematica for. And through this, I have found a powerful new tool to add to my collection.
 
 ## The Beauty Of the Command Line

@@ -1,5 +1,6 @@
 ---
 date: 2024-08-09
+created_on: "[[08-09-2024]]"
 updated: 2026-01-15T17:10:42-05:00
 class:
   - note
@@ -8,7 +9,6 @@ source:
 related:
   - "[[Age]]"
 ---
-
 GnuPG (GPG), short for **GNU Privacy Guard**, is a free and open-source implementation of the OpenPGP standard, enabling users to encrypt and sign data and communications. GPG is widely used for secure email communication, file encryption, and digital signatures, ensuring the confidentiality and authenticity of data.
 
 ---

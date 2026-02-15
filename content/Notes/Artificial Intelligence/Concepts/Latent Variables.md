@@ -1,12 +1,12 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2025-12-07
 class:
   - note
 tags:
   - cs/ai/latent-space
 ---
-
 Latent variables are variables that are not directly observed but are inferred from other observable variables in the model. They play a crucial role in generative models, where the goal is to generate data from a learned distribution.
 
  **Variational Autoencoders (VAEs)**: A VAE learns to encode data into a lower-dimensional latent space and then decodes from that space to reconstruct the original data.

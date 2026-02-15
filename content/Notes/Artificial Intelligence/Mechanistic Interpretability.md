@@ -1,5 +1,6 @@
 ---
 id: Mechanistic Interpretability
+created_on: "[[09-25-2025]]"
 aliases: []
 tags:
   - cs/ai/interpretability
@@ -15,7 +16,6 @@ related:
   - "[[Sparse Autoencoder]]"
 author:
 ---
-
 **Mechanistic Interpretability** is a subfield of AI interpretability that focuses on understanding the internal workings of AI models, particularly large language models (LLMs). It aims to uncover how these models process information and make decisions, often through techniques like circuit analysis, feature visualization, and probing.
 
 ---

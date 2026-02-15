@@ -1,5 +1,6 @@
 ---
 date: 2025-10-16
+created_on: "[[10-16-2025]]"
 updated: 2026-01-18T08:29:09-05:00
 class:
   - note
@@ -11,7 +12,6 @@ related:
   - "[[Master Homelab Architecture]]"
 author:
 ---
-
 The last thing really missing on my [[Saturn Rack Software]] is a way to cleanly manage all the stuff in one spot. Up to this point, I have been all over the place, [[SSH]]'ing into each individual server to make changes, with each server having their docker compose stacks in sporadic places.
 
 This project hopes to centralize this all under one git repo on my local computer, where I can manage every configuration file in one place. And, when I am done, I can run a new script `sync.sh` to use **rsync** to copy over all the config files to their respective machine, and rebuild.

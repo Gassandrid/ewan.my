@@ -1,5 +1,6 @@
 ---
 id: Sparse Autoencoder
+created_on: "[[09-25-2025]]"
 aliases: []
 tags:
   - cs/ai/llm
@@ -15,7 +16,6 @@ related:
   - "[[Mechanistic Interpretability]]"
 author:
 ---
-
 **Sparse Autoencoders** are a technique for investigating [[Mechanistic Interpretability]] and the idea of [[Mechanistic Interpretability#Superposition and Polysemanticity|Superposition and Polysemanticity]].
 
 ![[SparseEncoder.png]]

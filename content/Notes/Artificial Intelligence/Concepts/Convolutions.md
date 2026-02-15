@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2024-10-05
 ---
 # Convolutions and Convolutional Neural Networks (CNNs)

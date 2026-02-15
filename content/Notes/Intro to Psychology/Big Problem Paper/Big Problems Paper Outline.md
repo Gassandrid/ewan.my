@@ -1,4 +1,5 @@
 ---
+created_on: "[[11-02-2025]]"
 class:
   - note
   - export
@@ -14,7 +15,6 @@ updated: 2025-11-17
 title: Annotation and Outline Worksheet
 abstract: "INSTRUCTIONS: The purpose of this worksheet is to build your initial outline for your Big Problems paper.Using PsycINFO: ([https://researchguides.uvm.edu/c.php?g=290203&p=1934798](https://researchguides.uvm.edu/c.php?g=290203&p=1934798) ) and find **AT LEAST THREE** peer-reviewed articles relevant to your paper that you can reference or use to support your arguments. Your textbook does NOT count for one of these sources but you can use your textbook in addition to these three sources.For each of your three peer-reviewed empirical articles, you should cite the source in APA format and write a brief paragraph about the content of the article, their methodology, any issues with the article, and how it connects to your argument.- Here is a great resource for how the summary section of the annotation might look: [https://libguides.sonoma.edu/c.php?g=243864&p=1623022](https://libguides.sonoma.edu/c.php?g=243864&p=1623022)"
 ---
-
 ---
 
 **Big Problem:** The Cognitive and Behavioral Effects of the Digital Paradigm Shift

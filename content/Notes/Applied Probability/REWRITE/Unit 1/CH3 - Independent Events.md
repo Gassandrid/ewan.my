@@ -1,5 +1,6 @@
 ---
 id: CH3 - Independent Events
+created_on: "[[01-17-2025]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -7,7 +8,6 @@ date: 2025-01-17
 title: CH3 - Independent Events
 updated: 2025-06-21
 ---
-
 This chapter will cover the concept of independent events in probability theory. Understanding independent events is crucial for various statistical analyses and decision-making processes. We will explore the definition of independent events, their properties, and how to calculate probabilities involving independent events.
 
 ---

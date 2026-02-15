@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-11-2025]]"
 class:
   - note
 tags:
@@ -10,7 +11,6 @@ author:
 date: 2025-09-11
 updated: 2025-09-11
 ---
-
 The **Temporal Lobe** is one of the four major lobes of the cerebral cortex in the brain. It is located on the sides of the brain, near the temples, and is primarily responsible for processing auditory information and is also involved in memory, language comprehension, and emotional responses. Think "tempo", as it is heavily involved in processing sounds and music.
 
 ![[TempLobe.png]]

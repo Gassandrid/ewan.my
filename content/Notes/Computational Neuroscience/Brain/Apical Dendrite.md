@@ -1,5 +1,6 @@
 ---
 date: 2025-06-07
+created_on: "[[06-07-2025]]"
 updated: 2025-06-26
 tags:
   - todo/neuro
@@ -12,5 +13,3 @@ related:
 author:
 description:
 ---
-
- 

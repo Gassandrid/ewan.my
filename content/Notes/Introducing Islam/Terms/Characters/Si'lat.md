@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 class:
   - note
   - lectureNote
@@ -16,5 +17,4 @@ author:
 date: 2025-09-03
 updated: 2025-09-03
 ---
-
 *Si'lat* are a type of [[Djinn]] that are kind of like the equivalent to succubi? They are **shapeshifters** that appear as women usu with the express purpose of procreation.

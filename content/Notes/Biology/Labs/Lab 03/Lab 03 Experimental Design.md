@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-19-2025]]"
 tags:
   - university
   - biology
@@ -9,7 +10,6 @@ date: 2025-09-19
 updated: 2025-09-19
 title: Paramecium Investigation II
 ---
-
 ## Formal Experiment Design
 
 We define our trials as a set of all trials $n$, where $n\geq 10$:

@@ -1,5 +1,6 @@
 ---
 id: The Scaling Hypothesis
+created_on: "[[02-04-2025]]"
 aliases: 
 tags:
   - seed
@@ -8,7 +9,6 @@ date: 2025-02-04
 title: The Scaling Hypothesis
 updated: 2025-07-28
 ---
-
 In the era of transformer based language models, there has been one trend that has stood out above all others: the belief that scaling these models will improve purely as a result of scaling. It is a controversial theory, as many believe that it is a matter of architecture.
 
 Will intelligence emerge as a result of increasing size and complexity? Or do we need to go back to the building blocks for developing genuine intelligence.

@@ -1,4 +1,5 @@
 ---
+created_on: "[[12-30-2025]]"
 class:
   - note
 tags:
@@ -14,7 +15,6 @@ description: using GarminDB to integrate data into homelab
 updated: 2026-01-07T12:43:54+02:00
 date: 2025-12-30T12:57:58+02:00
 ---
-
 For Christmas, I got the watch that I had been looking at for forever: the [[Garmin Venu 4]]. I have been harping on about my [[On Capturing Personal Data]] plan for a few months now, but this was the first step in the Quantified Self Equipment that I can make genuine progress with.
 
 This represents the big step towards a constant stream of high delta timeseries data. Along with [[AirGradient ONE]] and [[ActivityWatch]], I can now track second by second changes over long periods of time without significant effort on my part. Having this form of sub second, constant data flow, even if it is basic biomarkers/metrics, is the most important base towards [[Longevity]] improvement and eventual endeavors like [[Withings Body Scan]] and [[At Home Bloodwork]].

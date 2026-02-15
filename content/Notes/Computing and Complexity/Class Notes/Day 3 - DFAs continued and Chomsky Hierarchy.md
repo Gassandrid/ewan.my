@@ -1,5 +1,6 @@
 ---
 id: Day 3
+created_on: "[[01-21-2025]]"
 aliases: 
 tags:
   - cs/theory
@@ -7,8 +8,6 @@ date: 2025-01-21
 title: Day 3
 updated: 2025-06-24
 ---
- 
-
 This class will continue on the subject of DFA's and the Chomsky hierarchy.
 
 ---

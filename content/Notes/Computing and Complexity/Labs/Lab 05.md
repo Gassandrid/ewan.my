@@ -1,10 +1,10 @@
 ---
 date: 2025-02-27
+created_on: "[[02-27-2025]]"
 updated: 2025-03-18
 title: Lab 05
 author: Ewan Pedersen, Sylvan Franklin
 ---
-
 ## Exercise 01
 
 The pumping lemma for regular languages (Sipser, Theorem 1.70) states: “If $A$ is a regular language, then there is a number $p$ where if $s$ is any string in $A$ of length at least $p$, then $s$ may be divided into three pieces $s=xyzs=xyz$, satisfying the following conditions:

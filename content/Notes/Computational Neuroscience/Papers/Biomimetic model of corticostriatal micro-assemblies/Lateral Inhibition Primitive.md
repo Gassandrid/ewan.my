@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-17-2025]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ author:
 date: 2025-09-17
 updated: 2025-11-13
 ---
-
 The "Lateral Inhibition" primitive comes from the paper [[Biomimetic model of corticostriatal micro-assemblies]]
 
 ## Anatomical Configuration

@@ -1,5 +1,6 @@
 ---
 id: CH6 - Chi Squared Tests
+created_on: "[[12-13-2024]]"
 aliases:
   - Chi Squared
 tags:
@@ -14,7 +15,6 @@ related:
 author:
 description: a "goodness of fit" test for comparing two distributions
 ---
-
 There are two kinds of Chi Squared Tests we should be familiar with:
 
 ---

@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-29-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ author:
 date: 2025-09-29
 updated: 2025-10-24
 ---
-
 ***Enzymes** are [[Proteins]] that increase the rates of chemical reactions in [[Cell]]s.*
 
 *Virtually ALL cellular reactions require an enzyme to occur **fast enough** to be useful (essential for life)*

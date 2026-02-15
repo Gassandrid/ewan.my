@@ -1,5 +1,6 @@
 ---
 id: Runge Kutta
+created_on: "[[10-07-2025]]"
 aliases: []
 tags:
   - math/calculus/differential/ode
@@ -10,7 +11,6 @@ source:
   - "[[Why Runge-Kutta is SO Much Better Than Euler's Method somepi]]"
 updated: 2025-10-15
 ---
-
 **Runge Kutta** is a [[Ordinary Differential Equation]] approximation method known for its accuracy to efficiency ratio. It is a type of **single-step method**, meaning it only uses information from the current point to estimate the next point, rather than relying on multiple previous points.
 
 It is a _much_ better approximation method than [[Eulers Method]], as it uses multiple evaluations of the derivative within each step to achieve higher accuracy.

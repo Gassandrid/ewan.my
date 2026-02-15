@@ -1,5 +1,6 @@
 ---
 class: note
+created_on: "[[04-10-2025]]"
 date: 2025-04-10
 updated: 2025-04-10
 tags:
@@ -7,7 +8,6 @@ tags:
 author: Ewan Pedersen, Mason Ritchie, Vikyat Mulpuri
 title: Lab 09
 ---
-
 ## Problem 03
 
 Consider the problem of determining whether a DFA and a regular expression are equivalent. Express this problem as a language and show that it is decidable.

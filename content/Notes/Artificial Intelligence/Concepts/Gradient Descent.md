@@ -1,5 +1,6 @@
 ---
 date: 2024-10-06
+created_on: "[[10-06-2024]]"
 updated: 2026-01-21T09:10:48-05:00
 class:
   - note
@@ -7,7 +8,6 @@ tags:
   - cs/ai/backpropagation
   - math/calculus/multivariable
 ---
-
 Gradient Descent is an optimization algorithm used to minimize the cost function by iteratively adjusting the model's parameters.
 
 ---

@@ -1,5 +1,6 @@
 ---
 id: Day 9
+created_on: "[[02-18-2025]]"
 aliases: 
 tags:
   - cs/theory
@@ -7,7 +8,6 @@ date: 2025-02-18
 title: Day 9
 updated: 2025-06-24
 ---
-
 This class will cover non regular languages, and context free grammars.
 
 ---

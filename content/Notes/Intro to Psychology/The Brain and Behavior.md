@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-09-2025]]"
 class:
   - note
   - lectureNote
@@ -16,7 +17,6 @@ author:
 date: 2025-09-09
 updated: 2025-09-09
 ---
-
 _This will discuss:_
 
 - _the cerebral cortex_

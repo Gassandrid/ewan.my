@@ -1,8 +1,8 @@
 ---
 date: 2024-10-02
+created_on: "[[10-02-2024]]"
 updated: 2026-01-16T17:28:48-05:00
 ---
-
 [Visit The Canvas](gassandrid.xyz/canvas) *no longer works*
 
 ## Inspirations

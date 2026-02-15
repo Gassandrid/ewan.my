@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-24-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ author:
 date: 2025-10-24
 updated: 2025-10-24
 ---
-
 **Hajj** is the Islamic pilgrimage to Mecca, which is a mandatory religious duty for Muslims that must be carried out at least once in their lifetime by all adult Muslims who are physically and financially capable of undertaking the journey.
 
 ## Some Important Aspects

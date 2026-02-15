@@ -1,9 +1,9 @@
 ---
 class: note
+created_on: "[[01-16-2026]]"
 date: 2026-01-16T17:47:16-05:00
 updated: 2026-02-10T14:57:01-05:00
 ---
-
 ## Description
 
 This course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (linear regression, logistic regression, neural networks, support vector machines, decision tree, ensemble models, random forest); unsupervised learning (clustering, dimensionality reduction, kernel methods); The course will also introduce deep learning such as convolutional neural networks and discuss recent applications of machine learning in addition to advice on applying machine learning algorithms.

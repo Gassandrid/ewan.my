@@ -1,5 +1,6 @@
 ---
 date: 2024-12-06
+created_on: "[[12-06-2024]]"
 updated: 2026-01-25T09:34:05-05:00
 tags:
   - seed
@@ -11,7 +12,6 @@ author:
   - "[[Axel Pedersen]]"
 description:
 ---
-
 ![[Pasted image 20241206195004.png]]
 
 ---

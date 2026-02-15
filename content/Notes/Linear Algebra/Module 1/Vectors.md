@@ -1,5 +1,6 @@
 ---
 title: Vectors
+created_on: "[[01-27-2025]]"
 date: 2025-01-27
 updated: 2025-09-10
 tags:
@@ -8,7 +9,6 @@ class:
   - note
   - lecture
 ---
-
 Let us note that everything we have looked at about Vectors thus far dont apply as well to Linear Algebra. We will be examining the "new" way of thinking about these constructs.
 
 ---

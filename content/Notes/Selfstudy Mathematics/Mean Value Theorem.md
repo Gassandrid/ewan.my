@@ -1,5 +1,6 @@
 ---
 date: 2025-07-22T13:46:58-05:00
+created_on: "[[07-22-2025]]"
 updated: 2026-01-22T13:48:42-05:00
 class:
   - note
@@ -11,7 +12,6 @@ author:
 description:
 aliases:
 ---
-
 The **Mean Value Theorem** serves to show that for any given function $f$ that is continuous on the closed interval $[a, b]$ and differentiable on the open interval $(a, b)$, there exists at least one point $c$ in the open interval $(a, b)$ such that the instantaneous rate of change (the derivative) at that point is equal to the average rate of change over the entire interval.
 
 $$

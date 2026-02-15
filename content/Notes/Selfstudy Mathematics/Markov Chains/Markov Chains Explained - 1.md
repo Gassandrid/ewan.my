@@ -1,5 +1,6 @@
 ---
 id: Markov Chains Explained - 1
+created_on: "[[04-29-2025]]"
 aliases:
 tags:
   - math/linear-algebra/markhov-chains
@@ -10,8 +11,6 @@ updated: 2026-01-17T07:58:23-05:00
 source:
   - "[[Markov Chains Clearly Explained! Part - 1]]"
 ---
- 
-
 Markov chains are used for everything - statistics, biology, and machine learning of course. They allow for some very interesting probability theory.
 
 Let's start with an example.

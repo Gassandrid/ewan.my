@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-14-2025]]"
 class:
   - note
 tags:
@@ -9,7 +10,6 @@ author:
 date: 2025-10-14
 updated: 2025-10-14
 ---
-
 A **reverse proxy** is a server that sits between client devices and backend servers, forwarding client requests to the appropriate backend server and returning the server's response to the client. It acts as an intermediary for requests from clients seeking resources from one or more servers.
 
 The typical case for selfhosting is **nginx reverse proxy**. Nginx is a popular web server that can also be used as a reverse proxy server.

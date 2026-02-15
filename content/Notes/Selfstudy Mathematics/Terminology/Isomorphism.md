@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-09-2025]]"
 class:
   - note
 tags:
@@ -10,7 +11,6 @@ author:
 date: 2025-10-09
 updated: 2025-10-09
 ---
-
 An **Isomorphism**, in the context of group theory, is a [[Bijection|bijective]] [[Homomorphism]] between two groups. This means that there exists a one-to-one correspondence between the elements of the two groups that preserves the group operation.
 
 ![[GroupIsomorphism.png]]

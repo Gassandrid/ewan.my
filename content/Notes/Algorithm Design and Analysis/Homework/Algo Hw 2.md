@@ -1,5 +1,6 @@
 ---
 title: Homework 2 - DFA and NFA Construction
+created_on: "[[09-19-2025]]"
 author:
   - Ewan Pedersen
 date: 2025-09-19
@@ -11,7 +12,6 @@ class:
 tags:
   - cs/theory/algorithms
 ---
-
 ---
 
 ## BFS Tree and DFS Tree Properties

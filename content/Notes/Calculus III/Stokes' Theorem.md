@@ -1,5 +1,6 @@
 ---
 date: 2024-12-02
+created_on: "[[12-02-2024]]"
 id: 16.8 - Stokes' Theorem
 tags:
   - math/calculus/multivariable
@@ -8,7 +9,6 @@ updated: 2025-09-05
 class:
   - note
 ---
-
 We have discussed the orientation of curves and the orientation of surfaces. To state Stoke's Theorem, we need to discuss **boundary orientation**:
 
 > [!Info] Sketch

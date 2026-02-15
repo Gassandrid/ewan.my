@@ -1,9 +1,9 @@
 ---
 date: 2025-01-23
+created_on: "[[01-23-2025]]"
 updated: 2025-03-27
 title: Lab 01
 ---
-
 Given the following formal definition of a finite automaton, M2M2​, produce a complete state diagram.
 
 M2= ({q1,q2,q3,q4,q5},{l,r},δ,q2,{q1})M2​=({q1​,q2​,q3​,q4​,q5​},{l,r},δ,q2​,{q1​}) where δδ is given by

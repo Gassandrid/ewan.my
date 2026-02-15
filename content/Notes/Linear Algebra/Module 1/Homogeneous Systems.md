@@ -1,5 +1,6 @@
 ---
 id: Homogeneous Systems
+created_on: "[[01-29-2025]]"
 aliases: 
 tags:
   - "#math/linear-algebra"
@@ -7,7 +8,6 @@ date: 2025-01-29
 title: Homogeneous Systems
 updated: 2025-04-02
 ---
-
 Homogeneous systems are systems of linear equations where the right-hand side of the equations are all zero. This note will cover the basics of homogeneous systems and how to solve them.
 
 ---

@@ -1,8 +1,8 @@
 ---
 date: 2024-09-02
+created_on: "[[09-02-2024]]"
 updated: 2025-06-02
 ---
-
 ### Unit Testing
 
 Unit testing involves the porcess of testing individual units or components of a software application in isolation. The goal is to verify that each unit of the software performs as expected. A unit is the smallest testable part of an application, such as a function, method, or class.

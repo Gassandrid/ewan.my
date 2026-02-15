@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-19-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ author:
 date: 2025-09-19
 updated: 2025-09-19
 ---
-
 Considered the "easiest verse" in the [[Qur'an]]. This is often where [[Muslim]]s begin to learn the [[Qur'an]].
 
 One of the most **repeated** verses for Muslims, if they are someone who *practices and prays*. Recited in each **rak'a**(each individual prescribed movement) during **salah** or **namaz**, ritual prayers.

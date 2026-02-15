@@ -1,5 +1,6 @@
 ---
 id: Bullet Point Notation
+created_on: "[[01-24-2026]]"
 aliases: []
 tags:
   - journal/workflow
@@ -8,7 +9,6 @@ class:
 date: 2026-01-24T15:01:25-05:00
 updated: 2026-01-24T15:23:45-05:00
 ---
-
 - A new workflow strategy primarily thought to be useful for Daily notes, also inspired from [[Yana Log Notes]].
   - yana uses it for paper notes, also biology notes.
     - they accumulate random facts, say about something like the [[Default Mode Network]], and gain insight with sub bullet points

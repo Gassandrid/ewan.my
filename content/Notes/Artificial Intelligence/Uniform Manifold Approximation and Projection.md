@@ -1,4 +1,5 @@
 ---
+created_on: "[[11-06-2025]]"
 class:
   - note
 tags:
@@ -17,7 +18,6 @@ aliases:
   - "[[Uniform Manifold Approximation and Projection]]"
   - "[[Principle Component Analysis]]"
 ---
-
 **Uniform Manifold Approximation and Projection(UMAP)**, much like [[T-distributed stochastic neighbor embedding|t-SNE]], has the goal of modeling the distances between points in high-dimensional space in a lower-dimensional space, while preserving local structure. However, UMAP is generally faster and scales better to large datasets compared to [[T-distributed stochastic neighbor embedding|t-SNE]], while also preserving more of the global structure of the data. It does this by attempting to build a graph model instead of a Gaussian like SNE.
 
 Unlike both [[Principle Component Analysis]] and [[T-distributed stochastic neighbor embedding]], UMAP has an exceptional ability to preserve the structure of the data in a way where you can understand the higher dimensional shape. A great example is mapping a 3d point cloud of a familiar object (like a mammoth) to $\mathbb{R}^2$:

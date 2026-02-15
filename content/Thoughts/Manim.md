@@ -1,5 +1,6 @@
 ---
 date: 2024-12-10
+created_on: "[[12-10-2024]]"
 tags:
   - math
   - seed
@@ -18,7 +19,6 @@ interface:
   - Library
 image: "[[ManimBanner.png]]"
 ---
-
 ![[ManimBanner.png]]
 
 Manim is a really useful tool that allows you to create animations and illustrations programmatically, which is a much nicer experience than doing it by hand in Blender.

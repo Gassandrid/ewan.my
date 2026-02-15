@@ -1,5 +1,6 @@
 ---
 date: 2025-11-07
+created_on: "[[11-07-2025]]"
 updated: 2026-01-13T10:05:47-05:00
 class:
   - note
@@ -13,7 +14,6 @@ author:
   - "[[Ernst Ising]]"
 description:
 ---
-
 The **Ising Model** serves as a simplified mathematical framework to understand phase transitions and critical phenomena in statistical mechanics. It consists of discrete variables called "spins" that can take on one of two values, typically represented as +1 or -1. These spins are arranged on a lattice, where each spin interacts with its nearest neighbors.
 
 These "spin" values are both influenced by their nearest neighbors and an external magnetic field. The model captures the competition between thermal agitation, which tends to randomize the spins, and the interaction energy, which tends to align them. The important idea to note is the tendancy for system to "fall" to the lowest energy state possible.

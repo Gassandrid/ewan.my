@@ -1,5 +1,6 @@
 ---
 title: Cloudflare Tunnels - The temporary solution
+created_on: "[[03-21-2025]]"
 date: 2025-03-21
 updated: 2026-01-18T08:30:47-05:00
 tags:
@@ -7,7 +8,6 @@ tags:
   - todo
   - cs/web/tunneling
 ---
-
  While the home server project has been going well as far as local deployments, I have yet to properly expose this network to the internet, for a few reasons.
 
  ---

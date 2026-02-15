@@ -1,12 +1,12 @@
 ---
 title: Morse Combination Problem
+created_on: "[[11-28-2024]]"
 date: 2024-11-28
 author: Ewan / Gassandrid
 updated: 2025-02-06
 tags:
   - seed
 ---
-
 > **Abstract**
 
 > We are presented with a problem of a "printer" which takes a combination of short and long "pulses", similar to that of Morse code, to output a desired sheet of material. We are given 10 "spaces" to enter our code, however the long pulse takes up 2 spaces on this theoretical space budget.

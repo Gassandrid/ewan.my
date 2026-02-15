@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-28-2025]]"
 class:
   - note
   - lecture
@@ -14,7 +15,6 @@ related:
 date: 2025-08-28
 updated: 2025-08-28
 ---
-
 This is mostly a review from [[Day 1 - Introduction to Computing|Computing And Complexity]], but this lecture is dedicated to algorithmic complexity and runtimes.
 
 As we all know, **procedures** in computer science are not dictated by the actual time they take, but at the rate the time it takes(or memory) scales with input size. We are almost always operating over iterable data structures in algorithms, so this is crucial for efficient computing.

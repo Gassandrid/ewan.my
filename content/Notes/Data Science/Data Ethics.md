@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-02-2025]]"
 class:
   - note
   - lectureNote
@@ -16,7 +17,6 @@ author:
 date: 2025-09-02
 updated: 2025-09-02
 ---
-
 *discussing how to properly conduct data science research, starting with a review of a paper highlighted in the source property*
 
 ---------------------------

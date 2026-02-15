@@ -1,5 +1,6 @@
 ---
 id: Cross Entropy
+created_on: "[[09-16-2025]]"
 aliases: []
 tags:
   - math/information/entropy
@@ -11,7 +12,6 @@ source:
   - "[[The Key Equation Behind Probability]]"
 updated: 2026-02-09T09:00:37-05:00
 ---
-
 **Cross Entropy** builds on the concept of [[Entropy in Information]] by measuring the difference between two probability distributions. While entropy quantifies the uncertainty within a single distribution, cross entropy evaluates how one distribution diverges from another.
 
 **Why have this?**

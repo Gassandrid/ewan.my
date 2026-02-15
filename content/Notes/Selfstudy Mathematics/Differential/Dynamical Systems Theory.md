@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-12-2025]]"
 class:
   - note
 tags:
@@ -13,6 +14,9 @@ date: 2025-09-12
 updated: 2026-02-08T08:03:54-05:00
 aliases:
   - Chaos Theory
+---
+> An older, more uninformed summary of Chaos Theory, I still use it as the hub node,
+
 ---
 
 **Dynamical Systems Theory** is the study of systems that evolve over time according to a set of rules. It is a branch of mathematics that deals with the behavior of complex systems and how they change over time.

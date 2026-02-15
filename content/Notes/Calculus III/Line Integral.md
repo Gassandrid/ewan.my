@@ -1,4 +1,5 @@
 ---
+created_on: "[[11-07-2024]]"
 tags:
   - math
   - math/calculus/multivariable
@@ -6,7 +7,6 @@ tags:
 date: 2024-11-07
 updated: 2024-11-07
 ---
-
 > [!note] Overview
 > In Calculus 3, **line integrals** allow us to integrate functions along a curve in space. They are particularly useful in physics and engineering for calculating work done by a force along a path.
 

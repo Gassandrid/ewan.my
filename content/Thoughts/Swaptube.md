@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-31-2025]]"
 tags:
   - math
   - cs/cpp
@@ -17,7 +18,6 @@ interface:
   - Library
 image: "[[SwapTubeAnim.png]]"
 ---
-
 **Swaptube** is a programmatic [[Mathematics]] animation library, in a lot of ways a lot like [[Manim]]. It was created for the same purpose, with less of an emphasis on explaining concepts intuitively and more on just making math look beautiful.
 
 It was created by [[2swap]] for his elegant videos, and it is written in `C++`.

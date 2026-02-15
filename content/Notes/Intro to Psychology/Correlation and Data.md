@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-04-2025]]"
 class:
   - note
   - lectureNote
@@ -16,7 +17,6 @@ author:
 date: 2025-09-04
 updated: 2025-09-04
 ---
-
 _underlining the difference between correlation vs causaation, etc_
 
 ---

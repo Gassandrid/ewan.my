@@ -1,5 +1,6 @@
 ---
 id: Gaussian Integers
+created_on: "[[08-11-2025]]"
 aliases: []
 tags:
   - math/complex
@@ -8,7 +9,6 @@ class:
   - note
 updated: 2025-08-11
 ---
-
 Gaussian integers are complex numbers of the form $a + bi$ where both $a$ and $b$ are integers. They form a ring, denoted by $\mathbb{Z}[i]$, which is the set of all Gaussian integers.
 
 ![[Screenshot 2025-08-11 at 6.32.00 PM.png]]

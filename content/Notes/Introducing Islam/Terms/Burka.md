@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-27-2025]]"
 class:
   - note
   - definition
@@ -15,5 +16,4 @@ lecture-number: 2
 source:
 related:
 ---
-
 Unlike a [[Hijab]], this refers to a full body covering. Not as much of a range of meaning.

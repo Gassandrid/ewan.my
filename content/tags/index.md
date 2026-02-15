@@ -1,9 +1,9 @@
 ---
 title: Tag Index
+created_on: "[[03-31-2025]]"
 date: 2025-03-31
 updated: 2025-04-14
 ---
-
 Tags are less structured than folders, but more structured than natural forming links. Tags are great when you searching with an intent to find notes for a genre or general topic across all folders and links.
 
 Some of the tags here have index notes like this one associated with them for improved navigation, but a lot of the tags are junk or have a very specific scope. They will be updated slowly but surely.

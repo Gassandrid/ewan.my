@@ -1,5 +1,6 @@
 ---
 date: 2025-04-14
+created_on: "[[04-14-2025]]"
 updated: 2025-10-23
 tags:
   - comp-neuro/theory
@@ -11,5 +12,3 @@ related:
   - "[[Sequence Learning]]"
 author:
 ---
-
- 

@@ -1,5 +1,6 @@
 ---
 title: Proxmox on old Macbooks
+created_on: "[[01-02-2025]]"
 date: 2025-01-02
 updated: 2025-07-26
 tags:
@@ -7,9 +8,6 @@ tags:
   - cs/homelab
   - projects/homelab/dorm
 ---
-  
- 
-
 While my mini pc's haven't arrived yet, I thought I might as well go ahead and convert some of my old laptops - namely macBooks - into containerized Linux machines. This will be nice as I can have a bunch of old machines that split the workloads across themselves, and use the system as namely one giant [proxmox cluster](https://pve.proxmox.com/wiki/Cluster_Manager).
 
 ## Online Tutorial

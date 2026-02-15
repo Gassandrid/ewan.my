@@ -1,5 +1,6 @@
 ---
 id: Orthogonality
+created_on: "[[06-17-2025]]"
 aliases:
   - Orthogonal
 tags:
@@ -7,7 +8,6 @@ tags:
 date: 2025-06-17
 updated: 2025-06-17
 ---
- 
 **Orthogonality** refers to the concept of perpendicularity in vector spaces. Two vectors are orthogonal if their dot product is zero, indicating that they are at right angles to each other. This concept is fundamental in linear algebra, particularly in the context of inner product spaces.
 
 ![[Screenshot 2025-06-17 at 11.13.16 AM.png]]

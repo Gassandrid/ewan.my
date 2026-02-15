@@ -1,5 +1,6 @@
 ---
 date: 2025-01-02
+created_on: "[[01-02-2025]]"
 updated: 2026-01-18T08:28:44-05:00
 tags:
   - cs
@@ -9,7 +10,6 @@ title: Brainstorming Software Stack
 class:
   - note
 ---
-
  Found a great list of usefull software services to run:
 
  <https://github.com/TechHutTV/homelab>

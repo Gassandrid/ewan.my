@@ -1,5 +1,6 @@
 ---
 id: Evidence Lower Bound
+created_on: "[[11-05-2025]]"
 aliases:
   - ELBO
   - Variational Lower Bound
@@ -21,7 +22,6 @@ related:
   - "[[Variational Autoencoder]]"
 updated: 2026-02-04T13:07:54-05:00
 ---
-
 The **Evidence Lower Bound (ELBO)** is the core quantity in variational inference and the key optimization objective for training [[Variational Autoencoder|Variational Autoencoders]]. It provides a tractable lower bound on the log marginal likelihood (the "evidence") of observed data. 
 
 ---

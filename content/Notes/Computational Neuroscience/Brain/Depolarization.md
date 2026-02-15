@@ -1,12 +1,12 @@
 ---
 date: 2025-04-23
+created_on: "[[04-23-2025]]"
 updated: 2025-06-19
 tags:
   - todo/neuro
   - comp-neuro
 class: note
 ---
-
 **Depolarization**, in the context of [[Computational Neuroscience]], refers to a change in a neuron's membrane potential that makes it less negative (more positive) compared to the resting potential. This process is crucial for the initiation and propagation of electrical signals in neurons.
 
 ---

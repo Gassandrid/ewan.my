@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-21-2025]]"
 class:
   - course
 tags:
@@ -16,7 +17,6 @@ source:
 date: 2025-08-21
 updated: 2025-08-28
 ---
-
 ## Course Description
 
 This course is designed to introduce you to the science of psychology.  

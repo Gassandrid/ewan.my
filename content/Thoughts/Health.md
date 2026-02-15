@@ -1,12 +1,12 @@
 ---
 title: Health
+created_on: "[[02-04-2025]]"
 date: 2025-02-04
 updated: 2025-02-20
 tags:
   - hobbies
   - sapling
 ---
-
 While the idea of **health** might not be a hobby as per se, I have recently come to start really valuing my health throughout my life. But what really sold me is once I gave tiny big of effort into improving my health for the better, I saw drastic improvements in my quality of life and overall happiness, and that has motivated me to continue further on.
 
 ---

@@ -1,5 +1,6 @@
 ---
 id: Final Project Report
+created_on: "[[12-04-2024]]"
 aliases:
 tags:
   - cs/embedded

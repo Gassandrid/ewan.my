@@ -1,5 +1,6 @@
 ---
 date: 2024-08-09
+created_on: "[[08-09-2024]]"
 updated: 2025-08-21
 tags:
   - cs/software
@@ -9,7 +10,6 @@ source:
 related:
   - "[[Gpg]]"
 ---
-
 # AGE (CLI App)
 
 ## Overview

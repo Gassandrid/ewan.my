@@ -1,5 +1,6 @@
 ---
 id: Digital Garden
+created_on: "[[10-28-2024]]"
 aliases: []
 tags:
   - philosophy
@@ -9,7 +10,6 @@ date: 2024-10-28
 updated: 2025-02-06
 title: Digital Garden
 ---
-
 _also known as a hypertext garden, a digital zettelkasten, or a second brain_
 
 A digital garden is a collection of notes created, curated, and cultivated by an individual. They are more than a personal wiki. They are a digital space for growing ideas, cultivating thoughts, and nurturing knowledge. Digital gardens are meant to be pruned, watered, and shared. They are always evolving, and they are never complete.

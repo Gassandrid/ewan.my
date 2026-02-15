@@ -1,5 +1,6 @@
 ---
 date: 2025-12-14
+created_on: "[[12-14-2025]]"
 updated: 2025-12-14
 class:
   - note
@@ -10,7 +11,6 @@ source:
 related:
 author:
 ---
-
 A **phasor** is a complex number that represents a sinusoidal function whose amplitude (magnitude), angular frequency, and initial phase are time-invariant.
 
 The common example can be thought of in the context of [[Laplace Transform|Laplace Transforms]], where a sinusoidal signal can be represented as a rotating vector in the complex plane. The projection of this vector onto the real axis gives the instantaneous value of the sinusoidal function.

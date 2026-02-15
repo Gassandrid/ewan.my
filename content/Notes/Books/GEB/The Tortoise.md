@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ author:
 date: 2025-09-03
 updated: 2025-09-04
 ---
-
 *Achilles and the Tortoise is a recurring dialogue in [[Gödel, Escher, Bach]] which is used as a tool to convey the very logical/mathematical concepts of the book in a style reminiscent ancient Greek philosophy.*
 
 ---

@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-21-2025]]"
 class:
   - course
 tags:
@@ -16,7 +17,6 @@ source:
 date: 2025-08-21
 updated: 2025-08-29
 ---
-
 ## Course Description from Brightspace
 
 Welcome to Introducing Islam, one of my tried-and-true courses that I am thrilled to get back into with you all! You may feel differently--summer is ending! the semester is nigh! maybe it's your first semester _ever,_ and that's all the feels!--but I think we've got a great group and course ahead. 

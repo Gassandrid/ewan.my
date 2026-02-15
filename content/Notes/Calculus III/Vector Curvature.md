@@ -1,11 +1,11 @@
 ---
+created_on: "[[09-25-2024]]"
 tags:
   - math
   - university
 date: 2024-09-25
 updated: 2025-01-27
 ---
-
 Curvature is a very intuitive concept.
 
 If you have a straight line, does it have curvature? No, of course not.

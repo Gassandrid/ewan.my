@@ -1,5 +1,6 @@
 ---
 title: WLED Strips With Home Assistant
+created_on: "[[01-24-2025]]"
 date: 2025-01-24
 updated: 2025-09-30
 tags:
@@ -10,8 +11,6 @@ class:
 source:
   - "[[Home Assistant]]"
 ---
- 
-
 Now that I am getting more into Home Assistant and my home lab as a whole, I want to take some aspects of my room and migrate them over to home assistant.
 
 ---

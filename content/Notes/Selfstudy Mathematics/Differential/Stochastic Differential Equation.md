@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-09-2025]]"
 class:
   - note
 tags:
@@ -10,7 +11,6 @@ related:
 date: 2025-09-09
 updated: 2025-12-14
 ---
-
 A stochastic differential equation (SDE) is a differential equation in which one or more of the terms is a stochastic process, leading to a solution that is itself a stochastic process. SDEs are used to model systems that are influenced by random noise or uncertainty, such as financial markets, physical systems subject to thermal fluctuations, and biological processes. The formulation originates from [[Brownian Motion]] and [[Ito Calculus]]. For a while, it even had use in the early diffusion models like DDPM( [[Denoising Diffusion Probabilistic Models]] ).
 
 They consist of both a deterministic component and a stochastic component. The deterministic part describes the average behavior of the system, while the stochastic part accounts for random fluctuations.

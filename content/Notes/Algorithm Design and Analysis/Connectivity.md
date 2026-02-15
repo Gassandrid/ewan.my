@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-02-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ related:
 date: 2025-09-02
 updated: 2025-09-02
 ---
-
 **Connectivity** in graph theory refers to the degree to which the vertices (or nodes) of a graph are connected to each other. It is a fundamental concept that helps in understanding the structure and properties of graphs.
 
 ## Problems

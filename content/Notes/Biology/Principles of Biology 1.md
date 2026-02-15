@@ -1,4 +1,5 @@
 ---
+created_on: "[[08-21-2025]]"
 class:
   - course
 tags:
@@ -17,7 +18,6 @@ updated: 2025-09-05
 related:
   - "[[Principles of Biology LAB]]"
 ---
-
 The entry point for my Biological work in the field of [[Computational Neuroscience]]. While my work will mainly be theoretical, it is important to understand the biology concepts that my field often abstracts over.
 
 ---

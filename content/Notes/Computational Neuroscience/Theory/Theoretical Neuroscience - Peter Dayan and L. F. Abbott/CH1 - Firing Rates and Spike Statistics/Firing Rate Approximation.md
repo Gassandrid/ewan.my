@@ -1,11 +1,12 @@
 ---
 id: Firing Rate Approximation
+created_on: "[[04-11-2025]]"
 aliases: 
 tags:
   - comp-neuro
   - cs/python
 date: 2025-04-11
-updated: 2025-07-02
+updated: 2026-02-15T11:26:00-05:00
 ---
 
 This serves as a simple notebook for implementing the different kinds of Firing Rate Approximation Functions as defined in [[1.2 - Spike Trains and Firing Rates]].
@@ -14,7 +15,7 @@ In most cases you would be doing this for multiple [[Neuron]]s, but here we will
 
 **Module Imports:**
 
-```python-r
+```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -26,7 +27,7 @@ import matplotlib.pyplot as plt
 
 Here we define our model parameters for the test, we dont want anything too big so we will just do **10** seconds, **1** neuron( you can adjust if you like), and a time resolution of **1** ms.
 
-```python-r
+```python
 num_neurons = 1 # number of neurons
 duration = 10 # trial duration
 dt = 0.001 # time resolution
@@ -39,7 +40,7 @@ print(time) # a long list of 1ms time slots for 10 seconds
 
 This won't be as accurate as a "real" dataset, but `numpy` has a capable seed random number generator that creates realistic data for this case:
 
-```python-r
+```python
 firing_rates = np.random.uniform(5, 20, size=num_neurons) # for "noise"
 
 # initializing the spike trains, where 0 no spike, 1 is spike
@@ -61,7 +62,7 @@ print(data)
 
 Without any kind of rate approximation, let's get a sense of what the data looks like.
 
-```python-r
+```python
 n_neurons = len([col for col in data.columns if col.startswith('neuron_')])
 for i in range(min(5, n_neurons)):  # Plot first 5 neurons or all if less than 5
     spike_times = data['time'][data[f'neuron_{i}'] == 1]
@@ -83,7 +84,7 @@ Because spike counts can take only integer values, the rates computed by this me
 
 For this approach, we will use bins of size $\Delta t = 100ms$.
 
-```python-r
+```python
 bin_size = 0.1  # 100 ms
 num_bins = int(duration / bin_size)  # number of bins
 
@@ -134,7 +135,7 @@ w(t) = \begin{cases}
 \end{cases}
 $$
 
-```python-r
+```python
 window_size = 0.1  # 100 ms
 
 # first, we extract spike times for each neuron
@@ -183,7 +184,7 @@ $$
 r(t) = \sum_{i} \frac{1}{\sqrt{ 2\pi }\sigma} \exp\left( - \frac{(t-t_{i})^2}{2\sigma^2} \right) 
 $$
 
-```python-r
+```python
 window_size = 0.1  # 100 ms full width
 sigma = window_size / 2.355  # convert FWHM to std (approximation for Gaussian)
 
@@ -238,7 +239,7 @@ z & if \ z \geq 0 \\ \\
 \end{cases}
 $$
 
-```python-r
+```python
 def alpha_sliding_rate(spike_times, eval_times, alpha):
     rate = np.zeros_like(eval_times, dtype=float)
 

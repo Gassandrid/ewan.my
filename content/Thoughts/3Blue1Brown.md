@@ -1,4 +1,5 @@
 ---
+created_on: "[[04-02-2025]]"
 class:
   - person
 date: 2025-04-02
@@ -11,7 +12,6 @@ image: https://m.media-amazon.com/images/M/MV5BZWRlZjBkY2YtNDVhMy00YThkLWFhMWItM
 relationship: influencer/youtuber
 sex: male
 ---
-
 **3blue1brown** is a well known channel on YouTube for math related content. Just like how [[Artem Kirsanov]] has been a really useful resource and my gateway into [[Computational Neuroscience]], 3B1B has done the same in regard to [[Mathematics]].
 
 He is also responsible for the creation of the [[Manim]] python animation library, which is used by a large amount of educators(including Artem) to demonstrate math and scientific concepts.

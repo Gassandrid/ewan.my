@@ -1,5 +1,6 @@
 ---
 date: 2024-09-12
+created_on: "[[09-12-2024]]"
 updated: 2026-01-22T09:31:22-05:00
 class:
   - note
@@ -13,7 +14,6 @@ description:
 aliases:
   - Loss Function
 ---
-
 ![[LossFunctionMSE.png]]
 
 ### Overview

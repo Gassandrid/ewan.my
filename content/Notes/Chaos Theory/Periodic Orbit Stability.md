@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-20-2026]]"
 class:
   - note
   - lecture
@@ -27,7 +28,6 @@ jupyter:
     language: python
     name: python3
 ---
-
 _(for the [[The Worldwide Air-Transportation Network]] website)_
 
 ## Chain Rule for Periodic Orbits

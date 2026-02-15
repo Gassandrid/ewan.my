@@ -1,4 +1,5 @@
 ---
+created_on: "[[12-15-2025]]"
 class:
   - note
 date: 2025-12-15
@@ -13,7 +14,6 @@ tags:
   - papers
   - curation
 ---
-
 Not sure how I would want to go about this, but it itching me in a few ways.
 
 ## Paper Management

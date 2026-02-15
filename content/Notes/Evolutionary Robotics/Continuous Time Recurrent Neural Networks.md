@@ -1,5 +1,6 @@
 ---
 id: Continuous Time Recurrent Neural Networks
+created_on: "[[02-05-2026]]"
 aliases:
   - CTRNNs
   - CTRNN
@@ -12,7 +13,6 @@ class:
 date: 2026-02-05T08:31:13-05:00
 updated: 2026-02-10T09:36:00-05:00
 ---
-
 **CTRNNs** are a type of [[Recurrent Neural Network]] designed to model temporal dynamics in continuous time. They are particularly useful in fields like evolutionary robotics, where agents need to process sensory inputs and generate motor outputs in real-time.
 
 The most basic definition is as follows:

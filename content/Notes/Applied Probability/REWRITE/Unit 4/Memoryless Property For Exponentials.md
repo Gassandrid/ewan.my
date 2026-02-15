@@ -1,5 +1,6 @@
 ---
 date: 2025-04-09
+created_on: "[[04-09-2025]]"
 updated: 2025-10-15
 class:
   - note
@@ -9,7 +10,6 @@ source:
 related:
 author:
 ---
-
 If $X \sim \text{Exponential}(\lambda)$, then:
 
 $$

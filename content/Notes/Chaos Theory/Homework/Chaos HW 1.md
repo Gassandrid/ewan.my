@@ -1,5 +1,6 @@
 ---
 date: 2026-01-15T17:38:21-05:00
+created_on: "[[01-15-2026]]"
 updated: 2026-01-24T15:02:45-05:00
 title: Assignment 1
 author:
@@ -9,7 +10,6 @@ class:
 abstract: "Instructions: Graduate students (required) and those planning to go to graduate school in a mathematical science (encouraged) should turn in their solutions in LATEX; you will need to learn this language eventually. Submit your solution in a single PDF in Blackboard, including PDF of your code appended to solutions. Check Teams for sample code. Grading: All questions are worth 3 points unless marked otherwise (3 = perfect or nearly so, 2 = close but something missing, 1 = not close but a reasonable attempt, 0 = way off). Excellent solutions will be returned with the graded HW. Disclosure: Please show all your working clearly and list the names of other students with whom you collaborated."
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 ---
-
 ## Question 1
 
 Let p be a fixed point of a nonlinear map $f$ . Given an $\epsilon>0$, find a geometric condition on $f$ under which all points $x$ in $N_{\epsilon}(p)$ are in the basin of $p$. Use cobweb plot analysis to explain your reasoning. Hint: By geometric condition, I mean some constraint on $f$ and/or $f'$ in the neighborhood of $p$. One example condition that you can improve upon:

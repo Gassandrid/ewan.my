@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-08-2025]]"
 class:
   - note
   - lectureNote
@@ -16,7 +17,6 @@ author:
 date: 2025-09-08
 updated: 2025-09-08
 ---
-
 **Prokaryotic Cells** are a type of [[Cell]] that lack a membrane-bound nucleus and other membrane-bound [[organelles]]. They are typically smaller and simpler in structure than eukaryotic cells. Prokaryotic cells are found in two main domains of life: Bacteria and Archaea.
 
 ![[Prokaryote.png]]

@@ -1,5 +1,6 @@
 ---
 id: Axons
+created_on: "[[03-30-2025]]"
 aliases: []
 tags:
   - comp-neuro
@@ -8,7 +9,6 @@ date: 2025-03-30
 class: note
 updated: 2025-06-22
 ---
-
 ![[Pasted image 20250330142602.png]]
 
 [^1]

@@ -1,4 +1,5 @@
 ---
+created_on: "[[02-03-2026]]"
 class:
   - note
 tags:
@@ -14,7 +15,6 @@ aliases:
 date: 2026-02-03T00:00:00-05:00
 updated: 2026-02-03T14:04:39-05:00
 ---
-
 A fixed point $p$ is a **saddle** if one eigenvalue satisfies $|\lambda_1| < 1$ (stable direction) and another satisfies $|\lambda_2| > 1$ (unstable direction).
 
 In plain English, nearby points approach $p$ along one direction and are repelled along another.

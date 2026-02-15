@@ -1,4 +1,5 @@
 ---
+created_on: "[[02-06-2026]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ aliases:
 date: 2026-02-06T10:04:19-05:00
 updated: 2026-02-06T10:04:30-05:00
 ---
-
 Very general meaning across fields of math.
 
 In **Information Theory**, information quantifies the amount of uncertainty reduced when we learn the outcome of a random variable. It is often measured in bits, where one bit represents the information gained from learning the outcome of a binary random variable (e.g., a coin flip). The more uncertain or unpredictable the outcome, the more information it provides when revealed.

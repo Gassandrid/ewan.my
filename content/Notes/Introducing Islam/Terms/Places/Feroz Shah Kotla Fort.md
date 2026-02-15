@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 aliases:
   - Jinn
 date: 2025-09-03
@@ -18,7 +19,6 @@ source:
 related:
 author:
 ---
-
 **Feroz Shah Kotla Fort** is a "[[Djinn Joint]]", a Delhi Sultanate era(rougly ~1300 CE) complex, including masjid, housing, wells, etc.
 
 Prayers still happen here, and people leave offerings for the [[Djinn]] that are believed to inhabit the site.

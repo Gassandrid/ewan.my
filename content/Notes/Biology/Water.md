@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-05-2025]]"
 class:
   - note
   - lecture
@@ -14,7 +15,6 @@ author:
 date: 2025-09-05
 updated: 2025-09-05
 ---
-
 _Water, in the context of biology, is a fundamental molecule that plays a crucial role in the structure and function of living organisms._
 
 ---

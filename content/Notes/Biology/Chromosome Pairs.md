@@ -1,4 +1,5 @@
 ---
+created_on: "[[11-03-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ lesson:
   - lecture
 lecture-number: 15
 ---
-
 Crossing over occurs when homologous chromosomes pair up in meiosis(cannot occur between different chromosomes)
 
 Paired chromosomes swap pieces of DNA with the same genes

@@ -1,4 +1,5 @@
 ---
+created_on: "[[07-28-2025]]"
 tags:
   - seed
 date: 2025-07-28
@@ -13,7 +14,6 @@ aliases:
   - Uncreated Notes
   - Uncreated Note
 ---
-
 I have a bit of a problem - I really love the idea of setting off tasks to do later by linking to a note that doesn't exist.
 
 Why is this a problem, one might ask. Isn't that one of the core features behind note-taking in obsidian? I would agree, and I have come to love it, but I have found some problems that have leaded me to indeed just:

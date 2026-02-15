@@ -1,5 +1,6 @@
 ---
 date: 2026-01-20T08:29:59-05:00
+created_on: "[[01-20-2026]]"
 updated: 2026-01-20T09:42:54-05:00
 class:
   - note
@@ -20,7 +21,6 @@ lesson:
 lecture-number: 3
 abstract: test abstract
 ---
-
 What does it really mean to have a body and _exploit it_ for intelligent action?
 
 > **Challenge:** How to recognize objects in a scene; where are the object’s boundaries? This problem is known as ‘image segmentation’ in the field of computer vision.

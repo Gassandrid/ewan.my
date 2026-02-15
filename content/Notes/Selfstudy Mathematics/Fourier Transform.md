@@ -1,4 +1,5 @@
 ---
+created_on: "[[01-19-2026]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ aliases:
 date: 2026-01-19T09:33:40-05:00
 updated: 2026-01-19T09:52:13-05:00
 ---
-
 I am sure we all know that the Fourier Transform is a mathematical operation that transforms a time-domain signal into its frequency-domain representation. This transformation is crucial in various fields, including signal processing, communications, and audio analysis.
 
 The plain continuous Fourier Transform (CFT) of a time-domain signal $x(t)$ is defined by the integral:

@@ -1,5 +1,6 @@
 ---
 date: 2026-02-10T14:05:02-05:00
+created_on: "[[02-10-2026]]"
 updated: 2026-02-10T14:39:00-05:00
 class:
   - note
@@ -12,7 +13,6 @@ author:
 description:
 aliases:
 ---
-
 there's a post on [[LessWrong]] called [[We have to Upgrade]] that argues we have maybe six years before losing control to AGI, and about fifteen until [[Brain Computer Interfaces]] are mature enough for meaningful augmentation. the timelines feel optimistic on the biophysics side. the gap between reading neural signals and writing them bidirectionally is enormous, and the latter is what actually matters for cognitive enhancement. but the core claim stands: if you believe AGI is coming and you believe humans as currently constituted can't handle it, the only coherent response is to upgrade before the window closes.
 
 i'm a [[Computational Neuroscience]] student because i hit the limits of my own mind and decided the only way forward was to understand it well enough to transcend it. [[My Eternal Golden Braid|the path has this strange topology]] where every interest loops back into the others. computational neuroscience led to [[Overlap of Transhumanism and Computational Neuroscience|transhumanism]], which led to [[On Peptides|peptides]] and [[Nootropics]], which led back to understanding neural mechanisms, which makes me better at comp neuro, which deepens the transhumanist conviction. reading [[Gödel, Escher, Bach]] in the middle of this created a recursive structure i'm still untangling: using an enhanced mind to watch itself become enhanced is the kind of strange loop Hofstadter spent eight hundred pages exploring.

@@ -1,5 +1,6 @@
 ---
 date: 2025-04-10
+created_on: "[[04-10-2025]]"
 updated: 2025-12-27
 tags:
   - cs/theory
@@ -11,7 +12,6 @@ related:
 author:
 description:
 ---
-
   Let's start the day with a table of decidability construction:
 
 | Language       | Setbuilder                                                                                                       | Proof Idea                                                                         |

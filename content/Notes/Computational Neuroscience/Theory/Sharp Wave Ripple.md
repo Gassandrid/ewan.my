@@ -1,5 +1,6 @@
 ---
 date: 2025-10-27
+created_on: "[[10-27-2025]]"
 updated: 2025-10-29
 class:
   - note
@@ -12,7 +13,6 @@ source:
 related:
 author:
 ---
-
 The **Sharp Wave Ripple (SWR)** is a distinctive pattern of neural activity observed in the hippocampus, particularly during periods of rest and slow-wave sleep. SWRs are characterized by a sharp wave component, which is a large amplitude deflection in the local field potential, followed by a high-frequency oscillation known as the ripple.
 
 ![[sharpwaveripple.png]]

@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-04-2025]]"
 class:
   - note
 tags:
@@ -12,7 +13,6 @@ source:
 related:
 author:
 ---
-
 A **Continuous Attractor Network (CAN)** is a type of neural network model that can maintain a continuous range of activity states over time. Unlike discrete [[Attractor Network]]s, which stabilize at specific points, CANs can represent variables that change smoothly, such as spatial position or head direction.
 
 They are particularly useful in [[Computational Neuroscience]] for modeling systems like the head direction system, grid cells in the [[Entorhinal Cortex]], and other neural representations that require continuous encoding.

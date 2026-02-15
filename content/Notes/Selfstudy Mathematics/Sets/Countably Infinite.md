@@ -1,5 +1,6 @@
 ---
 id: Countably Infinite
+created_on: "[[08-13-2025]]"
 aliases: []
 tags:
   - math/sets
@@ -8,7 +9,6 @@ class:
   - note
 updated: 2025-08-13
 ---
-
 _Countably Infinite_ sets are a fundamental concept in set theory, representing sets that can be put into a one-to-one correspondence with the natural numbers. This means they can be "counted" in a sense, even if they are infinite.
 
 ---

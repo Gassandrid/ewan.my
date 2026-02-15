@@ -1,5 +1,6 @@
 ---
 id: Homework 2 - DFA and NFA Construction
+created_on: "[[02-07-2025]]"
 aliases: []
 tags:
   - cs/theory
@@ -8,7 +9,6 @@ date: 2025-02-07
 title: Homework 2 - DFA and NFA Construction
 updated: 2025-07-28
 ---
-
 > **Abstract**
 
 > This document the formal definitions and constructs for 3 primary DFAs/NFAs, with two extra considered for extra credit. We seek to prove that a language is regular by providing a DFA that recognizes it.

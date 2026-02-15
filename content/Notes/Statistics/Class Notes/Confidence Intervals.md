@@ -1,5 +1,6 @@
 ---
 id: CH5 - Confidence Intervals
+created_on: "[[10-23-2024]]"
 aliases: []
 tags:
   - math/probability/statistics
@@ -13,7 +14,6 @@ related:
 author:
 description:
 ---
-
 ## Research Question
 
 When working with confidence intervals, we start with a **Research Question:**  

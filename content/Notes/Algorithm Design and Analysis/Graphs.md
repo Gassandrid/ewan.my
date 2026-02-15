@@ -1,5 +1,6 @@
 ---
 date: 2025-08-28
+created_on: "[[08-28-2025]]"
 updated: 2025-09-02
 class:
   - note
@@ -14,7 +15,6 @@ lecture-number: 2
 source:
 related:
 ---
-
 I am sure we are all familiar with graphs, given that this whole note repo is graph-based! But in computer science, graphs are a fundamental data structure used to model relationships between entities. They consist of **vertices** (or nodes) and **edges** (connections between nodes).
 
 This will deal with defining graphs formally, and some common algorithms that operate on them.

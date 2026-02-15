@@ -1,10 +1,10 @@
 ---
+created_on: "[[11-21-2024]]"
 tags:
   - projects/dars
 date: 2024-11-21
 updated: 2025-06-20
 ---
-
 Two main parts to the LLM structure behind DARS.
 
 ## Frontend

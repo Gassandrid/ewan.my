@@ -1,9 +1,9 @@
 ---
 title: 3d Printing So Far
+created_on: "[[03-12-2025]]"
 date: 2025-03-12
 updated: 2025-03-24
 ---
-
 It has been well over a month since I first got my Bambu Lab P1S, and it has been quite the introduction into the world of additive manufacturing.
 
 ---

@@ -1,11 +1,11 @@
 ---
 date: 2024-09-29
+created_on: "[[09-29-2024]]"
 tags:
   - math
   - university
 updated: 2024-10-25
 ---
-
 > [!summary] **Lagrange Multipliers**
 > The method of Lagrange multipliers is a strategy to find the local maxima and minima of a function subject to one or more constraints. It introduces an auxiliary variable, the Lagrange multiplier, to convert a constrained optimization problem into a system of equations.
 

@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-03-2025]]"
 class:
   - note
 tags:
@@ -8,7 +9,6 @@ author:
 date: 2025-10-03
 updated: 2025-10-17
 ---
-
 ## Questions
 
 - [ ] How will we weigh the tubes?

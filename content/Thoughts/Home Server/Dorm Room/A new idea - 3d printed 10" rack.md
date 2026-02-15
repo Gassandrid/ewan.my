@@ -1,5 +1,6 @@
 ---
 title: A new idea - 3d printed 10" rack
+created_on: "[[02-04-2025]]"
 date: 2025-02-04
 updated: 2025-02-04
 tags:
@@ -7,7 +8,6 @@ tags:
   - projects/homelab/dorm
   - cs/homelab
 ---
-
 I was watching [this video](https://www.youtube.com/watch?v=t5ZMkzbdSR8), and, given that I now have a 3d printer, I think this would be a great option for the laptop stack.
 
 It has space for the smaller form factor computers, like the two raspberry pi's, and the bee link mini pc.

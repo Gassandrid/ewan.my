@@ -1,5 +1,6 @@
 ---
 id: Stable Manifold
+created_on: "[[02-05-2026]]"
 aliases:
   - Stable Manifolds
   - Stable Direction
@@ -18,7 +19,6 @@ related:
   - "[[Saddle fixed point]]"
 updated: 2026-02-05T10:35:07-05:00
 ---
-
 The **stable manifold** of a [[Saddle fixed point|saddle]] fixed point is the set of points that converge to the fixed point under forward iteration. It's the direction of contraction.
 
 For a linear map with a [[Saddle fixed point|saddle]] at the origin, the stable manifold is the subspace spanned by eigenvectors with $|\lambda| < 1$.

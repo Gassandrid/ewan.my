@@ -1,4 +1,5 @@
 ---
+created_on: "[[10-04-2024]]"
 tags:
   - philosophy
   - seed
@@ -6,7 +7,6 @@ date: 2024-10-04
 updated: 2026-01-19T10:37:31-05:00
 title: Absurdism - how to party at the end of meaning
 ---
-
 Absurdism, founded by [[Albert Camus]], dictates that we should accept the absurd situation that we as humans are in, that being:
 
 > Humanity is doomed to seek purpose in a world that has none to offer

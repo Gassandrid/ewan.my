@@ -1,11 +1,11 @@
 ---
 title: Using More Tags and Atomic Notes
+created_on: "[[02-04-2025]]"
 date: 2025-02-04
 updated: 2025-02-06
 tags:
   - seed
 ---
-
 I have been watching videos on the **zettelkasten** method recently, and while I don't want to have that for my own notes, there are a few things I could take away from it.
 
 ---

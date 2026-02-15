@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-02-2025]]"
 class:
   - note
   - lectureNote
@@ -15,7 +16,6 @@ related:
 date: 2025-09-02
 updated: 2025-09-02
 ---
-
 *this note continues from the [[The Psych Science Process|the previous lecture]]* on how the scientific method in [[Intro to Psychological Science]].
 
 ---

@@ -1,4 +1,5 @@
 ---
+created_on: "[[09-03-2025]]"
 class:
   - note
   - lectureNote
@@ -14,7 +15,6 @@ author:
 date: 2025-09-03
 updated: 2025-09-03
 ---
-	
 *Why **jinn/djinn?** what do your think we gain by taking this as our content starting point? what can you imagine is the point?*
 
 ---
