@@ -2,12 +2,12 @@
 source: https://www.jahonline.org/article/S1054-139X%2816%2930765-0/fulltext
 created_on: "[[09-02-2025]]"
 author:
-- '[[Lisa L. Littman]]'
+  - '[[Lisa L. Littman]]'
 published: 2018-08-16
 class: paper
 related: null
 tags:
-- papers
+  - papers
 date: 2025-09-02
 updated: 2025-09-22
 status: none

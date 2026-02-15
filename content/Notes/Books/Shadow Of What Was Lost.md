@@ -1,15 +1,15 @@
 ---
-class:
 created_on: "[[01-19-2026]]"
-- book
+class:
+  - book
 tags:
-- books
+  - books
 source: null
 image: '[[ShadowWhatWasLost.png]]'
 author:
-- '[[James Islington]]'
+  - '[[James Islington]]'
 genre:
-- Fantasy
+  - Fantasy
 description: very deep worldbuilding, complex magic system, intricate plot with time
   manipulation, and well-developed characters.
 series: '[[The Licanius Trilogy]]'
@@ -17,5 +17,6 @@ progress: null
 status: done
 date: 2026-01-19 10:01:50-05:00
 updated: 2026-01-19 10:21:01-05:00
+
 ---
 ![[ShadowWhatWasLost.png]]

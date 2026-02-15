@@ -4,18 +4,18 @@ created_on: "[[03-29-2025]]"
 date: 2025-03-29
 updated: 2025-12-25
 tags:
-- comp-neuro
-- books
+  - comp-neuro
+  - books
 class:
-- book
-- note
+  - book
+  - note
 source: null
 image: '[[TheoNeuroTextbook.png]]'
 author:
-- '[[Peter Dayan]]'
-- '[[L. F. Abbott]]'
+  - '[[Peter Dayan]]'
+  - '[[L. F. Abbott]]'
 genre:
-- Educational Content
+  - Educational Content
 description: introductory modeling of neural phenomena, action potentials and dynamical
   systems
 progress: null
