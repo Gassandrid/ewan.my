@@ -41,9 +41,10 @@ pathways:
   - "[[BDNF]]"
 brain-regions: []
 processes: []
+date: 2026-02-18T14:08:44-05:00
+updated: 2026-02-18T15:58:42-05:00
 ---
-# Bromantane
 
-Bromantane (Ladasten) is an atypical dopaminergic that works by upregulating tyrosine hydroxylase — the rate-limiting enzyme in dopamine synthesis — rather than forcing release or blocking reuptake. This means it increases the capacity for dopamine production without directly hitting receptors or causing depletion. The effects are subtle: mild dopaminergic boost that primarily manifests as enhanced and smoother stimulant response with reduced anxiety when combined with psychostimulants. The key property is that benefits outlast a 28-day course significantly — the upregulation persists for weeks to months after stopping. The downside is increased punding/stereotypy when combined with stimulants: getting stuck on tasks or repetitive behaviors, which is manageable and sometimes useful for deep work but worth monitoring.
+Bromantane (Ladasten) is an atypical dopaminergic that works by upregulating tyrosine hydroxylase;  rate-limiting enzyme in dopamine synthesis , rather than forcing release or blocking reuptake. This means it increases the capacity for dopamine production without directly hitting receptors or causing depletion. The effects are subtle: mild dopaminergic boost that primarily manifests as enhanced and smoother stimulant response with reduced anxiety when combined with psychostimulants. The key property is that benefits outlast a 28-day course significantly; upregulation persists for weeks to months after stopping. The downside is increased punding/stereotypy when combined with stimulants: getting stuck on tasks or repetitive behaviors, which is manageable and sometimes useful for deep work but worth monitoring.
 
-**Dose**: 100mg daily for 28 days **Cycling**: 6–12 months between courses (benefits outlast the course, so long gaps are practical) **Stacks**: [[Lisdexamfetamine]], psychostimulants generally **Notes**: Punding with stimulants is the main side effect. Effects are subtle standalone but meaningful in combo.
+Punding with stimulants is the main side effect. Effects are subtle standalone but meaningful in combo.

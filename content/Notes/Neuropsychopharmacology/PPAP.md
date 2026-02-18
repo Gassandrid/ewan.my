@@ -40,9 +40,10 @@ pathways:
   - "[[norepinephrine]]"
 brain-regions: []
 processes: []
+date: 2026-02-18T14:37:04-05:00
+updated: 2026-02-18T15:55:12-05:00
 ---
-# (–)-PPAP
 
-PPAP is a catecholamine activity enhancer (CAE) — a mechanistically distinct class from conventional stimulants. Rather than forcing dopamine/norepinephrine release or blocking reuptake, it enhances the spontaneous activity of catecholaminergic neurons that are already firing. The result is context-dependent stimulation: it amplifies task-relevant catecholaminergic activity without forcing global arousal. No recreational value, no crash, no compulsive redosing — purely functional. Effects plateau and cap at around 40mg, so higher doses are wasted. Duration is 4–8 hours. Combined with [[Lisdexamfetamine]], punding/stereotypy increases noticeably — getting stuck on tasks or repetitive behaviors — which is manageable and sometimes useful for deep work.
+catecholamine activity enhancer (CAE), mechanistically distinct class from conventional stimulants. Rather than forcing dopamine/norepinephrine release or blocking reuptake, it enhances the spontaneous activity of catecholaminergic neurons that are already firing. The result is context-dependent stimulation: it amplifies task-relevant catecholaminergic activity without forcing global arousal. No recreational value, no crash, no compulsive redosing, just pure function. Effects plateau and cap at around 40mg, so higher doses are wasted. Duration is 4–8 hours. Combined with [[Lisdexamfetamine]], punding/stereotypy increases noticeably; getting stuck on tasks or repetitive behaviors, which is manageable and sometimes useful for deep work.
 
-**Dose**: 20mg as-needed (effects plateau at 40mg) **Cycling**: As-needed only — no daily dosing required **Stacks**: [[Lisdexamfetamine]] (monitor for increased punding), [[BPAP]], [[Selegiline]] **Notes**: Context-dependent stimulant. No recreational value. Effects cap at 40mg.
+Context-dependent stimulant. No recreational value. Effects cap at 40mg.
