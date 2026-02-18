@@ -122,4 +122,4 @@ This is my [[Digital Garden]], a living knowledge base where I organize thoughts
 
 ---
 
-[[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canontt|Inspirations]]
+[[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canon|Inspirations]]

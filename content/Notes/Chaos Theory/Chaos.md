@@ -14,8 +14,9 @@ author:
 description:
 aliases:
 date: 2026-02-12T10:09:10-05:00
-updated: 2026-02-12T10:58:34-05:00
+updated: 2026-02-17T10:54:30-05:00
 ---
+
 We finally will define what it means for a system to be *chaotic*.
 
 **Typical behavior:** 
@@ -105,7 +106,7 @@ h<0, 0<L<1 &\Rightarrow \text{shrinking}
 \end{align*}
 $$
 
-Let $f$ be a smooth map on $\mathbb{R}$. An orbit $\{ x_{1},x_{2},\dots,x_{n} \}$ is called *asymptotically periodic*(A.P.) if it converges to a periodic orbit as $n\to \infty$. 
+Let $f$ be a smooth map on $\mathbb{R}$. An orbit $\{ x_{1},x_{2},\dots,x_{n} \}$ is called *[[asymptotically periodic]]*(A.P.) if it converges to a periodic orbit as $n\to \infty$. 
 
 In other words, there exists a periodic orbit given by $\{ y_{1},y_{2},\dots,y_{k}, y_{1},y_{2},\dots y_{k}\dots \}$  such that:
 
@@ -113,7 +114,7 @@ $$
 \lim_{ n \to \infty } |x_{n} - y_{n}| = 0
 $$
 
-orbits that are eventually periodic (E.P.) will also be *asymptotically periodic*.
+orbits that are [[eventually periodic]] (E.P.) will also be *[[asymptotically periodic]]*.
 
 ---
 
@@ -122,5 +123,26 @@ orbits that are eventually periodic (E.P.) will also be *asymptotically periodic
 Let $f$ be a smooth map on $\mathbb{R}$ and let $\{ x_{1},x_{2},\dots \}$ be an orbit of $f$. The orbit is **chaotic** if:
 
 1. the orbit must be bounded ( not in basin of $\infty$ )
-2. the orbit must not *asymptotically periodic*
+2. the orbit must not *[[asymptotically periodic]]*
 3. the [[Lyapunov Exponents|Lyapunov Exponent]] $h(x_{1})>0$
+
+>[!Example]
+> Consider the map
+>
+> $$
+> f(x) = (x+q) (\mod 1) \quad \text{where  } q \in (0,1) \text{ is irrational}
+> $$
+
+> [!Info] Desmos
+> <iframe src="https://www.desmos.com/calculator/rkda9auwgz" width=600 height="400" ></iframe>
+
+**Chaotic Orbits?**
+
+1. $f$ has **no** [[Periodic Orbit Stability|periodic orbits]]. - YES
+2. no periodic orbits to BE approaching - YES
+3. $h>0$? - NO
+	- because $h=0$ everywhere
+
+If $q$ were rational, then rational [[Sensitive Dependence on Initial Conditions|Initial Conditions]] would be [[Eventually Periodic]], and irrationals would bounce around forever, never repeating, but also never separating from the neighbors. 
+
+A bounded orbit that is not [[Asymptotically Periodic]] and does not exhibit [[Sensitive Dependence on Initial Conditions|SDIC]] is [[Quasi Periodic]]

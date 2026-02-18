@@ -32,7 +32,7 @@ f\left( \frac{3}{4} \right) &= \frac{9}{4} (mod\ 1 = \frac{1}{4} \\
 \end{align*}
 $$
 
-This is a period 2 [[Repelling fixed point|source]], because $f'=3$. $\frac{1}{3}$ is eventually periodic to source at 0.
+This is a period 2 [[Repelling fixed point|source]], because $f'=3$. $\frac{1}{3}$ is [[eventually periodic]] to source at 0.
 
 $$
 (f^{2})^{1}(p_{1} \ or \ p_{2})

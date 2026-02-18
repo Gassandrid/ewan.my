@@ -15,7 +15,7 @@ author:
 description:
 aliases:
 date: 2026-02-12T08:32:11-05:00
-updated: 2026-02-12T09:26:59-05:00
+updated: 2026-02-17T09:14:43-05:00
 ---
 **What would you classify the following objects under?**
 
@@ -87,7 +87,7 @@ Agent has now been modified for the task of self/nonself discimination. Agent is
 ### Fitness Function
 
 $$
-\sum_{i=1}^{NumTrials} p_{i} \frac{1}{NumTrials}
+\frac{1}{NumTrials} \sum_{i=1}^{NumTrials} p_{i} 
 $$
 
 where:
@@ -110,3 +110,42 @@ Also plotted is arm trajectories over time of the best self/nonself discriminati
 
 ---
 
+## Selective Attention
+
+We change the goal yet again. The agent now has to *select* which target to focus on, as there are now two ones coming at once. It still has to catch both, but it has to *select* which one to catch first.
+
+![[twoObjectsCognition.png]]
+
+*Experimental setup for selective attention experiments. The agent can move horizontally while 2 objects fall from above. the initial positions and velocities of the two objects are constrained so that the agent as a reasonable chance of catching both.*
+
+### Fitness Function
+
+$$
+200 - \left( \frac{1}{NumTrials} \sum_{i=1}^{NumTrials} p_{i} \right)
+$$
+
+**where:**
+
+- $p_i= |d_{i,1}|+|d_{i,2}|$
+- $d_{i,j}$ is the horizontal distance between objects $j$'s final positions and agents final position.
+
+**PO**: passing objects' problem
+**OP**: object permanence problem
+
+### Arising Problems
+
+Behavior of the best selective attention agent. Example motion plots are shown for different combinations of passing objects (PO) and object permanence (OP).
+
+![[POvsOP.png]]
+
+---
+
+## A short Segment on [[Gradient Descent]]
+
+Beyond actual evolutionary algorithms to train our robots, we also have the option of [[Gradient Descent]] to tune our parameters.
+
+We seek to calculate a **behavioral loss**, a function which calculates the amount of error in prediction vs actual. We then use Chain rule to calculate the derivative at that point in the loss function, such that [[Gradient Descent]] can take a step in the direction of loss minimization. This is the **forward pass**.
+
+**Backward pass** is when we actually tune the neurons with our new information.
+
+In the robotics perspective, remember that weights are not purely for modifying the neuronal weights of the robot, but also to alter parts of the body itself. Perhaps we can tune the *mass* of the front leg, as this could also be to blame for a nonzero loss.

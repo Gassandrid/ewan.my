@@ -10,11 +10,12 @@ tags:
 ---
 Gradient Descent is an optimization algorithm used to minimize the cost function by iteratively adjusting the model's parameters.
 
+In [[Evolutionary Robotics]], we introduce the concept of [[Gradient Descent]] to 
+
 ---
 
 ![[gradDescent.png]]
 
-## Intuition Behind Gradient Descent
 
 When training a model, the goal is to minimize the **cost function** (or **loss function**), which measures how far off the model's predictions are from the actual target values. Gradient Descent finds the direction and step size to adjust the parameters to reduce this loss.
 
