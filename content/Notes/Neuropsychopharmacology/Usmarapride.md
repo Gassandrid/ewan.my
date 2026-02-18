@@ -1,12 +1,13 @@
 ---
 aliases: []
 created_on: "[[02-17-2026]]"
+image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=71508291&t=l
 date: 2026-02-17
 updated: 2026-02-17
 class:
   - medication
 category: cognitive
-med-type: 5-HT4 partial agonist
+type: 5-HT4 partial agonist
 currently-taking: false
 status: interested
 dosage: 10
@@ -32,6 +33,17 @@ related: []
 stacks-well-with:
   - "[[ACD-856]]"
   - "[[Tropisetron]]"
+targets:
+  - "[[5-HT4 receptor]]"
+pathways:
+  - "[[cAMP]]"
+  - "[[BDNF]]"
+  - "[[serotonin]]"
+brain-regions:
+  - "[[hippocampus]]"
+processes:
+  - "[[LTP]]"
+  - "[[neurogenesis]]"
 ---
 
 CNS-selective [[5-HT4 receptor|5-HT4]] partial agonist, designed as a brain-penetrant successor to Prucalopride. Prucalopride was validated in healthy people across three independent tasks: RAVLT (verbal recall), PILT (probabilistic learning), and emotional memory recognition, all showing significant improvement [@murphyRole5HT4Receptors2020]. The problem was diarrhea from peripheral cAMP activity. Usmarapride fixes this with selective CNS penetration.

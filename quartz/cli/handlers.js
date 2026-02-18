@@ -431,6 +431,13 @@ export async function handleBuild(argv) {
         if (fs.existsSync(path.posix.join(argv.output, base))) {
           return redirect(fp.slice(0, -1))
         }
+
+        // does /trailing.ext.html exist? (e.g. /foo.base/ -> /foo.base)
+        const trailingExtBase = fp.slice(0, -1) + ".html"
+        const trailingSlug = fp.slice(0, -1)
+        if (path.extname(trailingSlug) !== "" && path.extname(trailingSlug) !== ".html" && fs.existsSync(path.posix.join(argv.output, trailingExtBase))) {
+          return redirect(trailingSlug)
+        }
       } else {
         // /regular
         // does /regular.html exist? if so, serve it
@@ -438,9 +445,26 @@ export async function handleBuild(argv) {
         if (path.extname(base) === "") {
           base += ".html"
         }
-        if (fs.existsSync(path.posix.join(argv.output, base))) {
+        const baseFull = path.posix.join(argv.output, base)
+        if (fs.existsSync(baseFull) && fs.statSync(baseFull).isFile()) {
           req.url = fp
           return serve()
+        }
+
+        // does /regular.ext.html exist? (e.g. /foo.base -> /foo.base.html)
+        // serve directly to avoid serve-handler stripping the .html and creating a redirect loop
+        if (path.extname(fp) !== "" && path.extname(fp) !== ".html") {
+          const extBase = fp + ".html"
+          const extBaseFull = path.posix.join(argv.output, extBase)
+          if (fs.existsSync(extBaseFull) && fs.statSync(extBaseFull).isFile()) {
+            const release = await buildMutex.acquire()
+            const content = fs.readFileSync(extBaseFull)
+            res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" })
+            res.end(content)
+            const statusString = styleText("green", `[200]`)
+            console.log(statusString + styleText("grey", ` ${argv.baseDir}${fp}`))
+            return release()
+          }
         }
 
         // does /regular/index.html exist? if so, redirect to /regular/

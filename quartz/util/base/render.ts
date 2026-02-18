@@ -922,7 +922,11 @@ function buildCalendar(
   return h('div.base-calendar-container', groupElements)
 }
 
-function resolveCardImageUrl(imageValue: unknown, currentSlug: FullSlug): string | undefined {
+function resolveCardImageUrl(
+  imageValue: unknown,
+  currentSlug: FullSlug,
+  _allFiles: QuartzPluginData[],
+): string | undefined {
   const source =
     typeof imageValue === 'string'
       ? imageValue
@@ -937,6 +941,11 @@ function resolveCardImageUrl(imageValue: unknown, currentSlug: FullSlug): string
 
   const toRelativeFromSlug = (target: string): string => {
     if (isAbsoluteURL(target)) return target
+    // bare filename with no path separators → assume Attachments/ folder
+    if (!target.includes('/') && !target.includes('\\')) {
+      const imgSlug = slugifyFilePath(('Attachments/' + target) as FilePath)
+      return resolveRelative(currentSlug, imgSlug)
+    }
     const imgSlug = slugifyFilePath(target as FilePath)
     return resolveRelative(currentSlug, imgSlug)
   }
@@ -945,8 +954,7 @@ function resolveCardImageUrl(imageValue: unknown, currentSlug: FullSlug): string
   if (wl) {
     const inner = wl[1]
     const { target } = splitTargetAndAlias(inner)
-    const { slug } = normalizeTargetSlug(target, currentSlug)
-    return resolveRelative(currentSlug, slug)
+    return toRelativeFromSlug(target)
   }
 
   return toRelativeFromSlug(trimmed)
@@ -969,7 +977,7 @@ function buildCards(
     const href = resolveRelative(currentSlug, slug)
 
     const imageValue = resolveValueWithFormulas(file, imageField, getContext, getPropertyExpr)
-    const imageUrl = resolveCardImageUrl(imageValue, currentSlug)
+    const imageUrl = resolveCardImageUrl(imageValue, currentSlug, allFiles as QuartzPluginData[])
 
     const metadataItems: RenderElement[] = []
     const order = Array.isArray(view.order) ? view.order : []
@@ -1007,6 +1015,7 @@ function buildCards(
             style: {
               'background-image': `url(${imageUrl})`,
               'background-size': 'cover',
+              'background-position': 'center',
               top: '0px',
               'inset-inline': '0px',
             },

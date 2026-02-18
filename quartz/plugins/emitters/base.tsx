@@ -40,7 +40,7 @@ async function* emitBaseViewsForFile(
     }
 
     const cfg = ctx.cfg.configuration
-    const externalResources = pageResources(pathToRoot(slug), resources, ctx)
+    const externalResources = pageResources(pathToRoot(slug), resources)
     const componentData: QuartzComponentProps = {
       ctx,
       fileData,
@@ -51,7 +51,7 @@ async function* emitBaseViewsForFile(
       allFiles,
     }
 
-    const content = renderPage(ctx, slug, componentData, layout, externalResources, false)
+    const content = renderPage(cfg, slug, componentData, layout, externalResources)
     yield write({ ctx, content, slug, ext: ".html" })
   }
 }

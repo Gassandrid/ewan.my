@@ -1,0 +1,20 @@
+views:
+  - type: cards
+    name: Table
+    filters:
+      and:
+        - class == ["medication"]
+        - category.contains("cognitive")
+    order:
+      - file.name
+      - type
+      - targets
+      - pathways
+      - processes
+      - brain-regions
+      - benefits
+      - stacks-well-with
+    sort:
+      - property: image
+        direction: ASC
+    image: note.image

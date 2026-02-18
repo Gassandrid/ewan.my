@@ -1,11 +1,12 @@
 ---
 created_on: "[[02-01-2026]]"
+image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=656665&t=l
 aliases:
   - Navoban
 class:
   - medication
 category: cognitive
-med-type: α7 nAChR agonist
+type: α7 nAChR agonist
 currently-taking: true
 status: taking
 dosage: 10
@@ -30,6 +31,20 @@ tags:
 related: []
 stacks-well-with:
   - Nicotine (enhances and prolongs effects)
+targets:
+  - "[[α7 nAChR]]"
+  - "[[5-HT3 receptor]]"
+  - "[[SIRT1]]"
+pathways:
+  - "[[acetylcholine]]"
+  - "[[cAMP]]"
+  - "[[serotonin]]"
+brain-regions:
+  - "[[prefrontal cortex]]"
+  - "[[hippocampus]]"
+processes:
+  - "[[LTP]]"
+  - "[[neurogenesis]]"
 ---
 
 Dual [[5-HT3 receptor|5-HT3]] antagonist and [[α7 nAChR]] partial agonist. Nicotine's addiction and dopaminergic drive come from its [[α4β2 nAChR|α4β2]] bias, so a selective α7 partial agonist sidesteps that entirely. GTS-21 validated the α7 mechanism in healthy men: working memory, episodic memory, and sustained attention all improved [@kitagawaSafetyPharmacokineticsEffects2003; @vanhaarenGTS21MixedNicotinic1999]. Tropisetron replicates and extends these effects in primates and schizophrenic patients [@callahanTropisetronSensitizesA72017; @xiaOnedayTropisetronTreatment2020].
