@@ -75,6 +75,32 @@ export function extractWikilinks(text: string): WikilinkData[] {
   return links
 }
 
+export interface WikilinkRange {
+  wikilink: WikilinkData
+  start: number
+  end: number
+}
+
+export function extractWikilinksWithPositions(text: string): WikilinkRange[] {
+  if (!text || !text.includes("[[")) {
+    return []
+  }
+
+  const ranges: WikilinkRange[] = []
+  const regex = createWikilinkRegex()
+  let match: RegExpExecArray | null
+
+  while ((match = regex.exec(text)) !== null) {
+    const parsed = parseWikilink(match[0])
+    if (parsed) {
+      ranges.push({ wikilink: parsed, start: match.index, end: match.index + match[0].length })
+    }
+  }
+
+  ranges.sort((a, b) => a.start - b.start)
+  return ranges
+}
+
 export interface ResolvedWikilinkTarget {
   slug: FullSlug
   anchor?: string
