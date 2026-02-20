@@ -863,3 +863,60 @@ html.reading-mode .sidebar.reading-mode-active .toc-clone {
   background-color: color-mix(in srgb, var(--light) 60%, transparent);
   border-radius: 8px;
 }
+
+// TikZ figures
+figure.tikz {
+  margin: 2rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+
+  @media all and (max-width: 600px) {
+    margin: 0;
+
+    & > svg {
+      transform: scale(0.7);
+    }
+  }
+
+  & > figcaption {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray);
+  }
+
+  & > .tikz-mathml {
+    display: none;
+  }
+
+  .source-code-button {
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    float: right;
+
+    .source-icon {
+      display: inline;
+    }
+
+    .check-icon {
+      display: none;
+    }
+
+    &.check {
+      .source-icon {
+        display: none;
+      }
+
+      .check-icon {
+        display: inline;
+      }
+    }
+  }
+}

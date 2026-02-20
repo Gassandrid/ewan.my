@@ -93,6 +93,7 @@ const config: QuartzConfig = {
       Plugin.Sidenotes(),
       Plugin.RunPythonPlugin(),
       Plugin.NotebookEmbedding(),
+      Plugin.TikzJax({ showConsole: false }),
       // Staticrypt(),
       // Plugin.RunRPlugin(),
 
