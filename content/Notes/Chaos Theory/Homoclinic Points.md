@@ -1,7 +1,7 @@
 ---
 date: 2026-02-10T10:11:58-05:00
 created_on: "[[02-10-2026]]"
-updated: 2026-02-12T10:55:53-05:00
+updated: 2026-02-20T10:05:28-05:00
 class:
   - note
   - lecture
@@ -16,6 +16,7 @@ author:
 description:
 aliases:
 ---
+
 > **Homoclinic Points** are points of intersection between the stable and unstable manifolds of a hyperbolic fixed point (or periodic orbit) in a dynamical system.
 
 Consider the [[Linearization and the Jacobian|Non Linear Map]] of the equation:
@@ -103,3 +104,33 @@ $$
 $$
 
 ![[greatestFuckingIllustrationOAT.png]]
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[scale=1.3, >=Stealth]
+  \draw[->, thin] (-1.5,0) -- (3,0) node[right, font=\small] {$x$};
+  \draw[->, thin] (0,-1) -- (0,2.6) node[above, font=\small] {$y$};
+
+  % Unit circle N (before map)
+  \draw[blue!70, thick, dashed] (0,0) circle (1cm);
+  \node[blue!70, font=\small] at (-0.75, 0.65) {$N$};
+
+  % Ellipse AN: semi-major s1 ~ 2.07 along u1 (angle 75 deg), semi-minor s2 ~ 0.48
+  \begin{scope}[rotate=75]
+    \draw[red!70, thick] (0,0) ellipse (2.07cm and 0.48cm);
+  \end{scope}
+  \node[red!70, font=\small] at (1.1, 2.15) {$AN$};
+
+  % Semi-axis s1*u1 = 2.07*(0.26, 0.97) ~ (0.54, 2.01)
+  \draw[->, orange!80!black, very thick] (0,0) -- (0.538, 2.008)
+    node[right, font=\footnotesize] {$s_1\hat{u}_1 \approx 2.07$};
+  % Semi-axis s2*u2 = 0.48*(-0.97, 0.26) ~ (-0.47, 0.12)
+  \draw[->, purple!70!black, very thick] (0,0) -- (-0.466, 0.125)
+    node[above left, font=\footnotesize] {$s_2\hat{u}_2 \approx 0.48$};
+
+  \filldraw (0,0) circle (1.5pt);
+\end{tikzpicture}
+\end{document}
+```

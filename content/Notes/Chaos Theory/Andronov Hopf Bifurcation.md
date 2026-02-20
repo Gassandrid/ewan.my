@@ -82,6 +82,50 @@ where $y=(y1,y2)T∈R2, β∈R ,$ and $σ=sign l1(0)=±1 .$
 - If $\sigma=-1\ ,$ the [normal form](http://www.scholarpedia.org/article/Normal_Forms "Normal Forms") has an equilibrium at the origin, which is asymptotically stable for $β≤0$ (weakly at $β=0$ ) and unstable for $β>0 .$ Moreover, there is a unique and stable circular limit cycle that exists for $β>0$ and has radius $β√ .$ This is a **supercritical** Andronov-Hopf bifurcation (see Figure [1](http://www.scholarpedia.org/article/#fig:SuperHopf.gif)).
 - If $\sigma=+1\ ,$ the origin in the normal form is asymptotically stable for $β<0$ and unstable for $β≥0$ (weakly at $β=0$ ), while a unique and unstable limit cycle exists for $β<0 .$ This is a **subcritical** Andronov-Hopf bifurcation (see Figure [2](http://www.scholarpedia.org/article/#fig:SubHopf.gif)).
 
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[scale=1.2, >=Stealth, thick]
+
+%% Supercritical (sigma = -1)
+\begin{scope}[xshift=0cm]
+  \node[font=\bfseries\small] at (0, 3.1) {Supercritical $(\sigma=-1)$};
+  \draw[->] (-2.3,0) -- (2.6,0) node[right, font=\small] {$\beta$};
+  \draw[->] (0,-0.3) -- (0,2.9) node[above, font=\small] {amplitude};
+  \node[font=\footnotesize] at (-0.2,-0.22) {$0$};
+  % Stable equilibrium beta < 0
+  \draw[blue!80, very thick] (-2.1,0) -- (0,0);
+  % Unstable equilibrium beta > 0
+  \draw[blue!80, very thick, dashed] (0,0) -- (2.2,0);
+  % Stable limit cycle amplitude sqrt(beta)
+  \draw[green!60!black, very thick] plot[domain=0:2.2,samples=60](\x,{sqrt(\x)});
+  \node[blue!80, font=\footnotesize] at (-1.1, 0.22) {stable};
+  \node[blue!80, font=\footnotesize] at (1.1, -0.22) {unstable};
+  \node[green!60!black, font=\footnotesize] at (1.85, 1.72) {stable LC};
+\end{scope}
+
+%% Subcritical (sigma = +1)
+\begin{scope}[xshift=6.5cm]
+  \node[font=\bfseries\small] at (0, 3.1) {Subcritical $(\sigma=+1)$};
+  \draw[->] (-2.3,0) -- (2.6,0) node[right, font=\small] {$\beta$};
+  \draw[->] (0,-0.3) -- (0,2.9) node[above, font=\small] {amplitude};
+  \node[font=\footnotesize] at (-0.2,-0.22) {$0$};
+  % Stable equilibrium beta < 0
+  \draw[blue!80, very thick] (-2.1,0) -- (0,0);
+  % Unstable equilibrium beta >= 0
+  \draw[blue!80, very thick, dashed] (0,0) -- (2.2,0);
+  % Unstable limit cycle amplitude sqrt(-beta), beta < 0
+  \draw[orange!80!black, very thick, dashed] plot[domain=-2.2:0,samples=60](\x,{sqrt(-\x)});
+  \node[blue!80, font=\footnotesize] at (-1.1, 0.22) {stable};
+  \node[blue!80, font=\footnotesize] at (1.1, -0.22) {unstable};
+  \node[orange!80!black, font=\footnotesize] at (-1.7, 1.72) {unstable LC};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
+```
+
 ## Multi-dimensional Case
 
 In the $n$ -dimensional case with $n≥3 ,$ the Jacobian matrix $A0=A(0)$ has

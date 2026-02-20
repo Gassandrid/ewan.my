@@ -22,7 +22,7 @@ $$
 f^{N+k}(x_1) = f^N(x_1)
 $$
 
-Every EP orbit is also [[Asymptotically Periodic]] — landing on the cycle is a stronger condition than converging to it. Not every AP orbit is EP.
+Every EP orbit is also [[Asymptotically Periodic]], landing on the cycle is a stronger condition than converging to it. Not every AP orbit is EP.
 
 ---
 

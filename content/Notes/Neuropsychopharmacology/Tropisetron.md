@@ -45,6 +45,8 @@ brain-regions:
 processes:
   - "[[LTP]]"
   - "[[neurogenesis]]"
+date: 2026-02-18T14:08:50-05:00
+updated: 2026-02-19T21:30:49-05:00
 ---
 
 Dual [[5-HT3 receptor|5-HT3]] antagonist and [[α7 nAChR]] partial agonist. Nicotine's addiction and dopaminergic drive come from its [[α4β2 nAChR|α4β2]] bias, so a selective α7 partial agonist sidesteps that entirely. GTS-21 validated the α7 mechanism in healthy men: working memory, episodic memory, and sustained attention all improved [@kitagawaSafetyPharmacokineticsEffects2003; @vanhaarenGTS21MixedNicotinic1999]. Tropisetron replicates and extends these effects in primates and schizophrenic patients [@callahanTropisetronSensitizesA72017; @xiaOnedayTropisetronTreatment2020].
@@ -58,6 +60,9 @@ On top of that, tropisetron activates [[SIRT1]] [@mirshafaTropisetronProtectsBra
 The constipation is the main limiting factor. 5-HT3 blockade in the gut tanks motility [@leeTropisetronReviewIts1993], and it's dose-dependent and cumulative. Intranasal administration dramatically cuts GI exposure while preserving CNS effects, since you're bypassing first-pass gut exposure entirely. Oral is current; IN is the preferred route when available. Slow-release magnesium malate manages motility better than high-dose choline. Half-life is around 6 hours but functional effects outlast that. Effective range is 5-10mg.
 
 **Dose**: 10mg oral (IN preferred: lower GI burden, same CNS effect)
+
 **Cycling**: as-tolerated, on until constipation becomes limiting, off to recover
+
 **Stacks**: Nicotine (α7 synergy, extends and enhances [@callahanTropisetronSensitizesA72017]), ALCAR (cholinergic tone, enhances memory effects), caffeine/PDE inhibitors ([[cAMP]] potentiates antidepressant effects), [[Usmarapride]] (5-HT3 antagonist + 5-HT4 agonist pairing for GI management)
+
 **Notes**: Constipation is severe and dose-limiting. Slow-release magnesium malate for motility. Switch to IN route when feasible. Bupropion is α7-selective nAChR antagonist [@slemmerBupropionNicotinicAntagonist2000], avoid combining.

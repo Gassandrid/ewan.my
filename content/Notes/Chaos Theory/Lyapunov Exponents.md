@@ -18,6 +18,8 @@ Lyapunov exponents $(\lambda)$ quantify the exponential rate of separation of in
 
 ---
 
+## Lyapunov Number
+
  Let $f$ be a continuous map on $\mathbb{R}$. The **Lyapunov number** $L(x_{1})$ of the orbit $\{ x_{1},x_{2},\dots \}$ is defined as:
 
  $$

@@ -11,8 +11,9 @@ class:
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 date: 2026-02-05T10:09:33-05:00
 lecture-number: 8
-updated: 2026-02-08T10:29:45-05:00
+updated: 2026-02-20T10:08:09-05:00
 ---
+
 Continuing from [[Linearization and the Jacobian|last lecture:]]
 
 What about stability of period $k$ points in $\mathbb{R}^{2}$?
@@ -54,6 +55,43 @@ $$
 > ![[Screenshot 2026-02-05 at 10.21.11 AM.png]]
 >
 > Points on the y-axis see origin as a [[Attracting fixed point|sink]]. But we know it is a saddle. $\lambda_{1}=2, \lambda_{2}=\frac{1}{2}, \vec{v}_{1}=\begin{bmatrix}1 \\ 0\end{bmatrix},\vec{v}_{2}=\begin{bmatrix}0 \\ 1\end{bmatrix}$
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[scale=1.4, >=Stealth]
+  \draw[->, thin, gray] (-2.5,0) -- (2.5,0) node[right, black] {$x$};
+  \draw[->, thin, gray] (0,-2.5) -- (0,2.5) node[above, black] {$y$};
+
+  % Unstable manifold: x-axis (red), lambda_1 = 2
+  \draw[red, very thick] (-2.4,0) -- (2.4,0);
+  \draw[->, red, very thick] (0.3,0) -- (1.4,0);
+  \draw[->, red, very thick] (-0.3,0) -- (-1.4,0);
+  \node[red] at (2.1, 0.3) {$U(\mathbf{p})$};
+  \node[red] at (2.1, -0.3) {$\lambda_1=2$};
+
+  % Stable manifold: y-axis (blue), lambda_2 = 1/2
+  \draw[blue, very thick] (0,-2.4) -- (0,2.4);
+  \draw[->, blue, very thick] (0, 2.0) -- (0, 1.1);
+  \draw[->, blue, very thick] (0, -2.0) -- (0, -1.1);
+  \node[blue, right] at (0.1, 2.15) {$S(\mathbf{p})$};
+  \node[blue, right] at (0.1, 1.75) {$\lambda_2=1/2$};
+
+  % Hyperbolic orbits: explicit domains per quadrant
+  \draw[gray, thin] plot[domain=0.22:2.3, samples=40] (\x, {0.5/\x});
+  \draw[gray, thin] plot[domain=-2.3:-0.22, samples=40] (\x, {0.5/\x});
+  \draw[gray, thin] plot[domain=0.22:2.3, samples=40] (\x, {-0.5/\x});
+  \draw[gray, thin] plot[domain=-2.3:-0.22, samples=40] (\x, {-0.5/\x});
+  \draw[gray, thin] plot[domain=0.52:2.3, samples=40] (\x, {1.2/\x});
+  \draw[gray, thin] plot[domain=-2.3:-0.52, samples=40] (\x, {1.2/\x});
+  \draw[gray, thin] plot[domain=0.52:2.3, samples=40] (\x, {-1.2/\x});
+  \draw[gray, thin] plot[domain=-2.3:-0.52, samples=40] (\x, {-1.2/\x});
+
+  \filldraw[black] (0,0) circle (1.8pt) node[below right] {$\mathbf{p}$};
+\end{tikzpicture}
+\end{document}
+```
 
 The **y-axis** is a [[Stable Manifold]]
 

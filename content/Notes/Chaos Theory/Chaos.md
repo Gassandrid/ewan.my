@@ -136,6 +136,10 @@ Let $f$ be a smooth map on $\mathbb{R}$ and let $\{ x_{1},x_{2},\dots \}$ be an 
 > [!Info] Desmos
 > <iframe src="https://www.desmos.com/calculator/rkda9auwgz" width=600 height="400" ></iframe>
 
+> [!Quote] Transcription
+> this ia test  
+
+
 **Chaotic Orbits?**
 
 1. $f$ has **no** [[Periodic Orbit Stability|periodic orbits]]. - YES

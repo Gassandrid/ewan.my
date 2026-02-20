@@ -14,8 +14,9 @@ author:
 description: henon map in the context of sinks, sources, and saddles, where the fixed point is at the origin.
 aliases:
 date: 2026-01-29T10:26:19-05:00
-updated: 2026-01-29T11:19:26-05:00
+updated: 2026-02-20T10:03:25-05:00
 ---
+
 ## Sink at Origin (Stable Fixed Point)
 
 > ![[sinkAtOriginHenon.png]]
@@ -39,6 +40,59 @@ At a source, both eigenvalues have absolute value greater than 1. Trajectories f
 > _A neighborhood N experiences both contraction and expansion. The red region shows the stable manifold (attracting direction), while the green lobes of f(N) show the unstable manifold (repelling direction). The image stretches along one axis while contracting along another._
 
 At a saddle point, one eigenvalue has $|\lambda_1| < 1$ (stable direction) and the other has $|\lambda_2| > 1$ (unstable direction). This is the most common and important case for the Henon map in its chaotic regime. The stable manifold (red) represents the set of points that approach the fixed point under forward iteration, while the unstable manifold (green lobes) represents points that approached the fixed point under backward iteration. The characteristic saddle topology - stretching in one direction, contracting in another - is fundamental to the horseshoe dynamics and chaotic behavior of the Henon map.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Stealth, scale=0.9]
+
+%% Sink
+\begin{scope}[xshift=0cm]
+  \node[font=\bfseries\small] at (0, 2.5) {Sink};
+  \node[font=\footnotesize] at (0, 2.1) {$|\lambda_1|,|\lambda_2|<1$};
+  \draw[->,thin,gray] (-2,0)--(2,0);
+  \draw[->,thin,gray] (0,-2)--(0,2);
+  \foreach \a in {0,45,90,135,180,225,270,315} {
+    \draw[->,thick] ({1.5*cos(\a)},{1.5*sin(\a)}) -- ({0.7*cos(\a)},{0.7*sin(\a)});
+  }
+  \filldraw (0,0) circle (2pt);
+\end{scope}
+
+%% Source
+\begin{scope}[xshift=5.5cm]
+  \node[font=\bfseries\small] at (0, 2.5) {Source};
+  \node[font=\footnotesize] at (0, 2.1) {$|\lambda_1|,|\lambda_2|>1$};
+  \draw[->,thin,gray] (-2,0)--(2,0);
+  \draw[->,thin,gray] (0,-2)--(0,2);
+  \foreach \a in {0,45,90,135,180,225,270,315} {
+    \draw[->,thick] ({0.5*cos(\a)},{0.5*sin(\a)}) -- ({1.3*cos(\a)},{1.3*sin(\a)});
+  }
+  \filldraw (0,0) circle (2pt);
+\end{scope}
+
+%% Saddle
+\begin{scope}[xshift=11cm]
+  \node[font=\bfseries\small] at (0, 2.5) {Saddle};
+  \node[font=\footnotesize] at (0, 2.1) {$|\lambda_s|<1<|\lambda_u|$};
+  \draw[->,thin,gray] (-2,0)--(2,0);
+  \draw[->,thin,gray] (0,-2)--(0,2);
+  \draw[blue!70, very thick] (0,-1.8)--(0,1.8);
+  \draw[->,blue!70,thick] (0,1.6)--(0,0.8);
+  \draw[->,blue!70,thick] (0,-1.6)--(0,-0.8);
+  \draw[red!70, very thick] (-1.8,0)--(1.8,0);
+  \draw[->,red!70,thick] (0.4,0)--(1.2,0);
+  \draw[->,red!70,thick] (-0.4,0)--(-1.2,0);
+  \draw[gray!60,thin] plot[domain=0.28:1.8,samples=30](\x,{0.5/\x});
+  \draw[gray!60,thin] plot[domain=0.28:1.8,samples=30](-\x,{0.5/\x});
+  \draw[gray!60,thin] plot[domain=0.28:1.8,samples=30](\x,{-0.5/\x});
+  \draw[gray!60,thin] plot[domain=0.28:1.8,samples=30](-\x,{-0.5/\x});
+  \filldraw (0,0) circle (2pt);
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
+```
 
 ---
 
