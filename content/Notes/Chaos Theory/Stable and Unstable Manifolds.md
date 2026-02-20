@@ -11,7 +11,7 @@ class:
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 date: 2026-02-05T10:09:33-05:00
 lecture-number: 8
-updated: 2026-02-20T10:08:09-05:00
+updated: 2026-02-20T10:12:54-05:00
 ---
 
 Continuing from [[Linearization and the Jacobian|last lecture:]]
@@ -109,7 +109,7 @@ $$
 f^{-1}(x,y) = (y, 2x)
 $$
 
-Let $\vec{f}$ be a smooth 1-1 map on $\mathbb{R}^{2}$ and let $\vec{p}$ be a [[Saddle fixed point]] (or periodic saddle point).
+Let $\vec{f}$ be a smooth 1-1 map on $\mathbb{R}^{2}$ and let $\vec{p}$ be a [[Saddle fixed point]] (or periodic saddle point)...
 
 > [!Abstract] Definition
 >
