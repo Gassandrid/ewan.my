@@ -7,10 +7,11 @@ tags:
 date: 2025-04-29
 class:
   - transcript
-updated: 2026-01-17T07:58:23-05:00
+updated: 2026-03-04T12:08:41-05:00
 source:
   - "[[Markov Chains Clearly Explained! Part - 1]]"
 ---
+
 Markov chains are used for everything - statistics, biology, and machine learning of course. They allow for some very interesting probability theory.
 
 Let's start with an example.

@@ -8,7 +8,7 @@ class:
 category: cognitive
 type: dopaminergic
 currently-taking: false
-status: interested
+status: ordered
 dosage: 100
 dosage-unit: mg
 route-of-administration: PO (oral)

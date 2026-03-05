@@ -1,30 +1,59 @@
 ---
-id: Amygdala
+aliases: []
 created_on: "[[04-14-2025]]"
-aliases:
+class: brain-region
+type: limbic
+upstream:
+  - "[[Thalamus]]"
+  - "[[Temporal Lobe]]"
+  - "[[Hippocampus]]"
+  - "[[Prefrontal Cortex]]"
+downstream:
+  - "[[Hypothalamus]]"
+  - "[[Brainstem]]"
+  - "[[Prefrontal Cortex]]"
+  - "[[Basal Ganglia]]"
+inhibitors:
+  - "[[Prefrontal Cortex]]"
+activators:
+  - "[[Thalamus]]"
+distribution:
+  - basolateral complex (BLA) — major input nucleus
+  - central nucleus (CeA) — major output nucleus
+  - medial nucleus
+  - intercalated cell masses (GABAergic inhibitory)
+primary-neurotransmitters:
+  - "[[GABA]]"
+  - "[[Glutamate]]"
+  - "[[norepinephrine]]"
+associated-functions:
+  - fear conditioning
+  - emotional learning
+  - threat detection
+  - memory consolidation (emotional valence)
+  - aggression
+associated-disorders:
+  - PTSD
+  - anxiety disorders
+  - phobias
+  - psychopathy (hypoactivity)
 tags:
   - comp-neuro/brain/region
-  - biology
-date: 2025-04-14
-updated: 2026-01-15T15:41:44-05:00
-title: Amygdala
-author:
-embedded:
 ---
-The _Amygdala_ is primarily responsible for the processing and regulation of emotional behavior - particularly fear/anxiety/aggression. Its role is crucial in the formation of [[Episodic Memory]], specifically the emotional portion of the **integrated representation**.
 
- 
+The amygdala is the brain's threat-detection and emotional learning center. Its role is crucial in the formation of [[Episodic Memory]], specifically the emotional component of integrated representations — emotionally arousing events are remembered better precisely because the amygdala modulates hippocampal consolidation via norepinephrine.
+
+The "low road" (thalamus→amygdala direct) enables pre-conscious fear responses before full cortical processing completes; the "high road" (thalamus→cortex→amygdala) delivers the full perceptual representation.
 
 ![[Pasted image 20250414101333.png]]
 
 ## Structure
 
-The Amygdala is a small, almond-shaped structure located deep within the temporal lobe of the brain. It is part of the limbic system and is composed of several nuclei, each with distinct functions and connections.
+Small, almond-shaped (amygdala = Greek for almond), located deep in the anterior [[Temporal Lobe]]. The basolateral complex (BLA) is the primary input zone; the central nucleus (CeA) drives the fear output cascade to hypothalamus and brainstem.
 
 ## Function In Detail
 
-Besides its role in emotional processing, the amygdala is also involved in various other functions, including:
-
-- the modulation of memory consolidation, particularly for emotionally charged events
-- emotional learning
-- fear conditioning
+- Modulation of memory consolidation for emotionally charged events
+- Emotional learning and fear conditioning
+- Aggression and social threat processing
+- Reward-related emotion (not just fear — also positive valence via BLA-NAc projections)

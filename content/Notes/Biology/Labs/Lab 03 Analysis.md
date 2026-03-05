@@ -9,8 +9,9 @@ author:
   - Caroline Covlin
 date: 2025-09-25
 title: Paramecium Investigations
-updated: 2025-10-17
+updated: 2026-03-01T15:55:46-05:00
 ---
+
 ## Background and Hypothesis
 
 During our initial investigations into Paramecia within samples, we noticed a variety of interesting reactionary behavior. Namely, with samples like an _Acetate Mix_, the paramecia would move much more sporadically and _diffuse_ faster. This diffusion process was characterized by a relative forward velocity, but also a (possibly) Poisson process for changing direction.
@@ -49,9 +50,3 @@ And found the following statistics:
 We did see that the expected behavior of Paramecia NOT being present in the Test sample at the end of the trial was true. In fact, in every single trial, there were zero Paramecia in the Test sample at the end of the trial. However, we did not see the expected behavior of Paramecia gathering near the edge of the sample membrane. They would oftentimes cross over to the Test sample, but would not stay there.
 
 In addition, we saw such a high variance in our results that we cannot confidently determine if our hypothesis was correct. For example, in Trial 2 and Trial 5, there were zero Paramecia in both the Control and Test samples at the end of the trial. They did appear to slow in diffusion rate, but they also appeared to be moving in a more linear fashion, rather than diffusing outwards in all directions.
-
----
-
-_note: I asked during lab if I could use alternative program to Word, as I have "optimized" my workflow to such a point I deeply struggle to get anything done with anything besides LaTeX (ridiculous!)_
-
-_Please let me know if this format is alright, if not, I am happy to redo/never do this again!_

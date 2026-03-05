@@ -132,7 +132,7 @@ If you had a $sample \ size = 2$, you might see that $100\%$ prefer having more 
 
 But if you had a $sample \ size = 1000$, you might see that only $52\%$ prefer having more chips on chocalate chips.
 
-This is like a [[Markov Chains Explained - 1|Markhov Chain]] - where the more you traverse the state tree, the closer the probabilities get to the ones you observe
+This is like a [[Markov Chains|Markhov Chain]] - where the more you traverse the state tree, the closer the probabilities get to the ones you observe
 
 
 

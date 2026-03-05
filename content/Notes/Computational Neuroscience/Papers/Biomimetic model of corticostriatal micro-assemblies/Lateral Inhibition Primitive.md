@@ -6,7 +6,7 @@ tags:
   - comp-neuro/models
   - todo/comp-neuro
 source:
-  - "[[Biomimetic model of corticostriatal micro-assemblies discovers new neural code]]"
+  - "[[pathakBiomimeticModelCorticostriatal2024|Biomimetic model of corticostriatal micro-assemblies discovers new neural code]]"
 related:
   - "[[Biomimetic model of corticostriatal micro-assemblies]]"
 author:

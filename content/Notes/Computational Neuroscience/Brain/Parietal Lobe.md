@@ -1,24 +1,48 @@
 ---
+aliases: []
 created_on: "[[09-11-2025]]"
-class:
-  - note
+class: brain-region
+type: cortex
+upstream:
+  - "[[Thalamus]]"
+  - "[[Occipital Lobe]]"
+  - "[[Frontal Lobe]]"
+downstream:
+  - "[[Frontal Lobe]]"
+  - "[[Prefrontal Cortex]]"
+  - "[[Temporal Lobe]]"
+inhibitors: []
+activators: []
+distribution:
+  - anterior parietal (primary somatosensory cortex, S1 — Brodmann areas 1, 2, 3)
+  - posterior parietal cortex (PPC)
+  - bilateral (left dominant for language-related processing)
+primary-neurotransmitters:
+  - "[[GABA]]"
+  - "[[Glutamate]]"
+associated-functions:
+  - somatosensation (touch, temperature, pain, proprioception)
+  - spatial awareness and navigation
+  - multisensory integration
+  - attention orienting
+  - body schema
+associated-disorders:
+  - hemispatial neglect (right parietal damage)
+  - Balint's syndrome
+  - Gerstmann syndrome
+  - astereognosis
 tags:
-  - comp-neuro
   - comp-neuro/brain/region
-source:
-related:
-author:
-date: 2025-09-11
-updated: 2025-09-11
+date: 2026-02-22T22:16:38-05:00
+updated: 2026-02-24T15:16:23-05:00
 ---
-The **Parietal Lobe** is one of the four major lobes of the cerebral cortex in the brain. It is located near the center of the brain, behind the frontal lobe and above the temporal lobe. The parietal lobe plays a crucial role in processing sensory information from various parts of the body, including touch, temperature, pain, and spatial awareness.
 
-It includes the primary [[Somatosensory Cortex]], the area responsible for processing tactile information from the body. The parietal lobe also integrates sensory input to form a coherent understanding of the environment, allowing us to navigate and interact with the world around us.
+The parietal lobe sits between the frontal lobe (anterior) and occipital lobe (posterior), and above the temporal lobe. It integrates somatosensory input with visual and proprioceptive signals to build a coherent representation of body position in space.
+
+The primary [[Somatosensory Cortex]] occupies the postcentral gyrus and is somatotopically organized (the homunculus). The posterior parietal cortex (PPC) is more integrative, feeding into the [[Dorsal Pathway]] for visuospatial action.
 
 ![[Parietal Lobe.png]]
 
----
-
 ## Structure and Function
 
-Part of the cerebral cortex, the parietal lobe is divided into two main regions; the anterior region, which contains the primary [[Somatosensory Cortex]], and the posterior region, which is involved in integrating sensory information and spatial reasoning.
+The anterior region (S1) processes raw tactile information from the body. The posterior parietal cortex integrates sensory streams and is critical for spatial reasoning and guiding goal-directed movement.

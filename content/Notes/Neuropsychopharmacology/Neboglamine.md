@@ -9,8 +9,7 @@ class:
 category: cognitive
 type: NMDA glycine PAM
 currently-taking: false
-status:
-  - interested
+status: ordered
 dosage: 200
 dosage-unit:
   - mg

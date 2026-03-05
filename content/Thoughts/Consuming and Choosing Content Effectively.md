@@ -15,8 +15,10 @@ related:
 author:
 description: extracting meaningful utility in the age of unengaged content consumption
 date: 2025-12-19
-updated: 2026-02-10T14:59:11-05:00
+updated: 2026-03-04T12:15:47-05:00
+status:
 ---
+
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
 
 The difficulty is that I have no shortage of meaningful long term material - I keep a thorough stash of textbooks and actual books that I have just been dying to read, but I never do because of my high frequency content consumption switching. This is in addition to all the papers I have in my backlog to read.
@@ -82,8 +84,11 @@ This will be entirely replacing the old "Learning" kanban board I had before, as
 I will label consumption as either (Active) or (Passive). The **priority** will indicate the time sink required, eg an hour long youtube video would be high, a [[Yana Log Notes]] post will be medium, and a sub 10 minute video will be low. This is independent of consumption mode.
 
 **None:** Not started at all, ideas for content
+
 **Open:** HAS been started, but not consuming at this exact moment( eg GEB or a long paper )
+
 **In Progress:** working on at this very moment
+
 **Done:** Done reading ONLY, for writing we refer to captures as sub tasks
 
 Finally, I will also be leveraging the "time tracking" feature within tasknotes to record actual timeseries data for how I engage with content. My focus is sporadic, and the prescense of a time tracker will hopefully guide me to slow and hone my focus to an instantaneous point.
@@ -94,6 +99,31 @@ In all honesty, **Captures** *should* have the potential to become Consumption t
 
 Also, as a way to leverage my new ideas about [[Note updates as links to daily notes]], it would be neat for consumption tasks to accumulate backlinks to daily notes as minature "daily log" for research and thoughts, until that content eventually sprouts into a note of its own.
 
+---
+
+## [[03-02-2026]] Update - post [[Removing TaskNotes from my Workflow]]
+
+A few weeks ago I made the difficult decision to abandon tasknotes. While I love and appreciate the intricacy and integrations with obsidian bases, it is simply too complicated of a task management system to get anything done. Having a kanban board for every possible kind of task list makes no sense, and honestly, zero sense for content consumption management. This is [[Yak Shaving]] in effect.
+
+### The New Implementation
+
+In honesty, the solution is right in front of us. I have talked a lot about how each source of input content has a well defined schema. I use this mostly for [[Zotero]] and youtube stuff, but also applies for books and textbooks.
+
+The neat change I made recently is integrating the `status` property everywhere. Before this was used by tasknotes, but now its multi modal. In the context of my nootropics and pharmacology research, status represents if I am taking this, or considering, or dropping. For a book, it is if its to read, reading, or read. for a youtube video, its to watch or watched.
+
+thinking about re-implementing [[Consuming and Choosing Content Effectively]] through the bases views I have regarding [[Youtube.base]], [[Books.base]], and [[Papers.base]]. All classes use the `status` property, which we can rework to set an actual content curation system for myself. The neat thing is that I can define a property to represent **consume** - and this can apply for ALL learning resources.
+
+So, the solution is to combine the 3 main bases I have already; [[Youtube.base]], [[Papers.base]], and [[Books.base]], and have them follow a somewhat consistent `status` schema. **None** is the default, but we dont need to consume everything we stash. We can repurpose **Open** as the *assigned* curation indicator.
+
+| Status      | Meaning                                                                                                                |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| none        | not assigned anything, just captured for later - MUST BE ADDRESSED: either move to **dropped** or to **open**          |
+| open        | specifically declared to be consumed later                                                                             |
+| in-progress | means currently watching/consuming                                                                                     |
+| consumed    | watched or read, but havent written about yet, resource done but *topic still needs more attention or processing*      |
+| done        | consumed AND written about, or understood enough that writing isnt needed. means content doesnt have to be returned to |
+| dropped     | no longer worth completing, but not enough to delete from vault                                                        |
+
 %%
 Basically just complete the plan layed out in [[12-18-2025]], this is about drafting a way to balance how content is consumed.
 
@@ -102,8 +132,6 @@ Namely, how can I keep time for myself to watch those fun educational youtube vi
 Once this project is done, build out the daily note section along with the other daily notes before this(all south africa daily notes).
 
 We also need to balance "exploratory" content engagement, where you explore a network (either obsidain or web based), sort of like a tree data structure (you navigate links, go deep, but then go back and go down another branch). Good example is [[Yana Log Notes]], this is a gold mine of good notes for my content, but needs time to be explored.
-
----
 
 ## Implementation
 

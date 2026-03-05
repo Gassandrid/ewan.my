@@ -1,8 +1,18 @@
 ---
 date: 2026-02-09T08:54:07-05:00
-created_on: "[[02-09-2026]]"
-updated: 2026-02-09T09:02:18-05:00
+created_on: "[[02-27-2026]]"
+updated: 2026-02-27T08:40:59-05:00
+class:
+  - note
+tags:
+  - cs/ai
+source:
+related:
+author:
+description:
+aliases:
 ---
+
 Decision Trees are known for producing robust, *interpreable* cateogories/splits in which data is classified.
 
 ![[decTree.png]]
@@ -17,7 +27,10 @@ $$
 G_{i} = 1 - \sum_{k=1}^{N}  p^{2}_{i,k}
 $$
 
+expand on this
+
 **Where**:
+
 - $G_{i}$ is the impurity of the $i^{th}$ node
 - $p_{i,k}$ is the ration of class $k$ instances among the training instances in the $i^{th}$ node
 

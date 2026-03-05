@@ -7,15 +7,17 @@ tags:
 class:
   - note
 date: 2026-01-24T15:01:25-05:00
-updated: 2026-01-24T15:23:45-05:00
+updated: 2026-02-23T19:23:20-05:00
 ---
 - A new workflow strategy primarily thought to be useful for Daily notes, also inspired from [[Yana Log Notes]].
-  - yana uses it for paper notes, also biology notes.
-    - they accumulate random facts, say about something like the [[Default Mode Network]], and gain insight with sub bullet points
+	- yana uses it for paper notes, also biology notes.
+	    - they accumulate random facts, say about something like the [[Default Mode Network]], and gain insight with sub bullet points
 - good for accumulating ideas without any real flow from one to another
-  - sub ideas are also great, use sub bullet points as much as possible
-  - organizes ideas automatically, this kind of "replaces" tying one idea to another in a standardly written note
+	- sub ideas are also great, use sub bullet points as much as possible
+	- organizes ideas automatically, this kind of "replaces" tying one idea to another in a standardly written note
 - I would like to use for non daily note notes, there are some cases when studying non math stuff that it makes sense
+
+Main distinguisher of when to use bullet points over standard prose is when accumulation as a stack is done rather than one long writing session. For ideas thought of across the day, bullet points would be good in a daily note to jot those down to be extended apon later with sub points. But end of day summaries are not accumulated and instead written all at once, so normal prose paragraphs are fine.
 
 ## Yana Log Example
 

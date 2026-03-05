@@ -1,30 +1,61 @@
 ---
+aliases: []
 created_on: "[[09-11-2025]]"
-class:
-  - note
+class: brain-region
+type: cortex
+upstream:
+  - "[[Thalamus]]"
+  - "[[Occipital Lobe]]"
+  - "[[Amygdala]]"
+downstream:
+  - "[[Hippocampus]]"
+  - "[[Amygdala]]"
+  - "[[Prefrontal Cortex]]"
+  - "[[Frontal Lobe]]"
+inhibitors: []
+activators: []
+distribution:
+  - superior temporal gyrus (STG) — primary auditory cortex + Wernicke's area
+  - middle temporal gyrus (MTG) — language, semantics
+  - inferior temporal gyrus (ITG) — object recognition
+  - medial temporal lobe (MTL) — hippocampus, entorhinal, parahippocampal
+primary-neurotransmitters:
+  - "[[GABA]]"
+  - "[[Glutamate]]"
+associated-functions:
+  - auditory processing
+  - language comprehension (Wernicke's area, left hemisphere)
+  - object and face recognition
+  - memory (via medial temporal lobe)
+  - emotional processing (via amygdala connections)
+associated-disorders:
+  - Wernicke's aphasia
+  - prosopagnosia
+  - temporal lobe epilepsy
+  - semantic dementia
 tags:
-  - comp-neuro
   - comp-neuro/brain/region
-source:
-related:
-author:
-date: 2025-09-11
-updated: 2025-09-11
+  - biology
+date: 2026-02-22T22:16:38-05:00
+updated: 2026-02-24T15:15:46-05:00
 ---
-The **Temporal Lobe** is one of the four major lobes of the cerebral cortex in the brain. It is located on the sides of the brain, near the temples, and is primarily responsible for processing auditory information and is also involved in memory, language comprehension, and emotional responses. Think "tempo", as it is heavily involved in processing sounds and music.
+
+The temporal lobe sits lateral and inferior, near the temples. Think "tempo" — it's the primary auditory processing region. But it does far more: the medial temporal lobe houses the [[Hippocampus]] and [[Entorhinal Cortex]], making it the memory hub; the inferior temporal cortex is the endpoint of the [[Ventral Pathway]] for object and face recognition.
 
 ![[TempLobe.png]]
-
----
 
 ## Structure and Function
 
 ### [[Limbic System]]
 
+The medial temporal lobe is core limbic territory. Deep connections with [[Hippocampus]] and [[Amygdala]] link perceptual processing to memory and emotion.
+
 ### [[Wernicke's Area]]
+
+Located in the posterior STG (left hemisphere). Damage causes fluent but semantically incoherent speech (Wernicke's aphasia).
 
 ### [[Temporal Gyrus]]
 
 ### Connections to [[Hippocampus]] and [[Amygdala]]
 
-While not entirely within the temporal lobe, the **[[Hippocampus]]** and **[[Amygdala]]** are closely connected to it and play crucial roles in memory formation and emotional processing, respectively. The hippocampus is essential for converting short-term memories into long-term ones, while the amygdala is involved in processing emotions such as fear and pleasure.
+The [[Hippocampus]] (via entorhinal cortex) and [[Amygdala]] are anatomically embedded in the medial temporal lobe. Their proximity to temporal cortex enables tight coupling between perception, memory consolidation, and emotional tagging.

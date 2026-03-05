@@ -9,7 +9,7 @@ class:
 category: cognitive
 type: 5-HT4 partial agonist
 currently-taking: false
-status: interested
+status: ordered
 dosage: 10
 dosage-unit:
   - mg

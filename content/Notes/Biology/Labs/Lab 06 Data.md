@@ -7,11 +7,10 @@ source:
 related:
 author:
 date: 2025-10-03
-updated: 2025-10-17
+updated: 2026-03-01T15:54:38-05:00
 ---
-## Questions
 
-- [ ] How will we weigh the tubes?
+## Questions
 
 ---
 

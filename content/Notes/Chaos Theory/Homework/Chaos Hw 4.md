@@ -3,25 +3,27 @@ id: Chaos Hw 4
 created_on: "[[02-10-2026]]"
 aliases: []
 tags: []
-abstract: "Instructions: Graduate students (required) and those planning to go to graduate school in a mathematical science (encouraged) should turn in their solutions in LATEX; you will need to learn this language eventually. Submit your solution in a single PDF in Blackboard, including PDF of your code appended to solutions. Check Teams for sample code. Grading: All questions are worth 3 points unless marked otherwise (3 = perfect or nearly so, 2 = close but something missing, 1 = not close but a reasonable attempt, 0 = way off). Excellent solutions will be returned with the graded HW.Disclosure: Please show all your working clearly and list the names of other students with whom you collaborated."
+abstract:
 author:
-  - Ewan Pedersen
-date: 2026-02-10T10:19:00
+  - Ewan
+date: 2026-02-12T17:39:56-05:00
 jupyter:
   jupytext:
-    cell_metadata_filter: "-all"
+    cell_metadata_filter: -all
     formats: ipynb,md
     text_representation:
       extension: .md
       format_name: markdown
       format_version: "1.3"
-      jupytext_version: "1.18.1"
+      jupytext_version: 1.18.1
   kernelspec:
     display_name: Python 3
     language: python
     name: python3
 title: Assignment 4
-updated: 2026-02-12T17:51:26-05:00
+updated: 2026-02-24T20:06:26-05:00
+class:
+  - export
 ---
 
 ## Problem 1
