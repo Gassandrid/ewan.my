@@ -37,7 +37,7 @@ degrading-enzyme:
   - glutamine synthetase
 tags:
   - comp-neuro/brain/neurotransmitter
-  - neuropharmacology
+  - pharmacology/neuro
 date: 2026-02-25T14:10:35-05:00
 updated: 2026-02-26T13:34:49-05:00
 ---
@@ -80,7 +80,7 @@ keeps extracellular glutamate at nanomolar levels; necessary, because tonic rece
 
 [[LTP]] and [[LTD]] are cellular substrates of learning / memory, both gated by [[NMDA receptor]] activation. 
 
-sequence: high-frequency stimulation -> [[AMPA]] mediated depolarization -> $Mg^{2+}$ unblock -> $Ca^{2+}$ influx through [[NMDA]] -> CaMKII activation -> [[AMPA receptor]] phosphorylation and trafficking -> strengthened synapse. 
+sequence: high-frequency stimulation -> [[AMPA Receptor]] mediated depolarization -> $Mg^{2+}$ unblock -> $Ca^{2+}$ influx through [[NMDA]] -> CaMKII activation -> [[AMPA receptor]] phosphorylation and trafficking -> strengthened synapse. 
 
 LTD is  reverse: low-frequency, mild Ca²⁺ elevation activates phosphatases instead.
 

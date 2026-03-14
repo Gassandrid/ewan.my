@@ -15,12 +15,13 @@ source:
 description:
 tags:
   - transhumanism/nootropic
-  - health/peptides
+  - health/substance
+  - transhumanism/peptides
 related:
   - "[[On Peptides]]"
   - "[[Selank]]"
 date: 2025-12-04
-updated: 2026-02-18T13:27:38-05:00
+updated: 2026-03-13T16:53:40-07:00
 form:
   - injection
   - nasal

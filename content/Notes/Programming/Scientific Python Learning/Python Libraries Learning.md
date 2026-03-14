@@ -1,7 +1,7 @@
 ---
 date: 2025-01-04
 created_on: "[[01-04-2025]]"
-updated: 2026-02-09T13:23:57-05:00
+updated: 2026-03-12T15:12:21-07:00
 title: Python Libraries to Learn
 tags:
   - cs/python
@@ -10,43 +10,17 @@ tags:
   - todo/neuro
   - todo/math
 ---
+
 **Comp Neuro:**
+
 https://neuralensemble.org/
+
 - [ ] [[Brian2]] - best for prototyping, general comp neuro abstract modelling
+	- update [[03-12-2026]] : probably the most useful one here, i mean if [[Emulation of the Drosophila Fly brain]] can be done in it then it is more than enough for big sims, especially since there is Brian2Cuda
 - [ ] [[Elephant]] - working with actual brain data
 - [ ] [[NEST]] - for REALLY big simulations - im talking about supercomputer level
 - [ ] [[Nengo]] (maybe, I dont know if it is still relavent)
 - [ ] [[TransformerLens]] - good for [[Mechanistic Interpretability]] research in ai
-
-
-**Misc**:
-- [ ] [[yt-dlp]]
-
-**Ai**:
-
----
-
-## ChatGPT Generated
-
-#### Computational Neuroscience
-
-|Library|Why You Need It|
-|:--|:--|
-|**Brian2**|THE simulator for spiking neural networks — fast, very Pythonic, fantastic for experimenting with neuron models.|
-|**NEURON** + **LFPy**|If you need detailed, biologically-realistic neuron modeling (ion channels, dendrites, etc.) — used in "heavy" neuroscience papers.|
-|**NEST**|Large-scale spiking neural network simulations. Good if you're scaling up to networks of thousands/millions of neurons.|
-|**Elephant**|Data analysis for neuroscience (spike trains, time series, STA, etc.). Works well with Neo.|
-|**Neo**|Data structures for electrophysiology data (standardizes how spikes, events, analog signals, etc. are stored).|
-|**BindsNET**|Deep learning + spiking neural network toolkit. If you want SNNs _and_ ML connections.|
-|**PyNN**|Abstraction layer to write one code that can run on Brian2, NEST, NEURON, etc.|
-
-If you only want a "working core" you can expand later:
-
-- `numpy`, `scipy`, `matplotlib`, `pandas`
-- `brian2`, `neo`, `elephant`
-- `sympy`, `jax`
-- `seaborn`, `h5py`, `scikit-learn`
-- `dask` (for larger data)
 
 ---
 

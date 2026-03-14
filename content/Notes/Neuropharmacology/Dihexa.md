@@ -16,9 +16,10 @@ source:
 description: Cognitive Function Improvement, more potent than nootrophics
 tags:
   - transhumanism/nootropic
-  - health/peptides
+  - health/substance
+  - transhumanism/peptides
 date: 2025-12-06
-updated: 2026-02-18T13:26:28-05:00
+updated: 2026-03-13T16:53:14-07:00
 form:
   - capsule
   - nasal

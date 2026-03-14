@@ -21,7 +21,7 @@ jupyter:
     language: python
     name: python3
 date: 2026-02-26T09:13:08-05:00
-updated: 2026-02-27T08:35:05-05:00
+updated: 2026-03-13T15:15:20-07:00
 class:
   - export
 ---
@@ -191,7 +191,7 @@ constraint: from $I$, must go to $J$. from $J$, can go to $I$ or $J$. no $I \to 
 
 scheme: for $n = 1$: $J$ (fixed point, $J \to J$). for $n \geq 2$: $IJ^{n-1}$.
 
-check transitions: $I \to J$ ✓, $J \to J$ ✓ (middle positions), wrap $J \to I$ ✓.
+check transitions: $I \to J$ works, $J \to J$ (middle positions) work, wrap $J \to I$ works.
 
 primitivity: if $IJ^{n-1}$ were a repetition of blocks of length $d | n$, $d < n$, then $S_1 = S_{1+d}$. but $S_1 = I$ and $S_{1+d} = J$ for $d \geq 1$. contradiction.
 

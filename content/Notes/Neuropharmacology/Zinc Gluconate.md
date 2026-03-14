@@ -23,10 +23,8 @@ time-of-day:
   - morning
 description:
 tags:
-  - health
-  - mineral
-  - zinc
   - transhumanism/nootropic
+  - health/vitamin/mineral
 related: []
 stacks-well-with:
   - "[[Lisdexamfetamine]]"

@@ -2,11 +2,19 @@
 created_on: "[[04-14-2025]]"
 tags:
   - comp-neuro/theory
-  - working/neuro
 date: 2025-04-14
-updated: 2025-09-09
+updated: 2026-03-13T14:55:41-07:00
+class:
+  - note
+source:
+related:
+author:
+description:
+aliases:
+  - Action Potential
 ---
-An *action potential* is a particular change in the state of a [[Neuron]] that involves a rapid electric charge spike. 
+
+a change in the state of a [[Neuron]] that involves a rapid electric charge spike. 
 
 This rapid spike is what allows a [[Neuron]] to send a signal across its [[Axons|axon]] to other neurons or cells. It's essentially a temporary reversal of the neuron's membrane potential, switching from negative to positive. This rapid change in voltage is caused by the movement of ions, like sodium and potassium, across the neuron's membrane, aka [[Ion Channels]].
 

@@ -1,21 +1,13 @@
 ---
-title: Render of Hofstadter Butterfly
+title: Hofstadter Butterfly
 created_on: "[[01-18-2026]]"
 class:
   - curation
 media-type: png
-image: "[[hofButterFlyEwan.png]]"
-width: 3456
-height: 2234
-filesize: 13.28 MB
-colors:
-  - "#000000"
-  - "#000020"
-  - "#200000"
-  - "#202020"
-  - "#002020"
+image: "[[hofstadter_butterfly.png]]"
 source:
-  - Shadertoy
+  - numpy
+  - matplotlib
 related:
   - "[[Douglas Hofstadter]]"
   - "[[Gödel, Escher, Bach]]"
@@ -26,9 +18,16 @@ tags:
   - curation/render
 aliases:
 date: 2026-01-18T09:14:09-05:00
-updated: 2026-01-20T11:10:44-05:00
+updated: 2026-03-12T16:15:13-07:00
 ---
+
 A piece of my own creation, wanted to encode more parameters into the Hofstadter Butterfly to enrich the color.
+
+![[hofstadter_butterfly.png]]
+
+---
+
+## Earlier Rendition in Shadertoy
 
 ![[hofButterFlyEwan.png]]
 
@@ -133,21 +132,4 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     totalColor *= 0.5 + 0.5*pow( 16.0*q.x*q.y*(1.0-q.x)*(1.0-q.y), 0.25 );
     fragColor = vec4(totalColor, 1.0);
 }
-```
-
-## Mentions
-
-```base
-filters:
-  and:
-    - this.image != ""
-    - file.hasLink(this.image)
-
-views:
-  - type: table
-    name: "Files Using This Image"
-    order:
-      - file.name
-      - file.folder
-      - file.mtime
 ```

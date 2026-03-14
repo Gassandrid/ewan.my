@@ -20,7 +20,7 @@ A **Kalman Filter** is a tool for incorporating noisy measurements over time to 
 
 ## An Underlying Dynamical System Model
 
-A great way to understand the Kalman Filter is to think of it as a hidden Markov model where the hidden states evolve over time according to a linear dynamical system, and the observations are noisy measurements of these states.
+A great way to understand the Kalman Filter is to think of it as a [[Hidden Markov Models|hidden Markov model]] where the hidden states evolve over time according to a linear dynamical system, and the observations are noisy measurements of these states.
 
 ![[exampleKalmanFilter.png]]
 

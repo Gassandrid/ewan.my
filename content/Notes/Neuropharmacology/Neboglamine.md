@@ -3,7 +3,7 @@ aliases: []
 created_on: "[[02-17-2026]]"
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=3074827&t=l
 date: 2026-02-17
-updated: 2026-02-18T08:44:57-05:00
+updated: 2026-03-13T16:52:01-07:00
 class:
   - medication
 category: cognitive
@@ -26,7 +26,8 @@ time-of-day:
 source: https://www.reddit.com/r/NooTopics/comments/yvzo2n/neboglamine_and_the_concept_of_glutamate_fine/
 description: NMDA glycine site PAM, amplifies endogenous D-Serine binding during learning events
 tags:
-  - health/nootropic
+  - transhumanism/nootropic
+  - pharmacology/neuro
 related: []
 stacks-well-with:
   - "[[TAK-653]]"

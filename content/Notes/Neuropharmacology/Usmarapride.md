@@ -3,7 +3,7 @@ aliases: []
 created_on: "[[02-17-2026]]"
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=71508291&t=l
 date: 2026-02-17
-updated: 2026-02-17
+updated: 2026-03-13T16:52:27-07:00
 class:
   - medication
 category: cognitive
@@ -28,7 +28,9 @@ time-of-day:
 source: https://www.reddit.com/r/NooTopics/comments/1ipd52p/acd856_and_usmarapride_everychem_agenda_part_2/
 description: CNS-selective 5-HT4 partial agonist — hippocampal memory and neurogenesis
 tags:
-  - health/nootropic
+  - transhumanism/nootropic
+  - health/substance
+  - pharmacology/neuro
 related: []
 stacks-well-with:
   - "[[ACD-856]]"
@@ -57,6 +59,9 @@ The standout synergy: Usmarapride drives hippocampal BDNF release, [[ACD-856]] s
 Phase 1 class-level data from SUVN-D4010 (same 5-HT4 agonist class): generally safe, with relatively high headache occurrence above 15mg [@nirogiFirstinHumanStudiesEvaluate2021]. Hard ceiling there.
 
 **Dose**: 10mg (headaches above 15mg, hard ceiling [@nirogiFirstinHumanStudiesEvaluate2021])
+
 **Cycling**: Daily
+
 **Stacks**: [[ACD-856]] (Usmarapride releases BDNF, ACD-856 amplifies it at TrkB, strong mechanistic synergy), [[Tropisetron]] (5-HT3 antagonist + 5-HT4 agonist pairing)
+
 **Notes**: Phase 1 complete [@nirogiFirstinHumanStudiesEvaluate2021]. Effects are hippocampus-specific, complement with PFC-targeting compounds for full coverage.

@@ -7,7 +7,6 @@ class:
   - medication
 category: cognitive
 type: dopaminergic
-currently-taking: false
 status: ordered
 dosage: 100
 dosage-unit: mg

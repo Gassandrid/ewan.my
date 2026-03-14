@@ -25,10 +25,8 @@ time-of-day:
   - morning
 description:
 tags:
-  - health
-  - ADHD
-  - alpha-2-agonist
   - transhumanism/nootropic
+  - pharmacology/neuro/alpha-2-agonist
 related: []
 stacks-well-with:
   - "[[Lisdexamfetamine]]"
@@ -42,9 +40,9 @@ brain-regions:
   - "[[DLPFC]]"
 processes: []
 date: 2026-02-18T13:17:57-05:00
-updated: 2026-02-18T13:25:20-05:00
+updated: 2026-03-13T17:04:46-07:00
 ---
 
 Guanfacine selectively agonizes α2A adrenergic receptors in the prefrontal cortex, strengthening PFC network connectivity and improving signal-to-noise ratio by reducing noradrenergic noise. Unlike stimulants, it doesn't increase catecholamine release. it optimizes existing PFC function. The most remarkable effect is the enhancement of long-term thinking and planning: better able to structure strategy, consider future consequences of current actions, and resist impulsivity. This is exactly the executive function profile that ADHD impairs. It also meaningfully reduces anxiety and drug cravings, and smooths out the jittery edges of stimulants without reducing their therapeutic benefit. Initial sedation fades after a couple of weeks; benefits persist stably. Must taper if discontinuing, abrupt cessation causes rebound hypertension.
 
-Must taper to discontinue. Massively underused in adult ADHD.
+Massively underused in adult ADHD. Austin you would benefit from this.

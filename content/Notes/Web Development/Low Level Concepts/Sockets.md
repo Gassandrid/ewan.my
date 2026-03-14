@@ -3,7 +3,7 @@ date: 2024-09-12
 created_on: "[[09-12-2024]]"
 tags:
   - cs/web
-updated: 2025-10-15
+updated: 2026-03-05T14:50:37-05:00
 class:
   - note
 source:
@@ -11,6 +11,7 @@ source:
 related:
 author:
 ---
+
 In layman terms, **Sockets** serve to enable communication between different **processes,** either on the same machine or over a network. For either of these example, each side(process) of that communication will create a socket
 
 Sockets are **endpoints** in a two-way communication channel:

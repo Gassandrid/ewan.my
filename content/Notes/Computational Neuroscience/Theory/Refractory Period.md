@@ -1,13 +1,19 @@
 ---
 date: 2025-04-23
 created_on: "[[04-23-2025]]"
-updated: 2025-09-09
+updated: 2026-03-13T14:04:27-07:00
 tags:
-  - todo/neuro
   - comp-neuro/theory
-class: note
+class:
+  - note
+source:
+related:
+author:
+description: temporary state neurons are in after an action potential where no more stimulus response will occur
+aliases:
 ---
-The **refractory period** is the temporary state a [[Neuron]] is in after an [[Action Potentials|Action potential]]. During this period, the cell cannot respond to any further stimuli, regardless of their intensity.
+
+the temporary state a [[Neuron]] is in after an [[Action Potentials|Action potential]]. During this period, the cell cannot respond to any further stimuli, regardless of their intensity.
 
 There are two phases of the refractory period:
 
