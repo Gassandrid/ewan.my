@@ -102,7 +102,7 @@ async function _navigate(url: URL, isBack: boolean = false) {
   html.body.appendChild(announcer)
 
   // morph body
-  micromorph(document.body, html.body)
+  await micromorph(document.body, html.body)
 
   // scroll into place and add history
   if (!isBack) {
