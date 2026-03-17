@@ -7,8 +7,9 @@ tags:
 date: 2025-08-13
 class:
   - note
-updated: 2025-08-13
+updated: 2026-03-17T11:01:42-04:00
 ---
+
 _Countably Infinite_ sets are a fundamental concept in set theory, representing sets that can be put into a one-to-one correspondence with the natural numbers. This means they can be "counted" in a sense, even if they are infinite.
 
 ---

@@ -7,8 +7,13 @@ tags:
   - seed
   - engineering/3dprinting
 date: 2025-09-08
-updated: 2025-09-08
+updated: 2026-03-17T08:40:12-04:00
 ---
+
+![[Pasted image 20260317084011.png]]
+
+an additive manufacturing process where material is deposited layer by layer to build a physical object from a digital model.
+
 3d printing has quickly become one of my favorite hobbies, and for good reason. Ever since getting my [[Choosing my perfect 3d printer|p1s]] last year for my dorm, I have fallen in love with the idea of personal fabrication. This, combined with my [[New Year Homelab Updates and Plans|homelab project]] and [[A desire to do more engineering]] stuff, have shown me the part of myself which comes from my [[Axel - In Memoriam|grandfather]] and father: technicality.
 
 In fall 2025 this is manifesting as a new 10 inch rack project, [[Saturn V Server Rack]].

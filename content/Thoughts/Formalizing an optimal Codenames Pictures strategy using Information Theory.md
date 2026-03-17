@@ -10,7 +10,7 @@ class:
 date: 2025-09-24
 updated: 2025-09-24
 ---
-**Codenames: Pictures** is a fun little board game where you are given the task of communicating which of the cards below are "yours", where each turn you can say one word and one number.
+	**Codenames: Pictures** is a fun little board game where you are given the task of communicating which of the cards below are "yours", where each turn you can say one word and one number.
 
 The goal is to find a strategy that maximizes the information conveyed by the word and number, ideally leading to the correct cards being chosen with minimal ambiguity.
 

@@ -1,3 +1,6 @@
-|(^.^)  henlo, i am a vaultguard
-please dont delete me — i make sure arscontexta hooks only run
-in your vault, even if you installed the plugin globally
+# Ars Contexta vault marker + config
+# This file identifies the directory as an Ars Contexta vault.
+# Do not delete — hooks only run when this file exists.
+
+git: true
+session_capture: true

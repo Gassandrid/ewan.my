@@ -9,7 +9,7 @@ upstream:
   - "[[Glutamine]]"
   - "[[Alpha-ketoglutarate]]"
 downstream:
-  - "[[AMPA receptor]]"
+  - "[[AMPA Receptor]]"
   - "[[NMDA receptor]]"
   - "[[Kainate receptor]]"
   - "[[mGluR1]]"
@@ -39,7 +39,7 @@ tags:
   - comp-neuro/brain/neurotransmitter
   - pharmacology/neuro
 date: 2026-02-25T14:10:35-05:00
-updated: 2026-02-26T13:34:49-05:00
+updated: 2026-03-17T14:56:42-04:00
 ---
 
 Primary excitatory neurotransmitter in the vertebrate [[Central Nervous System]]. If [[GABA]] is "brakes", glutamate is "accelerator", virtually every fast excitatory synapse runs on it. Synthesized primarily from [[Glutamine]] via [[Glutaminase]] in the presynaptic terminal, and secondarily from the TCA cycle intermediate $\alpha$-ketoglutarate via transamination.
@@ -50,7 +50,7 @@ Two primary classes acted through; **ionotropic**(fast/ligand) and  **metabotrop
 
 ### Ionotropic
 
-**[[AMPA receptor]]**:  mediates bulk of fast EPSPs. Primarily $Na^{+}$/$K^{+}$ permeable; GluR2 subunit determines $Ca^{2+}$ impermeability. Rapid kinetics, millisecond timescale. main vehicle for information throughput.
+**[[AMPA Receptor]]**:  mediates bulk of fast EPSPs. Primarily $Na^{+}$/$K^{+}$ permeable; GluR2 subunit determines $Ca^{2+}$ impermeability. Rapid kinetics, millisecond timescale. main vehicle for information throughput.
 
 **[[NMDA receptor]]**: coincidence detector. Requires two conditions simultaneously: ligand binding (glutamate + glycine co-agonist) *and* membrane depolarization to expel $Mg^{2+}$ . Once open, it's highly $Ca^{2+}$ permeable, making it the entry point for plasticity signals. This is the biophysical substrate of [[Hebbian learning]]; synapse strengthens when pre- and postsynaptic activity coincide. *fire together wire together!*
 
@@ -80,7 +80,7 @@ keeps extracellular glutamate at nanomolar levels; necessary, because tonic rece
 
 [[LTP]] and [[LTD]] are cellular substrates of learning / memory, both gated by [[NMDA receptor]] activation. 
 
-sequence: high-frequency stimulation -> [[AMPA Receptor]] mediated depolarization -> $Mg^{2+}$ unblock -> $Ca^{2+}$ influx through [[NMDA]] -> CaMKII activation -> [[AMPA receptor]] phosphorylation and trafficking -> strengthened synapse. 
+sequence: high-frequency stimulation -> [[AMPA Receptor]] mediated depolarization -> $Mg^{2+}$ unblock -> $Ca^{2+}$ influx through [[NMDA]] -> CaMKII activation -> [[AMPA Receptor]] phosphorylation and trafficking -> strengthened synapse. 
 
 LTD is  reverse: low-frequency, mild Ca²⁺ elevation activates phosphatases instead.
 
@@ -92,8 +92,6 @@ Glutamate and [[GABA]] are intrinsically coupled: pyramidal cells (glutamatergic
 
 ## Excitotoxicity
 
+main mechanism behind strokes, along with neurodegenerative disease progression/TBI
+
 Pathological glutamate release; from ischemia, trauma, or EAAT failure, causes sustained NMDA activation, massive $Ca^{2+}$ influx, and mitochondrial dysfunction.
-
-Ca²⁺ overload -> cytochrome c release -> caspase activation -> apoptosis or necrosis. 
-
-core mechanism in stroke, TBI, and neurodegenerative disease progression.

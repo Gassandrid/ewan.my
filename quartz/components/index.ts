@@ -33,6 +33,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import BaseViewSelector from "./BaseViewSelector"
 import BaseSearchBar from "./BaseSearchBar"
+import Analytics from "./_Analytics"
 
 export {
   ArticleTitle,
@@ -70,4 +71,5 @@ export {
   ConditionalRender,
   BaseViewSelector,
   BaseSearchBar,
+  Analytics,
 }

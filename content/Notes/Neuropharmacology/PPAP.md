@@ -8,7 +8,6 @@ class:
   - medication
 category: cognitive
 type: catecholamine activity enhancer
-currently-taking: false
 status: not-taking
 dosage: 20
 dosage-unit: mg
@@ -38,7 +37,7 @@ pathways:
 brain-regions: []
 processes: []
 date: 2026-02-18T14:37:04-05:00
-updated: 2026-03-13T17:04:28-07:00
+updated: 2026-03-16T09:55:27-04:00
 ---
 
 catecholamine activity enhancer (CAE), mechanistically distinct class from conventional stimulants. Rather than forcing dopamine/norepinephrine release or blocking reuptake, it enhances the spontaneous activity of catecholaminergic neurons that are already firing. The result is context-dependent stimulation: it amplifies task-relevant catecholaminergic activity without forcing global arousal. No recreational value, no crash, no compulsive redosing, just pure function. Effects plateau and cap at around 40mg, so higher doses are wasted. Duration is 4–8 hours. Combined with [[Lisdexamfetamine]], punding/stereotypy increases noticeably; getting stuck on tasks or repetitive behaviors, which is manageable and sometimes useful for deep work.
