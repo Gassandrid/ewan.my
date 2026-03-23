@@ -4,7 +4,6 @@ created_on: "[[09-22-2025]]"
 updated: 2025-10-16
 tags:
   - math/topology
-  - todo/math
 class:
   - note
 source:

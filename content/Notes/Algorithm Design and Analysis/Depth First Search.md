@@ -9,7 +9,6 @@ class:
 tags:
   - university
   - cs/theory/algorithms
-  - todo/cs
 course: "[[Algorithm Design and Analysis]]"
 lesson:
   - external

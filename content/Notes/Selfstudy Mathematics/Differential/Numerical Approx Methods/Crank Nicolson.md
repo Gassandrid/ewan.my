@@ -4,7 +4,6 @@ class:
   - note
 tags:
   - math/calculus/differential/pde
-  - todo/math/differential
 source:
 related:
 author:

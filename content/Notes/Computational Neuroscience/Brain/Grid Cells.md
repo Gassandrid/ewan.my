@@ -3,7 +3,6 @@ created_on: "[[09-19-2025]]"
 class:
   - note
 tags:
-  - todo/uncreated
   - comp-neuro/brain/neurons
   - math/topology
 source:
@@ -17,7 +16,7 @@ related:
   - "[[Attractor Network]]"
 author:
 date: 2025-09-19
-updated: 2026-02-24T15:13:32-05:00
+updated: 2026-03-23T09:57:09-04:00
 description: a type of neuron in the brain that helps with spatial navigation by creating a coordinate system
 aliases:
   - Grid Neurons

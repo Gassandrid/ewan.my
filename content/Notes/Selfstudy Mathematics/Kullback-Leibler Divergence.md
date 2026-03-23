@@ -8,7 +8,6 @@ aliases:
 tags:
   - math/information/entropy
   - math/information
-  - todo/math
 class:
   - note
 date: 2025-09-16

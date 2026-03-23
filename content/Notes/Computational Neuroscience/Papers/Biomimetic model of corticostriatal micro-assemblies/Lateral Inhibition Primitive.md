@@ -4,7 +4,6 @@ class:
   - note
 tags:
   - comp-neuro/models
-  - todo/comp-neuro
 source:
   - "[[pathakBiomimeticModelCorticostriatal2024|Biomimetic model of corticostriatal micro-assemblies discovers new neural code]]"
 related:
