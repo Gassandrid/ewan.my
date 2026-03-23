@@ -25,6 +25,7 @@ description:
 tags:
   - transhumanism/nootropic
   - health/vitamin/mineral
+  - pharmacology/neuro
 related: []
 stacks-well-with:
   - "[[Lisdexamfetamine]]"

@@ -24,8 +24,8 @@ time-of-day:
   - as-needed
 description:
 tags:
-  - pharmacology/neuro/cae
   - transhumanism/nootropic
+  - pharmacology/neuro
 related:
   - "[[BPAP]]"
 stacks-well-with:

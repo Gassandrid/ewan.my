@@ -26,7 +26,7 @@ time-of-day:
 description:
 tags:
   - transhumanism/nootropic
-  - pharmacology/neuro/alpha-2-agonist
+  - pharmacology/neuro
 related: []
 stacks-well-with:
   - "[[Lisdexamfetamine]]"

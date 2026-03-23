@@ -23,8 +23,8 @@ time-of-day:
   - morning
 description:
 tags:
-  - pharmacology/neuro/cae
   - transhumanism/nootropic
+  - pharmacology/neuro
 related:
   - "[[PPAP]]"
 stacks-well-with: []

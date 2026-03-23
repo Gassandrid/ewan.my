@@ -18,6 +18,7 @@ tags:
   - transhumanism/nootropic
   - health/substance
   - transhumanism/peptides
+  - pharmacology/neuro
 date: 2025-12-06
 updated: 2026-03-13T16:53:14-07:00
 form:

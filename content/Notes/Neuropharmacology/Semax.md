@@ -17,6 +17,7 @@ tags:
   - transhumanism/nootropic
   - health/substance
   - transhumanism/peptides
+  - pharmacology/neuro
 related:
   - "[[On Peptides]]"
   - "[[Selank]]"

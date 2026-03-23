@@ -33,6 +33,7 @@ description: controversial but an effective supplement, as long as you dont take
 tags:
   - health
   - transhumanism/nootropic
+  - pharmacology/neuro
 related:
   - "[[Sertraline]]"
 stacks-well-with:

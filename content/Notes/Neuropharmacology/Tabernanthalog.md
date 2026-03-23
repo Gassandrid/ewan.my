@@ -38,6 +38,7 @@ processes:
 tags:
   - transhumanism/nootropic
   - health/substance
+  - pharmacology/neuro
 date: 2026-02-22
 ---
 

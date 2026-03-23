@@ -26,8 +26,8 @@ time-of-day:
   - morning
 description:
 tags:
-  - health
   - transhumanism/nootropic
+  - pharmacology/neuro
 related: []
 stacks-well-with: []
 targets:

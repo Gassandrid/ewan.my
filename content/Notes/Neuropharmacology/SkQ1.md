@@ -33,6 +33,7 @@ processes:
 tags:
   - transhumanism/longevity
   - health/substance
+  - pharmacology/neuro
 date: 2026-02-22
 ---
 

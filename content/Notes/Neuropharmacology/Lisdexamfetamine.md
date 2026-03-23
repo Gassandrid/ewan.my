@@ -25,6 +25,7 @@ description:
 tags:
   - health
   - transhumanism/nootropic
+  - pharmacology/neuro
 related: []
 stacks-well-with:
   - "[[Guanfacine]]"
