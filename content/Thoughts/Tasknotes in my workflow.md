@@ -56,4 +56,4 @@ It should instead be for stuff you have started and need to finish, and more spe
 
 DONT use this for those random ocd urges when you have to write an idea down. JUST MAKE A NOTE!!! that is the whole purpose of the atomic obsidian method, just write the idea down wherever in your vault, and let it be discovered and grow naturally by links.
 
-And as for [[Why uncreated notes don't work|uncreated notes]], if you are worried about them and thinking you need a task for it..... just create them, leave them empty if need be.
+And as for [[Thoughts/Uncreated Notes|uncreated notes]], if you are worried about them and thinking you need a task for it..... just create them, leave them empty if need be.

@@ -12,7 +12,7 @@ author:
 date: 2025-10-11
 updated: 2026-01-12T11:22:58-05:00
 ---
-I know I know, this is yet another note about taking notes and workflow stuff - it usually misses the point. By now I have done several notes on how to deal with [[Tasknotes in my workflow]] and [[Uncreated Notes]]. But it all really boils down to one simple idea, and the reason I had kanban boards in the first place.
+I know I know, this is yet another note about taking notes and workflow stuff - it usually misses the point. By now I have done several notes on how to deal with [[Tasknotes in my workflow]] and [[Private/Inbox/Uncreated Notes]]. But it all really boils down to one simple idea, and the reason I had kanban boards in the first place.
 
 I have ideas. I dont always have time. I want to write down ideas to write about later, with just enough information so I can regain my train of thought when I return to a capture.
 
@@ -32,9 +32,9 @@ A capture for me is now simply a category of my tasknotes board (called a contex
 
 ### Why This, and not just the Todo Tag?
 
-The todo tag is something different. Even though I hate [[Why uncreated notes don't work|uncreated notes]], I feel as though if I create a note which I cannot write about now, I will forget about it and never return. Todo has too much stuff, and mixes notes which have nothing on them with notes that are about half done.
+The todo tag is something different. Even though I hate [[Thoughts/Uncreated Notes|uncreated notes]], I feel as though if I create a note which I cannot write about now, I will forget about it and never return. Todo has too much stuff, and mixes notes which have nothing on them with notes that are about half done.
 
-Captures allow me to use the tasks' own individual note to capture the essence of what I want to write about, wihtout actually creating the note or linking to an [[Why uncreated notes don't work|uncreated note]]. It is a very clean way of dealing with it that doesnt clutter my graph with stuff I never return to, and correcly utilizes my philosophy of [[Tasknotes in my workflow]] to write information for later that isnt meant to be permanent.
+Captures allow me to use the tasks' own individual note to capture the essence of what I want to write about, wihtout actually creating the note or linking to an [[Thoughts/Uncreated Notes|uncreated note]]. It is a very clean way of dealing with it that doesnt clutter my graph with stuff I never return to, and correcly utilizes my philosophy of [[Tasknotes in my workflow]] to write information for later that isnt meant to be permanent.
 
 ### When to Capture/Todo/Task
 

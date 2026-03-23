@@ -1,6 +1,6 @@
 ---
 date: 2026-03-18T08:42:35-04:00
-updated: 2026-03-18T09:09:11-04:00
+updated: 2026-03-19T15:31:57-04:00
 class:
   - note
   - lecture
@@ -30,45 +30,40 @@ $$
 $$
 
 ```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing}
-
 \begin{document}
+\usetikzlibrary{arrows.meta, positioning}
 \begin{tikzpicture}[
-    node distance=1.8cm and 2.5cm,
-    input/.style={circle, draw=black, thick, minimum size=0.9cm, fill=blue!8},
-    sumnode/.style={circle, draw=black, thick, minimum size=1.3cm, fill=orange!12},
-    actnode/.style={rectangle, draw=black, thick, minimum width=1.4cm, minimum height=0.9cm, rounded corners=3pt, fill=green!10},
-    output/.style={circle, draw=black, thick, minimum size=0.9cm, fill=red!10},
-    weight/.style={font=\small, midway, fill=white, inner sep=1.5pt},
-    arr/.style={-{Stealth[length=2.5mm]}, thick}
+    input/.style={circle, draw, thick, minimum size=10mm, fill=blue!8, text=black},
+    sumnode/.style={circle, draw, thick, minimum size=14mm, fill=orange!12, text=black},
+    actnode/.style={rectangle, draw, thick, minimum width=16mm, minimum height=10mm, rounded corners=3pt, fill=green!10, text=black},
+    output/.style={circle, draw, thick, minimum size=10mm, fill=red!10, text=black},
+    bias/.style={circle, draw, thick, minimum size=10mm, fill=yellow!15, text=black},
+    weight/.style={font=\small, midway, fill=white, inner sep=2pt, text=black},
+    arr/.style={-{Stealth[length=2.5mm]}, thick},
+    lbl/.style={font=\small\bfseries, text=black!40}
 ]
 
 % Input nodes
-\node[input] (x1) at (0, 2.4)  {$x_1$};
-\node[input] (x2) at (0, 0.8)  {$x_2$};
-\node[input] (x3) at (0, -0.8) {$x_3$};
+\node[input] (x1) at (0, 2)  {$x_1$};
+\node[input] (x2) at (0, 0)  {$x_2$};
+\node at (0, -1.2) {$\vdots$};
 \node[input] (xn) at (0, -2.4) {$x_n$};
 
-% Dots between x3 and xn
-\node at (0, -1.6) {$\vdots$};
-
-% Bias node
-\node[input, fill=yellow!15] (b) at (2.5, -3.6) {$b$};
-
 % Summation node
-\node[sumnode] (sum) at (4, 0) {$\displaystyle\sum$};
+\node[sumnode] (sum) at (4, 0) {$\sum$};
 
-% Activation function node
+% Bias
+\node[bias] (b) at (4, -3.2) {$b$};
+
+% Activation
 \node[actnode] (act) at (7, 0) {$\sigma(\cdot)$};
 
-% Output node
+% Output
 \node[output] (y) at (9.5, 0) {$\hat{y}$};
 
-% Input-to-sum edges with weights
+% Weighted edges
 \draw[arr] (x1) -- node[weight, above] {$w_1$} (sum);
 \draw[arr] (x2) -- node[weight, above] {$w_2$} (sum);
-\draw[arr] (x3) -- node[weight, below] {$w_3$} (sum);
 \draw[arr] (xn) -- node[weight, below] {$w_n$} (sum);
 
 % Bias edge
@@ -81,13 +76,10 @@ $$
 \draw[arr] (act) -- (y);
 
 % Labels
-\node[above=0.3cm of x1, font=\small\bfseries] {Inputs};
-\node[above=0.3cm of sum, font=\small\bfseries] {Sum};
-\node[above=0.3cm of act, font=\small\bfseries] {Activation};
-\node[above=0.3cm of y, font=\small\bfseries] {Output};
-
-% Equation annotation
-\node[below=0.6cm of act, font=\small, text=black!70] {$\hat{y} = \sigma\!\left(\sum_{i=1}^{n} w_i x_i + b\right)$};
+\node[lbl, above=3mm of x1] {Inputs};
+\node[lbl, above=3mm of sum] {Sum};
+\node[lbl, above=3mm of act] {Activation};
+\node[lbl, above=3mm of y] {Output};
 
 \end{tikzpicture}
 \end{document}

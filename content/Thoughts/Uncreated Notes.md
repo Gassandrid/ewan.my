@@ -7,7 +7,6 @@ updated: 2026-01-09T11:31:13+02:00
 class:
   - note
 source:
-  - "[[Uncreated Notes]]"
 related:
 author:
 aliases:

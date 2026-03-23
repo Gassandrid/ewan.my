@@ -4,11 +4,16 @@ created_on: "[[10-29-2024]]"
 tags:
   - math/calculus/multivariable
   - university
-updated: 2026-01-29T10:44:57-05:00
+updated: 2026-03-19T11:18:06-04:00
 class:
   - note
 id: 15.9 - Jacobian
 ---
+
+> **local warping intuition**: the Jacobian captures how a tiny rectangle in $(u,v)$-space gets stretched, sheared, and rotated into a parallelogram in $(x,y)$-space. this works because nonlinear maps, when you zoom in far enough, look linear, so a small patch in $uv$ gets approximated by a linear transformation, and that transformation is exactly what the partial derivatives encode. the determinant of that linear map is the factor by which areas scale under the local distortion, so if $|J| = 3$, a small patch in $uv$ covers 3 times as much area in $xy$. everything else in the change of variables formula is just integrating that scaling factor over the whole region.
+
+![[jacobianIntuition.png]]
+
 Polar,  cylindrical, and spherical coordinates area form of substitution in multiple integrals. Let's recall how Polar works: 
 
 > [!Info] Sketch

@@ -1,6 +1,0 @@
-# Ars Contexta vault marker + config
-# This file identifies the directory as an Ars Contexta vault.
-# Do not delete — hooks only run when this file exists.
-
-git: true
-session_capture: true

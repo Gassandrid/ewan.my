@@ -16,7 +16,7 @@ aliases:
 date: 2026-01-21T11:22:50-05:00
 updated: 2026-01-21T18:31:21-05:00
 ---
-Probably one of the most fundamental building blocks to fields like [[Information Theory]] and later [[Variational Inference]]. In laymans terms, it states that for [[Convex Function]], the function of the average is less than or equal to the average of the function. This has deep implications in understanding expectations and variances in probabilistic systems.
+Probably one of the most fundamental building blocks to fields like [[Information|information theory]] and later [[Variational Inference]]. In laymans terms, it states that for [[Convex Function]], the function of the average is less than or equal to the average of the function. This has deep implications in understanding expectations and variances in probabilistic systems.
 
 ![[InequalityJensen.png]]
 

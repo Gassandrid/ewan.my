@@ -15,7 +15,7 @@ author:
 description:
 aliases:
 date: 2026-03-19T08:31:16-04:00
-updated: 2026-03-19T08:59:48-04:00
+updated: 2026-03-19T09:46:16-04:00
 ---
 
 Spearheaded by our very own [[Joshua Bongard]], the Resilient Machines Project is anohter attempt to solve the **reality gap**, instead by attempting to construct robots that understand how their body degrades, and adapts to it.
@@ -69,4 +69,18 @@ controllers are then evolved inside that self-model and transferred to the real 
 >
 > *Outline of the algorithm. The robot continuously cycles through action execution. (A and B) Self-model synthesis. The robot physically performs an action (A). Initially, this action is random; later, it is the best action found in (C). The robot then generates several self-models to match sensor data collected while performing previous actions (B). It does not know which model is correct. (C) Exploratory action synthesis. The robot generates several possible actions that disambiguate competing self-models. (D) Target behavior synthesis. After several cycles of (A) to (C), the currently best model is used to generate locomotion sequences through optimization. (E) The best locomotion sequence is executed by the physical device. (F) The cycle continues at step (B) to further refine models or at step (D) to create new behaviors.*
 
-*from [@bongardResilientMachinesContinuous2006]*
+from [@bongardResilientMachinesContinuous2006]
+
+### Result
+
+It is able to locomote! By developing its own world model and simulation.
+
+![](https://www.youtube.com/watch?v=x579QKA6fkY)
+
+Eventually, these advancements lead to **world models**, however a bit of a difficult story there!
+
+---
+
+## [[Multi Objective Optimization]]
+
+optimizing for multiple, often conflicting objectives simultaneously, typically producing a [[Pareto Front]] of trade-off solutions rather than a single optimum.

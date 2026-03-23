@@ -11,7 +11,7 @@ related:
   - "[[How To Read a Research Paper Effectively]]"
   - "[[The New Youtube Process]]"
   - "[[Setting Up the Idea of Captures]]"
-  - "[[Why uncreated notes don't work]]"
+  - "[[Thoughts/Uncreated Notes]]"
 author:
 description: extracting meaningful utility in the age of unengaged content consumption
 date: 2025-12-19
