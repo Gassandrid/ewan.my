@@ -21,7 +21,7 @@ the desire started as longevity and physical optimization ([[On Immortality|i do
 
 ---
 
-the answer turned out to be [[AMPA Receptor]] receptor positive allosteric modulators, which i stumbled into through the biophysics side of comp neuro. [[AMPA Receptor]] receptors mediate fast excitatory transmission, they're the primary driver of glutamate-induced depolarization and the initial trigger for long-term potentiation. a PAM increases the likelihood that an [[AMPA Receptor|AMPA]]-mediated signal leads to downstream calcium influx, which is the transaction that matters for learning. more calcium, stronger synaptic weights, better memory consolidation.
+the answer turned out to be [[AMPA Receptor]] receptor positive allosteric modulators, which i stumbled into through the biophysics side of comp neuro. [[AMPA Receptor]] receptors mediate fast excitatory transmission, they're the primary driver of glutamate-induced depolarization and the initial trigger for [[Long Term Potentiation]]. a PAM increases the likelihood that an [[AMPA Receptor|AMPA]]-mediated signal leads to downstream calcium influx, which is the transaction that matters for learning. more calcium, stronger synaptic weights, better memory consolidation.
 
 but raw signal gain isn't enough. you need plasticity to write the changes long-term, and you need noise filtering or you just amplify garbage. so the [[Substance Protocol|stack]] is three-pronged: [[TAK-653]] for signal gain ([[AMPA Receptor|AMPA]] PAM), [[ACD-856]] for plasticity (TrkB sensitization to BDNF), and [[Tropisetron]] for noise filtering (α7 nicotinic receptor agonist). think of it as overclocking RAM, improving the save-to-disk mechanism, and raising the signal-to-noise ratio simultaneously.
 
