@@ -83,6 +83,8 @@ you might think so, given that $K_{\infty}$ is [[Uncountably Infinite]]. BUT the
 
 ---
 
+## Measure
+
 A set $S$ is **measure zero** if it can be covered by a countable number of intervals whose total length is arbitrarily small.
 
 Discrete sets like $\{ 1,2,3,4,5 \}$ and $\mathbb{N}$, rationals, $K_{\infty}$ are all measure 0.
