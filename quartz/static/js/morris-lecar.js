@@ -55,9 +55,8 @@ const Theme = {
         toggle() {
           this._dark = !this._dark;
           document.documentElement.classList.toggle("light", !this._dark);
-          document.getElementById("theme-toggle").innerHTML = this._dark
-            ? "&#9789;"
-            : "&#9788;";
+          const el = document.getElementById("theme-toggle");
+          if (el) el.innerHTML = this._dark ? "&#9789;" : "&#9788;";
         },
         // Trajectory palette
         get trajColors() {
@@ -2773,11 +2772,12 @@ const Theme = {
             document.getElementById("help-overlay").classList.toggle("visible");
           });
 
-          document
-            .getElementById("theme-toggle")
-            .addEventListener("click", () => {
+          const themeToggle = document.getElementById("theme-toggle");
+          if (themeToggle) {
+            themeToggle.addEventListener("click", () => {
               this.toggleTheme();
             });
+          }
 
           document
             .getElementById("bifurc-close")

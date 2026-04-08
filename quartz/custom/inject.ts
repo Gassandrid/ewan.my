@@ -16,6 +16,9 @@ export function injectCustomPages(content: ProcessedContent[]): void {
     const tree = fromHtml(htmlString, { fragment: true })
 
     const vfile = new VFile("")
+    const cssclasses: string[] = []
+    if (pageDef.fullWidth) cssclasses.push("full-width")
+
     vfile.data = {
       slug: pageDef.slug as FullSlug,
       relativePath: `custom/${pageDef.slug}.tsx` as FilePath,
@@ -24,6 +27,7 @@ export function injectCustomPages(content: ProcessedContent[]): void {
         title: pageDef.title,
         tags: pageDef.tags ?? [],
         description: pageDef.description ?? "",
+        cssclasses,
       },
       text: stripHtml(htmlString),
       description: pageDef.description ?? "",

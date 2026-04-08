@@ -6,5 +6,6 @@ export interface CustomPageDef {
   tags?: string[]
   description?: string
   date?: Date
+  fullWidth?: boolean
   body: () => any
 }

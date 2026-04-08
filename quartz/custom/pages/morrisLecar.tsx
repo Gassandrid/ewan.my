@@ -5,6 +5,7 @@ const MorrisLecarPage: CustomPageDef = {
   slug: "Pages/morris-lecar" as FullSlug,
   title: "Morris-Lecar Phase Plane",
   tags: ["neuroscience", "simulation", "dynamical-systems"],
+  fullWidth: true,
   description:
     "(test site)Interactive Morris-Lecar phase plane explorer — nullclines, trajectories, bifurcations, and live simulation of a two-variable conductance-based neuron model.",
   body: () => (
