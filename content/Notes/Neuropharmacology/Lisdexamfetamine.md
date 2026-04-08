@@ -42,9 +42,9 @@ brain-regions:
   - "[[striatum]]"
 processes: []
 date: 2026-02-18T13:17:57-05:00
-updated: 2026-02-18T13:25:01-05:00
+updated: 2026-04-02T10:56:40-04:00
 ---
 
 Lisdexamfetamine is enzymatically cleaved by red blood cells into L-lysine and dextroamphetamine. prodrug that yields pure dextroamphetamine with no levoamphetamine component. That distinction matters: levoamphetamine drives peripheral effects, anxiety, and jitteriness. Without it, the profile is cleaner and more CNS-selective. The prodrug mechanism also creates a smooth, gradual onset and offset with no abrupt peak or crash, providing all-day coverage from morning dosing. Aside from the standard ADHD benefits; sustained attention, task engagement, motivation. a personally significant effect is increased talkativeness; being naturally silent to a problematic extent, the verbal fluency and social engagement boost is genuinely valuable. Vitamin C and acidifying agents reduce absorption by ionizing amphetamine in the gut; worth noting for timing relative to supplementation.
 
-Vitamin C reduces absorption, separate timing. Pure dextroamphetamine, none of the levo garbage.
+> Vitamin C reduces absorption, separate timing. Pure dextroamphetamine, none of the levo garbage.

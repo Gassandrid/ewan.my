@@ -1,6 +1,6 @@
 ---
 date: 2026-03-16T14:04:51-04:00
-updated: 2026-03-16T14:12:28-04:00
+updated: 2026-04-02T10:37:34-04:00
 tags:
   - math/probability/statistics
 class:
@@ -13,6 +13,7 @@ related:
 author:
 description:
 aliases:
+  - ARE
 ---
 
 A measure of the performance of two statistical procedures, either tests or estimators, as sample size $\lim_{ n \to \infty }$. Defined as the limit of the ratio $\frac{n_{2}}{n_{1}}$ needed for achieving statistical power/reciprocal ratio of their asymptotic variances.

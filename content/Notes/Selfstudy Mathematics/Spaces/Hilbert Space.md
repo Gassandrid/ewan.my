@@ -29,7 +29,7 @@ And, since any other vector in the plane can be expressed as some combination of
 
 ![[Screenshot 2025-06-17 at 2.22.07 PM.png]]
 
-Then they form an **orthogonal basis**
+Then they form an **[[Orthogonality|orthogonal]] basis**
 
 $$
 \hat{r},\hat{s}\text{  form an [[Orthogonality|orthogonal]] basis}

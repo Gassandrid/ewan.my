@@ -4,18 +4,18 @@ class:
   - note
 tags:
   - math/calculus/differential
-  - todo/math
   - math/chaos/dynamics
 source:
   - "[[Chaos Theory the language of (in)stability]]"
 related:
 author:
 date: 2025-09-12
-updated: 2026-02-08T08:03:54-05:00
+updated: 2026-04-02T10:35:49-04:00
 aliases:
   - Chaos Theory
 ---
-> An older, more uninformed summary of Chaos Theory, I still use it as the hub node,
+
+> An older, more uninformed summary of Chaos Theory, I still use it as the hub node for a catch all mention of Chaos Theory work. For the REAL stuff, see [[Chaos, Fractals, and Dynamical Systems]]
 
 ---
 
@@ -81,3 +81,5 @@ $$
 \dot{z} &= xy - \beta z
 \end{align}
 $$
+
+once again this is a very stub defeinition of an attractor, please see the [[Chaos, Fractals, and Dynamical Systems]] notes they are MUCH better!

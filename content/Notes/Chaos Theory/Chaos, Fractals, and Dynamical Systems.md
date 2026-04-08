@@ -30,7 +30,7 @@ related:
 author:
 description:
 date: 2026-01-13T10:07:23-05:00
-updated: 2026-02-12T14:23:23-05:00
+updated: 2026-04-02T10:34:48-04:00
 recurrence: DTSTART:20260113;FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20260601
 complete_instances:
   - 2026-01-13
@@ -49,6 +49,7 @@ Discrete and continuous dynamical systems, Julia sets, the Mandelbrot set, perio
 **Day 1:** [[Linear Systems]], [[Logistic Map]], [[The Worldwide Air-Transportation Network]](website)
 
 **Day 2:** [[Fixed Point Classification]]
+
 - [[Attracting fixed point]]
 - [[Repelling fixed point]]
 - [[Saddle fixed point]]

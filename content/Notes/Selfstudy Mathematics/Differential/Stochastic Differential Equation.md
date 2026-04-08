@@ -29,7 +29,7 @@ Where:
 
 - $a(X_t, t)$ is the drift term, representing the deterministic part of the equation.
 - $b(X_t, t)$ is the diffusion term, representing the intensity of the stochastic
-- $\frac{dW_t}{dt}$ is the derivative of a Wiener process (or Brownian motion), representing the random noise.
+- $\frac{dW_t}{dt}$ is the derivative of a Wiener process (or [[Brownian motion]]), representing the random noise.
 
 ---
 

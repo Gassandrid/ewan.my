@@ -7,7 +7,7 @@ tags:
 class:
   - note
 date: 2026-01-24T15:01:25-05:00
-updated: 2026-02-23T19:23:20-05:00
+updated: 2026-04-07T10:24:27-04:00
 ---
 - A new workflow strategy primarily thought to be useful for Daily notes, also inspired from [[Yana Log Notes]].
 	- yana uses it for paper notes, also biology notes.
@@ -16,6 +16,8 @@ updated: 2026-02-23T19:23:20-05:00
 	- sub ideas are also great, use sub bullet points as much as possible
 	- organizes ideas automatically, this kind of "replaces" tying one idea to another in a standardly written note
 - I would like to use for non daily note notes, there are some cases when studying non math stuff that it makes sense
+
+### When to Use what
 
 Main distinguisher of when to use bullet points over standard prose is when accumulation as a stack is done rather than one long writing session. For ideas thought of across the day, bullet points would be good in a daily note to jot those down to be extended apon later with sub points. But end of day summaries are not accumulated and instead written all at once, so normal prose paragraphs are fine.
 

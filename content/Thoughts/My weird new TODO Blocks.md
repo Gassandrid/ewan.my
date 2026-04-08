@@ -26,4 +26,6 @@ I just call this my Ref List, and thus any todo tags on a note ( that you might 
 
 ---
 
-NVM, I kind of just decided todo tags is enough for me. I still believe that [[Thoughts/Uncreated Notes|uncreated notes]] suck, but I just create them.
+>[!Warning] 
+>NVM, I kind of just decided todo tags is enough for me. I still believe that [[Thoughts/Uncreated Notes|uncreated notes]] suck, but I just create them.
+

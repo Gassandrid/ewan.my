@@ -8,6 +8,7 @@ title: Ewans Florilegium
 updated: 2025-12-19
 class: navigation
 ---
+
 <div>
 <svg
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -56,54 +57,6 @@ class: navigation
     />
   </g
   >
-  <metadata
-      id="metadata6"
-    >
-    <rdf:RkDF
-      >
-      <cc:Work
-        >
-        <dc:format
-          >image/svg+xml</dc:format
-        >
-        <dc:type
-            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-        />
-        <cc:license
-            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
-        />
-        <dc:publisher
-          >
-          <cc:Agent
-              rdf:about="http://openclipart.org/"
-            >
-            <dc:title
-              >Openclipart</dc:title
-            >
-          </cc:Agent
-          >
-        </dc:publisher
-        >
-      </cc:Work
-      >
-      <cc:License
-          rdf:about="http://creativecommons.org/licenses/publicdomain/"
-        >
-        <cc:permits
-            rdf:resource="http://creativecommons.org/ns#Reproduction"
-        />
-        <cc:permits
-            rdf:resource="http://creativecommons.org/ns#Distribution"
-        />
-        <cc:permits
-            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-        />
-      </cc:License
-      >
-    </rdf:RDF
-    >
-  </metadata
-  >
 </svg
 >
 </div>
@@ -112,7 +65,7 @@ class: navigation
 
 Hi, my name is Ewan. I'm a third-year Computer Science student at the [[University Of Vermont]] where my focus is [[Computational Neuroscience]], [[Mathematics]], and how brains and machines overlap. You can reach me via email or find me tinkering on my [[Saturn V Server Rack|homelab]].
 
-I'm currently reading [[Gödel, Escher, Bach]] / my [[Theoretical Neuroscience Textbook]], and conducting independent interpretability research on [[Continuous Thought Machines]]. I spend most of my time analyzing how my brain evolves through the content it consumes and output I produce - modeling 2 years of git commit across my **Obsidian vault** alongside **ActivityWatch** computer usage data, noisy but interesting EEG equipment, and eye tracking to map the semantic phase space of human cognition.
+I'm currently reading [[Gödel, Escher, Bach]] / my [[Theoretical Neuroscience Textbook]], and attempting to model human [[Choosing and Consuming Content Efficiently|content consumption]] via a [[Partially Observable Markov Decision Process|POMDP]] approach. I spend most of my time analyzing how my brain evolves through the content it consumes and output I produce - modeling 2 years of git commit across my **Obsidian vault** alongside **ActivityWatch** computer usage data, noisy but interesting EEG equipment, and eye tracking to map the semantic phase space of human cognition.
 
 I maintain a sprawling [[Saturn V Server Rack|homelab]] for LLM inference/interpretability and **[[On Capturing Personal Data|quantified self]] infrastructure**, I consider myself a competitive typer at 189wpm in combination with keyboard-centric computer interaction(**yes I use [[Neovim|vim]] btw**). I track everything: vault activity, commits, health biomarkers, cognitive patterns$\dots$ because I believe measurement is the first step toward optimization. I'm deeply interested in [[Longevity]], [[Transhumanism]], and novel techniques for biologically plausible machine learning algorithms(whether that be via a temporal dimension, [[Active Inference]]/local autonomy, or both). As a side interest/pursuit of neuroscience, I also study [[Neuropharmacology]] and [[Nootropic Compounds.base|Nootropic Compounds]] for cognitive enhancement/biohacking.
 

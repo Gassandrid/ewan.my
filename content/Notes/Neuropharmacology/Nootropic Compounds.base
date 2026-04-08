@@ -13,7 +13,6 @@ views:
       - brain-regions
       - benefits
       - stacks-well-with
-      - file.name
     sort:
       - property: image
         direction: ASC

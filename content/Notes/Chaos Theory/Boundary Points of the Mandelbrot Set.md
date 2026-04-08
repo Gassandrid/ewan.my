@@ -42,7 +42,7 @@ $$
 taking the limit $\epsilon \to 0$ washes out $C$, so the **box-counting dimension** of a bounded set $S \subseteq \mathbb{R}^n$ is:
 
 $$
-d = \lim_{ \epsilon \to 0 } \frac{\ln(\mathbb{N}(\epsilon))}{\ln\left( \frac{1}{\epsilon} \right)}
+d = \lim_{ \epsilon \to 0 } \frac{\ln(N(\epsilon))}{\ln\left( \frac{1}{\epsilon} \right)}
 $$
 
 The *slope* of this plot is the box counting dimension.
