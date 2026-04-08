@@ -462,7 +462,7 @@ export async function handleBuild(argv) {
             res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" })
             res.end(content)
             const statusString = styleText("green", `[200]`)
-            console.log(statusString + styleText("grey", ` ${argv.baseDir}${fp}`))
+            console.log(statusString + styleText("gray", ` ${argv.baseDir}${fp}`))
             return release()
           }
         }

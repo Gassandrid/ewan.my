@@ -1,0 +1,183 @@
+@use "./variables.scss" as *;
+
+.chart-container {
+  margin: 1.5rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.chart-svg-wrapper {
+  width: 100%;
+  position: relative;
+  padding: 0.75rem 0.75rem 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+.chart-axis {
+  line,
+  path {
+    stroke: var(--gray);
+    stroke-width: 0.5;
+  }
+
+  text {
+    fill: var(--darkgray);
+    font-family: var(--codeFont);
+    font-size: 0.7rem;
+  }
+}
+
+.chart-grid {
+  line {
+    stroke: var(--lightgray);
+    stroke-opacity: 0.7;
+    stroke-dasharray: 2, 4;
+  }
+
+  path {
+    display: none;
+  }
+}
+
+.chart-title {
+  font-family: var(--headerFont);
+  font-size: 0.9rem;
+  font-weight: 600;
+  fill: var(--dark);
+  text-anchor: middle;
+}
+
+.chart-axis-label {
+  font-family: var(--bodyFont);
+  font-size: 0.75rem;
+  fill: var(--gray);
+}
+
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  padding: 0.4rem 0.65rem;
+  font-family: var(--codeFont);
+  font-size: 0.75rem;
+  color: var(--darkgray);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+  white-space: nowrap;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .tooltip-label {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.15rem;
+  }
+
+  .tooltip-value {
+    color: var(--secondary);
+  }
+}
+
+.chart-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--gray);
+}
+
+.chart-loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--lightgray);
+  border-top-color: var(--secondary);
+  border-radius: 50%;
+  animation: chart-spin 0.8s linear infinite;
+}
+
+@keyframes chart-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chart-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--gray);
+  font-family: var(--codeFont);
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.chart-caption {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+  font-style: italic;
+  text-align: center;
+  border-top: 1px solid var(--lightgray);
+
+  &:empty {
+    display: none;
+  }
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.25rem 0.75rem 0.75rem;
+  flex-wrap: wrap;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--codeFont);
+  font-size: 0.7rem;
+  color: var(--darkgray);
+}
+
+.chart-legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+@media all and ($mobile) {
+  .chart-container {
+    margin: 1rem -0.5rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .chart-svg-wrapper {
+    padding: 0.5rem 0.25rem 0;
+  }
+}

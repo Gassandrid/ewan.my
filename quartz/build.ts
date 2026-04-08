@@ -13,6 +13,7 @@ import cfg from "../quartz.config"
 import { FilePath, joinSegments, slugifyFilePath } from "./util/path"
 import chokidar from "chokidar"
 import { ProcessedContent } from "./plugins/vfile"
+import { injectCustomPages } from "./custom/inject"
 import { Argv, BuildCtx } from "./util/ctx"
 import { glob, toPosixPath } from "./util/glob"
 import { trace } from "./util/trace"
@@ -265,6 +266,8 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
       .filter((file) => file.type === "markdown")
       .map((file) => file.content),
   )
+
+  injectCustomPages(processedFiles)
 
   let emittedFiles = 0
   for (const emitter of cfg.plugins.emitters) {

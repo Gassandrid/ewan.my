@@ -15,9 +15,10 @@
     .breadcrumb-element {
       display: none;
 
-      // Show first and last item only on mobile
+      // Show first, overflow (...), and last item on mobile
       &:first-child,
-      &:last-child {
+      &:last-child,
+      &.breadcrumb-overflow {
         display: flex;
       }
     }

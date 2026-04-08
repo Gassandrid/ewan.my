@@ -5,8 +5,10 @@ import { QuartzLogger } from "../util/log"
 import { trace } from "../util/trace"
 import { BuildCtx } from "../util/ctx"
 import { styleText } from "util"
+import { injectCustomPages } from "../custom/inject"
 
 export async function emitContent(ctx: BuildCtx, content: ProcessedContent[]) {
+  injectCustomPages(content)
   const { argv, cfg } = ctx
   const perf = new PerfTimer()
   const log = new QuartzLogger(ctx.argv.verbose)

@@ -1,6 +1,7 @@
 import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { FullPageLayout } from "../../cfg"
 import { Content, BaseSearchBar, BaseViewSelector } from "../../components"
+import BasesNav from "../../components/_BasesNav"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { QuartzComponentProps } from "../../components/types"
 import { QuartzEmitterPlugin } from "../types"
@@ -62,7 +63,7 @@ export const BasePage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpts)
     ...defaultContentPageLayout,
     ...userOpts,
     pageBody: Content(),
-    beforeBody: [BaseViewSelector(), BaseSearchBar()],
+    beforeBody: [BasesNav(), BaseViewSelector(), BaseSearchBar()],
     afterBody: [],
   }
 
