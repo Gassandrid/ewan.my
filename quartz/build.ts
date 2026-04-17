@@ -14,6 +14,7 @@ import { FilePath, joinSegments, slugifyFilePath } from "./util/path"
 import chokidar from "chokidar"
 import { ProcessedContent } from "./plugins/vfile"
 import { injectCustomPages } from "./custom/inject"
+import { injectMarimoPages } from "./custom/injectMarimo"
 import { Argv, BuildCtx } from "./util/ctx"
 import { glob, toPosixPath } from "./util/glob"
 import { trace } from "./util/trace"
@@ -267,6 +268,7 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
       .map((file) => file.content),
   )
 
+  await injectMarimoPages(processedFiles, ctx.argv)
   injectCustomPages(processedFiles)
 
   let emittedFiles = 0

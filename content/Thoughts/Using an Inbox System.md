@@ -10,7 +10,7 @@ author:
 description:
 aliases:
 date: 2026-01-12T11:01:09-05:00
-updated: 2026-04-02T10:43:23-04:00
+updated: 2026-04-16T12:04:38-04:00
 ---
 
 I was a little on the fence about this idea, given that I already have so many systems for dealing with "capture" ideas. I have been working on using [[2025-12-27-2345 new fragment system|fragments]] as a means to capture timeseries ideas, and have an enormous, ridiculous "todo" system that I have been meaning to clean out for forever.
@@ -32,3 +32,6 @@ It is the simplest way to manage things to do, but there is one thing I neglecte
 For something to be in the inbox, it has to be completely empty, like barely even started. For the inbox system to work as intended, you need to *accept writing simple notes for complex topics*. A great example today was finally writing the [[Kuramoto model]] note. my explanation was shallow, and frankly doesnt really tell you anything about the model itself.
 
 However, to really leverage the effectiveness of obsidian, you need to accept doing this. Instead of writing the whole final note in one sitting before marking it as done, it will always be done the moment you move it out of the inbox. It will be through the accumulation of backlinks and returns to the topic organically that you find ways to enrich.  For the [[Kuramoto model]], this was reading the paper [[pathakBiomimeticModelCorticostriatal2024|Biomimetic model of corticostriatal micro-assemblies discovers new neural code]], and realizing that it used a [[Kuramoto model|Kuramoto order parameter]]. this consituted a backlink, and a return to the topic with some updating about its use in [[Neural Circuit]] models.
+
+>[!Warning] Update [[04-16-2026]]
+> made a page on [[Write Stub Notes]] now, it codifies exactly what is said above with a bit more detail.

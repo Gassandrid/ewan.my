@@ -1,7 +1,7 @@
 ---
 date: 2026-02-01T16:19:43-05:00
 created_on: "[[02-01-2026]]"
-updated: 2026-03-11T20:48:08-07:00
+updated: 2026-04-16T12:26:49-04:00
 class:
   - note
 tags:
@@ -98,3 +98,5 @@ $$
 ## Biological Interpretations
 
 What makes Attractor Networks important in [[Computational Neuroscience]]. We know that neural networks can implement any nonlinear dynamical system, so by extension this includes all attractor networks. One of the biggest goals of [[Computational Neuroscience]] is determining which attractors are important in the pursuit of explaining biological systems.
+
+[[Neural Integrator]]s are a kind of line attractor, used in oculamotyor system to maintain your gaze. Think about turning your head while looking at one thing.

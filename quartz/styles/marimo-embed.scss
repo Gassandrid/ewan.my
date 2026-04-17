@@ -1,0 +1,17 @@
+// Marimo notebook iframe — standard content column, auto-height.
+
+.marimo-notebook-page {
+  margin-top: 1.5rem;
+
+  .marimo-iframe {
+    display: block;
+    width: 100%;
+    // Start tall enough to avoid a flash of small iframe; auto-resizes via JS
+    height: 80vh;
+    min-height: 400px;
+    border: none;
+    border-radius: 6px;
+    // Subtle border to visually separate the notebook from the page chrome
+    outline: 1px solid var(--lightgray);
+  }
+}

@@ -2,6 +2,7 @@
 created_on: "[[07-28-2025]]"
 tags:
   - seed
+  - journal/workflow
 date: 2025-07-28
 updated: 2026-01-09T11:31:13+02:00
 class:

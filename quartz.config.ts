@@ -94,7 +94,7 @@ const config: QuartzConfig = {
       Plugin.RunPythonPlugin(),
       Plugin.ChartPlugin(),
       Plugin.MorrisLecarPlugin(),
-      Plugin.SmoothScrollPlugin(),
+      // Plugin.SmoothScrollPlugin(),
       Plugin.NotebookEmbedding(),
       Plugin.TikzJax({ showConsole: false }),
       // Staticrypt(),
@@ -122,7 +122,8 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
+      // Plugin.MarimoNotebook(),
     ],
   },
 }

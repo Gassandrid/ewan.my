@@ -1,7 +1,11 @@
 ---
 title: Chart Demo
 draft: false
+date: 2026-03-28T14:04:15-04:00
+updated: 2026-04-08T16:36:53-04:00
 ---
+
+dw about this,,,,, just tryna get graphs rendered on the frontend
 
 ## HRV Time Series (Line)
 

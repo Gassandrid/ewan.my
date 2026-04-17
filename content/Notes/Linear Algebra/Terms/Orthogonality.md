@@ -24,7 +24,7 @@ class:
 
 This can be done in python by using numpy:
 
-```python-r
+```python
 import numpy as np
 
 A = np.array([1, 2, 3])

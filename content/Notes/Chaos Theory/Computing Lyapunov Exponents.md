@@ -14,7 +14,7 @@ author:
 description:
 aliases:
 date: 2026-04-07T10:13:22-04:00
-updated: 2026-04-07T11:15:15-04:00
+updated: 2026-04-09T11:09:36-04:00
 ---
 
 $$
@@ -91,3 +91,5 @@ and the $i^{th}$ largest [[Lyapunov Exponents|Lyapunov Exponent]] after $n$ step
 $$
 \frac{1}{N} \sum_{j=1}^{N}  \ln ||\vec{y}_{i}^{j}||
 $$
+
+![[computingLyapunov.png]]

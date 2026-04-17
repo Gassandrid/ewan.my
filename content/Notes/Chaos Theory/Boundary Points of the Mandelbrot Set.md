@@ -8,6 +8,7 @@ related:
 author:
 description:
 aliases:
+  - box counting
 date: 2026-03-24T10:24:50-04:00
 updated: 2026-03-26T11:18:15-04:00
 ---

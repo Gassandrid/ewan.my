@@ -1,6 +1,6 @@
 ---
 date: 2026-03-30T18:44:51-04:00
-updated: 2026-04-08T10:23:44-04:00
+updated: 2026-04-16T12:04:23-04:00
 class:
   - note
 created_on: "[[03-30-2026]]"
@@ -273,6 +273,9 @@ I use **primary** as it was easiest to make in [[My Color Palette]], I would als
 [[Using an Inbox System]] - this is by far the simplest and most ideal way to manage tasks. I think that [[Tasknotes in my workflow]] no longer works for me, as it is simply overcomplex and reduces productivity, I dont need 6 kanban boards for my kind of work.
 
 Please take note that for an inbox system to work, you must utilize [[Using an Inbox System#04-02-2026 Stub Notes|stub notes]] to their fullest. Don't be afraid of "letting an idea go", as it will resurface organically in your own exploration and accumulation of novel ideas. Also stub notes will resurface in [[Passive Obsidian Worktime]].
+
+>[!Warning] Update [[04-16-2026]]
+> made a page on [[Write Stub Notes]] now, it codifies exactly what is said above with a bit more detail.
 
 - this is also the same motivation behind the idea of excessive [[Bullet Point Notation]].
 	- bullet point notes convey all the information you need with less words, but also bring a hierarchical approach to the note itself

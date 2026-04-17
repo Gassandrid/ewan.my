@@ -6,8 +6,10 @@ import { trace } from "../util/trace"
 import { BuildCtx } from "../util/ctx"
 import { styleText } from "util"
 import { injectCustomPages } from "../custom/inject"
+import { injectMarimoPages } from "../custom/injectMarimo"
 
 export async function emitContent(ctx: BuildCtx, content: ProcessedContent[]) {
+  await injectMarimoPages(content, ctx.argv)
   injectCustomPages(content)
   const { argv, cfg } = ctx
   const perf = new PerfTimer()

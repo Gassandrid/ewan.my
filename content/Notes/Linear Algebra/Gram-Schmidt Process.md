@@ -18,10 +18,10 @@ aliases:
   - Gram-Schmidt
   - Gram Schmidt
 date: 2026-04-07T10:41:43-04:00
-updated: 2026-04-07T10:50:26-04:00
+updated: 2026-04-16T23:35:20-04:00
 ---
 
-A procedure for constructing an [[Orthogonality|orthonormal]] basis from a set of linearly independent vectors. At each step, subtract off component of new vector that lies along all previously accepted directions.
+procedure for constructing an [[Orthogonality|orthonormal]] basis from a set of linearly independent vectors. At each step, subtract off component of new vector that lies along all previously accepted directions.
 
 ## Algorithm
 
@@ -67,4 +67,4 @@ $$
 
 The new orthonormal basis $\hat{w}_i^n = \hat{y}_i^n$ is used as input for the next step, and $r_i^n = \|\vec{y}_i^n\|$ feeds into the running average for $\lambda_i$.
 
-This iterative re-orthogonalization prevents the numerical collapse that would otherwise occur as the most-expanding direction dominates all vectors.
+ iterative re-orthogonalization prevents the numerical collapse that would otherwise occur as the most-expanding direction dominates all vectors.
