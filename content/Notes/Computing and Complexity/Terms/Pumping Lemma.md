@@ -1,6 +1,5 @@
 ---
 title: Pumping Lemma
-created_on: "[[02-20-2025]]"
 tags:
   - cs/automata
   - generated

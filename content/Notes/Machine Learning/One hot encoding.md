@@ -3,7 +3,6 @@ date: 2026-03-18T09:14:18-04:00
 updated: 2026-03-18T09:34:06-04:00
 class:
   - note
-created_on: "[[03-18-2026]]"
 tags:
   - cs/ai/perceptron
 source:

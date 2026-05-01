@@ -1,6 +1,5 @@
 ---
 id: Electrodes
-created_on: "[[04-23-2025]]"
 aliases: []
 tags:
   - todo/neuro

@@ -1,6 +1,5 @@
 ---
 date: 2024-12-02
-created_on: "[[12-02-2024]]"
 id: 16.8 - Stokes' Theorem
 tags:
   - math/calculus/multivariable

@@ -1,6 +1,5 @@
 ---
 id: Eulers Method
-created_on: "[[10-02-2025]]"
 aliases: []
 tags:
   - math/calculus/differential/ode

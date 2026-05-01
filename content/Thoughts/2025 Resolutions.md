@@ -1,6 +1,5 @@
 ---
 date: 2024-12-24
-created_on: "[[12-24-2024]]"
 updated: 2025-07-26
 title: 2025 Resolutions
 tags:

@@ -1,6 +1,5 @@
 ---
 id: Day 11 - Pushdown Automata
-created_on: "[[03-18-2025]]"
 aliases: []
 tags:
   - cs/theory

@@ -1,6 +1,5 @@
 ---
 date: 2025-11-17
-created_on: "[[11-17-2025]]"
 updated: 2025-11-18
 tags:
   - university

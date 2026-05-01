@@ -1,6 +1,5 @@
 ---
 date: 2024-11-25
-created_on: "[[11-25-2024]]"
 tags:
   - OCD
   - sapling

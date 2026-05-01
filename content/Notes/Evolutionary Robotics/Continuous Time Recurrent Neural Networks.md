@@ -1,6 +1,5 @@
 ---
 id: Continuous Time Recurrent Neural Networks
-created_on: "[[02-05-2026]]"
 aliases:
   - CTRNNs
   - CTRNN

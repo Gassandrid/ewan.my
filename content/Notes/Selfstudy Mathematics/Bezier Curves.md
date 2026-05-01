@@ -1,5 +1,4 @@
 ---
-created_on: "[[07-09-2025]]"
 tags:
   - cs/graphics
   - math/splines/bezier

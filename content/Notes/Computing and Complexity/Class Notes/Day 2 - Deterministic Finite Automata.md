@@ -1,6 +1,5 @@
 ---
 id: Day 2
-created_on: "[[01-16-2025]]"
 aliases:
   - Pigeonhole Principle
 tags:

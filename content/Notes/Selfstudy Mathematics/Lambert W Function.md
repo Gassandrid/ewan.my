@@ -1,6 +1,5 @@
 ---
 id: Lambert W Function
-created_on: "[[06-11-2025]]"
 aliases: []
 tags:
   - math/complex

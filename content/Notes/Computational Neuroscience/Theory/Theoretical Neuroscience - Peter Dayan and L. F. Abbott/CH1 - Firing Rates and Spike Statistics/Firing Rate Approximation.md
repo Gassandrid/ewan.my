@@ -1,7 +1,6 @@
 ---
 id: Firing Rate Approximation
-created_on: "[[04-11-2025]]"
-aliases: 
+aliases:
 tags:
   - comp-neuro
   - cs/python

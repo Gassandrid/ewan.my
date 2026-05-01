@@ -1,6 +1,5 @@
 ---
 title: Cloudflare Tunnels - The temporary solution
-created_on: "[[03-21-2025]]"
 date: 2025-03-21
 updated: 2026-03-13T14:00:18-07:00
 tags:

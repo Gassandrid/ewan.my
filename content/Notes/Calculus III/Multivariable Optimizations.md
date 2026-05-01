@@ -1,6 +1,5 @@
 ---
 id: 14.7 - Multivariable Optimizations
-created_on: "[[12-12-2024]]"
 aliases:
 tags:
   - math/calculus/multivariable

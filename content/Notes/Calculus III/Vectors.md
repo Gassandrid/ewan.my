@@ -1,5 +1,4 @@
 ---
-created_on: "[[09-04-2024]]"
 tags:
   - math
   - university

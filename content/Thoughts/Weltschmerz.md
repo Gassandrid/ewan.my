@@ -1,6 +1,5 @@
 ---
 id: Weltschmerz
-created_on: "[[06-26-2025]]"
 aliases: []
 tags:
   - seed

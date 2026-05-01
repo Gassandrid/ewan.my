@@ -5,7 +5,6 @@ tags:
   - math/probability/statistics
 class:
   - note
-created_on: "[[03-16-2026]]"
 source:
   - "[[HealthTRAC]]"
   - https://people.eecs.berkeley.edu/~jordan/courses/210B-spring07/lectures/stat210b_lecture_19.pdf

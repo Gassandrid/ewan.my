@@ -1,6 +1,5 @@
 ---
 date: 2024-10-03
-created_on: "[[10-03-2024]]"
 tags:
   - projects/dars
 updated: 2026-02-10T19:19:11-05:00

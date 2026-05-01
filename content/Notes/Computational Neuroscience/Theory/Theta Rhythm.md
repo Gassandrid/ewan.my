@@ -1,6 +1,5 @@
 ---
 id: Theta Rhythm - A memory clock
-created_on: "[[02-03-2025]]"
 aliases:
 tags:
   - comp-neuro/theory
@@ -98,7 +97,7 @@ But when this animal starts engaging in an activity such as running or for the s
 
 > While the specifics are up for discussion, [[Artem Kirsanov|Artem]] seeks to make the argument that the central purpose of **theta rhythm** is to provide a computational mechanism to **construct** and **retrieve** memory traces.
 
-For the purpose of explaining what he means here, let's think of a [[Memory]] as a **temporal** sequence of neuronal patterns activating one after another. Each one of these patterns is a **collection** of neuronal assemblies, which together form an **integrated representation** of the world.
+For the purpose of explaining what he means here, let's think of a [[Notes/Computational Neuroscience/Theory/Memory]] as a **temporal** sequence of neuronal patterns activating one after another. Each one of these patterns is a **collection** of neuronal assemblies, which together form an **integrated representation** of the world.
 
 ![[Screenshot 2025-04-05 at 2.43.48 PM.png]]
 

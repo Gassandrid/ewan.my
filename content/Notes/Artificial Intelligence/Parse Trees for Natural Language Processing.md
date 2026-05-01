@@ -1,6 +1,5 @@
 ---
 id: Parse Trees for Natural Language Processing
-created_on: "[[08-12-2025]]"
 aliases:
   - Syntax Tree
 tags:

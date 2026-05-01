@@ -1,8 +1,8 @@
 ---
-created_on: "[[01-24-2026]]"
 class:
   - note
-tags: [journal/workflow]
+tags:
+  - journal/workflow
 source:
 related:
 author:

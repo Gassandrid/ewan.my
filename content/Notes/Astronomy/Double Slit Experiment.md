@@ -1,6 +1,5 @@
 ---
 id: Double Slit Experiment
-created_on: "[[09-29-2025]]"
 aliases: []
 tags:
   - astronomy

@@ -1,6 +1,5 @@
 ---
 date: 2024-12-10
-created_on: "[[12-10-2024]]"
 tags:
   - math
   - seed

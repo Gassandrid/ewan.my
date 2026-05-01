@@ -1,6 +1,5 @@
 ---
 date: 2025-02-11
-created_on: "[[02-11-2025]]"
 updated: 2025-03-27
 tags:
   - cs/theory

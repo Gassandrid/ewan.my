@@ -1,5 +1,4 @@
 ---
-created_on: "[[10-04-2024]]"
 tags:
   - philosophy
   - seed

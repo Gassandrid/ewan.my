@@ -1,6 +1,5 @@
 ---
 id: Formalizing an optimal Codenames Pictures strategy using Information Theory
-created_on: "[[09-24-2025]]"
 aliases: []
 tags:
   - math/information

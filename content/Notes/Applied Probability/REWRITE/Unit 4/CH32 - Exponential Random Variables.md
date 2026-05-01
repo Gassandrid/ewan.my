@@ -1,6 +1,5 @@
 ---
 date: 2025-04-07
-created_on: "[[04-07-2025]]"
 updated: 2025-06-21
 tags:
   - math/probability

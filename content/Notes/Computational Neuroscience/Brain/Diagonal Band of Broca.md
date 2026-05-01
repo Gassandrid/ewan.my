@@ -1,5 +1,4 @@
 ---
-created_on: "[[04-14-2025]]"
 tags:
   - todo/neuro
   - comp-neuro/brain/region

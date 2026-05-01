@@ -1,6 +1,5 @@
 ---
 date: 2025-07-09
-created_on: "[[07-09-2025]]"
 updated: 2025-07-11
 tags:
   - math/topology

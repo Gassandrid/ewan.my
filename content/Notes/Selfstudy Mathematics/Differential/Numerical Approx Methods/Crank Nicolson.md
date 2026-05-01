@@ -1,5 +1,4 @@
 ---
-created_on: "[[10-02-2025]]"
 class:
   - note
 tags:

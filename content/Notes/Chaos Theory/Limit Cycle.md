@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[03-05-2026]]"
 tags:
   - math/chaos/cycles
 source:

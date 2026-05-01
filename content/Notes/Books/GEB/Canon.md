@@ -1,6 +1,5 @@
 ---
 id: Canon
-created_on: "[[08-14-2025]]"
 aliases: []
 tags:
   - seed

@@ -1,6 +1,5 @@
 ---
 date: 2025-10-28
-created_on: "[[10-28-2025]]"
 updated: 2025-10-28
 class:
   - note

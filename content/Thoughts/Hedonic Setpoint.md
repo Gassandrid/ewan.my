@@ -1,7 +1,6 @@
 ---
 id: Hedonic Setpoint
-created_on: "[[02-27-2025]]"
-aliases: 
+aliases:
 tags:
   - philosophy
   - transhumanism

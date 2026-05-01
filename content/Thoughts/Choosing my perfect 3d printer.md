@@ -1,6 +1,5 @@
 ---
 title: Choosing my perfect 3d printer
-created_on: "[[01-12-2025]]"
 date: 2025-01-12
 updated: 2025-08-21
 tags:

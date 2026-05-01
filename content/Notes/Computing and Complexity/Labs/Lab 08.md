@@ -1,6 +1,5 @@
 ---
 id: Lab 08
-created_on: "[[04-01-2025]]"
 aliases: []
 tags:
   - cs/theory

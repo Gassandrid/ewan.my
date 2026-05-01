@@ -1,7 +1,6 @@
 ---
 id: Reduced Echelon Form
-created_on: "[[01-22-2025]]"
-aliases: 
+aliases:
 tags:
   - math/linear-algebra
 date: 2025-01-22

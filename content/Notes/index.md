@@ -1,6 +1,5 @@
 ---
 date: 2024-11-02
-created_on: "[[11-02-2024]]"
 title: Rhizomatic
 updated: 2026-02-03T15:33:08-05:00
 ---

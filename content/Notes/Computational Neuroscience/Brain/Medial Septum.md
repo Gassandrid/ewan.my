@@ -1,7 +1,6 @@
 ---
 id: Medial Septum
-created_on: "[[03-24-2025]]"
-aliases: 
+aliases:
 tags:
   - comp-neuro
   - biology

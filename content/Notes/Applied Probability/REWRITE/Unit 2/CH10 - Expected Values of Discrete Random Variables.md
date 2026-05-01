@@ -1,6 +1,5 @@
 ---
 id: CH10 - Expected Values of Discrete Random Variables
-created_on: "[[02-07-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

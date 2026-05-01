@@ -3,7 +3,6 @@ date: 2026-02-12T13:39:20-05:00
 updated: 2026-02-12T15:38:43-05:00
 class:
   - note
-created_on: "[[02-12-2026]]"
 tags:
   - comp-neuro/models
   - math/chaos/dynamics

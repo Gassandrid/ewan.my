@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[03-18-2026]]"
 tags:
   - cs/ai/activation
 source:

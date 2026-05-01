@@ -1,6 +1,5 @@
 ---
 date: 2024-12-28
-created_on: "[[12-28-2024]]"
 updated: 2025-02-24
 tags:
   - OCD

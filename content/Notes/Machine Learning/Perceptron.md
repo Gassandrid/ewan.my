@@ -4,7 +4,6 @@ updated: 2026-03-19T15:31:57-04:00
 class:
   - note
   - lecture
-created_on: "[[03-18-2026]]"
 tags:
   - university
   - cs/ai/perceptron

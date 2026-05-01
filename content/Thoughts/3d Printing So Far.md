@@ -1,6 +1,5 @@
 ---
 title: 3d Printing So Far
-created_on: "[[03-12-2025]]"
 date: 2025-03-12
 updated: 2025-03-24
 ---

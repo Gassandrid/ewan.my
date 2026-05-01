@@ -2,7 +2,6 @@
 class:
   - note
   - website
-created_on: "[[02-12-2026]]"
 tags:
   - comp-neuro/theory
   - math/chaos/bifurcation

@@ -1,0 +1,368 @@
+{
+  "success": true,
+  "clones": [
+    {
+      "fileA": "Notes/Statistics/.garden/templates/default/_static/out.js",
+      "startA": 40,
+      "fileB": "Notes/Statistics/.garden/templates/default/_static/script.js",
+      "startB": 36,
+      "lines": 19,
+      "tokens": 0
+    },
+    {
+      "fileA": "Notes/Statistics/.garden/templates/default/_static/out.js",
+      "startA": 58,
+      "fileB": "Notes/Statistics/.garden/templates/default/_static/script.js",
+      "startB": 54,
+      "lines": 39,
+      "tokens": 0
+    },
+    {
+      "fileA": "Notes/Statistics/.garden/templates/default/_static/out.js",
+      "startA": 98,
+      "fileB": "Notes/Statistics/.garden/templates/default/_static/script.js",
+      "startB": 94,
+      "lines": 26,
+      "tokens": 0
+    },
+    {
+      "fileA": "Notes/Statistics/.garden/templates/default/_static/out.js",
+      "startA": 124,
+      "fileB": "Notes/Statistics/.garden/templates/default/_static/script.js",
+      "startB": 120,
+      "lines": 41,
+      "tokens": 0
+    },
+    {
+      "fileA": "Private/Obisian Config Backup/.obsidian/plugins/multi-state-checkbox-switcher/main.js",
+      "startA": 147,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/multi-state-checkbox-switcher/main.js",
+      "startB": 113,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "Notes/Algorithm Design and Analysis/Homework/temp.tex",
+      "startA": 1,
+      "fileB": "Notes/Algorithm Design and Analysis/Homework/temp2.tex",
+      "startB": 1,
+      "lines": 273,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/various-complements/styles.css",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/various-complements/styles.css",
+      "startB": 1,
+      "lines": 30,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/various-complements/styles.css",
+      "startA": 43,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/various-complements/styles.css",
+      "startB": 39,
+      "lines": 40,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/various-complements/styles.css",
+      "startA": 89,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/various-complements/styles.css",
+      "startB": 84,
+      "lines": 106,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/smart-connections/styles.css",
+      "startA": 766,
+      "fileB": ".obsidian/plugins/smart-connections/styles.css",
+      "startB": 267,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/smart-connections/styles.css",
+      "startA": 780,
+      "fileB": ".obsidian/plugins/smart-connections/styles.css",
+      "startB": 282,
+      "lines": 31,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/persistent-graph/main.js",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-relative-line-numbers/main.js",
+      "startB": 1,
+      "lines": 52,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/omnisearch/styles.css",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/omnisearch/styles.css",
+      "startB": 1,
+      "lines": 135,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-zotero-desktop-connector/styles.css",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-zotero-desktop-connector/styles.css",
+      "startB": 1,
+      "lines": 238,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-paste-image-rename/main.js",
+      "startA": 25,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/multi-state-checkbox-switcher/main.js",
+      "startB": 9,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-paste-image-rename/main.js",
+      "startA": 38,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-relative-line-numbers/main.js",
+      "startB": 28,
+      "lines": 23,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-paste-image-rename/main.js",
+      "startA": 726,
+      "fileB": ".obsidian/plugins/persistent-graph/main.js",
+      "startB": 209,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-paste-image-rename/main.js",
+      "startA": 854,
+      "fileB": ".obsidian/plugins/obsidian-paste-image-rename/main.js",
+      "startB": 290,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-latex-suite/styles.css",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-latex-suite/styles.css",
+      "startB": 1,
+      "lines": 198,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-latex-suite/styles.css",
+      "startA": 212,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-latex-suite/styles.css",
+      "startB": 193,
+      "lines": 41,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-hider/styles.css",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-hider/styles.css",
+      "startB": 1,
+      "lines": 66,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-hide-window-controls/main.js",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-hide-window-controls/main.js",
+      "startB": 1,
+      "lines": 18,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-git/styles.css",
+      "startA": 38,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-git/styles.css",
+      "startB": 21,
+      "lines": 47,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-git/styles.css",
+      "startA": 86,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-git/styles.css",
+      "startB": 64,
+      "lines": 82,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-git/styles.css",
+      "startA": 541,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-git/styles.css",
+      "startB": 562,
+      "lines": 60,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/obsidian-git/obsidian_askpass.sh",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-git/obsidian_askpass.sh",
+      "startB": 1,
+      "lines": 23,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/jupymd/styles.css",
+      "startA": 117,
+      "fileB": ".obsidian/plugins/jupymd/styles.css",
+      "startB": 64,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/graph-nested-tags/main.js",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/multi-state-checkbox-switcher/main.js",
+      "startB": 1,
+      "lines": 27,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 192,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 145,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 197,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 180,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 210,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 145,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 215,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 197,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 225,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 145,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 230,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 197,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 243,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 145,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 352,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 331,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startA": 428,
+      "fileB": ".obsidian/plugins/cycle-through-panes/main.js",
+      "startB": 412,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/claude-inline-edit/main.ts",
+      "startA": 518,
+      "fileB": ".obsidian/plugins/claude-inline-edit/main.ts",
+      "startB": 505,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/claude-inline-edit/main.js",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/multi-state-checkbox-switcher/main.js",
+      "startB": 6,
+      "lines": 19,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/claude-inline-edit/main.js",
+      "startA": 408,
+      "fileB": ".obsidian/plugins/claude-inline-edit/main.js",
+      "startB": 398,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/claude-inline-edit/esbuild.config.mjs",
+      "startA": 1,
+      "fileB": ".obsidian/plugins/ghost-links/esbuild.config.mjs",
+      "startB": 1,
+      "lines": 39,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/aw-watcher-obsidian/main.js",
+      "startA": 10,
+      "fileB": "Private/Obisian Config Backup/.obsidian/plugins/multi-state-checkbox-switcher/main.js",
+      "startB": 8,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/plugins/aw-watcher-obsidian/main.js",
+      "startA": 151,
+      "fileB": ".obsidian/plugins/persistent-graph/main.js",
+      "startB": 221,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/snippets/mmw-infobox-callout.css",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/snippets/mmw-infobox-callout.css",
+      "startB": 1,
+      "lines": 88,
+      "tokens": 0
+    },
+    {
+      "fileA": ".obsidian/snippets/mmw-caption-callout.css",
+      "startA": 1,
+      "fileB": "Private/Obisian Config Backup/.obsidian/snippets/mmw-caption-callout.css",
+      "startB": 1,
+      "lines": 32,
+      "tokens": 0
+    }
+  ],
+  "duplicatedLines": 1944,
+  "totalLines": 16939,
+  "percentage": 11.48
+}

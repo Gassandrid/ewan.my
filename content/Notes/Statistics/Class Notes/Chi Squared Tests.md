@@ -1,6 +1,5 @@
 ---
 id: CH6 - Chi Squared Tests
-created_on: "[[12-13-2024]]"
 aliases:
   - Chi Squared
 tags:

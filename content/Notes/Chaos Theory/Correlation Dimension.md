@@ -4,7 +4,6 @@ updated: 2026-03-31T10:59:57-04:00
 class:
   - note
   - lecture
-created_on: "[[03-31-2026]]"
 tags:
   - university
   - math/chaos/attractor

@@ -1,6 +1,5 @@
 ---
 title: Brainstorming Hardware Stack
-created_on: "[[01-02-2025]]"
 date: 2025-01-02
 updated: 2025-07-03
 tags:

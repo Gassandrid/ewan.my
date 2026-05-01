@@ -1,6 +1,5 @@
 ---
 id: Bayesian Inference
-created_on: "[[09-24-2025]]"
 aliases: []
 tags:
   - math/probability/bayesian

@@ -1,6 +1,5 @@
 ---
 id: CH28 - Expected Values of Continuous Random Variables
-created_on: "[[03-26-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

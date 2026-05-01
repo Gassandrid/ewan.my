@@ -1,6 +1,5 @@
 ---
 id: Photosynthesis
-created_on: "[[09-24-2025]]"
 aliases: []
 tags:
   - university
@@ -9,11 +8,11 @@ class:
   - note
   - lectureNote
 course: "[[Principles of Biology 1]]"
-date: "2025-09-24"
+date: 2025-09-24
 lecture-number: 8
 lesson:
   - lecture
-updated: "2025-09-24"
+updated: 2025-09-24
 ---
 **Photosystems:** complexes of pigments and proteins ( ensymes) that _capture light energy_ and catalyze _electron transfer reactions_
 

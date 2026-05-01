@@ -1,8 +1,7 @@
 ---
 id: Types Of Models
-created_on: "[[09-12-2024]]"
-aliases: 
-tags: 
+aliases:
+tags:
 date: 2024-09-12
 updated: 2025-04-28
 ---

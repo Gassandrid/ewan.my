@@ -1,6 +1,5 @@
 ---
 id: CH5 - Confidence Intervals
-created_on: "[[10-23-2024]]"
 aliases: []
 tags:
   - math/probability/statistics

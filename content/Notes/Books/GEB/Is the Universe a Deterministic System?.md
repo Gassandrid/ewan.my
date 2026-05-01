@@ -1,6 +1,5 @@
 ---
 id: Is the Universe a Deterministic System?
-created_on: "[[07-26-2025]]"
 aliases:
 tags:
   - seed

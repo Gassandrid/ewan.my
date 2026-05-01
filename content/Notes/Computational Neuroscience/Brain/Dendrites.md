@@ -1,6 +1,5 @@
 ---
 id: Dendrites
-created_on: "[[03-30-2025]]"
 aliases: []
 tags:
   - biology

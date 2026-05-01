@@ -1,6 +1,5 @@
 ---
 title: Context Free Grammars and Languages
-created_on: "[[03-24-2025]]"
 date: 2025-03-24
 updated: 2025-03-24
 ---

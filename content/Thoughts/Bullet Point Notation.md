@@ -1,6 +1,5 @@
 ---
 id: Bullet Point Notation
-created_on: "[[01-24-2026]]"
 aliases: []
 tags:
   - journal/workflow

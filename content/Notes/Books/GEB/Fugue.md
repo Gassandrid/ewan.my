@@ -1,8 +1,10 @@
 ---
 id: Fugue
-created_on: "[[08-14-2025]]"
 aliases: []
-tags: [music/classical, seed, books/geb]
+tags:
+  - music/classical
+  - seed
+  - books/geb
 date: 2025-08-14
 updated: 2026-01-16T11:52:48-05:00
 ---

@@ -1,6 +1,5 @@
 ---
 id: index
-created_on: "[[10-02-2024]]"
 aliases:
 tags:
 date: 2024-10-02

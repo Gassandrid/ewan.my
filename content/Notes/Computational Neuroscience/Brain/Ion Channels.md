@@ -1,6 +1,5 @@
 ---
 id: Ion Channels
-created_on: "[[04-11-2025]]"
 aliases: []
 tags:
   - biology

@@ -1,6 +1,5 @@
 ---
 id: CH3 - Independent Events
-created_on: "[[01-17-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

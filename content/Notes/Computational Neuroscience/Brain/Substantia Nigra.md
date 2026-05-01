@@ -1,16 +1,17 @@
 ---
-aliases: [SNc, SNr]
-created_on: "[[02-22-2026]]"
+aliases:
+  - SNc
+  - SNr
 class: brain-region
 type: brainstem
 upstream:
-  - "[[Basal Ganglia]]" # striatal GABAergic input
+  - "[[Basal Ganglia]]"
   - "[[Subthalamic Nucleus]]"
 downstream:
-  - "[[Basal Ganglia]]" # dopaminergic modulation of striatum
-  - "[[Thalamus]]" # GABAergic output from SNr
+  - "[[Basal Ganglia]]"
+  - "[[Thalamus]]"
 inhibitors:
-  - "[[Striatum]]" # GABAergic
+  - "[[Striatum]]"
 activators: []
 distribution:
   - pars compacta (SNc) — dopaminergic neurons

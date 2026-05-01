@@ -1,6 +1,5 @@
 ---
 date: 2024-10-15
-created_on: "[[10-15-2024]]"
 updated: 2024-10-15
 tags:
   - university

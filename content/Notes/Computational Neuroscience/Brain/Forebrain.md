@@ -1,7 +1,6 @@
 ---
 aliases:
   - Prosencephalon
-created_on: "[[02-22-2026]]"
 class: brain-region
 type: cortex
 upstream:

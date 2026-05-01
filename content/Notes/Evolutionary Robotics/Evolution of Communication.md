@@ -2,7 +2,6 @@
 class:
   - note
   - lecture
-created_on: "[[04-02-2026]]"
 tags:
   - university
 source:

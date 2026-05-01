@@ -1,6 +1,5 @@
 ---
 id: Brahms - Agent Oriented Programming
-created_on: "[[10-17-2024]]"
 aliases:
 tags:
   - generated

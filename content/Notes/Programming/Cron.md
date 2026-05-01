@@ -1,8 +1,8 @@
 ---
 date: 2024-08-08
-created_on: "[[08-08-2024]]"
 updated: 2026-01-15T17:10:36-05:00
-tags: [resource/programming/cli]
+tags:
+  - resource/programming/cli
 ---
 `cron` is a time-based job scheduler in Unix-like operating systems. It allows users to schedule jobs (commands or scripts) to run periodically at fixed times, dates, or intervals. 
 

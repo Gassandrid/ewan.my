@@ -1,6 +1,5 @@
 ---
 class: note
-created_on: "[[03-31-2025]]"
 date: 2025-03-31
 updated: 2025-06-21
 tags:

@@ -1,7 +1,6 @@
 ---
 id: Day 8
-created_on: "[[02-06-2025]]"
-aliases: 
+aliases:
 tags:
   - cs/theory
 date: 2025-02-06

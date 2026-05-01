@@ -1,6 +1,5 @@
 ---
 id: Decideability
-created_on: "[[04-08-2025]]"
 aliases: []
 tags:
   - cs/theory

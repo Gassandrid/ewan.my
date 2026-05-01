@@ -1,6 +1,5 @@
 ---
 date: 2025-03-29
-created_on: "[[03-29-2025]]"
 updated: 2025-06-19
 tags:
   - biology

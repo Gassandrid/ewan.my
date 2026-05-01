@@ -1,10 +1,13 @@
 ---
 date: 2024-08-09
-created_on: "[[08-09-2024]]"
 updated: 2026-01-15T17:10:42-05:00
 class:
   - note
-tags: [cs/software, cs/crypto, generated, resource/programming/cli]
+tags:
+  - cs/software
+  - cs/crypto
+  - generated
+  - resource/programming/cli
 source:
 related:
   - "[[Age]]"

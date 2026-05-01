@@ -1,7 +1,6 @@
 ---
 id: Matrix Transpose
-created_on: "[[02-12-2025]]"
-aliases: 
+aliases:
 tags:
   - math/linear-algebra
 date: 2025-02-12

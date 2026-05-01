@@ -1,6 +1,5 @@
 ---
 id: Final Project Proposal and Pitch
-created_on: "[[12-10-2024]]"
 aliases:
 tags:
   - cs/embedded

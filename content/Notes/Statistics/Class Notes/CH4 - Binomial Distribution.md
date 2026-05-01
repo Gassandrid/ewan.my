@@ -1,6 +1,5 @@
 ---
 id: CH4 - Binomial Distribution
-created_on: "[[09-12-2024]]"
 aliases: []
 tags:
   - math/probability/statistics

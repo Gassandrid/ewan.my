@@ -1,6 +1,5 @@
 ---
 title: Exam 1 Study Guide
-created_on: "[[02-18-2025]]"
 date: 2025-02-18
 updated: 2025-04-02
 tags:

@@ -1,6 +1,5 @@
 ---
 id: CH2 Probability
-created_on: "[[01-15-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

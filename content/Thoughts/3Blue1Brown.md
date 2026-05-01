@@ -1,5 +1,4 @@
 ---
-created_on: "[[04-02-2025]]"
 class:
   - person
 date: 2025-04-02

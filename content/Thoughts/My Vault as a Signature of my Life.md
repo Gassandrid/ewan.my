@@ -1,6 +1,5 @@
 ---
 title: My Vault as a Signature of my Life
-created_on: "[[02-07-2025]]"
 date: 2025-02-07
 updated: 2025-02-09
 tags:

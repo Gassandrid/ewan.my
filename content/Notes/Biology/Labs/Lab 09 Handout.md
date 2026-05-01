@@ -1,6 +1,5 @@
 ---
 date: 2025-11-07
-created_on: "[[11-07-2025]]"
 updated: 2025-11-07
 tags:
   - biology/chromosomes

@@ -1,6 +1,5 @@
 ---
 title: journal
-created_on: "[[02-19-2025]]"
 date: 2025-02-19
 updated: 2025-06-11
 ---

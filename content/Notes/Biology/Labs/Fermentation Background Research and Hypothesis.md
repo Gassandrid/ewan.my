@@ -1,6 +1,5 @@
 ---
 id: Fermentation Background Research and Hypothesis
-created_on: "[[10-03-2025]]"
 aliases: []
 tags: []
 author:

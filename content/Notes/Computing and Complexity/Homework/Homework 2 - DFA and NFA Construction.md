@@ -1,6 +1,5 @@
 ---
 id: Homework 2 - DFA and NFA Construction
-created_on: "[[02-07-2025]]"
 aliases: []
 tags:
   - cs/theory

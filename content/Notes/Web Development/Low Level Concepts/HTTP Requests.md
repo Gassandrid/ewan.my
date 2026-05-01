@@ -1,7 +1,6 @@
 ---
 id: HTTP Requests
-created_on: "[[09-12-2024]]"
-aliases: 
+aliases:
 tags:
   - cs/web
 date: 2024-09-12

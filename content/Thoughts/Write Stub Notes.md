@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[04-16-2026]]"
 tags:
   - journal/workflow
 source:
@@ -13,7 +12,7 @@ aliases:
   - stub notes
   - stub note
 date: 2026-04-16T11:54:46-04:00
-updated: 2026-04-16T12:16:25-04:00
+updated: 2026-04-30T09:39:05-04:00
 ---
 
 This is yet another culmination of my troubling relationship with notes to be done. I am going to keep this short, becuase thats the whole idea behind a stub note.

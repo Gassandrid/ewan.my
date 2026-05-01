@@ -1,6 +1,5 @@
 ---
 date: 2024-12-03
-created_on: "[[12-03-2024]]"
 id: 16.9 - Divergence Theorem
 tags:
   - math/calculus/multivariable

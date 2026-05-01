@@ -1,6 +1,5 @@
 ---
 id: Active Inference
-created_on: "[[09-24-2025]]"
 aliases: []
 tags:
   - comp-neuro/models

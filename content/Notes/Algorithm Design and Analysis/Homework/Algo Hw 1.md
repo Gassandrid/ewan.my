@@ -1,5 +1,4 @@
 ---
-created_on: "[[09-09-2025]]"
 author:
   - Ewan Pedersen
 date: 2025-09-09

@@ -1,6 +1,5 @@
 ---
 title: Formal Definitions for 2 DFAs
-created_on: "[[01-26-2025]]"
 author:
   - Ewan Pedersen
 date: 2025-01-26

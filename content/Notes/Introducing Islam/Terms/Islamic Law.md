@@ -1,6 +1,5 @@
 ---
 id: Islamic Law
-created_on: "[[10-08-2025]]"
 aliases: []
 tags:
   - university

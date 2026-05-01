@@ -1,6 +1,5 @@
 ---
 date: 2025-08-27
-created_on: "[[08-27-2025]]"
 updated: 2025-08-29
 tags:
   - religion/islam

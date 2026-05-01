@@ -1,6 +1,5 @@
 ---
 status: open
-created_on: "[[01-13-2026]]"
 priority: normal
 scheduled: 2026-01-20T10:05:00
 contexts:

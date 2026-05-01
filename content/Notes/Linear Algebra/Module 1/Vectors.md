@@ -1,6 +1,5 @@
 ---
 title: Vectors
-created_on: "[[01-27-2025]]"
 date: 2025-01-27
 updated: 2025-09-10
 tags:

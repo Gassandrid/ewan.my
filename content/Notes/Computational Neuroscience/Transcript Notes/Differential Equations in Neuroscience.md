@@ -1,5 +1,4 @@
 ---
-created_on: "[[10-28-2024]]"
 tags:
   - comp-neuro
   - todo/neuro

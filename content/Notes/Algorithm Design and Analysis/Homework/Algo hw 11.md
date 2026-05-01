@@ -1,6 +1,5 @@
 ---
 date: 2025-11-21
-created_on: "[[11-21-2025]]"
 updated: 2025-11-21
 title: Homework 11 Written
 abstract: Show the steps of deriving your answers. Points will be deducted for answers without adequate steps discussed. Submit your homework via Brightspace as one PDF or Word document.

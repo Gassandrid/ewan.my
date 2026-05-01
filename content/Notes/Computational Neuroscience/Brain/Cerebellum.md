@@ -1,7 +1,6 @@
 ---
 aliases:
   - Little Brain
-created_on: "[[04-14-2025]]"
 class: brain-region
 type: cerebellum
 upstream:

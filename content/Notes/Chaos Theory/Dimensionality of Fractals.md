@@ -1,7 +1,6 @@
 ---
 date: 2026-03-17T10:12:37-04:00
 updated: 2026-03-17T11:18:43-04:00
-created_on: "[[03-17-2026]]"
 class:
   - note
   - lecture

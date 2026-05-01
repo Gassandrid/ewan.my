@@ -2,7 +2,6 @@
 class:
   - neurotransmitter
   - note
-created_on: "[[03-16-2026]]"
 tags:
   - comp-neuro/brain/neurotransmitter
   - pharmacology/neuro
@@ -14,7 +13,7 @@ aliases:
   - cholinergic
   - ACh
 date: 2026-03-16T09:04:07-04:00
-updated: 2026-03-16T09:11:23-04:00
+updated: 2026-04-30T17:33:13-04:00
 type: small molecule / ester
 upstream:
   - "[[Choline]]"
@@ -48,6 +47,6 @@ degrading-enzyme:
 Important [[Neurotransmitters|neurotransmitter]] that drives communication between muscles/glands/[[Neuron|neurons]].
 
 - Primary mechanism for muscle contraction, [[Parasympathetic Nervous System]] activity, etc. 
-- Also has roles in [[Memory]] and [[Attention]].
+- Also has roles in [[Notes/Computational Neuroscience/Theory/Memory|Memory]] and [[Attention]].
 - acts on muscarinic and [[nicotinic receptor]]s
 - *cholinergic*: denotes nerve cells in which [[Acetylcholine]] acts as a [[Neurotransmitters|neurotransmitter]].

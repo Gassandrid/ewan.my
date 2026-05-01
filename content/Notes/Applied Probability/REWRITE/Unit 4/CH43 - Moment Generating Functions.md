@@ -1,6 +1,5 @@
 ---
 id: CH 43 - Moment Generating Functions
-created_on: "[[04-07-2025]]"
 aliases: []
 tags:
   - math/probability

@@ -1,5 +1,4 @@
 ---
-created_on: "[[04-14-2025]]"
 tags:
   - comp-neuro/theory
 date: 2025-04-14

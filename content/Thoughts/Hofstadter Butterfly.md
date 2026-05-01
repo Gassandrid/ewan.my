@@ -1,6 +1,5 @@
 ---
 title: Hofstadter Butterfly
-created_on: "[[01-18-2026]]"
 class:
   - curation
 media-type: png

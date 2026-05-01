@@ -1,5 +1,4 @@
 ---
-created_on: "[[04-03-2025]]"
 tags:
   - cs/theory
 date: 2025-04-03

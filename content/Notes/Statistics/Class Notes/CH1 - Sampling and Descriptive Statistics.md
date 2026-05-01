@@ -1,6 +1,5 @@
 ---
 id: CH1 - Sampling and Descriptive Statistics
-created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics

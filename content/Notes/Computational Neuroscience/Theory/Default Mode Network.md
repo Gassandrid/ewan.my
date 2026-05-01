@@ -1,5 +1,4 @@
 ---
-created_on: "[[12-19-2025]]"
 class:
   - note
 tags:
@@ -53,7 +52,7 @@ This is not as concrete of a topic, more of a term that loosely describes some a
 
 **Resources:**
 
-[Quanta Magazine Video](https://youtu.be/yESSv7OgCv0?si=-Iy5kBq1qoKnXxba), very generalist, but a good staging ground for more concepts (talks about [[Memory]], [[Episodic Memory]], and many more concepts to cover)
+[Quanta Magazine Video](https://youtu.be/yESSv7OgCv0?si=-Iy5kBq1qoKnXxba), very generalist, but a good staging ground for more concepts (talks about [[Notes/Computational Neuroscience/Theory/Memory]], [[Episodic Memory]], and many more concepts to cover)
 
 [Medlink Technology](https://www.medlink.com/news/neuroscience-origins-and-relevance-of-the-default-mode-network), not an academic source by any means, but once again a good overview.
 

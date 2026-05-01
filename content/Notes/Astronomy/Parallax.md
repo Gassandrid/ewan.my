@@ -1,6 +1,5 @@
 ---
 id: Parallax
-created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - astronomy

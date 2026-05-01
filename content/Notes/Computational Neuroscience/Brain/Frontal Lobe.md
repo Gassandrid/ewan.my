@@ -1,6 +1,5 @@
 ---
 aliases: []
-created_on: "[[02-22-2026]]"
 class: brain-region
 type: cortex
 upstream:
@@ -11,7 +10,7 @@ upstream:
 downstream:
   - "[[Basal Ganglia]]"
   - "[[Thalamus]]"
-  - "[[Spinal Cord]]" # corticospinal tract
+  - "[[Spinal Cord]]"
 inhibitors: []
 activators: []
 distribution:

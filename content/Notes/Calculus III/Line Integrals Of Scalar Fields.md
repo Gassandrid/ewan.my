@@ -1,6 +1,5 @@
 ---
 id: 16.2a - Line Integrals Of Scalar Fields
-created_on: "[[11-06-2024]]"
 date: 2024-11-06
 tags:
   - math/calculus/vector

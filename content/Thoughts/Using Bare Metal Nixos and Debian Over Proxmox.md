@@ -1,6 +1,5 @@
 ---
 title: Using Bare Metal Nixos and Debian Over Proxmox
-created_on: "[[01-28-2025]]"
 date: 2025-01-28
 updated: 2026-01-18T08:30:29-05:00
 tags:

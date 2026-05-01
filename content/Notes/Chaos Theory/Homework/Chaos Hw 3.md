@@ -1,6 +1,5 @@
 ---
 id: Chaos Hw 3
-created_on: "[[02-02-2026]]"
 aliases: []
 tags: []
 abstract: "Instructions: Graduate students (required) and those planning to go to graduate school in a mathematical science (encouraged) should turn in their solutions in LATEX; you will need to learn this language eventually. Submit your solution in a single PDF in Blackboard, including PDF of your code appended to solutions. Check Teams for sample code. Grading: All questions are worth 3 points unless marked otherwise (3 = perfect or nearly so, 2 = close but something missing, 1 = not close but a reasonable attempt, 0 = way off). Excellent solutions will be returned with the graded HW.Disclosure: Please show all your working clearly and list the names of other students with whom you collaborated."
@@ -9,13 +8,13 @@ author:
 date: 2026-02-02T11:15:04-05:00
 jupyter:
   jupytext:
-    cell_metadata_filter: "-all"
+    cell_metadata_filter: -all
     formats: ipynb,md
     text_representation:
       extension: .md
       format_name: markdown
       format_version: "1.3"
-      jupytext_version: "1.18.1"
+      jupytext_version: 1.18.1
   kernelspec:
     display_name: Python 3
     language: python

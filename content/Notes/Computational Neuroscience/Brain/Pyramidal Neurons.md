@@ -1,6 +1,5 @@
 ---
 date: 2025-06-06
-created_on: "[[06-06-2025]]"
 updated: 2025-08-26
 tags:
   - todo/neuro

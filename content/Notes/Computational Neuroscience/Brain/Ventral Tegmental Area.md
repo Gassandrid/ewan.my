@@ -1,6 +1,6 @@
 ---
-aliases: [VTA]
-created_on: "[[02-22-2026]]"
+aliases:
+  - VTA
 class: brain-region
 type: brainstem
 upstream:
@@ -9,12 +9,12 @@ upstream:
   - "[[Hypothalamus]]"
   - "[[Nucleus Accumbens]]"
 downstream:
-  - "[[Nucleus Accumbens]]" # mesolimbic pathway
-  - "[[Prefrontal Cortex]]" # mesocortical pathway
+  - "[[Nucleus Accumbens]]"
+  - "[[Prefrontal Cortex]]"
   - "[[Hippocampus]]"
   - "[[Amygdala]]"
 inhibitors:
-  - "[[Nucleus Accumbens]]" # GABAergic feedback
+  - "[[Nucleus Accumbens]]"
 activators:
   - "[[Hypothalamus]]"
 distribution:

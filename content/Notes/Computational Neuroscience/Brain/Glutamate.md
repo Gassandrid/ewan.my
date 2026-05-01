@@ -2,7 +2,6 @@
 aliases:
   - Glu
   - L-glutamate
-created_on: "[[02-25-2026]]"
 class: neurotransmitter
 type: amino-acid
 upstream:

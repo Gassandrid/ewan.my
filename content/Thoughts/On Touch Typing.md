@@ -1,6 +1,5 @@
 ---
 date: 2025-02-24
-created_on: "[[02-24-2025]]"
 updated: 2025-09-22
 title: On Touch Typing
 tags:

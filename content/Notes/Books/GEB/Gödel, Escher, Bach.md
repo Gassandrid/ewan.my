@@ -1,6 +1,5 @@
 ---
 date: 2025-06-13
-created_on: "[[06-13-2025]]"
 updated: 2026-01-29 10:47:02-05:00
 tags:
   - books/geb
@@ -11,16 +10,15 @@ tags:
 class:
   - book
 author:
-  - '[[Douglas Hofstadter]]'
-image: '[[GebCover.png]]'
+  - "[[Douglas Hofstadter]]"
+image: "[[GebCover.png]]"
 source:
   - https://www.physixfan.com/wp-content/files/GEBen.pdf
   - Paperback
 genre:
   - Mathematics
   - Nonfiction
-description: an investigation of the nature of the mind and human conciousness through
-  the creative endeavors of Kurt Godel, MC Escher, and Sebastian Bach
+description: an investigation of the nature of the mind and human conciousness through the creative endeavors of Kurt Godel, MC Escher, and Sebastian Bach
 progress: 328 - Ant Fugue
 status: in-progress
 aliases:

@@ -1,6 +1,5 @@
 ---
 id: Neuron
-created_on: "[[03-25-2025]]"
 aliases:
 tags:
   - biology

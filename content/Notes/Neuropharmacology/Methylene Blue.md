@@ -1,5 +1,4 @@
 ---
-created_on: "[[12-10-2025]]"
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=6099&t=l
 aliases:
   - MB

@@ -1,6 +1,5 @@
 ---
 title:
-created_on: "[[09-08-2025]]"
 source:
   - https://www.amazon.com/Following-Muhammad-Rethinking-Contemporary-Civilization/dp/0807855774
 author:

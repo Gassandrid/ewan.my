@@ -1,6 +1,5 @@
 ---
 date: 2024-09-25
-created_on: "[[09-25-2024]]"
 tags:
   - cs/embedded
   - university

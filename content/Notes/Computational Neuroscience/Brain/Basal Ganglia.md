@@ -1,19 +1,18 @@
 ---
 aliases: []
-created_on: "[[02-22-2026]]"
 class: brain-region
 type: basal-ganglia
 upstream:
-  - "[[Frontal Lobe]]" # cortical input via striatum
-  - "[[Substantia Nigra]]" # dopaminergic modulation
+  - "[[Frontal Lobe]]"
+  - "[[Substantia Nigra]]"
   - "[[Thalamus]]"
 downstream:
-  - "[[Thalamus]]" # back to cortex via thalamo-cortical loop
+  - "[[Thalamus]]"
   - "[[Brainstem]]"
 inhibitors:
-  - "[[Substantia Nigra]]" # pars reticulata (GABAergic output)
+  - "[[Substantia Nigra]]"
 activators:
-  - "[[Substantia Nigra]]" # pars compacta (dopaminergic)
+  - "[[Substantia Nigra]]"
 distribution:
   - striatum (caudate nucleus + putamen)
   - globus pallidus (internal + external)

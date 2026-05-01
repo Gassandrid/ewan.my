@@ -1,6 +1,5 @@
 ---
 id: Gaussian Integers
-created_on: "[[08-11-2025]]"
 aliases: []
 tags:
   - math/complex

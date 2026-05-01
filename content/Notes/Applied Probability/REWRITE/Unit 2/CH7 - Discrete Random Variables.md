@@ -1,6 +1,5 @@
 ---
 id: CH7 - Discrete Random Variables
-created_on: "[[02-03-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

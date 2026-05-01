@@ -1,6 +1,5 @@
 ---
 title: Pacemaker Neurons
-created_on: "[[03-25-2025]]"
 date: 2025-03-25
 updated: 2026-01-12T10:53:30-05:00
 tags:

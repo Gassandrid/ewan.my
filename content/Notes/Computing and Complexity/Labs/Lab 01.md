@@ -1,6 +1,5 @@
 ---
 date: 2025-01-23
-created_on: "[[01-23-2025]]"
 updated: 2025-03-27
 title: Lab 01
 ---

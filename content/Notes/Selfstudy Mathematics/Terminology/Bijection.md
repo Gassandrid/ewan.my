@@ -1,6 +1,5 @@
 ---
 id: Bijection
-created_on: "[[10-06-2025]]"
 aliases:
   - bijection
 tags:

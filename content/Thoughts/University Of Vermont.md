@@ -1,6 +1,5 @@
 ---
 updated: 2026-01-31T19:32:00-05:00
-created_on: "[[12-28-2025]]"
 tags:
   - seed
   - places

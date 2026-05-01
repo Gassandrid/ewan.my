@@ -1,6 +1,5 @@
 ---
 id: Unstable Manifold
-created_on: "[[02-05-2026]]"
 aliases:
   - Unstable Manifolds
   - Unstable Direction

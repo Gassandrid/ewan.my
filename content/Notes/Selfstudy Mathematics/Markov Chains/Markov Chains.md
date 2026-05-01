@@ -1,6 +1,5 @@
 ---
 id: Markov Chains Explained - 1
-created_on: "[[04-29-2025]]"
 aliases:
 tags:
   - math/linear-algebra/markhov-chains

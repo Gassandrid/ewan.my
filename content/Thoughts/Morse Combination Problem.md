@@ -1,6 +1,5 @@
 ---
 title: Morse Combination Problem
-created_on: "[[11-28-2024]]"
 date: 2024-11-28
 author: Ewan / Gassandrid
 updated: 2025-02-06

@@ -1,6 +1,5 @@
 ---
 id: Sorting Algorithms
-created_on: "[[12-10-2024]]"
 aliases: []
 tags:
   - university

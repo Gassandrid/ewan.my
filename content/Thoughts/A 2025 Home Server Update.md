@@ -1,6 +1,5 @@
 ---
 date: 2025-04-19
-created_on: "[[04-19-2025]]"
 updated: 2026-01-18T08:30:10-05:00
 tags:
   - projects/homelab

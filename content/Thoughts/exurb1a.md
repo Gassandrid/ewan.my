@@ -1,6 +1,5 @@
 ---
 title: exurb1a
-created_on: "[[02-20-2025]]"
 date: 2025-02-20
 updated: 2025-08-21
 tags:

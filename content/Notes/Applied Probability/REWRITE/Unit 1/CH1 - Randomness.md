@@ -1,6 +1,5 @@
 ---
 id: CH1 - Randomness
-created_on: "[[01-13-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

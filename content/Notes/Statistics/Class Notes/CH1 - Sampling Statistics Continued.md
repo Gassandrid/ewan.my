@@ -1,6 +1,5 @@
 ---
 id: CH2 - Sampling Statistics Continued
-created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - math/probability/statistics

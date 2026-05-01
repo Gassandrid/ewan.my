@@ -1,6 +1,5 @@
 ---
 title: A new idea - 3d printed 10" rack
-created_on: "[[02-04-2025]]"
 date: 2025-02-04
 updated: 2025-02-04
 tags:

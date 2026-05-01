@@ -1,6 +1,5 @@
 ---
 id: Cantor Set
-created_on: "[[08-13-2025]]"
 aliases: []
 tags:
   - math/sets

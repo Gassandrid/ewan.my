@@ -1,6 +1,5 @@
 ---
 date: 2026-01-15T17:38:21-05:00
-created_on: "[[01-15-2026]]"
 updated: 2026-01-24T15:02:45-05:00
 title: Assignment 1
 author:

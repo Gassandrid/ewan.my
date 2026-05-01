@@ -1,6 +1,5 @@
 ---
 id: Italian vs English Approach
-created_on: "[[02-05-2026]]"
 aliases: []
 tags:
   - university

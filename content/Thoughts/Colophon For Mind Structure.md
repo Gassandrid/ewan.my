@@ -3,7 +3,6 @@ date: 2026-03-30T18:44:51-04:00
 updated: 2026-04-16T12:04:23-04:00
 class:
   - note
-created_on: "[[03-30-2026]]"
 tags:
   - journal/workflow
 source:

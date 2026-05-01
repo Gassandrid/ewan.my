@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[03-24-2026]]"
 tags:
 source:
 related:

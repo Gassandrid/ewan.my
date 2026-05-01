@@ -1,6 +1,5 @@
 ---
 date: 2024-12-01
-created_on: "[[12-01-2024]]"
 tags:
   - projects/dars
   - cs/embedded

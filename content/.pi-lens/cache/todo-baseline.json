@@ -1,0 +1,165 @@
+{
+  "items": [
+    {
+      "type": "XXX",
+      "message": "\")||e.includes(\"XX\")||e.includes(\"xxx\")||e.includes(\"xx\")||e.includes(\"EEEE\")||e.includes(\"EEE\")||e.includes(\"'\")||/[Pp]{1,4}/u.test(e)):!1}function IYe(e){let t=0,n=!1;for(;t<e.length;){let a=e[t];if",
+      "file": ".obsidian/plugins/notebook-navigator/main.js",
+      "line": 734,
+      "column": 284077
+    },
+    {
+      "type": "XXX",
+      "message": "\\\\.*?",
+      "file": ".obsidian/plugins/obsidian-linter/main.js",
+      "line": 78,
+      "column": 448
+    },
+    {
+      "type": "TODO",
+      "message": "max_completion_tokens",
+      "file": ".obsidian/plugins/smart-connections/main.js",
+      "line": 11924,
+      "column": 9
+    },
+    {
+      "type": "TODO",
+      "message": "Implement streaming",
+      "file": ".obsidian/plugins/smart-connections/main.js",
+      "line": 13573,
+      "column": 28
+    },
+    {
+      "type": "TODO",
+      "message": "/future: replaced by storing block data within source data",
+      "file": ".obsidian/plugins/smart-connections/main.js",
+      "line": 17851,
+      "column": 5
+    },
+    {
+      "type": "TODO",
+      "message": "manually tested before implementing reset button",
+      "file": ".obsidian/plugins/smart-connections/main.js",
+      "line": 22691,
+      "column": 34
+    },
+    {
+      "type": "TODO",
+      "message": "instead of injecting the start/end at this point, just return",
+      "file": ".obsidian/plugins/various-complements/main.js",
+      "line": 3591,
+      "column": 5
+    },
+    {
+      "type": "TODO",
+      "message": "Consider using an actual parser in lieu of a more expensive regex.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 9696,
+      "column": 3
+    },
+    {
+      "type": "TODO",
+      "message": "See why those tests fail and use a better solution.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 11415,
+      "column": 8
+    },
+    {
+      "type": "TODO",
+      "message": "Find out if this resets the AUTO_INCREMENT number.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 11772,
+      "column": 4
+    },
+    {
+      "type": "TODO",
+      "message": "Don't change ID on `setItem()`.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 11823,
+      "column": 4
+    },
+    {
+      "type": "TODO",
+      "message": "Make this a specific error/event.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 12234,
+      "column": 28
+    },
+    {
+      "type": "TODO",
+      "message": "CSV parsing should be done by a worker thread asynchronously to avoid frontend stalls.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 12917,
+      "column": 7
+    },
+    {
+      "type": "TODO",
+      "message": "Use an actual index so this isn't a fullscan.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 13413,
+      "column": 19
+    },
+    {
+      "type": "TODO",
+      "message": "This is obviously very inefficient. Can be improved by complicating the",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 13450,
+      "column": 19
+    },
+    {
+      "type": "TODO",
+      "message": "We shouldn't be doing path normalization here relative to an origin file,",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 13465,
+      "column": 3
+    },
+    {
+      "type": "TODO",
+      "message": "Consider not using a universal comparison function.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 14436,
+      "column": 11
+    },
+    {
+      "type": "TODO",
+      "message": "Will move this out to an 'primitives' module and add more content to it.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 14587,
+      "column": 19
+    },
+    {
+      "type": "TODO",
+      "message": "null out other refs, including component.$$ (but need to",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 16405,
+      "column": 11
+    },
+    {
+      "type": "TODO",
+      "message": "WITHOUT ID probably shouldn't exist, or should be moved to the engine itself.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 19474,
+      "column": 19
+    },
+    {
+      "type": "TODO",
+      "message": "Replace this with a dom-to-dom diff to reduce the actual amount of updates.",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/dataview/main.js",
+      "line": 19765,
+      "column": 7
+    },
+    {
+      "type": "XXX",
+      "message": "\\\\.*?",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/obsidian-linter/main.js",
+      "line": 76,
+      "column": 133
+    },
+    {
+      "type": "TODO",
+      "message": "instead of injecting the start/end at this point, just return",
+      "file": "Private/Obisian Config Backup/.obsidian/plugins/various-complements/main.js",
+      "line": 3128,
+      "column": 5
+    }
+  ]
+}

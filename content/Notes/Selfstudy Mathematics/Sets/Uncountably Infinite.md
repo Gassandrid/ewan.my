@@ -1,6 +1,5 @@
 ---
 id: Uncountably Infinite
-created_on: "[[08-13-2025]]"
 aliases: []
 tags: []
 date: 2025-08-13

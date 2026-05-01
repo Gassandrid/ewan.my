@@ -1,6 +1,5 @@
 ---
 id: 16.4 Green's Theorem
-created_on: "[[11-25-2024]]"
 date: 2024-11-25
 tags:
   - math/calculus/multivariable

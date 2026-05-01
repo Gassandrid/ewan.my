@@ -1,6 +1,5 @@
 ---
 date: 2024-09-12
-created_on: "[[09-12-2024]]"
 updated: 2026-02-02T08:45:20-05:00
 title: Hopfield Networks
 class:

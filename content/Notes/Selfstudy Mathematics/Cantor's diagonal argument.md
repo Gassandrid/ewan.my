@@ -5,7 +5,6 @@ tags:
   - math/sets
 class:
   - note
-created_on: "[[03-19-2026]]"
 source:
 related:
 author:

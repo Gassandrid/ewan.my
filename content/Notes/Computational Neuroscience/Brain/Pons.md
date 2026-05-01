@@ -1,13 +1,12 @@
 ---
 aliases: []
-created_on: "[[02-22-2026]]"
 class: brain-region
 type: brainstem
 upstream:
   - "[[Cerebellum]]"
   - "[[Cerebral Cortex]]"
   - "[[Medulla Oblongata]]"
-  - "[[Cranial Nerves]]" # V, VI, VII, VIII
+  - "[[Cranial Nerves]]"
 downstream:
   - "[[Cerebellum]]"
   - "[[Medulla Oblongata]]"

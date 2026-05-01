@@ -1,6 +1,5 @@
 ---
 id: Turing Machines
-created_on: "[[04-03-2025]]"
 aliases:
   - Turing Machine
 tags:

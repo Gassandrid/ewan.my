@@ -1,6 +1,5 @@
 ---
 id: Chaos Hw 4
-created_on: "[[02-10-2026]]"
 aliases: []
 tags: []
 abstract:

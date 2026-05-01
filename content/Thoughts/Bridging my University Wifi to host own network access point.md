@@ -1,6 +1,5 @@
 ---
 date: 2025-01-24
-created_on: "[[01-24-2025]]"
 updated: 2026-01-18T08:31:07-05:00
 title: Bridging my University Wifi to host own network access point
 tags:

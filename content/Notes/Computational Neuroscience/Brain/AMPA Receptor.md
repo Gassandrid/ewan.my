@@ -1,6 +1,5 @@
 ---
 date: 2026-02-08T15:48:06-05:00
-created_on: "[[03-13-2026]]"
 updated: 2026-03-16T10:05:37-04:00
 tags:
   - comp-neuro/brain/receptor

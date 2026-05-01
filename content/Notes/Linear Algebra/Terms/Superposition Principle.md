@@ -1,6 +1,5 @@
 ---
 id: Superposition Principle
-created_on: "[[02-03-2025]]"
 aliases:
 tags:
   - math/linear-algebra

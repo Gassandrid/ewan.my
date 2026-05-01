@@ -1,5 +1,4 @@
 ---
-created_on: "[[11-21-2024]]"
 tags:
   - projects/dars
 date: 2024-11-21

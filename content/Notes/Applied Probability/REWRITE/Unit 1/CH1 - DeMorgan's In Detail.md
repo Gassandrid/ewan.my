@@ -1,6 +1,5 @@
 ---
 id: CH1 - DeMorgan's In Detail
-created_on: "[[01-15-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

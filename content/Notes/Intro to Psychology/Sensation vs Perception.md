@@ -1,5 +1,4 @@
 ---
-created_on: "[[09-16-2025]]"
 class:
   - note
   - lectureNote

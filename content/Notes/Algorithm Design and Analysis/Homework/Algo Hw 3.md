@@ -1,6 +1,5 @@
 ---
 id: Algo Hw 3
-created_on: "[[09-26-2025]]"
 aliases: []
 tags:
   - cs/theory/algorithms

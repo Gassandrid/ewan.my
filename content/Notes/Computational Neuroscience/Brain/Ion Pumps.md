@@ -1,6 +1,5 @@
 ---
 id: Ion Pumps
-created_on: "[[04-22-2025]]"
 aliases: []
 tags:
   - biology

@@ -1,5 +1,4 @@
 ---
-created_on: "[[10-11-2025]]"
 class:
   - note
   - journal

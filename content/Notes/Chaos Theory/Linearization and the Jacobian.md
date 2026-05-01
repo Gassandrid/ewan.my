@@ -1,6 +1,5 @@
 ---
 id: Linearization and the Jacobian
-created_on: "[[02-03-2026]]"
 aliases:
   - Jacobian Matrix
   - Local Linearization

@@ -1,6 +1,5 @@
 ---
 date: 2025-06-23
-created_on: "[[06-23-2025]]"
 updated: 2026-02-10T19:04:12-05:00
 tags:
   - projects/crdg-math

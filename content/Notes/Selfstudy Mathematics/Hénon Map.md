@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[04-02-2026]]"
 tags:
   - math/chaos/discrete
 source:

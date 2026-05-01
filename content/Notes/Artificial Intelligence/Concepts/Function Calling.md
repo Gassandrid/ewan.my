@@ -1,6 +1,5 @@
 ---
 date: 2024-09-12
-created_on: "[[09-12-2024]]"
 updated: 2026-01-22T19:30:42-05:00
 tags:
   - generated

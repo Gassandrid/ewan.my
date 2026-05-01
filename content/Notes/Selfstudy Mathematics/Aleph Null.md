@@ -1,6 +1,5 @@
 ---
 id: Aleph Null
-created_on: "[[07-03-2025]]"
 aliases:
 tags:
   - math/sets

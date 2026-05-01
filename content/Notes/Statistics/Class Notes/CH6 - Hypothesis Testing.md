@@ -1,6 +1,5 @@
 ---
 id: CH6 - Hypothesis Testing
-created_on: "[[10-29-2024]]"
 aliases: []
 tags:
   - math/probability/statistics

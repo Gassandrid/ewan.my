@@ -1,7 +1,6 @@
 ---
-created_on: "[[01-21-2026]]"
 author:
-  - '[[Artem Kirsanov]]'
+  - "[[Artem Kirsanov]]"
 published: 2025-03-31
 source: https://www.youtube.com/watch?v=q7seckj1hwM&t=556s
 image: https://i.ytimg.com/vi/q7seckj1hwM/maxresdefault.jpg
@@ -9,12 +8,11 @@ class: video
 tags:
   - youtube
 related:
-  - '[[Linear and Nonlinear Regression]]'
-  - '[[Mean Squared Error]]'
+  - "[[Linear and Nonlinear Regression]]"
+  - "[[Mean Squared Error]]"
 date: 2026-01-21 08:39:17-05:00
 updated: 2026-01-21 08:40:41-05:00
 status: done
-
 ---
 ![What Textbooks Don't Tell You About Curve Fitting](https://www.youtube.com/embed/q7seckj1hwM)
 

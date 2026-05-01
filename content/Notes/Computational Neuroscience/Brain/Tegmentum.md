@@ -1,6 +1,5 @@
 ---
 aliases: []
-created_on: "[[02-22-2026]]"
 class: brain-region
 type: brainstem
 upstream:
@@ -9,7 +8,7 @@ upstream:
   - "[[Amygdala]]"
   - "[[Prefrontal Cortex]]"
 downstream:
-  - "[[Forebrain]]" # dopaminergic/noradrenergic projections
+  - "[[Forebrain]]"
   - "[[Thalamus]]"
   - "[[Spinal Cord]]"
 inhibitors: []

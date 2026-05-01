@@ -1,5 +1,4 @@
 ---
-created_on: "[[02-07-2026]]"
 class:
   - neurotransmitter
   - note

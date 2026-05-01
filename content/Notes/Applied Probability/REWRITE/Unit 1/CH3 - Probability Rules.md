@@ -1,6 +1,5 @@
 ---
 id: CH3 - Probability Rules
-created_on: "[[01-24-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

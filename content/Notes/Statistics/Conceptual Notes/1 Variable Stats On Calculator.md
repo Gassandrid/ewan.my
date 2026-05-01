@@ -1,6 +1,5 @@
 ---
 date: 2024-09-12
-created_on: "[[09-12-2024]]"
 tags:
   - math/probability/statistics
   - university

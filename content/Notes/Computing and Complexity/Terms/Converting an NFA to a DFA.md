@@ -1,6 +1,5 @@
 ---
 date: 2025-02-12
-created_on: "[[02-12-2025]]"
 updated: 2025-02-12
 tags:
   - cs/automata

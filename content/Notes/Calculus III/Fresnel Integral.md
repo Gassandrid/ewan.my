@@ -1,6 +1,5 @@
 ---
 date: 2024-10-07
-created_on: "[[10-07-2024]]"
 tags:
   - math/calculus
   - university

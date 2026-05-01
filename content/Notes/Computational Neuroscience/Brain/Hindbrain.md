@@ -1,7 +1,6 @@
 ---
 aliases:
   - Rhombencephalon
-created_on: "[[02-22-2026]]"
 class:
   - brain-region
   - note

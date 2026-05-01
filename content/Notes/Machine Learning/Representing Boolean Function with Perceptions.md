@@ -3,7 +3,6 @@ date: 2026-03-18T09:06:13-04:00
 updated: 2026-03-18T09:10:37-04:00
 class:
   - note
-created_on: "[[03-18-2026]]"
 tags:
   - cs/ai/perceptron
   - math/discrete/boolean

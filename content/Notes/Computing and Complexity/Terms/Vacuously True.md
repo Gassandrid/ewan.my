@@ -1,6 +1,5 @@
 ---
 title: Vacuously True
-created_on: "[[02-18-2025]]"
 date: 2025-02-18
 updated: 2025-03-31
 tags:

@@ -1,6 +1,5 @@
 ---
 id: Digital Garden
-created_on: "[[10-28-2024]]"
 aliases: []
 tags:
   - philosophy

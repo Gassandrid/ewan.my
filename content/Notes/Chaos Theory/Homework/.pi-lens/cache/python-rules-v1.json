@@ -1,0 +1,396 @@
+{
+  "version": "v1",
+  "timestamp": 1777582125961,
+  "ruleHash": "e3b0c44298fc1c14",
+  "queries": [
+    {
+      "id": "bare-except",
+      "name": "Bare Except Clause",
+      "severity": "warning",
+      "language": "python",
+      "message": "Bare 'except:' clause — catches SystemExit, KeyboardInterrupt",
+      "query": "  (except_clause\n    \"except\") @CLAUSE",
+      "metavars": [
+        "CLAUSE"
+      ],
+      "post_filter": "bare_except_only",
+      "defect_class": "silent-error",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "eval-exec",
+      "name": "Eval/Exec Usage",
+      "severity": "warning",
+      "language": "python",
+      "message": "{{FUNC}}() detected — security risk, code injection vulnerability",
+      "query": "  (call\n    function: (identifier) @FUNC\n    (#match? @FUNC \"^(eval|exec)$\")\n    arguments: (argument_list) @ARGS)",
+      "metavars": [
+        "FUNC",
+        "ARGS"
+      ],
+      "defect_class": "injection",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "is-vs-equals",
+      "name": "Is vs Equals for Literals",
+      "severity": "warning",
+      "language": "python",
+      "message": "Using 'is' with literal — use '==' for value comparison",
+      "query": "  (comparison_operator\n    (identifier)\n    (\"is\")\n    (string) @LITERAL)\n  (comparison_operator\n    (identifier)\n    (\"is not\")\n    (string) @LITERAL)\n  (comparison_operator\n    (identifier)\n    (\"is\")\n    (integer) @LITERAL)\n  (comparison_operator\n    (identifier)\n    (\"is not\")\n    (integer) @LITERAL)",
+      "metavars": [
+        "LITERAL"
+      ],
+      "defect_class": "correctness",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "mutable-default-arg",
+      "name": "Mutable Default Argument",
+      "severity": "warning",
+      "language": "python",
+      "message": "Mutable default argument — list/dict/set as default value",
+      "query": "  (function_definition\n    (parameters\n      (default_parameter\n        (identifier) @PARAM\n        [(list) (dictionary) (set)] @MUTABLE)))",
+      "metavars": [
+        "PARAM",
+        "MUTABLE"
+      ],
+      "defect_class": "correctness",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "python-assert-production",
+      "name": "Assert in Production Code",
+      "severity": "warning",
+      "language": "python",
+      "message": "assert statement stripped by Python -O flag — use explicit checks with exceptions in production code",
+      "query": "  (assert_statement) @ASSERT",
+      "metavars": [
+        "ASSERT"
+      ],
+      "defect_class": "correctness",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-command-injection",
+      "name": "Command Injection Sink",
+      "severity": "warning",
+      "language": "python",
+      "message": "Potential command injection sink — avoid shell execution with dynamic input",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list) @ARGS\n    (#eq? @MOD \"os\")\n    (#match? @FN \"^(system|popen)$\"))\n\n  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list\n      (keyword_argument\n        name: (identifier) @KW\n        value: (true)))\n    (#eq? @MOD \"subprocess\")\n    (#match? @FN \"^(run|Popen|call|check_output|check_call)$\")\n    (#eq? @KW \"shell\"))",
+      "metavars": [
+        "MOD",
+        "FN",
+        "ARGS",
+        "KW"
+      ],
+      "post_filter": "py_command_injection_sink",
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-cross-language-method",
+      "name": "Cross-Language Method Leakage",
+      "severity": "warning",
+      "language": "python",
+      "message": "'{METHOD}' is not a Python method — likely a {LANG} idiom leaking in",
+      "query": "  (call\n    function: (attribute\n      object: (_) @OBJ\n      attribute: (identifier) @METHOD)\n    (#match? @METHOD \"^(push|forEach|indexOf|charAt|substring|hasOwnProperty|unshift|flatMap|padStart|padEnd|trimStart|trimEnd|equals|isEmpty|println|printf|getClass|hashCode|toCharArray|getBytes|compareTo|equalsIgnoreCase|startsWith|endsWith|each|collect|select|reject|detect|inject|chomp|chop|gsub|upcase|downcase|present|blank|Add|Contains|ToLower|ToUpper|Trim|Substring|WriteLine|ReadLine|TryParse|forEach|includes|assign|freeze|splice|unshift|shift|flatMap)$\"))",
+      "metavars": [
+        "OBJ",
+        "METHOD"
+      ],
+      "post_filter": "match_captures",
+      "post_filter_params": {
+        "METHOD": "^(push|forEach|indexOf|charAt|substring|hasOwnProperty|unshift|flatMap|padStart|padEnd|trimStart|trimEnd|equals|isEmpty|println|printf|getClass|hashCode|toCharArray|getBytes|compareTo|equalsIgnoreCase|startsWith|endsWith|each|collect|select|reject|detect|inject|chomp|chop|gsub|upcase|downcase|present|blank|Add|Contains|ToLower|ToUpper|Trim|Substring|WriteLine|ReadLine|TryParse|forEach|includes|assign|freeze|splice|unshift|shift|flatMap)$"
+      },
+      "defect_class": "hallucination",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-debugger",
+      "name": "Debugger Statement",
+      "severity": "warning",
+      "language": "python",
+      "message": "Debugger call '{{FUNC}}' — remove before committing",
+      "query": "  (call\n    function: (identifier) @FUNC\n    (#eq? @FUNC \"breakpoint\"))\n\n  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FUNC)\n    (#eq? @MOD \"pdb\")\n    (#match? @FUNC \"^(set_trace|post_mortem|pm|run|runcall)$\"))",
+      "metavars": [
+        "FUNC",
+        "MOD"
+      ],
+      "defect_class": "safety",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "python-empty-except",
+      "name": "Empty Except Block",
+      "severity": "warning",
+      "language": "python",
+      "message": "Except block only contains 'pass' — handle or re-raise the exception",
+      "query": "  (try_statement\n    (except_clause\n      body: (block) @BODY))",
+      "metavars": [
+        "BODY"
+      ],
+      "post_filter": "python_empty_except",
+      "defect_class": "silent-error",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "python-hallucinated-import",
+      "name": "Hallucinated Import",
+      "severity": "warning",
+      "language": "python",
+      "message": "Hallucinated import — '{NAME}' does not exist in '{MODULE}'",
+      "query": "  (import_from_statement\n    module_name: (dotted_name) @MODULE\n    name: (dotted_name) @NAME)",
+      "metavars": [
+        "MODULE",
+        "NAME"
+      ],
+      "post_filter": "match_captures",
+      "post_filter_params": {
+        "MODULE": "^(requests|flask|django|typing|collections|asyncio|json|unittest|pytest|urllib|sqlalchemy)$",
+        "NAME": "^(JSONResponse|HTMLResponse|RedirectResponse|StreamingResponse|Depends|Query|Path|Body|Header|Cookie|Form|File|UploadFile|FastAPI|APIRouter|HTTPException|BackgroundTasks|dataclass|fields|BaseModel|Field|validator|aiohttp|parse|stringify|fixture|TestCase|get|post|put|delete|Model|Session|Column|Integer|String)$"
+      },
+      "defect_class": "hallucination",
+      "inline_tier": "error"
+    },
+    {
+      "id": "python-hardcoded-secrets",
+      "name": "Hardcoded Secret",
+      "severity": "warning",
+      "language": "python",
+      "message": "Hardcoded {{VARNAME}} — use environment variables or a secrets manager",
+      "query": "  (assignment\n    left: (identifier) @VARNAME\n    right: (string) @VALUE)",
+      "metavars": [
+        "VARNAME",
+        "VALUE"
+      ],
+      "post_filter": "check_secret_pattern",
+      "defect_class": "secrets",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "python-insecure-deserialization",
+      "name": "Insecure Deserialization",
+      "severity": "warning",
+      "language": "python",
+      "message": "Potential insecure deserialization sink — avoid unsafe loaders",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list (_) @DATA)\n    (#match? @MOD \"^(pickle|yaml)$\")\n    (#match? @FN \"^(load|loads|unsafe_load)$\"))",
+      "metavars": [
+        "MOD",
+        "FN",
+        "DATA"
+      ],
+      "post_filter": "py_insecure_deserialization_sink",
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-insecure-random",
+      "name": "Insecure Randomness",
+      "severity": "warning",
+      "language": "python",
+      "message": "Insecure randomness source detected — use secrets or os.urandom for security-sensitive values",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list) @ARGS\n    (#eq? @MOD \"random\")\n    (#match? @FN \"^(random|randint|randrange|choice|choices)$\"))",
+      "metavars": [
+        "MOD",
+        "FN",
+        "ARGS"
+      ],
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-mutable-class-attr",
+      "name": "Mutable Class Attribute",
+      "severity": "warning",
+      "language": "python",
+      "message": "Class attribute '{{VARNAME}}' is mutable — shared across all instances",
+      "query": "  (class_definition\n    body: (block\n      (expression_statement\n        (assignment\n          left: (identifier) @VARNAME\n          right: [\n            (list) @VALUE\n            (dictionary) @VALUE\n            (set) @VALUE\n          ]))))",
+      "metavars": [
+        "VARNAME",
+        "VALUE"
+      ],
+      "post_filter": "not_in_function",
+      "defect_class": "correctness",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "python-path-traversal",
+      "name": "Path Traversal Risk",
+      "severity": "warning",
+      "language": "python",
+      "message": "Potential path traversal sink — sanitize and constrain file paths",
+      "query": "  [\n    (call\n      function: (identifier) @FN\n      arguments: (argument_list\n        [(identifier) (binary_operator) (call)] @PATH))\n    (call\n      function: (attribute\n        object: (identifier) @MOD\n        attribute: (identifier) @FN)\n      arguments: (argument_list\n        [(identifier) (binary_operator) (call)] @PATH))\n  ]\n  (#match? @FN \"^(open|read_text|read_bytes|write_text|write_bytes|remove|unlink|rmdir)$\")",
+      "metavars": [
+        "MOD",
+        "FN",
+        "PATH"
+      ],
+      "post_filter": "py_path_traversal_sink",
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-print-statement",
+      "name": "Print Statement in Production",
+      "severity": "warning",
+      "language": "python",
+      "message": "print() — remove debug output before committing",
+      "query": "  (call\n    function: (identifier) @FUNC\n    (#eq? @FUNC \"print\")\n    arguments: (argument_list) @ARGS)",
+      "metavars": [
+        "FUNC",
+        "ARGS"
+      ],
+      "post_filter": "not_in_test_block",
+      "defect_class": "safety",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-raise-string",
+      "name": "Raise String Instead of Exception",
+      "severity": "warning",
+      "language": "python",
+      "message": "raise with string literal — Python 3 requires exception instances",
+      "query": "  (raise_statement\n    (string) @VALUE)",
+      "metavars": [
+        "VALUE"
+      ],
+      "defect_class": "correctness",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "python-sleep-in-test",
+      "name": "time.sleep in Test",
+      "severity": "warning",
+      "language": "python",
+      "message": "time.sleep() in test — use synchronisation primitives or polling helpers instead of fixed sleeps",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    (#eq? @MOD \"time\")\n    (#eq? @FN \"sleep\")) @CALL",
+      "metavars": [
+        "MOD",
+        "FN",
+        "CALL"
+      ],
+      "defect_class": "async-misuse",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-sql-injection",
+      "name": "SQL Injection Risk",
+      "severity": "warning",
+      "language": "python",
+      "message": "Potential SQL injection sink — use parameterized queries",
+      "query": "  (call\n    function: (attribute\n      attribute: (identifier) @FN)\n    arguments: (argument_list\n      [(binary_operator) (identifier) (call)] @SQL\n      (_)*)\n    (#match? @FN \"^(execute|executemany|query|raw)$\"))",
+      "metavars": [
+        "FN",
+        "SQL"
+      ],
+      "post_filter": "py_sql_injection_sink",
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-ssrf",
+      "name": "SSRF Risk",
+      "severity": "warning",
+      "language": "python",
+      "message": "Potential SSRF sink — validate/allowlist outbound URLs",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list\n      [(identifier) (subscript) (call)] @URL)\n    (#eq? @MOD \"requests\")\n    (#match? @FN \"^(get|post|put|patch|delete|request|head|options)$\"))",
+      "metavars": [
+        "MOD",
+        "FN",
+        "URL"
+      ],
+      "post_filter": "py_ssrf_sink",
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-subprocess-shell",
+      "name": "subprocess with shell=True",
+      "severity": "warning",
+      "language": "python",
+      "message": "subprocess called with shell=True — command injection risk if any argument is user-controlled",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list\n      (keyword_argument\n        name: (identifier) @KW\n        value: (true) @VAL))\n    (#eq? @MOD \"subprocess\")\n    (#match? @FN \"^(run|Popen|call|check_output|check_call)$\")\n    (#eq? @KW \"shell\"))",
+      "metavars": [
+        "MOD",
+        "FN",
+        "KW"
+      ],
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-thread-global-write",
+      "name": "Threaded Shared State Risk",
+      "severity": "warning",
+      "language": "python",
+      "message": "Thread creation detected — ensure shared state mutations are synchronized",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list) @ARGS)\n  (#eq? @MOD \"threading\")\n  (#eq? @FN \"Thread\")",
+      "metavars": [
+        "MOD",
+        "FN",
+        "ARGS"
+      ],
+      "defect_class": "async-misuse",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "python-unsafe-regex",
+      "name": "Unsafe Dynamic Regex",
+      "severity": "warning",
+      "language": "python",
+      "message": "re.{{FUNC}}() with variable pattern — ReDoS risk if pattern is user-controlled",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FUNC)\n    arguments: (argument_list\n      (identifier) @PATTERN)\n    (#eq? @MOD \"re\")\n    (#match? @FUNC \"^(compile|match|search|fullmatch|findall|finditer|sub|subn|split)$\"))",
+      "metavars": [
+        "MOD",
+        "FUNC",
+        "PATTERN"
+      ],
+      "defect_class": "injection",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "python-weak-hash",
+      "name": "Weak Hash Primitive",
+      "severity": "warning",
+      "language": "python",
+      "message": "Weak hash primitive detected (MD5/SHA1) — use SHA-256+ for security-sensitive contexts",
+      "query": "  (call\n    function: (attribute\n      object: (identifier) @MOD\n      attribute: (identifier) @FN)\n    arguments: (argument_list) @ARGS\n    (#eq? @MOD \"hashlib\")\n    (#match? @FN \"^(md5|sha1)$\"))",
+      "metavars": [
+        "MOD",
+        "FN",
+        "ARGS"
+      ],
+      "defect_class": "injection",
+      "inline_tier": "warning"
+    },
+    {
+      "id": "unreachable-except",
+      "name": "Unreachable Except Clause",
+      "severity": "warning",
+      "language": "python",
+      "message": "Unreachable except clause — earlier except catches all",
+      "query": "  (try_statement\n    (except_clause\n      \"except\") @GENERAL\n    (except_clause\n      \"except\"\n      (identifier) @SPECIFIC))",
+      "metavars": [
+        "GENERAL",
+        "SPECIFIC"
+      ],
+      "defect_class": "correctness",
+      "inline_tier": "blocking"
+    },
+    {
+      "id": "wildcard-import",
+      "name": "Wildcard Import",
+      "severity": "warning",
+      "language": "python",
+      "message": "Wildcard import — pollutes namespace, hard to track origin",
+      "query": "  (import_from_statement\n    module_name: (dotted_name) @MODULE\n    (wildcard_import) @WILDCARD)",
+      "metavars": [
+        "MODULE",
+        "WILDCARD"
+      ],
+      "defect_class": "safety",
+      "inline_tier": "warning"
+    }
+  ]
+}

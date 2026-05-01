@@ -1,6 +1,5 @@
 ---
 aliases: []
-created_on: "[[02-17-2026]]"
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=71508291&t=l
 date: 2026-02-17
 updated: 2026-03-13T16:52:27-07:00

@@ -1,6 +1,5 @@
 ---
 date: 2026-02-08T07:47:07-05:00
-created_on: "[[02-08-2026]]"
 updated: 2026-03-13T15:19:24-07:00
 tags:
   - comp-neuro/theory

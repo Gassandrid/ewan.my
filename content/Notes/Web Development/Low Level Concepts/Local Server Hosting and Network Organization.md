@@ -1,6 +1,5 @@
 ---
 id: Local Server Hosting and Network Organization
-created_on: "[[09-12-2024]]"
 aliases:
 tags:
   - cs/web

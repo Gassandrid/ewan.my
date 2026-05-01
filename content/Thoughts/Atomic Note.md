@@ -1,6 +1,5 @@
 ---
 title: Atomic Note
-created_on: "[[02-04-2025]]"
 date: 2025-02-04
 updated: 2025-02-06
 tags:

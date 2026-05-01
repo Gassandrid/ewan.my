@@ -1,6 +1,5 @@
 ---
 aliases: []
-created_on: "[[09-11-2025]]"
 class: brain-region
 type: cortex
 upstream:

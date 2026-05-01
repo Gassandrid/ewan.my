@@ -1,7 +1,6 @@
 ---
 id: Linear Equations
-created_on: "[[01-15-2025]]"
-aliases: 
+aliases:
 tags:
   - "#math/linear-algebra"
 date: 2025-01-15

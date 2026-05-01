@@ -1,5 +1,4 @@
 ---
-created_on: "[[09-03-2025]]"
 aliases:
   - Jinn
 date: 2025-09-03

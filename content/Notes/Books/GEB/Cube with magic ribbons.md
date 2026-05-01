@@ -1,6 +1,5 @@
 ---
 date: 2025-09-22
-created_on: "[[09-22-2025]]"
 updated: 2025-09-24
 source:
   - "[[Gödel, Escher, Bach]]"

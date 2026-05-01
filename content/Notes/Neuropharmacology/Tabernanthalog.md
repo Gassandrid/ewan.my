@@ -1,7 +1,6 @@
 ---
 aliases:
   - TBG
-created_on: "[[02-22-2026]]"
 class:
   - medication
 category: cognitive

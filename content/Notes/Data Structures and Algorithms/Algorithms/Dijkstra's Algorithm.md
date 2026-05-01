@@ -1,6 +1,5 @@
 ---
 date: 2024-10-25
-created_on: "[[10-25-2024]]"
 tags:
   - university
   - cs/theory/algorithms

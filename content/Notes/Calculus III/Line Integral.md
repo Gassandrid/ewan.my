@@ -1,5 +1,4 @@
 ---
-created_on: "[[11-07-2024]]"
 tags:
   - math
   - math/calculus/multivariable

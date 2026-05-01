@@ -1,6 +1,5 @@
 ---
 date: 2024-10-28
-created_on: "[[10-28-2024]]"
 tags:
   - comp-neuro
   - cs

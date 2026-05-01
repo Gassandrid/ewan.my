@@ -1,6 +1,5 @@
 ---
 date: 2025-11-11
-created_on: "[[11-11-2025]]"
 updated: 2026-01-16T17:33:00-05:00
 tags:
   - cs/python

@@ -1,6 +1,5 @@
 ---
 id: Runge Kutta
-created_on: "[[10-07-2025]]"
 aliases: []
 tags:
   - math/calculus/differential/ode

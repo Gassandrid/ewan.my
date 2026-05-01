@@ -1,6 +1,5 @@
 ---
 date: 2025-04-14
-created_on: "[[04-14-2025]]"
 updated: 2026-01-15T15:41:59-05:00
 tags:
   - comp-neuro/brain/region

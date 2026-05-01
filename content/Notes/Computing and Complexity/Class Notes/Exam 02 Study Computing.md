@@ -1,6 +1,5 @@
 ---
 title: Exam 02 Study Computing
-created_on: "[[03-24-2025]]"
 date: 2025-03-24
 updated: 2025-03-27
 tags:

@@ -3,7 +3,6 @@ date: 2026-03-13T16:22:08-07:00
 updated: 2026-04-02T09:56:30-04:00
 class:
   - note
-created_on: "[[03-13-2026]]"
 tags:
   - comp-neuro/models
   - math/waves/oscillator

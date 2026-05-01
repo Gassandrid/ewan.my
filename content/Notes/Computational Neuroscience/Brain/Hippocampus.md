@@ -1,6 +1,5 @@
 ---
 aliases: []
-created_on: "[[03-31-2025]]"
 class: brain-region
 type: limbic
 upstream:

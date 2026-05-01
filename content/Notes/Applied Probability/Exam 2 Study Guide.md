@@ -1,6 +1,5 @@
 ---
 date: 2025-03-03
-created_on: "[[03-03-2025]]"
 updated: 2025-05-07
 title: Exam 2 Study Guide
 tags:

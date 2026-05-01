@@ -1,5 +1,4 @@
 ---
-created_on: "[[11-20-2024]]"
 tags:
   - seed
   - hobbies

@@ -1,6 +1,5 @@
 ---
 id: Day 10
-created_on: "[[02-20-2025]]"
 aliases: []
 tags:
   - cs/theory

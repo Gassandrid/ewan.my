@@ -1,6 +1,5 @@
 ---
 date: 2025-01-04
-created_on: "[[01-04-2025]]"
 updated: 2026-03-12T15:12:21-07:00
 title: Python Libraries to Learn
 tags:

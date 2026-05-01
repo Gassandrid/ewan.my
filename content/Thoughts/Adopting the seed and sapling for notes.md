@@ -1,6 +1,5 @@
 ---
 title: Adopting the seed and sapling for notes
-created_on: "[[02-06-2025]]"
 date: 2025-02-06
 updated: 2025-02-07
 tags:

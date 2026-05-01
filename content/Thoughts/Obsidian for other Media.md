@@ -1,5 +1,4 @@
 ---
-created_on: "[[12-15-2025]]"
 class:
   - note
 date: 2025-12-15

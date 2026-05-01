@@ -1,6 +1,5 @@
 ---
 date: 2025-01-17
-created_on: "[[01-17-2025]]"
 updated: 2025-04-02
 title: Parameter
 tags:

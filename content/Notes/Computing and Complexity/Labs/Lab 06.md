@@ -1,6 +1,5 @@
 ---
 title: Lab 06
-created_on: "[[03-18-2025]]"
 date: 2025-03-18
 updated: 2025-03-18
 author: Ewan Pedersen, Sylvan Franklin, Isaac Wedamen

@@ -1,6 +1,5 @@
 ---
 id: Evidence Lower Bound
-created_on: "[[11-05-2025]]"
 aliases:
   - ELBO
   - Variational Lower Bound

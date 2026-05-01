@@ -1,6 +1,5 @@
 ---
 id: Computational Neuroscience
-created_on: "[[01-31-2025]]"
 aliases: []
 tags:
   - comp-neuro

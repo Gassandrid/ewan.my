@@ -1,6 +1,5 @@
 ---
 id: Orthogonality
-created_on: "[[06-17-2025]]"
 aliases:
   - Orthogonal
   - orthogonal

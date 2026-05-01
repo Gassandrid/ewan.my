@@ -1,6 +1,5 @@
 ---
 id: Large Language Model
-created_on: "[[09-25-2025]]"
 aliases:
   - LLM
 tags: []

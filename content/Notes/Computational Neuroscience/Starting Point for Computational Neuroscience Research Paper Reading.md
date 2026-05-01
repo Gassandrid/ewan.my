@@ -1,6 +1,5 @@
 ---
 title: Starting Point for Computational Neuroscience Research Paper Reading
-created_on: "[[02-11-2025]]"
 date: 2025-02-11
 updated: 2025-09-29
 tags:

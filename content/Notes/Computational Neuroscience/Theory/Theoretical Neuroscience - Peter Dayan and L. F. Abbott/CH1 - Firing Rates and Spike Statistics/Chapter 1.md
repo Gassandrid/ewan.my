@@ -1,6 +1,5 @@
 ---
 id: index
-created_on: "[[03-29-2025]]"
 aliases: []
 tags: []
 date: 2025-03-29

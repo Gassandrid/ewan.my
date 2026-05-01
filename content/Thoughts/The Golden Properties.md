@@ -1,6 +1,5 @@
 ---
 id: The Golden Properties
-created_on: "[[07-03-2025]]"
 aliases:
 tags:
   - seed

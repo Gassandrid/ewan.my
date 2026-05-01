@@ -1,6 +1,5 @@
 ---
 id: CH7 - Linear Regression
-created_on: "[[11-14-2024]]"
 aliases: []
 tags:
   - math/probability/statistics

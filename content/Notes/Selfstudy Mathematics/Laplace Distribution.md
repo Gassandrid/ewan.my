@@ -1,6 +1,5 @@
 ---
 id: Laplace Distribution
-created_on: "[[10-06-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

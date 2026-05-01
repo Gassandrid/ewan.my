@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[03-01-2026]]"
 tags:
   - curation
   - cs/homelab/data

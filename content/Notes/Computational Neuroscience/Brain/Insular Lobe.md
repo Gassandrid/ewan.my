@@ -1,6 +1,7 @@
 ---
-aliases: [Insula, Insular Cortex]
-created_on: "[[02-22-2026]]"
+aliases:
+  - Insula
+  - Insular Cortex
 class: brain-region
 type: cortex
 upstream:
@@ -12,7 +13,7 @@ downstream:
   - "[[Amygdala]]"
   - "[[Prefrontal Cortex]]"
   - "[[Hypothalamus]]"
-  - "[[Brainstem]]" # autonomic nuclei
+  - "[[Brainstem]]"
 inhibitors: []
 activators: []
 distribution:

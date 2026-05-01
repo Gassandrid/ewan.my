@@ -1,6 +1,5 @@
 ---
 date: 2024-10-29
-created_on: "[[10-29-2024]]"
 tags:
   - math/calculus/multivariable
   - university

@@ -1,6 +1,5 @@
 ---
 date: 2025-02-06
-created_on: "[[02-06-2025]]"
 updated: 2025-02-19
 tags: []
 title: tree

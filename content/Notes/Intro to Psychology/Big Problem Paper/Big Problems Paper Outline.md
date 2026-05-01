@@ -1,5 +1,4 @@
 ---
-created_on: "[[11-02-2025]]"
 class:
   - note
   - export

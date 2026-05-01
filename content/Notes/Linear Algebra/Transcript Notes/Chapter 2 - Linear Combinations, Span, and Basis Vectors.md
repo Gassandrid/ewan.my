@@ -1,6 +1,5 @@
 ---
 date: 2025-04-02
-created_on: "[[04-02-2025]]"
 updated: 2025-04-23
 tags:
   - math/linear-algebra

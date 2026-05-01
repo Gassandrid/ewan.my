@@ -1,6 +1,5 @@
 ---
 id: Cross Entropy
-created_on: "[[09-16-2025]]"
 aliases: []
 tags:
   - math/information/entropy

@@ -1,6 +1,5 @@
 ---
 id: Mathematics
-created_on: "[[01-31-2025]]"
 aliases: []
 tags:
   - math

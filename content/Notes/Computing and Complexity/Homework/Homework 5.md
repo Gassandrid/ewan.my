@@ -1,6 +1,5 @@
 ---
 date: 2025-04-30
-created_on: "[[04-30-2025]]"
 updated: 2026-01-16T12:06:00-05:00
 author: Ewan Pedersen
 title: Homework 5

@@ -1,6 +1,5 @@
 ---
 id: Stable Manifold
-created_on: "[[02-05-2026]]"
 aliases:
   - Stable Manifolds
   - Stable Direction

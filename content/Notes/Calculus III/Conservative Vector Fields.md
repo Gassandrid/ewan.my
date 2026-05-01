@@ -1,6 +1,5 @@
 ---
 id: 16.3 - Conservative Vector Fields
-created_on: "[[11-18-2024]]"
 date: 2024-11-18
 tags:
   - math/calculus/vector

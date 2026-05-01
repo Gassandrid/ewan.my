@@ -1,6 +1,5 @@
 ---
 date: 2025-01-01
-created_on: "[[01-01-2025]]"
 updated: 2025-02-06
 tags:
   - seed

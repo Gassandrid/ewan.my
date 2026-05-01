@@ -1,12 +1,12 @@
 ---
-aliases: [Medulla]
-created_on: "[[02-22-2026]]"
+aliases:
+  - Medulla
 class: brain-region
 type: brainstem
 upstream:
   - "[[Spinal Cord]]"
   - "[[Pons]]"
-  - "[[Cranial Nerves]]" # IX, X, XI, XII
+  - "[[Cranial Nerves]]"
 downstream:
   - "[[Thalamus]]"
   - "[[Spinal Cord]]"

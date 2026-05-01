@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "files": {
+    ".pi/extensions/pi-dream-memory/index.ts": {
+      "latest": {
+        "commit": "46047cd01",
+        "timestamp": "2026-04-29T15:42:17.069Z",
+        "mi": 19.9,
+        "cognitive": 137,
+        "nesting": 5,
+        "lines": 253,
+        "maxCyclomatic": 33,
+        "entropy": 6.75
+      },
+      "history": [
+        {
+          "commit": "46047cd01",
+          "timestamp": "2026-04-29T15:42:17.069Z",
+          "mi": 19.9,
+          "cognitive": 137,
+          "nesting": 5,
+          "lines": 253,
+          "maxCyclomatic": 33,
+          "entropy": 6.75
+        }
+      ],
+      "trend": "stable"
+    },
+    "../.pi/agent/git/github.com/code-B-rabbit/pi-memory-cc/extensions/memory.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:42:11.534Z",
+        "mi": 33.7,
+        "cognitive": 97,
+        "nesting": 6,
+        "lines": 204,
+        "maxCyclomatic": 46,
+        "entropy": 6.12
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:42:11.534Z",
+          "mi": 33.7,
+          "cognitive": 97,
+          "nesting": 6,
+          "lines": 204,
+          "maxCyclomatic": 46,
+          "entropy": 6.12
+        }
+      ],
+      "trend": "stable"
+    },
+    "../.pi/agent/git/github.com/code-B-rabbit/pi-memory-cc/extensions/prompts.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:42:11.561Z",
+        "mi": 33.2,
+        "cognitive": 0,
+        "nesting": 1,
+        "lines": 166,
+        "maxCyclomatic": 1,
+        "entropy": 8.04
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:42:11.561Z",
+          "mi": 33.2,
+          "cognitive": 0,
+          "nesting": 1,
+          "lines": 166,
+          "maxCyclomatic": 1,
+          "entropy": 8.04
+        }
+      ],
+      "trend": "stable"
+    },
+    "../.pi/agent/git/github.com/code-B-rabbit/pi-memory-cc/extensions/git.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:42:16.970Z",
+        "mi": 43,
+        "cognitive": 53,
+        "nesting": 6,
+        "lines": 104,
+        "maxCyclomatic": 20,
+        "entropy": 5.49
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:42:16.970Z",
+          "mi": 43,
+          "cognitive": 53,
+          "nesting": 6,
+          "lines": 104,
+          "maxCyclomatic": 20,
+          "entropy": 5.49
+        }
+      ],
+      "trend": "stable"
+    },
+    "../.pi/agent/git/github.com/code-B-rabbit/pi-memory-cc/.pi/extensions/memory.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:42:17.004Z",
+        "mi": 33.4,
+        "cognitive": 42,
+        "nesting": 5,
+        "lines": 214,
+        "maxCyclomatic": 13,
+        "entropy": 7.86
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:42:17.004Z",
+          "mi": 33.4,
+          "cognitive": 42,
+          "nesting": 5,
+          "lines": 214,
+          "maxCyclomatic": 13,
+          "entropy": 7.86
+        }
+      ],
+      "trend": "stable"
+    },
+    "../.pi/agent/git/github.com/code-B-rabbit/pi-memory-cc/test/git.test.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:42:17.032Z",
+        "mi": 41.3,
+        "cognitive": 1,
+        "nesting": 2,
+        "lines": 117,
+        "maxCyclomatic": 2,
+        "entropy": 4.71
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:42:17.032Z",
+          "mi": 41.3,
+          "cognitive": 1,
+          "nesting": 2,
+          "lines": 117,
+          "maxCyclomatic": 2,
+          "entropy": 4.71
+        }
+      ],
+      "trend": "stable"
+    },
+    "../../../opt/homebrew/lib/node_modules/@mariozechner/pi-coding-agent/examples/extensions/custom-compaction.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:42:51.343Z",
+        "mi": 44.8,
+        "cognitive": 30,
+        "nesting": 5,
+        "lines": 99,
+        "maxCyclomatic": 9,
+        "entropy": 5.48
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:42:51.343Z",
+          "mi": 44.8,
+          "cognitive": 30,
+          "nesting": 5,
+          "lines": 99,
+          "maxCyclomatic": 9,
+          "entropy": 5.48
+        }
+      ],
+      "trend": "stable"
+    },
+    "../../../opt/homebrew/lib/node_modules/@mariozechner/pi-coding-agent/dist/core/extensions/types.d.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:43:40.192Z",
+        "mi": 15.2,
+        "cognitive": 0,
+        "nesting": 1,
+        "lines": 968,
+        "maxCyclomatic": 1,
+        "entropy": 7.16
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:43:40.192Z",
+          "mi": 15.2,
+          "cognitive": 0,
+          "nesting": 1,
+          "lines": 968,
+          "maxCyclomatic": 1,
+          "entropy": 7.16
+        }
+      ],
+      "trend": "stable"
+    },
+    "../../../opt/homebrew/lib/node_modules/@mariozechner/pi-coding-agent/dist/core/model-registry.d.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:43:43.810Z",
+        "mi": 41.7,
+        "cognitive": 0,
+        "nesting": 2,
+        "lines": 144,
+        "maxCyclomatic": 1,
+        "entropy": 5.9
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:43:43.810Z",
+          "mi": 41.7,
+          "cognitive": 0,
+          "nesting": 2,
+          "lines": 144,
+          "maxCyclomatic": 1,
+          "entropy": 5.9
+        }
+      ],
+      "trend": "stable"
+    },
+    "../../../opt/homebrew/lib/node_modules/@mariozechner/pi-coding-agent/node_modules/@mariozechner/pi-ai/dist/index.d.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:44:58.320Z",
+        "mi": 53.5,
+        "cognitive": 0,
+        "nesting": 0,
+        "lines": 26,
+        "maxCyclomatic": 1,
+        "entropy": 3.41
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:44:58.320Z",
+          "mi": 53.5,
+          "cognitive": 0,
+          "nesting": 0,
+          "lines": 26,
+          "maxCyclomatic": 1,
+          "entropy": 3.41
+        }
+      ],
+      "trend": "stable"
+    },
+    "../../../opt/homebrew/lib/node_modules/@mariozechner/pi-coding-agent/node_modules/@mariozechner/pi-ai/dist/types.d.ts": {
+      "latest": {
+        "commit": "515ac350f",
+        "timestamp": "2026-05-01T19:45:00.725Z",
+        "mi": 29.4,
+        "cognitive": 0,
+        "nesting": 0,
+        "lines": 341,
+        "maxCyclomatic": 1,
+        "entropy": 5.87
+      },
+      "history": [
+        {
+          "commit": "515ac350f",
+          "timestamp": "2026-05-01T19:45:00.725Z",
+          "mi": 29.4,
+          "cognitive": 0,
+          "nesting": 0,
+          "lines": 341,
+          "maxCyclomatic": 1,
+          "entropy": 5.87
+        }
+      ],
+      "trend": "stable"
+    },
+    "../.pi/agent/git/github.com/code-B-rabbit/pi-memory-cc/extensions/dream.ts": {
+      "latest": {
+        "commit": "c27dc3dcd",
+        "timestamp": "2026-05-01T19:48:45.972Z",
+        "mi": 12.8,
+        "cognitive": 181,
+        "nesting": 4,
+        "lines": 520,
+        "maxCyclomatic": 34,
+        "entropy": 7.56
+      },
+      "history": [
+        {
+          "commit": "c27dc3dcd",
+          "timestamp": "2026-05-01T19:48:45.972Z",
+          "mi": 12.8,
+          "cognitive": 181,
+          "nesting": 4,
+          "lines": 520,
+          "maxCyclomatic": 34,
+          "entropy": 7.56
+        }
+      ],
+      "trend": "stable"
+    }
+  },
+  "capturedAt": "2026-05-01T19:48:51.368Z"
+}

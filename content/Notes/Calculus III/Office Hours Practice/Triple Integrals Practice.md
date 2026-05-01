@@ -1,6 +1,5 @@
 ---
 date: 2024-10-28
-created_on: "[[10-28-2024]]"
 updated: 2024-10-28
 tags:
   - math/calculus

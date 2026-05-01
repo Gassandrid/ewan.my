@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[04-16-2026]]"
 tags:
   - cs/ai/llm
   - cs/ai/tuning

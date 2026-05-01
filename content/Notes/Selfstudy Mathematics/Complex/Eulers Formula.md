@@ -1,5 +1,4 @@
 ---
-created_on: "[[06-21-2025]]"
 tags:
   - todo/math
   - math/complex

@@ -3,7 +3,6 @@ date: 2026-03-12T14:09:58-07:00
 updated: 2026-03-12T15:02:41-07:00
 class:
   - note
-created_on: "[[03-12-2026]]"
 tags:
   - comp-neuro/theory
 source:

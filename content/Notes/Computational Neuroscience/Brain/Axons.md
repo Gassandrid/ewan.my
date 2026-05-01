@@ -1,6 +1,5 @@
 ---
 id: Axons
-created_on: "[[03-30-2025]]"
 aliases: []
 tags:
   - comp-neuro

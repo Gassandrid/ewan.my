@@ -3,8 +3,9 @@ date: 2026-03-22T18:14:49-04:00
 updated: 2026-03-22T18:19:45-04:00
 class:
   - note
-created_on: "[[03-22-2026]]"
-tags: [curation/art, art/escher]
+tags:
+  - curation/art
+  - art/escher
 source:
 related:
 author:

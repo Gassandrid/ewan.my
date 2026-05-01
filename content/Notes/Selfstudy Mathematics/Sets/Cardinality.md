@@ -1,5 +1,4 @@
 ---
-created_on: "[[07-03-2025]]"
 tags:
   - math/sets
 date: 2025-07-03

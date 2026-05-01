@@ -1,6 +1,5 @@
 ---
 id: CH9 - Independence and Conditioning
-created_on: "[[02-05-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

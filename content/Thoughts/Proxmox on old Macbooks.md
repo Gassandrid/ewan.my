@@ -1,6 +1,5 @@
 ---
 title: Proxmox on old Macbooks
-created_on: "[[01-02-2025]]"
 date: 2025-01-02
 updated: 2025-07-26
 tags:

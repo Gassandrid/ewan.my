@@ -1,6 +1,5 @@
 ---
 date: 2025-09-02
-created_on: "[[09-02-2025]]"
 updated: 2025-12-15
 class:
   - journal

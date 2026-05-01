@@ -1,6 +1,5 @@
 ---
 id: Sparse Autoencoder
-created_on: "[[09-25-2025]]"
 aliases: []
 tags:
   - cs/ai/llm

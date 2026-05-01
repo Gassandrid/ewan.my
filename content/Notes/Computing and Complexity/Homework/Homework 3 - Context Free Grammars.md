@@ -1,7 +1,6 @@
 ---
 id: Homework 3 - Context Free Grammars
-created_on: "[[03-18-2025]]"
-aliases: 
+aliases:
 tags: []
 author: Ewan Pedersen
 date: 2025-03-18

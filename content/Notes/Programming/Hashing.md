@@ -1,6 +1,5 @@
 ---
 date: 2024-08-24
-created_on: "[[08-24-2024]]"
 tags:
   - cs/crypto
 updated: 2026-03-23T10:02:05-04:00

@@ -1,5 +1,4 @@
 ---
-created_on: "[[08-31-2025]]"
 tags:
   - engineering/3dprinting
   - projects/homelab/hardware

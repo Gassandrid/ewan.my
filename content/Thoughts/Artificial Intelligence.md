@@ -1,6 +1,5 @@
 ---
 title: Artificial Intelligence
-created_on: "[[02-05-2025]]"
 date: 2025-02-05
 updated: 2025-09-22
 tags:

@@ -1,6 +1,5 @@
 ---
 id: 14.3 - Partial Derivatives
-created_on: "[[12-12-2024]]"
 aliases:
   - Partial Derivative
 tags:

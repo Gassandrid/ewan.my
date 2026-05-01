@@ -1,6 +1,5 @@
 ---
 title: everybody is a total mess (and you should be one too)
-created_on: "[[03-05-2025]]"
 date: 2025-03-05
 updated: 2026-01-15T19:01:24-05:00
 tags:

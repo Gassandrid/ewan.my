@@ -1,5 +1,4 @@
 ---
-created_on: "[[02-01-2026]]"
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=9859674&t=l
 aliases:
   - BPAP

@@ -1,6 +1,5 @@
 ---
 id: Status Update 2 - Final Project
-created_on: "[[10-10-2024]]"
 aliases:
 tags:
   - cs/embedded

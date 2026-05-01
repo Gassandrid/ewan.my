@@ -1,5 +1,4 @@
 ---
-created_on: "[[10-15-2024]]"
 tags:
   - university
   - cs/python

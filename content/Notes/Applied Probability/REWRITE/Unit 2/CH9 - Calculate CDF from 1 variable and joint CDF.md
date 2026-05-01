@@ -1,6 +1,5 @@
 ---
 id: CH9 - Calculate CDF from 1 variable and joint CDF
-created_on: "[[02-07-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

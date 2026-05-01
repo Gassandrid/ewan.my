@@ -1,6 +1,5 @@
 ---
 id: The MIU Puzzle
-created_on: "[[06-24-2025]]"
 aliases:
 tags:
   - books/geb

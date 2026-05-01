@@ -1,6 +1,5 @@
 ---
 id: Support Vector Machines
-created_on: "[[02-02-2026]]"
 aliases:
   - SVM
 tags:

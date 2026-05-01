@@ -1,6 +1,5 @@
 ---
 id: 16.1 - Vector Fields
-created_on: "[[11-04-2024]]"
 date: 2024-11-04
 tags:
   - math/calculus/vector

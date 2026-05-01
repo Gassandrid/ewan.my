@@ -1,6 +1,5 @@
 ---
 date: 2025-12-26
-created_on: "[[12-26-2025]]"
 description: works and people that have shaped how i think
 tags:
   - seed

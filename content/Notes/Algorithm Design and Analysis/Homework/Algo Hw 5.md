@@ -1,6 +1,5 @@
 ---
 title: Homework 5 Written
-created_on: "[[10-10-2025]]"
 author:
   - "[[Ewan Pedersen]]"
 date: 2025-10-10

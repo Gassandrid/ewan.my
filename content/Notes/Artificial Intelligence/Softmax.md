@@ -1,6 +1,5 @@
 ---
 id: Softmax
-created_on: "[[08-12-2025]]"
 aliases: []
 tags:
   - cs/ai

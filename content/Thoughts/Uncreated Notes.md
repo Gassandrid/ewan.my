@@ -1,5 +1,4 @@
 ---
-created_on: "[[07-28-2025]]"
 tags:
   - seed
   - journal/workflow

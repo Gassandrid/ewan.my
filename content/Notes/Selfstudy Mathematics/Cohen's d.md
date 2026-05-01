@@ -3,7 +3,6 @@ date: 2026-03-16T13:54:41-04:00
 updated: 2026-03-16T14:01:12-04:00
 class:
   - note
-created_on: "[[03-16-2026]]"
 tags:
   - math/probability/statistics
 source:

@@ -1,6 +1,5 @@
 ---
 id: Muhammad
-created_on: "[[09-22-2025]]"
 aliases: []
 tags:
   - university

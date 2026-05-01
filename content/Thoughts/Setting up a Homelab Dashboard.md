@@ -1,6 +1,5 @@
 ---
 id: Setting up a Homelab Dashboard
-created_on: "[[10-01-2025]]"
 aliases: []
 tags:
   - projects/homelab/software

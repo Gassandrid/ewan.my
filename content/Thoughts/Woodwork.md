@@ -1,6 +1,5 @@
 ---
 date: 2024-10-06
-created_on: "[[10-06-2024]]"
 tags:
   - hobbies
   - seed

@@ -1,6 +1,5 @@
 ---
 title: Superposition and Subspace
-created_on: "[[02-03-2025]]"
 date: 2025-02-03
 updated: 2025-04-02
 tags:

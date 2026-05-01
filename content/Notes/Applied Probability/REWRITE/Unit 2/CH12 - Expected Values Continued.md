@@ -1,6 +1,5 @@
 ---
 id: CH12 - Expected Values Continued
-created_on: "[[02-12-2025]]"
 aliases: []
 tags:
   - math/probability/statistics

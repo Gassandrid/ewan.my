@@ -1,6 +1,5 @@
 ---
 id: The Stolen Necklace Problem
-created_on: "[[08-19-2025]]"
 aliases: []
 tags:
   - math/topology

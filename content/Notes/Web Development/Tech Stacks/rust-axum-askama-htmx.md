@@ -1,6 +1,5 @@
 ---
 date: 2024-09-12
-created_on: "[[09-12-2024]]"
 updated: 2026-03-13T14:08:42-07:00
 tags:
   - cs/web/techstacks

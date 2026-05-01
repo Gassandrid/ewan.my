@@ -1,7 +1,6 @@
 ---
 class:
   - note
-created_on: "[[04-07-2026]]"
 tags:
   - math/linear-algebra
   - math/chaos

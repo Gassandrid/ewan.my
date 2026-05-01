@@ -1,7 +1,6 @@
 ---
 id: Homogeneous Systems
-created_on: "[[01-29-2025]]"
-aliases: 
+aliases:
 tags:
   - "#math/linear-algebra"
 date: 2025-01-29

@@ -1,7 +1,6 @@
 ---
 id: The Scaling Hypothesis
-created_on: "[[02-04-2025]]"
-aliases: 
+aliases:
 tags:
   - seed
   - cs/ai

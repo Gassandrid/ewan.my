@@ -1,6 +1,5 @@
 ---
 id: Lab 03 Analysis
-created_on: "[[09-25-2025]]"
 aliases: []
 tags: []
 abstract: Analysis of Paramecium behavior in different chemical environments.

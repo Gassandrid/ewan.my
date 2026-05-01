@@ -1,6 +1,5 @@
 ---
 id: 16.2b - Line Integrals of Vector Fields
-created_on: "[[11-11-2024]]"
 date: 2024-11-11
 tags:
   - math/calculus/vector

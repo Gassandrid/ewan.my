@@ -1,6 +1,5 @@
 ---
 date: 2026-01-16T09:56:10-05:00
-created_on: "[[01-16-2026]]"
 updated: 2026-01-16T11:08:44-05:00
 class:
   - note
@@ -20,7 +19,7 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: '1.3'
+      format_version: "1.3"
       jupytext_version: 1.18.1
   kernelspec:
     display_name: Python 3

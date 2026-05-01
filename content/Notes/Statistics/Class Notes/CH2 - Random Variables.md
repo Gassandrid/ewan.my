@@ -1,6 +1,5 @@
 ---
 id: CH2 - Random Variables
-created_on: "[[09-12-2024]]"
 aliases:
   - Random Variable
 tags:

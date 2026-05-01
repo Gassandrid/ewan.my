@@ -1,6 +1,5 @@
 ---
 aliases: []
-created_on: "[[02-24-2026]]"
 class:
   - note
   - brain-region

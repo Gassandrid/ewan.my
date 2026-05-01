@@ -1,8 +1,7 @@
 ---
 id: Lab 10
-created_on: "[[04-17-2025]]"
-aliases: 
-tags: 
+aliases:
+tags:
 author: Ewan Pedersen, Sylvan Franklin
 title: Lab 10
 updated: 2025-04-17

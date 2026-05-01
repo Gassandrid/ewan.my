@@ -1,6 +1,5 @@
 ---
 date: 2025-08-19
-created_on: "[[08-19-2025]]"
 updated: 2025-08-19
 class:
   - person

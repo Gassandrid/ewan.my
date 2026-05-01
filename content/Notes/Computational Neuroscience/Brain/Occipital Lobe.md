@@ -1,13 +1,12 @@
 ---
 aliases: []
-created_on: "[[02-22-2026]]"
 class: brain-region
 type: cortex
 upstream:
-  - "[[Thalamus]]" # lateral geniculate nucleus
+  - "[[Thalamus]]"
 downstream:
-  - "[[Parietal Lobe]]" # dorsal/where pathway
-  - "[[Temporal Lobe]]" # ventral/what pathway
+  - "[[Parietal Lobe]]"
+  - "[[Temporal Lobe]]"
 inhibitors: []
 activators: []
 distribution:

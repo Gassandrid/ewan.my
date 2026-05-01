@@ -1,6 +1,5 @@
 ---
 date: 2025-06-13
-created_on: "[[06-13-2025]]"
 updated: 2025-09-09
 tags:
   - math/analysis

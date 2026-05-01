@@ -1,17 +1,16 @@
 ---
 aliases: []
-created_on: "[[02-22-2026]]"
 class: brain-region
 type: hypothalamic
 upstream:
   - "[[Amygdala]]"
   - "[[Hippocampus]]"
   - "[[Brainstem]]"
-  - "[[Retina]]" # circadian light input via retinohypothalamic tract
+  - "[[Retina]]"
 downstream:
-  - "[[Pituitary Gland]]" # hormonal output
+  - "[[Pituitary Gland]]"
   - "[[Brainstem]]"
-  - "[[Spinal Cord]]" # autonomic control
+  - "[[Spinal Cord]]"
 inhibitors: []
 activators: []
 distribution:

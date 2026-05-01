@@ -1,6 +1,5 @@
 ---
 id: Extracellular Space
-created_on: "[[02-03-2025]]"
 aliases: []
 tags:
   - comp-neuro

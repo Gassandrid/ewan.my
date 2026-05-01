@@ -1,6 +1,5 @@
 ---
 id: Networking Hw 1
-created_on: "[[02-03-2026]]"
 aliases: []
 tags: []
 abstract: "Instructions: Complete each of the following problems. There are 100 total points. Each problem has its own point value. If a problem has multiple parts, they are equi-valued. Please use a word processor or text editor for solutions, and submit as a pdf file via brightspace.A note about command line tools: The computer commands referenced by questions below are immediately available for Linux, MacOS, and Unix platforms, and similar tools are available for Windows. If you do not have access to these on your personal machine, you can access them by using ssh to remotely log in to silk.uvm.edu."

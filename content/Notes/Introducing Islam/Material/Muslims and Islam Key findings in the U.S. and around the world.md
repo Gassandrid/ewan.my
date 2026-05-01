@@ -1,6 +1,5 @@
 ---
 source: https://www.pewresearch.org/short-reads/2017/08/09/muslims-and-islam-key-findings-in-the-u-s-and-around-the-world/
-created_on: "[[08-27-2025]]"
 image: https://www.google.com/s2/favicons?domain=https://www.pewresearch.org/short-reads/2017/08/09/muslims-and-islam-key-findings-in-the-u-s-and-around-the-world/&sz=256
 class:
   - website

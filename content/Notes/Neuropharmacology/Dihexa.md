@@ -1,6 +1,5 @@
 ---
 aliases: []
-created_on: "[[12-06-2025]]"
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=129010512&t=l
 class:
   - medication
