@@ -1,184 +1,198 @@
+// QuartzTOC inline behavior — LessWrong-style FixedPositionToC.
+//
+// The rail represents the article's vertical axis. Both dots and the
+// thumb live in the same percentage coordinate system, so when a heading
+// is on screen, its dot is inside the thumb by construction.
+//
+//   --toc-top    (per row)   — heading offset / article height, %
+//   --scroll-amount (on toc) — thumb top, % of rail (= scroll progress)
+//   --thumb-amount  (on toc) — thumb height, % of rail (= viewport / article)
+//
+// Active highlight: the heading whose center is closest to (and above)
+// 35% of the viewport — matches LW's centerOfElement landmark.
+
+const TOP_LANDMARK = "__top__"
 
 function setupQuartzTOC() {
-    const toc = document.getElementById("quartztoc")
-    if (!toc) return
+  const toc = document.getElementById("quartztoc") as HTMLElement | null
+  if (!toc) return
 
-    const nav = toc.querySelector("#quartztoc-vertical") as HTMLElement
-    if (!nav) return
+  const article =
+    (document.querySelector("article") as HTMLElement | null) ??
+    (document.querySelector(".center") as HTMLElement | null)
 
-    const buttons = toc.querySelectorAll("button[data-for]") as NodeListOf<HTMLButtonElement>
+  const rows = Array.from(toc.querySelectorAll(".toc-row[data-for]")) as HTMLElement[]
+  const links = Array.from(toc.querySelectorAll("a.toc-link[data-for]")) as HTMLAnchorElement[]
+  if (rows.length === 0) return
 
-    // Function to update the wave based on the active button
-    const updateWave = (activeButton: HTMLButtonElement | null) => {
-        if (!activeButton) {
-            // Reset if nothing active
-            buttons.forEach((btn) => {
-                const fill = btn.querySelector(".fill") as HTMLElement
-                if (fill) {
-                    fill.style.transform = "scaleX(1)"
-                    fill.style.opacity = "0.35"
-                }
-                const indicator = btn.querySelector(".indicator") as HTMLElement
-                if (indicator) {
-                    indicator.style.transform = "scale(0.65)"
-                    indicator.style.opacity = "0.25"
-                    indicator.style.fontWeight = "400"
-                }
-            })
-            return
-        }
+  const slugToRow = new Map<string, HTMLElement>()
+  for (const row of rows) {
+    const slug = row.dataset.for
+    if (slug) slugToRow.set(slug, row)
+  }
 
-        const navRect = nav.getBoundingClientRect()
-        const activeRect = activeButton.getBoundingClientRect()
-        const activeY = activeRect.top + activeRect.height / 2 - navRect.top
+  // Skip the synthetic "__top__" row when collecting article headings.
+  const headings: { slug: string; el: HTMLElement }[] = []
+  for (const row of rows) {
+    const slug = row.dataset.for
+    if (!slug || slug === TOP_LANDMARK) continue
+    const el = document.getElementById(slug)
+    if (el) headings.push({ slug, el })
+  }
+  if (headings.length === 0 && !slugToRow.has(TOP_LANDMARK)) return
 
-        buttons.forEach((button) => {
-            const buttonRect = button.getBoundingClientRect()
-            const buttonY = buttonRect.top + buttonRect.height / 2 - navRect.top
+  // ── Active-row highlighting ────────────────────────────────────────
+  let currentActive: string | null = null
+  const setActive = (slug: string | null) => {
+    if (slug === currentActive) return
+    if (currentActive) {
+      const prev = slugToRow.get(currentActive)
+      if (prev) prev.classList.remove("is-active")
+    }
+    if (slug) {
+      const row = slugToRow.get(slug)
+      if (row) row.classList.add("is-active")
+    }
+    currentActive = slug
+  }
 
-            const distance = Math.abs(activeY - buttonY)
-            const sigma = 42 // Width of the gaussian curve
-            const maxScale = 4.5 // Max scale factor (approx --indicator-position)
-            const minScale = 1   // Min scale factor
+  const computeActive = () => {
+    // Topmost heading whose center is at or above 35% of the viewport.
+    // If none, the title row is active (we're above the first heading).
+    const target = window.innerHeight * 0.35
+    let active: string | null = null
+    for (const { slug, el } of headings) {
+      const rect = el.getBoundingClientRect()
+      const center = rect.top + rect.height / 2
+      if (center <= target) {
+        active = slug
+      } else {
+        break
+      }
+    }
+    if (!active) {
+      active = slugToRow.has(TOP_LANDMARK) ? TOP_LANDMARK : null
+    }
+    setActive(active)
+  }
 
-            const isButton = button === activeButton
+  // ── Per-row heading-offset positioning ─────────────────────────────
+  // Set --toc-top on each row to its heading's percent offset within the
+  // article. Title row pins to 0%. Recomputed on resize and after image
+  // loads (since heading offsets shift as content reflows).
+  const positionRows = () => {
+    const titleRow = slugToRow.get(TOP_LANDMARK)
+    if (titleRow) titleRow.style.setProperty("--toc-top", "0")
 
-            const fill = button.querySelector(".fill") as HTMLElement
-            if (fill) {
-                fill.style.transition = "transform 0.2s ease, opacity 0.2s ease"
-                fill.style.opacity = isButton ? "1" : "0.35"
+    if (!article || headings.length === 0) return
+    const rect = article.getBoundingClientRect()
+    const articleTop = rect.top + window.scrollY
+    const articleHeight = rect.height
+    if (articleHeight <= 0) return
 
-                // Gaussian function
-                const scale = minScale + (maxScale - minScale) * Math.exp(-Math.pow(distance, 2) / (2 * Math.pow(sigma, 2)))
-                fill.style.transform = `scaleX(${scale})`
-            }
+    for (const { slug, el } of headings) {
+      const row = slugToRow.get(slug)
+      if (!row) continue
+      const headingTop = el.getBoundingClientRect().top + window.scrollY
+      const offset = Math.max(0, headingTop - articleTop)
+      const pct = Math.max(0, Math.min(100, (offset / articleHeight) * 100))
+      row.style.setProperty("--toc-top", pct.toFixed(3))
+    }
+  }
 
-            const indicator = button.querySelector(".indicator") as HTMLElement
-            if (indicator) {
-                indicator.style.transition = "transform 0.2s ease, opacity 0.2s ease"
-                // Scale indicator based on distance too, but different range
-                const indMinScale = 0.65 // Smaller min scale
-                const indMaxScale = 1.1
-                // Use a tighter sigma for text to reduce overlap
-                const textSigma = 24
-                const indScale = indMinScale + (indMaxScale - indMinScale) * Math.exp(-Math.pow(distance, 2) / (2 * Math.pow(textSigma, 2)))
-
-                indicator.style.transform = `scale(${indScale})`
-                indicator.style.opacity = isButton ? "1" : "0.25" // Dimmer inactive
-                indicator.style.fontWeight = isButton ? "600" : "400"
-            }
-        })
+  // ── Thumb: viewport projected onto the article ─────────────────────
+  // height % = viewport / article    (capped 2..100)
+  // top    % = scrollProgress * (100 - height%)
+  // Reference is the article element if present; otherwise document.
+  const updateThumb = () => {
+    const ref = article ?? document.documentElement
+    const refRect = ref.getBoundingClientRect()
+    const refHeight = refRect.height
+    const viewport = window.innerHeight
+    if (refHeight <= 0) {
+      toc.style.setProperty("--scroll-amount", "0")
+      toc.style.setProperty("--thumb-amount", "0")
+      return
     }
 
-    // Click handler to scroll to section
-    const onClick = (evt: MouseEvent) => {
-        const target = evt.target as HTMLElement
-        const button = target.closest("button") as HTMLButtonElement
-        if (!button) return
+    const heightPct = Math.max(2, Math.min(100, (viewport / refHeight) * 100))
+    // How far through the reference element we've scrolled (0..1).
+    // refRect.top < 0 means the reference top is above the viewport top.
+    const scrolled = Math.max(0, -refRect.top)
+    const scrollable = Math.max(1, refHeight - viewport)
+    const progress = Math.max(0, Math.min(1, scrolled / scrollable))
+    const topPct = progress * (100 - heightPct)
 
-        const href = button.dataset.href
-        if (!href) return
+    toc.style.setProperty("--scroll-amount", topPct.toFixed(3))
+    toc.style.setProperty("--thumb-amount", heightPct.toFixed(3))
+  }
 
-        evt.preventDefault()
-        const elementId = href.slice(1)
-        const element = document.getElementById(elementId)
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" })
-            history.pushState(null, "", href)
-        }
+  // ── Click → smooth scroll ──────────────────────────────────────────
+  const onClick = (evt: MouseEvent) => {
+    const anchor = evt.currentTarget as HTMLAnchorElement | null
+    if (!anchor) return
+    const slug = anchor.dataset.for
+    if (!slug) return
+    evt.preventDefault()
+    if (slug === TOP_LANDMARK) {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+      history.pushState(null, "", "#")
+      setActive(TOP_LANDMARK)
+      return
     }
+    const el = document.getElementById(slug)
+    if (!el) return
+    el.scrollIntoView({ behavior: "smooth", block: "start" })
+    history.pushState(null, "", `#${slug}`)
+    setActive(slug)
+  }
 
-    buttons.forEach((btn) => {
-        btn.addEventListener("click", onClick)
-        window.addCleanup(() => btn.removeEventListener("click", onClick))
+  for (const a of links) {
+    a.addEventListener("click", onClick)
+    window.addCleanup(() => a.removeEventListener("click", onClick))
+  }
+
+  // ── rAF-throttled scroll/resize handlers ───────────────────────────
+  let ticking = false
+  const onScroll = () => {
+    if (ticking) return
+    ticking = true
+    window.requestAnimationFrame(() => {
+      computeActive()
+      updateThumb()
+      ticking = false
     })
+  }
 
-    // Intersection Observer to track active section
-    const observer = new IntersectionObserver((entries) => {
-        // We want to find the currently active section.
-        // Since multiple can be in view, we usually pick the top-most intersecting one.
-        // However, the observer fires for *changes*.
-
-        // Let's check all headers to find the current active one
-        const headers = Array.from(document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"))
-
-        let activeHeader: Element | null = null
-
-        // Find the first header that is above the bottom of the viewport?
-        // Or the one closest to the top of the viewport.
-
-        // Simple heuristic: The last header that is above the 20% mark of the viewport
-        const threshold = window.innerHeight * 0.2
-
-        for (const header of headers) {
-            const rect = header.getBoundingClientRect()
-            if (rect.top < threshold) {
-                activeHeader = header
-            } else {
-                break // Passed the threshold
-            }
-        }
-
-        // If no header is above threshold (top of page), maybe the first one?
-        if (!activeHeader && headers.length > 0) {
-            // Check if the first header is visible
-            const firstRect = headers[0].getBoundingClientRect()
-            if (firstRect.top < window.innerHeight) {
-                activeHeader = headers[0]
-            }
-        }
-
-        if (activeHeader) {
-            const slug = activeHeader.id
-            const activeButton = toc.querySelector(`button[data-for="${slug}"]`) as HTMLButtonElement
-            updateWave(activeButton)
-        } else {
-            updateWave(null)
-        }
-
-    }, {
-        rootMargin: "-10% 0px -80% 0px", // Adjust to trigger nicely
-        threshold: [0, 1]
-    })
-
-    const headers = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]")
-    headers.forEach((header) => observer.observe(header))
-
-    // Also update on scroll to be smoother if needed, but observer might be enough.
-    // For "smooth wave as you scroll", we might need a scroll listener if the observer is too jumpy.
-    // Let's add a scroll listener that throttles finding the active header.
-
-    const onScroll = () => {
-        // Re-run the active header logic
-        const threshold = window.innerHeight * 0.3
-        const headers = Array.from(document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"))
-        let activeHeader: Element | null = null
-
-        for (const header of headers) {
-            const rect = header.getBoundingClientRect()
-            if (rect.top < threshold) {
-                activeHeader = header
-            } else {
-                break
-            }
-        }
-
-        if (activeHeader) {
-            const slug = activeHeader.id
-            const activeButton = toc.querySelector(`button[data-for="${slug}"]`) as HTMLButtonElement
-            updateWave(activeButton)
-        }
-    }
-
-    document.addEventListener("scroll", onScroll, { passive: true })
-    window.addCleanup(() => {
-        document.removeEventListener("scroll", onScroll)
-        observer.disconnect()
-    })
-
-    // Initial update
+  const onResize = () => {
+    positionRows()
     onScroll()
+  }
+
+  document.addEventListener("scroll", onScroll, { passive: true })
+  window.addEventListener("resize", onResize, { passive: true })
+  window.addCleanup(() => {
+    document.removeEventListener("scroll", onScroll)
+    window.removeEventListener("resize", onResize)
+  })
+
+  // Initial pass.
+  positionRows()
+  computeActive()
+  updateThumb()
+
+  // Images and KaTeX shift heading offsets after first paint — re-measure
+  // once everything has settled.
+  const reflow = () => {
+    positionRows()
+    onScroll()
+  }
+  if (document.readyState !== "complete") {
+    window.addEventListener("load", reflow, { once: true })
+    window.addCleanup(() => window.removeEventListener("load", reflow))
+  } else {
+    setTimeout(reflow, 100)
+  }
 }
 
-window.addEventListener("resize", setupQuartzTOC)
 document.addEventListener("nav", setupQuartzTOC)
