@@ -1,1 +1,3 @@
-null
+{
+  "content": "📌 pi-lens active — automated checks run on your edits and writes. Blocking errors will be shown inline; you must fix all errors including pre-existing ones. Prefer: lsp_navigation for definitions/references, ast_grep_search for code patterns, grep for text/TODO search."
+}

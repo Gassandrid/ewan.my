@@ -1,6 +1,6 @@
 ---
 date: 2025-01-04
-updated: 2026-03-12T15:12:21-07:00
+updated: 2026-05-07T17:38:54-04:00
 title: Python Libraries to Learn
 tags:
   - cs/python
@@ -10,16 +10,21 @@ tags:
   - todo/math
 ---
 
+not really a "learning" file, but a reference for cool toolboxes in python that I should have a look at.
+
 **Comp Neuro:**
 
 https://neuralensemble.org/
 
-- [ ] [[Brian2]] - best for prototyping, general comp neuro abstract modelling
+- [ ] [[Brian2]] - best for prototyping, general comp neuro abstract modelling. basically entirely for [[Spiking Neural Network]]s
 	- update [[03-12-2026]] : probably the most useful one here, i mean if [[Emulation of the Drosophila Fly brain]] can be done in it then it is more than enough for big sims, especially since there is Brian2Cuda
-- [ ] [[Elephant]] - working with actual brain data
+- [ ] [[NeuralSet]] for packaging neural sensory data into torch tensors,
+	- great for multi modal ( think EEG + eye tracking with image/video stimulus )
+- [ ] [[Elephant]] - working with actual brain data, specifically from [[Electrodes]].
+- [ ] [[TransformerLens]] - good for [[Mechanistic Interpretability]] research in ai
 - [ ] [[NEST]] - for REALLY big simulations - im talking about supercomputer level
 - [ ] [[Nengo]] (maybe, I dont know if it is still relavent)
-- [ ] [[TransformerLens]] - good for [[Mechanistic Interpretability]] research in ai
+- [ ] NEURON - for super detailed biophysical models, not really my expertise so not high on list of priority
 
 ---
 
@@ -37,7 +42,7 @@ https://neuralensemble.org/
 | 8    | `PyTorch`       | Machine Learning/AI         |                                                                 |
 | 9    | `Flask`         | Web Development             |                                                                 |
 | 10   | Django          | Web Development             |                                                                 |
-| 11   | Requests        | HTTP for Humans             |                                                                 |
+| 11   | Requests<br>    | HTTP for Humans             |                                                                 |
 | 12   | `BeautifulSoup` | Web Scraping                |                                                                 |
 | 13   | `Selenium`      | Web Testing/Automation      |                                                                 |
 | 14   | PyGame          | Game Development            |                                                                 |
