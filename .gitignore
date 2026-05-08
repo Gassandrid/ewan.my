@@ -11,3 +11,11 @@ private/
 replit.nix
 CLAUDE.md
 ops/
+
+# Agent tooling copied into the public content tree
+content/.pi/
+content/.agents/
+content/.claude/
+content/.claude-relay/
+content/.claude*
+content/CLAUDE.md
