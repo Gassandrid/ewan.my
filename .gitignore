@@ -10,6 +10,7 @@ private/
 .replit
 replit.nix
 CLAUDE.md
+AGENTS.md
 ops/
 
 # Agent tooling copied into the public content tree
