@@ -1,7 +1,9 @@
 ---
 id: Chaos Hw 4
 aliases: []
-tags: []
+tags:
+  - math/chaos
+  - university/homework
 abstract:
 author:
   - Ewan
@@ -20,7 +22,7 @@ jupyter:
     language: python
     name: python3
 title: Assignment 4
-updated: 2026-02-24T20:06:26-05:00
+updated: 2026-05-12T22:17:28-04:00
 class:
   - export
 ---

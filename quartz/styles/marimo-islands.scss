@@ -1,0 +1,109 @@
+// Marimo notebook islands — embedded inline as <marimo-island> custom elements.
+// Marimo ships its own CSS bundle that assumes a default white app shell;
+// we override the bits that clash with Quartz's parchment theme.
+
+.marimo-notebook-page {
+  // Marimo's generator wraps every notebook in a 740px-centred <div>. Let it
+  // breathe to whatever width the Quartz content column allows.
+  > div[style*="max-width"] {
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  // The init island carries the "Initializing…" spinner. It is supposed to
+  // disappear once the Pyodide kernel is ready, but in practice it can stick
+  // around (likely a marimo islands quirk where the runtime never signals a
+  // ready-state on a non-built generator). We hide it unconditionally —
+  // empty reactive cells already act as their own placeholders.
+  marimo-island[data-reactive="false"] {
+    display: none !important;
+  }
+
+  marimo-island {
+    display: block;
+
+    & + marimo-island {
+      margin-top: 1rem;
+    }
+  }
+
+  marimo-cell-output {
+    display: block;
+  }
+
+  // Code is hidden when display_code=False (the default), but be defensive.
+  marimo-cell-code {
+    display: none !important;
+  }
+
+  // Marimo's stylesheet sets `.marimo { background-color: var(--background) }`
+  // which resolves to white in light mode and creates a card behind every
+  // cell. Make it inherit Quartz's page colour instead.
+  .marimo {
+    background-color: transparent !important;
+  }
+
+  // marimo's bundled CSS sets `<marimo-ui-element>` to `display: contents`,
+  // but doesn't style the widget custom elements inside it (marimo-slider,
+  // marimo-checkbox, marimo-button, etc.) — they fall back to the browser
+  // default for unknown elements, which is `display: inline` with `auto` size.
+  // Combined with shadow-DOM content, that collapses every widget to a
+  // zero-size box. Force them to block + a real width so the shadow root has
+  // a sized container to render into.
+  marimo-ui-element > * {
+    display: block;
+    width: 100%;
+  }
+
+  // Inherit Quartz typography inside marimo-rendered markdown.
+  .markdown {
+    font-family: var(--bodyFont, inherit);
+    color: var(--darkgray);
+  }
+
+  // Marimo's table widget uses Tailwind's `bg-background` on <tr>/<thead>,
+  // which resolves to marimo's `--background` (near-white/near-black). The
+  // markup lives in the table's shadow DOM, but marimo adopts our index.css
+  // into every widget shadow root, so selectors scoped to `.marimo` (which
+  // wraps the shadow contents) do propagate. We target the utility class
+  // directly so the override sticks regardless of which widget uses it.
+  .marimo .bg-background {
+    background-color: transparent !important;
+  }
+
+  // Custom loading indicator. Visible until any reactive island gets a
+  // `data-status` attribute (set by the runtime when its cell finishes).
+  .marimo-loading {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 6px;
+    color: var(--gray);
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+
+  .marimo-loading-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--lightgray);
+    border-top-color: var(--secondary);
+    border-radius: 50%;
+    animation: marimo-spinner-rotate 0.9s linear infinite;
+    flex-shrink: 0;
+  }
+
+  // Hide the loading block once at least one reactive cell has rendered.
+  &:has(marimo-island[data-reactive="true"][data-status]) .marimo-loading {
+    display: none;
+  }
+}
+
+@keyframes marimo-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

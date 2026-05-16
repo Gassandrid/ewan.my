@@ -27,7 +27,7 @@ const config: QuartzConfig = {
       fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "Fraunces",
+        header: "Lora",
         body: "ewanfont",
         code: "IBM Plex Mono",
       },
@@ -94,6 +94,7 @@ const config: QuartzConfig = {
       Plugin.RunPythonPlugin(),
       Plugin.ChartPlugin(),
       Plugin.MorrisLecarPlugin(),
+      Plugin.MarimoIslandsPlugin(),
       // Plugin.SmoothScrollPlugin(),
       Plugin.NotebookEmbedding(),
       Plugin.TikzJax({ showConsole: false }),
@@ -123,7 +124,6 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       // Plugin.CustomOgImages(),
-      // Plugin.MarimoNotebook(),
     ],
   },
 }

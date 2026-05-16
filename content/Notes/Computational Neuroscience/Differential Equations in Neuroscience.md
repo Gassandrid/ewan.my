@@ -4,13 +4,16 @@ tags:
   - todo/neuro
   - math/calculus/differential
 date: 2024-10-28
-updated: 2025-09-22
+updated: 2026-05-12T22:19:24-04:00
 class: transcript
 source:
   - "[[Differential Equations - The Language of Change]]"
 ---
+
 *study notes for a [[Artem Kirsanov]] [video](https://youtu.be/vTTlzmCRwU4?si=lUp82zM39EMrGDcY)* 
- 
+
+> [!Note] [[05-12-2026]] comment
+> i love looking back at these notes for concepts I didnt fully understand at the moment, but now are quite obvious. This is a great example, but oddly enough I have few notes on actually explaining differential equations stuff, so maybe I should finish this note? who knows.
 
 ## Abstract
 
