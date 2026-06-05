@@ -1,0 +1,293 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: Ewan.my
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  analytics:
+    provider: plausible
+  locale: en-US
+  baseUrl: ewan.my
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+    - .agents
+    - .claude
+    - .claude-relay
+    - .mcp.json
+    - .pandoc
+    - .pi
+    - .pi-lens
+    - .smart-env
+    - .trash
+    - AGENTS.md
+    - CLAUDE.md
+  theme:
+    fontOrigin: local
+    cdnCaching: true
+    typography:
+      header: Lora
+      body: ewanfont
+      code: IBM Plex Mono
+    colors:
+      lightMode:
+        light: "#f5f1eb"
+        lightgray: "#e6dfd6"
+        gray: "#9a8f82"
+        darkgray: "#4a4238"
+        dark: "#2d2520"
+        secondary: "#a67c6d"
+        tertiary: "#8b7f73"
+        highlight: rgba(166, 124, 109, 0.1)
+        textHighlight: "#f4d9c688"
+        rust: "#bf6159"
+        clay: "#c78d75"
+        ochre: "#cc9e54"
+        sage: "#869c7a"
+        pine: "#56706b"
+        slate: "#728c99"
+        mauve: "#9d868e"
+      darkMode:
+        light: "#1a1714"
+        lightgray: "#2a2520"
+        gray: "#6b6158"
+        darkgray: "#d4cec7"
+        dark: "#ebe7e1"
+        secondary: "#c59b8d"
+        tertiary: "#a89a8d"
+        highlight: rgba(197, 155, 141, 0.12)
+        textHighlight: "#d4a58888"
+        rust: "#db8e88"
+        clay: "#deaea0"
+        ochre: "#e0bc7e"
+        sage: "#aebd9f"
+        pine: "#8daeb3"
+        slate: "#9bb0bd"
+        mauve: "#c9b1b9"
+plugins:
+  - source: github:quartz-community/created-modified-date
+    enabled: true
+    options:
+      defaultDateType: created
+      priority:
+        - frontmatter
+        - git
+        - filesystem
+    order: 10
+  - source: github:quartz-community/syntax-highlighting
+    enabled: true
+    order: 20
+  - source: github:quartz-community/obsidian-flavored-markdown
+    enabled: true
+    options:
+      enableInHtmlEmbed: true
+      parseTags: false
+      enableCheckbox: true
+    order: 30
+  - source: github:quartz-community/github-flavored-markdown
+    enabled: true
+    order: 40
+  - source: github:quartz-community/table-of-contents
+    enabled: true
+    options:
+      maxDepth: 6
+    order: 50
+    layout:
+      position: left
+      priority: 20
+      display: desktop-only
+  - source: github:quartz-community/crawl-links
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+      lazyLoad: true
+    order: 60
+  - source: github:quartz-community/description
+    enabled: true
+    order: 70
+  - source: github:quartz-community/latex
+    enabled: true
+    options:
+      renderEngine: katex
+    order: 80
+  - source: github:quartz-community/citations
+    enabled: true
+    options:
+      bibliographyFile: content/References.bib
+    order: 85
+  - source: ./plugins/ewan-tikz
+    enabled: true
+    order: 88
+  - source: ./plugins/ewan-charts
+    enabled: true
+    order: 90
+  - source: ./plugins/ewan-run-python
+    enabled: true
+    options:
+      languages:
+        - python
+        - python-r
+    order: 92
+  - source: ./plugins/ewan-morris-lecar
+    enabled: true
+    order: 94
+  - source: ./plugins/ewan-marimo-resources
+    enabled: true
+    order: 120
+  - source: ./plugins/ewan-marimo
+    enabled: true
+    order: 20
+  - source: github:quartz-community/remove-draft
+    enabled: true
+  - source: github:quartz-community/alias-redirects
+    enabled: true
+  - source: github:quartz-community/content-index
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
+  - source: github:quartz-community/favicon
+    enabled: true
+  - source: github:quartz-community/og-image
+    enabled: false
+  - source: github:quartz-community/cname
+    enabled: true
+  - source: github:quartz-community/canvas-page
+    enabled: true
+  - source: github:quartz-community/content-page
+    enabled: true
+  - source: github:quartz-community/folder-page
+    enabled: true
+  - source: github:quartz-community/tag-page
+    enabled: true
+  - source: github:quartz-community/explorer
+    enabled: true
+    options:
+      title: Explore
+      useSavedState: true
+    layout:
+      position: right
+      priority: 20
+  - source: github:quartz-community/graph
+    enabled: true
+    layout:
+      position: left
+      priority: 10
+  - source: github:quartz-community/search
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 20
+      group: toolbar
+      groupOptions:
+        grow: true
+  - source: github:quartz-community/backlinks
+    enabled: true
+    layout:
+      position: right
+      priority: 10
+  - source: github:quartz-community/article-title
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 30
+  - source: github:quartz-community/content-meta
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 40
+  - source: github:quartz-community/tag-list
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 50
+  - source: github:quartz-community/page-title
+    enabled: false
+  - source: github:quartz-community/darkmode
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+      group: toolbar
+  - source: github:quartz-community/breadcrumbs
+    enabled: true
+    options:
+      rootName: Home
+      resolveFrontmatterTitle: true
+      showCurrentPage: true
+      leadingWindow: 1
+      trailingWindow: 1
+    layout:
+      position: beforeBody
+      priority: 5
+      condition: not-index
+  - source: github:quartz-community/comments
+    enabled: true
+    options:
+      provider: giscus
+      options:
+        repo: Gassandrid/ewan.my
+        repoId: R_kgDOM6tvbQ
+        category: Announcements
+        categoryId: DIC_kwDOM6tvbc4CjBtr
+    layout:
+      position: afterBody
+      priority: 10
+  - source: github:quartz-community/footer
+    enabled: true
+    options:
+      links:
+        GitHub: https://github.com/gassandrid
+  - source: github:quartz-community/spacer
+    enabled: true
+    layout:
+      position: left
+      priority: 30
+      display: mobile-only
+  - source: github:quartz-community/bases-page
+    enabled: true
+    options:
+      defaultViewType: table
+      linkResolution: shortest
+    order: 50
+  - source: github:quartz-community/note-properties
+    enabled: true
+    options:
+      includeAll: false
+      includedProperties:
+        - description
+        - tags
+        - aliases
+      excludedProperties: []
+      hidePropertiesView: false
+      delimiters: ---
+      language: yaml
+    order: 5
+    layout:
+      position: beforeBody
+      priority: 45
+  - source: github:quartz-community/unlisted-pages
+    enabled: true
+    order: 45
+layout:
+  groups:
+    toolbar:
+      priority: 10
+      direction: row
+      gap: 0.5rem
+  byPageType:
+    "404":
+      positions:
+        beforeBody: []
+        left: []
+        right: []
+    content: {}
+    folder:
+      positions:
+        right: []
+    tag:
+      positions:
+        right: []
+    canvas: {}
+    bases: {}

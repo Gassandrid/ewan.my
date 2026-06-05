@@ -97,6 +97,36 @@
       "commit": "56dc546614d905ad07dd0da8dd5820e25e5ea97b",
       "installedAt": "2026-06-03T13:32:35.233Z"
     },
+    "ewan-charts": {
+      "source": "./plugins/ewan-charts",
+      "resolved": "./plugins/ewan-charts",
+      "commit": "local",
+      "installedAt": "2026-06-05T16:59:07.297Z"
+    },
+    "ewan-marimo": {
+      "source": "./plugins/ewan-marimo",
+      "resolved": "./plugins/ewan-marimo",
+      "commit": "local",
+      "installedAt": "2026-06-03T18:38:52.923Z"
+    },
+    "ewan-marimo-resources": {
+      "source": "./plugins/ewan-marimo-resources",
+      "resolved": "./plugins/ewan-marimo-resources",
+      "commit": "local",
+      "installedAt": "2026-06-03T18:38:52.920Z"
+    },
+    "ewan-morris-lecar": {
+      "source": "./plugins/ewan-morris-lecar",
+      "resolved": "./plugins/ewan-morris-lecar",
+      "commit": "local",
+      "installedAt": "2026-06-05T16:59:07.298Z"
+    },
+    "ewan-run-python": {
+      "source": "./plugins/ewan-run-python",
+      "resolved": "./plugins/ewan-run-python",
+      "commit": "local",
+      "installedAt": "2026-06-05T16:59:07.298Z"
+    },
     "encrypted-pages": {
       "source": "github:quartz-community/encrypted-pages",
       "resolved": "https://github.com/quartz-community/encrypted-pages.git",

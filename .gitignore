@@ -11,3 +11,17 @@ private/
 replit.nix
 .quartz/
 quartz/cli/tui/dist/
+
+# Agent/tooling state copied into the public content tree
+content/.agents/
+content/.claude/
+content/.claude-relay/
+content/.claude*
+content/.mcp.json
+content/.pandoc/
+content/.pi/
+content/.pi-lens/
+content/.smart-env/
+content/.trash/
+content/AGENTS.md
+content/CLAUDE.md

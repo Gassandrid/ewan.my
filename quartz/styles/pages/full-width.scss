@@ -1,0 +1,44 @@
+@use "../variables.scss" as *;
+
+// Full-width layout for pages with cssclass "full-width"
+// Hides sidebars and unlocks the center column to span the full viewport.
+// Usage: add `fullWidth: true` to a CustomPageDef, or `cssclasses: [full-width]` in frontmatter.
+body:has(article.full-width) {
+  .lorenz-slider-left,
+  .lorenz-slider-right {
+    display: none !important;
+  }
+
+  .page {
+    max-width: 100%;
+
+    #quartz-body {
+      display: block !important;
+      padding: 0 !important;
+
+      .sidebar.left,
+      .sidebar.right {
+        display: none !important;
+      }
+
+      .center {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 2rem;
+        margin: 0 auto;
+
+        @media all and ($mobile) {
+          padding: 0 1rem;
+        }
+
+        article {
+          max-width: 100%;
+        }
+
+        .page-header {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

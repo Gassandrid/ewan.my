@@ -1,0 +1,20 @@
+{
+  "name": "@ewan/quartz-run-python",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js"
+  },
+  "quartz": {
+    "name": "ewan-run-python",
+    "displayName": "Ewan Runnable Python",
+    "description": "Render Python code fences as runnable Pyodide blocks.",
+    "version": "0.1.0",
+    "category": "transformer",
+    "defaultOrder": 92
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@ewan/quartz-tikz",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js"
+  },
+  "peerDependencies": {
+    "node-tikzjax": "^1.0.5"
+  },
+  "quartz": {
+    "name": "ewan-tikz",
+    "displayName": "Ewan TikZ",
+    "description": "Render TikZ code fences to SVG at build time.",
+    "version": "0.1.0",
+    "category": "transformer",
+    "defaultOrder": 88
+  }
+}

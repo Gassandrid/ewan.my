@@ -1,0 +1,151 @@
+---
+date: 2024-10-29
+tags:
+  - math/calculus/multivariable
+  - university
+updated: 2026-03-19T11:18:06-04:00
+class:
+  - note
+id: 15.9 - Jacobian
+---
+
+> **local warping intuition**: the Jacobian captures how a tiny rectangle in $(u,v)$-space gets stretched, sheared, and rotated into a parallelogram in $(x,y)$-space. this works because nonlinear maps, when you zoom in far enough, look linear, so a small patch in $uv$ gets approximated by a linear transformation, and that transformation is exactly what the partial derivatives encode. the determinant of that linear map is the factor by which areas scale under the local distortion, so if $|J| = 3$, a small patch in $uv$ covers 3 times as much area in $xy$. everything else in the change of variables formula is just integrating that scaling factor over the whole region.
+
+![[jacobianIntuition.png]]
+
+Polar,  cylindrical, and spherical coordinates area form of substitution in multiple integrals. Let's recall how Polar works: 
+
+> [!Info] Sketch
+> ![[Screenshot 2024-10-31 at 11.47.22 AM.png|600]]
+
+If $\mathcal{D}$ is a polar region,
+
+$$
+\int_{\mathcal{D}} \int f(x,y) \ dA = \int_{\theta_{1}}^{\theta_{2}} \int_{r_{1}}^{r_{2}}f(r\cos \theta, r\sin \theta) \ dA
+$$
+
+We know the area element is $dA = r \ dr \ d\theta$. The integration limits, $r_{1}\leq r\leq r_{2}$ and $\theta_{1}\leq \theta\leq \theta_{2}$, correspond to a rectangle in the $r\theta$-plane.
+
+> In this document, we will learn how to find the area element/volume element, also known as the [[Jacobian Determinant]], in the general case where the change of variable is given by $x=x(u,v), \ \ y=y(u,v)$.
+
+---
+
+## Deriving the Area Element
+
+Suppose the rectangular region $[u_{1},u_{2}]$, $[v_{1},v_{2}]$ in the uv-plane corresponds to some integration region in the xy-plane under the substitution $x=x(u,v)$, $y=y(u,v)$.
+
+>[!Info] Sketch
+> ![[Screenshot 2024-10-31 at 11.56.36 AM.png|600]]
+
+The rectangle with dimensions $\Delta u \Delta v$ (the red square in the figure) in the uv-plane corresponds to a patch (the red parallelogram) in the xy-plane.
+
+> [!Info] Sketch
+> ![[Screenshot 2024-10-31 at 12.05.55 PM.png|600]]
+
+Suppose the red rectangle has bottom-left corner $(x_{0},y_{0})$. Suppose the point $(x,y)$ is obtained by $\vec{r}(x(u,v),y(u,v))$. Along the bottom line of the rectangle, $u$ varies and $v$ is held constant; this corresponds to the vector curve $\vec{r}(u,v_{0})$, where $u$ varies from $u_{0}$ to $u_{0}t\Delta u$.
+
+> [!Warning] Claim
+> We can approximate the segment of $\vec{r}(u,v_{0})$ shown in the figure by the vector $\vec{r}_{u}(u_{0},v_{0})\Delta u$.
+
+> [!Success] Justification
+> By definition of the derivative:
+>
+> $$
+> \frac{d \vec{r}}{du}=\vec{r}_{u} \rightarrow \frac{\Delta \vec{r}}{\Delta u} \approx \vec{r}_{u} \rightarrow \Delta \vec{r} \approx \vec{r}_{u} \Delta u
+> $$
+
+Similarly, the segment of the vector curve $\vec{r}(v,u_{0})$ is approximated by the vector $\vec{r}_{v}\Delta v$, because along this curve we let $v$ vary and hold $u$ constant.
+
+The area element is the area of the patch:
+
+$$
+Area \ of \ Patch \approx Area \ of \ parallellelogram
+$$
+
+$$
+= | \vec{r}_{u} \Delta u \times \vec{r}_{v}\Delta v|
+$$
+
+$$
+=|\vec{r}_{u} \times \vec{r}_{v}| \Delta u \ \Delta v = dA
+$$
+
+Adding up the area elements and sending the number of elements to infinity yields the result:
+
+> [!Abstract] Change of Variable in Double Integrals
+> Suppose the region $S$ in the uv-plane is mapped to the region $R$ in the xy-plane by $x=x(u,v)$, $y=y(u,v)$. Then:
+>
+> $$
+> \int_{R} \int f(x,y) \ dA = \int_{S} \int f(x,y) \ || \vec{r}_{u} \times \vec{r}_{v} || \ du \ dV
+> $$
+>
+> Where $||$ means the **absolute value** of $| \vec{r}_{u} \times \vec{r}_{v}|$.
+
+> [!Info] Remarks
+> 1. We need to assume continuity of $f$ and the [[partial derivatives]] $\vec{r}_{u} = \langle x_{u}, y_{u} \rangle$, $\vec{r}_{v} = \langle x_{v}, y_{v} \rangle$
+> 2. The quantity $| \vec{r}_{u} \times \vec{r}_{v} |$ is called the [[Jacobian Determinant]], which we can call $J$. In 2D, we have:
+>
+> $$
+> J = |\vec{r}_{u} \times \vec{r}_{v} | = \begin{vmatrix}
+> i & j & k \\ 
+> x_{u} & y_{u} & 0 \\
+> x_{v} & y_{v} & 0
+> \end{vmatrix} = \begin{vmatrix}
+> x_{u} & y_{u} \\
+> x_{v} & y_{v}
+> \end{vmatrix}
+> $$
+>
+> The Jacobian "stretches" the rectangle $\Delta u\Delta v$ to create the area element.
+> 
+> 3. **If the Jacobian is negative, we take its absolute value in the integral ( the area element is positive)**
+
+---
+
+## Examples
+
+> [!Example]
+> Evaluate the integral $\int \int_{R} e^{\frac{(x+y)}{(x-y)}}dA$, where $R$ is the trapezoidal region with vertices $(1,0),(2,0),(0,-2),(0,-1)$
+
+> [!Success]- Solution
+> A suitable change of variable appears to be $u=x+y$, $v=x-y$ 
+>
+> > [!Info] Sketch
+> > ![[Screenshot 2024-10-31 at 12.30.17 PM.png|350]]
+> >
+> $$
+> \begin{Bmatrix}
+> x+y=u \\
+> x-y=v
+> \end{Bmatrix} 
+> \begin{matrix}
+> \rightarrow & 2x=u+v & \rightarrow & x= \frac{1}{2}(u+v) \\
+> \rightarrow & 2y=u-v & \rightarrow & y = \frac{1}{2}(u-v)
+> \end{matrix}
+> $$
+>
+> $$
+> J: \ \ \begin{vmatrix}
+> x_{u} & y_{u} \\
+> x_{v} & y_{v} 
+> \end{vmatrix} = \begin{vmatrix}
+> \frac{1}{2} & \frac{1}{2} \\
+> \frac{1}{2} & -\frac{1}{2}
+> \end{vmatrix} = -\frac{1}{2}
+> $$
+
+**To sketch the integration region in the uv-plane:** Observe that in the xy-plane, $x-y=1$ and $x-y=2$. Therefore, we can range $v=x-y$ from $1$ to $2$.
+
+**Bounds on u:** We need to understand how $R$ maps to the uv-plane under the change of variable. We have already seen that the boundary lines $y=-1+x$ and $y=-2+x$ are constants. *What about the other boundary line?*
+
+$$
+x=0, \ \ -2\leq y\leq -1
+$$
+
+If $x=0$, then $u=y$ and $v=-y$, so $v=-u$, where $-2\leq u\leq-1$ because $u=y$
+
+$$
+y=0, \ \ 1 \leq x \leq 2
+$$
+
+If $y=0$, $u=x$ and $v=x$, so $v=u$, where $1 \leq u \leq 2$ because $u=x$

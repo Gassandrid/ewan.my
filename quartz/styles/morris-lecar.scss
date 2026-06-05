@@ -1,0 +1,473 @@
+@use "./variables.scss" as *;
+
+// ── Variable mapping: ML names → Quartz palette ───────────────────────────────
+// Quartz's --light/--dark/--gray etc. already flip in dark mode automatically.
+.ml-wrap {
+  --bg: var(--light);
+  --bg-surface: var(--lightgray);
+  --border: var(--lightgray);
+  --text: var(--dark);
+  --text-secondary: var(--darkgray);
+  --text-muted: var(--gray);
+  --accent: var(--secondary);
+  --tertiary: var(--gray);
+  --slider-track: var(--lightgray);
+  --fp-entry-bg: var(--lightgray);
+  --canvas-bg: var(--light);
+  // rust, clay, ochre, sage, pine, slate, mauve already exist on :root
+
+  // ── Outer container ──────────────────────────────────────────────────────
+  display: flex;
+  flex-direction: column;
+  height: min(82vh, 700px);
+  border: 1px solid var(--lightgray);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-size: 13px;
+  background: var(--light);
+
+  // ── Toolbar ──────────────────────────────────────────────────────────────
+  #toolbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    background: var(--lightgray);
+    border-bottom: 1px solid var(--lightgray);
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    z-index: 10;
+  }
+
+  // Match calplot-nav-btn exactly
+  .tb-btn {
+    background: none;
+    border: 1px solid var(--lightgray);
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    font-family: var(--codeFont);
+    font-size: 0.72rem;
+    color: var(--gray);
+    cursor: pointer;
+    transition:
+      background 0.12s ease,
+      color 0.12s ease,
+      border-color 0.12s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--dark);
+      border-color: var(--gray);
+      background: var(--light);
+    }
+
+    &.active {
+      background: var(--dark);
+      color: var(--light);
+      border-color: var(--dark);
+    }
+  }
+
+  #preset-select {
+    background: none;
+    border: 1px solid var(--lightgray);
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.5rem;
+    font-family: var(--codeFont);
+    font-size: 0.72rem;
+    color: var(--gray);
+    cursor: pointer;
+    transition: border-color 0.12s ease;
+
+    &:hover {
+      border-color: var(--gray);
+      color: var(--dark);
+    }
+
+    option {
+      background: var(--light);
+      color: var(--dark);
+    }
+  }
+
+  .tb-spacer {
+    flex: 1;
+  }
+
+  #coord-display {
+    font-size: 0.68rem;
+    color: var(--gray);
+    font-family: var(--codeFont);
+    min-width: 120px;
+    text-align: right;
+  }
+
+  #live-speed-display {
+    font-size: 0.68rem;
+    color: var(--gray);
+    font-family: var(--codeFont);
+  }
+
+  // ── Main area ─────────────────────────────────────────────────────────────
+  #main-area {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+
+  #phase-container {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  #phase-canvas-wrap {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+  }
+
+  #phase-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: crosshair;
+  }
+
+  #timeseries-container {
+    height: 150px;
+    flex-shrink: 0;
+    border-top: 1px solid var(--lightgray);
+    position: relative;
+    transition: height 0.2s ease;
+
+    &.collapsed {
+      height: 26px;
+    }
+
+    &.collapsed #ts-canvas {
+      display: none;
+    }
+  }
+
+  #ts-toggle {
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    background: none;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 0.68rem;
+    z-index: 5;
+    font-family: var(--codeFont);
+
+    &:hover {
+      color: var(--dark);
+    }
+  }
+
+  #ts-label {
+    position: absolute;
+    top: 4px;
+    left: 80px;
+    font-size: 0.65rem;
+    color: var(--gray);
+    font-family: var(--codeFont);
+  }
+
+  #ts-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  // ── Sidebar ───────────────────────────────────────────────────────────────
+  #sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    background: var(--lightgray);
+    border-left: 1px solid var(--lightgray);
+    padding: 10px;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid var(--lightgray);
+      max-height: 220px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--gray);
+      border-radius: 3px;
+      opacity: 0.4;
+    }
+  }
+
+  .sidebar-section {
+    margin-bottom: 12px;
+
+    h3 {
+      font-family: var(--headerFont);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 6px;
+      border-bottom: 1px solid var(--lightgray);
+      padding-bottom: 3px;
+    }
+  }
+
+  .param-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  .param-label {
+    width: 38px;
+    font-size: 0.62rem;
+    color: var(--gray);
+    font-family: var(--codeFont);
+    flex-shrink: 0;
+  }
+
+  .param-slider {
+    flex: 1;
+    margin: 0 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: var(--gray);
+    border-radius: 2px;
+    outline: none;
+    opacity: 0.5;
+    transition: opacity 0.15s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--secondary);
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--secondary);
+      cursor: pointer;
+      border: none;
+    }
+  }
+
+  .param-value {
+    width: 44px;
+    font-size: 0.62rem;
+    color: var(--darkgray);
+    text-align: right;
+    font-family: var(--codeFont);
+    flex-shrink: 0;
+  }
+
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+
+    label {
+      font-size: 0.62rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--darkgray);
+      font-family: var(--codeFont);
+    }
+
+    input[type="checkbox"] {
+      accent-color: var(--secondary);
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .swatch {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    margin-right: 2px;
+    flex-shrink: 0;
+  }
+
+  // ── Fixed point info ──────────────────────────────────────────────────────
+  #fp-info {
+    font-size: 0.62rem;
+    font-family: var(--codeFont);
+    max-height: 170px;
+    overflow-y: auto;
+    color: var(--darkgray);
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--gray);
+      border-radius: 2px;
+    }
+  }
+
+  .fp-entry {
+    margin-bottom: 5px;
+    padding: 3px 6px;
+    background: var(--light);
+    border-radius: 3px;
+    border-left: 3px solid var(--gray);
+
+    &.stable {
+      border-left-color: var(--sage);
+    }
+    &.unstable {
+      border-left-color: var(--rust);
+    }
+    &.saddle {
+      border-left-color: var(--ochre);
+    }
+  }
+}
+
+// ── Modals — position:fixed so outside .ml-wrap, z-index must clear all Quartz layers
+// Quartz progress bar = 9999; set modals to 9500 to clear sidebars/headers
+#bifurc-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9500;
+  align-items: center;
+  justify-content: center;
+
+  &.visible {
+    display: flex;
+  }
+}
+
+#bifurc-content {
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 0.5rem;
+  padding: 16px;
+  width: 80vw;
+  max-width: 900px;
+
+  h2 {
+    font-family: var(--headerFont);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--secondary);
+  }
+}
+
+#bifurc-canvas {
+  width: 100%;
+  height: 380px;
+  display: block;
+  border-radius: 4px;
+}
+
+#bifurc-status {
+  font-size: 0.68rem;
+  color: var(--gray);
+  font-family: var(--codeFont);
+  margin-top: 6px;
+}
+
+#bifurc-close {
+  float: right;
+  // Inherits .tb-btn but is outside .ml-wrap, so re-define inline style
+  background: none;
+  border: 1px solid var(--lightgray);
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+  color: var(--gray);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--dark);
+    border-color: var(--gray);
+    background: var(--lightgray);
+  }
+}
+
+#help-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 9500;
+  align-items: center;
+  justify-content: center;
+
+  &.visible {
+    display: flex;
+  }
+}
+
+#help-content {
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 0.5rem;
+  padding: 20px;
+  max-width: 460px;
+
+  h2 {
+    font-family: var(--headerFont);
+    color: var(--secondary);
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    color: var(--darkgray);
+    font-family: var(--codeFont);
+
+    &:first-child {
+      color: var(--slate);
+      width: 110px;
+    }
+  }
+}

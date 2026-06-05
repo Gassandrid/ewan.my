@@ -1,0 +1,23 @@
+{
+  "name": "@ewan/quartz-marimo-page-type",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-marimo",
+    "displayName": "Ewan Marimo Pages",
+    "description": "Generate Quartz pages from marimo notebooks.",
+    "version": "0.1.0",
+    "category": "pageType",
+    "defaultOrder": 20
+  }
+}

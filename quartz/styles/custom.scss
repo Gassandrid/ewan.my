@@ -1,3 +1,947 @@
+@use "./python-plugin.scss";
+@use "./custom/caption-callout.scss";
+@use "./custom/infobox-callout.scss";
+@use "./pages/bases.scss";
+@use "./pages/full-width.scss";
+@use "./chart-plugin.scss";
+@use "./custom-pages.scss";
+@use "./morris-lecar.scss";
+@use "./marimo-islands.scss";
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+// ewanfont
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/medium.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ewanfont";
+  src: url("/static/ewanfont/semibolditalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+// banner color switcher for light/darkmode
+// class is indexBanner, setting path of svg to a fill background-color
+[saved-theme="dark"] path.indexBanner {
+  fill: var(--lightgray);
+}
+
+body[data-slug="index"] img {
+  filter: invert(0%);
+  opacity: 0.85;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+[saved-theme="dark"] #texture {
+  mix-blend-mode: overlay;
+}
+
+[saved-theme="dark"] body[data-slug="index"] img[src*="banner.svg"] {
+  filter: invert(100%);
+}
+
+body[data-slug="thoughts/craft"] {
+  & li:has(> img, > video) {
+    list-style-type: none;
+
+    & > img,
+    & > video {
+      margin: 1rem 0;
+    }
+  }
+
+  article > ul {
+    padding-left: 0;
+
+    & > li {
+      list-style-type: none;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.left {
+  display: flex !important;
+  gap: 1.5rem !important;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
+  align-items: center;
+
+  .page-title {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .search {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .darkmode {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .toc {
+    grid-row: 3;
+    grid-column: 1 / 3;
+  }
+
+  .recent-notes:nth-last-child(2) {
+    grid-area: 3 / 1 / 3 / 3;
+  }
+
+  .recent-notes:nth-last-child(1) {
+    grid-area: 4 / 1 / 4 / 3;
+  }
+
+  @media all and not ($desktop) {
+    display: flex !important;
+  }
+
+  // using new variables and grid layout from variables.scss
+}
+
+hr {
+  overflow: visible;
+  padding: 0;
+  height: 0;
+  margin: 3.5em auto;
+  border: none;
+  text-align: center;
+  width: 100%;
+
+  &:after {
+    content: "* * *";
+    display: inline-block;
+    margin: -1em 0 0.5em;
+    font-size: 1.3em;
+    padding: 0.5em 1em;
+    color: var(--gray);
+    opacity: 0.5;
+  }
+}
+
+pre.poetry {
+  font-size: 1.2rem;
+  font-family: biro_script_standardRgus;
+  border: none;
+  padding: 0;
+  position: unset;
+}
+
+.meta,
+.content-meta {
+  font-family: biro_script_standardRgus, var(--bodyFont);
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--lightgray);
+}
+
+.popover-hint-ewan {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.sticky-header-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0 0 0.5rem 0;
+  border-bottom: 1px solid var(--gray);
+  box-sizing: border-box;
+}
+
+.breadcrumb-container {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0.3rem 0 0.2rem 0;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+.article-title-group,
+.content-meta,
+.tags {
+  padding-left: 2rem;
+}
+
+.article-title-group .article-title {
+  padding-left: 0;
+}
+
+.forced-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-right: 0;
+
+  & > * {
+    margin: 0 !important;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+  }
+
+  @media all and ($mobile) {
+    margin-left: 0;
+    padding-right: 2rem;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+}
+
+.article-title,
+.content-meta {
+  width: 100%;
+}
+
+.ewan-divider {
+  flex: 1 1 100%;
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid var(--gray);
+  opacity: 0.4;
+  box-sizing: border-box;
+  display: none; // No longer needed since we use border-bottom on sticky-header-bar
+}
+
+.article-title {
+  margin: 0.5rem 0 0.3rem 0;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// for a div with class graph AND desktop-only, set width to 100%
+.graph {
+  width: 100%;
+}
+
+.forced-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0;
+  position: initial;
+
+  & .map,
+  .darkmode {
+    margin: 0.4rem;
+  }
+
+  @media all and ($desktop) {
+    justify-content: flex-end;
+  }
+}
+
+/* Dark theme */
+[saved-theme="dark"] audio {
+  background: transparent;
+  border: 2px solid #2d2d2d;
+  border-radius: 12px;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Light theme */
+[saved-theme="light"] audio {
+  background: transparent;
+  border: 2px solid #cdd6f4;
+  border-radius: 12px;
+  filter: none;
+}
+
+/* Dark theme */
+[saved-theme="dark"] audio::-webkit-media-controls-panel {
+  color: #cdd6f4;
+}
+
+[saved-theme="dark"] audio::-webkit-media-controls-enclosure {
+  background-color: #2d2d2d;
+}
+
+[saved-theme="dark"] audio::-webkit-media-controls-current-time-display,
+[saved-theme="dark"] audio::-webkit-media-controls-time-remaining-display,
+[saved-theme="dark"] audio::-webkit-media-controls-play-button,
+[saved-theme="dark"] audio::-webkit-media-controls-timeline {
+  color: #cdd6f4;
+}
+
+/* Light theme */
+[saved-theme="light"] audio::-webkit-media-controls-panel {
+  color: #2d2d2d;
+}
+
+[saved-theme="light"] audio::-webkit-media-controls-enclosure {
+  background-color: var(--light-enclosure-bg);
+}
+
+[saved-theme="light"] audio::-webkit-media-controls-current-time-display,
+[saved-theme="light"] audio::-webkit-media-controls-time-remaining-display,
+[saved-theme="light"] audio::-webkit-media-controls-play-button,
+[saved-theme="light"] audio::-webkit-media-controls-timeline {
+  color: #2d2d2d;
+}
+
+/* Shared styles */
+audio::-webkit-media-controls-panel {
+  background: transparent;
+  padding: 4px;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 10px;
+  background: transparent;
+}
+
+audio::-webkit-media-controls-timeline:hover {
+  opacity: 0.8;
+}
+
+:root {
+  --mov-y: 0px;
+  --rot-y: 0deg;
+}
+
+.ft- {
+  @keyframes rainbow-animate {
+    0% {
+      background-position: 0px 0;
+    }
+
+    50% {
+      background-position: 100px 0;
+    }
+
+    100% {
+      background-position: 200px 0;
+    }
+  }
+
+  @keyframes shake-animate {
+    // CSS Houdini
+    // 0% { --mov-y: 1px }
+    // 100% { --mov-y: -1px }
+    0% {
+      transform: translateY(1px);
+    }
+
+    100% {
+      transform: translateY(-1px);
+    }
+  }
+
+  @keyframes spin-animate {
+    // CSS Houdini
+    // 0% { --rot-y: 0deg }
+    // 100% { --rot-y: 360deg }
+    0% {
+      transform: rotateY(0deg);
+    }
+
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
+
+  @for $i from 0 through 10 {
+    &char {
+      animation-delay: 10ms;
+    }
+  }
+
+  &letters {
+    white-space: nowrap;
+  }
+
+  &letters span {
+    white-space: pre;
+  }
+
+  &rainbow {
+    background: repeating-linear-gradient(
+      to right,
+      #cb94ff 0px,
+      #028ba1 20px,
+      #4dc725 40px,
+      #ff941a 60px,
+      #d21b1b 80px,
+      #cb94ff 100px
+    );
+    background-size: 100px;
+    background-clip: text;
+    color: transparent !important;
+
+    & span,
+    p {
+      color: transparent;
+    }
+
+    animation: rainbow-animate 2s linear infinite;
+  }
+
+  &shake .char {
+    animation: shake-animate 0.05s linear infinite alternate;
+    display: inline-block;
+
+    @for $i from 0 through 10 {
+      &:nth-child(10n + #{$i}) {
+        animation-delay: #{$i * -20ms};
+      }
+    }
+  }
+
+  &wave .char {
+    animation: shake-animate 0.2s ease-in-out infinite alternate;
+    display: inline-block;
+
+    @for $i from 0 through 10 {
+      &:nth-child(10n + #{$i}) {
+        animation-delay: #{$i * -40ms};
+      }
+    }
+  }
+
+  &spin .char {
+    animation: spin-animate 1s ease-in-out infinite;
+    display: inline-block;
+
+    @for $i from 0 through 10 {
+      &:nth-child(10n + #{$i}) {
+        animation-delay: #{$i * 40ms - 400ms};
+      }
+    }
+  }
+}
+
+// main center border with light/dark mode
+// subtle, rustic border styling
+[saved-theme="dark"] .center {
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+[saved-theme="light"] .center {
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+// media not desktop or mobile
+
+@media not ($desktop) {
+  @media not ($mobile) {
+    .page > #quartz-body {
+      padding: 3em;
+    }
+  }
+}
+
+// give all contents of center proper padding to avoid border collision
+.center {
+  padding: 0.5rem 2rem 2rem 2rem;
+
+  > * {
+    margin: 0 0 1.5rem 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  > article {
+    margin: 0;
+  }
+}
+
+.page > #quartz-body .page-header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+@media ($desktop) {
+  .page > #quartz-body .center {
+    margin-top: 2.5rem;
+  }
+}
+
+@media not ($desktop) {
+  .page {
+    max-width: 980px;
+  }
+
+  .page > #quartz-body .sidebar {
+    padding: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media ($mobile) {
+  // Lock horizontal scrolling
+  body,
+  .page,
+  .page > #quartz-body {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
+  .page > #quartz-body {
+    padding: 0;
+  }
+
+  // Remove border and minimal padding for reader mode
+  [saved-theme="dark"] .center,
+  [saved-theme="light"] .center {
+    border: none;
+    border-radius: 0;
+    padding: 0.1rem 0.75rem 0.75rem 0.75rem;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  // Adjust header layout to not overflow
+  .popover-hint-ewan {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  // Minimal padding on all header elements for clean reader mode
+  .breadcrumb-container {
+    padding: 0.5rem 0.75rem 0.3rem 0.75rem;
+    font-size: 0.85rem;
+    flex: 1 1 0;
+    max-width: calc(100% - 6rem);
+  }
+
+  .article-title-group {
+    padding: 0 0.75rem;
+
+    .article-title h1 {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
+  }
+
+  .content-meta {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .tags {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .forced-row {
+    padding-right: 0.75rem;
+    padding-left: 0;
+    flex-shrink: 0;
+  }
+
+  // Ensure page header doesn't overflow
+  .page > #quartz-body .page-header {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
+  // Make only the breadcrumbs/buttons bar sticky
+  .sticky-header-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--light);
+    margin: 0 -0.75rem;
+    padding: 0.75rem 0 0.5rem !important;
+    border-bottom: 1px solid var(--gray);
+    gap: 0.3rem;
+    width: calc(100% + 1.5rem);
+  }
+
+  // Make sure article content respects boundaries
+  article {
+    overflow-x: clip;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
+.footer {
+  padding-top: 1rem;
+}
+
+// for sidebar nav from cat code me
+
+// 导航组件样式
+.sidebar-nav {
+  margin: 1rem 0;
+  width: 100%;
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+
+    // 所有导航按钮的基础样式
+    .nav-button {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
+      color: var(--dark);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: var(--light);
+      border: 1px solid var(--lightgray);
+      position: relative;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-family: var(--bodyFont);
+      width: 100%;
+      box-sizing: border-box;
+
+      // 图标样式
+      .nav-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        font-style: normal;
+        width: 1.5rem; // 固定图标宽度
+        text-align: center; // 图标居中
+      }
+
+      // 文字样式
+      .nav-text {
+        font-weight: 500;
+        transition: color 0.2s ease;
+        font-style: normal;
+        flex: 1;
+        text-align: left;
+        color: var(--secondary);
+      }
+
+      // hover effect
+      &:hover {
+        transform: none;
+        background: var(--lightgray);
+        border-color: var(--secondary);
+
+        .nav-text {
+          color: var(--dark);
+        }
+      }
+
+      // 阅读模式按钮特殊样式
+      &.reading-mode-toggle {
+        .nav-text {
+          text-align: left;
+          color: var(--secondary);
+
+          &:hover {
+            color: var(--dark);
+          }
+        }
+      }
+    }
+  }
+}
+
+.toc-clone {
+  margin-top: 2.5rem;
+}
+
+.toc {
+  margin-top: 2.5rem;
+}
+
+html.reading-mode .sidebar.reading-mode-active .toc-clone {
+  margin-top: 2.5rem;
+}
+
+.cm-s-material-palenight {
+  background: transparent !important;
+}
+
+/* .CodeMirror { */
+/*   background: transparent !important; */
+/* } */
+/**/
+/* .CodeMirror-gutters { */
+/*   background: transparent !important; */
+/*   border-right: none !important; */
+/* } */
+
+.footer {
+  padding-top: 4rem !important;
+}
+
+@media ($desktop) {
+  .footer {
+    padding-top: 8rem !important;
+  }
+}
+
+// Rainbow tag cycling through color palette
+.tags {
+  a.internal.tag-link {
+    transition: all 0.2s ease;
+
+    // Cycle through the 7 custom colors (rust, clay, ochre, sage, pine, slate, mauve)
+    // Using semi-transparent backgrounds with full-opacity text
+    &[data-tag-index="0"],
+    &[data-tag-index="7"],
+    &[data-tag-index="14"],
+    &[data-tag-index="21"] {
+      background-color: color-mix(in srgb, var(--rust) 10%, transparent);
+      color: var(--rust);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--rust) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="1"],
+    &[data-tag-index="8"],
+    &[data-tag-index="15"],
+    &[data-tag-index="22"] {
+      background-color: color-mix(in srgb, var(--clay) 10%, transparent);
+      color: var(--clay);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--clay) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="2"],
+    &[data-tag-index="9"],
+    &[data-tag-index="16"],
+    &[data-tag-index="23"] {
+      background-color: color-mix(in srgb, var(--ochre) 10%, transparent);
+      color: var(--ochre);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--ochre) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="3"],
+    &[data-tag-index="10"],
+    &[data-tag-index="17"],
+    &[data-tag-index="24"] {
+      background-color: color-mix(in srgb, var(--sage) 10%, transparent);
+      color: var(--sage);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--sage) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="4"],
+    &[data-tag-index="11"],
+    &[data-tag-index="18"],
+    &[data-tag-index="25"] {
+      background-color: color-mix(in srgb, var(--pine) 10%, transparent);
+      color: var(--pine);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--pine) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="5"],
+    &[data-tag-index="12"],
+    &[data-tag-index="19"],
+    &[data-tag-index="26"] {
+      background-color: color-mix(in srgb, var(--slate) 10%, transparent);
+      color: var(--slate);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--slate) 15%, transparent);
+      }
+    }
+
+    &[data-tag-index="6"],
+    &[data-tag-index="13"],
+    &[data-tag-index="20"],
+    &[data-tag-index="27"] {
+      background-color: color-mix(in srgb, var(--mauve) 10%, transparent);
+      color: var(--mauve);
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--mauve) 15%, transparent);
+      }
+    }
+  }
+}
+
+// Backdrop blur for components over the Lorenz background
+// Uses theme colors from quartz config via CSS variables
+
+// Mixin for glassmorphism effect
+@mixin glass-blur($blur: 12px) {
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}
+
+// Center pane - uses theme's --light color
+.center {
+  @include glass-blur(12px);
+  background-color: color-mix(in srgb, var(--light) 75%, transparent);
+  position: relative;
+
+  // Grainy texture overlay (Arc-style film grain)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.15;
+    background-image: url("/static/noise.png");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+    mix-blend-mode: multiply;
+  }
+}
+
+[saved-theme="dark"] .center::before {
+  mix-blend-mode: soft-light;
+  opacity: 0.2;
+}
+
+// Graph canvas only (not the title)
+.graph-outer,
+.global-graph-outer {
+  @include glass-blur(8px);
+  background-color: color-mix(in srgb, var(--light) 60%, transparent);
+  border-radius: 8px;
+}
+
+// TikZ figures
+figure.tikz {
+  margin: 2rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+
+  @media all and (max-width: 600px) {
+    margin: 0;
+
+    & > svg {
+      transform: scale(0.7);
+    }
+  }
+
+  & > figcaption {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray);
+  }
+
+  & > .tikz-mathml {
+    display: none;
+  }
+
+  .source-code-button {
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    float: right;
+
+    .source-icon {
+      display: inline;
+    }
+
+    .check-icon {
+      display: none;
+    }
+
+    &.check {
+      .source-icon {
+        display: none;
+      }
+
+      .check-icon {
+        display: inline;
+      }
+    }
+  }
+}

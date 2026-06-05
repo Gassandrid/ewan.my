@@ -1,0 +1,23 @@
+{
+  "name": "@ewan/quartz-marimo-resources",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-marimo-resources",
+    "displayName": "Ewan Marimo Resources",
+    "description": "Load marimo island runtime assets in Quartz.",
+    "version": "0.1.0",
+    "category": "transformer",
+    "defaultOrder": 120
+  }
+}

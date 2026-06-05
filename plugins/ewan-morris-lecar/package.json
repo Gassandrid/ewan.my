@@ -1,0 +1,20 @@
+{
+  "name": "@ewan/quartz-morris-lecar",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js"
+  },
+  "quartz": {
+    "name": "ewan-morris-lecar",
+    "displayName": "Ewan Morris-Lecar Resources",
+    "description": "Load and initialize the Morris-Lecar custom page runtime.",
+    "version": "0.1.0",
+    "category": "transformer",
+    "defaultOrder": 94
+  }
+}
