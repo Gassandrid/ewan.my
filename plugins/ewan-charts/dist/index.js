@@ -46,6 +46,25 @@ const CHART_RUNTIME = `
 
   var dataCache = {};
   var observers = {};
+  var d3Promise = null;
+
+  function loadD3() {
+    if (window.d3) return Promise.resolve(window.d3);
+    if (d3Promise) return d3Promise;
+    d3Promise = new Promise(function(resolve, reject) {
+      var existing = document.querySelector('script[data-ewan-d3]');
+      var script = existing || document.createElement("script");
+      if (!existing) {
+        script.src = "https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js";
+        script.defer = true;
+        script.dataset.ewanD3 = "true";
+        document.head.appendChild(script);
+      }
+      script.addEventListener("load", function() { resolve(window.d3); }, { once: true });
+      script.addEventListener("error", function() { reject(new Error("failed to load D3")); }, { once: true });
+    });
+    return d3Promise;
+  }
 
   function resolveColor(name) {
     var value = String(name || "").trim();
@@ -259,8 +278,93 @@ const CHART_RUNTIME = `
     }
   }
 
-  function init() {
-    document.querySelectorAll(".chart-container[data-chart-config]").forEach(function(container) {
+  function initCalPlot(container) {
+    if (container.dataset.calplotReady === "true") return;
+    container.dataset.calplotReady = "true";
+    var cfg = JSON.parse(container.getAttribute("data-calplot") || "{}");
+    var grid = container.querySelector(".calplot-grid");
+    var profile = container.querySelector(".calplot-profile");
+    var stats = container.querySelector(".calplot-day-stats");
+    var label = container.querySelector(".calplot-selected-label");
+    var monthLabel = container.querySelector(".calplot-month-label");
+    var tabs = container.querySelector(".calplot-shot-tabs");
+    var year = Number(cfg.year), month = Number(cfg.month), allData = {}, activeShot = null;
+    var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    function monthData() {
+      var prefix = year + "-" + String(month).padStart(2, "0");
+      return Object.fromEntries(Object.entries(allData).filter(function(entry) { return entry[0].startsWith(prefix); }));
+    }
+    function renderProfile(points) {
+      profile.innerHTML = "";
+      if (!Array.isArray(points) || points.length === 0) { profile.innerHTML = '<div class="chart-error">No profile data</div>'; return; }
+      var width = Math.max(360, profile.clientWidth || 640), height = 340;
+      var m = { top: 18, right: 58, bottom: 38, left: 48 };
+      var iw = width - m.left - m.right, ih = height - m.top - m.bottom;
+      var svg = window.d3.select(profile).append("svg").attr("viewBox", "0 0 " + width + " " + height).attr("role", "img").attr("aria-label", "Espresso extraction profile");
+      var g = svg.append("g").attr("transform", "translate(" + m.left + "," + m.top + ")");
+      var x = window.d3.scaleLinear().domain(window.d3.extent(points, function(d) { return d.t; })).range([0, iw]);
+      var yl = window.d3.scaleLinear().domain([0, (window.d3.max(points, function(d) { return Math.max(d.p || 0, (d.f || 0) * 3); }) || 1) * 1.1]).nice().range([ih, 0]);
+      var yr = window.d3.scaleLinear().domain([0, (window.d3.max(points, function(d) { return Math.max(d.w || 0, d.c || 0); }) || 1) * 1.05]).nice().range([ih, 0]);
+      g.append("g").attr("class", "chart-grid").call(window.d3.axisLeft(yl).ticks(5).tickSize(-iw).tickFormat(""));
+      g.append("g").attr("class", "chart-axis").attr("transform", "translate(0," + ih + ")").call(window.d3.axisBottom(x).ticks(8).tickFormat(function(d) { return d + "s"; }));
+      g.append("g").attr("class", "chart-axis").call(window.d3.axisLeft(yl).ticks(5));
+      g.append("g").attr("class", "chart-axis").attr("transform", "translate(" + iw + ",0)").call(window.d3.axisRight(yr).ticks(5));
+      var series = [
+        ["p", "Pressure (bar)", "slate", yl, 1], ["f", "Flow x3 (ml/s)", "ochre", yl, 3],
+        ["w", "Weight (g)", "sage", yr, 1], ["c", "Temp (°C)", "rust", yr, 1]
+      ];
+      series.forEach(function(s, index) {
+        var line = window.d3.line().x(function(d) { return x(d.t); }).y(function(d) { return s[3]((d[s[0]] || 0) * s[4]); }).curve(window.d3.curveMonotoneX);
+        g.append("path").datum(points).attr("fill", "none").attr("stroke", resolveColor(s[2])).attr("stroke-width", index === 0 ? 2.5 : 2).attr("stroke-dasharray", index % 2 ? "5,3" : null).attr("d", line);
+      });
+    }
+    function selectShot(shot) {
+      activeShot = shot; stats.innerHTML = "";
+      [["Time", shot.time, "slate"], ["Rating", shot.rating + "/5", "rust"], ["EY", Number(shot.ey).toFixed(1) + "%", "sage"], ["TDS", Number(shot.tds).toFixed(2) + "%", "pine"]].forEach(function(item) {
+        var card = document.createElement("div"); card.className = "stat-card";
+        card.style.setProperty("--stat-accent", "var(--" + item[2] + ")");
+        card.innerHTML = '<div class="stat-card-value">' + item[1] + '</div><div class="stat-card-label">' + item[0] + '</div>';
+        stats.appendChild(card);
+      });
+      renderProfile(shot.profile);
+    }
+    function selectDay(date, day) {
+      label.textContent = new Date(date + "T00:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) + " · " + day.shots.length + " shot" + (day.shots.length === 1 ? "" : "s");
+      tabs.innerHTML = "";
+      day.shots.forEach(function(shot, index) {
+        var button = document.createElement("button"); button.className = "calplot-shot-tab" + (index === 0 ? " active" : "");
+        button.textContent = "Shot " + (index + 1) + " · " + shot.time;
+        button.addEventListener("click", function() { tabs.querySelectorAll("button").forEach(function(t) { t.classList.remove("active"); }); button.classList.add("active"); selectShot(shot); });
+        tabs.appendChild(button);
+      });
+      if (day.shots[0]) selectShot(day.shots[0]);
+    }
+    function renderCalendar() {
+      grid.innerHTML = ""; monthLabel.textContent = monthNames[month - 1] + " " + year;
+      var data = monthData(), days = new Date(year, month, 0).getDate(), first = new Date(year, month - 1, 1).getDay();
+      var cells = Array.from({ length: days }, function(_, i) { var day = i + 1; var date = year + "-" + String(month).padStart(2,"0") + "-" + String(day).padStart(2,"0"); return { day: day, date: date, value: data[date], slot: first + i }; });
+      var max = window.d3.max(cells, function(d) { return d.value?.shots?.length || 0; }) || 1;
+      var color = window.d3.scaleLinear().domain([0,1,max]).range([resolveColor("lightgray"), resolveColor("ochre"), resolveColor("rust")]);
+      var svg = window.d3.select(grid).append("svg").attr("viewBox", "0 0 294 " + (28 + Math.ceil((days + first) / 7) * 42)).attr("role", "grid");
+      svg.selectAll(".dow").data(["Su","Mo","Tu","We","Th","Fr","Sa"]).enter().append("text").attr("x", function(_,i) { return i * 42 + 19; }).attr("y",14).attr("text-anchor","middle").attr("fill",resolveColor("gray")).attr("font-size",10).text(function(d){ return d; });
+      var g = svg.append("g").attr("transform","translate(0,24)");
+      g.selectAll("rect").data(cells).enter().append("rect").attr("x",function(d){return(d.slot%7)*42;}).attr("y",function(d){return Math.floor(d.slot/7)*42;}).attr("width",38).attr("height",38).attr("rx",4).attr("fill",function(d){return color(d.value?.shots?.length||0);}).attr("opacity",function(d){return d.value?.shots?.length?1:0.3;}).attr("cursor",function(d){return d.value?.shots?.length?"pointer":"default";}).on("click",function(event,d){if(d.value?.shots?.length)selectDay(d.date,d.value);});
+      g.selectAll("text").data(cells).enter().append("text").attr("x",function(d){return(d.slot%7)*42+19;}).attr("y",function(d){return Math.floor(d.slot/7)*42+23;}).attr("text-anchor","middle").attr("pointer-events","none").attr("fill",resolveColor("darkgray")).attr("font-size",11).text(function(d){return d.day;});
+      var last = Object.keys(data).filter(function(k){return data[k]?.shots?.length;}).sort().pop(); if(last)selectDay(last,data[last]);
+    }
+    container.querySelector(".calplot-prev").addEventListener("click",function(){month--;if(month<1){month=12;year--;}renderCalendar();});
+    container.querySelector(".calplot-next").addEventListener("click",function(){month++;if(month>12){month=1;year++;}renderCalendar();});
+    fetch(cfg.source).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(data){allData=data;container.querySelector(".calplot-loading")?.remove();renderCalendar();}).catch(function(error){container.querySelector(".calplot-loading").innerHTML='<div class="chart-error">Failed to load extraction data</div>';console.error("[calplot]",error);});
+    if(window.ResizeObserver){observers[container.id]=new ResizeObserver(function(){if(activeShot)renderProfile(activeShot.profile);});observers[container.id].observe(profile);}
+  }
+
+  async function init() {
+    var containers = document.querySelectorAll(".chart-container[data-chart-config]");
+    var calendars = document.querySelectorAll("[data-calplot]");
+    if (containers.length === 0 && calendars.length === 0) return;
+    try { await loadD3(); } catch (error) { console.error("[charts]", error); return; }
+    containers.forEach(function(container) {
       if (container.dataset.chartReady === "true") return;
       container.dataset.chartReady = "true";
       hydrate(container);
@@ -269,6 +373,7 @@ const CHART_RUNTIME = `
         observers[container.id].observe(container);
       }
     });
+    calendars.forEach(initCalPlot);
   }
 
   window.EwanCharts = { init: init };
@@ -300,12 +405,6 @@ export default function EwanCharts() {
     externalResources() {
       return {
         js: [
-          {
-            src: "https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js",
-            loadTime: "beforeDOMReady",
-            contentType: "external",
-            spaPreserve: true,
-          },
           {
             script: CHART_RUNTIME,
             loadTime: "afterDOMReady",

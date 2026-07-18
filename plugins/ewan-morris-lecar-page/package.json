@@ -1,0 +1,21 @@
+{
+  "name": "@ewan/quartz-morris-lecar-page",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-morris-lecar-page",
+    "displayName": "Morris-Lecar Page",
+    "description": "Generate the full-width interactive Morris-Lecar phase-plane page.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "pageType",
+    "defaultOrder": 24
+  }
+}

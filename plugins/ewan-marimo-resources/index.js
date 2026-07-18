@@ -1,82 +1,74 @@
-import { h } from "preact"
-
-const MARIMO_ISLANDS_VERSION = "0.23.8"
+const MARIMO_ISLANDS_VERSION = "0.23.9"
 const MARIMO_CDN_ORIGIN = "https://cdn.jsdelivr.net"
-const LORA_CSS =
-  "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
 
-function marimoIslandsJsUrl(version = MARIMO_ISLANDS_VERSION) {
-  return `${MARIMO_CDN_ORIGIN}/npm/@marimo-team/islands@${version}/dist/main.js`
-}
-
-function marimoIslandsCssUrl(version = MARIMO_ISLANDS_VERSION) {
-  return `${MARIMO_CDN_ORIGIN}/npm/@marimo-team/islands@${version}/dist/style.css`
-}
-
-const NAV_RELOAD_SCRIPT = `
-document.addEventListener("nav", () => {
-  setTimeout(() => {
-    const islands = document.querySelectorAll("marimo-island")
-    if (islands.length === 0) return
-    const untouched = [...islands].some((island) => !island.classList.contains("marimo"))
-    if (untouched) window.location.reload()
-  }, 50)
-})
+const MARIMO_LOADER = `
+(function() {
+  if (window.__ewanMarimoLoader) {
+    window.__ewanMarimoLoader.ensure();
+    return;
+  }
+  var lastSlug = document.body?.dataset.slug || "";
+  function ensureStyle() {
+    if (document.querySelector("link[data-ewan-marimo-css]")) return;
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "${MARIMO_CDN_ORIGIN}/npm/@marimo-team/islands@${MARIMO_ISLANDS_VERSION}/dist/style.css";
+    link.crossOrigin = "anonymous";
+    link.dataset.ewanMarimoCss = "true";
+    link.dataset.persist = "true";
+    document.head.appendChild(link);
+  }
+  function ensureScript() {
+    if (document.querySelector("script[data-ewan-marimo-runtime]")) return;
+    var script = document.createElement("script");
+    script.type = "module";
+    script.src = "${MARIMO_CDN_ORIGIN}/npm/@marimo-team/islands@${MARIMO_ISLANDS_VERSION}/dist/main.js";
+    script.crossOrigin = "anonymous";
+    script.dataset.ewanMarimoRuntime = "true";
+    script.dataset.persist = "true";
+    document.head.appendChild(script);
+  }
+  function ensure(afterNavigation) {
+    var islands = document.querySelectorAll("marimo-island");
+    if (islands.length === 0) return;
+    ensureStyle();
+    ensureScript();
+    if (afterNavigation) {
+      setTimeout(function() {
+        var current = Array.from(document.querySelectorAll("marimo-island"));
+        var untouched = current.some(function(island) {
+          return !island.classList.contains("marimo") && !island.hasAttribute("data-status");
+        });
+        if (untouched) window.location.reload();
+      }, 250);
+    }
+  }
+  document.addEventListener("nav", function() {
+    var nextSlug = document.body?.dataset.slug || "";
+    var changedPage = Boolean(lastSlug && nextSlug && nextSlug !== lastSlug);
+    lastSlug = nextSlug;
+    setTimeout(function() { ensure(changedPage); }, 0);
+  });
+  window.__ewanMarimoLoader = { ensure: ensure };
+  ensure(false);
+})();
 `
 
-export default function MarimoResources(opts = {}) {
+export default function MarimoResources() {
   return {
     name: "MarimoResources",
     textTransform(_ctx, src) {
       return src
     },
     externalResources() {
-      const version = opts.version ?? MARIMO_ISLANDS_VERSION
-      const loadLoraFont = opts.loadLoraFont ?? true
-      const hardReloadOnSpaNav = opts.hardReloadOnSpaNav ?? true
-
       return {
         js: [
           {
-            src: marimoIslandsJsUrl(version),
+            script: MARIMO_LOADER,
             loadTime: "afterDOMReady",
-            contentType: "external",
-            moduleType: "module",
+            contentType: "inline",
             spaPreserve: true,
           },
-          ...(hardReloadOnSpaNav
-            ? [
-                {
-                  contentType: "inline",
-                  loadTime: "afterDOMReady",
-                  spaPreserve: true,
-                  script: NAV_RELOAD_SCRIPT,
-                },
-              ]
-            : []),
-        ],
-        additionalHead: [
-          h("link", {
-            rel: "preconnect",
-            href: MARIMO_CDN_ORIGIN,
-            crossorigin: "anonymous",
-            "data-persist": "true",
-          }),
-          h("link", {
-            rel: "stylesheet",
-            href: marimoIslandsCssUrl(version),
-            crossorigin: "anonymous",
-            "data-persist": "true",
-          }),
-          ...(loadLoraFont
-            ? [
-                h("link", {
-                  rel: "stylesheet",
-                  href: LORA_CSS,
-                  "data-persist": "true",
-                }),
-              ]
-            : []),
         ],
       }
     },

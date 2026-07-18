@@ -10,6 +10,7 @@
     "build": "mkdir -p dist && cp index.js dist/index.js"
   },
   "peerDependencies": {
+    "@quartz-community/utils": "*",
     "preact": "^10.28.2"
   },
   "quartz": {

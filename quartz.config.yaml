@@ -132,12 +132,30 @@ plugins:
   - source: ./plugins/ewan-morris-lecar
     enabled: true
     order: 94
+  - source: ./plugins/ewan-lorenz
+    enabled: true
+    order: 96
+    layout:
+      position: afterBody
+      priority: 100
+  - source: ./plugins/ewan-telemetry
+    enabled: true
+    order: 98
+    layout:
+      position: afterBody
+      priority: 90
   - source: ./plugins/ewan-marimo-resources
     enabled: true
     order: 120
   - source: ./plugins/ewan-marimo
     enabled: true
     order: 20
+  - source: ./plugins/ewan-gaggimate-page
+    enabled: true
+    order: 22
+  - source: ./plugins/ewan-morris-lecar-page
+    enabled: true
+    order: 24
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/alias-redirects
@@ -283,6 +301,10 @@ layout:
         left: []
         right: []
     content: {}
+    morris-lecar:
+      frame: full-width
+      positions:
+        right: []
     folder:
       positions:
         right: []

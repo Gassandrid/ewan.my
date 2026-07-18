@@ -13,13 +13,17 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "docs": "npx quartz build --serve -d docs",
-    "check": "tsc --noEmit && npx prettier . --check",
+    "docs": "node ./quartz/bootstrap-cli.mjs build --serve -d docs",
+    "check": "tsc --noEmit && npm run format:check",
+    "format:check": "prettier '.github/**/*.{yml,yaml}' 'quartz/**/*.{ts,tsx,scss}' 'plugins/**/*.{js,json}' 'scripts/**/*.mjs' '*.json' '*.yaml' --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "prebuild": "npm run install-plugins"
+    "plugins:install": "node ./quartz/bootstrap-cli.mjs plugin install --from-config",
+    "build": "node ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "probe": "node ./scripts/probe-build.mjs",
+    "probe:browser": "node ./scripts/probe-browser.mjs",
+    "validate": "npm run plugins:install && npm run check && npm test && npm run build && npm run probe"
   },
   "engines": {
     "npm": ">=10.9.2",
@@ -83,6 +87,7 @@
     "@types/yargs": "^17.0.35",
     "esbuild": "^0.27.2",
     "prettier": "^3.8.1",
+    "puppeteer-core": "^25.3.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }

@@ -1,0 +1,21 @@
+{
+  "name": "@ewan/quartz-gaggimate-page",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-gaggimate-page",
+    "displayName": "GaggiMate Extractions Page",
+    "description": "Generate the interactive GaggiMate extraction calendar page.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "pageType",
+    "defaultOrder": 22
+  }
+}

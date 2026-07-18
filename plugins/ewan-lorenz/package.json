@@ -1,0 +1,29 @@
+{
+  "name": "@ewan/quartz-lorenz",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-lorenz",
+    "displayName": "Adaptive Lorenz Background",
+    "description": "Render the Lorenz flow background only when the client can sustain it.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 50,
+    "components": {
+      "LorenzBackground": {
+        "displayName": "Adaptive Lorenz Background",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 100
+      }
+    }
+  }
+}

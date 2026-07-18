@@ -20,8 +20,47 @@ const RUNNER_SCRIPT = `
 (function() {
   if (window.EwanPythonRunner) return;
 
+  var PYODIDE_BASE = "https://cdn.jsdelivr.net/pyodide/v0.23.4/full/";
+  var CODEMIRROR_BASE = "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/";
   var pyodidePromise = null;
+  var editorRuntimePromise = null;
   var editorInstances = {};
+
+  function loadScript(src, marker) {
+    var found = document.querySelector('script[data-ewan-runtime="' + marker + '"]');
+    if (found && found.dataset.loaded === "true") return Promise.resolve();
+    return new Promise(function(resolve, reject) {
+      var script = found || document.createElement("script");
+      if (!found) {
+        script.src = src;
+        script.defer = true;
+        script.dataset.ewanRuntime = marker;
+        document.head.appendChild(script);
+      }
+      script.addEventListener("load", function() { script.dataset.loaded = "true"; resolve(); }, { once: true });
+      script.addEventListener("error", function() { reject(new Error("failed to load " + marker)); }, { once: true });
+    });
+  }
+
+  function loadStyle(href, marker) {
+    if (document.querySelector('link[data-ewan-runtime="' + marker + '"]')) return;
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    link.dataset.ewanRuntime = marker;
+    document.head.appendChild(link);
+  }
+
+  function loadEditorRuntime() {
+    if (window.CodeMirror) return Promise.resolve();
+    if (editorRuntimePromise) return editorRuntimePromise;
+    loadStyle(CODEMIRROR_BASE + "codemirror.min.css", "codemirror-css");
+    loadStyle(CODEMIRROR_BASE + "theme/gruvbox-dark.min.css", "codemirror-dark-css");
+    loadStyle(CODEMIRROR_BASE + "theme/base16-light.min.css", "codemirror-light-css");
+    editorRuntimePromise = loadScript(CODEMIRROR_BASE + "codemirror.min.js", "codemirror")
+      .then(function() { return loadScript(CODEMIRROR_BASE + "mode/python/python.min.js", "codemirror-python"); });
+    return editorRuntimePromise;
+  }
 
   function byId(id) {
     return document.getElementById(id);
@@ -41,10 +80,8 @@ const RUNNER_SCRIPT = `
     if (window.pyodideInstance) return window.pyodideInstance;
     if (pyodidePromise) return pyodidePromise;
     pyodidePromise = (async function() {
-      while (typeof window.loadPyodide !== "function") {
-        await new Promise(function(resolve) { setTimeout(resolve, 50); });
-      }
-      var pyodide = await window.loadPyodide({});
+      await loadScript(PYODIDE_BASE + "pyodide.js", "pyodide");
+      var pyodide = await window.loadPyodide({ indexURL: PYODIDE_BASE });
       pyodide.runPython([
         "import sys, io",
         "sys.stdout = io.StringIO()",
@@ -173,7 +210,7 @@ plot_data
         lineWrapping: true,
         readOnly: false,
       });
-    }
+    } else if (textarea) textarea.style.display = "block";
 
     byId(blockId + "-button")?.addEventListener("click", function() { runBlock(blockId); });
     byId(blockId + "-copy")?.addEventListener("click", function() { copyBlock(blockId); });
@@ -182,8 +219,15 @@ plot_data
     byId(blockId + "-button")?.removeAttribute("disabled");
   }
 
-  function init() {
-    document.querySelectorAll("[data-python-run]").forEach(initEditor);
+  async function init() {
+    var blocks = document.querySelectorAll("[data-python-run]");
+    if (blocks.length === 0) return;
+    try {
+      await loadEditorRuntime();
+    } catch (error) {
+      console.warn("[run-python] editor runtime unavailable; using textareas", error);
+    }
+    blocks.forEach(initEditor);
   }
 
   window.EwanPythonRunner = { init: init, runBlock: runBlock, loadPyodideRuntime: loadPyodideRuntime };
@@ -250,41 +294,10 @@ export default function EwanRunPython(opts = {}) {
       return {
         js: [
           {
-            src: "https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js",
-            loadTime: "beforeDOMReady",
-            contentType: "external",
-            spaPreserve: true,
-          },
-          {
-            src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js",
-            loadTime: "beforeDOMReady",
-            contentType: "external",
-            spaPreserve: true,
-          },
-          {
-            src: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js",
-            loadTime: "beforeDOMReady",
-            contentType: "external",
-            spaPreserve: true,
-          },
-          {
             script: RUNNER_SCRIPT,
             loadTime: "afterDOMReady",
             contentType: "inline",
             spaPreserve: true,
-          },
-        ],
-        css: [
-          {
-            content: "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css",
-          },
-          {
-            content:
-              "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/gruvbox-dark.min.css",
-          },
-          {
-            content:
-              "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/base16-light.min.css",
           },
         ],
       }

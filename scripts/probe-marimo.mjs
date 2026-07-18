@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer-core"
 
 const URL =
-  process.env.MARIMO_PROBE_URL ?? "http://localhost:8080/Notes/Programming/marimo-widgets.html"
+  process.env.MARIMO_PROBE_URL ?? "http://localhost:8080/notes/programming/marimo-widgets.html"
 const browser = await puppeteer.launch({
   executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
   headless: "new",

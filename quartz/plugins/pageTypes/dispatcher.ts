@@ -205,6 +205,14 @@ export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>>
       // entries becomes visible to later entries in the same pass.
       const allFilesWithVirtual = [...allFiles, ...virtualEntries.map((ve) => ve.vfile.data)]
 
+      // Virtual pages must participate in navigation components just like parsed Markdown.
+      ctx.trie = trieFromAllFiles(
+        allFilesWithVirtual.map((file) => ({
+          ...file,
+          filePath: file.filePath ?? file.relativePath,
+        })),
+      )
+
       // Render Body components to populate htmlAst for transclusion
       populateVirtualPageHtmlAst(virtualEntries, ctx, allFilesWithVirtual, resources)
 

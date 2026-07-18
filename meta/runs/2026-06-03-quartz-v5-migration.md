@@ -1,6 +1,6 @@
 # Quartz v5 Migration Run
 
-Date: 2026-06-03
+Date: 2026-06-03; completed 2026-07-17
 
 Worktree: `/private/tmp/ewan.my-v5-migration`
 Branch: `v5-migration`
@@ -73,12 +73,51 @@ The old equality expression rendered an empty v5 base. The v5-compatible express
   - `marimo-widgets`: `data-marimo-version="0.23.8"`, `data-marimo-islands="7"`
 - Hidden local agent/tool state was not emitted; only `public/tags/generated/claude.html` matched `claude`, from real note tags.
 
+## 2026-07-17 Completion
+
+- Rebased the migration checkpoint onto current `upstream/v5` at `9cf87ff1` and kept all work isolated on `v5-migration`; the dirty Quartz v4 checkout was not modified.
+- Replaced the global Three.js Lorenz runtime with `plugins/ewan-lorenz`, a Canvas 2D component that selects off/low/medium/high quality from reduced-motion, Save-Data/network, viewport, memory, core count, battery, and measured frame budget. Auto/Always on/Off and the existing flow controls persist locally.
+- Removed eager global runtimes:
+  - D3 loads only for chart or GaggiMate containers.
+  - CodeMirror loads only for RunPython blocks; Pyodide loads only after Run.
+  - Morris-Lecar loads only on its custom page.
+  - Marimo JS/CSS load only when islands are present.
+- Restored the GaggiMate and Morris-Lecar virtual pages with canonical slugs, normal Quartz navigation where appropriate, and their copied data/runtime assets.
+- Added the telemetry component and retained the existing telemetry script as a demand-loaded resource.
+- Fixed the v5 virtual-page trie rebuild so Marimo and other generated pages receive normal breadcrumbs and page navigation.
+- Completed the Marimo compiler/runtime contract at `0.23.9`:
+  - build fails on compiler/runtime mismatch or zero emitted islands;
+  - canonical lowercase Quartz slugs, dates, tags, descriptions, and normal page metadata are emitted;
+  - the page uses the same article/body shell, width, heading typography, body typography, theme colors, navigation, and sidebars as standard Markdown;
+  - widget shadow-DOM colors and fonts inherit the Quartz theme;
+  - initial-load hydration no longer races the SPA fallback reload.
+- Added `scripts/probe-build.mjs`, `scripts/probe-browser.mjs`, and custom plugin contract tests. Declared the previously missing `puppeteer-core` dependency used by the browser scripts.
+- Made `npm run validate` the CI release gate and changed scripts to invoke the checked-in v5 CLI directly rather than an ambiguous `npx quartz` resolution.
+- Applied npm's reviewed non-breaking security updates. Production audit is reduced from five high, two moderate, and one low finding to one low esbuild advisory scoped to its Windows development server.
+
+Final verification on Node `22.16.0`:
+
+- `npm run check`: passed TypeScript and scoped Prettier checks.
+- `npm test`: 114 tests, 31 suites, 0 failures.
+- Production build: 806 inputs, 2280 emitted files.
+- Static release probe: 1228 HTML pages and 1076 TikZ pages, including RunPython, charts, Marimo, GaggiMate, Morris-Lecar, telemetry, and adaptive Lorenz markers.
+- Live headless Chrome probe:
+  - standard Markdown and Marimo article width: 724 px;
+  - heading color/font/size and body color/font/size match exactly;
+  - Marimo `0.23.9` hydrated seven islands and three visible widget groups;
+  - both RunPython editors initialized while Pyodide remained unloaded before Run;
+  - GaggiMate rendered 28 calendar cells, four stats, and the extraction profile;
+  - Morris-Lecar initialized ten sidebar sections and a non-zero phase canvas;
+  - the 390 px mobile page had no horizontal overflow and Lorenz auto mode was off.
+
+Release boundary: no push and no Obsidian/Quartz Syncer content refresh were performed. Ewan will review this branch first, then run the separate content sync.
+
 ## Open Gaps
 
-- Browser screenshot/interaction verification was not run because no callable Browser tool was exposed in this session.
+- One low-severity esbuild advisory remains. Its fix requires moving from the current `0.27.x` range to `0.28.x`; the affected surface is the esbuild development server on Windows, not the generated static site or current macOS/Linux build/deploy path.
 - `NotebookEmbedding` and `Sidenotes` are intentionally not blockers for this migration. Ewan decided on 2026-06-05 not to carry Jupyter notebook embedding or sidenotes forward for this cutover.
 - Candidate `quartz-community` repos were checked on 2026-06-03. The default and Obsidian plugin repos exist, but the above v4 custom transformer names do not exist as direct community repos.
 
 ## Retrieval Terms
 
-Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-tikz`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `content/References.bib`, `bibliographyFile`.
+Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`.
