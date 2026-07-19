@@ -1,0 +1,18 @@
+{
+  "name": "@ewan/quartz-fonts",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "quartz": {
+    "name": "ewan-fonts",
+    "displayName": "Ewan Fonts",
+    "description": "Load the Lora header face used by the deployed v4 site.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "transformer",
+    "defaultOrder": 5
+  }
+}

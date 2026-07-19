@@ -1,0 +1,29 @@
+{
+  "name": "@ewan/quartz-graph",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-graph",
+    "displayName": "Ewan Graph",
+    "description": "Quartz graph with Obsidian Bases removed from the topology.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 50,
+    "components": {
+      "Graph": {
+        "displayName": "Graph",
+        "defaultPosition": "left",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

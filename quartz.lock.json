@@ -103,11 +103,23 @@
       "commit": "local",
       "installedAt": "2026-07-18T04:29:35.447Z"
     },
+    "ewan-fonts": {
+      "source": "./plugins/ewan-fonts",
+      "resolved": "./plugins/ewan-fonts",
+      "commit": "local",
+      "installedAt": "2026-07-18T12:00:00.000Z"
+    },
     "ewan-gaggimate-page": {
       "source": "./plugins/ewan-gaggimate-page",
       "resolved": "./plugins/ewan-gaggimate-page",
       "commit": "local",
       "installedAt": "2026-07-18T04:29:35.448Z"
+    },
+    "ewan-graph": {
+      "source": "./plugins/ewan-graph",
+      "resolved": "./plugins/ewan-graph",
+      "commit": "local",
+      "installedAt": "2026-07-18T12:00:00.000Z"
     },
     "ewan-lorenz": {
       "source": "./plugins/ewan-lorenz",
@@ -139,11 +151,23 @@
       "commit": "local",
       "installedAt": "2026-07-18T04:29:35.448Z"
     },
+    "ewan-quartz-toc": {
+      "source": "./plugins/ewan-quartz-toc",
+      "resolved": "./plugins/ewan-quartz-toc",
+      "commit": "local",
+      "installedAt": "2026-07-18T12:00:00.000Z"
+    },
     "ewan-run-python": {
       "source": "./plugins/ewan-run-python",
       "resolved": "./plugins/ewan-run-python",
       "commit": "local",
       "installedAt": "2026-07-18T04:29:35.447Z"
+    },
+    "ewan-svg-embeds": {
+      "source": "./plugins/ewan-svg-embeds",
+      "resolved": "./plugins/ewan-svg-embeds",
+      "commit": "local",
+      "installedAt": "2026-07-18T12:00:00.000Z"
     },
     "ewan-telemetry": {
       "source": "./plugins/ewan-telemetry",

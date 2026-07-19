@@ -112,6 +112,30 @@ Final verification on Node `22.16.0`:
 
 Release boundary: no push and no Obsidian/Quartz Syncer content refresh were performed. Ewan will review this branch first, then run the separate content sync.
 
+## 2026-07-18 Visual-Parity Audit
+
+- Restored the deployed v4 Lora stylesheet while retaining the local `ewanfont` body faces.
+- Ported the custom proportional `QuartzTOC` rail as `plugins/ewan-quartz-toc`; the community TOC transformer remains enabled to populate heading data, but its stock component is no longer laid out.
+- Kept the Note Properties transformer enabled for frontmatter parsing while removing its visible component from the page layout.
+- Hid article title, content metadata, and tags on the homepage while retaining them on normal Markdown pages, aligned on the same content axis.
+- Added `plugins/ewan-svg-embeds` so Obsidian SVG wikilinks resolve unique attachment basenames to emitted asset paths. The homepage sailboat now loads from `attachments/florilegium-banner.svg`.
+- Added `plugins/ewan-graph`, a version-guarded wrapper around the pinned community graph runtime that excludes `.base` nodes and their edges from local and maximized graph topology.
+- Expanded the static release probe to cover the homepage banner, homepage metadata exclusions, custom TOC, Lora resource, and graph hygiene.
+
+Audit verification:
+
+- `npm run check`: passed.
+- `npm test`: 117 tests, 31 suites, 0 failures.
+- Serve build: 806 inputs, 2267 emitted files, completed in 50 seconds.
+- Static release probe: 1228 HTML pages and 1076 TikZ pages.
+- Headless Chrome probe: passed Markdown/Marimo typography parity, mobile adaptation, RunPython lazy initialization, GaggiMate, and Morris-Lecar.
+- Direct homepage browser check: sailboat SVG loaded, Lora loaded, no title/meta/tags/Properties chrome, and zero console errors.
+- Representative article browser check: custom 26-row title/heading rail, no stock TOC or Properties component, and `.base` filter present in the graph runtime.
+
+Audit server: `http://localhost:8080` via `npx quartz build --serve` (using a temporary npm cache because `~/.npm` contains root-owned entries).
+
+Push boundary: `github:quartz-community/og-image` remains deliberately disabled for the audit build. Re-enable it, run the production release gate, and only then push after Ewan's explicit approval.
+
 ## Open Gaps
 
 - One low-severity esbuild advisory remains. Its fix requires moving from the current `0.27.x` range to `0.28.x`; the affected surface is the esbuild development server on Windows, not the generated static site or current macOS/Linux build/deploy path.
@@ -120,4 +144,4 @@ Release boundary: no push and no Obsidian/Quartz Syncer content refresh were per
 
 ## Retrieval Terms
 
-Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`.
+Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `ewan-quartz-toc`, `ewan-svg-embeds`, `ewan-graph`, `ewan-fonts`, `florilegium-banner.svg`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`.

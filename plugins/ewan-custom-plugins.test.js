@@ -1,13 +1,17 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 import EwanCharts from "./ewan-charts/index.js"
+import EwanFonts, { LORA_STYLESHEET } from "./ewan-fonts/index.js"
 import GaggiMatePage from "./ewan-gaggimate-page/index.js"
+import { patchGraphRuntime } from "./ewan-graph/components.js"
 import { LorenzBackground } from "./ewan-lorenz/components.js"
 import MarimoResources from "./ewan-marimo-resources/index.js"
 import MorrisLecarPage from "./ewan-morris-lecar-page/index.js"
 import EwanMorrisLecar from "./ewan-morris-lecar/index.js"
 import EwanRunPython from "./ewan-run-python/index.js"
 import { Telemetry } from "./ewan-telemetry/components.js"
+import { QuartzTOC } from "./ewan-quartz-toc/components.js"
+import EwanSvgEmbeds, { buildSvgIndex, resolveSvgObjects } from "./ewan-svg-embeds/index.js"
 
 function transformCode(plugin, node) {
   const tree = { type: "root", children: [node] }
@@ -56,4 +60,39 @@ test("expensive runtimes are guarded", () => {
   assert.match(l.afterDOMLoaded, /deviceMemory/)
   assert.match(l.afterDOMLoaded, /hardwareConcurrency/)
   assert.match(Telemetry().afterDOMLoaded, /data-ewan-telemetry/)
+})
+
+test("v4 typography and proportional TOC remain available", () => {
+  assert.equal(EwanFonts().externalResources().css[0].content, LORA_STYLESHEET)
+  assert.match(LORA_STYLESHEET, /Lora:ital,wght/)
+  const toc = QuartzTOC()
+  assert.match(toc.css, /quartztoc-rail-thumb/)
+  assert.match(toc.afterDOMLoaded, /--toc-top/)
+})
+
+test("Obsidian SVG embeds resolve unique attachment basenames", () => {
+  const index = buildSvgIndex([
+    "attachments/florilegium-banner.svg",
+    "attachments/other.svg",
+    "duplicates/other.svg",
+  ])
+  assert.equal(index.get("florilegium-banner.svg"), "attachments/florilegium-banner.svg")
+  assert.equal(index.has("other.svg"), false)
+  assert.equal(
+    resolveSvgObjects(
+      '<object data="florilegium-banner.svg" type="image/svg+xml"></object>',
+      "index",
+      index,
+    ),
+    '<object data="./attachments/florilegium-banner.svg" type="image/svg+xml"></object>',
+  )
+  assert.equal(EwanSvgEmbeds().name, "EwanSvgEmbeds")
+})
+
+test("graph compatibility patch excludes .base nodes", () => {
+  const original = "before for(var Ju in Ku)eu.set(Fu(Ju),Ku[Ju]) after"
+  const patched = patchGraphRuntime(original)
+  assert.match(patched, /\\\.base/)
+  assert.match(patched, /continue/)
+  assert.throws(() => patchGraphRuntime("changed upstream"), /runtime changed/)
 })

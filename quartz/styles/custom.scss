@@ -204,10 +204,17 @@ audio::-webkit-media-controls-panel {
   overflow: hidden;
 }
 
-.article-title-group,
-.content-meta,
-.tags {
+.article-title-group {
   padding-left: 2rem;
+}
+
+// Quartz v5 renders these directly in the page header rather than inside
+// v4's article-title-group wrapper. Keep title, metadata, and tags on the
+// same content axis.
+.page-header > .article-title,
+.page-header > .content-meta,
+.page-header > .tags {
+  padding-left: 0;
 }
 
 .article-title-group .article-title {

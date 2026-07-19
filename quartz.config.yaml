@@ -66,6 +66,9 @@ configuration:
         slate: "#9bb0bd"
         mauve: "#c9b1b9"
 plugins:
+  - source: ./plugins/ewan-fonts
+    enabled: true
+    order: 5
   - source: github:quartz-community/created-modified-date
     enabled: true
     options:
@@ -85,6 +88,9 @@ plugins:
       parseTags: false
       enableCheckbox: true
     order: 30
+  - source: ./plugins/ewan-svg-embeds
+    enabled: true
+    order: 35
   - source: github:quartz-community/github-flavored-markdown
     enabled: true
     order: 40
@@ -93,6 +99,9 @@ plugins:
     options:
       maxDepth: 6
     order: 50
+  - source: ./plugins/ewan-quartz-toc
+    enabled: true
+    order: 55
     layout:
       position: left
       priority: 20
@@ -187,7 +196,7 @@ plugins:
     layout:
       position: right
       priority: 20
-  - source: github:quartz-community/graph
+  - source: ./plugins/ewan-graph
     enabled: true
     layout:
       position: left
@@ -210,16 +219,19 @@ plugins:
     layout:
       position: beforeBody
       priority: 30
+      condition: not-index
   - source: github:quartz-community/content-meta
     enabled: true
     layout:
       position: beforeBody
       priority: 40
+      condition: not-index
   - source: github:quartz-community/tag-list
     enabled: true
     layout:
       position: beforeBody
       priority: 50
+      condition: not-index
   - source: github:quartz-community/page-title
     enabled: false
   - source: github:quartz-community/darkmode
@@ -282,9 +294,6 @@ plugins:
       delimiters: ---
       language: yaml
     order: 5
-    layout:
-      position: beforeBody
-      priority: 45
   - source: github:quartz-community/unlisted-pages
     enabled: true
     order: 45

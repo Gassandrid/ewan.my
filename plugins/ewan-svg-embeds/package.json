@@ -1,0 +1,22 @@
+{
+  "name": "@ewan/quartz-svg-embeds",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "peerDependencies": {
+    "@quartz-community/utils": "*",
+    "unist-util-visit": "^5.0.0"
+  },
+  "quartz": {
+    "name": "ewan-svg-embeds",
+    "displayName": "Resolved SVG Embeds",
+    "description": "Resolve Obsidian SVG embeds to their emitted attachment paths.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "transformer",
+    "defaultOrder": 35
+  }
+}

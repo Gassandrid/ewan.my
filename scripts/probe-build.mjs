@@ -13,8 +13,19 @@ function standardShell(html, title) {
 const index = read("index.html")
 assert.match(index, /id="lorenz-canvas"/)
 assert.match(index, /data-ewan-telemetry-anchor/)
+assert.match(index, /<object data="\.\/attachments\/florilegium-banner\.svg"/)
+assert.ok(exists("attachments/florilegium-banner.svg"))
+assert.doesNotMatch(index, /<h1 class="article-title"|class="content-meta"|class="tags"/)
+assert.doesNotMatch(index, /note-properties|metadata-properties/)
 assert.doesNotMatch(index, /<script[^>]+(?:pyodide|codemirror|d3(?:\.min)?\.js|morris-lecar\.js)/i)
 assert.doesNotMatch(index, /<link[^>]+@marimo-team\/islands/i)
+const referenceArticle = read("thoughts/on-capturing-personal-data.html")
+standardShell(referenceArticle, "On Capturing Personal Data")
+assert.match(referenceArticle, /class="quartztoc"/)
+assert.match(referenceArticle, /data-for="__top__"/)
+assert.doesNotMatch(referenceArticle, /class="toc"|note-properties|metadata-properties/)
+assert.match(referenceArticle, /fonts\.googleapis\.com\/css2\?family=Lora/)
+assert.match(read("postscript.js"), /\.base\(\?:\\\/index\)\?\$/)
 const python = read("notes/programming/testing-in-languages.html")
 standardShell(python, "Testing In Languages")
 assert.match(python, /data-python-run=/)
@@ -61,5 +72,5 @@ assert.ok(
   `expected at least 10 TikZ-bearing pages, found ${tikzPages.length}`,
 )
 console.log(
-  `Build probe passed: ${htmlFiles.length} HTML pages, ${tikzPages.length} TikZ pages, RunPython, charts, Marimo, GaggiMate, Morris-Lecar, telemetry, and adaptive Lorenz.`,
+  `Build probe passed: ${htmlFiles.length} HTML pages, ${tikzPages.length} TikZ pages, v4 layout parity, graph hygiene, RunPython, charts, Marimo, GaggiMate, Morris-Lecar, telemetry, and adaptive Lorenz.`,
 )

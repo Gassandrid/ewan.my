@@ -1,0 +1,29 @@
+{
+  "name": "@ewan/quartz-toc",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-quartz-toc",
+    "displayName": "Ewan Quartz TOC",
+    "description": "A proportional LessWrong-style article rail.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 55,
+    "components": {
+      "QuartzTOC": {
+        "displayName": "Ewan Quartz TOC",
+        "defaultPosition": "left",
+        "defaultPriority": 20
+      }
+    }
+  }
+}
