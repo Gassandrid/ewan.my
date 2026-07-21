@@ -177,7 +177,7 @@ plugins:
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
-    enabled: false
+    enabled: true
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page
@@ -196,6 +196,10 @@ plugins:
     layout:
       position: right
       priority: 20
+  # Runtime dependency for the local ewan-graph compatibility wrapper. Keep
+  # the community component disabled so it is not rendered a second time.
+  - source: github:quartz-community/graph
+    enabled: false
   - source: ./plugins/ewan-graph
     enabled: true
     layout:
