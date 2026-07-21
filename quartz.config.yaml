@@ -207,8 +207,6 @@ plugins:
       position: beforeBody
       priority: 20
       group: toolbar
-      groupOptions:
-        grow: true
   - source: github:quartz-community/backlinks
     enabled: true
     layout:

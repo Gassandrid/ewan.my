@@ -187,13 +187,52 @@ audio::-webkit-media-controls-panel {
 .sticky-header-bar {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0.5rem;
   margin: 0;
   padding: 0 0 0.5rem 0;
   border-bottom: 1px solid var(--gray);
   box-sizing: border-box;
+
+  // Quartz v5 wraps grouped controls in Flex. Keep that group equivalent to
+  // the v4 forced-row component: compact controls pinned to the right.
+  > .flex-component {
+    flex: 0 0 auto;
+    align-items: center;
+    margin-left: auto;
+
+    > * {
+      flex: 0 0 2rem !important;
+      width: 2rem;
+      height: 2rem;
+      min-width: 2rem;
+      min-height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .search {
+    width: 2rem;
+    min-width: 2rem;
+    max-width: 2rem;
+  }
+
+  .search > .search-button {
+    width: 2rem;
+    padding: 0;
+    justify-content: center;
+
+    > p {
+      display: none;
+    }
+
+    > svg {
+      margin: 0;
+    }
+  }
 }
 
 .breadcrumb-container {
@@ -565,6 +604,12 @@ footer {
     padding: 0;
   }
 
+  // The v4 reader layout starts with the sticky navigation bar. The v5
+  // mobile grid otherwise places the graph's left sidebar above it.
+  .page > #quartz-body > .sidebar.left {
+    display: none !important;
+  }
+
   // Remove border and minimal padding for reader mode
   [saved-theme="dark"] .center,
   [saved-theme="light"] .center {
@@ -589,6 +634,32 @@ footer {
     font-size: 0.85rem;
     flex: 1 1 0;
     max-width: calc(100% - 6rem);
+    flex-wrap: nowrap;
+
+    // Match the v4 phone breadcrumb: retain Home and the current page while
+    // eliding intermediate folders so the controls stay on the same line.
+    .breadcrumb-element {
+      display: none;
+      min-width: 0;
+
+      &:first-child,
+      &:last-child,
+      &.breadcrumb-overflow {
+        display: flex;
+      }
+
+      &:last-child {
+        flex: 0 1 auto;
+
+        > a {
+          display: block;
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
   }
 
   .article-title-group {
@@ -632,6 +703,10 @@ footer {
     border-bottom: 1px solid var(--gray);
     gap: 0.3rem;
     width: calc(100% + 1.5rem);
+
+    > .flex-component {
+      padding-right: 0.75rem;
+    }
   }
 
   // Make sure article content respects boundaries

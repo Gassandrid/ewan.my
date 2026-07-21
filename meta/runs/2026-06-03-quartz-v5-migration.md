@@ -136,6 +136,16 @@ Audit server: `http://localhost:8080` via `npx quartz build --serve` (using a te
 
 Push boundary: `github:quartz-community/og-image` remains deliberately disabled for the audit build. Re-enable it, run the production release gate, and only then push after Ewan's explicit approval.
 
+## 2026-07-20 Responsive Header Parity
+
+- Restored the v4 frame boundary that renders breadcrumbs and the dark-mode/search controls in a dedicated `.sticky-header-bar`, outside the article header.
+- Kept breadcrumbs on the left and compact controls on the right, with the original divider underneath.
+- Restored the mobile breadcrumb elision behavior so intermediate folders do not wrap the control bar.
+- Hid the left Graph/TOC sidebar in the mobile grid so the sticky reader header is again the first visible page element.
+- Added `scripts/probe-responsive-layout.mjs` and `npm run probe:responsive` to verify desktop alignment, divider presence, mobile overflow, hidden Graph, and `top: 0` stickiness after scrolling.
+
+Verification: TypeScript/Prettier passed, all 117 tests passed, the static build probe passed across 1228 HTML and 1076 TikZ pages, and the responsive Chrome probe passed at 1440 px and 390 px. The localhost audit server remains on port 8080 with OG images disabled.
+
 ## Open Gaps
 
 - One low-severity esbuild advisory remains. Its fix requires moving from the current `0.27.x` range to `0.28.x`; the affected surface is the esbuild development server on Windows, not the generated static site or current macOS/Linux build/deploy path.

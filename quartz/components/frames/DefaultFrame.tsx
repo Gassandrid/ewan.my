@@ -29,6 +29,11 @@ export const DefaultFrame: PageFrame = {
           ))}
         </div>
         <div class="center">
+          <div class="sticky-header-bar">
+            {beforeBody.slice(0, 2).map((BodyComponent) => (
+              <BodyComponent {...componentData} />
+            ))}
+          </div>
           <div class="page-header">
             <Header {...componentData}>
               {header.map((HeaderComponent) => (
@@ -36,7 +41,7 @@ export const DefaultFrame: PageFrame = {
               ))}
             </Header>
             <div class="popover-hint">
-              {beforeBody.map((BodyComponent) => (
+              {beforeBody.slice(2).map((BodyComponent) => (
                 <BodyComponent {...componentData} />
               ))}
             </div>
