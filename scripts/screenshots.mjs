@@ -1,11 +1,12 @@
 import puppeteer from "puppeteer-core"
+const URL =
+  process.env.MARIMO_PROBE_URL ?? "http://localhost:8080/Notes/Programming/marimo-widgets.html"
 const browser = await puppeteer.launch({
   executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
   headless: "new",
   args: ["--no-sandbox"],
   defaultViewport: { width: 1200, height: 900 },
 })
-const URL = "http://localhost:8080/Notes/Programming/marimo-widgets"
 
 const p1 = await browser.newPage()
 await p1.goto(URL, { waitUntil: "domcontentloaded" })

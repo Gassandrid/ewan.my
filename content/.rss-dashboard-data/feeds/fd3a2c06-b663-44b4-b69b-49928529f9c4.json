@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "feedId": "fd3a2c06-b663-44b4-b69b-49928529f9c4",
+  "feedUrl": "https://thetransmitter.org/computational-neuroscience/feed/",
+  "updatedAt": 1784769775570,
+  "items": [
+    {
+      "title": "Transforming AI models into useful model organisms",
+      "link": "https://www.thetransmitter.org/artificial-intelligence/transforming-ai-models-into-useful-model-organisms/",
+      "description": "These systems were not built to explain the brain. But treating them as model organisms that we can perturb and evolve will move us closer to that goal.",
+      "content": "These systems were not built to explain the brain. But treating them as model organisms that we can perturb and evolve will move us closer to that goal.",
+      "pubDate": "Mon, 22 Jun 2026 04:00:25 +0000",
+      "guid": "https://www.thetransmitter.org/?p=251130",
+      "feedTitle": "The Transmitter",
+      "feedUrl": "https://thetransmitter.org/computational-neuroscience/feed/",
+      "coverImage": "https://www.thetransmitter.org/wp-content/uploads/2026/06/Toneva_Model-organism-525.png",
+      "summary": "These systems were not built to explain the brain. But treating them as model organisms that we can perturb and evolve will move us closer to that goal.",
+      "author": "Mariya Toneva",
+      "mediaType": "article",
+      "duration": "",
+      "explicit": false,
+      "image": "https://www.thetransmitter.org/wp-content/uploads/2026/06/Toneva_Model-organism-525.png",
+      "category": "",
+      "episodeType": "",
+      "enclosure": {
+        "url": "https://www.thetransmitter.org/wp-content/uploads/2026/06/Toneva_Model-organism-525.png",
+        "type": "image/png",
+        "length": "43576"
+      },
+      "mediaContentType": "image/png",
+      "mediaContentMedium": "image"
+    },
+    {
+      "title": "Models at the speed of thought: How AI coding is reshaping theoretical neuroscience",
+      "link": "https://www.thetransmitter.org/the-big-picture/models-at-the-speed-of-thought-how-ai-coding-is-reshaping-theoretical-neuroscience/",
+      "description": "Agentic coding makes it possible to specify a neuroscience model in hours instead of months. Seven neuroscientists weigh in on what that tectonic change may bring to the field.",
+      "content": "Agentic coding makes it possible to specify a neuroscience model in hours instead of months. Seven neuroscientists weigh in on what that tectonic change may bring to the field.",
+      "pubDate": "Tue, 16 Jun 2026 04:00:18 +0000",
+      "guid": "https://www.thetransmitter.org/?p=250988",
+      "feedTitle": "The Transmitter",
+      "feedUrl": "https://thetransmitter.org/computational-neuroscience/feed/",
+      "coverImage": "https://www.thetransmitter.org/wp-content/uploads/2026/06/cropped-525-big-picture-fast-models.png",
+      "summary": "Agentic coding makes it possible to specify a neuroscience model in hours instead of months. Seven neuroscientists weigh in on what that tectonic change may bring to the field.",
+      "author": "Brian DePasquale",
+      "mediaType": "article",
+      "duration": "",
+      "explicit": false,
+      "image": "https://www.thetransmitter.org/wp-content/uploads/2026/06/cropped-525-big-picture-fast-models.png",
+      "category": "",
+      "episodeType": "",
+      "enclosure": {
+        "url": "https://www.thetransmitter.org/wp-content/uploads/2026/06/cropped-525-big-picture-fast-models.png",
+        "type": "image/png",
+        "length": "80508"
+      },
+      "mediaContentType": "image/png",
+      "mediaContentMedium": "image"
+    }
+  ]
+}

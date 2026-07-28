@@ -1,6 +1,6 @@
 ---
 date: 2025-12-16
-updated: 2026-01-09T11:48:55+02:00
+updated: 2026-07-24T13:12:53-07:00
 class:
   - note
 tags:
@@ -10,6 +10,7 @@ related:
 author:
 description:
 ---
+
 I have been thinking about ways to optimize time series based note taking. Now, while I do have git tracking for how I change files over time, I don't think this is descriptive enough in the content of the note itself. A recommendation I saw from the CEO of Obsidian, Kepano, mentions to link to daily notes as a means of updates. For example, if I have a journal of continuous updates to a certain project, say the Sprinter Van for example, I would write headings that link to the daily notes, even if it had nothing to do with said daily notes whatsoever.
 
 I like this idea because it allows me to have a more granular view of when I made updates to certain projects, and it also allows me to see the context of what else was going on in my life at that time. For example, if I made a note about the van on December 1st, 2025, I could link to my daily note for that day, which might include other things I was working on or thinking about.
@@ -33,3 +34,9 @@ Overall, I will try to integrate this technique more, but I am going to keep it 
 ## [[01-09-2026]] New Use for System
 
 Have recently adopted the idea of using fragment notes, which include the date and exact time the note was taken as a means to capture instantaneous and random ideas that just come to me in the spur of the moment, for which I can then summarize in daily notes. I came back to this note mentioning this with an update because this allows me to actually, automatically link to the daily note in the front matter of each fragment. That said, you can now go to a said daily note, see all the fragments that were written that day, and any other note that was mentioned or updated on that day. This makes the daily note a much better interface for seeing what was done in this day in history or what had to be done. Any event really that happened on that. And I like where this is going.
+
+---
+
+## [[07-24-2026]] Update on This System
+
+It has been a while using this system now for several months and it has become quite effective. I'm no longer using the fragment system that I created last time. as it is just redundant now that I link to daily notes so often as a signature of activity. I'll continue to use this, but respecting the contract of this idea, I'm updating it here.

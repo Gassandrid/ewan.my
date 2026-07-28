@@ -1,6 +1,6 @@
 ---
 date: 2026-02-09T12:50:35-05:00
-updated: 2026-04-20T10:06:23-04:00
+updated: 2026-05-23T11:27:42-07:00
 source:
   - https://artemkirsanov.substack.com/p/the-hardware-lottery
   - https://en.wikipedia.org/wiki/Spiking_neural_network
@@ -8,7 +8,7 @@ class:
   - note
 tags:
   - comp-neuro/models
-  - cs/ai
+  - cs/ai/spiking
 related:
 author:
 description:
@@ -17,6 +17,7 @@ aliases:
 
 - can be done in [[Brian2]], probably the easiest way to go about it at this point, seems to be the most stable neural computation library and has a CUDA version
 - [[Artem Kirsanov]] seems to like them a lot, he highlighted the "hardware lottery", where Spiking neural nets didnt take off because it did not fit into our standard von neumann architecture, and not parellizable in the sense like GPUs allow for
+- kind of industry standard ( with variations ) for neuromorphic algorithms, can be run on [[Intel Loihi]]. usually using [[Leaky Integrate And Fire]] neuron models.
 
 https://en.wikipedia.org/wiki/Spiking_neural_network
 

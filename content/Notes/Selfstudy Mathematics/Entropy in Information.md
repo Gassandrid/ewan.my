@@ -27,7 +27,7 @@ $$
   h(s) = -\log_b(P(s))
 $$
 
-Where $s$ is the [[Notes/Statistics/Conceptual Notes/Event|event]], $P(s)$ is the probability of the event, and $b$ is the base of the logarithm. The base determines the unit of measurement for surprise. ommon bases are 2 (bits), e (nats), and 10 (hartleys).
+Where $s$ is the [[Notes/Statistics/Event|event]], $P(s)$ is the probability of the event, and $b$ is the base of the logarithm. The base determines the unit of measurement for surprise. ommon bases are 2 (bits), e (nats), and 10 (hartleys).
 
 What you will notice is that for an example where someone gets a 1 on a 6 sided die 3 times in a row, the probability is:
 

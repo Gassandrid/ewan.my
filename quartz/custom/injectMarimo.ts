@@ -7,6 +7,7 @@ import { ProcessedContent } from "../plugins/vfile"
 import { FilePath, FullSlug } from "../util/path"
 import { glob } from "../util/glob"
 import { Argv } from "../util/ctx"
+import { MARIMO_ISLANDS_VERSION } from "./marimoConfig"
 
 function filenameToTitle(name: string): string {
   return name
@@ -39,24 +40,60 @@ function parseTags(src: string): string[] {
 const RENDER_SCRIPT = `
 import sys, json
 try:
+    import marimo
     from marimo import MarimoIslandGenerator
 except ImportError as e:
     print(json.dumps({"error": f"marimo not installed: {e}"}))
     sys.exit(0)
 try:
-    gen = MarimoIslandGenerator.from_file(sys.argv[1])
-    print(json.dumps({"body": gen.render_body()}))
+    gen = MarimoIslandGenerator.from_file(sys.argv[1], display_code=False)
+    body = gen.render_body(max_width="none", margin="0")
+    print(json.dumps({
+        "body": body,
+        "marimoVersion": marimo.__version__,
+        "islandCount": body.count("<marimo-island"),
+        "reactiveIslandCount": body.count('data-reactive="true"'),
+    }))
 except Exception as e:
     print(json.dumps({"error": f"render failed: {e}"}))
     sys.exit(0)
 `
 
 let pythonMissingWarned = false
+let versionMismatchWarned = false
+
+function parseRenderJson(stdout: string): Record<string, unknown> | null {
+  const lines = stdout
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+
+  for (const line of lines.reverse()) {
+    try {
+      return JSON.parse(line)
+    } catch {
+      // continue scanning: notebooks or libraries may print before our JSON
+    }
+  }
+
+  return null
+}
+
+function escapeHtmlAttr(value: string): string {
+  return value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")
+}
 
 // Async spawn. `spawnSync` was hitting EBADF on Quartz's hot-reload worker
 // context, where Node's internal fd bookkeeping for sync-mode child-process
 // allocation breaks. The async variant uses libuv pipes and works reliably.
-function renderIsland(notebookPath: string): Promise<string | null> {
+interface RenderedIsland {
+  body: string
+  marimoVersion: string | null
+  islandCount: number
+  reactiveIslandCount: number
+}
+
+function renderIsland(notebookPath: string): Promise<RenderedIsland | null> {
   return new Promise((resolve) => {
     let child
     try {
@@ -102,37 +139,58 @@ function renderIsland(notebookPath: string): Promise<string | null> {
       resolve(null)
     })
 
-    child.on("close", () => {
+    child.on("close", (code) => {
       clearTimeout(timeout)
-      try {
-        const parsed = JSON.parse(stdout)
-        if (parsed.error) {
-          console.warn(`[marimo] ${notebookPath}: ${parsed.error}`)
-          resolve(null)
-          return
-        }
-        resolve(parsed.body as string)
-      } catch {
+      const parsed = parseRenderJson(stdout)
+      if (!parsed) {
         console.warn(
-          `[marimo] could not parse generator output for ${notebookPath}\nstdout: ${stdout}\nstderr: ${stderr}`,
+          `[marimo] could not parse generator output for ${notebookPath} (exit ${code ?? "unknown"})\nstdout: ${stdout}\nstderr: ${stderr}`,
         )
         resolve(null)
+        return
       }
+
+      if (parsed.error) {
+        console.warn(`[marimo] ${notebookPath}: ${parsed.error}`)
+        resolve(null)
+        return
+      }
+
+      const marimoVersion = typeof parsed.marimoVersion === "string" ? parsed.marimoVersion : null
+      if (marimoVersion && marimoVersion !== MARIMO_ISLANDS_VERSION && !versionMismatchWarned) {
+        console.warn(
+          `[marimo] local marimo ${marimoVersion} does not match islands runtime ${MARIMO_ISLANDS_VERSION}; update quartz/custom/marimoConfig.ts after upgrading marimo.`,
+        )
+        versionMismatchWarned = true
+      }
+
+      resolve({
+        body: String(parsed.body ?? ""),
+        marimoVersion,
+        islandCount:
+          typeof parsed.islandCount === "number"
+            ? parsed.islandCount
+            : (String(parsed.body ?? "").match(/<marimo-island/g)?.length ?? 0),
+        reactiveIslandCount:
+          typeof parsed.reactiveIslandCount === "number"
+            ? parsed.reactiveIslandCount
+            : (String(parsed.body ?? "").match(/data-reactive="true"/g)?.length ?? 0),
+      })
     })
   })
 }
 
-export async function injectMarimoPages(
-  content: ProcessedContent[],
-  argv: Argv,
-): Promise<void> {
+export async function injectMarimoPages(content: ProcessedContent[], argv: Argv): Promise<void> {
   const marimoFiles = await glob("**/*.marimo.py", argv.directory, [])
   if (marimoFiles.length === 0) return
 
   for (const fp of marimoFiles) {
     const src = path.join(argv.directory, fp)
     const slug = fp.replace(/\.marimo\.py$/, "") as FullSlug
-    const basename = fp.split("/").pop()!.replace(/\.marimo\.py$/, "")
+    const basename = fp
+      .split("/")
+      .pop()!
+      .replace(/\.marimo\.py$/, "")
 
     let title = filenameToTitle(basename)
     let description = `Interactive marimo notebook: ${title}`
@@ -147,14 +205,17 @@ export async function injectMarimoPages(
       // file unreadable — fall back to filename-derived values
     }
 
-    const body = await renderIsland(src)
-    if (!body) continue
+    const rendered = await renderIsland(src)
+    if (!rendered?.body) continue
 
     // The `.marimo-loading` block is hidden by CSS once at least one reactive
     // island gets a `data-status` attribute (set by the runtime when its cell
     // is done running). Until then it shows a spinner.
     const loading = `<div class="marimo-loading" aria-live="polite"><span class="marimo-loading-spinner" aria-hidden="true"></span><span class="marimo-loading-text">Loading interactive Python kernel…</span></div>`
-    const htmlContent = `<div class="marimo-notebook-page">${loading}${body}</div>`
+    const versionAttr = rendered.marimoVersion
+      ? ` data-marimo-version="${escapeHtmlAttr(rendered.marimoVersion)}"`
+      : ""
+    const htmlContent = `<div class="marimo-notebook-page" data-marimo-runtime="${escapeHtmlAttr(MARIMO_ISLANDS_VERSION)}"${versionAttr} data-marimo-islands="${rendered.islandCount}" data-marimo-reactive-islands="${rendered.reactiveIslandCount}">${loading}${rendered.body}</div>`
     const tree = fromHtml(htmlContent, { fragment: true })
 
     const vfile = new VFile("")

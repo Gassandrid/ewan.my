@@ -12,10 +12,11 @@ source:
 related:
 author:
 date: 2025-10-08
-updated: 2026-01-14T10:07:18-05:00
+updated: 2026-07-18T11:31:51-07:00
 aliases:
   - Quantified Self
 ---
+
 While working on a project for my class [[Brainstorming Data Science Temporal Project]], I had the opportunity to sit down and actually view the data that I had been collecting in my vault without really thinking about it. This vault contains notes yes, but also structured data for **videos** I watch,
 
 ---
@@ -30,7 +31,7 @@ But the dreams of [[Mutual Information]] soon took over. Dreams of cross correla
 
 This is much more in line with both the fundamental purpose of obsidian, but also my ventures into understanding the nature of [[Consuming and Choosing Content Effectively|content consumption]] and domains of [[Computational Neuroscience]]
 
-This also includes physical sensors to provide that mutual information seen above. An obvious pairing with [[ActivityWatch]] would be some kind of eye tracker like the [[Tobii Eye Tracker 5]], but the real cream of the crop would come from combining this with an EEG headset (maybe [[BrainAccess HALO]] ) as a means to denoise the signal when filtered via meaningfull eye capture.
+This also includes physical sensors to provide that mutual information seen above. An obvious pairing with [[ActivityWatch]] would be some kind of [[Using an Eye Tracker for more computer data|eye tracker]] like the [[Tobii Eye Tracker 5]], but the real cream of the crop would come from combining this with an EEG headset (maybe [[BrainAccess HALO]] ) as a means to denoise the signal when filtered via meaningfull eye capture.
 
 While quite an unrealistic idea, I also often have dreams of a world in which I could perform the same kind of parameter tuning to "descend the gradient" of my own mind for learning/habit optimization. Quite unlikely given todays modeling capabities, but I view this as a "store now decrypt later" kind of problem. If I can capture all the data about my mind wandering now, it is possible I would have the tools later in my research career to extract meaningfull output.
 
@@ -44,7 +45,7 @@ To satiate my OCD desires, I think it best to compile a list of all data venture
 
 #### Wearable
 
-[[Garmin Venu 4]] is probably the best option for this, it is not super expensive like the other watches but has the same sensors without a GPS and all that crap.
+[[Garmin Venu 4]] is the baseline passive wearable layer: heart rate, sleep, activity, stress proxies, Body Battery, and recorded activity GPS. For protocol-grade cardiac data during workouts, EEG sessions, or cognitive experiments, [[Polar H10]] is a better ground-truth instrument than wrist optical HR.
 
 #### Body Scan
 
@@ -52,11 +53,21 @@ There are also health biomarker systems that track a lot more, but are not low d
 
 ##### [[01-10-2026]] Update - New Withings Scale
 
-The [[Withings Body Scan 2]] was just announced, a big upgrade for [[Longevity]] tracking. Instead of getting bodyscan Ill just wait for this to release.
+The [[Withings Body Scan 2]] was just announced, a big upgrade for [[Longevity]] tracking. Instead of getting bodyscan Ill just wait for this to release. I do not have this yet, however am considering despite some of the debates about its efficacy.
 
 #### Air Quality
 
 Using an [[AirGradient ONE]] with [[home assistant]]. Data is already collected by the server, so this is easy to integrate.
+
+#### Campaign Devices
+
+The next useful additions should add new explanatory axes without demanding a high-friction ritual. Possible extensions, although diminishing returns and I like my money so....
+
+[[Polar H10]] is the cardiac ground-truth device. Use it for workouts, EEG sessions, cognitive experiments, and validation against Garmin optical heart rate. It is not another always-on wearable; it is a protocol instrument.
+
+[[OMRON 3 Series Upper Arm Blood Pressure Monitor]] is the cheap, reliable blood-pressure layer. Blood pressure is clinically meaningful, not inferable from Garmin, and useful in short morning/evening campaigns or around interventions.
+
+[[Dexcom Stelo]] is the glucose campaign tool. It should be used for a bounded 2 to 4 week period to learn meal, sleep, exercise, and stress responses, then stopped until there is another concrete question.
 
 ### Brain Data
 
@@ -70,9 +81,13 @@ On further thought, I have decided that this too expensive given the quality of 
 
 Could use the [[Tobii Eye Tracker 5]] as another source of attention in correlation with [[ActivityWatch]]. Dot product could be computed to
 
-### Online Data
+### Online Data and Internet Exports
 
 The crux of the *input* to my mind. In addition to manual takeouts/data requests, we can also use tracking services like [[ActivityWatch]] to collect timeseries data as we go by. I document this under [[Tracking EVERYTHING I do on my computer]].
+
+#### [[ActivityWatch]] Plugins
+
+[[ActivityWatch]] itself is quite extendable
 
 #### Youtube / Google
 
@@ -83,6 +98,12 @@ Can use **Google Takeout** to extract your data, but some web scraping like [[Sc
 Firefox stores all this data locally in a file called `places.sqlite`, not too hard to get. 
 
 Given that I have [[ActivityWatch]] set up now, this seems to do a better job of caputuring the high frequency nature of browsing activity (switching between a lot of tabs really quickly), and it has a firefox extension for more detailed history. I will still keep the places.sqlite file as a backup/general purpose for all the content before I set it up, but this will be the primary method from now on.
+
+#### Agent Harness Activity
+
+These are becoming very very common in most workflows, and thus carry a significant pedigree of information about what we are thinking/doing. I have done a lot with memory systems in the past, many require a lot of expensive inference for extracting useful information.
+
+For now living by the [[Store Now Utilize Later]] philosophy, the best thing to do is have every sesion create a durable fragment summary of what was done that session and *where/when* it was done. Doing it then has the advantage of KV cache hits, and allows for later use agents looking for meaningful sessions. These fragments serve as RAG-queryable maps of each session, meaning later content/topic extraction can be done efficiently ( when the reconsolidation model understands WHERE things happens it uses more scoped tool calls on the transcript ).
 
 #### Instagram
 
@@ -100,13 +121,16 @@ This one was easy enough. I have used a tool in the past called [[DiscordChatExp
 
 #### Location Data
 
-This is under online data as the best way to track this is with GPS on my phone. I have opted to use [[OwnTracks]] with [[Home Assistant]] to track this. This will hopefully turn out very intereststing, as a lot of things can be cross referenced with location for novel findings. I document setting up this idea under [[Capturing my Phones Location Data]]
+This is under online data because the best passive location source is the iPhone, using [[OwnTracks]] with [[Home Assistant]] for coarse geofenced place episodes. This will hopefully turn out very intereststing, as a lot of things can be cross referenced with location for novel findings. I document setting up this idea under [[Capturing my Phones Location Data]]
 
-[[Garmin Venu 4]] also tracks this, can be graphed wtih [[garmin-grafana]].
+[[Garmin Venu 4]] should remain the activity-GPS source: recorded runs, walks, rides, and exportable activity tracks that can be graphed with [[garmin-grafana]], not the primary 24/7 place-context recorder.
 
 ### Self Reported Data
 
-This is all stuff obsidian, but there is an issue at hand. For one, a lot of the data I record here are just extracts from **Online Data**. In the future, I want to find a way to merge these two data sources together, without crashing my obsidian in an instant.
+This is all stuff obsidian, but there is an issue at hand. For one, a lot of the data I record here are just extracts from **Online Data**. In the future, I want to find a way to merge these two data sources together, without crashing my obsidian in an instant. 
+
+- [[05-23-2026]] had some philosophical qualms with this as of late, see [[On Self Reported Data]]
+- [[05-26-2026]] addressed these qualms with [[Self reported data via phone app]]
 
 #### Obsidian Daily Notes
 
@@ -150,4 +174,5 @@ There are a lot of options here, all of which will likely involve Homelab + Obsi
 This is begginging to be designed under [[Setting up a sort of Monorepo for personal data]], namely splitting the data from the stuff we collect automatically (air quality,)
 
 **Claude Idea:**
+
 <https://claude.ai/chat/6a037e65-1106-448c-b45b-57d6898cc5cc>

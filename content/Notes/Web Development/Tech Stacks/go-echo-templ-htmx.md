@@ -8,7 +8,7 @@ source:
 class:
   - note
 related:
-  - "[[rust-axum-askama-htmx]]"
+  - "[[Notes/Web Development/Tech Stacks/rust-axum-askama-htmx]]"
 author:
 ---
 This would be my tech stack of choice for a simple fullstack web service, if I ever find myself doing web development lol.

@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/gassandrid/VAULT/.codex/hooks/validate-note.sh'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/gassandrid/VAULT/.codex/hooks/session-capture.sh'"
+          }
+        ]
+      }
+    ]
+  }
+}

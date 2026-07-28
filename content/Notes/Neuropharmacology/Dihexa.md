@@ -5,7 +5,6 @@ class:
   - medication
 category: cognitive
 type: nootropic peptide
-currently-taking: false
 dosage: 2mg
 frequency:
   - daily
@@ -16,8 +15,8 @@ description: Cognitive Function Improvement, more potent than nootrophics
 tags:
   - transhumanism/nootropic
   - health/substance
-  - transhumanism/peptides
   - pharmacology/neuro
+  - transhumanism/biohacking/peptides
 date: 2025-12-06
 updated: 2026-03-13T16:53:14-07:00
 form:

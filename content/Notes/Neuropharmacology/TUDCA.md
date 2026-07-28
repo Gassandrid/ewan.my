@@ -6,7 +6,7 @@ class:
 category: health
 type: ER stress reducer / bile acid neuroprotectant
 currently-taking: false
-status: interested
+status: not-taking
 dosage: 500
 dosage-unit: mg
 route-of-administration: PO (oral)

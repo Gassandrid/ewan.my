@@ -38,7 +38,7 @@ tags:
   - comp-neuro/brain/neurotransmitter
   - pharmacology/neuro
 date: 2026-02-25T14:10:35-05:00
-updated: 2026-03-17T14:56:42-04:00
+updated: 2026-06-11T12:59:52-07:00
 ---
 
 Primary excitatory neurotransmitter in the vertebrate [[Central Nervous System]]. If [[GABA]] is "brakes", glutamate is "accelerator", virtually every fast excitatory synapse runs on it. Synthesized primarily from [[Glutamine]] via [[Glutaminase]] in the presynaptic terminal, and secondarily from the TCA cycle intermediate $\alpha$-ketoglutarate via transamination.

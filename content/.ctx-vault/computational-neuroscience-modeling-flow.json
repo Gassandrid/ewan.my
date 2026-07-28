@@ -1,0 +1,1489 @@
+{
+  "generated_at": "2026-06-02T05:45:06+00:00",
+  "days": 60,
+  "period": "week",
+  "states": [
+    {
+      "period": "2026-W14",
+      "notes": 5,
+      "git_edits": 29,
+      "words": 1153,
+      "term_entropy": 8.8802,
+      "tag_entropy": 3.4594,
+      "semantic_novelty": 1.0,
+      "focus_coherence": 0.1012,
+      "mean_degree": 16.8,
+      "frontier_pressure": 0.0,
+      "top_terms": [
+        [
+          "model",
+          9
+        ],
+        [
+          "agent",
+          9
+        ],
+        [
+          "trkb",
+          7
+        ],
+        [
+          "through",
+          6
+        ],
+        [
+          "ampa",
+          6
+        ],
+        [
+          "bdnf",
+          5
+        ],
+        [
+          "onnestamsafetytolerabilitypharmacokinetics2023",
+          5
+        ],
+        [
+          "task",
+          5
+        ],
+        [
+          "internal",
+          5
+        ],
+        [
+          "its",
+          4
+        ],
+        [
+          "meaning",
+          4
+        ],
+        [
+          "learning",
+          4
+        ]
+      ],
+      "top_tags": [
+        [
+          "seed",
+          1
+        ],
+        [
+          "philosophy",
+          1
+        ],
+        [
+          "dailynote",
+          1
+        ],
+        [
+          "transhumanism/nootropic",
+          1
+        ],
+        [
+          "pharmacology/neuro",
+          1
+        ],
+        [
+          "health/substance",
+          1
+        ],
+        [
+          "math/information",
+          1
+        ],
+        [
+          "math/probability/bayesian",
+          1
+        ],
+        [
+          "comp-neuro/theory",
+          1
+        ],
+        [
+          "comp-neuro/models/active-inference",
+          1
+        ],
+        [
+          "papers",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "Personal Canon.md",
+        "Private/daily note/04-05-2026.md",
+        "Notes/Neuropharmacology/ACD-856.md",
+        "Notes/Computational Neuroscience/Theory/Free Energy Principle.md",
+        "Resources/papers/wuInversePOMDPInferring2018.md"
+      ]
+    },
+    {
+      "period": "2026-W15",
+      "notes": 11,
+      "git_edits": 56,
+      "words": 6500,
+      "term_entropy": 9.8965,
+      "tag_entropy": 3.0958,
+      "semantic_novelty": 0.8668,
+      "focus_coherence": 0.0918,
+      "mean_degree": 8.545,
+      "frontier_pressure": 1.545,
+      "top_terms": [
+        [
+          "vec",
+          128
+        ],
+        [
+          "frac",
+          31
+        ],
+        [
+          "det",
+          27
+        ],
+        [
+          "content",
+          23
+        ],
+        [
+          "c_4",
+          22
+        ],
+        [
+          "text",
+          21
+        ],
+        [
+          "cdot",
+          19
+        ],
+        [
+          "state",
+          18
+        ],
+        [
+          "lyapunov",
+          18
+        ],
+        [
+          "model",
+          15
+        ],
+        [
+          "hat",
+          15
+        ],
+        [
+          "spatial",
+          15
+        ]
+      ],
+      "top_tags": [
+        [
+          "university",
+          2
+        ],
+        [
+          "university/research",
+          2
+        ],
+        [
+          "journal/workflow",
+          1
+        ],
+        [
+          "dailynote",
+          1
+        ],
+        [
+          "math/chaos",
+          1
+        ],
+        [
+          "math/chaos/sensitivity",
+          1
+        ],
+        [
+          "projects/HealthTRAC",
+          1
+        ],
+        [
+          "projects/HealthTRAC/speaker-embedding",
+          1
+        ],
+        [
+          "projects/HealthTRAC/diarization",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "Thoughts/Bullet Point Notation.md",
+        "Thoughts/Chart Demo.md",
+        "Private/Inbox/Fatou's Lemma.md",
+        "Private/Inbox/In Defense of Palantir.md",
+        "Private/Inbox/Probing Nurture with Content Consumption.md",
+        "Private/daily note/04-07-2026.md",
+        "Notes/Chaos Theory/Lyapunov Dimension.md",
+        "Notes/Chaos Theory/Computing Lyapunov Exponents.md"
+      ]
+    },
+    {
+      "period": "2026-W16",
+      "notes": 39,
+      "git_edits": 96,
+      "words": 17854,
+      "term_entropy": 10.7572,
+      "tag_entropy": 5.5581,
+      "semantic_novelty": 0.627,
+      "focus_coherence": 0.0851,
+      "mean_degree": 12.487,
+      "frontier_pressure": 0.564,
+      "top_terms": [
+        [
+          "just",
+          45
+        ],
+        [
+          "kernel",
+          45
+        ],
+        [
+          "model",
+          44
+        ],
+        [
+          "let",
+          42
+        ],
+        [
+          "x_0",
+          37
+        ],
+        [
+          "here",
+          35
+        ],
+        [
+          "get",
+          33
+        ],
+        [
+          "now",
+          33
+        ],
+        [
+          "https",
+          32
+        ],
+        [
+          "these",
+          31
+        ],
+        [
+          "s_0",
+          29
+        ],
+        [
+          "gps",
+          29
+        ]
+      ],
+      "top_tags": [
+        [
+          "people/family",
+          10
+        ],
+        [
+          "university",
+          3
+        ],
+        [
+          "people/south-africa",
+          3
+        ],
+        [
+          "journal/workflow",
+          2
+        ],
+        [
+          "dailynote",
+          2
+        ],
+        [
+          "transhumanism/nootropic",
+          2
+        ],
+        [
+          "todo/person",
+          2
+        ],
+        [
+          "people/home",
+          2
+        ],
+        [
+          "math/probability/bayesian",
+          2
+        ],
+        [
+          "comp-neuro/theory/dynamics",
+          2
+        ],
+        [
+          "9d868e",
+          1
+        ],
+        [
+          "f5f1eb",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "Thoughts/Colophon For Mind Structure.md",
+        "Thoughts/Using an Inbox System.md",
+        "Private/Inbox/Differentiable Robots.md",
+        "Private/Inbox/Corticostriatal circuit.md",
+        "Private/Inbox/Viterbi decoder.md",
+        "Private/daily note/04-09-2026.md",
+        "Private/daily note/04-16-2026.md",
+        "Private/Atomic/Self Configuration.md"
+      ]
+    },
+    {
+      "period": "2026-W17",
+      "notes": 105,
+      "git_edits": 659,
+      "words": 48117,
+      "term_entropy": 11.9882,
+      "tag_entropy": 5.3369,
+      "semantic_novelty": 0.573,
+      "focus_coherence": 0.077,
+      "mean_degree": 4.524,
+      "frontier_pressure": 1.476,
+      "top_terms": [
+        [
+          "https",
+          456
+        ],
+        [
+          "systems",
+          127
+        ],
+        [
+          "epjdatascience",
+          126
+        ],
+        [
+          "springeropen",
+          126
+        ],
+        [
+          "com/articles/10",
+          126
+        ],
+        [
+          "epjds/s13688-023-00400-x",
+          126
+        ],
+        [
+          "divergence",
+          124
+        ],
+        [
+          "www",
+          108
+        ],
+        [
+          "system",
+          95
+        ],
+        [
+          "brain",
+          95
+        ],
+        [
+          "see",
+          95
+        ],
+        [
+          "these",
+          94
+        ]
+      ],
+      "top_tags": [
+        [
+          "youtube",
+          10
+        ],
+        [
+          "neuroscience",
+          10
+        ],
+        [
+          "brain-region",
+          10
+        ],
+        [
+          "papers",
+          9
+        ],
+        [
+          "health",
+          7
+        ],
+        [
+          "university",
+          6
+        ],
+        [
+          "transhumanism/nootropic",
+          6
+        ],
+        [
+          "website",
+          4
+        ],
+        [
+          "pharmacology/neuro",
+          3
+        ],
+        [
+          "dailynote",
+          3
+        ],
+        [
+          "cs/software",
+          3
+        ],
+        [
+          "places",
+          3
+        ]
+      ],
+      "touched_paths_sample": [
+        "transactions.md",
+        "Private/Tasks/Monte Carlo Simulations for markhov chains and other sims.md",
+        "Private/Tasks/Langevin Dynamics Learning.md",
+        "Private/Atomic/Untitled.md",
+        "Private/Inbox/Neural Differential Equation.md",
+        "Private/Inbox/Genome Sequencing as Eternal Golden Braid Endeavor.md",
+        "Private/Inbox/Cognitive Map.md",
+        "Private/Inbox/Transferability.md"
+      ]
+    },
+    {
+      "period": "2026-W18",
+      "notes": 20,
+      "git_edits": 80,
+      "words": 8750,
+      "term_entropy": 10.3757,
+      "tag_entropy": 4.0667,
+      "semantic_novelty": 0.6504,
+      "focus_coherence": 0.0879,
+      "mean_degree": 8.1,
+      "frontier_pressure": 1.1,
+      "top_terms": [
+        [
+          "latent",
+          32
+        ],
+        [
+          "lambda",
+          24
+        ],
+        [
+          "now",
+          22
+        ],
+        [
+          "just",
+          22
+        ],
+        [
+          "night",
+          22
+        ],
+        [
+          "via",
+          22
+        ],
+        [
+          "x_0",
+          22
+        ],
+        [
+          "any",
+          21
+        ],
+        [
+          "model",
+          21
+        ],
+        [
+          "information",
+          20
+        ],
+        [
+          "hrv",
+          19
+        ],
+        [
+          "frac",
+          19
+        ]
+      ],
+      "top_tags": [
+        [
+          "dailynote",
+          4
+        ],
+        [
+          "health/supplement",
+          3
+        ],
+        [
+          "health",
+          3
+        ],
+        [
+          "generated/claude",
+          3
+        ],
+        [
+          "cs/homelab/data",
+          2
+        ],
+        [
+          "university",
+          2
+        ],
+        [
+          "health/vitamin",
+          2
+        ],
+        [
+          "health/nootropic",
+          2
+        ],
+        [
+          "math/chaos",
+          2
+        ],
+        [
+          "journal/workflow",
+          1
+        ],
+        [
+          "transhumanism/longevity/biomarkers",
+          1
+        ],
+        [
+          "health/genetic",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "Thoughts/Store Now Utilize Later.md",
+        ".pi/memory/last-dream-response.md",
+        ".pi/memory/USER.md",
+        "Private/Inbox/Sparse Identification of Nonlinear Dynamics.md",
+        "Private/Inbox/Self Replicating Robots.md",
+        "Private/daily note/04-25-2026.md",
+        "Private/daily note/05-01-2026.md",
+        "Private/daily note/04-29-2026.md"
+      ]
+    },
+    {
+      "period": "2026-W19",
+      "notes": 17,
+      "git_edits": 129,
+      "words": 28182,
+      "term_entropy": 14.0154,
+      "tag_entropy": 4.4406,
+      "semantic_novelty": 0.5664,
+      "focus_coherence": 0.0666,
+      "mean_degree": 6.294,
+      "frontier_pressure": 2.059,
+      "top_terms": [
+        [
+          "infty",
+          103
+        ],
+        [
+          "orbit",
+          85
+        ],
+        [
+          "points",
+          82
+        ],
+        [
+          "a_1",
+          79
+        ],
+        [
+          "point",
+          73
+        ],
+        [
+          "every",
+          67
+        ],
+        [
+          "each",
+          66
+        ],
+        [
+          "frac",
+          66
+        ],
+        [
+          "fixed",
+          64
+        ],
+        [
+          "partial",
+          57
+        ],
+        [
+          "png",
+          51
+        ],
+        [
+          "set",
+          50
+        ]
+      ],
+      "top_tags": [
+        [
+          "website",
+          3
+        ],
+        [
+          "people",
+          2
+        ],
+        [
+          "excalidraw",
+          1
+        ],
+        [
+          "writing",
+          1
+        ],
+        [
+          "math/calculus/differential",
+          1
+        ],
+        [
+          "physics/electromagnetism",
+          1
+        ],
+        [
+          "journal/work",
+          1
+        ],
+        [
+          "dailynote",
+          1
+        ],
+        [
+          "generated/claude",
+          1
+        ],
+        [
+          "cs/python",
+          1
+        ],
+        [
+          "resource/programming",
+          1
+        ],
+        [
+          "todo/programming",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "Private/Whiteboard.excalidraw.md",
+        "Private/Inbox/Rotary Position Embedding.md",
+        "Private/Inbox/Yet another RoPE extensioN method.md",
+        "Private/daily note/05-08-2026.md",
+        "Private/Junk/Chaos Presentation Notes.md",
+        "Private/Junk/Chaos Worksheet Clean.md",
+        "Private/Junk/Chaos Worksheet Handwriting.md",
+        "Private/Junk/GSWS Final.md"
+      ]
+    },
+    {
+      "period": "2026-W20",
+      "notes": 12,
+      "git_edits": 36,
+      "words": 5648,
+      "term_entropy": 10.0278,
+      "tag_entropy": 3.6402,
+      "semantic_novelty": 0.6165,
+      "focus_coherence": 0.0907,
+      "mean_degree": 3.583,
+      "frontier_pressure": 1.5,
+      "top_terms": [
+        [
+          "eeg",
+          23
+        ],
+        [
+          "model",
+          22
+        ],
+        [
+          "state",
+          21
+        ],
+        [
+          "points",
+          17
+        ],
+        [
+          "learning",
+          16
+        ],
+        [
+          "neuralset",
+          15
+        ],
+        [
+          "plt",
+          15
+        ],
+        [
+          "focus",
+          13
+        ],
+        [
+          "begin",
+          12
+        ],
+        [
+          "period",
+          12
+        ],
+        [
+          "fixed",
+          12
+        ],
+        [
+          "pmatrix",
+          12
+        ]
+      ],
+      "top_tags": [
+        [
+          "math/calculus/differential",
+          2
+        ],
+        [
+          "math/chaos",
+          2
+        ],
+        [
+          "dailynote",
+          1
+        ],
+        [
+          "cs/ai/jepa",
+          1
+        ],
+        [
+          "cs/ai/ssl",
+          1
+        ],
+        [
+          "cs/ai/interpretability",
+          1
+        ],
+        [
+          "website",
+          1
+        ],
+        [
+          "cs/ai/variational",
+          1
+        ],
+        [
+          "physics",
+          1
+        ],
+        [
+          "comp-neuro",
+          1
+        ],
+        [
+          "todo/neuro",
+          1
+        ],
+        [
+          "university/homework",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "AGENTS.md",
+        ".pi/APPEND_SYSTEM.md",
+        "Private/Inbox/Local Monkeytype Clone.md",
+        "Private/Inbox/Takens' Embedding Theorem.md",
+        "Private/Inbox/On Doing EEG Work.md",
+        "Private/daily note/05-17-2026.md",
+        "Notes/Artificial Intelligence/Barlow Twins.md",
+        "Notes/Artificial Intelligence/Natural Language Autoencoders.md"
+      ]
+    },
+    {
+      "period": "2026-W21",
+      "notes": 126,
+      "git_edits": 414,
+      "words": 44792,
+      "term_entropy": 11.8804,
+      "tag_entropy": 4.7262,
+      "semantic_novelty": 0.5604,
+      "focus_coherence": 0.0776,
+      "mean_degree": 8.968,
+      "frontier_pressure": 0.333,
+      "top_terms": [
+        [
+          "memory",
+          212
+        ],
+        [
+          "content",
+          99
+        ],
+        [
+          "agent",
+          95
+        ],
+        [
+          "files",
+          92
+        ],
+        [
+          "dynamics",
+          83
+        ],
+        [
+          "lab",
+          83
+        ],
+        [
+          "state",
+          82
+        ],
+        [
+          "cognition",
+          80
+        ],
+        [
+          "models",
+          79
+        ],
+        [
+          "https",
+          79
+        ],
+        [
+          "workspace",
+          78
+        ],
+        [
+          "session",
+          71
+        ]
+      ],
+      "top_tags": [
+        [
+          "generated/claude",
+          30
+        ],
+        [
+          "generated/claude/memory",
+          26
+        ],
+        [
+          "generated/pi/memory",
+          23
+        ],
+        [
+          "vault/meta",
+          14
+        ],
+        [
+          "products",
+          9
+        ],
+        [
+          "workspace/agents-as-workspaces",
+          6
+        ],
+        [
+          "quantified-self",
+          5
+        ],
+        [
+          "cs/data-science",
+          5
+        ],
+        [
+          "dailynote",
+          5
+        ],
+        [
+          "claude/session",
+          5
+        ],
+        [
+          "pi/memory",
+          4
+        ],
+        [
+          "comp-neuro",
+          3
+        ]
+      ],
+      "touched_paths_sample": [
+        "Thoughts/Write Stub Notes.md",
+        "Thoughts/tDCS and the Steerable Manifold.md",
+        "Private/Claude Memory/README.md",
+        "Private/Agent Memory/dream-log.md",
+        "Private/Claude Memory/Pi Agent Memory/-Users-gassandrid-Lab-playground-languages-python/MEMORY.md",
+        "Private/Claude Memory/Pi Agent Memory/INDEX.md",
+        "Private/Agent Memory/project_root_folder_architecture.md",
+        "Private/Agent Memory/feedback_chaos_presentation_morris_lecar_equation_convention.md"
+      ]
+    },
+    {
+      "period": "2026-W22",
+      "notes": 27,
+      "git_edits": 139,
+      "words": 63372,
+      "term_entropy": 11.7096,
+      "tag_entropy": 5.122,
+      "semantic_novelty": 0.4955,
+      "focus_coherence": 0.0787,
+      "mean_degree": 11.889,
+      "frontier_pressure": 4.63,
+      "top_terms": [
+        [
+          "model",
+          290
+        ],
+        [
+          "tlx",
+          284
+        ],
+        [
+          "https",
+          215
+        ],
+        [
+          "models",
+          167
+        ],
+        [
+          "nsi-189",
+          154
+        ],
+        [
+          "these",
+          148
+        ],
+        [
+          "right",
+          141
+        ],
+        [
+          "left",
+          127
+        ],
+        [
+          "learning",
+          115
+        ],
+        [
+          "torch",
+          107
+        ],
+        [
+          "time",
+          103
+        ],
+        [
+          "attention",
+          95
+        ]
+      ],
+      "top_tags": [
+        [
+          "generated/claude",
+          6
+        ],
+        [
+          "vault/meta",
+          3
+        ],
+        [
+          "workflow",
+          2
+        ],
+        [
+          "OCD",
+          2
+        ],
+        [
+          "cs/homelab/data",
+          2
+        ],
+        [
+          "cs/ai/jepa",
+          2
+        ],
+        [
+          "dailynote",
+          2
+        ],
+        [
+          "health",
+          2
+        ],
+        [
+          "youtube",
+          2
+        ],
+        [
+          "generated/gemini",
+          2
+        ],
+        [
+          "protocol",
+          1
+        ],
+        [
+          "cs/homelab/data/reported",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "Private/Universal Protocol.md",
+        "Thoughts/Self reported data via phone app.md",
+        "Thoughts/On Capturing Personal Data.md",
+        "Private/Inbox/Kolmogorov Complexity.md",
+        "Private/Inbox/Cortical Columns.md",
+        "Private/Inbox/On Self Reported Data.md",
+        "Private/Inbox/On Curating Content Feeds.md",
+        "Private/Inbox/Joint Embedding Predictive Architecture.md"
+      ]
+    },
+    {
+      "period": "2026-W23",
+      "notes": 9,
+      "git_edits": 263,
+      "words": 47905,
+      "term_entropy": 11.1174,
+      "tag_entropy": 2.1488,
+      "semantic_novelty": 0.5946,
+      "focus_coherence": 0.0825,
+      "mean_degree": 20.778,
+      "frontier_pressure": 1.778,
+      "top_terms": [
+        [
+          "tropisetron",
+          478
+        ],
+        [
+          "ht4",
+          387
+        ],
+        [
+          "effects",
+          232
+        ],
+        [
+          "cognitive",
+          197
+        ],
+        [
+          "receptor",
+          197
+        ],
+        [
+          "memory",
+          186
+        ],
+        [
+          "https",
+          169
+        ],
+        [
+          "tak-653",
+          160
+        ],
+        [
+          "brain",
+          143
+        ],
+        [
+          "af710b",
+          137
+        ],
+        [
+          "receptors",
+          133
+        ],
+        [
+          "highly",
+          127
+        ]
+      ],
+      "top_tags": [
+        [
+          "transhumanism/nootropic",
+          5
+        ],
+        [
+          "pharmacology/neuro",
+          5
+        ],
+        [
+          "navigation",
+          1
+        ],
+        [
+          "dailynote",
+          1
+        ],
+        [
+          "health/substance",
+          1
+        ],
+        [
+          "health",
+          1
+        ]
+      ],
+      "touched_paths_sample": [
+        "Private/Homepage.md",
+        "Thoughts/Utilizing Cognition Enhancement Effectively.md",
+        "Private/Inbox/I was in this prematurely air conditioned supermarket.md",
+        "Private/Inbox/Pharmacological tDCS.md",
+        "Private/daily note/06-01-2026.md",
+        "Notes/Neuropharmacology/TAK-653.md",
+        "Notes/Neuropharmacology/Usmarapride.md",
+        "Notes/Neuropharmacology/Tropisetron.md"
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "from": "2026-W14",
+      "to": "2026-W15",
+      "continuity": 0.0446,
+      "shared": [
+        "model"
+      ],
+      "born": [
+        "vec",
+        "frac",
+        "det",
+        "content",
+        "c_4",
+        "text",
+        "cdot",
+        "state",
+        "lyapunov",
+        "hat",
+        "spatial"
+      ],
+      "faded": [
+        "agent",
+        "trkb",
+        "through",
+        "ampa",
+        "bdnf",
+        "onnestamsafetytolerabilitypharmacokinetics2023",
+        "task",
+        "internal",
+        "its",
+        "meaning",
+        "learning"
+      ]
+    },
+    {
+      "from": "2026-W15",
+      "to": "2026-W16",
+      "continuity": 0.0356,
+      "shared": [
+        "model"
+      ],
+      "born": [
+        "just",
+        "kernel",
+        "let",
+        "x_0",
+        "here",
+        "get",
+        "now",
+        "https",
+        "these",
+        "s_0",
+        "gps"
+      ],
+      "faded": [
+        "vec",
+        "frac",
+        "det",
+        "content",
+        "c_4",
+        "text",
+        "cdot",
+        "state",
+        "lyapunov",
+        "hat",
+        "spatial"
+      ]
+    },
+    {
+      "from": "2026-W16",
+      "to": "2026-W17",
+      "continuity": 0.2324,
+      "shared": [
+        "https",
+        "these"
+      ],
+      "born": [
+        "systems",
+        "epjdatascience",
+        "springeropen",
+        "com/articles/10",
+        "epjds/s13688-023-00400-x",
+        "divergence",
+        "www",
+        "system",
+        "brain",
+        "see"
+      ],
+      "faded": [
+        "just",
+        "kernel",
+        "model",
+        "let",
+        "x_0",
+        "here",
+        "get",
+        "now",
+        "s_0",
+        "gps"
+      ]
+    },
+    {
+      "from": "2026-W17",
+      "to": "2026-W18",
+      "continuity": 0.0,
+      "shared": [],
+      "born": [
+        "latent",
+        "lambda",
+        "now",
+        "just",
+        "night",
+        "via",
+        "x_0",
+        "any",
+        "model",
+        "information",
+        "hrv",
+        "frac"
+      ],
+      "faded": [
+        "https",
+        "systems",
+        "epjdatascience",
+        "springeropen",
+        "com/articles/10",
+        "epjds/s13688-023-00400-x",
+        "divergence",
+        "www",
+        "system",
+        "brain",
+        "see",
+        "these"
+      ]
+    },
+    {
+      "from": "2026-W18",
+      "to": "2026-W19",
+      "continuity": 0.065,
+      "shared": [
+        "frac"
+      ],
+      "born": [
+        "infty",
+        "orbit",
+        "points",
+        "a_1",
+        "point",
+        "every",
+        "each",
+        "fixed",
+        "partial",
+        "png",
+        "set"
+      ],
+      "faded": [
+        "latent",
+        "lambda",
+        "now",
+        "just",
+        "night",
+        "via",
+        "x_0",
+        "any",
+        "model",
+        "information",
+        "hrv"
+      ]
+    },
+    {
+      "from": "2026-W19",
+      "to": "2026-W20",
+      "continuity": 0.1539,
+      "shared": [
+        "points",
+        "fixed"
+      ],
+      "born": [
+        "eeg",
+        "model",
+        "state",
+        "learning",
+        "neuralset",
+        "plt",
+        "focus",
+        "begin",
+        "period",
+        "pmatrix"
+      ],
+      "faded": [
+        "infty",
+        "orbit",
+        "a_1",
+        "point",
+        "every",
+        "each",
+        "frac",
+        "partial",
+        "png",
+        "set"
+      ]
+    },
+    {
+      "from": "2026-W20",
+      "to": "2026-W21",
+      "continuity": 0.087,
+      "shared": [
+        "state"
+      ],
+      "born": [
+        "memory",
+        "content",
+        "agent",
+        "files",
+        "dynamics",
+        "lab",
+        "cognition",
+        "models",
+        "https",
+        "workspace",
+        "session"
+      ],
+      "faded": [
+        "eeg",
+        "model",
+        "points",
+        "learning",
+        "neuralset",
+        "plt",
+        "focus",
+        "begin",
+        "period",
+        "fixed",
+        "pmatrix"
+      ]
+    },
+    {
+      "from": "2026-W21",
+      "to": "2026-W22",
+      "continuity": 0.1426,
+      "shared": [
+        "https",
+        "models"
+      ],
+      "born": [
+        "model",
+        "tlx",
+        "nsi-189",
+        "these",
+        "right",
+        "left",
+        "learning",
+        "torch",
+        "time",
+        "attention"
+      ],
+      "faded": [
+        "memory",
+        "content",
+        "agent",
+        "files",
+        "dynamics",
+        "lab",
+        "state",
+        "cognition",
+        "workspace",
+        "session"
+      ]
+    },
+    {
+      "from": "2026-W22",
+      "to": "2026-W23",
+      "continuity": 0.0734,
+      "shared": [
+        "https"
+      ],
+      "born": [
+        "tropisetron",
+        "ht4",
+        "effects",
+        "cognitive",
+        "receptor",
+        "memory",
+        "tak-653",
+        "brain",
+        "af710b",
+        "receptors",
+        "highly"
+      ],
+      "faded": [
+        "model",
+        "tlx",
+        "models",
+        "nsi-189",
+        "these",
+        "right",
+        "left",
+        "learning",
+        "torch",
+        "time",
+        "attention"
+      ]
+    }
+  ]
+}

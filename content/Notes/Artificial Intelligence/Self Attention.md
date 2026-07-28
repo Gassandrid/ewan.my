@@ -1,6 +1,6 @@
 ---
 date: 2025-08-23
-updated: 2025-09-25
+updated: 2026-06-19T18:53:43-07:00
 class:
   - note
 tags:
@@ -13,6 +13,7 @@ source:
 related:
   - "[[Softmax]]"
 ---
+
 Assuming that we are working with a [[Large Language Model|Large Language Model]], and as such we have already associated an [[Embedding Vector]] to each [[Token]] based on its learned value and its position, the next logical step would be to allow these new vectors to "soak up" more knowledge about the words around them.
 
 $$
@@ -28,7 +29,7 @@ $$
 
 [^1]
 
-
+*However position is now oftentimes encoded using [[Rotary Position Embedding|RoPE]]*
 
 This is necessary as right now, these vectors only contain a 1-to-1 correspondence for the word they represent, with no regard for the context of the sentence, which can vastly change the meaning:
 

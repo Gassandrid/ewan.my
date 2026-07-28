@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "feedId": "fe146561-5174-425e-bc35-da2dc70a7364",
+  "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw",
+  "updatedAt": 1784920827681,
+  "items": [
+    {
+      "title": "The 64 sugar cubes puzzle",
+      "link": "https://www.youtube.com/shorts/6XPlmCDNLNc",
+      "description": "See all monthly puzzles: https://momath.org/mindbenders/",
+      "content": "See all monthly puzzles: https://momath.org/mindbenders/",
+      "pubDate": "2026-07-24T15:05:39+00:00",
+      "guid": "yt:video:6XPlmCDNLNc",
+      "feedTitle": "3Blue1Brown",
+      "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw",
+      "coverImage": "https://img.youtube.com/vi/6XPlmCDNLNc/maxresdefault.jpg",
+      "summary": "See all monthly puzzles: https://momath.org/mindbenders/",
+      "author": "3Blue1Brown",
+      "mediaType": "video",
+      "explicit": false,
+      "image": "",
+      "videoId": "6XPlmCDNLNc"
+    },
+    {
+      "title": "But what is cross-entropy? | Compression is Intelligence Part 2",
+      "link": "https://www.youtube.com/watch?v=GlYgs6v2YfU",
+      "description": "Where the loss function for training LLMs comes from. Job opportunities aligned to this audience: https://3b1b.co/talent Early views and other perks for supporters: https://3b1b.co/support Home page: https://www.3blue1brown.com Part 1: https://youtu.be/l6DKRf-fAAM If you want to learn more about Lagrange Multipliers, I made multiple videos and articles for the topic back in my Khan Academy days: https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/constrained-optimization-introduction Manim animations by Aaron Gostein and Grant Sanderson NanoGPT animation by Clayton Rabideau 3d black-box model by Paul Dancstep Chess game and Lagrange Multiplier scenes by Nishad Deulkar Music by Vince Rubinetti Timestamps 0:00 - Language trees and zipping 3:02 - Recap optimal codes 5:20 - Defining cross-entropy 8:26 - Intuition and examples 12:59 - Application to language trees 14:55 - Pre-training LLMs 20:38 - What makes this loss function best? 26:13 - Distillation 30:12 - 3b1b Talent 31:35 - KL Divergence ------------------ These animations are largely made using a custom Python library, manim. See the FAQ comments here: https://3b1b.co/faq#manim Music by Vincent Rubinetti. https://vincerubinetti.bandcamp.com/album/the-music-of-3blue1brown https://open.spotify.com/album/1dVyjwS8FBqXhRunaG5W5u ------------------ 3blue1brown is a channel about animating math, in all senses of the word animate. If you're reading the bottom of a video description, I'm guessing you're more interested than the average viewer in lessons here. It would mean a lot to me if you chose to stay up to date on new ones, either by subscribing here on YouTube or otherwise following on whichever platform below you check most regularly. Mailing list: https://3blue1brown.substack.com Twitter: https://twitter.com/3blue1brown Bluesky: https://bsky.app/profile/3blue1brown.com Instagram: https://www.instagram.com/3blue1brown Reddit: https://www.reddit.com/r/3blue1brown Facebook: https://www.facebook.com/3blue1brown Patreon: https://patreon.com/3blue1brown Website: https://www.3blue1brown.com",
+      "content": "Where the loss function for training LLMs comes from. Job opportunities aligned to this audience: https://3b1b.co/talent Early views and other perks for supporters: https://3b1b.co/support Home page: https://www.3blue1brown.com Part 1: https://youtu.be/l6DKRf-fAAM If you want to learn more about Lagrange Multipliers, I made multiple videos and articles for the topic back in my Khan Academy days: https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/constrained-optimization-introduction Manim animations by Aaron Gostein and Grant Sanderson NanoGPT animation by Clayton Rabideau 3d black-box model by Paul Dancstep Chess game and Lagrange Multiplier scenes by Nishad Deulkar Music by Vince Rubinetti Timestamps 0:00 - Language trees and zipping 3:02 - Recap optimal codes 5:20 - Defining cross-entropy 8:26 - Intuition and examples 12:59 - Application to language trees 14:55 - Pre-training LLMs 20:38 - What makes this loss function best? 26:13 - Distillation 30:12 - 3b1b Talent 31:35 - KL Divergence ------------------ These animations are largely made using a custom Python library, manim. See the FAQ comments here: https://3b1b.co/faq#manim Music by Vincent Rubinetti. https://vincerubinetti.bandcamp.com/album/the-music-of-3blue1brown https://open.spotify.com/album/1dVyjwS8FBqXhRunaG5W5u ------------------ 3blue1brown is a channel about animating math, in all senses of the word animate. If you're reading the bottom of a video description, I'm guessing you're more interested than the average viewer in lessons here. It would mean a lot to me if you chose to stay up to date on new ones, either by subscribing here on YouTube or otherwise following on whichever platform below you check most regularly. Mailing list: https://3blue1brown.substack.com Twitter: https://twitter.com/3blue1brown Bluesky: https://bsky.app/profile/3blue1brown.com Instagram: https://www.instagram.com/3blue1brown Reddit: https://www.reddit.com/r/3blue1brown Facebook: https://www.facebook.com/3blue1brown Patreon: https://patreon.com/3blue1brown Website: https://www.3blue1brown.com",
+      "pubDate": "2026-07-16T11:56:04+00:00",
+      "guid": "yt:video:GlYgs6v2YfU",
+      "feedTitle": "3Blue1Brown",
+      "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw",
+      "coverImage": "https://img.youtube.com/vi/GlYgs6v2YfU/maxresdefault.jpg",
+      "summary": "Where the loss function for training LLMs comes from. Job opportunities aligned to this audience: https://3b1b.co/talent Early views and other perks for supporters: https://3b1b.co/support Home page: https://www.3blue1br...",
+      "author": "3Blue1Brown",
+      "mediaType": "video",
+      "explicit": false,
+      "image": "",
+      "videoId": "GlYgs6v2YfU"
+    }
+  ]
+}

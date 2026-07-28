@@ -1,13 +1,17 @@
 import { h } from "preact"
 import { QuartzTransformerPlugin } from "../types"
+import {
+  MARIMO_CDN_ORIGIN,
+  MARIMO_ISLANDS_VERSION,
+  marimoIslandsCssUrl,
+  marimoIslandsJsUrl,
+} from "../../custom/marimoConfig"
 
-// Pin to match the locally installed `marimo` Python package — the generator
-// embeds element protocol that needs to match the islands runtime version.
-// Bump this when you upgrade marimo (`pip show marimo`).
-const MARIMO_ISLANDS_VERSION = "0.23.4"
-
-const ISLANDS_JS = `https://cdn.jsdelivr.net/npm/@marimo-team/islands@${MARIMO_ISLANDS_VERSION}/dist/main.js`
-const ISLANDS_CSS = `https://cdn.jsdelivr.net/npm/@marimo-team/islands@${MARIMO_ISLANDS_VERSION}/dist/style.css`
+interface MarimoIslandsOptions {
+  version?: string
+  loadLoraFont?: boolean
+  hardReloadOnSpaNav?: boolean
+}
 
 // Lora — header font. Quartz's `fontOrigin: "googleFonts"` would bundle all
 // three families (header + body + code) into a single Google Fonts URL, which
@@ -37,24 +41,32 @@ document.addEventListener("nav", () => {
 })
 `
 
-export const MarimoIslandsPlugin: QuartzTransformerPlugin = () => ({
+export const MarimoIslandsPlugin: QuartzTransformerPlugin<MarimoIslandsOptions> = (opts) => ({
   name: "MarimoIslandsPlugin",
   externalResources() {
+    const version = opts?.version ?? MARIMO_ISLANDS_VERSION
+    const loadLoraFont = opts?.loadLoraFont ?? true
+    const hardReloadOnSpaNav = opts?.hardReloadOnSpaNav ?? true
+
     return {
       js: [
         {
-          src: ISLANDS_JS,
+          src: marimoIslandsJsUrl(version),
           loadTime: "afterDOMReady",
           contentType: "external",
           moduleType: "module",
           spaPreserve: true,
         },
-        {
-          contentType: "inline",
-          loadTime: "afterDOMReady",
-          spaPreserve: true,
-          script: NAV_RELOAD_SCRIPT,
-        },
+        ...(hardReloadOnSpaNav
+          ? [
+              {
+                contentType: "inline" as const,
+                loadTime: "afterDOMReady" as const,
+                spaPreserve: true,
+                script: NAV_RELOAD_SCRIPT,
+              },
+            ]
+          : []),
       ],
       // Marimo's stylesheet must be loaded with `crossorigin="anonymous"` so
       // marimo's runtime can call `cssRules` on it and adopt its Tailwind
@@ -65,16 +77,26 @@ export const MarimoIslandsPlugin: QuartzTransformerPlugin = () => ({
       // directly through `additionalHead`.
       additionalHead: [
         h("link", {
-          rel: "stylesheet",
-          href: ISLANDS_CSS,
+          rel: "preconnect",
+          href: MARIMO_CDN_ORIGIN,
           crossorigin: "anonymous",
           "data-persist": "true",
         }),
         h("link", {
           rel: "stylesheet",
-          href: LORA_CSS,
+          href: marimoIslandsCssUrl(version),
+          crossorigin: "anonymous",
           "data-persist": "true",
         }),
+        ...(loadLoraFont
+          ? [
+              h("link", {
+                rel: "stylesheet",
+                href: LORA_CSS,
+                "data-persist": "true",
+              }),
+            ]
+          : []),
       ],
     }
   },

@@ -9,7 +9,7 @@ class:
   - note
 id: 13.1 - Vector Functions
 ---
-## What is a [[Notes/Calculus III/Vectors|Vectors]] Function?
+## What is a [[Notes/Linear Algebra/Module 1/Vectors|Vectors]] Function?
 
 The following equation represents the form of a standard vector function
 

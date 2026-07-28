@@ -6,6 +6,7 @@ views:
         - class == ["medication"]
         - category.contains("cognitive")
     order:
+      - file.basename
       - type
       - targets
       - pathways

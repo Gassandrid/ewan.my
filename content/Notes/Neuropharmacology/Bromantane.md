@@ -6,7 +6,7 @@ class:
   - medication
 category: cognitive
 type: dopaminergic
-status: ordered
+status: stocked
 dosage: 100
 dosage-unit: mg
 route-of-administration: PO (oral)

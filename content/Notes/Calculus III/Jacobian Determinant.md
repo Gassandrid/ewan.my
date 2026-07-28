@@ -4,8 +4,17 @@ tags:
   - math
   - generated
   - university
-updated: 2026-01-29T10:46:08-05:00
+updated: 2026-06-15T09:06:04-07:00
+class:
+  - note
+source:
+related:
+  - "[[Jacobian]]"
+author:
+description:
+aliases:
 ---
+
 Concept from vector calculus that helps in transforming between coordinate systems. It represents the scaling factor of the transformation at a given point and is especially useful when changing variables in multivariable integrals.
 
 ### Definition of the Jacobian Determinant

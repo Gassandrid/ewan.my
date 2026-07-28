@@ -20,12 +20,12 @@ author:
 ---
 ## Parts of Brain
 
-- [ ] [[Forebrain#Neocortex]] - Higher-order functions like thought, language, and sensory perception.
-	- [ ] [[Occipital Lobe]] - Processes visual information. 👀
-	- [ ] [[Temporal Lobe]] - Processes sounds, memory, and language comprehension. 👂
-	- [ ] [[Parietal Lobe]] - Integrates sensory information (touch, temperature) and spatial awareness.
-	- [ ] [[Frontal Lobe]] - Manages executive functions: planning, decision-making, and personality. 🧠
-	- [ ] [[Insular Lobe]] - Involved in emotion, self-awareness, and internal body sensations.
+- [x] [[Forebrain#Neocortex]] - Higher-order functions like thought, language, and sensory perception.
+	- [x] [[Occipital Lobe]] - Processes visual information. 👀
+	- [x] [[Temporal Lobe]] - Processes sounds, memory, and language comprehension. 👂
+	- [x] [[Parietal Lobe]] - Integrates sensory information (touch, temperature) and spatial awareness.
+	- [x] [[Frontal Lobe]] - Manages executive functions: planning, decision-making, and personality. 🧠
+	- [x] [[Insular Lobe]] - Involved in emotion, self-awareness, and internal body sensations.
 - [ ] [[Forebrain#Subcortex]] - Structures below the cortex handling memory, emotion, and drives.
 	- [ ] [[Hippocampus]] - Forms new memories and is key for spatial navigation. 🗺️
 	- [ ] [[Amygdala]] - The brain's emotional center, especially for fear and aggression.

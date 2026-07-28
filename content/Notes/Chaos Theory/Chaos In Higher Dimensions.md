@@ -103,4 +103,4 @@ $$
 
 which yields LE: $\ln(2), -\ln(3)$
 
-$\implies$ every 
+$\implies$ every

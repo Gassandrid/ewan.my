@@ -7,7 +7,7 @@ tags:
   - cs/ai
   - generated
 ---
-Activation functions are essential components of neural networks that determine whether a neuron should be activated or not. They introduce non-linearity into the model, enabling it to learn complex patterns and relationships in data. Without activation functions, the neural network would behave like a linear model, regardless of its depth.
+Activation functions are essential components of [[neural networks]] that determine whether a neuron should be activated or not. They introduce non-linearity into the model, enabling it to learn complex patterns and relationships in data. Without activation functions, the [[Neural Networks|neural network]] would behave like a linear model, regardless of its depth.
 
 You can think of an activation function as the main component behind creating a *fold* in the plane of the neuron.
 
