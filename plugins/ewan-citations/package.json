@@ -1,0 +1,24 @@
+{
+  "name": "@ewan/quartz-citations",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js"
+  },
+  "dependencies": {
+    "unist-util-visit": "^5.1.0"
+  },
+  "quartz": {
+    "name": "ewan-citations",
+    "displayName": "Ewan Citation Rendering",
+    "description": "Restore Quartz v4 semantic inline citation markup after bibliography generation.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "transformer",
+    "defaultOrder": 86
+  }
+}

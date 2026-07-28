@@ -7,12 +7,6 @@
       "commit": "73a98dda7e4f55239310833299d91daf8611349f",
       "installedAt": "2026-07-18T04:30:57.579Z"
     },
-    "article-title": {
-      "source": "github:quartz-community/article-title",
-      "resolved": "https://github.com/quartz-community/article-title.git",
-      "commit": "e608ca815e137e22b598094f735bcd8a481dafaa",
-      "installedAt": "2026-07-18T04:30:58.616Z"
-    },
     "backlinks": {
       "source": "github:quartz-community/backlinks",
       "resolved": "https://github.com/quartz-community/backlinks.git",
@@ -97,11 +91,23 @@
       "commit": "56dc546614d905ad07dd0da8dd5820e25e5ea97b",
       "installedAt": "2026-07-18T04:30:56.637Z"
     },
+    "ewan-article-title": {
+      "source": "./plugins/ewan-article-title",
+      "resolved": "./plugins/ewan-article-title",
+      "commit": "local",
+      "installedAt": "2026-07-27T23:50:39.411Z"
+    },
     "ewan-charts": {
       "source": "./plugins/ewan-charts",
       "resolved": "./plugins/ewan-charts",
       "commit": "local",
       "installedAt": "2026-07-18T04:29:35.447Z"
+    },
+    "ewan-citations": {
+      "source": "./plugins/ewan-citations",
+      "resolved": "./plugins/ewan-citations",
+      "commit": "local",
+      "installedAt": "2026-07-28T00:29:23.230Z"
     },
     "ewan-fonts": {
       "source": "./plugins/ewan-fonts",

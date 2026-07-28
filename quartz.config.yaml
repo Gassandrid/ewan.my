@@ -124,7 +124,11 @@ plugins:
     enabled: true
     options:
       bibliographyFile: content/References.bib
+      linkCitations: true
     order: 85
+  - source: ./plugins/ewan-citations
+    enabled: true
+    order: 86
   - source: ./plugins/ewan-tikz
     enabled: true
     order: 88
@@ -216,7 +220,7 @@ plugins:
     layout:
       position: right
       priority: 10
-  - source: github:quartz-community/article-title
+  - source: ./plugins/ewan-article-title
     enabled: true
     layout:
       position: beforeBody

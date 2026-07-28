@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "./python-plugin.scss";
 @use "./custom/caption-callout.scss";
 @use "./custom/infobox-callout.scss";
@@ -10,6 +11,29 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+// Quartz v5 only emits its core theme keys as CSS variables. Keep the
+// extended v4 palette available to custom components such as rainbow tags.
+:root,
+[saved-theme="light"] {
+  --rust: #bf6159;
+  --clay: #c78d75;
+  --ochre: #cc9e54;
+  --sage: #869c7a;
+  --pine: #56706b;
+  --slate: #728c99;
+  --mauve: #9d868e;
+}
+
+[saved-theme="dark"] {
+  --rust: #db8e88;
+  --clay: #deaea0;
+  --ochre: #e0bc7e;
+  --sage: #aebd9f;
+  --pine: #8daeb3;
+  --slate: #9bb0bd;
+  --mauve: #c9b1b9;
+}
 
 // ewanfont
 @font-face {
@@ -244,7 +268,7 @@ audio::-webkit-media-controls-panel {
 }
 
 .article-title-group {
-  padding-left: 2rem;
+  padding-left: 0;
 }
 
 // Quartz v5 renders these directly in the page header rather than inside
@@ -838,90 +862,20 @@ html.reading-mode .sidebar.reading-mode-active .toc-clone {
 .tags {
   a.internal.tag-link {
     transition: all 0.2s ease;
+  }
 
-    // Cycle through the 7 custom colors (rust, clay, ochre, sage, pine, slate, mauve)
-    // Using semi-transparent backgrounds with full-opacity text
-    &[data-tag-index="0"],
-    &[data-tag-index="7"],
-    &[data-tag-index="14"],
-    &[data-tag-index="21"] {
-      background-color: color-mix(in srgb, var(--rust) 10%, transparent);
-      color: var(--rust);
+  // Quartz v5 no longer emits v4's data-tag-index attribute. Cycle by list
+  // position so both page-header and page-list tags retain the old palette.
+  $tag-colors: rust, clay, ochre, sage, pine, slate, mauve;
+  @for $i from 1 through list.length($tag-colors) {
+    $color: list.nth($tag-colors, $i);
 
-      &:hover {
-        background-color: color-mix(in srgb, var(--rust) 15%, transparent);
-      }
-    }
-
-    &[data-tag-index="1"],
-    &[data-tag-index="8"],
-    &[data-tag-index="15"],
-    &[data-tag-index="22"] {
-      background-color: color-mix(in srgb, var(--clay) 10%, transparent);
-      color: var(--clay);
+    > li:nth-child(7n + #{$i}) > a.internal.tag-link {
+      background-color: color-mix(in srgb, var(--#{$color}) 10%, transparent);
+      color: var(--#{$color});
 
       &:hover {
-        background-color: color-mix(in srgb, var(--clay) 15%, transparent);
-      }
-    }
-
-    &[data-tag-index="2"],
-    &[data-tag-index="9"],
-    &[data-tag-index="16"],
-    &[data-tag-index="23"] {
-      background-color: color-mix(in srgb, var(--ochre) 10%, transparent);
-      color: var(--ochre);
-
-      &:hover {
-        background-color: color-mix(in srgb, var(--ochre) 15%, transparent);
-      }
-    }
-
-    &[data-tag-index="3"],
-    &[data-tag-index="10"],
-    &[data-tag-index="17"],
-    &[data-tag-index="24"] {
-      background-color: color-mix(in srgb, var(--sage) 10%, transparent);
-      color: var(--sage);
-
-      &:hover {
-        background-color: color-mix(in srgb, var(--sage) 15%, transparent);
-      }
-    }
-
-    &[data-tag-index="4"],
-    &[data-tag-index="11"],
-    &[data-tag-index="18"],
-    &[data-tag-index="25"] {
-      background-color: color-mix(in srgb, var(--pine) 10%, transparent);
-      color: var(--pine);
-
-      &:hover {
-        background-color: color-mix(in srgb, var(--pine) 15%, transparent);
-      }
-    }
-
-    &[data-tag-index="5"],
-    &[data-tag-index="12"],
-    &[data-tag-index="19"],
-    &[data-tag-index="26"] {
-      background-color: color-mix(in srgb, var(--slate) 10%, transparent);
-      color: var(--slate);
-
-      &:hover {
-        background-color: color-mix(in srgb, var(--slate) 15%, transparent);
-      }
-    }
-
-    &[data-tag-index="6"],
-    &[data-tag-index="13"],
-    &[data-tag-index="20"],
-    &[data-tag-index="27"] {
-      background-color: color-mix(in srgb, var(--mauve) 10%, transparent);
-      color: var(--mauve);
-
-      &:hover {
-        background-color: color-mix(in srgb, var(--mauve) 15%, transparent);
+        background-color: color-mix(in srgb, var(--#{$color}) 15%, transparent);
       }
     }
   }

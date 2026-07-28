@@ -146,6 +146,39 @@ Push boundary: `github:quartz-community/og-image` remains deliberately disabled 
 
 Verification: TypeScript/Prettier passed, all 117 tests passed, the static build probe passed across 1228 HTML and 1076 TikZ pages, and the responsive Chrome probe passed at 1440 px and 390 px. The localhost audit server remains on port 8080 with OG images disabled.
 
+## 2026-07-27 Local Parity Preview
+
+- Disabled `github:quartz-community/og-image` in `quartz.config.yaml` for the local test build; no generated `*-og-image.webp` cards were emitted.
+- Added `plugins/ewan-article-title` to restore the v4 title-plus-frontmatter-description markup. `Personal Canon` renders `works and people that have shaped how i think` beneath the title.
+- Restored rainbow tags against v5 markup by cycling on list position instead of the removed `data-tag-index` attribute, and exposed the extended light/dark palette as explicit CSS variables.
+- Made the `.base` graph filter compatible with both the pinned graph runtime and the current community runtime shape.
+- The preview uses `http://localhost:4173`; port 8080 is ambiguous on this machine because llama.cpp owns IPv4 `127.0.0.1:8080` while Quartz can bind IPv6 localhost there.
+
+Verification on Node 22:
+
+- `npm run check`: passed.
+- Serve build: 806 inputs, 2267 emitted files, completed in 42 seconds.
+- Browser readback at `/personal-canon`: description displayed as a block; title, description, metadata, and tags shared the same 358 px left edge; `seed` and `philosophy` computed to distinct rust and clay colors/backgrounds; no generated OG-card metadata was present.
+- Graph compatibility probe passed for both known minified runtime shapes.
+
+## 2026-07-27 Production Cutover
+
+- Re-enabled `github:quartz-community/og-image` for production.
+- Made `v5` the sole push branch for the GitHub Pages workflow.
+- Fixed the clean GitHub Actions environment by provisioning Python 3.12 and pinned `marimo==0.23.9`; the previous `v5` run failed because Marimo was absent in CI.
+- Restored v4-style inline citation rendering for entries backed by `content/References.bib`:
+  - enabled linked citations in the community citation transformer;
+  - added `plugins/ewan-citations` to retain semantic `<cite>`, `data-bib`, and popover-suppression markup;
+  - added a static regression probe against the Pathak citation on `Thoughts/Computational Neuroscience`.
+- Missing bibliography keys intentionally remain literal instead of producing broken links.
+
+Production release gate:
+
+- Plugin installation, TypeScript, and Prettier checks passed.
+- All 117 tests across 31 suites passed.
+- Production build: 806 inputs and 3311 emitted files, including generated OG cards.
+- Static release probe passed across 1228 HTML pages and 1076 TikZ pages, including the citation regression and all previously covered custom runtimes.
+
 ## Open Gaps
 
 - One low-severity esbuild advisory remains. Its fix requires moving from the current `0.27.x` range to `0.28.x`; the affected surface is the esbuild development server on Windows, not the generated static site or current macOS/Linux build/deploy path.
@@ -154,4 +187,4 @@ Verification: TypeScript/Prettier passed, all 117 tests passed, the static build
 
 ## Retrieval Terms
 
-Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `ewan-quartz-toc`, `ewan-svg-embeds`, `ewan-graph`, `ewan-fonts`, `florilegium-banner.svg`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`.
+Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `ewan-quartz-toc`, `ewan-svg-embeds`, `ewan-graph`, `ewan-fonts`, `ewan-article-title`, `ewan-citations`, `linkCitations`, `florilegium-banner.svg`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`, GitHub Pages, `v5`.

@@ -1,0 +1,31 @@
+{
+  "name": "@ewan/quartz-article-title",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components.js"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js components.js dist/"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-article-title",
+    "displayName": "Ewan Article Title",
+    "description": "Render the article title and frontmatter description with the Quartz v4 markup.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "components": {
+      "ArticleTitle": {
+        "displayName": "Ewan Article Title",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 30
+      }
+    }
+  }
+}

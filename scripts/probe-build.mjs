@@ -29,6 +29,13 @@ assert.doesNotMatch(referenceArticle, /class="toc"|note-properties|metadata-prop
 assert.match(referenceArticle, /fonts\.googleapis\.com\/css2\?family=Lora/)
 assert.match(referenceArticle, /on-capturing-personal-data-og-image\.webp/)
 assert.ok(exists("thoughts/on-capturing-personal-data-og-image.webp"))
+const citationArticle = read("thoughts/computational-neuroscience.html")
+standardShell(citationArticle, "Computational Neuroscience")
+assert.match(
+  citationArticle,
+  /<cite[^>]*id="citation--pathakbiomimeticmodelcorticostriatal2024--1"[^>]*>\(<a href="#bib-pathakbiomimeticmodelcorticostriatal2024"[^>]*data-no-popover="true"[^>]*data-bib="true">Pathak et al\., 2024<\/a>\)<\/cite>/,
+)
+assert.match(citationArticle, /id="bib-pathakbiomimeticmodelcorticostriatal2024"/)
 const postscriptPath = index.match(/src="\.\/(postscript(?:-[^"]+)?\.js)"/)?.[1]
 assert.ok(postscriptPath, "expected the generated page to reference a postscript bundle")
 const postscript = read(postscriptPath)

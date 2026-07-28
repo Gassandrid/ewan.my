@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - v5
-      - v5-migration
   workflow_dispatch:
 
 permissions:
@@ -25,8 +24,14 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - run: npm ci
+      - run: python -m pip install marimo==0.23.9
       - run: npm run validate
+        env:
+          MARIMO_PYTHON: python
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
