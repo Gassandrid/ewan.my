@@ -181,6 +181,22 @@ Production release gate:
 - Production build: 806 inputs and 3311 emitted files, including generated OG cards.
 - Static release probe passed across 1228 HTML pages and 1076 TikZ pages, including the citation regression and all previously covered custom runtimes.
 
+## 2026-07-28 Bases Card Parity
+
+- Fixed `A Limited Curation.base` and other `cards` views through the supported `bases-page` custom-view override in `quartz.ts`.
+- The pinned v5 renderer wrapped each complete card in an anchor while still rendering linked metadata inside it. Those nested anchors are invalid HTML, so browsers reparsed one card into multiple grid children. It also did not render card `groupBy` sections.
+- Added `quartz/custom/legacyBasesCards.tsx` to emit the valid v4 card structure: a neutral card container with separate image and title links, linked metadata, card sizing/aspect variables, and grouped sections.
+- Made the full-width Bases center column `border-box` so its side padding no longer expands the grid beyond the viewport.
+- Added focused renderer tests and production-output assertions for 14 coherent cards, image/title links, the configured group header, and the absence of whole-card anchors.
+
+Verification on Node `22.16.0`:
+
+- `npm run check`: passed.
+- `npm test`: 119 tests, 31 suites, 0 failures.
+- Production build: 806 inputs and 3311 emitted files.
+- Static release probe: 1228 HTML pages and 1076 TikZ pages, including Bases card parity.
+- Browser geometry: four 286 px columns with 32 px gutters at 1280 px; one 358 px column at 390 px; body width matched the viewport at both sizes.
+
 ## Open Gaps
 
 - One low-severity esbuild advisory remains. Its fix requires moving from the current `0.27.x` range to `0.28.x`; the affected surface is the esbuild development server on Windows, not the generated static site or current macOS/Linux build/deploy path.
@@ -189,4 +205,4 @@ Production release gate:
 
 ## Retrieval Terms
 
-Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `ewan-quartz-toc`, `ewan-svg-embeds`, `ewan-graph`, `ewan-fonts`, `ewan-article-title`, `ewan-citations`, `linkCitations`, `florilegium-banner.svg`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`, GitHub Pages, `v5`.
+Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, Bases nested anchors, `A Limited Curation.base`, Bases card parity, `legacyBasesCards`, `groupBy`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `ewan-quartz-toc`, `ewan-svg-embeds`, `ewan-graph`, `ewan-fonts`, `ewan-article-title`, `ewan-citations`, `linkCitations`, `florilegium-banner.svg`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`, GitHub Pages, `v5`.

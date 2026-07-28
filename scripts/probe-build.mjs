@@ -36,6 +36,13 @@ assert.match(
   /<cite[^>]*id="citation--pathakbiomimeticmodelcorticostriatal2024--1"[^>]*>\(<a href="#bib-pathakbiomimeticmodelcorticostriatal2024"[^>]*data-no-popover="true"[^>]*data-bib="true">Pathak et al\., 2024<\/a>\)<\/cite>/,
 )
 assert.match(citationArticle, /id="bib-pathakbiomimeticmodelcorticostriatal2024"/)
+const curationBase = read("a-limited-curation.base.html")
+assert.match(curationBase, /<h1 class="article-title">A Limited Curation<\/h1>/)
+assert.equal((curationBase.match(/class="base-card"/g) ?? []).length, 14)
+assert.equal((curationBase.match(/class="base-card-image-link/g) ?? []).length, 14)
+assert.equal((curationBase.match(/class="base-card-title-link"/g) ?? []).length, 14)
+assert.match(curationBase, /class="base-card-group-header">\(empty\)<\/h3>/)
+assert.doesNotMatch(curationBase, /<a[^>]+class="[^"]*\bbases-card\b[^"]*"/)
 const postscriptPath = index.match(/src="\.\/(postscript(?:-[^"]+)?\.js)"/)?.[1]
 assert.ok(postscriptPath, "expected the generated page to reference a postscript bundle")
 const postscript = read(postscriptPath)
@@ -108,5 +115,5 @@ assert.ok(
   `expected at least 10 TikZ-bearing pages, found ${tikzPages.length}`,
 )
 console.log(
-  `Build probe passed: ${htmlFiles.length} HTML pages, ${tikzPages.length} TikZ pages, v4 layout parity, graph hygiene, RunPython, charts, Marimo, GaggiMate, Morris-Lecar, telemetry, and adaptive Lorenz.`,
+  `Build probe passed: ${htmlFiles.length} HTML pages, ${tikzPages.length} TikZ pages, v4 layout and Bases card parity, graph hygiene, RunPython, charts, Marimo, GaggiMate, Morris-Lecar, telemetry, and adaptive Lorenz.`,
 )

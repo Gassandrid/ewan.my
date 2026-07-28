@@ -1,5 +1,6 @@
 import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/config-loader"
 import { componentRegistry } from "./quartz/components/registry"
+import { legacyCardsView } from "./quartz/custom/legacyBasesCards"
 
 componentRegistry.setOptionOverrides("citations", {
   bibliographyFile: "content/References.bib",
@@ -8,6 +9,9 @@ componentRegistry.setOptionOverrides("citations", {
 componentRegistry.setOptionOverrides("bases-page", {
   defaultViewType: "table",
   linkResolution: "shortest",
+  customViews: {
+    cards: legacyCardsView,
+  },
 })
 
 componentRegistry.setOptionOverrides("explorer", {

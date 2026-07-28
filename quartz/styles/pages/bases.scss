@@ -100,6 +100,8 @@ body[data-slug*=".base/"] {
       }
 
       .center {
+        box-sizing: border-box;
+        min-width: 0;
         max-width: 100%;
         width: 100%;
         padding: 0 2rem;
