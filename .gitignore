@@ -13,6 +13,10 @@ replit.nix
 quartz/cli/tui/dist/
 
 # Agent/tooling state copied into the public content tree
+# Keep local agent guidance private at any depth (including the repository root).
+[Aa][Gg][Ee][Nn][Tt].md
+[Aa][Gg][Ee][Nn][Tt][Ss].md
+[Cc][Ll][Aa][Uu][Dd][Ee].md
 content/.agents/
 content/.claude/
 content/.claude-relay/
@@ -23,5 +27,3 @@ content/.pi/
 content/.pi-lens/
 content/.smart-env/
 content/.trash/
-content/AGENTS.md
-content/CLAUDE.md
