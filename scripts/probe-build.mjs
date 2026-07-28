@@ -62,7 +62,26 @@ for (const [file, title, islands] of [
   assert.match(html, new RegExp(`data-marimo-islands="${islands}"`))
   assert.equal((html.match(/<marimo-island\b/g) ?? []).length, islands)
 }
-assert.equal(fs.readdirSync(root).includes("Notes"), false)
+const legacyNotesRoot = path.join(root, "Notes")
+if (fs.readdirSync(root).includes("Notes")) {
+  const legacyRedirects = []
+  const collectRedirects = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const target = path.join(dir, entry.name)
+      if (entry.isDirectory()) collectRedirects(target)
+      else legacyRedirects.push(target)
+    }
+  }
+  collectRedirects(legacyNotesRoot)
+  assert.ok(legacyRedirects.length > 0)
+  for (const redirect of legacyRedirects) {
+    assert.equal(path.extname(redirect), ".html")
+    const html = fs.readFileSync(redirect, "utf8")
+    assert.match(html, /<link rel="canonical" href="[^"]+">/)
+    assert.match(html, /<meta name="robots" content="noindex">/)
+    assert.match(html, /<meta http-equiv="refresh" content="0; url=[^"]+">/)
+  }
+}
 const gaggi = read("pages/gaggimate-extractions.html")
 standardShell(gaggi, "GaggiMate Extractions")
 assert.match(gaggi, /data-calplot=/)

@@ -166,8 +166,8 @@ Verification on Node 22:
 - Re-enabled `github:quartz-community/og-image` for production.
 - Made `v5` the sole push branch for the GitHub Pages workflow.
 - Fixed the clean GitHub Actions environment by provisioning Python 3.12 and pinned `marimo==0.23.9`; the previous `v5` run failed because Marimo was absent in CI.
-- Reconciled `quartz.lock.json` to the tested community-plugin commits after the first cutover run exposed stale pins that emitted duplicate uppercase `public/Notes` paths on Linux.
-- Verified the pinned set from an empty `.quartz` directory: all 50 configured plugins resolved, all 34 remote-plugin commits matched the lockfile, and the production build returned to the canonical 3311-file output with no uppercase `Notes` tree.
+- Reconciled `quartz.lock.json` to the tested community-plugin commits and verified them from an empty `.quartz` directory: all 50 configured plugins resolved and all 34 remote-plugin commits matched the lockfile.
+- Corrected the release probe for case-sensitive production filesystems. The community alias-redirect plugin intentionally emits legacy uppercase paths such as `public/Notes` on Linux; every such file must be a canonical, `noindex`, immediate redirect to the lowercase v5 URL. Case-insensitive macOS builds omit these redundant redirect files.
 - Restored v4-style inline citation rendering for entries backed by `content/References.bib`:
   - enabled linked citations in the community citation transformer;
   - added `plugins/ewan-citations` to retain semantic `<cite>`, `data-bib`, and popover-suppression markup;
