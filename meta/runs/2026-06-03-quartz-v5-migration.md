@@ -72,6 +72,7 @@ The old equality expression rendered an empty v5 base. The v5-compatible express
   - `marimo-test`: `data-marimo-version="0.23.8"`, `data-marimo-islands="5"`
   - `marimo-widgets`: `data-marimo-version="0.23.8"`, `data-marimo-islands="7"`
 - Hidden local agent/tool state was not emitted; only `public/tags/generated/claude.html` matched `claude`, from real note tags.
+- 2026-07-28 content refresh: copied the public Vault trees into the isolated v5 worktree with delete semantics, while excluding nested agent/cache metadata and preserving the v5-only Marimo smoke fixtures. The v5-specific `imageFit: contain` setting in `A Limited Curation.base` was retained.
 
 ## 2026-07-17 Completion
 
@@ -187,6 +188,7 @@ Production release gate:
 - The pinned v5 renderer wrapped each complete card in an anchor while still rendering linked metadata inside it. Those nested anchors are invalid HTML, so browsers reparsed one card into multiple grid children. It also did not render card `groupBy` sections.
 - Added `quartz/custom/legacyBasesCards.tsx` to emit the valid v4 card structure: a neutral card container with separate image and title links, linked metadata, card sizing/aspect variables, and grouped sections.
 - Made the full-width Bases center column `border-box` so its side padding no longer expands the grid beyond the viewport.
+- Follow-up: restored explicit centered, non-repeating background sizing and set both book views to `imageFit: contain`, keeping complete covers visible without cropping.
 - Added focused renderer tests and production-output assertions for 14 coherent cards, image/title links, the configured group header, and the absence of whole-card anchors.
 
 Verification on Node `22.16.0`:

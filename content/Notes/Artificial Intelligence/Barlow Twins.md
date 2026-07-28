@@ -11,13 +11,15 @@ author:
 description:
 aliases:
 date: 2026-05-06T17:38:53-04:00
-updated: 2026-05-09T13:34:53-04:00
+updated: 2026-05-17T11:45:39-07:00
 ---
 
 Self Supervised Learning method where objective is redundancy reduction. 
 
 - precursor to [[Joint Embedding Predictive Architecture]] in quite a few ways
 - forces model to learn meaningful compressed latent space
+- this approach was inspired by ideas from [[Computational Neuroscience]]! specifically the work of [[Horace Barlow]], a famous computational neuroscientist.
+	- Barlow hypothesized that the goal of sensory processing is to **recode highly redundant sensory inputs into a factorial code** (a code with statistically independent components).
 
 Goes something along the lines of:
 

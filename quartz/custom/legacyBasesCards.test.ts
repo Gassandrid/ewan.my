@@ -19,6 +19,7 @@ function props(overrides: Partial<LegacyCardsViewProps> = {}): LegacyCardsViewPr
     ],
     view: {
       image: "note.image",
+      imageFit: "contain",
       order: ["file.name", "author", "formula.YearCompleted"],
     },
     basesData: {},
@@ -41,6 +42,9 @@ test("cards use valid sibling links instead of a linked card containing metadata
 
   assert.match(html, /<div class="base-card">/)
   assert.match(html, /class="base-card-image-link"/)
+  assert.match(html, /background-size:contain/)
+  assert.match(html, /background-position:center/)
+  assert.match(html, /background-repeat:no-repeat/)
   assert.match(html, /class="base-card-title-link"/)
   assert.match(html, />Félix Guattari<\/a>/)
   assert.doesNotMatch(html, /<a[^>]+class="[^"]*bases-card[^"]*"/)

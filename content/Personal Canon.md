@@ -4,7 +4,7 @@ description: works and people that have shaped how i think
 tags:
   - seed
   - philosophy
-updated: 2026-04-05T11:10:42-04:00
+updated: 2026-06-08T20:23:26-07:00
 ---
 
 inspired by [David Cole's](http://davidcole.me/canon/) and [aarnphm's](https://notes.aarnphm.xyz/personal-canon)
@@ -14,6 +14,8 @@ the works that rewired my brain, the people who showed me new ways of seeing. no
 ***
 
 [Yana Log Notes](https://yana-log.net/) and its anonymous curator, for showing what knowledge in biochem in the context of [[Transhumanism]] looks like through the [[Digital Garden]] lense I am familiar with.
+
+- In the modern sense, I can trace my entrance into the world of [[Neuropharmacology]] from here.
 
 **[[Gödel, Escher, Bach]]** by [[Douglas Hofstadter]]: consciousness emerging from strange loops, meaning from self-reference. unlike anything else in structure or substance. showed me that intelligence might be pattern all the way down.
 

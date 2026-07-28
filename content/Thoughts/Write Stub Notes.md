@@ -12,7 +12,7 @@ aliases:
   - stub notes
   - stub note
 date: 2026-04-16T11:54:46-04:00
-updated: 2026-04-30T09:39:05-04:00
+updated: 2026-05-22T12:25:05-07:00
 ---
 
 This is yet another culmination of my troubling relationship with notes to be done. I am going to keep this short, becuase thats the whole idea behind a stub note.

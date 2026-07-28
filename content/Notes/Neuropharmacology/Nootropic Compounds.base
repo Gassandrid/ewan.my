@@ -3,9 +3,10 @@ views:
     name: Table
     filters:
       and:
-        - class.contains("medication")
+        - class == ["medication"]
         - category.contains("cognitive")
     order:
+      - file.basename
       - type
       - targets
       - pathways

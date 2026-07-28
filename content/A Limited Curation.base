@@ -17,6 +17,7 @@ views:
       - series
       - formula.YearCompleted
     image: note.image
+    imageFit: contain
   - type: cards
     name: Reading List
     filters:
@@ -29,3 +30,4 @@ views:
       - genre
       - description
     image: note.image
+    imageFit: contain

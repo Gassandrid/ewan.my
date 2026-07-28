@@ -41,6 +41,7 @@ assert.match(curationBase, /<h1 class="article-title">A Limited Curation<\/h1>/)
 assert.equal((curationBase.match(/class="base-card"/g) ?? []).length, 14)
 assert.equal((curationBase.match(/class="base-card-image-link/g) ?? []).length, 14)
 assert.equal((curationBase.match(/class="base-card-title-link"/g) ?? []).length, 14)
+assert.equal((curationBase.match(/background-size:contain/g) ?? []).length, 14)
 assert.match(curationBase, /class="base-card-group-header">\(empty\)<\/h3>/)
 assert.doesNotMatch(curationBase, /<a[^>]+class="[^"]*\bbases-card\b[^"]*"/)
 const postscriptPath = index.match(/src="\.\/(postscript(?:-[^"]+)?\.js)"/)?.[1]

@@ -38,6 +38,7 @@ associated-disorders:
 tags:
   - neuroscience
   - brain-region
+date: 2026-02-22T19:03:18-08:00
+updated: 2026-05-23T13:05:07-07:00
 ---
-
-The insula is folded beneath the lateral sulcus and functions as the primary interoceptive cortex — it maps the internal state of the body. The anterior insula integrates interoceptive signals with emotional and cognitive content; the posterior insula is more purely somatosensory.
+- folded beneath the lateral sulcus and functions as the primary interoceptive cortex, maps the internal state of the body. The anterior insula integrates interoceptive signals with emotional and cognitive content; the posterior insula is more purely somatosensory.

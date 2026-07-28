@@ -13,8 +13,12 @@ related:
 author:
 description:
 date: 2025-11-17
-updated: 2025-12-28
+updated: 2026-07-07T12:15:34-07:00
+aliases:
+  - Eye Tracking
+  - Eye Tracker
 ---
+
 I have been thinking about the idea of using an eye tracking device as a source of data for [[computational neuroscience]] experiments. This first started as a simple hobby idea for the [[On Capturing Personal Data]] experiments and as a way to improve my code and text editing[[Faster code editors, ep06 - Eye tracking]]. However, after looking at [[David Jangraw]]'s publications, I noticed that eye tracking was actually quite a notable field in neuroscience. So I thought I might as well get into it myself. 
 
 I would likely do this by purchasing the [[Tobii Eye Tracker 5]], which is a consumer-grade eye tracker that is relatively affordable and has good software support. I would then set it up to track my eye movements while I work on my computer, and collect the data for analysis.

@@ -56,7 +56,7 @@ In addition to memory and navigation, the dentate gyrus is one of the few region
 
 ## Biological Structure
 
-The hippocampus is part of the [[Limbic System]], organized into the trisynaptic loop: entorhinal cortex → dentate gyrus → CA3 → CA1 → subiculum → entorhinal cortex. The Schaffer collateral (CA3→CA1) synapse is the canonical site for studying [[Long-Term Potentiation]].
+The hippocampus is part of the [[Limbic System]], organized into the trisynaptic loop: entorhinal cortex → dentate gyrus → CA3 → CA1 → subiculum → entorhinal cortex. The Schaffer collateral (CA3→CA1) synapse is the canonical site for studying [[Long Term Potentiation]].
 
 ---
 

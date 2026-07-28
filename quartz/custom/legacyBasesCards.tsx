@@ -302,6 +302,7 @@ export const legacyCardsView = ({
     (column) => column !== imageProperty && column !== "file.name" && column !== "title",
   )
   const aspect = view.imageAspectRatio ?? view.cardAspect
+  const imageFit = view.imageFit === "contain" ? "contain" : "cover"
   const ctx: RenderContext = { slug, allSlugs, linkResolution }
 
   const renderCard = (entry: BasesEntry) => {
@@ -317,7 +318,14 @@ export const legacyCardsView = ({
             class={`base-card-image-link${isColor ? " base-card-color" : ""}`}
             data-slug={entry.slug}
             style={
-              isColor ? { backgroundColor: imageSrc } : { backgroundImage: `url(${imageSrc})` }
+              isColor
+                ? { backgroundColor: imageSrc }
+                : {
+                    backgroundImage: `url(${imageSrc})`,
+                    backgroundSize: imageFit,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }
             }
             aria-label={entry.title}
           />

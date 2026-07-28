@@ -4,6 +4,13 @@ updated: 2025-06-19
 tags:
   - todo/neuro
   - comp-neuro/brain
-class: note
+class:
+  - note
+source:
+related:
+author:
+description:
+aliases:
+  - Postsynaptic Neuron
 ---
  

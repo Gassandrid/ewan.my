@@ -37,7 +37,7 @@ A collection of my class notes for STAT2430
 
 [[Sample]]
 [[Axiom]]
-[[Notes/Statistics/Conceptual Notes/Event]]
+[[Notes/Statistics/Event]]
 [[Population]]
 
 ### Cheat Sheets

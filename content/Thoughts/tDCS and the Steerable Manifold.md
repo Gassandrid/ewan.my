@@ -19,7 +19,7 @@ description: tDCS as a fast-timescale control input for cognitive self-configura
 aliases:
   - tDCS
 date: 2026-04-19T13:17:06-04:00
-updated: 2026-05-12T22:53:25-04:00
+updated: 2026-06-09T13:51:14-07:00
 ---
 
 [[Probing Nurture with Content Consumption]] treats content diet as the action space for steering cognitive state. the timescale is slow: days to weeks for a measurable shift in what your cognitive graph looks like. tDCS introduces a second action channel that operates at a completely different timescale, within a single session, hours. 
@@ -41,7 +41,7 @@ the 40% non-responder problem is where this becomes an ML problem rather than ju
 
 this is a distribution over parameters that determine a response function, and [[BrainAccess HALO|EEG]] gives you access to the most tractable of these predictors: the state-at-time-of-stimulation. pre-stimulation alpha power at P3 is measurable in a 5-minute eyes-closed baseline recording. that's a feature vector you can feed into a model that learns your individual response surface.
 
-the formal setup: you want to learn `f(EEG_baseline, stim_params) -> behavioral_effect` over a session budget of maybe 20-30 total experiments. this is standard Bayesian optimization. each session is one expensive function evaluation, the parameter space is small and structured (current density, duration, online vs offline, electrode position within the P3 neighborhood), and the outcome is a behavioral RT on a standardized arithmetic task. Gaussian Process regression with GP-UCB acquisition handles the exploration-exploitation tradeoff without needing a lot of data. by session 10-15 you have enough to be making informed choices rather than searching randomly.
+a formal setup would be where you seek to learn the $f(\text{EEG\_Baseline}, \text{stim\_params}) \to\text{behavioral effect}$ over some sesoion budget of maybe 20-30 total experiments. this is standard Bayesian optimization. each session is one expensive function evaluation, the parameter space is small and structured (current density, duration, online vs offline, electrode position within the P3 neighborhood), and the outcome is a behavioral RT on a standardized arithmetic task. Gaussian Process regression with GP-UCB acquisition handles the exploration-exploitation tradeoff without needing a lot of data. by session 10-15 you have enough to be making informed choices rather than searching randomly.
 
 the output of this experiment is a personalized response surface for yourself, which doesn't exist in the published literature. published studies run open-loop population protocols and report average effects. an n=1 longitudinal study with EEG covariates and BO-guided parameter selection is a genuinely novel data artifact, and it's also exactly the kind of thing [[Isomorph]] is trying to accumulate: dense multi-modal recordings of your own cognitive system under controlled variation.
 
@@ -75,7 +75,7 @@ the reason open-loop protocols have such high non-responder rates is precisely t
 
 ---
 
-practically: this doesn't require building anything that doesn't exist. tDCS devices exist and are cheap ( i myself bought the [[NeuroMyst Pro Plus]] ), the electrode protocol is simple (P3 active, contralateral supraorbital reference, 1 mA, 25 min), and the behavioral task from [[@hauserEnhancingPerformanceNumerical2013]] (double-digit subtraction with RT measurement) is maybe 50 lines of PsychoPy. what i have already: [[BrainAccess HALO]] for EEG, [[Tobii ET5]] for attention, [[ActivityWatch]] for baseline context. the infrastructure for the measurement side is mostly there. what's missing is the stimulation hardware and a few weeks of sessions.
+practically: this doesn't require building anything that doesn't exist. tDCS devices exist and are cheap ( i myself bought the [[NeuroMyst Pro Plus]] ), the electrode protocol is simple (P3 active, contralateral supraorbital reference, 1 mA, 25 min), and the behavioral task from [[@hauserEnhancingPerformanceNumerical2013]] (double-digit subtraction with RT measurement) is maybe 50 lines of PsychoPy. what i have already: [[BrainAccess HALO]] for EEG, [[Tobii Eye Tracker 5]] for attention, [[ActivityWatch]] for baseline context. the infrastructure for the measurement side is mostly there. what's missing is the stimulation hardware and a few weeks of sessions.
 
 the n=1 experiment design: 5-min baseline EEG recording before each session, extract alpha power at P3/P4 and peak theta frequency, run one stimulation session (parameter set selected by the BO acquisition function), run the behavioral task, record the outcome. after 5-6 sessions the GP has enough to start making useful predictions. after 20 you have a personalized response surface that's more informative about your own cognition than any published paper is about you specifically. and because the sessions generate EEG data under controlled perturbation, they're also input to [[Isomorph]] as labeled perturbation experiments for manifold geometry probing.
 
