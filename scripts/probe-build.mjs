@@ -36,6 +36,11 @@ assert.match(
   /<cite[^>]*id="citation--pathakbiomimeticmodelcorticostriatal2024--1"[^>]*>\(<a href="#bib-pathakbiomimeticmodelcorticostriatal2024"[^>]*data-no-popover="true"[^>]*data-bib="true">Pathak et al\., 2024<\/a>\)<\/cite>/,
 )
 assert.match(citationArticle, /id="bib-pathakbiomimeticmodelcorticostriatal2024"/)
+assert.match(citationArticle, /<section class="bibliography" data-references/)
+assert.match(citationArticle, /<h2 id="reference-label">Bibliography<\/h2>/)
+assert.match(citationArticle, /<ul>\s*<li class="csl-entry"/)
+assert.match(citationArticle, /class="csl-external-link"/)
+assert.doesNotMatch(citationArticle, /<div class="references"/)
 const curationBase = read("a-limited-curation.base.html")
 assert.match(curationBase, /<h1 class="article-title">A Limited Curation<\/h1>/)
 assert.equal((curationBase.match(/class="base-card"/g) ?? []).length, 14)
@@ -70,6 +75,19 @@ for (const [file, title, islands] of [
   assert.match(html, new RegExp(`data-marimo-islands="${islands}"`))
   assert.equal((html.match(/<marimo-island\b/g) ?? []).length, islands)
 }
+const showcase = read("notes/programming/marimo-wigglystuff-showcase.html")
+standardShell(showcase, "The Reactive Garden — Marimo × WigglyStuff")
+assert.match(showcase, /class="popover-hint marimo-page"/)
+assert.match(showcase, /data-marimo-runtime="0\.23\.9"/)
+assert.match(showcase, /data-marimo-version="0\.23\.9"/)
+assert.match(showcase, /data-showcase-hero/)
+assert.match(showcase, /data-component-coverage/)
+assert.match(showcase, /WigglyStuff 0\.5\.21 export/)
+assert.match(showcase, /WIGGLY_COMPONENTS/)
+assert.ok(
+  (showcase.match(/<marimo-island\b/g) ?? []).length >= 25,
+  "showcase emitted too few Marimo islands",
+)
 const legacyNotesRoot = path.join(root, "Notes")
 if (fs.readdirSync(root).includes("Notes")) {
   const legacyRedirects = []

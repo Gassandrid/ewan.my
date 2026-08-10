@@ -1,7 +1,9 @@
 import puppeteer from "puppeteer-core"
 
 const base = process.env.QUARTZ_PROBE_URL ?? "http://localhost:8080"
-const articlePath = "/thoughts/on-capturing-personal-data"
+// The production output is served by a plain static server in release checks,
+// so address the emitted file directly instead of relying on a dev-server rewrite.
+const articlePath = "/thoughts/on-capturing-personal-data.html"
 const screenshotDir = process.env.QUARTZ_SCREENSHOT_DIR
 
 const browser = await puppeteer.launch({
@@ -33,6 +35,7 @@ async function inspect(name, viewport) {
     const controls = bar?.querySelector(".flex-component")
     const graphSidebar = document.querySelector(".sidebar.left")
     const graph = graphSidebar?.querySelector(".graph")
+    const center = document.querySelector(".center")
     const rect = (element) => {
       const box = element?.getBoundingClientRect()
       return box
@@ -46,6 +49,7 @@ async function inspect(name, viewport) {
       bar: rect(bar),
       breadcrumbs: rect(breadcrumbs),
       controls: rect(controls),
+      center: rect(center),
       barPosition: bar ? getComputedStyle(bar).position : null,
       dividerWidth: bar ? getComputedStyle(bar).borderBottomWidth : null,
       graphSidebarDisplay: graphSidebar ? getComputedStyle(graphSidebar).display : null,
@@ -79,6 +83,16 @@ try {
     "desktop controls are not aligned to the right edge",
   )
   await desktop.page.close()
+
+  const compact = await inspect("quartz-header-compact", { width: 1000, height: 900 })
+  results.compact = compact.initial
+  check(compact.initial.graphSidebarDisplay === "none", "compact left sidebar is visible")
+  check(!compact.initial.graphVisible, "compact graph is visible")
+  check(
+    compact.initial.center?.width > 800,
+    `compact content did not reclaim the graph column (${compact.initial.center?.width}px)`,
+  )
+  await compact.page.close()
 
   const mobile = await inspect("quartz-header-mobile", {
     width: 390,

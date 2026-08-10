@@ -1,6 +1,6 @@
 {
   "name": "@ewan/quartz-citations",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "main": "./dist/index.js",
   "exports": {
@@ -15,8 +15,8 @@
   "quartz": {
     "name": "ewan-citations",
     "displayName": "Ewan Citation Rendering",
-    "description": "Restore Quartz v4 semantic inline citation markup after bibliography generation.",
-    "version": "1.0.0",
+    "description": "Restore Quartz v4 semantic citations, bibliography lists, and external-link labels.",
+    "version": "1.1.0",
     "quartzVersion": ">=5.0.0",
     "category": "transformer",
     "defaultOrder": 86

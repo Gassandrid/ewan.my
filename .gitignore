@@ -10,6 +10,7 @@ private/
 .replit
 replit.nix
 .quartz/
+.venv-marimo/
 quartz/cli/tui/dist/
 
 # Agent/tooling state copied into the public content tree

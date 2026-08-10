@@ -1,6 +1,7 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 import EwanCharts from "./ewan-charts/index.js"
+import EwanCitations from "./ewan-citations/index.js"
 import EwanFonts, { LORA_STYLESHEET } from "./ewan-fonts/index.js"
 import GaggiMatePage from "./ewan-gaggimate-page/index.js"
 import { patchGraphRuntime } from "./ewan-graph/components.js"
@@ -41,6 +42,9 @@ test("Marimo assets are pinned and conditional", () => {
   const s = MarimoResources().externalResources().js[0].script
   assert.match(s, /querySelectorAll\("marimo-island"\)/)
   assert.match(s, /nextSlug !== lastSlug/)
+  assert.match(s, /__MARIMO_EXPORT_CONTEXT__/)
+  assert.match(s, /source: exportContextSource/)
+  assert.match(s, /delete window\.__MARIMO_EXPORT_CONTEXT__/)
   assert.doesNotMatch(s, /navigated = true/)
   assert.match(s, /islands@0\.23\.9/)
   assert.doesNotMatch(s, /fonts\.googleapis/)
@@ -68,6 +72,58 @@ test("v4 typography and proportional TOC remain available", () => {
   const toc = QuartzTOC()
   assert.match(toc.css, /quartztoc-rail-thumb/)
   assert.match(toc.afterDOMLoaded, /--toc-top/)
+})
+
+test("citations retain the v4 bibliography structure and external-link labels", () => {
+  const tree = {
+    type: "root",
+    children: [
+      {
+        type: "element",
+        tagName: "span",
+        properties: { id: "citation--paper--1" },
+        children: [
+          {
+            type: "element",
+            tagName: "a",
+            properties: { href: "#bib-paper" },
+            children: [{ type: "text", value: "Paper, 2026" }],
+          },
+        ],
+      },
+      {
+        type: "element",
+        tagName: "div",
+        properties: { className: ["references"], role: "doc-bibliography" },
+        children: [
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["csl-entry"], id: "bib-paper" },
+            children: [
+              {
+                type: "text",
+                value: "E. Author (2026). A paper. https://arxiv.org/abs/2401.01234v2",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  }
+
+  for (const transformer of EwanCitations().htmlPlugins()) transformer()(tree)
+
+  assert.equal(tree.children[0].tagName, "cite")
+  assert.equal(tree.children[0].children[0].properties["data-bib"], true)
+  assert.equal(tree.children[0].children[0].properties["data-no-popover"], true)
+  assert.equal(tree.children[1].tagName, "section")
+  assert.deepEqual(tree.children[1].properties.className, ["bibliography"])
+  assert.equal(tree.children[1].children[0].tagName, "h2")
+  assert.equal(tree.children[1].children[0].children[0].value, "Bibliography")
+  assert.equal(tree.children[1].children[1].children[0].tagName, "li")
+  assert.match(JSON.stringify(tree.children[1]), /arXiv preprint arXiv:2401\.01234/)
+  assert.match(JSON.stringify(tree.children[1]), /\[arXiv\]/)
 })
 
 test("Obsidian SVG embeds resolve unique attachment basenames", () => {

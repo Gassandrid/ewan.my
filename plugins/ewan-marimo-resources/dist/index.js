@@ -8,6 +8,22 @@ const MARIMO_LOADER = `
     return;
   }
   var lastSlug = document.body?.dataset.slug || "";
+  var exportContextSource = "ewan-quartz-marimo";
+  function syncExportTrust(hasIslands) {
+    var current = window.__MARIMO_EXPORT_CONTEXT__;
+    if (hasIslands) {
+      if (current?.trusted === true) return;
+      Object.defineProperty(window, "__MARIMO_EXPORT_CONTEXT__", {
+        value: Object.freeze({ trusted: true, source: exportContextSource }),
+        writable: false,
+        configurable: true,
+      });
+      return;
+    }
+    if (current?.source === exportContextSource) {
+      delete window.__MARIMO_EXPORT_CONTEXT__;
+    }
+  }
   function ensureStyle() {
     if (document.querySelector("link[data-ewan-marimo-css]")) return;
     var link = document.createElement("link");
@@ -30,6 +46,7 @@ const MARIMO_LOADER = `
   }
   function ensure(afterNavigation) {
     var islands = document.querySelectorAll("marimo-island");
+    syncExportTrust(islands.length > 0);
     if (islands.length === 0) return;
     ensureStyle();
     ensureScript();

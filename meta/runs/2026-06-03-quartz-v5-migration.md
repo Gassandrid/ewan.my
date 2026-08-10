@@ -199,12 +199,34 @@ Verification on Node `22.16.0`:
 - Static release probe: 1228 HTML pages and 1076 TikZ pages, including Bases card parity.
 - Browser geometry: four 286 px columns with 32 px gutters at 1280 px; one 358 px column at 390 px; body width matched the viewport at both sizes.
 
+## 2026-07-30 Marimo and WigglyStuff Showcase
+
+- Added `content/Notes/Programming/marimo-wigglystuff-showcase.marimo.py`, a single public field lab covering the exact Marimo `0.23.9` `mo.ui` surface (37 public names) and all 58 exports from WigglyStuff `0.5.21`.
+- Kept the page inside the normal Quartz note shell. Native controls, a reactive signal-analysis pipeline, and the default WigglyStuff geometry bench run in browser-side Python; switchable benches keep the long component gallery navigable.
+- Labeled camera, microphone, gamepad, speech-recognition, editor-context, credential, server, PyTorch, Neo4j, and Weights & Biases requirements instead of presenting unavailable capabilities as successful browser demos.
+- Added scoped AnyWidget export trust to `ewan-marimo-resources`. Marimo `0.23.9` rejects inline `data:text/javascript` AnyWidget modules unless `window.__MARIMO_EXPORT_CONTEXT__.trusted` is true. The loader now installs a frozen `ewan-quartz-marimo` context only while a page contains Marimo islands and removes its own context on SPA navigation away.
+- Heavy scientific imports use explicit lazy installation inside their selected gallery cells. Avoid ordinary top-level or nested `import numpy/pandas/matplotlib/...` statements in an exported notebook unless eager Pyodide loading is intentional: Marimo discovers imports statically before `mo.stop` executes.
+- Added `scripts/probe-marimo-showcase.mjs` and `npm run probe:showcase`. The probe checks the exact compiler/runtime pins, 30 emitted islands, native widget hydration, finished WigglyStuff SVG/canvas rendering, scoped export trust, manifest counts, and rendered cell exceptions; it writes `/tmp/ewan-marimo-wigglystuff-showcase.png`.
+
+Authoring and verification:
+
+```sh
+UV_CACHE_DIR=/tmp/ewan-my-uv-cache uv venv .venv-marimo --python /opt/homebrew/Caskroom/miniconda/base/bin/python3
+UV_CACHE_DIR=/tmp/ewan-my-uv-cache uv pip install --python .venv-marimo/bin/python 'marimo==0.23.9' 'wigglystuff==0.5.21' numpy pandas altair plotly matplotlib pillow
+.venv-marimo/bin/marimo check content/Notes/Programming/marimo-wigglystuff-showcase.marimo.py
+MARIMO_PYTHON="$PWD/.venv-marimo/bin/python" mise exec node@22.19.0 -- npm run build
+mise exec node@22.19.0 -- npm run probe
+mise exec node@22.19.0 -- npm run probe:showcase
+```
+
+The browser check requires a local HTTP server for `public/` on port 8080 and Chrome at its standard macOS application path. Do not remove the export-context guard without retesting a WigglyStuff widget: normal Marimo controls can hydrate while inline AnyWidget modules remain silently blocked.
+
 ## Open Gaps
 
-- One low-severity esbuild advisory remains. Its fix requires moving from the current `0.27.x` range to `0.28.x`; the affected surface is the esbuild development server on Windows, not the generated static site or current macOS/Linux build/deploy path.
+- Current dependency advisories and their bounded exit conditions are maintained in `TECHNICAL_DEBT.md`; this historical run is not the authority for audit state.
 - `NotebookEmbedding` and `Sidenotes` are intentionally not blockers for this migration. Ewan decided on 2026-06-05 not to carry Jupyter notebook embedding or sidenotes forward for this cutover.
 - Candidate `quartz-community` repos were checked on 2026-06-03. The default and Obsidian plugin repos exist, but the above v4 custom transformer names do not exist as direct community repos.
 
 ## Retrieval Terms
 
-Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, Bases nested anchors, `A Limited Curation.base`, Bases card parity, `legacyBasesCards`, `groupBy`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `ewan-quartz-toc`, `ewan-svg-embeds`, `ewan-graph`, `ewan-fonts`, `ewan-article-title`, `ewan-citations`, `linkCitations`, `florilegium-banner.svg`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`, GitHub Pages, `v5`.
+Quartz v5 migration, `v5-migration`, `quartz.config.yaml`, `bases-page`, Bases nested anchors, `A Limited Curation.base`, Bases card parity, `legacyBasesCards`, `groupBy`, `Nootropic Compounds.base`, `class.contains("medication")`, `ewan-marimo`, `ewan-marimo-resources`, `marimo-wigglystuff-showcase`, WigglyStuff, AnyWidget trusted export context, `__MARIMO_EXPORT_CONTEXT__`, `probe:showcase`, `ewan-lorenz`, `ewan-charts`, `ewan-run-python`, `ewan-morris-lecar`, `ewan-gaggimate-page`, `ewan-telemetry`, `ewan-tikz`, `ewan-quartz-toc`, `ewan-svg-embeds`, `ewan-graph`, `ewan-fonts`, `ewan-article-title`, `ewan-citations`, `linkCitations`, `florilegium-banner.svg`, `node-tikzjax`, `TikzJax`, `MARIMO_PYTHON`, `probe-browser`, `probe-build`, `content/References.bib`, `bibliographyFile`, GitHub Pages, `v5`.

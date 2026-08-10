@@ -607,6 +607,12 @@ audio::-webkit-media-controls-timeline:hover {
   .page > #quartz-body .sidebar {
     padding: 0;
   }
+
+  // Compact layouts are reader-first: the graph and desktop TOC disappear
+  // instead of consuming a permanent column beside the note.
+  .page > #quartz-body > .sidebar.left {
+    display: none !important;
+  }
 }
 
 footer {
@@ -626,12 +632,6 @@ footer {
 
   .page > #quartz-body {
     padding: 0;
-  }
-
-  // The v4 reader layout starts with the sticky navigation bar. The v5
-  // mobile grid otherwise places the graph's left sidebar above it.
-  .page > #quartz-body > .sidebar.left {
-    display: none !important;
   }
 
   // Remove border and minimal padding for reader mode

@@ -125,6 +125,7 @@ plugins:
     options:
       bibliographyFile: content/References.bib
       linkCitations: true
+      csl: apa
     order: 85
   - source: ./plugins/ewan-citations
     enabled: true
