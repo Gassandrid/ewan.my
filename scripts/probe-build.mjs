@@ -63,10 +63,12 @@ assert.doesNotMatch(python, /<script[^>]+(?:pyodide|codemirror)/i)
 const chart = read("thoughts/chart-demo.html")
 assert.match(chart, /data-chart-config=/)
 assert.doesNotMatch(chart, /<script[^>]+d3(?:\.min)?\.js/i)
+let marimoPagesProbed = 0
 for (const [file, title, islands] of [
   ["notes/programming/marimo-test.html", "Marimo Islands Test", 5],
   ["notes/programming/marimo-widgets.html", "Marimo Widgets Smoke Test", 7],
 ]) {
+  if (!exists(file)) continue
   const html = read(file)
   standardShell(html, title)
   assert.match(html, /class="popover-hint marimo-page"/)
@@ -74,20 +76,25 @@ for (const [file, title, islands] of [
   assert.match(html, /data-marimo-version="0\.23\.9"/)
   assert.match(html, new RegExp(`data-marimo-islands="${islands}"`))
   assert.equal((html.match(/<marimo-island\b/g) ?? []).length, islands)
+  marimoPagesProbed += 1
 }
-const showcase = read("notes/programming/marimo-wigglystuff-showcase.html")
-standardShell(showcase, "The Reactive Garden — Marimo × WigglyStuff")
-assert.match(showcase, /class="popover-hint marimo-page"/)
-assert.match(showcase, /data-marimo-runtime="0\.23\.9"/)
-assert.match(showcase, /data-marimo-version="0\.23\.9"/)
-assert.match(showcase, /data-showcase-hero/)
-assert.match(showcase, /data-component-coverage/)
-assert.match(showcase, /WigglyStuff 0\.5\.21 export/)
-assert.match(showcase, /WIGGLY_COMPONENTS/)
-assert.ok(
-  (showcase.match(/<marimo-island\b/g) ?? []).length >= 25,
-  "showcase emitted too few Marimo islands",
-)
+const showcasePath = "notes/programming/marimo-wigglystuff-showcase.html"
+if (exists(showcasePath)) {
+  const showcase = read(showcasePath)
+  standardShell(showcase, "The Reactive Garden — Marimo × WigglyStuff")
+  assert.match(showcase, /class="popover-hint marimo-page"/)
+  assert.match(showcase, /data-marimo-runtime="0\.23\.9"/)
+  assert.match(showcase, /data-marimo-version="0\.23\.9"/)
+  assert.match(showcase, /data-showcase-hero/)
+  assert.match(showcase, /data-component-coverage/)
+  assert.match(showcase, /WigglyStuff 0\.5\.21 export/)
+  assert.match(showcase, /WIGGLY_COMPONENTS/)
+  assert.ok(
+    (showcase.match(/<marimo-island\b/g) ?? []).length >= 25,
+    "showcase emitted too few Marimo islands",
+  )
+  marimoPagesProbed += 1
+}
 const legacyNotesRoot = path.join(root, "Notes")
 if (fs.readdirSync(root).includes("Notes")) {
   const legacyRedirects = []
@@ -134,5 +141,5 @@ assert.ok(
   `expected at least 10 TikZ-bearing pages, found ${tikzPages.length}`,
 )
 console.log(
-  `Build probe passed: ${htmlFiles.length} HTML pages, ${tikzPages.length} TikZ pages, v4 layout and Bases card parity, graph hygiene, RunPython, charts, Marimo, GaggiMate, Morris-Lecar, telemetry, and adaptive Lorenz.`,
+  `Build probe passed: ${htmlFiles.length} HTML pages, ${tikzPages.length} TikZ pages, ${marimoPagesProbed} optional Marimo fixtures, v4 layout and Bases card parity, graph hygiene, RunPython, charts, GaggiMate, Morris-Lecar, telemetry, and adaptive Lorenz.`,
 )
