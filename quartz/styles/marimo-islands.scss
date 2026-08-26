@@ -18,6 +18,7 @@
 .marimo-notebook-page {
   display: flow-root;
   color: var(--marimo-quartz-text);
+  container-type: inline-size;
 
   // The islands runtime and its widget shadow roots inherit these variables.
   // Mapping them to Quartz prevents the runtime's default light palette from
@@ -113,6 +114,13 @@
     a {
       color: var(--marimo-quartz-accent);
     }
+
+    code {
+      padding: 0.08em 0.28em;
+      border-radius: 3px;
+      background: color-mix(in srgb, var(--marimo-quartz-border) 58%, transparent);
+      color: var(--marimo-quartz-text) !important;
+    }
   }
 
   // Marimo's table widget uses Tailwind's `bg-background` on <tr>/<thead>,
@@ -131,13 +139,15 @@
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    padding: 0.7rem 0.9rem;
-    margin-bottom: 1.25rem;
-    border: 1px solid var(--lightgray);
-    border-radius: 6px;
+    width: fit-content;
+    padding: 0.48rem 0.7rem;
+    margin: 0 0 1rem auto;
+    border: 1px solid color-mix(in srgb, var(--lightgray) 78%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--light) 82%, transparent);
     color: var(--gray);
-    font-size: 0.875rem;
-    font-style: italic;
+    font-size: 0.76rem;
+    letter-spacing: 0.025em;
   }
 
   .marimo-loading-spinner {
@@ -150,9 +160,69 @@
     flex-shrink: 0;
   }
 
-  // Hide the loading block once at least one reactive cell has rendered.
-  &:has(marimo-island[data-reactive="true"][data-status]) .marimo-loading {
+  &[data-marimo-state="ready"] .marimo-loading {
     display: none;
+  }
+
+  &[data-marimo-state="slow"] .marimo-loading {
+    border-color: color-mix(in srgb, var(--ochre) 48%, var(--lightgray));
+    color: var(--darkgray);
+  }
+
+  &[data-marimo-state="error"] .marimo-loading {
+    border-color: color-mix(in srgb, var(--rust) 58%, var(--lightgray));
+    color: var(--rust);
+  }
+
+  // The native matrix control is the visual center of Eigenfish. Keep both
+  // editors generous on desktop and let their shadow-DOM content size itself.
+  marimo-matrix {
+    min-width: min(100%, 22rem);
+  }
+
+  .eigenfish-figure {
+    margin: 1.65rem 0 0;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--marimo-quartz-border);
+
+    img {
+      display: block;
+      width: min(100%, 52rem);
+      height: auto;
+      margin-inline: auto;
+      border-radius: 2px;
+      box-shadow: 0 1px 0 color-mix(in srgb, var(--dark) 8%, transparent);
+    }
+
+    figcaption {
+      margin-top: 0.72rem;
+      color: var(--marimo-quartz-muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media all and (max-width: 48rem) {
+  // mo.hstack currently renders as an inline-styled div rather than a named
+  // custom element. Stack only direct hstacks inside a vstack so controls and
+  // matrices stay inside the notebook column on phones.
+  // Keep this selector shadow-root-local: marimo adopts the page stylesheet
+  // into each hydrated island, where the outer notebook host is not matchable.
+  marimo-island div[style*="flex-flow: column"] > div[style*="flex-flow: row"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+
+    > div {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+  marimo-matrix {
+    min-width: 100%;
   }
 }
 
@@ -227,6 +297,11 @@
     margin-top: 1.5rem !important;
     margin-bottom: 1rem !important;
     font-size: 1rem !important;
+  }
+
+  code {
+    background: color-mix(in srgb, var(--marimo-quartz-border) 58%, transparent) !important;
+    color: var(--marimo-quartz-text, var(--darkgray)) !important;
   }
 }
 

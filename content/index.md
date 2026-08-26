@@ -4,7 +4,7 @@ aliases:
 tags:
 date: 2024-10-02
 title: Ewans Florilegium
-updated: 2026-07-11T00:21:20-07:00
+updated: 2026-08-02T14:23:16-07:00
 class: navigation
 ---
 
@@ -20,9 +20,8 @@ I keep a [[Saturn V Server Rack|homelab]] for deep learning projects and **[[On 
 
 I also take interest in the [[Neuropharmacology]] route through [[Nootropic Compounds.base|nootropics]] as a bet that optimizing the substrate now pays compound interest if we're on the right side of the curve.
 
- 
-
-
 ---
 
-[[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canon|Inspirations]]
+Dont navigate this [[Digital Garden|garden]] through the folders unless you just care about my class notes. Use the tags, described in [[website]].
+
+[[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canon|Inspirations]]　　　　[[Some Fun Facts About Me]]

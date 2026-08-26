@@ -21,7 +21,9 @@ related:
   - "[[AirGradient ONE]]"
   - "[[At Home Bloodwork]]"
 date: 2026-05-24
-updated: 2026-05-27T12:46:29-07:00
+updated: 2026-07-28T16:08:22-07:00
+aliases:
+  - Self Reported Data
 ---
 
 My current problem is not that my [[On Capturing Personal Data|Quantified Self]] system lacks the data, it is that the actual missing data is usually the small semantiic event explaining the passive streams. Things like the supplements and drugs i took, what I ate, my exact excercises for that day, etc. These are not hard to capture, however they cannot be captured *latently* -- they must be **self reported**. My issue, thanks to my lovely neurodivergence, is that I cannot stick to thise through obsidian for the life of me. What I believe to be the issue, however, is the recording medium and not the act itself.
@@ -39,7 +41,5 @@ The iPhone app should sit between these layers. Allows for the checkbox items I 
 I will still have the bad habit declaration in the daily note ( might change this ), as this is something I will typically write about in the journal contents.
 
 ## Calendar As Scaffolding
-
-Google Calendar should not be the storage layer. It should be ritual scaffolding.
 
 The useful pattern is a protected daily reconciliation block: check the daily note, add missing intervention events, and resolve obvious gaps while the day is still recoverable. Calendar can also define planned-vs-actual structure, which becomes useful when compared against [[ActivityWatch]], Garmin, location/place context, and manual events.

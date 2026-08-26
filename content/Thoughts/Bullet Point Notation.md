@@ -6,7 +6,7 @@ tags:
 class:
   - note
 date: 2026-01-24T15:01:25-05:00
-updated: 2026-04-07T10:24:27-04:00
+updated: 2026-08-04T08:59:37-07:00
 ---
 - A new workflow strategy primarily thought to be useful for Daily notes, also inspired from [[Yana Log Notes]].
 	- yana uses it for paper notes, also biology notes.
@@ -14,6 +14,8 @@ updated: 2026-04-07T10:24:27-04:00
 - good for accumulating ideas without any real flow from one to another
 	- sub ideas are also great, use sub bullet points as much as possible
 	- organizes ideas automatically, this kind of "replaces" tying one idea to another in a standardly written note
+	- [[08-04-2026]] 08:58 the neat thing about bullet point notation is it can be combined with [[Note updates as links to daily notes]] and a timestamp ( both can be done with hotkeys ), and have a temporal view into your hierarchical ideas.
+		- 09:22 one could come back to threads forgotten for months, or see where my mind trends on daily note bullet point lists.
 - I would like to use for non daily note notes, there are some cases when studying non math stuff that it makes sense
 
 ### When to Use what

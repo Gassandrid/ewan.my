@@ -1,0 +1,3 @@
+[mcp_servers.obsidian-vault]
+args = ["/Users/gassandrid/VAULT/.claude/vault_mcp_server.py"]
+command = "python3"

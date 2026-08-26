@@ -22,4 +22,4 @@ Something that has been advancing rapidly is the field of genetics and genetic m
 
 As such, it has become a topic of interest for many posthumanists, who believe that we can use technology to transcend our biological limitations. This could be a very interesting development, but also a very dangerous one, as it could potentially lead to a world where only the rich can afford to be happy.
 
-This is an important topic for debate, as it could potentially change the very nature of what it means to be human. It is something that we should be very careful about, as it could have far-reaching consequences for our society.
+This is an important topic for debate, as it could potentially change the very nature of what it means [[to be human]]. It is something that we should be very careful about, as it could have far-reaching consequences for our society.

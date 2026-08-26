@@ -66,3 +66,23 @@ ordinary dependency-update noise do not belong here.
 - Exit condition: the advisory is absent and the complete validation suite
   passes on Node 22.
 - Last reviewed: 2026-08-10
+
+## TD-MARIMO-001 — Remove the fresh-document boundary between notebooks
+
+- Status: Open
+- Evidence: `plugins/ewan-marimo-resources/index.js` automatically performs a
+  hard navigation when a hydrated Marimo page links to a different Marimo page.
+  The pinned `@marimo-team/islands@0.23.9` runtime owns one global Pyodide worker
+  and exposes no supported notebook teardown and reinitialization seam.
+- Paths: `plugins/ewan-marimo-resources/index.js`,
+  `plugins/ewan-marimo-resources/dist/index.js`.
+- Consequence: normal Quartz-to-Marimo navigation is now a true SPA transition,
+  but moving directly between two already-hydrated notebook pages deliberately
+  refreshes the browsing context to prevent the old notebook kernel from owning
+  the new islands.
+- Bounded next action: evaluate the next Marimo islands runtime with a documented
+  teardown or per-notebook worker API, then extend the browser probe to navigate
+  between two hydrated notebooks without changing its document sentinel.
+- Exit condition: Marimo-to-Marimo SPA navigation hydrates the target notebook
+  in the same document with no stale cells, leaked worker, or console errors.
+- Last reviewed: 2026-08-25

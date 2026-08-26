@@ -5,7 +5,7 @@ class:
   - medication
 category: cognitive
 type: nootropic peptide
-dosage: 2mg
+dosage: 2
 frequency:
   - daily
 source:

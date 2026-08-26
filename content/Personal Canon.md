@@ -4,7 +4,7 @@ description: works and people that have shaped how i think
 tags:
   - seed
   - philosophy
-updated: 2026-06-08T20:23:26-07:00
+updated: 2026-08-25T14:47:47-07:00
 ---
 
 inspired by [David Cole's](http://davidcole.me/canon/) and [aarnphm's](https://notes.aarnphm.xyz/personal-canon)
@@ -33,11 +33,11 @@ the works that rewired my brain, the people who showed me new ways of seeing. no
 
 ***
 
-**Philip Glass** for minimalism that builds complexity through repetition. Einstein on the Beach, Glassworks, Koyaanisqatsi. music as recursive process, emotion through mathematical structure.
+**[[Philip Glass]]** for minimalism that builds complexity through repetition. Einstein on the Beach, Glassworks, Koyaanisqatsi. music as recursive process, emotion through mathematical structure.
 
 **Bach** through Hofstadter's lens: fugues as conversations between voices, canons as self-modifying systems. mathematical beauty in counterpoint.
 
-**Simon Conradi** for his elegant eigen-creature art. I have found beauty in art recently through GEB and its motivations behind escher, but Conradi was the first organic discovery that I enjoyed immediately.
+**[[Simone Conradi]]** for his elegant eigen-creature art. I have found beauty in art recently through GEB and its motivations behind escher, but Conradi was the first organic discovery that I enjoyed immediately.
 
 ***
 

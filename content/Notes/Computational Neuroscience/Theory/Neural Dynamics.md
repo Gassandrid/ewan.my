@@ -1,6 +1,6 @@
 ---
 date: 2026-01-25T09:30:32-05:00
-updated: 2026-04-16T12:22:11-04:00
+updated: 2026-08-03T20:10:16-07:00
 class:
   - note
 tags:
@@ -21,3 +21,7 @@ catch all term for the field, usually manifests as [[Dynamical Systems Theory]] 
 read [[Neuronal Dynamics Ebook]] for all stuff relating to this.
 
 from single neuron models like [[Hodgkin Huxley Model]] and [[Morris-Lecar Model]], to the phase plane analysis that comes from them ( and their dyn systems behavior, think [[Andronov Hopf Bifurcation|Andronov Hopf]] bifurcation or [[Saddle-Node on Invariant Circle]] ). this also includes population models and emergent capabilities of populations, think [[Attractor Network]]s but also work under [[Mean Field Theory]] and the mass/field models that come with it, [[Wilson Cowan Model]], etc.
+
+This field focuses on time dependent activity of the brain, representing neuroscience with the language from [[Dynamical Systems Theory|Chaos Theory]]; [[Attracting fixed point|attractors]] and [[Attractor Network]]s, Bifurcations, and [[Neural Manifolds]] drawn by their path in [[State Space Models|state space]].
+
+[[Eugene M. Izhikevich]] pioneered the field with his research such as [[izhikevichNEURALEXCITABILITYSPIKING2000]] [@izhikevichNEURALEXCITABILITYSPIKING2000]

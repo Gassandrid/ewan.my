@@ -29,7 +29,7 @@ $$
 
 [^1]
 
-*However position is now oftentimes encoded using [[Rotary Position Embedding|RoPE]]*
+*However position is now oftentimes encoded using [[Rotary Position Encoding|RoPE]]*
 
 This is necessary as right now, these vectors only contain a 1-to-1 correspondence for the word they represent, with no regard for the context of the sentence, which can vastly change the meaning:
 

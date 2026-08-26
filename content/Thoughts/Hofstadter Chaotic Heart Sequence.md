@@ -1,6 +1,6 @@
 ---
 date: 2026-01-16T09:56:10-05:00
-updated: 2026-01-16T11:08:44-05:00
+updated: 2026-08-25T15:10:58-07:00
 class:
   - note
 tags:
@@ -19,14 +19,15 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: "1.3"
+      format_version: '1.3'
       jupytext_version: 1.18.1
   kernelspec:
     display_name: Python 3
     language: python
     name: python3
 ---
-Saw this sequence from **Simone Conradi** on twitter:
+
+Saw this sequence from [[Simone Conradi]]
 
 ![](https://x.com/S_Conradi/status/1999588652255416630)
 

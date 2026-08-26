@@ -11,7 +11,7 @@ author:
 description:
 aliases:
 date: 2026-05-06T17:38:53-04:00
-updated: 2026-05-17T11:45:39-07:00
+updated: 2026-08-02T21:07:17-07:00
 ---
 
 Self Supervised Learning method where objective is redundancy reduction. 

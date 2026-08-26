@@ -23,6 +23,7 @@
     "build": "node ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "probe": "node ./scripts/probe-build.mjs",
     "probe:browser": "node ./scripts/probe-browser.mjs",
+    "probe:eigenfish": "node ./scripts/probe-marimo-eigenfish.mjs",
     "probe:showcase": "node ./scripts/probe-marimo-showcase.mjs",
     "probe:responsive": "node ./scripts/probe-responsive-layout.mjs",
     "validate": "npm run plugins:install && npm run check && npm test && npm run build && npm run probe"

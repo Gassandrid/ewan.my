@@ -6,6 +6,7 @@ import EwanFonts, { LORA_STYLESHEET } from "./ewan-fonts/index.js"
 import GaggiMatePage from "./ewan-gaggimate-page/index.js"
 import { patchGraphRuntime } from "./ewan-graph/components.js"
 import { LorenzBackground } from "./ewan-lorenz/components.js"
+import { compileObsidianLinks } from "./ewan-marimo/index.js"
 import MarimoResources from "./ewan-marimo-resources/index.js"
 import MorrisLecarPage from "./ewan-morris-lecar-page/index.js"
 import EwanMorrisLecar from "./ewan-morris-lecar/index.js"
@@ -39,15 +40,33 @@ test("charts and CalPlot share demand-loaded D3", () => {
   assert.match(s, /containers\.length === 0 && calendars\.length === 0/)
 })
 test("Marimo assets are pinned and conditional", () => {
-  const s = MarimoResources().externalResources().js[0].script
-  assert.match(s, /querySelectorAll\("marimo-island"\)/)
-  assert.match(s, /nextSlug !== lastSlug/)
+  const s = MarimoResources().externalResources({
+    allFiles: ["Thoughts/Eigenfish.marimo.py", "Thoughts/Regular.md"],
+  }).js[0].script
+  assert.match(s, /\.marimo-notebook-page/)
+  assert.match(s, /\/thoughts\/eigenfish/)
+  assert.match(s, /modulepreload/)
+  assert.match(s, /pyodide\.asm\.wasm/)
   assert.match(s, /__MARIMO_EXPORT_CONTEXT__/)
   assert.match(s, /source: exportContextSource/)
   assert.match(s, /delete window\.__MARIMO_EXPORT_CONTEXT__/)
-  assert.doesNotMatch(s, /navigated = true/)
+  assert.doesNotMatch(s, /untouched/)
+  assert.doesNotMatch(s, /setTimeout\(function\(\) \{[\s\S]*location\.reload[\s\S]*\}, 250\)/)
   assert.match(s, /islands@0\.23\.9/)
   assert.doesNotMatch(s, /fonts\.googleapis/)
+})
+
+test("Marimo markdown compiles Obsidian links with Quartz shortest-path semantics", () => {
+  const compiled = compileObsidianLinks(
+    'mo.md("Inspired by [[Simon Conradi|Conradi]] and [[Personal Canon]].")',
+    "thoughts/eigenfish",
+    ["thoughts/eigenfish", "people/simon-conradi", "personal-canon"],
+  )
+  assert.deepEqual(compiled.replacements, {
+    "Simon Conradi|Conradi": { label: "Conradi", href: "../people/simon-conradi" },
+    "Personal Canon": { label: "Personal Canon", href: "../personal-canon" },
+  })
+  assert.deepEqual(compiled.links, ["people/simon-conradi", "personal-canon"])
 })
 test("custom pages expose canonical slugs and frames", () => {
   const g = GaggiMatePage(),

@@ -1,36 +1,56 @@
 import fs from "node:fs"
 import path from "node:path"
 import { spawnSync } from "node:child_process"
+import { fileURLToPath } from "node:url"
 import { h } from "preact"
-import { slugifyFilePath } from "@quartz-community/utils/path"
+import { slugifyFilePath, transformLink } from "@quartz-community/utils/path"
 
 const MARIMO_ISLANDS_VERSION = "0.23.9"
-
-const RENDER_SCRIPT = `
-import sys, json
-try:
-    import marimo
-    from marimo import MarimoIslandGenerator
-except ImportError as e:
-    print(json.dumps({"error": f"marimo not installed: {e}"}))
-    sys.exit(0)
-try:
-    gen = MarimoIslandGenerator.from_file(sys.argv[1], display_code=False)
-    body = gen.render_body(max_width="none", margin="0")
-    print(json.dumps({
-        "body": body,
-        "marimoVersion": marimo.__version__,
-        "islandCount": body.count("<marimo-island"),
-        "reactiveIslandCount": body.count('data-reactive="true"'),
-    }))
-except Exception as e:
-    print(json.dumps({"error": f"render failed: {e}"}))
-    sys.exit(0)
-`
+const OBSIDIAN_WIKILINK = /(?<!!)\[\[([^\[\]\n]+)\]\]/g
+const RENDER_SCRIPT_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), "render.py")
 
 let pythonMissingWarned = false
 let versionMismatchWarned = false
 const renderCache = new Map()
+
+function parseWikiLink(raw) {
+  const divider = raw.indexOf("|")
+  const target = (divider === -1 ? raw : raw.slice(0, divider)).trim()
+  const alias = divider === -1 ? "" : raw.slice(divider + 1).trim()
+  const withoutAnchor = target.split("#", 1)[0]
+  const fallbackLabel = withoutAnchor.split("/").at(-1) || target
+  return { raw, target, label: alias || fallbackLabel }
+}
+
+function marimoPageSlugs(ctx) {
+  return (ctx.allFiles ?? []).map((fp) =>
+    slugifyFilePath(fp.endsWith(".marimo.py") ? fp.replace(/\.marimo\.py$/, ".md") : fp),
+  )
+}
+
+function resolveLinkedSlug(target, allSlugs) {
+  const withoutAnchor = target.split("#", 1)[0]
+  const canonical = slugifyFilePath(withoutAnchor)
+  const matches = allSlugs.filter((slug) => {
+    if (canonical.includes("/")) return slug === canonical || slug.endsWith(`/${canonical}`)
+    return slug.split("/").at(-1) === canonical
+  })
+  return matches.length === 1 ? matches[0] : canonical
+}
+
+export function compileObsidianLinks(src, currentSlug, allSlugs) {
+  const parsed = Array.from(src.matchAll(OBSIDIAN_WIKILINK), (match) => parseWikiLink(match[1]))
+  const replacements = {}
+  const links = new Set()
+  for (const link of parsed) {
+    replacements[link.raw] = {
+      label: link.label,
+      href: transformLink(currentSlug, link.target, { strategy: "shortest", allSlugs }),
+    }
+    links.add(resolveLinkedSlug(link.target, allSlugs))
+  }
+  return { replacements, links: [...links] }
+}
 
 function filenameToTitle(name) {
   return name
@@ -56,6 +76,10 @@ function parseTags(src) {
     .split(",")
     .map((tag) => tag.trim())
     .filter(Boolean)
+}
+
+function parseStaticPreview(src) {
+  return /^#\s*static-preview:\s*true\s*$/im.test(src)
 }
 
 function parseRenderJson(stdout) {
@@ -105,9 +129,9 @@ function walk(dir, root = dir) {
   return files
 }
 
-function renderIsland(notebookPath, { failOnError, runtimeVersion }) {
+function renderIsland(notebookPath, { failOnError, runtimeVersion, wikiLinks, staticPreview }) {
   const stat = fs.statSync(notebookPath)
-  const cacheKey = `${stat.mtimeMs}:${runtimeVersion}`
+  const cacheKey = `${stat.mtimeMs}:${runtimeVersion}:${staticPreview}:${JSON.stringify(wikiLinks)}`
   const cached = renderCache.get(notebookPath)
   if (cached?.key === cacheKey) return cached.value
 
@@ -117,8 +141,13 @@ function renderIsland(notebookPath, { failOnError, runtimeVersion }) {
     return null
   }
 
-  const result = spawnSync(resolvePython(), ["-c", RENDER_SCRIPT, notebookPath], {
+  const result = spawnSync(resolvePython(), [RENDER_SCRIPT_PATH, notebookPath], {
     encoding: "utf8",
+    input: JSON.stringify({ wikiLinks, staticPreview }),
+    env: {
+      ...process.env,
+      EWAN_MARIMO_STATIC_PREVIEW: staticPreview ? "1" : "",
+    },
     maxBuffer: 50 * 1024 * 1024,
     timeout: 120_000,
   })
@@ -164,12 +193,12 @@ function renderIsland(notebookPath, { failOnError, runtimeVersion }) {
   return rendered
 }
 
-function marimoHtml(rendered, runtimeVersion) {
-  const loading = `<div class="marimo-loading" aria-live="polite"><span class="marimo-loading-spinner" aria-hidden="true"></span><span class="marimo-loading-text">Loading interactive Python kernel...</span></div>`
+function marimoHtml(rendered, runtimeVersion, slug) {
+  const loading = `<div class="marimo-loading" aria-live="polite"><span class="marimo-loading-spinner" aria-hidden="true"></span><span class="marimo-loading-text">Starting interactive Python…</span></div>`
   const versionAttr = rendered.marimoVersion
     ? ` data-marimo-version="${escapeHtmlAttr(rendered.marimoVersion)}"`
     : ""
-  return `<div class="marimo-notebook-page" data-marimo-runtime="${escapeHtmlAttr(runtimeVersion)}"${versionAttr} data-marimo-islands="${rendered.islandCount}" data-marimo-reactive-islands="${rendered.reactiveIslandCount}">${loading}${rendered.body}</div>`
+  return `<div class="marimo-notebook-page" data-marimo-page="${escapeHtmlAttr(slug)}" data-marimo-state="loading" data-marimo-runtime="${escapeHtmlAttr(runtimeVersion)}"${versionAttr} data-marimo-islands="${rendered.islandCount}" data-marimo-reactive-islands="${rendered.reactiveIslandCount}">${loading}${rendered.body}</div>`
 }
 
 function MarimoBody() {
@@ -197,21 +226,29 @@ export default function MarimoPageType(opts = {}) {
     match: () => false,
     generate({ ctx }) {
       const contentRoot = ctx.argv.directory
+      const allSlugs = marimoPageSlugs(ctx)
       return walk(contentRoot).flatMap((fp) => {
         const src = path.join(contentRoot, fp)
         const basename = path.basename(fp, ".marimo.py")
+        const slug = slugifyFilePath(fp.replace(/\.marimo\.py$/, ".md"))
         let title = filenameToTitle(basename)
         let description = `Interactive marimo notebook: ${title}`
         let tags = []
+        let fileContent = ""
         try {
-          const fileContent = fs.readFileSync(src, "utf8")
+          fileContent = fs.readFileSync(src, "utf8")
           title = parseAppTitle(fileContent) ?? title
           description = parseDescription(fileContent) ?? description
           tags = parseTags(fileContent)
         } catch {}
-        const rendered = renderIsland(src, { failOnError, runtimeVersion })
+        const obsidianLinks = compileObsidianLinks(fileContent, slug, allSlugs)
+        const rendered = renderIsland(src, {
+          failOnError,
+          runtimeVersion,
+          wikiLinks: obsidianLinks.replacements,
+          staticPreview: parseStaticPreview(fileContent),
+        })
         if (!rendered?.body) return []
-        const slug = slugifyFilePath(fp.replace(/\.marimo\.py$/, ".md"))
         const stat = fs.statSync(src)
         return [
           {
@@ -226,9 +263,9 @@ export default function MarimoPageType(opts = {}) {
               frontmatter: { title, tags, description, cssclasses: ["marimo-page"] },
               text: `${title}. ${description}`,
               description,
-              links: [],
+              links: obsidianLinks.links,
               isMarimo: true,
-              marimoHtml: marimoHtml(rendered, runtimeVersion),
+              marimoHtml: marimoHtml(rendered, runtimeVersion, slug),
             },
           },
         ]

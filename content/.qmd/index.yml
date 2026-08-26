@@ -1,0 +1,34 @@
+collections:
+  vault:
+    path: /Users/gassandrid/VAULT
+    pattern: "**/*.md"
+    ignore:
+      - .agents/**
+      - .claude/**
+      - .git/**
+      - .obsidian/**
+      - .pi-lens/**
+      - .qmd/**
+      - .rss-dashboard-data/**
+      - .smart-env/**
+      - Private/Agent Map/**
+      - Private/Agent Memory/**
+      - Private/Agent Sessions/**
+      - Private/Claude Memory/**
+    includeByDefault: true
+  sessions:
+    path: /Users/gassandrid/VAULT/Private/Agent Sessions
+    pattern: "**/*.md"
+    includeByDefault: false
+    context:
+      "": "Compact Codex and Pi session indexes: operational retrieval pointers only, never authority over current Vault notes."
+  papers:
+    path: /Users/gassandrid/Lab/tools/zotero-rag/data/qmd-papers/items
+    pattern: "**/*.md"
+    includeByDefault: false
+    context:
+      "": "Derived local Zotero paper text and metadata. Source evidence, not human-authored Vault canon; cite item, attachment, and passage markers."
+models:
+  embed: hf:ggml-org/embeddinggemma-300M-GGUF/embeddinggemma-300M-Q8_0.gguf
+  generate: hf:tobil/qmd-query-expansion-1.7B-gguf/qmd-query-expansion-1.7B-q4_k_m.gguf
+  rerank: hf:ggml-org/Qwen3-Reranker-0.6B-Q8_0-GGUF/qwen3-reranker-0.6b-q8_0.gguf

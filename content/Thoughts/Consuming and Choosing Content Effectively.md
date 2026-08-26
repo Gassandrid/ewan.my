@@ -16,6 +16,8 @@ description: extracting meaningful utility in the age of unengaged content consu
 date: 2025-12-19
 updated: 2026-03-04T12:15:47-05:00
 status:
+aliases:
+  - content consumption
 ---
 
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.

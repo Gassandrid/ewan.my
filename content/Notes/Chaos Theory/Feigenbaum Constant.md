@@ -1,6 +1,6 @@
 ---
 date: 2026-01-21T12:10:45-05:00
-updated: 2026-01-27T10:45:27-05:00
+updated: 2026-08-13T12:08:29-07:00
 class:
   - note
 tags:
@@ -12,7 +12,8 @@ description:
 aliases:
   - Feigenbaum Constants
 ---
-The **Feigenbaum constant** arises in [[Chaos Theory]] when studying the behavior of certain types of functions as they undergo period-doubling bifurcations. It is named after the physicist Mitchell Feigenbaum, who discovered it in the 1970s.
+
+comes up in [[Dynamical Systems Theory|Chaos Theory]] when studying the behavior of certain types of functions as they undergo period-doubling bifurcations. It is named after the physicist Mitchell Feigenbaum, who discovered it in the 1970s.
 
 First example was found by Feigenbaum studying the [[Logistic Map]], where period double bifurcations happen as the parameter r is increased. However it was later found to apply to all one dimensional maps with single quadratic maxima. Meaning, **every chaotic system** corresponds to this description will bifurcate at the same rate.
 

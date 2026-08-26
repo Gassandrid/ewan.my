@@ -10,12 +10,6 @@ status: stocked
 dosage: 10
 dosage-unit: mg
 route-of-administration: PO (oral)
-benefits:
-  - ADHD/Focus
-  - Higher Cognition
-  - Memory
-  - Motivation
-  - PFC Top-Down Control
 frequency: cycled
 time-of-day:
   - morning
