@@ -11,6 +11,8 @@ source:
   - "[[Denoising Diffusion Probabilistic Models]]"
 related:
 author:
+aliases:
+  - diffusion
 ---
 **Diffusion** is a novel class of generatative modeling that, in most cases, work to denoise data by learning to reverse a gradual noising process. Diffusion models have recently gained significant attention in the field of machine learning, particularly for their ability to generate high-quality images, audio, and other types of data.
 

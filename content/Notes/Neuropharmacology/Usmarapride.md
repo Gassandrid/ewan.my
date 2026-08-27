@@ -43,13 +43,13 @@ pathways:
 brain-regions:
   - "[[hippocampus]]"
 processes:
-  - "[[LTP]]"
+  - "[[Long Term Potentiation]]"
   - "[[neurogenesis]]"
 ---
 
 CNS-selective [[5-HT4 receptor|5-HT4]] partial agonist, designed as a brain-penetrant successor to Prucalopride. Prucalopride was validated in healthy people across three independent tasks: RAVLT (verbal recall), PILT (probabilistic learning), and emotional memory recognition, all showing significant improvement [@murphyRole5HT4Receptors2020]. The problem was diarrhea from peripheral cAMP activity. Usmarapride fixes this with selective CNS penetration.
 
-Mechanism: 5-HT4 agonism drives [[hippocampus|hippocampal]] [[cAMP]], which triggers [[BDNF]] release, dendritic growth, and [[neurogenesis]]. Also reduces hippocampal excitability and blocks depotentiation, raising the [[LTP]] encoding threshold while protecting established traces. The pro-cognitive effect is hippocampus-specific: Prucalopride showed no effect on working memory or implicit contextual learning, which are PFC-dependent tasks [@murphyRole5HT4Receptors2020]. For full cognitive coverage pair with [[Tropisetron]], [[Neboglamine]], an M1 ligand, or [[TAK-653]].
+Mechanism: 5-HT4 agonism drives [[hippocampus|hippocampal]] [[cAMP]], which triggers [[BDNF]] release, dendritic growth, and [[neurogenesis]]. Also reduces hippocampal excitability and blocks depotentiation, raising the [[Long Term Potentiation]] encoding threshold while protecting established traces. The pro-cognitive effect is hippocampus-specific: Prucalopride showed no effect on working memory or implicit contextual learning, which are PFC-dependent tasks [@murphyRole5HT4Receptors2020]. For full cognitive coverage pair with [[Tropisetron]], [[Neboglamine]], an M1 ligand, or [[TAK-653]].
 
 new context sharpened this: 5-HT4 agonists increase cortical [[Acetylcholine]] and histamine, potentiate donepezil-induced ACh release, and increase hippocampal theta power. The dentate-gyrus finding is also very on-theme: 5-HT4 partial agonism prevents depotentiation, so the effect is less “more memory now” and more “freshly encoded traces are harder to dissolve.”
 

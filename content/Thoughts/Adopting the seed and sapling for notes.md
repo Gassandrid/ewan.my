@@ -1,10 +1,21 @@
 ---
 title: Adopting the seed and sapling for notes
 date: 2025-02-06
-updated: 2025-02-07
+updated: 2026-08-26T10:23:14-07:00
 tags:
   - seed
+class:
+  - note
+source:
+related:
+author:
+description:
+aliases:
 ---
+
+>[!Warning] [[08-26-2026]] Update
+> While I am not going out of my way to clear this out, this is something I havent really invested in doing for the past 2 years, which is around when I started this note. While it has worked great for Jacky, I am more happy to just let the hierarchies emerge through the graph layer and using PageRank-esque algorithms to leverage the importance, something like I have done for my [[Emergent Links]] plugin.
+
 I was reading through the creator of the **Quartz** static site generator's own garden which ( appears to ) uses the zettelkasten method for note taking. 
 
 As someone who is trying to get into the idea of taking "atomic" notes, I liked how he didn't just have the "idea" tag, and instead had a few divisions according to the development state of said note.

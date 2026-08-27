@@ -77,7 +77,7 @@ keeps extracellular glutamate at nanomolar levels; necessary, because tonic rece
 
 ## Role in Plasticity
 
-[[LTP]] and [[LTD]] are cellular substrates of learning / memory, both gated by [[NMDA receptor]] activation. 
+[[Long Term Potentiation]] and [[LTD]] are cellular substrates of learning / memory, both gated by [[NMDA receptor]] activation. 
 
 sequence: high-frequency stimulation -> [[AMPA Receptor]] mediated depolarization -> $Mg^{2+}$ unblock -> $Ca^{2+}$ influx through [[NMDA]] -> CaMKII activation -> [[AMPA Receptor]] phosphorylation and trafficking -> strengthened synapse. 
 

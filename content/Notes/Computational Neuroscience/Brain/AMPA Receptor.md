@@ -62,7 +62,7 @@ antagonists-used:
 
 ## Synaptic Plasticity
 
-AMPA receptors are the primary readout of [[LTP]] expression:
+AMPA receptors are the primary readout of [[Long Term Potentiation]] expression:
 
 1. High-frequency stimulation activates [[NMDA Receptor]]s ($Mg^{2+}$ block removed by depolarization)
 2. $Ca^{2+}$ influx activates [[CaMKII]]

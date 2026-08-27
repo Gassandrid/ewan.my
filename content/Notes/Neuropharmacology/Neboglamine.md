@@ -39,7 +39,7 @@ pathways:
 brain-regions:
   - "[[hippocampus]]"
 processes:
-  - "[[LTP]]"
+  - "[[Long Term Potentiation]]"
   - "[[LTD]]"
 ---
 

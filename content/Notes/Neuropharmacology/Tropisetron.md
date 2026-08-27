@@ -36,7 +36,7 @@ brain-regions:
   - "[[prefrontal cortex]]"
   - "[[hippocampus]]"
 processes:
-  - "[[LTP]]"
+  - "[[Long Term Potentiation]]"
   - "[[neurogenesis]]"
 date: 2026-02-18T14:08:50-05:00
 updated: 2026-06-02T00:00:00-07:00
