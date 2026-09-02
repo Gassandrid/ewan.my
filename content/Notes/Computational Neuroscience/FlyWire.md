@@ -11,7 +11,7 @@ tags:
   - comp-neuro/models/connectome
 related:
 date: 2026-02-08T10:21:07-05:00
-updated: 2026-08-26T14:09:04-07:00
+updated: 2026-08-30T11:41:21-04:00
 title: Drosophila Connectome
 aliases:
   - Drosophila
@@ -32,7 +32,7 @@ If one wants to run itself as a [[Leaky Integrate And Fire]] model, have a look 
 
 Another funny thing being done with this cnnectome is it being used as a base for further RL postraining for other unintended tasks. **Tim Hwang** on twitter was able to train the connectome to drive a little robot vehicle towards a goal.
 
-![[tweeload_y8v2l6kn.mp4]]
+![[flybrainCar.mp4]]
 
 ![](https://x.com/timhwang/status/2091554909954961482)
 

@@ -2,7 +2,7 @@
 aliases: []
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=71508291&t=l
 date: 2026-02-17
-updated: 2026-06-02T00:00:00-07:00
+updated: 2026-08-29T13:17:55-04:00
 class:
   - medication
 category: cognitive
@@ -14,12 +14,6 @@ dosage-unit:
   - mg
 route-of-administration:
   - PO (oral)
-benefits:
-  - Memory
-  - Higher Cognition
-  - Depression
-  - Anxiety
-  - Neuroplasticity
 frequency:
   - daily
 time-of-day:
@@ -47,11 +41,11 @@ processes:
   - "[[neurogenesis]]"
 ---
 
-CNS-selective [[5-HT4 receptor|5-HT4]] partial agonist, designed as a brain-penetrant successor to Prucalopride. Prucalopride was validated in healthy people across three independent tasks: RAVLT (verbal recall), PILT (probabilistic learning), and emotional memory recognition, all showing significant improvement [@murphyRole5HT4Receptors2020]. The problem was diarrhea from peripheral cAMP activity. Usmarapride fixes this with selective CNS penetration.
+CNS-selective [[5-HT4 receptor|5-HT4]] partial agonist, designed as a brain-penetrant successor to Prucalopride. Prucalopride was validated in healthy people across three independent tasks: RAVLT (verbal recall), PILT (probabilistic learning), and emotional memory recognition, all showing significant improvement [@murphyRole5HT4Receptors2020]. problem was diarrhea from peripheral cAMP activity. Usmarapride fixes this with selective CNS penetration.
 
 Mechanism: 5-HT4 agonism drives [[hippocampus|hippocampal]] [[cAMP]], which triggers [[BDNF]] release, dendritic growth, and [[neurogenesis]]. Also reduces hippocampal excitability and blocks depotentiation, raising the [[Long Term Potentiation]] encoding threshold while protecting established traces. The pro-cognitive effect is hippocampus-specific: Prucalopride showed no effect on working memory or implicit contextual learning, which are PFC-dependent tasks [@murphyRole5HT4Receptors2020]. For full cognitive coverage pair with [[Tropisetron]], [[Neboglamine]], an M1 ligand, or [[TAK-653]].
 
-new context sharpened this: 5-HT4 agonists increase cortical [[Acetylcholine]] and histamine, potentiate donepezil-induced ACh release, and increase hippocampal theta power. The dentate-gyrus finding is also very on-theme: 5-HT4 partial agonism prevents depotentiation, so the effect is less “more memory now” and more “freshly encoded traces are harder to dissolve.”
+new context changed a few things, 5-HT4 agonists increase cortical [[Acetylcholine]] and histamine, potentiate donepezil-induced ACh release, and increase hippocampal theta power. The dentate-gyrus finding is also very on-theme: 5-HT4 partial agonism prevents depotentiation, so the effect is less “more memory now” and more “freshly encoded traces are harder to dissolve.”
 
 The hippocampal excitability reduction is the anxiolytic mechanism. Hippocampal neurogenesis accounts for the antidepressant effects. synergy; Usmarapride drives hippocampal BDNF release, [[ACD-856]] sensitizes TrkB for it. Mechanistically tight and subjectively strong. Phase 1 class-level data from SUVN-D4010 (same 5-HT4 agonist class): generally safe, with relatively high headache occurrence above 15mg [@nirogiFirstinHumanStudiesEvaluate2021]. Hard ceiling there.
 
