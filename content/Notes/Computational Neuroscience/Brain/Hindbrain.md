@@ -37,7 +37,7 @@ tags:
   - neuroscience
   - brain-region
 date: 2026-02-22T22:06:55-05:00
-updated: 2026-02-24T15:22:17-05:00
+updated: 2026-09-14T10:43:03-04:00
 ---
 
 The hindbrain is the most caudal major brain division, continuous with the spinal cord. It consists of the [[Cerebellum]], [[Pons]], and [[Medulla Oblongata]]. It manages the most phylogenetically ancient functions — keeping the body alive, balanced, and awake.

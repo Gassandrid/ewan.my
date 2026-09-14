@@ -5,10 +5,8 @@ class:
 source: https://tlakoba.w3.uvm.edu/26_fall/math_3230/Lectures/Lecture_2.pdf
 lecture-number: 2
 date: 2026-09-09T14:35:20-04:00
-updated: 2026-09-09T14:44:30-04:00
+updated: 2026-09-14T15:08:41-04:00
 ---
-
-## Linear first-order equations
 
 A first-order equation is **linear** if it can be written
 
@@ -33,7 +31,7 @@ $$
 
 on intervals where $\cos t\ne0$.
 
-## Homogeneous solution
+## Homogeneous Solution
 
 Let $P'(t)=p(t)$. Since
 
@@ -49,7 +47,7 @@ $$
 
 These are all the solutions: multiplying $y'+py=0$ by $e^P$ gives $(e^Py)'=0$, hence $e^Py=C$.
 
-## Integrating factor
+## Integrating Factor
 
 For continuous $p,g$ on an interval, multiply by the **integrating factor** $\mu=e^P$:
 
@@ -116,7 +114,7 @@ $$
 
 At $t=1$, the logarithm vanishes and $y(1)=3$.
 
-## Variation of parameter
+## Variation of Parameter
 
 Start with the nonzero homogeneous solution $y_h=e^{-P(t)}$ and allow its coefficient to vary:
 
@@ -144,7 +142,7 @@ $$
 
 This recovers the integrating-factor formula. The same idea extends to linear systems.
 
-## Special cases and long-term behavior
+## Special Cases and Long-term Behavior
 
 For the homogeneous IVP,
 
@@ -175,7 +173,7 @@ $$
 y(t)=y_0e^{e^{-t}-1}\longrightarrow y_0/e.
 $$
 
-### Constant coefficient
+### Constant Coefficient
 
 $$
 y'=ay, \qquad y(t_0)=y_0
@@ -183,7 +181,7 @@ y'=ay, \qquad y(t_0)=y_0
 \boxed{y(t)=y_0e^{a(t-t_0)}.}
 $$
 
-### Power law
+### Power Law
 
 On $t>0$,
 
@@ -194,7 +192,7 @@ y'-\frac at y=0,
 \boxed{y=Ct^a.}
 $$
 
-### Constant forcing
+### Constant Forcing
 
 For $y'=ay+b$ with $a\ne0$, the equilibrium is $y_*=-b/a$. Set $z=y-y_*$:
 
@@ -206,7 +204,7 @@ $$
 
 If $a<0$, every solution converges to $y_*$. If $a>0$, every non-equilibrium solution moves away from it. If $a=0$, $y=y_0+b(t-t_0)$.
 
-## Piecewise coefficients
+## Piecewise Coefficients
 
 If $p$ or $g$ changes formula at $t=c$, solve the linear IVP on each interval and match the value of $y$ at the switch:
 
@@ -225,5 +223,3 @@ g_2+(y_c-g_2)e^{-(t-c)},&t\ge c,
 \end{cases}
 \qquad y_c=g_1+(y_0-g_1)e^{-c}.
 $$
-
-Previous: [[Lecture 1 - Introduction]] · Next: [[Lecture 3 - General Properties of First-Order Linear Differential Equations]]

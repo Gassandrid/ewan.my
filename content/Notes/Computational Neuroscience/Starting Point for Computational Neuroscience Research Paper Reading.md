@@ -59,3 +59,7 @@ When doing this, I want to try applying what I learned in [[Artem Kirsanov]]'s [
 - [ ] start seed note investigating this paper
 
 [[Neuronal Avalanches in Neocortical Circuits]]
+
+
+> [!note] Study plan
+> The study sequence and next task are managed in [[Research Self-Study]]. This note remains source material; use the consolidated plan for scheduling.

@@ -40,7 +40,7 @@ tags:
   - health/substance
   - pharmacology/neuro
 date: 2026-02-22
-updated: 2026-06-11T14:13:30-07:00
+updated: 2026-09-13T19:24:18-04:00
 ---
 
 racicetam with an atypical mechanism: it acts as an agonist at [[mGluR2]] and [[mGluR3]], the presynaptic [[Glutamate]] autoreceptors that detect synaptic glutamate and downregulate further release. Activating these reduces glutamate tone. Simultaneously, it upregulates [[GABA-B receptor]] density. The net effect is a systematic recalibration of the [[E/I balance]] toward baseline, not acutely, but over days to weeks as receptor populations shift.

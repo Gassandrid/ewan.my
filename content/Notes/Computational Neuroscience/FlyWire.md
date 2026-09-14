@@ -11,7 +11,7 @@ tags:
   - comp-neuro/models/connectome
 related:
 date: 2026-02-08T10:21:07-05:00
-updated: 2026-09-04T15:10:33-04:00
+updated: 2026-09-14T09:25:11-04:00
 title: Drosophila Connectome
 aliases:
   - Drosophila
@@ -40,6 +40,24 @@ Another funny thing being done with this cnnectome is it being used as a base fo
 ![[flybrainCar.mp4]]
 
 ![](https://x.com/timhwang/status/2091554909954961482)
+
+## [[09-12-2026]] Update
+
+Looks like I was ahead of the curve regarding training the Male CNS connectome towards actions, as this has now gone completely viral on Twitter with just about everyone training the fly brain to do something.
+
+I am happy to see it, but as David Pfau put it below, it is now the time for [[Computational Neuroscience]] to be in the influencer spotlight with minimal understanding of whats really going on.
+
+![[Screenshot 2026-09-12 at 4.41.19 PM.png]]
+
+It is quite reminiscient of [[Pantheon]], what is going on right now.
+
+![[flybraineverywhere.mp4]]
+
+I am noticing a few kinds of experiments done here:
+
+1. [[Gradient Descent]] using [[Backpropagation Through Time|BPTT]] where a surrogate function ( usually a [[Sigmoid Function]] ) is used in place of the [[Heaviside Function]] to tune the [[Spiking Neural Network]], where from there either RL through [[Proximal Policy Optimzation|PPO]] is used or just Supervised Learning
+2. Evolutionary Algorithms that just make and test random evolutions to get closer to a desired behavior
+3. [[Reservoir computing]] where the [[Connectome]] [[Spiking Neural Network]] is untouched, and the only thing that is trained is the readout layer. Keeps the internal dynamics the same
 
 ---
 

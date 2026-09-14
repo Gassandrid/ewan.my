@@ -4,7 +4,7 @@ aliases:
 tags:
 date: 2024-10-02
 title: Ewans Florilegium
-updated: 2026-09-03T11:24:08-04:00
+updated: 2026-09-14T15:41:43-04:00
 class: navigation
 ---
 
@@ -26,7 +26,6 @@ Dont navigate this [[Digital Garden|garden]] through the folders unless you just
 
 [[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canon|Inspirations]]　　　　[[Some Fun Facts About Me]]
 
+---
 
-## Elsewhere
-
-[GitHub](https://github.com/gassandrid) · [Twitter @ewanjamesjan](https://twitter.com/ewanjamesjan)
+*find me on [twitter](https://twitter.com/ewanjamesjan)or [github](https://github.com/gassandrid)!*
