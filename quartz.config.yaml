@@ -280,10 +280,7 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
-    options:
-      links:
-        GitHub: https://github.com/gassandrid
+    enabled: false
   - source: github:quartz-community/spacer
     enabled: true
     layout:

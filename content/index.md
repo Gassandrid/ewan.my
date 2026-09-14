@@ -25,3 +25,8 @@ I also take interest in the [[Neuropharmacology]] route through [[Nootropic Comp
 Dont navigate this [[Digital Garden|garden]] through the folders unless you just care about my class notes. Use the tags, described in [[website]].
 
 [[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]　　　　[[Personal Canon|Inspirations]]　　　　[[Some Fun Facts About Me]]
+
+
+## Elsewhere
+
+[GitHub](https://github.com/gassandrid) · [Twitter @ewanjamesjan](https://twitter.com/ewanjamesjan)
