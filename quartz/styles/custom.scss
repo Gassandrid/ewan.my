@@ -12,6 +12,21 @@
 
 // put your custom CSS here!
 
+// Justify reading prose without changing authored line breaks or component layouts.
+article > .markdown-rendered {
+  > p:not(:has(br, .katex-display)),
+  > blockquote:not(.callout) > p:not(:has(br, .katex-display)) {
+    text-align: justify;
+    text-align-last: start;
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+
+    :is(code, kbd, samp, .katex) {
+      hyphens: none;
+    }
+  }
+}
+
 // Quartz v5 only emits its core theme keys as CSS variables. Keep the
 // extended v4 palette available to custom components such as rainbow tags.
 :root,
