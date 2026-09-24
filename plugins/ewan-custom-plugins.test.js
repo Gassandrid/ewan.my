@@ -81,7 +81,12 @@ test("custom pages expose canonical slugs and frames", () => {
   assert.equal(m.frame, "full-width")
 })
 test("expensive runtimes are guarded", () => {
-  assert.match(EwanMorrisLecar().externalResources().js[0].script, /phase-canvas/)
+  const morris = EwanMorrisLecar().externalResources().js[0].script
+  assert.match(morris, /getElementById\('ml-app'\)/)
+  assert.ok(
+    morris.indexOf("if (!root) return") < morris.indexOf("import('/static/js/morris-lecar.js')"),
+  )
+  assert.match(morris, /ticket !== generation/)
   const l = LorenzBackground()
   assert.match(l.afterDOMLoaded, /prefers-reduced-motion/)
   assert.match(l.afterDOMLoaded, /deviceMemory/)

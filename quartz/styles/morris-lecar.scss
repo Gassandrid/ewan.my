@@ -1,473 +1,457 @@
-@use "./variables.scss" as *;
-
-// ── Variable mapping: ML names → Quartz palette ───────────────────────────────
-// Quartz's --light/--dark/--gray etc. already flip in dark mode automatically.
+// Native Quartz palette; colors and fonts follow the site's canonical theme.
 .ml-wrap {
-  --bg: var(--light);
-  --bg-surface: var(--lightgray);
-  --border: var(--lightgray);
-  --text: var(--dark);
-  --text-secondary: var(--darkgray);
-  --text-muted: var(--gray);
-  --accent: var(--secondary);
-  --tertiary: var(--gray);
-  --slider-track: var(--lightgray);
-  --fp-entry-bg: var(--lightgray);
-  --canvas-bg: var(--light);
-  // rust, clay, ochre, sage, pine, slate, mauve already exist on :root
-
-  // ── Outer container ──────────────────────────────────────────────────────
-  display: flex;
-  flex-direction: column;
-  height: min(82vh, 700px);
-  border: 1px solid var(--lightgray);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  font-size: 13px;
+  color: var(--dark);
   background: var(--light);
+  font-family: var(--bodyFont);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  width: 100%;
+  padding-bottom: 1rem;
 
-  // ── Toolbar ──────────────────────────────────────────────────────────────
-  #toolbar {
+  * {
+    box-sizing: border-box;
+  }
+  h2 {
+    font-family: var(--headerFont);
+    font-weight: 500;
+    font-size: 1.18rem;
+    margin: 0;
+  }
+  p {
+    margin: 0.55rem 0;
+    text-align: left;
+  }
+  button,
+  select,
+  input {
+    font: inherit;
+    color: var(--dark);
+    accent-color: var(--secondary);
+  }
+  button,
+  select,
+  input[type="number"] {
+    background: var(--light);
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    padding: 0.35rem 0.6rem;
+  }
+  button,
+  select {
+    cursor: pointer;
+  }
+  button:hover:not(:disabled) {
+    border-color: var(--secondary);
+    background: color-mix(in srgb, var(--secondary) 8%, var(--light));
+  }
+  button[aria-pressed="true"] {
+    border-color: var(--secondary);
+    background: color-mix(in srgb, var(--secondary) 13%, var(--light));
+  }
+  button:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+  :focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+  }
+  input[type="checkbox"] {
+    margin: 0;
+    transform: none;
+    flex-shrink: 0;
+  }
+  input[type="range"] {
+    width: 100%;
+    min-width: 40px;
+    cursor: pointer;
+    height: 24px;
+    margin: 0;
+  }
+  input[type="number"] {
+    width: 6.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+  label {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 6px 10px;
-    background: var(--lightgray);
-    border-bottom: 1px solid var(--lightgray);
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    z-index: 10;
+    gap: 0.5rem;
   }
-
-  // Match calplot-nav-btn exactly
-  .tb-btn {
-    background: none;
-    border: 1px solid var(--lightgray);
-    border-radius: 0.4rem;
-    padding: 0.3rem 0.65rem;
-    font-family: var(--codeFont);
-    font-size: 0.72rem;
-    color: var(--gray);
-    cursor: pointer;
-    transition:
-      background 0.12s ease,
-      color 0.12s ease,
-      border-color 0.12s ease;
-    white-space: nowrap;
-
-    &:hover {
-      color: var(--dark);
-      border-color: var(--gray);
-      background: var(--light);
-    }
-
-    &.active {
-      background: var(--dark);
-      color: var(--light);
-      border-color: var(--dark);
-    }
-  }
-
-  #preset-select {
-    background: none;
-    border: 1px solid var(--lightgray);
-    border-radius: 0.4rem;
-    padding: 0.3rem 0.5rem;
-    font-family: var(--codeFont);
-    font-size: 0.72rem;
-    color: var(--gray);
-    cursor: pointer;
-    transition: border-color 0.12s ease;
-
-    &:hover {
-      border-color: var(--gray);
-      color: var(--dark);
-    }
-
-    option {
-      background: var(--light);
-      color: var(--dark);
-    }
-  }
-
-  .tb-spacer {
-    flex: 1;
-  }
-
-  #coord-display {
-    font-size: 0.68rem;
-    color: var(--gray);
-    font-family: var(--codeFont);
-    min-width: 120px;
+  output {
+    min-width: 5.4rem;
     text-align: right;
+    font-variant-numeric: tabular-nums;
+    color: var(--darkgray);
+    white-space: nowrap;
   }
-
-  #live-speed-display {
-    font-size: 0.68rem;
-    color: var(--gray);
-    font-family: var(--codeFont);
+  canvas {
+    display: block;
+    width: 100%;
+    height: 260px;
   }
-
-  // ── Main area ─────────────────────────────────────────────────────────────
-  #main-area {
+  .ml-note {
+    color: var(--darkgray);
+    font-size: 0.83rem;
+    line-height: 1.5;
+  }
+  .ml-toolbar {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+  .ml-scenarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
     flex: 1;
-    min-height: 0;
-
-    @media (max-width: 900px) {
-      flex-direction: column;
+  }
+  .ml-drive {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    padding: 1rem 0 0.3rem;
+  }
+  .ml-current {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+  }
+  .ml-control {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.6rem;
+  }
+  .ml-context {
+    min-height: 2.9rem;
+    color: var(--darkgray);
+    padding: 0.35rem 0 0.8rem;
+  }
+  .ml-main-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+  }
+  .ml-section-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+  }
+  .ml-section-head > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .ml-section-head button {
+    font-size: 0.8rem;
+  }
+  .ml-legend {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    font-size: 0.79rem;
+    color: var(--darkgray);
+  }
+  .ml-legend > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .ml-check {
+    gap: 0.3rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .ml-key {
+    display: inline-block;
+    width: 16px;
+    height: 0;
+    border-top: 2px solid var(--darkgray);
+    vertical-align: middle;
+  }
+  .dashed {
+    border-top-style: dashed;
+  }
+  @each $name in slate, clay, ochre, pine, rust, mauve {
+    .#{$name} {
+      border-color: var(--#{$name});
     }
   }
-
-  #phase-container {
-    flex: 1;
-    min-width: 0;
-    min-height: 0;
+  #phase-canvas {
+    height: 378px;
+    cursor: crosshair;
+    touch-action: pan-y;
+  }
+  .ml-phase-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--darkgray);
+    font-size: 0.8rem;
+  }
+  .ml-equilibria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.65rem;
+  }
+  .ml-equilibria button {
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .ml-jacobian {
+    border-left: 1px solid var(--lightgray);
+    padding-left: 2rem;
+  }
+  #ml-type {
+    color: var(--pine);
+    font-size: 0.86rem;
+  }
+  .ml-matrix-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .ml-math {
+    font-family: var(--headerFont);
+    font-size: 1.35rem;
+  }
+  .ml-matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem 0.9rem;
+    padding: 0.25rem 0.6rem;
+    border-inline: 1px solid var(--darkgray);
+  }
+  .ml-matrix button {
+    border: 1px solid transparent;
+    min-width: 6rem;
     display: flex;
     flex-direction: column;
-    position: relative;
+    align-items: center;
+    padding: 0.15rem 0.4rem;
   }
-
-  #phase-canvas-wrap {
+  .ml-matrix small {
+    font-size: 0.72rem;
+    color: var(--darkgray);
+  }
+  .ml-matrix b {
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  #ml-entry-note {
+    min-height: 2.5rem;
+  }
+  .ml-eigen-formula {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .ml-eigen-formula math {
+    font-size: 1.1rem;
+  }
+  #ml-eigenvalues {
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .ml-real {
+    color: var(--pine);
+  }
+  .ml-imag {
+    color: var(--mauve);
+  }
+  .ml-invariants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    justify-content: center;
+    color: var(--darkgray);
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+  }
+  #ml-spectrum {
+    height: 194px;
+  }
+  #ml-eigen-meaning p {
+    margin: 0.2rem 0;
+  }
+  .ml-experiment,
+  .ml-bifurcation {
+    border-top: 1px solid var(--lightgray);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+  .ml-experiment-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .ml-experiment-controls .ml-control {
     flex: 1;
-    min-height: 0;
-    position: relative;
+    min-width: 245px;
   }
-
-  #phase-canvas {
-    width: 100%;
-    height: 100%;
+  .ml-pair-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .ml-pair-grid > *,
+  .ml-main-grid > * {
+    min-width: 0;
+  }
+  .ml-playback {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  .ml-playback .ml-control {
+    flex: 1;
+  }
+  #ml-play {
+    min-width: 4.4rem;
+  }
+  .ml-events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+  }
+  .ml-events button {
+    font-size: 0.8rem;
+  }
+  .ml-events small {
     display: block;
+    color: var(--darkgray);
+  }
+  details {
+    border-top: 1px solid var(--lightgray);
+    padding: 0.75rem 0;
+    margin-top: 0.75rem;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--darkgray);
+  }
+  details[open] summary {
+    margin-bottom: 0.8rem;
+  }
+  .ml-boundary-notes {
+    font-size: 0.86rem;
+  }
+  .ml-parameters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+  }
+  .ml-parameters label {
+    justify-content: space-between;
+    font-size: 0.84rem;
+  }
+  .ml-equations {
+    font-family: var(--headerFont);
+  }
+  .ml-equations .ml-note {
+    font-family: var(--bodyFont);
+  }
+  #bifurc-canvas,
+  #ml-eigen-branch {
     cursor: crosshair;
   }
 
-  #timeseries-container {
-    height: 150px;
-    flex-shrink: 0;
-    border-top: 1px solid var(--lightgray);
-    position: relative;
-    transition: height 0.2s ease;
-
-    &.collapsed {
-      height: 26px;
+  @media (max-width: 1000px) {
+    .ml-drive {
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
     }
-
-    &.collapsed #ts-canvas {
-      display: none;
+    .ml-main-grid {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1rem;
     }
-  }
-
-  #ts-toggle {
-    position: absolute;
-    top: 3px;
-    left: 8px;
-    background: none;
-    border: none;
-    color: var(--gray);
-    cursor: pointer;
-    font-size: 0.68rem;
-    z-index: 5;
-    font-family: var(--codeFont);
-
-    &:hover {
-      color: var(--dark);
+    .ml-jacobian {
+      padding-left: 1rem;
+    }
+    .ml-matrix-line {
+      gap: 0.5rem;
+    }
+    .ml-pair-grid {
+      gap: 1rem;
     }
   }
-
-  #ts-label {
-    position: absolute;
-    top: 4px;
-    left: 80px;
-    font-size: 0.65rem;
-    color: var(--gray);
-    font-family: var(--codeFont);
-  }
-
-  #ts-canvas {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  // ── Sidebar ───────────────────────────────────────────────────────────────
-  #sidebar {
-    width: 230px;
-    flex-shrink: 0;
-    overflow-y: auto;
-    background: var(--lightgray);
-    border-left: 1px solid var(--lightgray);
-    padding: 10px;
-
-    @media (max-width: 900px) {
-      width: 100%;
-      border-left: none;
+  @media (max-width: 760px) {
+    font-size: 0.86rem;
+    .ml-main-grid,
+    .ml-pair-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .ml-jacobian {
+      padding: 1rem 0 0;
+      border-left: 0;
       border-top: 1px solid var(--lightgray);
-      max-height: 220px;
     }
-
-    &::-webkit-scrollbar {
-      width: 5px;
+    .ml-current {
+      grid-template-columns: 1fr auto auto;
+      gap: 0.4rem;
     }
-    &::-webkit-scrollbar-track {
-      background: transparent;
+    .ml-current > span:first-child {
+      grid-column: 1 / -1;
     }
-    &::-webkit-scrollbar-thumb {
-      background: var(--gray);
-      border-radius: 3px;
-      opacity: 0.4;
+    .ml-toolbar {
+      gap: 0.5rem;
     }
-  }
-
-  .sidebar-section {
-    margin-bottom: 12px;
-
-    h3 {
-      font-family: var(--headerFont);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--secondary);
-      margin-bottom: 6px;
-      border-bottom: 1px solid var(--lightgray);
-      padding-bottom: 3px;
+    .ml-scenarios {
+      flex-basis: 100%;
+      order: 2;
     }
-  }
-
-  .param-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3px;
-  }
-
-  .param-label {
-    width: 38px;
-    font-size: 0.62rem;
-    color: var(--gray);
-    font-family: var(--codeFont);
-    flex-shrink: 0;
-  }
-
-  .param-slider {
-    flex: 1;
-    margin: 0 6px;
-    -webkit-appearance: none;
-    appearance: none;
-    height: 3px;
-    background: var(--gray);
-    border-radius: 2px;
-    outline: none;
-    opacity: 0.5;
-    transition: opacity 0.15s;
-
-    &:hover {
-      opacity: 1;
+    .ml-scenarios button {
+      flex: 1 0 44%;
+      font-size: 0.8rem;
     }
-
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: var(--secondary);
-      cursor: pointer;
+    #phase-canvas {
+      height: 320px;
     }
-
-    &::-moz-range-thumb {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: var(--secondary);
-      cursor: pointer;
-      border: none;
+    .ml-phase-actions {
+      align-items: start;
+      gap: 0.5rem;
     }
-  }
-
-  .param-value {
-    width: 44px;
-    font-size: 0.62rem;
-    color: var(--darkgray);
-    text-align: right;
-    font-family: var(--codeFont);
-    flex-shrink: 0;
-  }
-
-  .toggle-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3px;
-
-    label {
-      font-size: 0.62rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: var(--darkgray);
-      font-family: var(--codeFont);
+    .ml-phase-actions button {
+      flex-shrink: 0;
     }
-
-    input[type="checkbox"] {
-      accent-color: var(--secondary);
-      width: 12px;
-      height: 12px;
+    .ml-playback {
+      gap: 0.4rem;
+      flex-wrap: wrap;
     }
-  }
-
-  .swatch {
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    border-radius: 2px;
-    margin-right: 2px;
-    flex-shrink: 0;
-  }
-
-  // ── Fixed point info ──────────────────────────────────────────────────────
-  #fp-info {
-    font-size: 0.62rem;
-    font-family: var(--codeFont);
-    max-height: 170px;
-    overflow-y: auto;
-    color: var(--darkgray);
-
-    &::-webkit-scrollbar {
-      width: 4px;
+    .ml-playback .ml-control {
+      min-width: 200px;
     }
-    &::-webkit-scrollbar-thumb {
-      background: var(--gray);
-      border-radius: 2px;
+    .ml-playback output {
+      min-width: 4rem;
     }
-  }
-
-  .fp-entry {
-    margin-bottom: 5px;
-    padding: 3px 6px;
-    background: var(--light);
-    border-radius: 3px;
-    border-left: 3px solid var(--gray);
-
-    &.stable {
-      border-left-color: var(--sage);
+    .ml-parameters {
+      grid-template-columns: 1fr;
     }
-    &.unstable {
-      border-left-color: var(--rust);
+    .ml-section-head {
+      align-items: start;
     }
-    &.saddle {
-      border-left-color: var(--ochre);
+    #ml-entry-note {
+      min-height: 0;
     }
   }
 }
 
-// ── Modals — position:fixed so outside .ml-wrap, z-index must clear all Quartz layers
-// Quartz progress bar = 9999; set modals to 9500 to clear sidebars/headers
-#bifurc-modal {
+// Reading-time metadata is not meaningful for an interactive instrument.
+body:has(.ml-wrap) .content-meta {
   display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 9500;
-  align-items: center;
-  justify-content: center;
-
-  &.visible {
-    display: flex;
-  }
-}
-
-#bifurc-content {
-  background: var(--light);
-  border: 1px solid var(--lightgray);
-  border-radius: 0.5rem;
-  padding: 16px;
-  width: 80vw;
-  max-width: 900px;
-
-  h2 {
-    font-family: var(--headerFont);
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: var(--secondary);
-  }
-}
-
-#bifurc-canvas {
-  width: 100%;
-  height: 380px;
-  display: block;
-  border-radius: 4px;
-}
-
-#bifurc-status {
-  font-size: 0.68rem;
-  color: var(--gray);
-  font-family: var(--codeFont);
-  margin-top: 6px;
-}
-
-#bifurc-close {
-  float: right;
-  // Inherits .tb-btn but is outside .ml-wrap, so re-define inline style
-  background: none;
-  border: 1px solid var(--lightgray);
-  border-radius: 0.4rem;
-  padding: 0.3rem 0.65rem;
-  font-family: var(--codeFont);
-  font-size: 0.72rem;
-  color: var(--gray);
-  cursor: pointer;
-
-  &:hover {
-    color: var(--dark);
-    border-color: var(--gray);
-    background: var(--lightgray);
-  }
-}
-
-#help-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 9500;
-  align-items: center;
-  justify-content: center;
-
-  &.visible {
-    display: flex;
-  }
-}
-
-#help-content {
-  background: var(--light);
-  border: 1px solid var(--lightgray);
-  border-radius: 0.5rem;
-  padding: 20px;
-  max-width: 460px;
-
-  h2 {
-    font-family: var(--headerFont);
-    color: var(--secondary);
-    margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 1rem;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  td {
-    padding: 3px 8px;
-    font-size: 0.75rem;
-    color: var(--darkgray);
-    font-family: var(--codeFont);
-
-    &:first-child {
-      color: var(--slate);
-      width: 110px;
-    }
-  }
 }

@@ -138,10 +138,20 @@ assert.ok(exists("static/data/gaggimate-calendar.json"))
 const morris = read("pages/morris-lecar.html")
 standardShell(morris, "Morris-Lecar Phase Plane")
 assert.match(morris, /data-frame="full-width"/)
-for (const id of ["phase-canvas", "ts-canvas", "bifurc-canvas", "sidebar"])
+for (const id of [
+  "phase-canvas",
+  "ts-canvas",
+  "bifurc-canvas",
+  "sidebar",
+  "ml-matrix",
+  "ml-spectrum",
+  "ml-local",
+  "ml-eigen-branch",
+])
   assert.match(morris, new RegExp(`id="${id}"`))
 assert.doesNotMatch(morris, /<script[^>]+morris-lecar\.js/i)
 assert.ok(exists("static/js/morris-lecar.js"))
+assert.ok(exists("static/js/morris-lecar-math.js"))
 const htmlFiles = []
 function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
