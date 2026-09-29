@@ -5,24 +5,28 @@
  * We only set page background + text color so the iframe blends with ewan.my.
  * Everything else is left to marimo.
  *
- * Light: #f5f1eb bg / #2d2520 text
- * Dark:  #1a1714 bg / #ebe7e1 text  (respects prefers-color-scheme + .dark class)
+ * Light: #f5f1eb bg / #303B49 text
+ * Dark:  #303B49 bg / #F5F1EB text  (respects prefers-color-scheme + .dark class)
  */
 
-html, body {
+html,
+body {
   background-color: #f5f1eb !important;
-  color: #2d2520 !important;
+  color: #303b49 !important;
 }
 
 @media (prefers-color-scheme: dark) {
-  html, body {
-    background-color: #1a1714 !important;
-    color: #ebe7e1 !important;
+  html,
+  body {
+    background-color: #303b49 !important;
+    color: #f5f1eb !important;
   }
 }
 
-html.dark, body.dark,
-[data-theme="dark"] body, [data-theme="dark"] html {
-  background-color: #1a1714 !important;
-  color: #ebe7e1 !important;
+html.dark,
+body.dark,
+[data-theme="dark"] body,
+[data-theme="dark"] html {
+  background-color: #303b49 !important;
+  color: #f5f1eb !important;
 }

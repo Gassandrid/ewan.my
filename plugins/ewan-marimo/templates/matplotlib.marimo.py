@@ -32,8 +32,8 @@ def _(plt):
     # not recompute its data. rc_context avoids changing other notebook plots.
     def decay_figure(x, y, theme="light"):
         palettes = {
-            "light": {"paper": "#f5f1eb", "ink": "#4a4238", "line": "#56706b"},
-            "dark": {"paper": "#1a1714", "ink": "#d4cec7", "line": "#a3b6b2"},
+            "light": {"paper": "#F5F1EB", "ink": "#4B5058", "line": "#587571"},
+            "dark": {"paper": "#303B49", "ink": "#E3DFD9", "line": "#a3b6b2"},
         }
         colors = palettes[theme]
         with plt.rc_context({
