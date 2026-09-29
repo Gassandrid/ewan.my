@@ -48,4 +48,4 @@ export default function Page() {
 `
 await fs.mkdir(path.dirname(target), { recursive: true })
 await fs.writeFile(target, source, { flag: "wx" })
-console.log(`Created ${path.relative(process.cwd(), target)} (draft). See docs/react-pages.md.`)
+console.log(`Created ${path.relative(process.cwd(), target)} (draft).`)

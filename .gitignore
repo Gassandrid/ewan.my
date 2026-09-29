@@ -6,6 +6,16 @@ tsconfig.tsbuildinfo
 .obsidian
 .quartz-cache
 private/
+# Local reference material and agent working notes. Still readable on disk.
+/docs/
+/scripts/
+/TECHNICAL_DEBT.md
+/plugins/**/README.md
+/.agents/
+/.claude/
+/.codex/
+/.claude-relay/
+/.mcp.json
 .replit
 replit.nix
 .quartz/
