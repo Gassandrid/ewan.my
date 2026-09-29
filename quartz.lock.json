@@ -163,6 +163,12 @@
       "commit": "local",
       "installedAt": "2026-09-07T22:40:28.584Z"
     },
+    "ewan-presence": {
+      "source": "./plugins/ewan-presence",
+      "resolved": "/Users/gassandrid/Lab/projects/ewan.my/plugins/ewan-presence",
+      "commit": "local",
+      "installedAt": "2026-09-29T01:33:20.718Z"
+    },
     "ewan-quartz-toc": {
       "source": "./plugins/ewan-quartz-toc",
       "resolved": "/private/tmp/ewan-my-v5-local/plugins/ewan-quartz-toc",

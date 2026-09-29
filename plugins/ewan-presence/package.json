@@ -1,0 +1,28 @@
+{
+  "name": "@ewan/quartz-presence",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "quartz": {
+    "name": "ewan-presence",
+    "displayName": "Homepage arrivals",
+    "description": "Shared homepage cursors and ephemeral arrivals powered by PlayHTML.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": [
+      "emitter",
+      "component"
+    ],
+    "components": {
+      "Presence": {
+        "displayName": "Homepage arrivals",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 5
+      }
+    }
+  }
+}

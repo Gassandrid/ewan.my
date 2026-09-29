@@ -57,6 +57,7 @@
     "micromorph": "^0.4.5",
     "minimatch": "^10.1.1",
     "node-tikzjax": "^1.0.5",
+    "playhtml": "2.15.0",
     "preact": "^10.28.2",
     "preact-render-to-string": "^6.6.5",
     "pretty-bytes": "^7.1.0",

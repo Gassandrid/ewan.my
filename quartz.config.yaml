@@ -168,6 +168,11 @@ plugins:
     layout:
       position: afterBody
       priority: 90
+  - source: ./plugins/ewan-presence
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 5
   - source: ./plugins/ewan-marimo-resources
     enabled: true
     order: 120
