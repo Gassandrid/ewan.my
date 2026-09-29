@@ -1,0 +1,24 @@
+{
+  "name": "@ewan/quartz-react-pages",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "scripts": {
+    "build": "node --check index.js"
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-react-pages",
+    "displayName": "React Pages",
+    "description": "Render first-class TSX pages in the standard Quartz shell.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "pageType",
+    "defaultOrder": 22
+  }
+}

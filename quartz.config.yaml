@@ -8,6 +8,8 @@ configuration:
     provider: plausible
   locale: en-US
   baseUrl: ewan.my
+  reactPages:
+    directory: pages
   ignorePatterns:
     - private
     - templates
@@ -172,12 +174,9 @@ plugins:
   - source: ./plugins/ewan-marimo
     enabled: true
     order: 20
-  - source: ./plugins/ewan-gaggimate-page
+  - source: ./plugins/ewan-react-pages
     enabled: true
     order: 22
-  - source: ./plugins/ewan-morris-lecar-page
-    enabled: true
-    order: 24
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/alias-redirects

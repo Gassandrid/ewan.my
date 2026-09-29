@@ -1,3 +1,4 @@
+import { compileReactPages, mergeReactPages, type Compilation } from "./custom-pages/compiler"
 import sourceMapSupport from "source-map-support"
 sourceMapSupport.install(options)
 import path from "path"
@@ -47,6 +48,8 @@ type BuildData = {
   contentMap: ContentMap
   changesSinceLastBuild: Record<FilePath, ChangeEvent["type"]>
   lastBuildMs: number
+  reactPages: Compilation
+  watchReactDependencies?: (dependencies: string[]) => void
 }
 
 async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
@@ -90,9 +93,12 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
   ctx.allFiles = allFiles
   ctx.allSlugs = allFiles.map((fp) => slugifyFilePath(fp as FilePath))
 
+  const reactPages = await compileReactPages(ctx)
+  ctx.allSlugs = [...new Set([...ctx.allSlugs, ...reactPages.slugs])]
   const parsedFiles = await parseMarkdown(ctx, filePaths)
-  reportSlugCollisions(parsedFiles)
-  const filteredContent = filterContent(ctx, parsedFiles)
+  const combined = mergeReactPages(parsedFiles, reactPages)
+  reportSlugCollisions(combined)
+  const filteredContent = filterContent(ctx, combined)
 
   await emitContent(ctx, filteredContent)
   console.log(
@@ -102,7 +108,7 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
 
   if (argv.watch) {
     ctx.incremental = true
-    return startWatching(ctx, mut, parsedFiles, clientRefresh)
+    return startWatching(ctx, mut, parsedFiles, clientRefresh, reactPages)
   }
 }
 
@@ -112,6 +118,7 @@ async function startWatching(
   mut: Mutex,
   initialContent: ProcessedContent[],
   clientRefresh: () => void,
+  reactPages: Compilation,
 ) {
   const { argv, allFiles } = ctx
 
@@ -155,6 +162,7 @@ async function startWatching(
 
     changesSinceLastBuild: {},
     lastBuildMs: 0,
+    reactPages,
   }
 
   const watcher = chokidar.watch(".", {
@@ -195,8 +203,30 @@ async function startWatching(
       scheduleRebuild()
     })
 
+  const pageWatcher = ctx.cfg.configuration.reactPages
+    ? chokidar.watch(
+        [
+          path.resolve(ctx.cfg.configuration.reactPages.directory),
+          path.resolve("quartz/custom-pages/api.tsx"),
+          ...reactPages.dependencies.filter(
+            (p) => !p.includes("node_modules") && !p.includes(".quartz-cache"),
+          ),
+        ],
+        { ignoreInitial: true, awaitWriteFinish: { stabilityThreshold: 250 } },
+      )
+    : undefined
+  pageWatcher?.on("all", () => {
+    changes.push({ path: "__react_pages__" as FilePath, type: "change" })
+    scheduleRebuild()
+  })
+  buildData.watchReactDependencies = (dependencies) => {
+    pageWatcher?.add(
+      dependencies.filter((p) => !p.includes("node_modules") && !p.includes(".quartz-cache")),
+    )
+  }
   return async () => {
     await watcher.close()
+    await pageWatcher?.close()
   }
 }
 
@@ -221,8 +251,17 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
 
     // update changesSinceLastBuild
     for (const change of changes) {
-      changesSinceLastBuild[change.path] = change.type
+      if (change.path !== "__react_pages__") changesSinceLastBuild[change.path] = change.type
     }
+    const previousReactPages = buildData.reactPages
+    const reactPages = await compileReactPages(ctx)
+    buildData.watchReactDependencies?.(reactPages.dependencies)
+    ctx.allSlugs = [
+      ...new Set([
+        ...Array.from(contentMap.keys()).map((fp) => slugifyFilePath(fp)),
+        ...reactPages.slugs,
+      ]),
+    ]
 
     const staticResources = getStaticResourcesFromPlugins(ctx)
     const pathsToParse: FilePath[] = []
@@ -283,13 +322,35 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
 
     // update allFiles and then allSlugs with the consistent view of content map
     ctx.allFiles = Array.from(contentMap.keys())
-    ctx.allSlugs = ctx.allFiles.map((fp) => slugifyFilePath(fp as FilePath))
+    ctx.allSlugs = [
+      ...new Set([
+        ...ctx.allFiles.map((fp) => slugifyFilePath(fp as FilePath)),
+        ...reactPages.slugs,
+      ]),
+    ]
 
     const markdownContent = Array.from(contentMap.values())
       .filter((file) => file.type === "markdown")
       .map((file) => file.content)
-    reportSlugCollisions(markdownContent)
-    let processedFiles = filterContent(ctx, markdownContent)
+    const combined = mergeReactPages(markdownContent, reactPages)
+    reportSlugCollisions(combined)
+    let processedFiles = filterContent(ctx, combined)
+    for (const [, file] of reactPages.content)
+      changeEvents.push({ type: "change", path: file.data.relativePath!, file })
+    const nextSlugs = new Set(
+      combined.flatMap(([, f]) => [
+        f.data.slug,
+        ...(Array.isArray(f.data.aliases) ? f.data.aliases : []),
+      ]),
+    )
+    for (const slug of previousReactPages.slugs)
+      if (!nextSlugs.has(slug)) {
+        await rm(joinSegments(argv.output, slug + ".html"), { force: true })
+      }
+    for (const [, file] of previousReactPages.content)
+      if (!nextSlugs.has(file.data.slug)) {
+        changeEvents.push({ type: "delete", path: file.data.relativePath!, file })
+      }
 
     let emittedFiles = 0
 
@@ -353,6 +414,7 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
       `Emitted ${emittedFiles} files to \`${argv.output}\` in ${perf.timeSince("rebuild")}`,
     )
     console.log(styleText("green", `Done rebuilding in ${perf.timeSince()}`))
+    buildData.reactPages = reactPages
     changes.splice(0, numChangesInBuild)
     clientRefresh()
   } finally {

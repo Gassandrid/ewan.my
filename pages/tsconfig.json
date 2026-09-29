@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "jsxImportSource": "react", "incremental": false },
+  "include": ["./**/*.ts", "./**/*.tsx", "../quartz/custom-pages/api.tsx"],
+  "exclude": ["../node_modules"]
+}

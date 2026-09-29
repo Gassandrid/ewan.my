@@ -582,20 +582,24 @@ export async function handleBuild(argv) {
     )
   } else {
     await build(clientRefresh)
-    ctx.dispose()
+    if (!argv.watch) await ctx.dispose()
   }
 
   if (argv.watch) {
-    const paths = await globby([
-      "**/*.ts",
-      "quartz/cli/*.js",
-      "quartz/static/**/*",
-      "**/*.tsx",
-      "**/*.scss",
-      "package.json",
-      "quartz.config.yaml",
-      "quartz.config.default.yaml",
-    ])
+    const pageDirectory = readPluginsJson()?.configuration?.reactPages?.directory
+    const pageRoot = pageDirectory ? path.resolve(pageDirectory) + path.sep : undefined
+    const paths = (
+      await globby([
+        "**/*.ts",
+        "quartz/cli/*.js",
+        "quartz/static/**/*",
+        "**/*.tsx",
+        "**/*.scss",
+        "package.json",
+        "quartz.config.yaml",
+        "quartz.config.default.yaml",
+      ])
+    ).filter((file) => !pageRoot || !path.resolve(file).startsWith(pageRoot))
     chokidar
       .watch(paths, { ignoreInitial: true })
       .on("add", () => build(clientRefresh))

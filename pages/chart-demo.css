@@ -1,0 +1,73 @@
+.rp-chart-demo section {
+  margin-block: 2.5rem;
+}
+.rp-chart-demo .rp-chart {
+  margin: 1rem 0;
+}
+.rp-chart-demo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.rp-chart-demo svg text {
+  fill: var(--darkgray);
+  font: 12px var(--bodyFont);
+}
+.rp-chart-demo .rp-chart-controls,
+.rp-chart-demo figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.rp-chart-demo figcaption {
+  font-size: 0.85rem;
+  margin-block: 0.5rem;
+}
+.rp-chart-demo figcaption span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.rp-chart-demo figcaption i {
+  width: 1rem;
+  height: 2px;
+}
+.rp-chart-demo select {
+  color: var(--dark);
+  background: var(--light);
+  border: 1px solid var(--gray);
+  padding: 0.5rem;
+  font: inherit;
+}
+.rp-chart-demo input {
+  accent-color: var(--pine);
+}
+.rp-chart-demo .rp-inspect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.rp-chart-demo .rp-inspect input {
+  flex: 1;
+  min-width: 100px;
+}
+.rp-chart-demo .rp-inspect output {
+  min-width: 10ch;
+}
+.rp-chart-demo .rp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.rp-chart-demo .rp-toggle input {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .rp-chart-demo svg text {
+    font-size: 24px;
+  }
+}
