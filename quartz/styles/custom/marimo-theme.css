@@ -6,20 +6,20 @@
  * Everything else is left to marimo.
  *
  * Light: #f5f1eb bg / #303B49 text
- * Dark:  #303B49 bg / #F5F1EB text  (respects prefers-color-scheme + .dark class)
+ * Dark:  #25262A bg / #EBE7E1 text  (respects prefers-color-scheme + .dark class)
  */
 
 html,
 body {
-  background-color: #f5f1eb !important;
+  background-color: #ebe7e1 !important;
   color: #303b49 !important;
 }
 
 @media (prefers-color-scheme: dark) {
   html,
   body {
-    background-color: #303b49 !important;
-    color: #f5f1eb !important;
+    background-color: #25262a !important;
+    color: #ebe7e1 !important;
   }
 }
 
@@ -27,6 +27,6 @@ html.dark,
 body.dark,
 [data-theme="dark"] body,
 [data-theme="dark"] html {
-  background-color: #303b49 !important;
-  color: #f5f1eb !important;
+  background-color: #25262a !important;
+  color: #ebe7e1 !important;
 }

@@ -53,11 +53,11 @@ configuration:
         slate: "#748C9C"
         mauve: "#A08A98"
       darkMode:
-        light: "#303B49"
-        lightgray: "#4B5058"
-        gray: "#92908E"
-        darkgray: "#E3DFD9"
-        dark: "#F5F1EB"
+        light: "#25262A"
+        lightgray: "#353436"
+        gray: "#8E8983"
+        darkgray: "#D4CEC7"
+        dark: "#EBE7E1"
         secondary: "#c59b8d"
         tertiary: "#a89a8d"
         highlight: rgba(197, 155, 141, 0.12)
