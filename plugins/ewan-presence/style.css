@@ -3,13 +3,14 @@
   container-type: inline-size;
   min-width: 0;
   margin: 1.5rem 0;
-  padding: 0.5rem 0 1rem;
-  border-bottom: 1px solid var(--lightgray);
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 5px;
   color: var(--darkgray);
   font: 0.85rem/1.5 var(--bodyFont);
 }
-.presence-head,
-.presence-foot {
+.presence-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,36 +80,8 @@
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
-.presence-empty,
-.presence-foot {
+.presence-empty {
   font-size: 0.75rem;
-}
-.presence-foot a {
-  color: var(--darkgray);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.presence-foot button {
-  color: var(--darkgray);
-  background: none;
-  border: 1px solid var(--lightgray);
-  border-radius: 3px;
-  padding: 0.4rem 0.65rem;
-  font: inherit;
-  cursor: pointer;
-  min-height: 44px;
-}
-.presence-foot button:hover {
-  color: var(--dark);
-  border-color: var(--secondary);
-}
-.presence-foot button:focus-visible {
-  outline: 2px solid var(--pine);
-  outline-offset: 3px;
-}
-.presence-foot button:disabled {
-  cursor: wait;
-  opacity: 0.6;
 }
 .ewan-shared-cursor {
   pointer-events: none !important;
@@ -183,10 +156,6 @@
 }
 .presence-columns > div {
   min-width: 0;
-}
-.presence-foot {
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 .sidebar.left > .presence-board {
   flex-shrink: 0;

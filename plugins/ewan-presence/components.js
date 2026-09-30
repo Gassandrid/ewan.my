@@ -30,7 +30,6 @@ export const LOADER = `(() => {
       board.dataset.state = 'offline';
       board.querySelector('[data-presence-status]').textContent = 'Shared space unavailable';
       board.querySelector('[data-arrivals]').textContent = 'The shared space could not load.';
-      board.querySelector('[data-presence-toggle]').hidden = true;
     }
   });
 })();`
@@ -85,21 +84,6 @@ export function Presence() {
             h("li", { class: "presence-empty" }, "None seen this visit."),
           ),
         ),
-      ),
-      h(
-        "div",
-        { class: "presence-foot" },
-        h(
-          "span",
-          null,
-          "Shared cursors · ",
-          h(
-            "a",
-            { href: "https://playhtml.fun/", target: "_blank", rel: "noopener noreferrer" },
-            "PlayHTML",
-          ),
-        ),
-        h("button", { type: "button", "data-presence-toggle": "", disabled: true }, "Leave space"),
       ),
       h("noscript", null, "Enable JavaScript to join the shared space."),
     )

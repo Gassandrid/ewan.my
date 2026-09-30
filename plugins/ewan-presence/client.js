@@ -93,13 +93,6 @@ export function mount(board) {
   const status = board.querySelector("[data-presence-status]")
   const arrivals = board.querySelector("[data-arrivals]")
   const departed = board.querySelector("[data-departures]")
-  const toggle = board.querySelector("[data-presence-toggle]")
-  let paused = false
-  try {
-    paused = sessionStorage.getItem("ewan-presence-paused") === "true"
-  } catch {
-    /* storage is optional */
-  }
 
   function setState(state, label) {
     board.dataset.state = state
@@ -187,17 +180,14 @@ export function mount(board) {
     if (disposed) return
     disconnect()
     setState("offline", "Shared space unavailable")
-    arrivals.replaceChildren(note("Connection lost. Try joining again."))
-    toggle.disabled = false
-    toggle.textContent = "Join space"
+    arrivals.replaceChildren(note("Connection lost. Reload to reconnect."))
   }
 
   async function connect() {
-    if (disposed || paused) return
+    if (disposed) return
     disconnect()
     const ticket = epoch
     setState("connecting", "Connecting…")
-    toggle.disabled = true
     timeout = setTimeout(unavailable, 12000)
     try {
       await playhtml.init({
@@ -219,46 +209,23 @@ export function mount(board) {
       unsubscribe = playhtml.presence.onPresenceChange(CHANNEL, render)
       playhtml.presence.setMyPresence(CHANNEL, { at: Date.now() })
       render(playhtml.presence.getPresences())
-      toggle.disabled = false
-      toggle.textContent = "Leave space"
     } catch {
       if (ticket === epoch) unavailable()
     }
   }
 
-  function leave() {
-    disconnect()
-    setState("paused", "You’ve left the space")
-    arrivals.replaceChildren(note("Join to share cursors with other visitors."))
-    toggle.disabled = false
-    toggle.textContent = "Join space"
-  }
-
-  function toggleSpace() {
-    paused = joined
-    try {
-      sessionStorage.setItem("ewan-presence-paused", String(paused))
-    } catch {
-      /* optional */
-    }
-    if (paused) leave()
-    else void connect()
-  }
   const offline = () => unavailable()
   const pagehide = () => disconnect()
   const pageshow = (event) => {
     if (event.persisted) void connect()
   }
-  toggle.addEventListener("click", toggleSpace)
   window.addEventListener("offline", offline)
   window.addEventListener("pagehide", pagehide)
   window.addEventListener("pageshow", pageshow)
-  if (paused) leave()
-  else void connect()
+  void connect()
   function dispose() {
     disposed = true
     disconnect()
-    toggle.removeEventListener("click", toggleSpace)
     window.removeEventListener("offline", offline)
     window.removeEventListener("pagehide", pagehide)
     window.removeEventListener("pageshow", pageshow)
