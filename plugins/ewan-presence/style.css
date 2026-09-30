@@ -1,7 +1,10 @@
 .presence-board {
-  margin: 2rem 0;
-  padding: 1rem 0;
-  border-block: 1px solid var(--lightgray);
+  position: relative;
+  container-type: inline-size;
+  min-width: 0;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0 1rem;
+  border-bottom: 1px solid var(--lightgray);
   color: var(--darkgray);
   font: 0.85rem/1.5 var(--bodyFont);
 }
@@ -14,7 +17,7 @@
 }
 .presence-title {
   color: var(--dark);
-  font-weight: 600;
+  font: italic 1.15rem/1.3 var(--headerFont);
 }
 .presence-head [role="status"] {
   font-size: 0.75rem;
@@ -34,7 +37,7 @@
 .presence-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.25rem;
   margin: 1rem 0;
 }
 .presence-columns h2 {
@@ -50,6 +53,7 @@
   list-style: none;
 }
 .presence-columns li {
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -92,7 +96,7 @@
   padding: 0.4rem 0.65rem;
   font: inherit;
   cursor: pointer;
-  min-height: 36px;
+  min-height: 44px;
 }
 .presence-foot button:hover {
   color: var(--dark);
@@ -156,5 +160,59 @@
   .presence-board,
   .ewan-shared-cursor {
     display: none !important;
+  }
+}
+
+/* Botanical linework uses the shared theme in both modes. */
+.presence-garden {
+  display: block;
+  width: 180px;
+  height: 48px;
+  margin: 0 auto 0.5rem;
+  stroke: var(--pine);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.presence-garden circle {
+  fill: var(--ochre);
+  stroke: none;
+}
+.presence-spark {
+  stroke: var(--secondary);
+}
+.presence-columns > div {
+  min-width: 0;
+}
+.presence-foot {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.sidebar.left > .presence-board {
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0;
+}
+@container (max-width: 340px) {
+  .presence-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .presence-columns {
+    grid-template-columns: 1fr;
+  }
+  .presence-columns li {
+    flex-wrap: nowrap;
+  }
+  .presence-columns time {
+    flex-basis: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .page > #quartz-body > .sidebar.left:has(> .presence-board) {
+    overflow-y: auto;
+    scrollbar-width: thin;
   }
 }

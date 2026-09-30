@@ -1,425 +1,227 @@
-@use "./variables.scss" as *;
-
-.code-wrapper {
-  margin-bottom: 2rem;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
-    transform: translateY(-2px);
-  }
-}
-
-.code-block {
-  width: 100%;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  position: relative;
-
-  background: var(--lightgray);
+// Runnable examples share the article's paper, ink, and code typography.
+.code-wrapper[data-python-run] {
+  margin: 1.25rem 0 1.75rem;
+  min-width: 0;
   border: 1px solid var(--lightgray);
-
-  [saved-theme="light"] & {
-    background: color-mix(in srgb, var(--lightgray), var(--dark) 18%);
-  }
-}
-
-.code-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.4rem 1rem;
-  position: relative;
-
-  background: var(--light);
-  border-bottom: 1px solid var(--lightgray);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--secondary) 0%, var(--tertiary) 100%);
-  }
-}
-
-.code-language {
-  font-family: var(--codeFont);
-  font-size: 0.875rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  color: var(--darkgray);
-
-  &::before {
-    content: "";
-    font-size: 1rem;
-  }
-}
-
-.code-actions {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.code-actions button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  border-radius: 6px;
   overflow: hidden;
-
-  color: var(--darkgray);
-  background: rgba(148, 163, 184, 0.1);
-
-  &:hover {
-    color: var(--secondary);
-    background: rgba(148, 163, 184, 0.2);
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition:
-      width 0.3s,
-      height 0.3s;
-  }
-
-  &:active::before {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.code-content {
-  position: relative;
-  height: 150px;
-  overflow: hidden;
-  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  &.expanded {
-    height: auto;
-    max-height: 600px;
-    overflow-y: auto;
-  }
-
-  &.expanding {
-    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-
-.CodeMirror {
-  height: 100% !important;
-  background: transparent !important;
-  font-family: var(--codeFont) !important;
-
-  .CodeMirror-gutters {
-    background: transparent !important;
-    border-right: none !important;
-  }
-
-  .CodeMirror-linenumber {
-    color: var(--gray) !important;
-  }
-}
-
-.code-gradient {
-  display: none;
-}
-
-.spinner {
-  display: none;
-  width: 16px;
-  height: 16px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  vertical-align: middle;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.play-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  display: inline;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-  .code-actions button:hover & {
-    transform: scale(1.1);
-  }
-}
-
-.output-wrapper {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 0 0 0.75rem 0.75rem;
-  margin-top: -1px;
-  position: relative;
-
+  color: var(--dark);
   background: var(--light);
-  border: 1px solid var(--lightgray);
-  border-top: none;
-
-  &.expanded {
-    max-height: 800px;
-    overflow-y: auto;
-
-    animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.output-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.4rem 1rem;
-  position: relative;
-
-  background: var(--light);
-  border-bottom: 1px solid var(--lightgray);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--tertiary) 0%, var(--secondary) 100%);
-  }
-}
-
-.output-title {
-  font-family: var(--codeFont);
-  font-size: 0.875rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  color: var(--darkgray);
-
-  &::before {
-    content: "";
-    font-size: 1rem;
-  }
-}
-
-.close-output-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: var(--darkgray);
-  background: rgba(148, 163, 184, 0.1);
-
-  &:hover {
-    color: var(--red);
-    background: rgba(239, 68, 68, 0.1);
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-}
-
-.output-content {
-  font-family: var(--codeFont);
-  font-size: 0.875rem;
-  padding: 1rem;
-  white-space: pre-wrap;
-  word-break: break-word;
-  line-height: 1.6;
-
-  color: var(--darkgray);
-  background: var(--light);
-}
-
-.python-text {
-  margin-bottom: 1rem;
-
-  &:empty {
-    display: none;
-  }
-}
-
-.python-plot {
-  margin-top: 1rem;
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      transform: scale(1.02);
-    }
-  }
-}
-
-.output-content {
-  &.success {
-    border-left: 4px solid #10b981;
-    padding-left: 1.5rem;
-
-    &::before {
-      content: "";
-      margin-right: 0.5rem;
-    }
-  }
-
-  &.error {
-    border-left: 4px solid #ef4444;
-    padding-left: 1.5rem;
-
-    &::before {
-      content: "";
-      margin-right: 0.5rem;
-    }
-  }
-}
-
-.code-actions button.loading {
-  .play-icon {
-    display: none;
-  }
-
-  .spinner {
-    display: inline-block;
-  }
-}
-
-.code-actions button.copied {
-  animation: copySuccess 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes copySuccess {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@media all and ($mobile) {
-  .code-wrapper {
-    margin-bottom: 1.5rem;
-  }
 
   .code-header,
   .output-header {
-    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.3rem 0.75rem;
+    border-bottom: 1px solid var(--lightgray);
+    background: color-mix(in srgb, var(--lightgray) 25%, var(--light));
   }
 
-  .output-content {
-    padding: 0.75rem;
+  .code-language,
+  .output-title {
+    color: var(--darkgray);
+    font: 0.75rem var(--codeFont);
+  }
+
+  .python-status {
+    flex: 1;
+    min-width: 0;
+    color: var(--darkgray);
+    font: 0.75rem var(--bodyFont);
   }
 
   .code-actions {
+    display: flex;
+    align-items: center;
     gap: 0.25rem;
+    margin-left: auto;
   }
 
-  .code-actions button {
-    padding: 0.375rem;
-  }
-}
-
-.code-actions button:focus-visible,
-.close-output-btn:focus-visible {
-  outline: 2px solid var(--secondary);
-  outline-offset: 2px;
-}
-
-.output-wrapper.expanded {
-  scroll-behavior: smooth;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--light);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-
-    background: var(--lightgray);
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 36px;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: var(--darkgray);
+    background: transparent;
+    font: 0.8rem var(--bodyFont);
+    cursor: pointer;
 
     &:hover {
-      background: var(--gray);
+      color: var(--dark);
+      background: var(--highlight);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--pine);
+      outline-offset: -2px;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: wait;
+    }
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  .python-run-button {
+    color: var(--dark);
+    border-color: var(--lightgray);
+    .play-icon {
+      font-size: 0.65rem;
+    }
+    &.loading {
+      color: var(--rust);
+    }
+  }
+
+  .code-content {
+    max-height: 17rem;
+    overflow: auto;
+    &.expanded {
+      max-height: min(36rem, 70vh);
+    }
+  }
+
+  textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 6rem;
+    padding: 0.9rem 1rem;
+    border: 0;
+    resize: vertical;
+    color: var(--dark);
+    background: var(--light);
+    font: 0.875rem/1.65 var(--codeFont);
+    tab-size: 4;
+    &:focus-visible {
+      outline: 2px solid var(--pine);
+      outline-offset: -2px;
+    }
+  }
+
+  .CodeMirror {
+    height: auto;
+    color: var(--dark);
+    background: var(--light);
+    font: 0.875rem/1.65 var(--codeFont);
+    .CodeMirror-lines {
+      padding: 0.85rem 0;
+    }
+    .CodeMirror-gutters {
+      background: var(--light);
+      border: 0;
+    }
+    .CodeMirror-linenumber {
+      padding-inline: 0.6rem;
+      color: var(--darkgray);
+      opacity: 0.65;
+    }
+    .CodeMirror-cursor {
+      border-left-color: var(--dark);
+    }
+    .CodeMirror-selected {
+      background: var(--highlight);
+    }
+    .cm-keyword,
+    .cm-operator {
+      color: var(--rust);
+    }
+    .cm-number,
+    .cm-atom {
+      color: var(--mauve);
+    }
+    .cm-string {
+      color: var(--pine);
+    }
+    .cm-def,
+    .cm-builtin {
+      color: var(--dark);
+    }
+    .cm-comment {
+      color: var(--darkgray);
+      font-style: italic;
+    }
+    .cm-variable,
+    .cm-property {
+      color: var(--dark);
+    }
+    .cm-meta {
+      color: var(--secondary);
+    }
+    .cm-error {
+      text-decoration: underline wavy var(--rust);
+    }
+  }
+
+  .output-wrapper {
+    border-top: 1px solid var(--lightgray);
+    &[hidden] {
+      display: none;
+    }
+  }
+  .output-header {
+    border-bottom: 0;
+  }
+  .close-output-btn {
+    margin-left: auto;
+  }
+  .output-content {
+    max-height: min(40rem, 75vh);
+    overflow: auto;
+    padding: 0.75rem 1rem 1rem;
+    font: 0.85rem/1.65 var(--codeFont);
+  }
+  .python-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    &:empty {
+      display: none;
+    }
+    &.error {
+      border-left: 2px solid var(--rust);
+      padding-left: 0.75rem;
+    }
+  }
+  .python-plot {
+    &:empty {
+      display: none;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0.75rem auto 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .code-header {
+      flex-wrap: wrap;
+      gap: 0.15rem 0.5rem;
+      padding-inline: 0.5rem;
+    }
+    .python-status:not(:empty) {
+      order: 3;
+      flex-basis: 100%;
+      padding: 0.15rem 0 0.4rem;
+    }
+    button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    textarea {
+      font-size: 1rem;
+    }
+    // Avoid iOS zoom when the hidden CodeMirror input receives focus.
+    .CodeMirror textarea {
+      font-size: 1rem;
     }
   }
 }

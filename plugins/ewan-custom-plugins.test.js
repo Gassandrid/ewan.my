@@ -30,8 +30,10 @@ test("RunPython emits escaped runnable blocks and lazy runtimes", () => {
   assert.match(r.value, /data-python-run=/)
   assert.match(r.value, /&lt;safe&gt;/)
   const s = p.externalResources().js[0].script
-  assert.match(s, /loadPyodideRuntime/)
-  assert.match(s, /loadEditorRuntime/)
+  assert.match(s, /import\("\/static\/js\/python-runner\.js"\)/)
+  assert.match(s, /root\?\.querySelector/)
+  assert.match(s, /ticket === generation/)
+  assert.doesNotMatch(s, /cdn\.jsdelivr|cdnjs/)
   assert.equal(p.externalResources().js[0].src, undefined)
 })
 test("charts and CalPlot share demand-loaded D3", () => {

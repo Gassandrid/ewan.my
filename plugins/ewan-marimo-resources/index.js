@@ -46,6 +46,11 @@ export function createMarimoLoader(routes = []) {
   ${THEME_RUNTIME}
   var watchMarkdown = watchObsidianEmbeds;
 
+  function activeNotebook() {
+    return Array.from(document.querySelectorAll(".marimo-notebook-page"))
+      .find(function(page) { return !page.closest(".popover"); }) || null;
+  }
+
   function normalizedPath(value) {
     var pathname;
     try {
@@ -95,6 +100,9 @@ export function createMarimoLoader(routes = []) {
     if (!full && (navigator.connection?.saveData || /(?:slow-)?2g/.test(navigator.connection?.effectiveType || ""))) return;
     ensureConnection(${JSON.stringify(MARIMO_CDN_ORIGIN)});
     ensureConnection("https://wasm.marimo.app");
+    // Hover only warms the connection. Module preloads pull the full import
+    // graph even when the reader never opens the notebook.
+    if (!full) return;
     ensureHint("modulepreload", runtimeUrl);
 
     ensureHint("preload", styleUrl, "style");
@@ -194,7 +202,7 @@ export function createMarimoLoader(routes = []) {
     script.dataset.persist = "true";
     script.addEventListener("error", function() {
       script.remove();
-      setState(document.querySelector(".marimo-notebook-page"), "error", "Python runtime failed to download. Reload to retry.");
+      setState(activeNotebook(), "error", "Python runtime failed to download. Reload to retry.");
     });
     document.head.appendChild(script);
   }
@@ -206,7 +214,7 @@ export function createMarimoLoader(routes = []) {
   }
 
   function ensure() {
-    var page = document.querySelector(".marimo-notebook-page");
+    var page = activeNotebook();
     var hasIslands = Boolean(page && page.querySelector("marimo-island"));
     syncExportTrust(hasIslands);
     if (!hasIslands) {

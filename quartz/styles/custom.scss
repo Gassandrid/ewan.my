@@ -53,7 +53,7 @@ article > .markdown-rendered {
 // ewanfont
 @font-face {
   font-family: "ewanfont";
-  src: url("/static/ewanfont/book.otf") format("opentype");
+  src: url("/static/ewanfont/book.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -61,7 +61,7 @@ article > .markdown-rendered {
 
 @font-face {
   font-family: "ewanfont";
-  src: url("/static/ewanfont/italic.otf") format("opentype");
+  src: url("/static/ewanfont/italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -69,7 +69,7 @@ article > .markdown-rendered {
 
 @font-face {
   font-family: "ewanfont";
-  src: url("/static/ewanfont/medium.otf") format("opentype");
+  src: url("/static/ewanfont/medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -77,7 +77,7 @@ article > .markdown-rendered {
 
 @font-face {
   font-family: "ewanfont";
-  src: url("/static/ewanfont/medium.otf") format("opentype");
+  src: url("/static/ewanfont/medium.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -85,7 +85,7 @@ article > .markdown-rendered {
 
 @font-face {
   font-family: "ewanfont";
-  src: url("/static/ewanfont/semibolditalic.otf") format("opentype");
+  src: url("/static/ewanfont/semibolditalic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;

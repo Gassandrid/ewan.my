@@ -2,12 +2,9 @@
   "name": "@ewan/quartz-marimo-resources",
   "version": "0.1.0",
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "exports": {
-    ".": "./dist/index.js"
-  },
-  "scripts": {
-    "build": "mkdir -p dist && cp index.js obsidian-embeds.js theme.js dist/"
+    ".": "./index.js"
   },
   "peerDependencies": {
     "preact": "^10.28.2"
