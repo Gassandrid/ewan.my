@@ -33,7 +33,10 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: Lora
+      header:
+        name: IM Fell DW Pica
+        weights: [400]
+        includeItalic: true
       body: ewanfont
       code: IBM Plex Mono
     colors:

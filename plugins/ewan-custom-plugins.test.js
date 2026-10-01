@@ -2,7 +2,7 @@ import assert from "node:assert/strict"
 import test from "node:test"
 import EwanCharts from "./ewan-charts/index.js"
 import EwanCitations from "./ewan-citations/index.js"
-import EwanFonts, { LORA_STYLESHEET } from "./ewan-fonts/index.js"
+import EwanFonts, { HEADING_STYLESHEET } from "./ewan-fonts/index.js"
 import GaggiMatePage from "./ewan-gaggimate-page/index.js"
 import { patchGraphRuntime } from "./ewan-graph/components.js"
 import { LorenzBackground } from "./ewan-lorenz/components.js"
@@ -97,8 +97,8 @@ test("expensive runtimes are guarded", () => {
 })
 
 test("v4 typography and proportional TOC remain available", () => {
-  assert.equal(EwanFonts().externalResources().css[0].content, LORA_STYLESHEET)
-  assert.match(LORA_STYLESHEET, /Lora:ital,wght/)
+  assert.equal(EwanFonts().externalResources().css[0].content, HEADING_STYLESHEET)
+  assert.match(HEADING_STYLESHEET, /IM\+Fell\+DW\+Pica:ital@0;1/)
   const toc = QuartzTOC()
   assert.match(toc.css, /quartztoc-rail-thumb/)
   assert.match(toc.afterDOMLoaded, /--toc-y/)
