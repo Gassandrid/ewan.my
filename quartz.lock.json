@@ -199,6 +199,12 @@
       "commit": "local",
       "installedAt": "2026-07-28T00:47:15.718Z"
     },
+    "ewan-search": {
+      "source": "./plugins/ewan-search",
+      "resolved": "/Users/gassandrid/Lab/projects/ewan.my/plugins/ewan-search",
+      "commit": "local",
+      "installedAt": "2026-10-01T13:07:25.072Z"
+    },
     "ewan-svg-embeds": {
       "source": "./plugins/ewan-svg-embeds",
       "resolved": "/private/tmp/ewan-my-v5-local/plugins/ewan-svg-embeds",

@@ -1,0 +1,32 @@
+{
+  "name": "@ewan/quartz-search",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "scripts": {
+    "build": "node --check components.js"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-search",
+    "displayName": "Ewan Search",
+    "description": "Quartz search with inert notebook previews and consistent navigation.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 50,
+    "components": {
+      "Search": {
+        "displayName": "Search",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 20
+      }
+    }
+  }
+}

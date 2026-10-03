@@ -48,7 +48,7 @@ export function createMarimoLoader(routes = []) {
 
   function activeNotebook() {
     return Array.from(document.querySelectorAll(".marimo-notebook-page"))
-      .find(function(page) { return !page.closest(".popover"); }) || null;
+      .find(function(page) { return !page.closest(".popover, .search, .preview-container"); }) || null;
   }
 
   function normalizedPath(value) {
@@ -230,7 +230,7 @@ export function createMarimoLoader(routes = []) {
     }
 
     var route = normalizedPath(window.location.pathname);
-    if (mountedPage && mountedPage !== page && customElements.get("marimo-island")) {
+    if (mountedPage && mountedPage !== page && document.querySelector("script[data-ewan-marimo-runtime]")) {
       hardNavigateCurrentPage();
       return;
     }
@@ -267,7 +267,7 @@ export function createMarimoLoader(routes = []) {
     var anchor = event.target?.closest?.("a[href]");
     if (!mountedRoute || !isMarimoLink(anchor)) return;
     var targetRoute = normalizedPath(anchor.href);
-    if (targetRoute === mountedRoute || !customElements.get("marimo-island")) return;
+    if (targetRoute === mountedRoute || !document.querySelector("script[data-ewan-marimo-runtime]")) return;
     event.preventDefault();
     event.stopImmediatePropagation();
     window.location.assign(anchor.href);
@@ -275,9 +275,23 @@ export function createMarimoLoader(routes = []) {
   document.addEventListener("nav", function() {
     window.setTimeout(ensure, 0);
   });
+  document.addEventListener("prenav", function(event) {
+    if (!mountedPage || !document.querySelector("script[data-ewan-marimo-runtime]")) return;
+    var target = event.detail?.url;
+    if (!target || !marimoRoutes.has(normalizedPath(target))) return;
+    // The pinned runtime has no session teardown. Apply this boundary before
+    // DOM replacement, including keyboard search, programmatic nav and Back.
+    event.preventDefault();
+    if (event.detail.isBack) window.location.replace(target);
+    else window.location.assign(target);
+  });
 
   window.__ewanMarimoLoader = { ensure: ensure, preload: preload };
-  ensure();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", ensure, { once: true });
+  } else {
+    ensure();
+  }
 })();
 `
 }

@@ -97,7 +97,11 @@ assert.ok(
 const eigenfish = read("thoughts/eigenfish.html")
 assert.match(eigenfish, /data-marimo-runtime="0\.23\.9"/)
 assert.match(eigenfish, /eigenfish-figure/)
-assert.match(eigenfish, /marimo-matrix/)
+// Controls are created by browser Python; the site build exports code only.
+assert.match(eigenfish, /<marimo-cell-code\b/)
+assert.match(eigenfish, /mo\.ui\.matrix\(/)
+assert.match(eigenfish, /data-reactive="true"/)
+assert.doesNotMatch(eigenfish, /<marimo-matrix\b/)
 
 let marimoPagesProbed = 0
 for (const [file, title, islands] of [

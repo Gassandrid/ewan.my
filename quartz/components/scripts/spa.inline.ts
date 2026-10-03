@@ -84,8 +84,14 @@ async function _navigate(url: URL, isBack: boolean = false) {
   if (!contents) return
 
   // notify about to nav
-  const event: CustomEventMap["prenav"] = new CustomEvent("prenav", { detail: {} })
+  const event: CustomEventMap["prenav"] = new CustomEvent("prenav", {
+    detail: { url: url.href, isBack },
+    cancelable: true,
+  })
+  // Runtime integrations can choose a document navigation before custom
+  // elements from two different pages are reconciled into the same DOM.
   document.dispatchEvent(event)
+  if (event.defaultPrevented) return
 
   // cleanup old
   cleanupFns.forEach((fn) => fn())

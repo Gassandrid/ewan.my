@@ -226,6 +226,8 @@ plugins:
       position: left
       priority: 10
   - source: github:quartz-community/search
+    enabled: false
+  - source: ./plugins/ewan-search
     enabled: true
     layout:
       position: beforeBody

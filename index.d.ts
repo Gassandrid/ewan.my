@@ -5,7 +5,7 @@ declare module "*.scss" {
 
 // dom custom event
 interface CustomEventMap {
-  prenav: CustomEvent<{}>
+  prenav: CustomEvent<{ url: string; isBack: boolean }>
   nav: CustomEvent<{ url: FullSlug }>
   themechange: CustomEvent<{ theme: "light" | "dark" }>
   readermodechange: CustomEvent<{ mode: "on" | "off" }>

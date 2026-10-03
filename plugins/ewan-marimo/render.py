@@ -1,4 +1,3 @@
-import asyncio
 import json
 import sys
 from pathlib import Path
@@ -22,8 +21,8 @@ def main() -> None:
     generator._config = source._config
     generator._source_filename = source._source_filename
     # Install once, then express an explicit graph dependency from every cell.
-    # Original Python strings/f-strings stay untouched; both preview execution
-    # and Pyodide use the same compiled cells and the native mo.md/Html API.
+    # Original Python strings/f-strings stay untouched. Pyodide runs the
+    # compiled cells through the native mo.md/Html API.
     extension = Path(__file__).with_name("obsidian.py").read_text()
     context = json.dumps(payload.get("markdownContext", {}))
     generator.add_code(
@@ -38,9 +37,8 @@ def main() -> None:
     for stub in source._stubs:
         generator.add_code("ewan_obsidian_ready\n" + stub.code, display_code=False)
 
-    if payload.get("staticPreview"):
-        asyncio.run(generator.build())
-
+    # Export code without executing a second Python session during site builds.
+    # The browser runtime assigns the cell identities for this live notebook.
     body = generator.render_body(max_width="none", margin="0")
     print(
         json.dumps(

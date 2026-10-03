@@ -1,5 +1,4 @@
 # description: Shape an eigenvalue creature by editing a matrix and its torus-sampled entries.
-# static-preview: true
 # /// script
 # requires-python = ">=3.14"
 # dependencies = [
@@ -17,14 +16,13 @@ app = marimo.App(width="full", app_title="Eigenfish")
 @app.cell(hide_code=True)
 def _():
     import base64
-    import os
     import struct
     import zlib
 
     import marimo as mo
     import numpy as np
 
-    return base64, mo, np, os, struct, zlib
+    return base64, mo, np, struct, zlib
 
 
 @app.cell(hide_code=True)
@@ -248,21 +246,15 @@ def _(
     mask_editor,
     matrix_editor,
     np,
-    os,
     radius,
     samples,
 ):
     base_matrix = decode_matrix(matrix_editor.value)
     variable_mask = np.asarray(mask_editor.value, dtype=float) >= 0.5
-    effective_samples = (
-        min(samples.value, 2000)
-        if os.environ.get("EWAN_MARIMO_STATIC_PREVIEW") == "1"
-        else samples.value
-    )
     eigenvalues = eigenfish_torus(
         base_matrix,
         variable_mask,
-        effective_samples,
+        samples.value,
         radius.value,
     )
     return eigenvalues, variable_mask

@@ -13,12 +13,14 @@
   --marimo-quartz-accent: var(--secondary);
   --marimo-text-font: var(--bodyFont);
   --marimo-heading-font: var(--headerFont);
+  --marimo-monospace-font: var(--codeFont);
 }
 
 .marimo-notebook-page {
   display: flow-root;
   color: var(--marimo-quartz-text);
   container-type: inline-size;
+  min-width: 0;
 
   // The islands runtime and its widget shadow roots inherit these variables.
   // Mapping them to Quartz prevents the runtime's default light palette from
@@ -133,21 +135,17 @@
     background-color: transparent !important;
   }
 
-  // Custom loading indicator. Visible until any reactive island gets a
-  // `data-status` attribute (set by the runtime when its cell finishes).
+  // Keep startup feedback in the article flow until every reactive cell is idle.
   .marimo-loading {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     width: fit-content;
-    padding: 0.48rem 0.7rem;
-    margin: 0 0 1rem auto;
-    border: 1px solid color-mix(in srgb, var(--lightgray) 78%, transparent);
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--light) 82%, transparent);
-    color: var(--gray);
-    font-size: 0.76rem;
-    letter-spacing: 0.025em;
+    padding: 0.5rem 0;
+    margin: 0 0 1rem;
+    border-bottom: 1px solid var(--marimo-quartz-border);
+    color: var(--marimo-quartz-text);
+    font: 400 0.875rem/1.5 var(--bodyFont);
   }
 
   .marimo-loading-spinner {
@@ -172,6 +170,11 @@
   &[data-marimo-state="error"] .marimo-loading {
     border-color: color-mix(in srgb, var(--rust) 58%, var(--lightgray));
     color: var(--rust);
+  }
+
+  &[data-marimo-state="error"] .marimo-loading-spinner {
+    animation: none;
+    border-color: currentColor;
   }
 
   // The native matrix control is the visual center of Eigenfish. Keep both
@@ -251,6 +254,53 @@
   --link: var(--marimo-quartz-accent) !important;
   --text-font: var(--marimo-text-font) !important;
   --heading-font: var(--marimo-heading-font) !important;
+  --monospace-font: var(--marimo-monospace-font, var(--codeFont)) !important;
+  --radius: 4px !important;
+  font-family: var(--marimo-text-font, var(--bodyFont));
+
+  :is(button, input, select, textarea) {
+    font-family: inherit;
+  }
+
+  :is(button, input, select, textarea, [role="slider"]):focus-visible {
+    outline: 2px solid var(--marimo-quartz-accent);
+    outline-offset: 3px;
+  }
+
+  // Native hstacks of controls should wrap before pushing past the article.
+  // Keep chart/table layouts alone; this applies to direct UI control rows.
+  div:is([style*="flex-flow: row"], [style*="flex-direction: row"]):has(
+      > marimo-ui-element > :is(marimo-slider, marimo-dropdown, marimo-number, marimo-button),
+      > div > marimo-ui-element > :is(marimo-slider, marimo-dropdown, marimo-number, marimo-button)
+    ) {
+    flex-wrap: wrap !important;
+    gap: 0.75rem 1.25rem !important;
+
+    > marimo-ui-element,
+    > div:has(> marimo-ui-element) {
+      display: block;
+      flex: 1 1 15rem !important;
+      min-width: 0;
+
+      @media all and (max-width: 48rem) {
+        // The mobile hstack becomes a column; a width basis would become height.
+        flex: 0 1 auto !important;
+      }
+    }
+  }
+}
+
+// Native sliders use fixed Tailwind blue/slate utilities in light mode, even
+// when --primary is themed. Map those tokens inside the slider's shadow root.
+:host(marimo-slider) .marimo {
+  --color-blue-500: var(--marimo-quartz-accent);
+  --color-blue-300: color-mix(
+    in srgb,
+    var(--marimo-quartz-accent) 25%,
+    var(--marimo-quartz-background)
+  );
+  --color-slate-200: var(--marimo-quartz-border);
+  --color-white: var(--marimo-quartz-background);
 }
 
 // The islands runtime adopts the page stylesheet inside each cell's shadow
@@ -304,6 +354,13 @@
   code {
     background: color-mix(in srgb, var(--marimo-quartz-border) 58%, transparent) !important;
     color: var(--marimo-quartz-text, var(--darkgray)) !important;
+    font-family: var(--codeFont) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marimo-loading-spinner {
+    animation: none !important;
   }
 }
 

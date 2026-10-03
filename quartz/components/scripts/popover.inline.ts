@@ -109,7 +109,7 @@ async function mouseEnterHandler(
       elts.forEach((elt) => popoverInner.appendChild(elt))
   }
 
-  if (!!document.getElementById(popoverId)) {
+  if (!link.isConnected || document.getElementById(popoverId)) {
     return
   }
 
@@ -141,3 +141,4 @@ function setupPopovers() {
 
 document.addEventListener("nav", setupPopovers)
 document.addEventListener("render", setupPopovers)
+document.addEventListener("prenav", clearActivePopover)

@@ -111,10 +111,6 @@ function parseTags(src) {
     .filter(Boolean)
 }
 
-function parseStaticPreview(src) {
-  return /^#\s*static-preview:\s*true\s*$/im.test(src)
-}
-
 function parseRenderJson(stdout) {
   const lines = stdout
     .split(/\r?\n/)
@@ -144,10 +140,7 @@ function resolvePython() {
   )
 }
 
-function renderIsland(
-  notebookPath,
-  { failOnError, runtimeVersion, markdownContext, staticPreview },
-) {
+function renderIsland(notebookPath, { failOnError, runtimeVersion, markdownContext }) {
   const stat = fs.statSync(notebookPath)
   const compilerStamp = [
     RENDER_SCRIPT_PATH,
@@ -156,7 +149,7 @@ function renderIsland(
   ]
     .map((fp) => fs.statSync(fp).mtimeMs)
     .join(":")
-  const cacheKey = `${compilerStamp}:${stat.mtimeMs}:${runtimeVersion}:${staticPreview}:${JSON.stringify(markdownContext)}`
+  const cacheKey = `${compilerStamp}:${stat.mtimeMs}:${runtimeVersion}:${JSON.stringify(markdownContext)}`
   const cached = renderCache.get(notebookPath)
   if (cached?.key === cacheKey) return cached.value
 
@@ -168,11 +161,7 @@ function renderIsland(
 
   const result = spawnSync(resolvePython(), [RENDER_SCRIPT_PATH, notebookPath], {
     encoding: "utf8",
-    input: JSON.stringify({ markdownContext, staticPreview }),
-    env: {
-      ...process.env,
-      EWAN_MARIMO_STATIC_PREVIEW: staticPreview ? "1" : "",
-    },
+    input: JSON.stringify({ markdownContext }),
     maxBuffer: 50 * 1024 * 1024,
     timeout: 120_000,
   })
@@ -274,7 +263,6 @@ export default function MarimoPageType(opts = {}) {
             failOnError,
             runtimeVersion,
             markdownContext: { ...markdownContext, currentSlug: slug },
-            staticPreview: parseStaticPreview(fileContent),
           })
           if (!rendered?.body) return []
           const stat = fs.statSync(src)
