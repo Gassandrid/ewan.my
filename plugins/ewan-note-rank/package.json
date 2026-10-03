@@ -1,0 +1,29 @@
+{
+  "name": "@ewan/quartz-note-rank",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-note-rank",
+    "displayName": "Ewan Note Rank",
+    "description": "This note's PageRank among existing notes, under the page metadata.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 61,
+    "components": {
+      "NoteRank": {
+        "displayName": "Note rank",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 45
+      }
+    }
+  }
+}

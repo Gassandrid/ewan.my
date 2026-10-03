@@ -231,11 +231,14 @@ plugins:
       position: beforeBody
       priority: 20
       group: toolbar
+  # Backlinks are rendered by ewan-margin's reading margin (cited-in index).
   - source: github:quartz-community/backlinks
+    enabled: false
+  - source: ./plugins/ewan-margin
     enabled: true
     layout:
       position: right
-      priority: 10
+      priority: 5
   - source: ./plugins/ewan-article-title
     enabled: true
     layout:
@@ -247,6 +250,12 @@ plugins:
     layout:
       position: beforeBody
       priority: 40
+      condition: not-index
+  - source: ./plugins/ewan-note-rank
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 45
       condition: not-index
   - source: github:quartz-community/tag-list
     enabled: true

@@ -1,4 +1,5 @@
 @use "sass:list";
+@use "sass:meta";
 @use "./python-plugin.scss";
 @use "./custom/caption-callout.scss";
 @use "./custom/infobox-callout.scss";
@@ -1139,3 +1140,6 @@ figure.tikz {
     transition: none;
   }
 }
+
+// Last, so the adopted spec wins over the rules above.
+@include meta.load-css("./custom/adopted-spec.scss");

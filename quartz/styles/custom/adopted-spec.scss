@@ -1,0 +1,398 @@
+// The adopted design spec (design board, 2026-10-01/02) laid over Quartz's own
+// components: Fell type steps, square paper and hairlines, rubber-stamp callouts,
+// the bibliography with back-references, asterism breaks, and ruled sidebars.
+// Component styles load after this sheet, hence the !important overrides.
+:root {
+  --sunk: #ece7df;
+  --raised: #faf8f5;
+  --muted: #636670;
+  --hair: #d6d1ca;
+  --sage: #899780;
+  --slate: #748c9c;
+  --fell: "IM Fell DW Pica", Georgia, serif;
+  --fell-sc: "IM Fell DW Pica SC", "IM Fell DW Pica", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+:root[saved-theme="dark"] {
+  --sunk: #1f2023;
+  --raised: #2c2d31;
+  --muted: #a39e97;
+  --hair: #3b3a3d;
+  --sage: #aebd9f;
+  --slate: #9bb0bd;
+}
+
+/* Grounds: square paper, hairlines instead of tinted boxes. */
+.page > #quartz-body .center {
+  border-color: var(--hair);
+  border-radius: 0;
+}
+
+/* Running head: breadcrumbs in small caps, a single rule beneath. */
+.breadcrumb-container .breadcrumb-element a,
+.breadcrumb-container .breadcrumb-element p {
+  font: 15px/1.3 var(--fell-sc) !important;
+  letter-spacing: 0.03em;
+  color: var(--muted) !important;
+  font-weight: 400 !important;
+}
+.breadcrumb-container .breadcrumb-element p {
+  margin: 0 0.35em;
+}
+.breadcrumb-container .breadcrumb-element:last-child a {
+  color: var(--dark) !important;
+}
+.breadcrumb-container .breadcrumb-element a:hover {
+  color: var(--rust) !important;
+}
+.sticky-header-bar {
+  border-bottom-color: var(--dark) !important;
+}
+
+/* Title block. */
+.article-title-group .article-title {
+  font: 48px/1.04 var(--fell) !important;
+  letter-spacing: 0;
+  color: var(--dark);
+}
+.page-header .content-meta,
+.page-header .content-meta * {
+  font: 11.5px/1.4 var(--mono) !important;
+  color: var(--muted) !important;
+  letter-spacing: 0.01em;
+}
+/* Tags: an italic run of subject headings, not coloured chips. */
+.page-header .tags {
+  gap: 0 !important;
+  flex-wrap: wrap;
+}
+.page-header .tags > li {
+  margin: 0 !important;
+}
+.page-header .tags > li + li::before {
+  content: "·";
+  margin: 0 0.55em;
+  color: var(--muted);
+}
+.page-header .tags > li > a.internal.tag-link {
+  background: none !important;
+  color: var(--darkgray) !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font: italic 16px/1.5 var(--fell) !important;
+  border-bottom: 1px solid var(--hair);
+}
+.page-header .tags > li > a.internal.tag-link::before {
+  content: none !important;
+}
+.page-header .tags > li > a.internal.tag-link:hover {
+  color: var(--rust) !important;
+  border-bottom-color: var(--rust);
+}
+
+/* Body type: headings step by size and italic, no bold. */
+article h2 {
+  font: 30px/1.12 var(--fell) !important;
+  letter-spacing: 0;
+}
+article h3 {
+  font: italic 23px/1.2 var(--fell) !important;
+}
+article h4 {
+  font: 15px var(--fell-sc) !important;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+/* Section breaks: a true asterism. */
+article hr,
+.center > hr {
+  margin: 2.8em auto !important;
+}
+article hr::after,
+.center > hr::after {
+  content: "⁂" !important;
+  font: 26px/1 var(--fell) !important;
+  color: var(--muted) !important;
+  letter-spacing: 0 !important;
+  padding: 0 0.5em !important;
+  background: var(--light);
+}
+
+/* Rubber-stamp callouts (adopted): the stamp colour is the only colour. */
+.callout {
+  --c: var(--slate);
+}
+.callout:not([data-callout~="caption"]):not([data-callout="infobox"]) {
+  position: relative;
+  overflow: visible !important;
+  margin: 2.1rem 0 1.4rem;
+  padding: 0 1.15rem;
+  background: var(--raised) !important;
+  border: 1px solid var(--hair) !important;
+  border-radius: 0 !important;
+}
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"],
+.callout[data-callout="example"] {
+  --c: var(--pine);
+}
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --c: var(--sage);
+}
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  --c: var(--mauve);
+}
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --c: var(--ochre);
+}
+.callout[data-callout="failure"],
+.callout[data-callout="danger"],
+.callout[data-callout="bug"],
+.callout[data-callout="error"] {
+  --c: var(--rust);
+}
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --c: var(--muted);
+}
+.callout:not([data-callout~="caption"]):not([data-callout="infobox"]) > .callout-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 !important;
+  margin: -15px 0 4px -4px;
+  background: var(--raised);
+  transform: rotate(-1.8deg);
+  transform-origin: 0 50%;
+}
+.callout:not([data-callout~="caption"]):not([data-callout="infobox"]):nth-of-type(2n)
+  > .callout-title {
+  transform: rotate(1.4deg);
+}
+.callout > .callout-title > .callout-icon {
+  display: none;
+}
+.callout:not([data-callout~="caption"]):not([data-callout="infobox"])
+  > .callout-title
+  > .callout-title-inner {
+  padding: 4px 10px 3px;
+  border: 1.8px solid var(--c);
+  filter: url(#ewan-ink);
+}
+.callout:not([data-callout~="caption"]):not([data-callout="infobox"])
+  > .callout-title
+  > .callout-title-inner
+  > p,
+.callout:not([data-callout~="caption"]):not([data-callout="infobox"])
+  > .callout-title
+  > .callout-title-inner
+  > p
+  * {
+  font: 16px/1 var(--fell-sc) !important;
+  letter-spacing: 0.08em;
+  color: var(--c) !important;
+  background: none !important;
+  white-space: nowrap;
+}
+.callout > .callout-title > .fold-callout-icon {
+  background-color: var(--c) !important;
+  --icon-size: 14px;
+}
+.callout.is-collapsible > .callout-title {
+  cursor: pointer;
+}
+.callout.is-collapsed {
+  padding-bottom: 0.55rem;
+}
+.callout.is-collapsed > .callout-content {
+  display: none;
+}
+.callout > .callout-content > :last-child {
+  margin-bottom: 0.9rem;
+}
+.callout > .callout-content > p:first-child {
+  margin-top: 0.5rem;
+}
+.callout .callout {
+  background: var(--light) !important;
+}
+
+/* Inline citations: author–year set like a reference, not a link chip. */
+article cite a[data-bib] {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  color: var(--dark) !important;
+  background: none !important;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rust);
+}
+article cite a[data-bib]:hover {
+  color: var(--rust) !important;
+}
+article cite {
+  font-style: normal;
+}
+article cite .cite-n {
+  font: 10px var(--mono);
+  color: var(--rust);
+  vertical-align: super;
+  margin-left: 1px;
+}
+
+/* Bibliography with small-cap authors and back-references (adopted). */
+article section.bibliography {
+  margin-top: 2.6rem;
+}
+article section.bibliography > h2 {
+  font: 26px var(--fell) !important;
+  margin: 0 0 0.7rem !important;
+}
+article section.bibliography > h2 a[role="anchor"] {
+  display: none;
+}
+article section.bibliography > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--dark);
+  counter-reset: bib;
+}
+article section.bibliography > ul > li.csl-entry {
+  counter-increment: bib;
+  position: relative;
+  padding: 10px 0 10px 28px;
+  text-indent: -28px;
+  margin: 0;
+  border-bottom: 1px solid var(--hair);
+  font: 15px/1.5 var(--bodyFont);
+  color: var(--darkgray);
+}
+article section.bibliography .bib-a {
+  font: 16.5px var(--fell-sc);
+  color: var(--dark);
+  letter-spacing: 0.01em;
+}
+article section.bibliography li i {
+  font: italic 16.5px var(--fell);
+}
+article section.bibliography .csl-external-link {
+  font: 11px var(--mono) !important;
+  color: var(--muted) !important;
+  background: none !important;
+  word-break: break-all;
+}
+article section.bibliography .csl-external-link:hover {
+  color: var(--rust) !important;
+}
+article section.bibliography .bib-back {
+  font: 13.5px var(--fell);
+  color: var(--rust);
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: 6px;
+  background: none !important;
+}
+article section.bibliography li:target {
+  background: color-mix(in srgb, var(--ochre) 10%, transparent);
+}
+
+/* Sidebar headings share the index heading: small caps over a rule. */
+.graph > h3,
+.sidebar .backlinks > h3,
+.sidebar .explorer h2,
+.sidebar .side-h {
+  font: 13px/1.3 var(--fell-sc) !important;
+  letter-spacing: 0.06em !important;
+  text-transform: none !important;
+  color: var(--muted) !important;
+  font-weight: 400 !important;
+}
+
+/* Sidebar panels: paper without a box; a heading over a single rule. */
+@media (min-width: 1200px) {
+  .sidebar.right > .explorer,
+  .sidebar.right > .backlinks {
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 10px 6px 12px !important;
+    background: color-mix(in srgb, var(--light) 92%, transparent) !important;
+  }
+  .sidebar.right > .explorer .title-button {
+    border-bottom: 1px solid var(--dark);
+    padding-bottom: 6px !important;
+    width: 100%;
+  }
+}
+
+/* Explorer as a shelf list in Fell. */
+.sidebar.right .explorer-content li > a,
+.sidebar.right .folder-container .folder-title {
+  font: 15.5px/1.3 var(--fell) !important;
+  color: var(--darkgray) !important;
+  border-radius: 0 !important;
+  background: none !important;
+}
+.sidebar.right .explorer-content li > a.active {
+  font-style: italic !important;
+  color: var(--dark) !important;
+  box-shadow: inset 2px 0 var(--ochre);
+}
+.sidebar.right .explorer-content li > a:hover,
+.sidebar.right .folder-container .folder-title:hover {
+  color: var(--rust) !important;
+}
+.sidebar.right .explorer-content ul.content {
+  border-left-color: var(--hair) !important;
+}
+
+/* Graph: the same live chart, framed by registration marks with a caption. */
+.graph > .graph-outer {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(var(--dark), var(--dark)) 0 0 / 12px 1px no-repeat,
+    linear-gradient(var(--dark), var(--dark)) 0 0 / 1px 12px no-repeat,
+    linear-gradient(var(--dark), var(--dark)) 100% 0 / 12px 1px no-repeat,
+    linear-gradient(var(--dark), var(--dark)) 100% 0 / 1px 12px no-repeat,
+    linear-gradient(var(--dark), var(--dark)) 0 100% / 12px 1px no-repeat,
+    linear-gradient(var(--dark), var(--dark)) 0 100% / 1px 12px no-repeat,
+    linear-gradient(var(--dark), var(--dark)) 100% 100% / 12px 1px no-repeat,
+    linear-gradient(var(--dark), var(--dark)) 100% 100% / 1px 12px no-repeat,
+    color-mix(in srgb, var(--light) 92%, transparent) !important;
+}
+.graph > .global-graph-outer > .global-graph-container {
+  border-radius: 0 !important;
+  border-color: var(--hair) !important;
+}
+
+/* Contents rail: the same ticks, labels in Fell, the current dot in ochre. */
+.quartztoc .toc-link {
+  font: 14.5px/1.3 var(--fell) !important;
+}
+.quartztoc .toc-row.is-active .toc-dot {
+  background: var(--ochre) !important;
+}
+.quartztoc .quartztoc-rail-thumb {
+  background: var(--dark) !important;
+  width: 2px !important;
+  border-radius: 0 !important;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1.5px solid var(--ochre) !important;
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .callout > .callout-title {
+    transform: none !important;
+  }
+}

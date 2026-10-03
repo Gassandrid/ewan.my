@@ -1,0 +1,29 @@
+{
+  "name": "@ewan/quartz-margin",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-margin",
+    "displayName": "Ewan Reading Margin",
+    "description": "Sources in view and the notes that cite this one, ordered by PageRank.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 60,
+    "components": {
+      "ReadingMargin": {
+        "displayName": "Reading margin",
+        "defaultPosition": "right",
+        "defaultPriority": 5
+      }
+    }
+  }
+}
