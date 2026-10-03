@@ -1,13 +1,94 @@
 import assert from "node:assert/strict"
 import test from "node:test"
+import { readFileSync } from "node:fs"
+import { parse } from "yaml"
+import { render } from "preact-render-to-string"
 import {
+  listedInBases,
   mention,
   noteMetrics,
   pageRank,
   resolveRelative,
   simplifySlug,
   sourcesOf,
+  ReadingMargin,
 } from "./ewan-margin/components.js"
+
+test("Listed in follows the actual curation and compounds views, not broad Base links", () => {
+  const note = (slug, frontmatter = {}) => ({ slug, frontmatter })
+  const other = note("thoughts/unrelated")
+  const book = note("books/example", { class: ["book"], status: "reading-list" })
+  const compound = note("compounds/example", { class: ["medication"], category: "cognitive" })
+  const excluded = note("compounds/other", { class: ["medication"], category: "physical" })
+  const notes = [other, book, compound, excluded]
+  const base = (path, slug, title) => ({
+    slug,
+    frontmatter: { title },
+    links: notes.map((note) => note.slug),
+    basesData: parse(readFileSync(new URL(path, import.meta.url), "utf8")),
+  })
+  const curation = base("../content/A Limited Curation.base", "curation.base", "A Limited Curation")
+  const compounds = base(
+    "../content/Notes/Neuropharmacology/Nootropic Compounds.base",
+    "compounds.base",
+    "Nootropic Compounds",
+  )
+  const allFiles = [...notes, curation, compounds]
+  const listings = listedInBases(allFiles)
+  assert.deepEqual(listings.get(book.slug), [curation]) // one listing despite matching both views
+  assert.deepEqual(listings.get(compound.slug), [compounds])
+  assert.equal(listings.has(other.slug), false)
+  assert.equal(listings.has(excluded.slug), false)
+
+  const margin = (fileData) => render(ReadingMargin()({ fileData, allFiles }))
+  assert.equal(margin(other), "")
+  assert.equal(margin(excluded), "")
+  assert.match(margin(book), /Listed in .*A Limited Curation/)
+  assert.doesNotMatch(margin(book), /Nootropic Compounds/)
+  assert.match(margin(compound), /Listed in .*Nootropic Compounds/)
+  assert.doesNotMatch(margin(compound), /A Limited Curation/)
+})
+
+test("Base membership combines global and view filters, formulas, self context and limits", () => {
+  const note = (slug, status, score, extra = {}) => ({
+    slug,
+    relativePath: `Library/${slug}.md`,
+    frontmatter: { published: true, status, score },
+    ...extra,
+  })
+  const base = {
+    slug: "library.base",
+    basesSelfContext: { file: { folder: "Library" } },
+    basesData: {
+      formulas: { inScope: "file.inFolder(this.file.folder)" },
+      filters: { and: ["published == true", "formula.inScope"] },
+      views: [
+        {
+          type: "table",
+          filters: 'status == "read"',
+          sort: [{ property: "score", direction: "DESC" }],
+          limit: 1,
+        },
+        { type: "cards", filters: 'status == "reading"' },
+      ],
+    },
+  }
+  const files = [
+    note("low", "read", 1),
+    note("best", "read", 2),
+    note("current", "reading", 0),
+    note("outside", "read", 5, { relativePath: "Other/outside.md" }),
+    note("hidden", "read", 6, { unlisted: true }),
+    note("draft", "reading", 7, { frontmatter: { published: false, status: "reading" } }),
+    base,
+    { ...base, slug: "empty.base", basesData: { views: [] } },
+    { ...base, slug: "hidden.base", unlisted: true },
+  ]
+  const listings = listedInBases(files)
+  assert.deepEqual([...listings.keys()].sort(), ["best", "current"])
+  assert.deepEqual(listings.get("best"), [base])
+  assert.deepEqual(listings.get("current"), [base])
+})
 
 test("PageRank sums to one, ignores self and duplicate edges, favours the cited", () => {
   const ranks = pageRank(

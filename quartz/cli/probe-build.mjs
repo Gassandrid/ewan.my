@@ -94,6 +94,28 @@ assert.ok(
   (compounds.match(/class="base-card"/g) ?? []).length > 0,
   "Compound Base must not silently render empty",
 )
+// Compare margin membership with the entries actually rendered by each Base.
+// Property links inside a card do not make their targets members of that Base.
+const baseMemberships = [
+  ["a-limited-curation.base", curationBase],
+  ["notes/neuropharmacology/nootropic-compounds.base", compounds],
+].map(([slug, html]) => [
+  slug,
+  new Set(
+    [...html.matchAll(/<a\b[^>]*class="base-card-title-link"[^>]*data-slug="([^"]+)"/g)].map(
+      (match) => match[1],
+    ),
+  ),
+])
+for (const [base, members] of baseMemberships) {
+  assert.ok(members.size > 0, `${base}: expected rendered entries`)
+  for (const slug of Object.keys(searchIndex)) {
+    const margin = read(`${slug}.html`).match(/<p class="rm-see">([\s\S]*?)<\/p>/)?.[1] ?? ""
+    const listed = [...margin.matchAll(/data-slug="([^"]+)"/g)].map((match) => match[1])
+    assert.equal(listed.includes(base), members.has(slug), `${slug}: incorrect listing in ${base}`)
+    assert.equal(new Set(listed).size, listed.length, `${slug}: duplicate Base listing`)
+  }
+}
 const eigenfish = read("thoughts/eigenfish.html")
 assert.match(eigenfish, /data-marimo-runtime="0\.23\.9"/)
 assert.match(eigenfish, /eigenfish-figure/)

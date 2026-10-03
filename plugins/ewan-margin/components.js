@@ -1,4 +1,5 @@
 import { h } from "preact"
+import { resolveBasesEntries } from "./bases-resolver.js"
 
 // The reading margin: the works this note cites (the one in view marked) and
 // the notes that cite it, each opening to the sentence where it does, ordered by
@@ -89,6 +90,29 @@ export function noteMetrics(allFiles) {
   const metrics = { score, position, count: order.length, scores: order.map(([, s]) => s) }
   metricsCache.set(allFiles, metrics)
   return metrics
+}
+
+const listingsCache = new WeakMap()
+
+/** A note belongs to a Base when at least one rendered view includes it. */
+export function listedInBases(allFiles) {
+  const cached = listingsCache.get(allFiles)
+  if (cached) return cached
+  const listings = new Map()
+  for (const base of allFiles) {
+    if (base.unlisted === true || !base.basesData) continue
+    const members = new Set()
+    for (const view of base.basesData.views ?? []) {
+      const { entries } = resolveBasesEntries(base.basesData, allFiles, view, base.basesSelfContext)
+      for (const entry of entries) members.add(simplifySlug(entry.slug))
+    }
+    for (const slug of members) {
+      if (!listings.has(slug)) listings.set(slug, [])
+      listings.get(slug).push(base)
+    }
+  }
+  listingsCache.set(allFiles, listings)
+  return listings
 }
 
 // --- Where a citing note mentions this one --------------------------------
@@ -201,7 +225,9 @@ export function ReadingMargin() {
         (a, b) =>
           (metrics.position.get(a.slug) ?? Infinity) - (metrics.position.get(b.slug) ?? Infinity),
       )
-    const lists = citing.filter((f) => String(f.slug).endsWith(".base"))
+    // Base link metadata only applies global filters; its views may narrow
+    // that scope further. Match the actual view results instead.
+    const lists = listedInBases(allFiles).get(here) ?? []
     const sources = tree ? sourcesOf(tree) : []
     if (sources.length === 0 && notes.length === 0 && lists.length === 0) return null
 
