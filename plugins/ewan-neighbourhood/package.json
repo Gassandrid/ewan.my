@@ -1,0 +1,29 @@
+{
+  "name": "@ewan/quartz-neighbourhood",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-neighbourhood",
+    "displayName": "Ewan Neighbourhood",
+    "description": "Notes near this one in the link graph, beyond its direct links.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 62,
+    "components": {
+      "Neighbourhood": {
+        "displayName": "Neighbourhood",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 6
+      }
+    }
+  }
+}

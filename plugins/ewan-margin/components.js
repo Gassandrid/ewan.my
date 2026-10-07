@@ -69,7 +69,11 @@ export function pageRank(nodes, edges, damping = 0.85, maxIterations = 50, toler
 function isNote(file) {
   const slug = file.slug ?? ""
   return (
-    file.unlisted !== true && slug !== "" && !slug.endsWith(".base") && !slug.startsWith("tags/")
+    file.unlisted !== true &&
+    slug !== "" &&
+    slug !== "rank" &&
+    !slug.endsWith(".base") &&
+    !slug.startsWith("tags/")
   )
 }
 
@@ -350,7 +354,11 @@ export function NoteRank() {
         class: [displayClass, "note-rank"].filter(Boolean).join(" "),
         title: `PageRank ${score.toPrecision(3)}, ${(score * metrics.count).toFixed(1)}× the mean of ${metrics.count} notes`,
       },
-      h("span", null, ordinal(position, metrics.count)),
+      h(
+        "a",
+        { href: resolveRelative(here, "rank"), class: "internal", "data-slug": "rank" },
+        ordinal(position, metrics.count),
+      ),
       h(
         "svg",
         { width: w + 8, height: 14, viewBox: `-4 0 ${w + 8} 14`, "aria-hidden": "true" },
@@ -413,6 +421,8 @@ article cite.is-lit a[data-bib]{background:color-mix(in srgb,var(--ochre) 18%,tr
 const RANK_CSS = `
 .note-rank{display:flex;align-items:center;gap:10px;margin:-0.35rem 0 0.2rem;padding:0;font:11.5px/1.4 var(--mono);color:var(--muted)}
 .note-rank svg{display:block;overflow:visible}
+.note-rank a.internal{background:none!important;padding:0;color:inherit}
+.note-rank a.internal:hover{color:var(--rust)}
 .note-rank .nr-bin{fill:var(--muted);opacity:.5}
 @media (max-width:800px){.note-rank{padding:0 .75rem}}
 .note-rank .nr-axis{stroke:var(--muted);stroke-width:.6}

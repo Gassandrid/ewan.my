@@ -1,0 +1,21 @@
+{
+  "name": "@ewan/quartz-rank-page",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-rank",
+    "displayName": "Ewan Rank",
+    "description": "A /rank page: every note by PageRank, with the distribution and other graph measures.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "pageType",
+    "defaultOrder": 21
+  }
+}
