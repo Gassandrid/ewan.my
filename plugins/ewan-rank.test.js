@@ -75,3 +75,10 @@ test("components render", () => {
   assert.match(body, /id="rank-data"/)
   assert.equal((body.match(/data-i=/g) ?? []).length, 6)
 })
+
+test("similar notes skip links, copies and the note itself", async () => {
+  const { similarNotes } = await import("./ewan-rank/similar.js")
+  const files = chain().map((f) => ({ ...f, relativePath: `${f.slug}.md` }))
+  // Not in the real table, so no section; the component must still render nearby.
+  assert.deepEqual(similarNotes(files, files[0]), [])
+})
