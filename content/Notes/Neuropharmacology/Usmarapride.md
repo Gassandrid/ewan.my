@@ -25,9 +25,6 @@ tags:
   - health/substance
   - pharmacology/neuro
 related: []
-stacks-well-with:
-  - "[[ACD-856]]"
-  - "[[Tropisetron]]"
 targets:
   - "[[5-HT4 receptor]]"
 pathways:

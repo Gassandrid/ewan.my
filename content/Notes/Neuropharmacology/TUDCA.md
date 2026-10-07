@@ -20,8 +20,6 @@ benefits:
   - Neuroprotection
   - Mitochondrial membrane stability
   - Gut protection
-stacks-well-with:
-  - "[[AF710B]]"
 form:
   - powder
 targets:

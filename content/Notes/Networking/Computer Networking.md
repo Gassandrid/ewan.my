@@ -15,7 +15,6 @@ reminders:
 class:
   - course
   - task
-recurrence: DTSTART:20260113;FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20260601
 date: 2026-01-13T15:07:28-05:00
 updated: 2026-01-13T15:39:31-05:00
 tags:

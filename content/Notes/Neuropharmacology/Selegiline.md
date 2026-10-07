@@ -28,11 +28,10 @@ tags:
   - transhumanism/nootropic
   - pharmacology/neuro
 related: []
-stacks-well-with: []
 targets:
   - "[[MAO-B]]"
 pathways:
-  - "[[dopamine]]"
+  - "[[Dopamine]]"
   - "[[phenethylamine]]"
 brain-regions:
   - "[[striatum]]"

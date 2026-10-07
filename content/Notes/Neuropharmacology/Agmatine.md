@@ -28,11 +28,10 @@ tags:
   - transhumanism/nootropic
   - health/supplements
 related: []
-stacks-well-with: []
 date: 2026-02-01T11:39:49-05:00
 updated: 2026-06-12T13:08:16-07:00
 targets:
-  - "[[NMDA receptor]]"
+  - "[[NMDA Receptor]]"
   - "[[imidazoline receptor]]"
 pathways:
   - "[[nitric oxide]]"

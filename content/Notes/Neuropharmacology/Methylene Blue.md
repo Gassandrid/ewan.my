@@ -34,10 +34,6 @@ tags:
   - transhumanism/nootropic
   - pharmacology/neuro
 related:
-  - "[[Sertraline]]"
-stacks-well-with:
-  - "[[Sertraline]]"
-  - serotonergic antidepressants (WITH CAUTION)
 cycle: 5/2
 date: 2025-12-10
 updated: 2026-02-18T16:02:19-05:00

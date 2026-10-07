@@ -9,7 +9,7 @@ upstream:
   - "[[Alpha-ketoglutarate]]"
 downstream:
   - "[[AMPA Receptor]]"
-  - "[[NMDA receptor]]"
+  - "[[NMDA Receptor]]"
   - "[[Kainate receptor]]"
   - "[[mGluR1]]"
   - "[[mGluR2]]"
@@ -51,7 +51,7 @@ Two primary classes acted through; **ionotropic**(fast/ligand) and  **metabotrop
 
 **[[AMPA Receptor]]**:  mediates bulk of fast EPSPs. Primarily $Na^{+}$/$K^{+}$ permeable; GluR2 subunit determines $Ca^{2+}$ impermeability. Rapid kinetics, millisecond timescale. main vehicle for information throughput.
 
-**[[NMDA receptor]]**: coincidence detector. Requires two conditions simultaneously: ligand binding (glutamate + glycine co-agonist) *and* membrane depolarization to expel $Mg^{2+}$ . Once open, it's highly $Ca^{2+}$ permeable, making it the entry point for plasticity signals. This is the biophysical substrate of [[Hebbian learning]]; synapse strengthens when pre- and postsynaptic activity coincide. *fire together wire together!*
+**[[NMDA Receptor]]**: coincidence detector. Requires two conditions simultaneously: ligand binding (glutamate + glycine co-agonist) *and* membrane depolarization to expel $Mg^{2+}$ . Once open, it's highly $Ca^{2+}$ permeable, making it the entry point for plasticity signals. This is the biophysical substrate of [[Hebbian learning]]; synapse strengthens when pre- and postsynaptic activity coincide. *fire together wire together!*
 
 **[[Kainate receptor]]**;  not as well studied. mostly presynaptic modulation / interneuron circuits. Contributes to high frequency bursting, [[seizure]] susceptibility.
 
@@ -77,7 +77,7 @@ keeps extracellular glutamate at nanomolar levels; necessary, because tonic rece
 
 ## Role in Plasticity
 
-[[Long Term Potentiation]] and [[LTD]] are cellular substrates of learning / memory, both gated by [[NMDA receptor]] activation. 
+[[Long Term Potentiation]] and [[LTD]] are cellular substrates of learning / memory, both gated by [[NMDA Receptor]] activation. 
 
 sequence: high-frequency stimulation -> [[AMPA Receptor]] mediated depolarization -> $Mg^{2+}$ unblock -> $Ca^{2+}$ influx through [[NMDA]] -> CaMKII activation -> [[AMPA Receptor]] phosphorylation and trafficking -> strengthened synapse. 
 

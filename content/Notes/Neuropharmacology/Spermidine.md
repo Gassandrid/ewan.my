@@ -19,8 +19,6 @@ benefits:
   - Mitophagy
   - Longevity
   - Cellular repair
-stacks-well-with:
-  - "[[SkQ1]]"
 form:
   - powder
 targets:

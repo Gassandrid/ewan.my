@@ -16,17 +16,11 @@ class: task
 tags:
   - "#university"
   - "#math/chaos"
-code:
-professor: "[[Chris Danforth]]"
-crn:
 location:
   - Lafayette L107
 semester: Spring 2026
-image:
-credits:
 source:
 related:
-author:
 description:
 date: 2026-01-13T10:07:23-05:00
 updated: 2026-04-02T10:34:48-04:00

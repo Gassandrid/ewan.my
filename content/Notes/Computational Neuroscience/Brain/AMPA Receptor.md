@@ -1,6 +1,6 @@
 ---
 date: 2026-02-08T15:48:06-05:00
-updated: 2026-03-16T10:05:37-04:00
+updated: 2026-09-24T15:35:37-04:00
 tags:
   - comp-neuro/brain/receptor
 class:
@@ -9,8 +9,10 @@ class:
 source:
   - https://www.sciencedirect.com/science/article/abs/pii/S0091305710004077
   - https://academic.oup.com/brain/article/129/3/564/390904
+  - https://www.science.org/doi/10.1126/science.ads4706
 related:
   - "[[TAK-653]]"
+  - "[[NMDA Receptor]]"
 author:
 description: Ionotropic glutamate receptor mediating fast excitatory synaptic transmission; central driver of LTP and synaptic plasticity.
 aliases:
@@ -74,9 +76,13 @@ AMPA receptors are the primary readout of [[Long Term Potentiation]] expression:
 - [[LTD]] reverses this: dephosphorylation drives AMPAR internalization and synapse weakening.
 - Receptor traffickinig gated by TARPs (transmembrane AMPAR regulatory proteins), particularly stargazin, which handles synaptic targeting and anchoring to PSD-95.
 
+## [[Why Different Neuron Parts Learn Differently?]] Artem Video
+
+Well known that [[AMPA Receptor]] and [[NMDA Receptor]] work in tandem for their respective plasticity rules.
+
 ---
 
-## AMPA Positive Allosteric Modulators (sirsadalot)
+## AMPA Positive Allosteric Modulators (Sirsadalot)
 
 An AMPA PAM works by increasing the likelihood of information processing neurons, or spiking neurons, to fire electrical signals. This is a cascade set off by glutamate binding, which is a pivotal transaction in times of learning. This enhanced calcium signaling will cause long term potentiation (LTP) which strengthens memory and improves learning.[^1] 
 

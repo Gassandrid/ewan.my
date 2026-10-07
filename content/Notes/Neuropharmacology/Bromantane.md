@@ -28,14 +28,11 @@ tags:
   - transhumanism/nootropic
   - pharmacology/neuro
 related: []
-stacks-well-with:
-  - "[[Lisdexamfetamine]]"
-  - psychostimulants
 targets:
   - "[[dopamine transporter]]"
   - "[[serotonin transporter]]"
 pathways:
-  - "[[dopamine]]"
+  - "[[Dopamine]]"
   - "[[serotonin]]"
   - "[[BDNF]]"
 brain-regions: []

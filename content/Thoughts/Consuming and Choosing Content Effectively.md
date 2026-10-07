@@ -5,6 +5,7 @@ tags:
   - journal/workflow
   - academia
   - seed
+  - comp-neuro/cognition/content-consumption
 source:
 related:
   - "[[How To Read a Research Paper Effectively]]"
@@ -14,7 +15,7 @@ related:
 author:
 description: extracting meaningful utility in the age of unengaged content consumption
 date: 2025-12-19
-updated: 2026-03-04T12:15:47-05:00
+updated: 2026-09-29T17:29:01-04:00
 status:
 aliases:
   - content consumption

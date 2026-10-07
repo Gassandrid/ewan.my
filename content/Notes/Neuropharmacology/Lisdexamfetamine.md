@@ -26,15 +26,11 @@ tags:
   - transhumanism/nootropic
   - pharmacology/neuro
 related: []
-stacks-well-with:
-  - "[[Guanfacine]]"
-  - "[[Bromantane]]"
-  - "[[N-Acetylsemax]]"
 targets:
   - "[[dopamine transporter]]"
   - "[[norepinephrine transporter]]"
 pathways:
-  - "[[dopamine]]"
+  - "[[Dopamine]]"
   - "[[norepinephrine]]"
 brain-regions:
   - "[[prefrontal cortex]]"

@@ -17,8 +17,6 @@ benefits:
   - Mitochondrial ROS clearance
   - Respiratory chain protection
   - Anti-aging
-stacks-well-with:
-  - "[[Spermidine]]"
 form:
   - liquid
 targets:

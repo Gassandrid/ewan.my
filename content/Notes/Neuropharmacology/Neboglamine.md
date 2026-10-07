@@ -27,11 +27,8 @@ tags:
   - transhumanism/nootropic
   - pharmacology/neuro
 related: []
-stacks-well-with:
-  - "[[TAK-653]]"
-  - "[[ACD-856]]"
 targets:
-  - "[[NMDA receptor]]"
+  - "[[NMDA Receptor]]"
   - "[[NR2B]]"
 pathways:
   - "[[D-Serine]]"
@@ -43,7 +40,7 @@ processes:
   - "[[LTD]]"
 ---
 
-PAM at the [[NMDA receptor|NMDA]] glycine/[[D-Serine]] binding site [@lanzaCognitionEnhancingProfile1997]. D-Serine is released regionally during learning events, Neboglamine amplifies its binding for those moments, not continuously. Same design principle as TAK-653 being a better [[AMPA Receptor|AMPA]] agent than agonists: allosteric bias makes enhancement context-dependent rather than constant.
+PAM at the [[NMDA Receptor|NMDA]] glycine/[[D-Serine]] binding site [@lanzaCognitionEnhancingProfile1997]. D-Serine is released regionally during learning events, Neboglamine amplifies its binding for those moments, not continuously. Same design principle as TAK-653 being a better [[AMPA Receptor|AMPA]] agent than agonists: allosteric bias makes enhancement context-dependent rather than constant.
 
 [[AMPA Receptor|AMPA]] activation triggers delayed NMDA firing (NMDA currents rise as a delayed response to [[AMPA Receptor|AMPA]] [@wattProportionalSlowerNMDA2004]; AMPA trafficking is required for NMDA to function at all [@malinowAMPAReceptorTrafficking2002]), then Neboglamine amplifies [[NR2B]] binding at that NMDA step [@duffyDSerineAugmentsNMDANR2B2008]. TAK-653 and Neboglamine hit sequential nodes in the same pathway, not the same point twice. The combination could push TAK's ~7pt IQ effect considerably higher. Also reverses NMDA antagonist-induced cognitive impairment, as do AMPA PAMs [@ranganathanAttenuationKetamineinducedImpairment2017] and D-Serine [@karasawaDSerineGlycineTransporter2008].
 

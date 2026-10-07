@@ -19,8 +19,9 @@ related:
   - "[[Jensen's Inequality]]"
   - "[[Variational Inference]]"
   - "[[Variational Autoencoder]]"
-updated: 2026-02-04T13:07:54-05:00
+updated: 2026-09-29T15:21:12-04:00
 ---
+
 The **Evidence Lower Bound (ELBO)** is the core quantity in variational inference and the key optimization objective for training [[Variational Autoencoder|Variational Autoencoders]]. It provides a tractable lower bound on the log marginal likelihood (the "evidence") of observed data. 
 
 ---
@@ -154,6 +155,7 @@ $$
   2. Decreases the KL divergence (better approximate posterior)
 
 **Maximizing ELBO** has the effect of both increasing our *log evidence*(giving us a better model of data) **and** decreasing the [[Kullback-Leibler Divergence|KL Divergence]](yielding a better posterior approximation)
+
   
 - The **gap** between ELBO and true evidence is exactly the KL divergence
 - When we maximize ELBO w.r.t. $\phi$ only, we're doing **variational inference** (improving the approximate posterior)
@@ -215,20 +217,6 @@ $$
 $$
 
 In practice, $L=1$ (single sample) often works well during training.
-
----
-
-## Why ELBO Works
-
-The ELBO framework is powerful because:
-
-1. **Tractability**: We can compute and optimize it without knowing the intractable posterior
-2. **Flexibility**: Works with any choice of approximate posterior family $q_{\phi}$
-3. **Principled**: Directly optimizes a bound on the quantity we care about (log evidence)
-4. **Interpretable**: Decomposes into reconstruction and regularization terms
-5. **Scalable**: Can be optimized via stochastic gradient descent
-
-The key insight is that by maximizing a lower bound, we're still pushing the true quantity upward, even though we can't compute it directly.
 
 ---
 

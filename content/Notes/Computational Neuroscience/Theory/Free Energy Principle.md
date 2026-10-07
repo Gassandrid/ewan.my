@@ -12,8 +12,16 @@ related:
 author:
   - "[[Karl Friston]]"
 date: 2025-09-05
-updated: 2026-04-05T09:35:31-04:00
+updated: 2026-09-16T19:09:56-04:00
 ---
+
+$$
+\begin{align}
+\underbrace{ F(\mu, a;s) }_{ \text{free energy} } &= \underbrace{ \mathbb{E}_{q(\dot{\psi})} \left[ -\log p(\dot{\psi}, s, a, \mu \mid \psi) \right] }_{ \text{expected energy} }  - \underbrace{ \mathbb{H} \left[ q(\dot{\psi}\mid s,a,\mu,\psi) \right]  }_{ \text{entropy} }  \\
+&= \underbrace{ -\log p(s) }_{ \text{suprise} } + \underbrace{ \mathbb{KL} \left[ q(\dot{\psi} \mid s,a, \mu, \psi) \mid \mid p_{Bayes} (\dot{\psi} \mid s,a,\mu,\psi) \right]  }_{ \text{divergence} } \\
+&\geq \underbrace{ -\log p(s) }_{ \text{suprise} }
+\end{align}
+$$
 
 The **Free Energy Principle** is a mathematical principle borrowed from _information theory_. It theorizes that the universal goal of living systems is to minimize a quantity of "free energy" in order to maintain their existence in a dynamic world. [@fristonFreeenergyPrincipleUnified2010]
 

@@ -10,6 +10,8 @@ related:
 author:
 description:
 aliases:
+  - Linear Regression
+  - Nonlinear Regression
 date: 2026-01-21T08:30:09-05:00
 updated: 2026-01-21T10:12:27-05:00
 course: "[[Machine Learning Course]]"

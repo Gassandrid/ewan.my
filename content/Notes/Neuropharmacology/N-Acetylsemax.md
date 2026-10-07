@@ -35,15 +35,11 @@ tags:
 related:
   - "[[Semax]]"
   - "[[N-Acetylselank]]"
-stacks-well-with:
-  - "[[N-Acetylselank]]"
-  - "[[ACD-856]]"
-  - "[[Lisdexamfetamine]]"
 targets:
   - "[[TrkB]]"
 pathways:
   - "[[BDNF]]"
-  - "[[dopamine]]"
+  - "[[Dopamine]]"
   - "[[serotonin]]"
   - "[[norepinephrine]]"
 brain-regions: []
@@ -53,7 +49,7 @@ date: 2026-02-18T11:08:44-08:00
 updated: 2026-03-13T17:00:50-07:00
 ---
 
-Acetylated analog of ACTH(4-10). The N-acetyl group protects against peptidase degradation, giving a longer half-life and more sustained CNS exposure than [[Semax]]. Primary mechanism is [[BDNF]] upregulation and [[TrkB]] receptor sensitization, with secondary monoamine modulation across [[dopamine]], [[serotonin]], and [[norepinephrine]] systems. The TrkB upregulation is the key synergy with [[ACD-856]]: more receptor gives the pan-Trk PAM more to work with.
+Acetylated analog of ACTH(4-10). The N-acetyl group protects against peptidase degradation, giving a longer half-life and more sustained CNS exposure than [[Semax]]. Primary mechanism is [[BDNF]] upregulation and [[TrkB]] receptor sensitization, with secondary monoamine modulation across [[Dopamine]], [[serotonin]], and [[norepinephrine]] systems. The TrkB upregulation is the key synergy with [[ACD-856]]: more receptor gives the pan-Trk PAM more to work with.
 
 Subjectively a mild but meaningful focus boost, nothing like a stimulant. Enhances [[Lisdexamfetamine]] effects mildly and without adding jitteriness, consistent with BDNF supporting healthy dopaminergic tone. Neurogenic effects accumulate over weeks rather than hours. Mild irritability occasionally on first few days (transient).
 

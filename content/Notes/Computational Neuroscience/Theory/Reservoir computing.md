@@ -1,12 +1,12 @@
 ---
 date: 2026-05-08T09:58:13-04:00
-updated: 2026-05-08T10:39:31-04:00
+updated: 2026-10-07T15:03:28-04:00
 class:
   - note
 tags:
   - math/chaos
-  - cs/ai/recurrent
   - comp-neuro/models
+  - cs/ai/recurrent/reservoir
 source:
   - "[[The Most Counterintuitive Way to Build a Brain]]"
 related:

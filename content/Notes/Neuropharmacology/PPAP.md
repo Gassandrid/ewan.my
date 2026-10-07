@@ -27,11 +27,9 @@ tags:
   - pharmacology/neuro
 related:
   - "[[BPAP]]"
-stacks-well-with:
-  - "[[Lisdexamfetamine]]"
 targets: []
 pathways:
-  - "[[dopamine]]"
+  - "[[Dopamine]]"
   - "[[norepinephrine]]"
 brain-regions: []
 processes: []

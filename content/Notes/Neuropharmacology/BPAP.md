@@ -26,10 +26,9 @@ tags:
   - pharmacology/neuro
 related:
   - "[[PPAP]]"
-stacks-well-with: []
 targets: []
 pathways:
-  - "[[dopamine]]"
+  - "[[Dopamine]]"
   - "[[norepinephrine]]"
 brain-regions: []
 processes: []

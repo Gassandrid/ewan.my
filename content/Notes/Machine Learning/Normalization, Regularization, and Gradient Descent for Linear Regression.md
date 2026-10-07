@@ -13,6 +13,7 @@ related:
 author:
 description:
 aliases:
+  - Ridge Regression
 date: 2026-01-23T08:31:23-05:00
 updated: 2026-02-02T09:10:27-05:00
 ---

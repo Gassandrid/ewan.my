@@ -132,7 +132,7 @@ Arc/Zen style tabs, nice for me so I can hide/unhide when I please.
 
 ##### Theme
 
-I use **primary** as it was easiest to make in [[My Color Palette]], I would also recommend minimal if you like [[Neovim]]. See my snippet for making primary different.
+I use **primary** as it was easiest to make in [[My Design Palette]], I would also recommend minimal if you like [[Neovim]]. See my snippet for making primary different.
 
 ### Snippets
 
@@ -385,7 +385,7 @@ This marks machine-transcribed content so you know the origin when reviewing lat
 
 Still a work in progress, but I am working on extending this towards spatial microphone arrays for more complex interaction modeling. If you can set this up in your house, this is one of the easiest ways to improve the heuristic of your higher level cognition model. I started this on work for the [[UVM Glass Brain Lab]], but the transcription work can be taken anywhere.
 
-**What it is**: the [[reSpeaker 4 Mic Array]] is a circular USB mic array with 4 directional microphones. Combined with speaker diarization (determining who said what from spatial audio cues), it produces conversation logs with speaker attribution rather than just a flat transcript.
+**What it is**: the [[(archived) reSpeaker 4 Mic Array]] is a circular USB mic array with 4 directional microphones. Combined with speaker diarization (determining who said what from spatial audio cues), it produces conversation logs with speaker attribution rather than just a flat transcript.
 
 **Pipeline**: `reSpeaker` → raw multi-channel audio → `claude-parakeet-speaker-diarization` → transcribed, diarized JSON/SQLite with `spoken-by` annotations per segment.
 

@@ -20,8 +20,6 @@ benefits:
   - Antioxidant gene upregulation
   - Anti-inflammatory
   - Longevity
-stacks-well-with:
-  - "[[ORG-43902]]"
 form:
   - powder
 targets:

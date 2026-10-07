@@ -1,6 +1,6 @@
 ---
 date: 2026-02-10T10:11:58-05:00
-updated: 2026-02-20T10:05:28-05:00
+updated: 2026-09-15T15:24:52-04:00
 class:
   - note
   - lecture
@@ -129,3 +129,7 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
+
+$$
+\frac{d(1 \beta_{0} h)^I}{dh}
+$$

@@ -44,7 +44,7 @@ Some papers have garnered attention for the "1000 Brains Theory" of intelligence
 
 [@pathakBiomimeticModelCorticostriatal2024]
 
-[[Lateral Inhibition Primitive]]
+[[Lateral Inhibition]]
 
 
 Pathak, A., Brincat, S. L., Organtzidis, H., Strey, H. H., Senneff, S., Antzoulatos, E. G., Mujica-Parodi, L. R., Miller, E. K., & Granger, R. (2024). _Biomimetic model of corticostriatal micro-assemblies discovers new neural code_ (p. 2023.11.06.565902). bioRxiv. [https://doi.org/10.1101/2023.11.06.565902](https://doi.org/10.1101/2023.11.06.565902)

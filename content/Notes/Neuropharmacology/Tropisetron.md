@@ -22,8 +22,6 @@ tags:
   - transhumanism/nootropic
   - pharmacology/neuro
 related: []
-stacks-well-with:
-  - Nicotine (enhances and prolongs effects)
 targets:
   - "[[α7 nAChR]]"
   - "[[5-HT3 receptor]]"

@@ -41,7 +41,7 @@ $$
 
 - $d(x_i, x_j)$ is the distance between points
 - $\rho_i$ is the distance to the nearest neighbor of $x_i$ (ensures local [[Connectivity]])
-- $\sigma_i$ is a [[normalization]] factor chosen so that $\sum_j w(x_i, x_j) = \log_2(k)$
+- $\sigma_i$ is a [[Normalization]] factor chosen so that $\sum_j w(x_i, x_j) = \log_2(k)$
 
 The weights are then symmetrized using a fuzzy set union:
 
@@ -67,7 +67,7 @@ $$
 C = \sum_{i,j} w_{ij} \log\left(\frac{w_{ij}}{q_{ij}}\right) + (1-w_{ij})\log\left(\frac{1-w_{ij}}{1-q_{ij}}\right)
 $$
 
-This is optimized using stochastic [[gradient descent]] with negative sampling for efficiency. The gradient with respect to the low-dimensional coordinates is:
+This is optimized using stochastic [[Gradient Descent]] with negative sampling for efficiency. The gradient with respect to the low-dimensional coordinates is:
 
 $$
 \frac{\partial C}{\partial y_i} = \sum_{j \in N(i)} \frac{-2ab||y_i-y_j||^{2b-2}}{1 + a||y_i-y_j||^{2b}}(y_i - y_j)w_{ij} - \sum_{j \notin N(i)} \frac{2b}{(0.001 + ||y_i-y_j||^2)(1 + a||y_i-y_j||^{2b})}(y_i - y_j)(1-w_{ij})

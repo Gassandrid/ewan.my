@@ -40,12 +40,11 @@ time-of-day:
   - morning
 start-date:
 end-date:
-stacks-well-with: []
 targets:
   - "[[TrkB]]"
 pathways:
   - "[[BDNF]]"
-  - "[[dopamine]]"
+  - "[[Dopamine]]"
   - "[[serotonin]]"
   - "[[norepinephrine]]"
 brain-regions: []

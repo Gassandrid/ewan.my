@@ -27,6 +27,8 @@ the works that rewired my brain, the people who showed me new ways of seeing. no
 
 **[[Sophia Sanborn]]**, a [[Computational Neuroscience|computational neuroscientist]], mentioned a fascination with the word [[Representation]] in a podcast, and that has stuck with me to this day, and is the guiding principle for my specific pursuits in a PhD through representation learning as an [[In Silico]] tool for [[Mechanistic Interpretability|Interpretability]]. Her work has also inspired me across the board for projects of fascination.
 
+[[Leila Wehbe]] 
+
 **[[Artem Kirsanov]]** for making [[Computational Neuroscience]] feel accessible and beautiful. differential equations as the language of change, [[Theta Rhythm|theta rhythms]] as memory's clock. showed me how to build understanding through visualization.
 
 **[[3Blue1Brown]]** for teaching me to see math instead of just computing it. linear transformations as movement, not matrices. [[Manim]] as proof that pedagogy is an art form.

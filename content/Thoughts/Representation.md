@@ -8,12 +8,12 @@ author:
 description:
 aliases:
 date: 2026-09-07T11:14:29-04:00
-updated: 2026-09-07T11:24:38-04:00
+updated: 2026-09-15T13:31:36-04:00
 ---
 
 One of my favorite words, I have know for a while but it was first really obvious to me listening to [[Sophia Sanborn]]s podcast on her journey to [[Computational Neuroscience]].
 
-It is such an elegant idea in the context of [[Representation Geometry]], and how our mind learns to not only represent things, but represent them *efficiently*. This seems to be a fundamental quality of intelligence, in that learning to have a low energy model of something does an incridible job of latching onto the underlying dynamics. This is so intersectional in the world I have grown up in, coming from [[Information Theory]] and ideas that [[Compression is Intelligence]], to even uni classes like [[Modeling Complex Systems]] and [[Mind Morphology]].
+It is such an elegant idea in the context of [[Representation Geometry]], and how our mind learns to not only represent things, but represent them *efficiently* ( very [[Free Energy Principle|Fristonian]] ). This seems to be a fundamental quality of intelligence, in that learning to have a low energy model of something does an incridible job of latching onto the underlying dynamics. This is so intersectional in the world I have grown up in, coming from [[Information Theory]] and ideas that [[Compression is Intelligence]], to even uni classes like [[Modeling Complex Systems]] and [[Mind Morphology]].
 
 A favorite example of mine has been that of learning [[Chess]], where I started from a poor standpoint but was amazing among introspecting on how I learned to model a game in my mind. After a point, could replay games I had played days ago, with increasingly long sequences. This was the case not because my memory had gotten better or more focused on chess, but because I learned what were the important parts of a game to represent ( eg what piece is a **threat**, or a **target** on the board, the possibility of forks/skewers/pins, common patterns that found themselves repeating ).
 

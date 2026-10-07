@@ -13,7 +13,7 @@ aliases:
   - cholinergic
   - ACh
 date: 2026-03-16T09:04:07-04:00
-updated: 2026-04-30T17:33:13-04:00
+updated: 2026-09-21T15:50:39-04:00
 type: small molecule / ester
 upstream:
   - "[[Choline]]"
@@ -50,3 +50,5 @@ Important [[Neurotransmitters|neurotransmitter]] that drives communication betwe
 - Also has roles in [[Notes/Computational Neuroscience/Theory/Memory|Memory]] and [[Attention]].
 - acts on muscarinic and [[nicotinic receptor]]s
 - *cholinergic*: denotes nerve cells in which [[Acetylcholine]] acts as a [[Neurotransmitters|neurotransmitter]].
+- fascilitates arousal and consiencousness
+- major neurotransmitter of [[Parasympathetic Nervous System]] - [[Spinal Cord|spinal]] and [[Cranial Nerves]] , muscle

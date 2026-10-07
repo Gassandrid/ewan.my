@@ -27,8 +27,6 @@ tags:
   - transhumanism/nootropic
   - pharmacology/neuro
 related: []
-stacks-well-with:
-  - "[[Lisdexamfetamine]]"
 targets:
   - "[[α2A adrenoceptor]]"
 pathways:

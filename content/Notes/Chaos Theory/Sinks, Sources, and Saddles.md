@@ -136,6 +136,12 @@ A = \begin{bmatrix}
 \end{bmatrix} \quad \lambda_{1} = \frac{3}{2}, \lambda_{2}=\frac{1}{2}
 $$
 
+$$
+J = \begin{bmatrix}
+\frac{ \partial y }{ \partial x } 
+\end{bmatrix}
+$$
+
 **Iterating the map:**
 
 $$

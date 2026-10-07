@@ -1,11 +1,12 @@
 ---
 date: 2026-06-01T14:24:49-07:00
-updated: 2026-06-14T21:03:29-07:00
+updated: 2026-09-15T13:21:51-04:00
 class:
   - note
 tags:
   - transhumanism/tDCS
-  - neuropharmacology
+  - pharmacology/neuro
+  - transhumanism/nootropic
 source:
   - "[[Neuropharma tDCS - Gemini]]"
 related:
