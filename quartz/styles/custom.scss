@@ -133,6 +133,22 @@ body[data-slug="index"] .florilegium-banner {
   }
 }
 
+// ewan-eigencells grows a canvas culture in the same slot once its script runs
+// (it sets html.eigencells first); without script the boats above remain.
+// The slot keeps the boats' ratio; a lazy image under display: none is never
+// fetched, so the 470 KB SVG only loads as the fallback.
+html.eigencells body[data-slug="index"] .florilegium-banner {
+  position: relative;
+  aspect-ratio: 296460 / 46009;
+  background: none;
+  -webkit-mask: none;
+  mask: none;
+
+  & > img {
+    display: none;
+  }
+}
+
 body[data-slug="thoughts/craft"] {
   & li:has(> img, > video) {
     list-style-type: none;

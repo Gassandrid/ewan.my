@@ -159,6 +159,14 @@ plugins:
   - source: ./plugins/ewan-lorenz
     enabled: false
     order: 96
+  # Procedural homepage banner: a new Eigenfish cell culture per visit; the
+  # florilegium boats remain the no-script fallback.
+  - source: ./plugins/ewan-eigencells
+    enabled: true
+    order: 96
+    layout:
+      position: afterBody
+      priority: 90
   - source: ./plugins/ewan-neural-background
     enabled: true
     order: 96
