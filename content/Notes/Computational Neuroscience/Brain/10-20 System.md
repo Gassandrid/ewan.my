@@ -26,4 +26,4 @@ Primary standardized method for applying patch [[Electrodes]] for [[On Doing EEG
 - numbers corresp to side
 	- even numbers on left on right side, odd on left
 
-![[1020system.png]]
+[![1020system.png](../../../Attachments/1020system.png)](../../../Attachments/1020system.png)

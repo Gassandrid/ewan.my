@@ -18,7 +18,7 @@ updated: 2026-02-20T10:03:25-05:00
 
 ## Sink at Origin (Stable Fixed Point)
 
-> ![[sinkAtOriginHenon.png]]
+> [![sinkAtOriginHenon.png](../../Attachments/sinkAtOriginHenon.png)](../../Attachments/sinkAtOriginHenon.png)
 >
 > _A neighborhood N (red circle) centered at the origin contracts under the map f to a smaller region f(N) (green irregular shape) strictly contained within N._
 
@@ -26,7 +26,7 @@ At a sink, both eigenvalues of the [[Jacobian]] have absolute value less than 1.
 
 ## Source at Origin (Unstable Fixed Point - Repeller)
 
-> ![[sourceAtOriginHenon.png]]
+> [![sourceAtOriginHenon.png](../../Attachments/sourceAtOriginHenon.png)](../../Attachments/sourceAtOriginHenon.png)
 >
 > _A neighborhood N (tan/beige inner circle) expands under the map to a larger region f(N) (green irregular shape) that extends beyond the original neighborhood._
 
@@ -34,7 +34,7 @@ At a source, both eigenvalues have absolute value greater than 1. Trajectories f
 
 ## Saddle at Origin (Hyperbolic Fixed Point)
 
-> ![[saddleAtOriginHenon.png]]
+> [![saddleAtOriginHenon.png](../../Attachments/saddleAtOriginHenon.png)](../../Attachments/saddleAtOriginHenon.png)
 >
 > _A neighborhood N experiences both contraction and expansion. The red region shows the stable manifold (attracting direction), while the green lobes of f(N) show the unstable manifold (repelling direction). The image stretches along one axis while contracting along another._
 
@@ -119,7 +119,7 @@ $$
 
 > Applying the linear map $A$ to an eigenvector $\vec{v}_{0}$ simply scales the vector by the eigenvalue $\lambda$. Repeated applications of $A$ scale the vector by successive powers of $\lambda$.
 
-![[eigenVectorMapping.png]]
+[![eigenVectorMapping.png](../../Attachments/eigenVectorMapping.png)](../../Attachments/eigenVectorMapping.png)
 
 Say we have the matrix:
 
@@ -162,7 +162,7 @@ $$
 
 **Yields:**
 
-> ![[stableUnstableManifolds.png]]
+> [![stableUnstableManifolds.png](../../Attachments/stableUnstableManifolds.png)](../../Attachments/stableUnstableManifolds.png)
 >
 > _Starting from $\vec{x}_0 = (2, 0)$, successive iterations climb along the $\lambda_1$ eigenvector direction (unstable manifold). Since $\lambda_1 = \frac{3}{2} > 1$, points expand along this direction. The $\lambda_2$ eigenvector basis forms the stable manifold - points on this line contract toward the origin since $\lambda_2 = \frac{1}{2} < 1$._
 

@@ -16,7 +16,7 @@ The stolen necklace problem presents itself as a simple problem: given a necklac
 
 I found out about this problem while watching a video from [[3blue1brown]] on the [[Borsuk-Ulam Theorem]]. The problem is a classic example of how topology can be applied to discrete problems, and it has a surprisingly elegant solution.
 
-![[Pasted image 20250819160648.png]]
+[![Pasted image 20250819160648.png](../../../Attachments/Pasted%20image%2020250819160648.png)](../../../Attachments/Pasted%20image%2020250819160648.png)
 
 ---
 

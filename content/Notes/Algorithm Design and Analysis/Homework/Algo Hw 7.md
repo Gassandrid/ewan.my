@@ -59,7 +59,7 @@ Leaving us with a problem of only 3 recursive multiplacions, which greatly reduc
 
 *See figure 1(may be on a different page due to latex compilation quirks*.
 
-![[Screenshot 2025-10-24 at 8.35.39 PM.png|Pseudocode multiply two n-bit integers using divide and conquer]]
+[![Screenshot 2025-10-24 at 8.35.39 PM.png](../../../Attachments/Screenshot%202025-10-24%20at%208.35.39%20PM.png)](../../../Attachments/Screenshot%202025-10-24%20at%208.35.39%20PM.png)
 
 ### 3. Recurrence Relation
 
@@ -121,7 +121,7 @@ Consider the dynamic programming algorithm we discussed for the weighted interva
 3. The memoization table (array) filled in *after each iteration* of the algorithm, with arrows pointing to the array entries containing solutions to the two subproblems.
 4. the set of jobs selected as sa result. (There are two alternative optimal sets of jobs possible with the algoirthm; either one can be given as the answer)
 
-![[Screenshot 2025-10-24 at 7.49.46 PM.png|Given job graph]]
+[![Screenshot 2025-10-24 at 7.49.46 PM.png](../../../Attachments/Screenshot%202025-10-24%20at%207.49.46%20PM.png)](../../../Attachments/Screenshot%202025-10-24%20at%207.49.46%20PM.png)
 
 ### 1. Sort Job by Finishing time
 
@@ -131,7 +131,7 @@ $$
 
 Jobs sorted by finish time as a gantt diagram made using mermaid: *see figure 03*
 
-![[Screenshot 2025-10-24 at 8.14.31 PM.png|Gantt Diagram Job Schedule]]
+[![Screenshot 2025-10-24 at 8.14.31 PM.png](../../../Attachments/Screenshot%202025-10-24%20at%208.14.31%20PM.png)](../../../Attachments/Screenshot%202025-10-24%20at%208.14.31%20PM.png)
 
 ### 2. COmpute $p(i)$ Values
 

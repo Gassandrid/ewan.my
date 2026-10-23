@@ -22,7 +22,7 @@ We all know what RL is, this is just going to serve as a high level note on the 
 
 ## Main [[Markov Decision Process]] Loop
 
-![[Screenshot 2026-09-11 at 7.42.25 PM.png]]
+[![Screenshot 2026-09-11 at 7.42.25 PM.png](../../Attachments/Screenshot%202026-09-11%20at%207.42.25%20PM.png)](../../Attachments/Screenshot%202026-09-11%20at%207.42.25%20PM.png)
 
 - **Agent**
 	- represent that which learns and takes **actions** at each moment in time $T$
@@ -115,7 +115,7 @@ $$
 > 
 > we can picture these distributions as heatmaps:
 > 
-> ![[Screenshot 2026-09-11 at 8.05.25 PM.png]]
+> [![Screenshot 2026-09-11 at 8.05.25 PM.png](../../Attachments/Screenshot%202026-09-11%20at%208.05.25%20PM.png)](../../Attachments/Screenshot%202026-09-11%20at%208.05.25%20PM.png)
 
 **State Value Function**
 

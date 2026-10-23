@@ -19,7 +19,7 @@ Since the introduction of [Bases](https://help.obsidian.md/bases), I felt like I
 
 But once I integrated data with the **Obsidian Web Clipper**, it all started to make sense. Suddenly, I was able to truly view my mind like its own database, combining the best of structure from the digital world and chaos from the neural one.
 
-![[baseyoutube.png]]
+[![baseyoutube.png](../Attachments/baseyoutube.png)](../Attachments/baseyoutube.png)
 
 In the context of **youtube videos**, this allowed me to track my self study with fields for which I had watched, and which I had written about ( along with providing a really neat tracker for all the data that comes with it, authors, connections, etc )
 
@@ -29,4 +29,4 @@ Following this, I soon adopted this practice across my entire vault. With the he
 
 As a reference, here is what my graph view looks like at this point in time (including my private notes, which is about 60% of my note volume)
 
-![[Screenshot 2025-09-02 at 11.21.28 AM.png]]
+[![Screenshot 2025-09-02 at 11.21.28 AM.png](../Attachments/Screenshot%202025-09-02%20at%2011.21.28%20AM.png)](../Attachments/Screenshot%202025-09-02%20at%2011.21.28%20AM.png)

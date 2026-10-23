@@ -23,7 +23,7 @@ They are considered a class of spirits that inhabit a hidden world known as _al 
 
 They are made from "smokeless fire" (Quran 55:15) and possess free will, allowing them to choose between good and evil, similar to humans.
 
-![[DjinnIslam.png]]
+[![DjinnIslam.png](../../../../Attachments/DjinnIslam.png)](../../../../Attachments/DjinnIslam.png)
 
 ## Some Types of Djinn
 

@@ -18,4 +18,4 @@ status: none
 date: 2026-01-16 17:36:01-05:00
 updated: 2026-01-18 12:09:49-05:00
 ---
-![[strangeLoop.png]]
+[![strangeLoop.png](../../Attachments/strangeLoop.png)](../../Attachments/strangeLoop.png)

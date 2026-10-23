@@ -24,7 +24,7 @@ author:
 - For each $i,L_{i}$ consists of all nodes at distance exactly $i$ edges from $s$.
 - There is a path from $s$ to $t$ $\iff$ $d(t) < \infty$.
 
-![[BFSearch.png]]
+[![BFSearch.png](../../Attachments/BFSearch.png)](../../Attachments/BFSearch.png)
 
 ## Formal Definition
 
@@ -76,4 +76,4 @@ $$
 
 ### Pseudocode
 
-![[Screenshot 2025-09-04 at 10.15.40 AM.png]]
+[![Screenshot 2025-09-04 at 10.15.40 AM.png](../../Attachments/Screenshot%202025-09-04%20at%2010.15.40%20AM.png)](../../Attachments/Screenshot%202025-09-04%20at%2010.15.40%20AM.png)

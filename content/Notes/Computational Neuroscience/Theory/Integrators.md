@@ -20,4 +20,4 @@ While models of integrators go far back to the breakout work of hte [[Hodgkin Hu
 
 Usually in the context of a single neuron model like that of [[Morris-Lecar Model|Morris Lecar]]/[[Hodgkin Huxley Model|Hodgkin Huxley]] models, we see manifest as a [[Saddle-Node on Invariant Circle|Saddle Node on Invariant Circle]] bifurcation, meaning the [[Attracting fixed point|attracting]] and [[Repelling fixed point|repelling]] fixed points collide and annihilate.
 
-![[SNICBifurcationScene.mp4]]
+<video src="../../../Attachments/SNICBifurcationScene.mp4" controls preload="metadata" title="SNICBifurcationScene.mp4"></video>

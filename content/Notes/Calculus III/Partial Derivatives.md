@@ -16,7 +16,7 @@ class:
 
 ## Finding the Slope on the 3D Plane
 
-![[Pasted image 20240912121220.png]]
+[![Pasted image 20240912121220.png](../../Attachments/Pasted%20image%2020240912121220.png)](../../Attachments/Pasted%20image%2020240912121220.png)
 
 > [!Info] Definition: X axis
 > Partial Derivative with respect to x means the slope of the surface in the direction of the positive x-axis

@@ -12,7 +12,7 @@ While parse trees are a concept from standard data structures, they are also use
 
 This is also known as a **Syntax Tree** for fields like **Formal Linguistics** and **Computing Theory**.
 
-![[Screenshot 2025-08-12 at 3.07.37 PM.png]]
+[![Screenshot 2025-08-12 at 3.07.37 PM.png](../../Attachments/Screenshot%202025-08-12%20at%203.07.37%20PM.png)](../../Attachments/Screenshot%202025-08-12%20at%203.07.37%20PM.png)
 
 For [[Large Language Model|Large Language Models]], parse trees can be used to guide the generation of text in a way that adheres to specific syntactic structures. This can be particularly useful in applications where the structure of the output is important, such as in legal or technical writing.
 

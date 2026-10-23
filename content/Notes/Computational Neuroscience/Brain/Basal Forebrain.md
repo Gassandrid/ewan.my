@@ -16,4 +16,4 @@ Some of the components of the Basal Forebrain Include:
 - [[Anterior Hypothalamus]]
 - [[Diagonal Band of Broca]]
 
-![[Pasted image 20250324103449.png]]
+[![Pasted image 20250324103449.png](../../../Attachments/Pasted%20image%2020250324103449.png)](../../../Attachments/Pasted%20image%2020250324103449.png)

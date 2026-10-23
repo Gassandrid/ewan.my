@@ -19,7 +19,7 @@ $$
 
 Think of this as a function of time that will take in a value between $0$ and $1$, and will return some point that resides on the line that those two points draw out:
 
-![[Screenshot 2025-07-18 at 10.01.13 PM.png]]
+[![Screenshot 2025-07-18 at 10.01.13 PM.png](../../Attachments/Screenshot%202025-07-18%20at%2010.01.13%20PM.png)](../../Attachments/Screenshot%202025-07-18%20at%2010.01.13%20PM.png)
 
 _another possible definition for a $\mathbb{R}^1$ LERP function_
 
@@ -31,7 +31,7 @@ This behavior, at least in the case of 3 points is what we call a _quadratic bez
 
 However the far more common case is the _cubic bezier curve_, which is defined by 4 points. The first and last points are the endpoints of the curve, while the two middle points are control points that define the curvature of the curve.
 
-![[Screenshot 2025-07-18 at 10.04.12 PM.png]]
+[![Screenshot 2025-07-18 at 10.04.12 PM.png](../../Attachments/Screenshot%202025-07-18%20at%2010.04.12%20PM.png)](../../Attachments/Screenshot%202025-07-18%20at%2010.04.12%20PM.png)
 
 The cubic Bezier curve is the one most used in computer graphics, and is defined by the following equation:
 
@@ -55,6 +55,6 @@ $$
 
 A neat way to think of this is by visualizing each point as a vector from the origin to the point, and then scaling each vector by the polynomial coefficients. Adding these vectors together draws the same curve that running the LERP method would achieve.
 
-![[Screenshot 2025-07-19 at 5.24.02 PM.png]]
+[![Screenshot 2025-07-19 at 5.24.02 PM.png](../../Attachments/Screenshot%202025-07-19%20at%205.24.02%20PM.png)](../../Attachments/Screenshot%202025-07-19%20at%205.24.02%20PM.png)
 
 Lining the vectors up shows this sort of "wave" effect that the curve has, which is a result of the polynomial coefficients. This is a **weighted sum**, as all the values add up to one as they shift their weights.

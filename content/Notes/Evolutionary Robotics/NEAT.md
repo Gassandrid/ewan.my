@@ -36,7 +36,7 @@ NEAT solves this by giving every structural innovation a global ID -- the **inno
 
 ## Genetic Encoding
 
-![[NEATMutations.png]]
+[![NEATMutations.png](../../Attachments/NEATMutations.png)](../../Attachments/NEATMutations.png)
 
 A NEAT genome has two gene types:
 

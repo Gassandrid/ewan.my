@@ -11,7 +11,7 @@ class:
 Suppose the curve $C$ in the xy-plane has the vector equation $\vec{r}(t) = \langle x(t),y(t) \rangle$. Suppose $C$ lies below the surface $z=f(x,y)$, and consider the problem of find the area of the **"sheet"** between the $C$ and the **surface**.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-06 at 12.12.04 PM.png|350]]
+> [![Screenshot 2024-11-06 at 12.12.04 PM.png](../../Attachments/Screenshot%202024-11-06%20at%2012.12.04%20PM.png)](../../Attachments/Screenshot%202024-11-06%20at%2012.12.04%20PM.png)
 
 - $C$ is a curve in the xy-plane
 - The blue space curve $L$ lives on the surface $z=f(x,y)$. It is the curve obtained by lifting $C$ to the surface
@@ -20,7 +20,7 @@ Suppose the curve $C$ in the xy-plane has the vector equation $\vec{r}(t) = \lan
 We proceed the dividing $C$ into n sub-arcs. This is achieved by sub-dividing the parameter interval $[a,b]$ into n sub-intervals of width $\Delta t = \frac{(b-a)}{n}$.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-06 at 12.14.58 PM.png|350]]
+> [![Screenshot 2024-11-06 at 12.14.58 PM.png](../../Attachments/Screenshot%202024-11-06%20at%2012.14.58%20PM.png)](../../Attachments/Screenshot%202024-11-06%20at%2012.14.58%20PM.png)
 
 The point $t_{i}$ in the parameter interval corresponds to the point on $C$ with position vector $P_{i}= \langle x(t_{i}), y(t_{i}) \rangle$
 
@@ -83,7 +83,7 @@ This particular integral is called the [[Line Integral]]:
 >
 > > [!Info] Sketch
 > >
-> > ![[Screenshot 2024-11-06 at 12.48.07 PM.png|350]]
+> > [![Screenshot 2024-11-06 at 12.48.07 PM.png](../../Attachments/Screenshot%202024-11-06%20at%2012.48.07%20PM.png)](../../Attachments/Screenshot%202024-11-06%20at%2012.48.07%20PM.png)
 
 Now we know what we are looking for, let's go through the steps to evaluate:
 
@@ -278,7 +278,7 @@ $$
 1. A parameterization $\vec{r}(t)$ of $C$ comes with an orientation. In the previous example [[16.2a - Line Integrals Of Scalar Fields#A.|A]] and [[16.2a - Line Integrals Of Scalar Fields#B.|B]], we had:
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-08 at 12.15.08 PM.png|350]]
+> [![Screenshot 2024-11-08 at 12.15.08 PM.png](../../Attachments/Screenshot%202024-11-08%20at%2012.15.08%20PM.png)](../../Attachments/Screenshot%202024-11-08%20at%2012.15.08%20PM.png)
 
 If $-C$ denotes $C$ but traversed "backwards", then the previous example suggests:
 
@@ -296,7 +296,7 @@ _i.e._ **reversing the orientation of $C$ flips the sign of the line integral.**
 2. Suppose $C$ is a finite union of paths.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-08 at 12.21.46 PM.png|350]]
+> [![Screenshot 2024-11-08 at 12.21.46 PM.png](../../Attachments/Screenshot%202024-11-08%20at%2012.21.46%20PM.png)](../../Attachments/Screenshot%202024-11-08%20at%2012.21.46%20PM.png)
 
 To find $\int_{C}f \ d\partial$ (or dx), we add up the line integral of each piece, _e.g._
 

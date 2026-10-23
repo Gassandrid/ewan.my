@@ -11,7 +11,7 @@ description:
 aliases:
   - GRPO
 date: 2026-05-23T11:20:31-07:00
-updated: 2026-09-06T12:11:54-04:00
+updated: 2026-10-14T12:52:34-04:00
 ---
 
 Instead of local reward model, GRPO generates a group of $G$  responses for the same prompt, scores using a rule based verifier ( ideal for cases involving programmatic tasks or theorem prooving ), then calculates the advantage in comparrsion to groups average.
@@ -22,10 +22,10 @@ Instead of local reward model, GRPO generates a group of $G$  responses for the 
 
 This is also the "hot stuff" right now (May 2026)
 
-![[GRPO.png]]
+[![GRPO.png](../../Attachments/GRPO.png)](../../Attachments/GRPO.png)
 
 ## Breakdown
 
 [[TRL]] from huggingface has some great methods for their `GRPOTrainer`
 
-![[grpoImplementation.png]]
+[![grpoImplementation.png](../../Attachments/grpoImplementation.png)](../../Attachments/grpoImplementation.png)

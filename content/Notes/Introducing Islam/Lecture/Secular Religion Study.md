@@ -47,7 +47,7 @@ Any time you hear "good muslim", "real muslim", "true muslim", "authentic muslim
 
 ## Who Are Muslims?
 
-![[Pasted image 20250829122950.png]]
+[![Pasted image 20250829122950.png](../../../Attachments/Pasted%20image%2020250829122950.png)](../../../Attachments/Pasted%20image%2020250829122950.png)
 
 Some things you might notice from this chart is the that Middle East has a **minority** of the world's muslims. The largest populations are in South Asia (India, Pakistan, Bangladesh) and Indonesia.
 

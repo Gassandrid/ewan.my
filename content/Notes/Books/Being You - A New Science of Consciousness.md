@@ -23,4 +23,4 @@ updated: 2026-01-24 10:12:26-05:00
 ---
 Very recent and thus a better reflection of current thinking on consciousness from a leading researcher in the field.
 
-![[beingYouScience.png]]
+[![beingYouScience.png](../../Attachments/beingYouScience.png)](../../Attachments/beingYouScience.png)

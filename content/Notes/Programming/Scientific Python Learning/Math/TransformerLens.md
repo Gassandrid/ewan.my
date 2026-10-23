@@ -12,11 +12,12 @@ interface:
 platforms:
   - Python
 source: https://transformerlensorg.github.io/TransformerLens/
-updated: 2025-09-25
+updated: 2026-10-13T16:09:12-04:00
 author:
   - "[[Neel Nanda]]"
 ---
-**TransformerLens** is a library for mechanistic interpretability of transformer models, particularly GPT-style language models. It allows users to load pre-trained models, inspect and manipulate their internal activations, and conduct experiments to understand how these models work.
+
+library for mechanistic interpretability of transformer models, particularly GPT-style language models. It allows users to load pre-trained models, inspect and manipulate their internal activations, and conduct experiments to understand how these models work. made by [[LessWrong]]s very own [[Neel Nanda]] ( of course he is known for his other works ).
 
 ---
 

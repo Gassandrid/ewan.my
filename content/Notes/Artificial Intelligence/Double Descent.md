@@ -15,7 +15,7 @@ updated: 2025-10-22
 
 This is particularly interesting, as the models are oftentimes still doing what we consider "overfitting" in traditional statistics(by memorising the noise in the training data), yet they still manage to generalize well to unseen data.
 
-![[doubDescent.png]]
+[![doubDescent.png](../../Attachments/doubDescent.png)](../../Attachments/doubDescent.png)
 
 **Why does Double Descent occur?**
 

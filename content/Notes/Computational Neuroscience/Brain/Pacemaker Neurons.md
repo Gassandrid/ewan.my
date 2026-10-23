@@ -13,7 +13,7 @@ They do this through a dynamic interplay of [[Ion Channels]], second messengers,
 
 Pacemaker Neurons rely on [[Hyperpolarization Activated Channels]] (HCN channels) to generate this rhytmic activity. These channels open in response to **membrane hyperpolarization**, allowing a mix of `Na+`/`K+` current to depolarize the cell, and thus contributing to the pacemaker activity.
 
-![[Pasted image 20250406084857.png|200]]
+[![Pasted image 20250406084857.png](../../../Attachments/Pasted%20image%2020250406084857.png)](../../../Attachments/Pasted%20image%2020250406084857.png)
 
 ---
 

@@ -17,4 +17,4 @@ The **Bayesian Brain** is a neuroscience theory suggesting the brain acts as a *
 
 It stems from the [[Free Energy Principle]] and applications like [[Active Inference]], but also shares a similar view to control theory applications of Bayesian Filtering like the [[Kalman Filter]], similar to frameworks like [[Predictive Coding]]
 
-![[bayesBrain.png]]
+[![bayesBrain.png](../../../Attachments/bayesBrain.png)](../../../Attachments/bayesBrain.png)

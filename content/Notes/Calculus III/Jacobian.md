@@ -11,12 +11,12 @@ id: 15.9 - Jacobian
 
 > **local warping intuition**: the Jacobian captures how a tiny rectangle in $(u,v)$-space gets stretched, sheared, and rotated into a parallelogram in $(x,y)$-space. this works because nonlinear maps, when you zoom in far enough, look linear, so a small patch in $uv$ gets approximated by a linear transformation, and that transformation is exactly what the partial derivatives encode. the determinant of that linear map is the factor by which areas scale under the local distortion, so if $|J| = 3$, a small patch in $uv$ covers 3 times as much area in $xy$. everything else in the change of variables formula is just integrating that scaling factor over the whole region.
 
-![[jacobianIntuition.png]]
+[![jacobianIntuition.png](../../Attachments/jacobianIntuition.png)](../../Attachments/jacobianIntuition.png)
 
 Polar,  cylindrical, and spherical coordinates area form of substitution in multiple integrals. Let's recall how Polar works: 
 
 > [!Info] Sketch
-> ![[Screenshot 2024-10-31 at 11.47.22 AM.png|600]]
+> [![Screenshot 2024-10-31 at 11.47.22 AM.png](../../Attachments/Screenshot%202024-10-31%20at%2011.47.22%20AM.png)](../../Attachments/Screenshot%202024-10-31%20at%2011.47.22%20AM.png)
 
 If $\mathcal{D}$ is a polar region,
 
@@ -35,12 +35,12 @@ We know the area element is $dA = r \ dr \ d\theta$. The integration limits, $r_
 Suppose the rectangular region $[u_{1},u_{2}]$, $[v_{1},v_{2}]$ in the uv-plane corresponds to some integration region in the xy-plane under the substitution $x=x(u,v)$, $y=y(u,v)$.
 
 >[!Info] Sketch
-> ![[Screenshot 2024-10-31 at 11.56.36 AM.png|600]]
+> [![Screenshot 2024-10-31 at 11.56.36 AM.png](../../Attachments/Screenshot%202024-10-31%20at%2011.56.36%20AM.png)](../../Attachments/Screenshot%202024-10-31%20at%2011.56.36%20AM.png)
 
 The rectangle with dimensions $\Delta u \Delta v$ (the red square in the figure) in the uv-plane corresponds to a patch (the red parallelogram) in the xy-plane.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-10-31 at 12.05.55 PM.png|600]]
+> [![Screenshot 2024-10-31 at 12.05.55 PM.png](../../Attachments/Screenshot%202024-10-31%20at%2012.05.55%20PM.png)](../../Attachments/Screenshot%202024-10-31%20at%2012.05.55%20PM.png)
 
 Suppose the red rectangle has bottom-left corner $(x_{0},y_{0})$. Suppose the point $(x,y)$ is obtained by $\vec{r}(x(u,v),y(u,v))$. Along the bottom line of the rectangle, $u$ varies and $v$ is held constant; this corresponds to the vector curve $\vec{r}(u,v_{0})$, where $u$ varies from $u_{0}$ to $u_{0}t\Delta u$.
 
@@ -111,7 +111,7 @@ Adding up the area elements and sending the number of elements to infinity yield
 > A suitable change of variable appears to be $u=x+y$, $v=x-y$ 
 >
 > > [!Info] Sketch
-> > ![[Screenshot 2024-10-31 at 12.30.17 PM.png|350]]
+> > [![Screenshot 2024-10-31 at 12.30.17 PM.png](../../Attachments/Screenshot%202024-10-31%20at%2012.30.17%20PM.png)](../../Attachments/Screenshot%202024-10-31%20at%2012.30.17%20PM.png)
 > >
 > $$
 > \begin{Bmatrix}

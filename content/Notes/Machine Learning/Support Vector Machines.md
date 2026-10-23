@@ -21,7 +21,7 @@ In plain english, they seek to find a "road" in the feature space that separates
 
 > $H_{1}$ does not separate the classes. $H_{2}$ does, but only with a small margin. $H_{3}$ separates them with the maximal margin.
 >
-> ![[SVM.png]]
+> [![SVM.png](../../Attachments/SVM.png)](../../Attachments/SVM.png)
 
 ---
 
@@ -29,7 +29,7 @@ In plain english, they seek to find a "road" in the feature space that separates
 
 Margins serve to increase the classifier's robustness to noise and improve generalization to unseen data.
 
-![[hardVsSoftMarginSVM.png]]
+[![hardVsSoftMarginSVM.png](../../Attachments/hardVsSoftMarginSVM.png)](../../Attachments/hardVsSoftMarginSVM.png)
 
 Hard margins will strictly impose all instances to be correctly classified, meaning no data points can fall within the margin or on the wrong side of the hyperplane.
 
@@ -45,7 +45,7 @@ Linear SVMs work very well, however there will always be datasets that are not e
 
 The trick we use is to "transform" the data and THEN apply a linear SVM in this transformed space. The transformation is done using a kernel function, which computes the inner product of the data points in the transformed space without explicitly performing the transformation.
 
-![[nonLinearSVM.png]]
+[![nonLinearSVM.png](../../Attachments/nonLinearSVM.png)](../../Attachments/nonLinearSVM.png)
 
 The classic case as seen above is the squaring, where the transformation is $\phi(x_1, x_2) = (x_1^2, \sqrt{2}x_1x_2, x_2^2)$.
 

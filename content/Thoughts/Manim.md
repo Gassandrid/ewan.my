@@ -18,7 +18,7 @@ interface:
   - Library
 image: "[[ManimBanner.png]]"
 ---
-![[ManimBanner.png]]
+[![ManimBanner.png](../Attachments/ManimBanner.png)](../Attachments/ManimBanner.png)
 
 Manim is a really useful tool that allows you to create animations and illustrations programmatically, which is a much nicer experience than doing it by hand in Blender.
 

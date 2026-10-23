@@ -32,9 +32,9 @@ we see cumalative acks, ACK 2 lost howevr ACK 3 arrives, thus sender slides wind
 > [!Success] Answer
 > *warning diagram may be on another page*
 
-![[Screenshot 2026-04-02 at 7.47.45 PM.png]]
+[![Screenshot 2026-04-02 at 7.47.45 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.47.45%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.47.45%20PM.png)
 
-![[Screenshot 2026-04-02 at 7.48.16 PM.png]]
+[![Screenshot 2026-04-02 at 7.48.16 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.48.16%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.48.16%20PM.png)
 
 #### Selective Repeat
 
@@ -43,9 +43,9 @@ just individual acks, ACK 2 lost triggers a timeout for packet 2 only. out-of-or
 > [!Success] Answer
 > *warning diagram may be on another page*
 
-![[Screenshot 2026-04-02 at 7.49.03 PM.png]]
+[![Screenshot 2026-04-02 at 7.49.03 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.49.03%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.49.03%20PM.png)
 
-![[Screenshot 2026-04-02 at 7.49.16 PM.png]]
+[![Screenshot 2026-04-02 at 7.49.16 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.49.16%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.49.16%20PM.png)
 
 > [!Question]
 > Consider the Go-Back-N protocol with a window size N = 50. Suppose only 30 packets are to be sent with sequence numbers 0-29, and also assume the following:

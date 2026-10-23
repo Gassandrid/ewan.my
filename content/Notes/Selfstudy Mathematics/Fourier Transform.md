@@ -29,7 +29,7 @@ Where:
 
 This is the case for an infinite continuous signal. In practice, we often deal with discrete signals sampled at specific intervals, this can still be done in the continuous domain, but more commonly we use the Discrete Fourier Transform (DFT) for sampled signals.
 
-![[TransformFourierSignals.png]]
+[![TransformFourierSignals.png](../../Attachments/TransformFourierSignals.png)](../../Attachments/TransformFourierSignals.png)
 
 ---
 

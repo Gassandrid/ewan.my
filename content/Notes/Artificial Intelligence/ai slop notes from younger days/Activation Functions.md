@@ -46,7 +46,7 @@ You can think of an activation function as the main component behind creating a 
         - A variation of ReLU that allows a small, non-zero gradient when the input is negative.
         - Helps mitigate the dying ReLU problem.
 5. **Softmax**
-	![[Pasted image 20240830111119.png]]
+	[![Pasted image 20240830111119.png](../../../Attachments/Pasted%20image%2020240830111119.png)](../../../Attachments/Pasted%20image%2020240830111119.png)
     - **Formula:** `σ(z_i) = e^(z_i) / Σ(e^(z_j))` for each class `i`
     - **Range:** (0, 1)
     - **Characteristics:**

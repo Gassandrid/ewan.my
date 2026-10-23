@@ -34,7 +34,7 @@ $$
 
 creating a "cobweb" of vertical and horizontal steps that converge toward fixed points, cycles, or chaos, revealing the long-term behavior of the system
 
-![[cobPlot.png]]G
+[![cobPlot.png](../../Attachments/cobPlot.png)](../../Attachments/cobPlot.png)G
 
 Important Terms:
 

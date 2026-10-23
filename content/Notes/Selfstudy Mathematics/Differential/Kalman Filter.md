@@ -21,7 +21,7 @@ A **Kalman Filter** is a tool for incorporating noisy measurements over time to 
 
 A great way to understand the Kalman Filter is to think of it as a [[Hidden Markov Models|hidden Markov model]] where the hidden states evolve over time according to a linear dynamical system, and the observations are noisy measurements of these states.
 
-![[exampleKalmanFilter.png]]
+[![exampleKalmanFilter.png](../../../Attachments/exampleKalmanFilter.png)](../../../Attachments/exampleKalmanFilter.png)
 
 *Model underlying the Kalman filter. Squares represent matrices. Ellipses represent [multivariate normal distributions](https://en.wikipedia.org/wiki/Multivariate_normal_distribution "Multivariate normal distribution") (with the mean and covariance matrix enclosed). Unenclosed values are [vectors](https://en.wikipedia.org/wiki/Vector_space "Vector space"). For the simple case, the various matrices are constant with time, and thus the subscripts are not used, but Kalman filtering allows any of them to change each time step.*
 
@@ -36,7 +36,7 @@ A great way to understand the Kalman Filter is to think of it as a [[Hidden Mark
 
 ## The Kalman Filter Algorithm
 
-![[IntuitionKalmanFilter.png]]
+[![IntuitionKalmanFilter.png](../../../Attachments/IntuitionKalmanFilter.png)](../../../Attachments/IntuitionKalmanFilter.png)
 
 The Kalman Filter operates in two stages: **predict** and **update**. At each time step $k$, we maintain an estimate of the state $\hat{\mathbf{x}}_k$ and its uncertainty ([[covariance]]) $\mathbf{P}_k$.
 

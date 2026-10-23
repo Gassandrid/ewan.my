@@ -74,7 +74,7 @@ A minimum cut is represented as a bottleneck in this network being pushed to its
 > 2. Write the final (i.e., maximum) flow value on every edge in the flow network and also write the calculated max flow value and the min cut capacity. Additionally, draw a line showing the minimum cut across the flow network (see the lecture slide for an example). 
 > 3. Draw the final residual graph with all the final residual capacities – both forward and backward – shown on the edges. Additionally, draw a line surrounding the nodes reached from the source node s at the end of the algorithm execution (see the demo slide for an example).
 > 
-> ![[Screenshot 2025-11-14 at 10.41.49 PM.png|Provided directed graph G]]
+> [![Screenshot 2025-11-14 at 10.41.49 PM.png](../../../Attachments/Screenshot%202025-11-14%20at%2010.41.49%20PM.png)](../../../Attachments/Screenshot%202025-11-14%20at%2010.41.49%20PM.png)
 
 ### Augmenting Paths
 
@@ -104,7 +104,7 @@ Minimum Cut Capacity: $8 + 5 + 3 + 5 = 21$
 
 Flow Network with Minimum Cut: *see figure 2*
 
-![[Screenshot 2025-11-14 at 11.14.56 PM.png|cut line for flow network]]
+[![Screenshot 2025-11-14 at 11.14.56 PM.png](../../../Attachments/Screenshot%202025-11-14%20at%2011.14.56%20PM.png)](../../../Attachments/Screenshot%202025-11-14%20at%2011.14.56%20PM.png)
 
 The cut separates nodes ${s, a}$ from ${b, c, d, t}$.
 
@@ -112,7 +112,7 @@ The cut separates nodes ${s, a}$ from ${b, c, d, t}$.
 
 The residual graph shows remaining forward capacities and backward capacities: *see figure 3*, sorry for poor quality sketch as I was having difficulties wtih my conventional approach.
 
-![[Screenshot 2025-11-14 at 11.19.11 PM.png|Final Residual Graph]]
+[![Screenshot 2025-11-14 at 11.19.11 PM.png](../../../Attachments/Screenshot%202025-11-14%20at%2011.19.11%20PM.png)](../../../Attachments/Screenshot%202025-11-14%20at%2011.19.11%20PM.png)
 
 **Residual Capacities (Forward/Backward):**
 

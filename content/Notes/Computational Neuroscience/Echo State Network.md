@@ -22,4 +22,4 @@ updated: 2026-10-07T15:06:07-04:00
 - [[Brain Computer Interfaces]] use these a lot for decoders, as they are great for low latency real time processing as only the linear readout layer is trained
 - [[FlyWire|Drosophila Connectome]] simulations that you see everywhere often use these.
 
-![[echoStateNetwork.png]]
+[![echoStateNetwork.png](../../Attachments/echoStateNetwork.png)](../../Attachments/echoStateNetwork.png)

@@ -52,6 +52,6 @@ updated: 2026-02-24T15:15:35-05:00
 
 The thalamus is the primary sensory relay station of the brain, situated at the center of the diencephalon. Nearly all sensory input (except olfaction) passes through the thalamus before reaching the cortex. It's not a passive relay — thalamic gating via the reticular nucleus actively modulates which signals reach cortical awareness.
 
-![[thalamusAndConnections.png]]
+[![thalamusAndConnections.png](../../../Attachments/thalamusAndConnections.png)](../../../Attachments/thalamusAndConnections.png)
 
 Each thalamic nucleus maps onto a specific cortical area and sensory/motor modality. The thalamocortical loop (thalamus ↔ cortex) is fundamental to oscillatory dynamics underlying sleep, attention, and consciousness.

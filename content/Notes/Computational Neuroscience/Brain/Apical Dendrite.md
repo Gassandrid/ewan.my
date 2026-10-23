@@ -15,4 +15,4 @@ description:
 - large [[Notes/Computational Neuroscience/Brain/Dendrites|Dendrites]] only found in the [[Prefrontal Cortex]] and [[Hippocampus]], contrasting [[Basal Dendrites]]by receiving long-range feedback signals
 - Emerge from apex of [[Pyramidal Neurons]] and perform as [[Integrators]], particularly from distant brain regions, given that is what pyramidal neurons themselves receive
 
-![[dendriteApical.png]]
+[![dendriteApical.png](../../../Attachments/dendriteApical.png)](../../../Attachments/dendriteApical.png)

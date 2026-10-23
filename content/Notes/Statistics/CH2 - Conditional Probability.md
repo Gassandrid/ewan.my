@@ -241,7 +241,7 @@ plt.legend((p1[0], p2[0], p3[0]), ('L', 'B', 'H2'))
 plt.show()
 ```
 
-![[Screenshot 2024-09-12 at 10.44.38 AM.png]]
+[![Screenshot 2024-09-12 at 10.44.38 AM.png](../../Attachments/Screenshot%202024-09-12%20at%2010.44.38%20AM.png)](../../Attachments/Screenshot%202024-09-12%20at%2010.44.38%20AM.png)
 
 **Either:**
 

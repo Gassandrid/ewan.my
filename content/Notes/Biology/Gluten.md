@@ -11,7 +11,7 @@ tags:
 
 **Glutenin** on the other hand, is a specific protein that is a major component of gluten. It is responsible for the elasticity and strength of the dough.
 
-![[Pasted image 20250827133206.png]]
+[![Pasted image 20250827133206.png](../../Attachments/Pasted%20image%2020250827133206.png)](../../Attachments/Pasted%20image%2020250827133206.png)
 
 ---
 
@@ -36,7 +36,7 @@ Gluten is not water-soluble, which means it does not dissolve in water. Instead,
 
 This is because the **Glutenin** proteins form long, coiled structures that can stretch and then return to their original shape, while the **Gliadin** proteins provide the dough with its ability to flow and deform.
 
-![[Pasted image 20250827133711.png]]
+[![Pasted image 20250827133711.png](../../Attachments/Pasted%20image%2020250827133711.png)](../../Attachments/Pasted%20image%2020250827133711.png)
 
 2. Viscous-elastic properties of gluten are important for desired qualities of certain foods (e.g. bread )
 
@@ -49,4 +49,4 @@ This is because the **Glutenin** proteins form long, coiled structures that can 
 
 ## Question: How Can the Properties of Gluten-free Products Be Improved?
 
-![[GlutenFreeDietGraph.png]]
+[![GlutenFreeDietGraph.png](../../Attachments/GlutenFreeDietGraph.png)](../../Attachments/GlutenFreeDietGraph.png)

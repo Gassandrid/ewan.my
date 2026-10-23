@@ -6,7 +6,7 @@ aliases:
   - neuron
 ---
 
-![[Pasted image 20240808134117.png]]
+[![Pasted image 20240808134117.png](../../../Attachments/Pasted%20image%2020240808134117.png)](../../../Attachments/Pasted%20image%2020240808134117.png)
 
 ### Overview
 

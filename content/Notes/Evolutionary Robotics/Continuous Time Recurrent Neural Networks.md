@@ -29,7 +29,7 @@ Where:
 - $\sum_{j=1}^{N} w_{ij} \sigma(y_j(t) + \theta_j)$ is the weighted sum of inputs from other neurons, where $w_{ij}$ is the weight from neuron $j$ to neuron $i$, $\sigma$ is an activation function (often a sigmoid), and $\theta_j$ is a bias term.
 - $I_i(t)$ is the external input to neuron $i$ at time $t$.
 
-![[modelCTRNN.png]]
+[![modelCTRNN.png](../../Attachments/modelCTRNN.png)](../../Attachments/modelCTRNN.png)
 
 ---
 

@@ -19,4 +19,4 @@ aliases:
 
 I have got one before, but due to being consumable and rather expensive ( along with not being prediabetic ), it is not the best use of my money right now. I have got the [[Dexcom Stelo]]
 
-![[Pasted image 20260903170508.png]]
+[![Pasted image 20260903170508.png](../../Attachments/Pasted%20image%2020260903170508.png)](../../Attachments/Pasted%20image%2020260903170508.png)

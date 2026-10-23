@@ -27,4 +27,4 @@ $$
 
 *classic henon attractor with parameters $a=1.4$ and $b=0.3$*
 
-![[henonMap1403.png]]
+[![henonMap1403.png](../../Attachments/henonMap1403.png)](../../Attachments/henonMap1403.png)

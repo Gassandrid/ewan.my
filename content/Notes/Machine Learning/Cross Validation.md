@@ -20,7 +20,7 @@ updated: 2026-02-02T09:11:53-05:00
 
 ### Repeated Random Sub-sampling Validation
 
-![[reSubSample.png]]
+[![reSubSample.png](../../Attachments/reSubSample.png)](../../Attachments/reSubSample.png)
 
 Also known as **[[Monte Carlo Simulations|Monte Carlo]] cross-validation**, this method involves randomly splitting the dataset into training and testing data multiple times. Each time, a model is trained on the training set and evaluated on the test set. The results are then averaged to provide an overall performance estimate.
 
@@ -28,7 +28,7 @@ This is a simple and effective method, but it can be computationally expensive, 
 
 ### K-Fold Cross Validation
 
-![[kFoldCross.png]]
+[![kFoldCross.png](../../Attachments/kFoldCross.png)](../../Attachments/kFoldCross.png)
 
 Splits the dataset into _k_ equally sized folds. The model is trained _k_ times, each time using a different fold as the test set and the remaining _k-1_ folds as the training set. The results are then averaged to provide an overall performance estimate.
 
@@ -68,7 +68,7 @@ We generally:
 
 ## Bias Vs Variance
 
-![[biasVariance.png]]
+[![biasVariance.png](../../Attachments/biasVariance.png)](../../Attachments/biasVariance.png)
 
 Analogous to the [[Uncertainty Principle]], there is a trade-off between bias and variance in model performance. Fundamental law of nature, also visible in the [[Fourier Transform]].
 

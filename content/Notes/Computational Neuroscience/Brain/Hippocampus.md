@@ -48,7 +48,7 @@ In addition to memory and navigation, the dentate gyrus is one of the few region
 - receives sensory information from [[Lateral Entorhinal Cortex]]
 - receives structural information from [[Medial Entorhinal Cortex]]
 
-![[Pasted image 20250331092645.png]]
+[![Pasted image 20250331092645.png](../../../Attachments/Pasted%20image%2020250331092645.png)](../../../Attachments/Pasted%20image%2020250331092645.png)
 
 [^1]
 

@@ -11,7 +11,7 @@ class:
 A **vector field** is a function that associates a point with a vector. An example is Earth's **gravitational field**:
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-04 at 12.07.15 PM.png|350]]
+> [![Screenshot 2024-11-04 at 12.07.15 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.07.15%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.07.15%20PM.png)
 
 The **Earth** exerts an attractive force on a point-mass located anywhere inthe universe. At every point $P$, wer draw a vector pointing in the direction of the attractive force with length equal to the magnitude of the force.
 
@@ -20,7 +20,7 @@ _(according to Newton, the magnitude of the force is inversely proportional to t
 Vector fields are convenient for problems involving **Flow**. Consider the problem of water flowing through a stream:
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-04 at 12.09.45 PM.png|350]]
+> [![Screenshot 2024-11-04 at 12.09.45 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.09.45%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.09.45%20PM.png)
 
 At every point in the stream, we can assign a vector whivh tells use the direction the water is moving. The magnitude of the vector tells us the velocity of the water at that point.
 
@@ -44,7 +44,7 @@ Where $P$ and $Q$ are scalar functions.
 >
 > > [!Info] Sketch
 > >
-> > ![[Screenshot 2024-11-04 at 12.15.52 PM.png|350]]
+> > [![Screenshot 2024-11-04 at 12.15.52 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.15.52%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.15.52%20PM.png)
 >
 > > [!Abstract] Remark
 > >
@@ -57,7 +57,7 @@ Where $P$ and $Q$ are scalar functions.
 >
 > > [!Info] Sketch
 > >
-> > ![[Screenshot 2024-11-04 at 12.18.57 PM.png]]
+> > [![Screenshot 2024-11-04 at 12.18.57 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.18.57%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.18.57%20PM.png)
 >
 > This sketch comes from plotting a few example vectors until we notice that pattern:
 >
@@ -129,7 +129,7 @@ plt.show()
 Recall that $\nabla f = \langle f_{x}, f_{y}, f_{z} \rangle = f_{x} \vec{i} + f_{y} \vec{j} +f_{z} \vec{k}$. Thus, the gradient vector is really a vector field.
 
 > [!Info] Graph
-> ![[Screenshot 2024-11-04 at 1.46.19 PM.png|350]]
+> [![Screenshot 2024-11-04 at 1.46.19 PM.png](../../Attachments/Screenshot%202024-11-04%20at%201.46.19%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%201.46.19%20PM.png)
 
 > [!Example]
 > The gradient vector field for $f(x,y) = x^2y-y^3$, superimposed on the contour map. As we would expect, the gradient vectors are perpendicular to the contours.

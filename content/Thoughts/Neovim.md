@@ -30,4 +30,4 @@ Neovim is a terminal/CLI app, and thus allows me to stay in the terminal for my 
 
 My config is built off of a prebuilt distro *LazyVim*, main changes being using a different file explorer that treats files like its own text buffer.
 
-![[Screenshot 2025-09-19 at 1.46.27 PM.png]]
+[![Screenshot 2025-09-19 at 1.46.27 PM.png](../Attachments/Screenshot%202025-09-19%20at%201.46.27%20PM.png)](../Attachments/Screenshot%202025-09-19%20at%201.46.27%20PM.png)

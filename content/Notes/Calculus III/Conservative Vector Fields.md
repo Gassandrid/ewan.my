@@ -43,7 +43,7 @@ $$
 > $$
 >
 > > [!Note] Sketch
-> > ![[Screenshot 2024-11-21 at 12.20.00 PM.png|100]]
+> > [![Screenshot 2024-11-21 at 12.20.00 PM.png](../../Attachments/Screenshot%202024-11-21%20at%2012.20.00%20PM.png)](../../Attachments/Screenshot%202024-11-21%20at%2012.20.00%20PM.png)
 >
 > 2. Compare with the Fundamental Theorem of Calculus:
 >

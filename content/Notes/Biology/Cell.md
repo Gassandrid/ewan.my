@@ -30,7 +30,7 @@ After definining the [[Atomic Cell Structure]], we can finally have a look the b
 
 As an overview, a cell looks something like this:
 
-![[Pasted image 20250905134544.png]]
+[![Pasted image 20250905134544.png](../../Attachments/Pasted%20image%2020250905134544.png)](../../Attachments/Pasted%20image%2020250905134544.png)
 
 ### Nucleic Acids: Genetic Information
 
@@ -40,7 +40,7 @@ Consists of **nucleotides** (monomers) that make up **nucleic acids** (polymers)
 
 There are two kinds of nucleic acids: [[DNA]] and [[RNA]].
 
-![[Pasted image 20250905134820.png]]
+[![Pasted image 20250905134820.png](../../Attachments/Pasted%20image%2020250905134820.png)](../../Attachments/Pasted%20image%2020250905134820.png)
 
 Some of these nucleotides are used to make **[[ATP]]**, which is the main energy currency of the cell.
 
@@ -55,7 +55,7 @@ They _speed up_ chemical reactions, _transport_ molecules, _provide_ structural 
 > [!Example]
 > **Turning Sucrose into Glucose and Fructose**: this reaction is catalyzed by the enzyme **sucrase**.
 >
-> ![[Pasted image 20250905135307.png]]
+> [![Pasted image 20250905135307.png](../../Attachments/Pasted%20image%2020250905135307.png)](../../Attachments/Pasted%20image%2020250905135307.png)
 
 They do this with **[[Enzymes]]** - a type of protein that acts as a catalyst to speed up chemical reactions.
 
@@ -67,7 +67,7 @@ Amino acids are the monomers that make up proteins (the polymers).
 - share common structure
 - unique side chain (R group) gives each amino acid its unique properties
 
-![[Pasted image 20250905135519.png]]
+[![Pasted image 20250905135519.png](../../Attachments/Pasted%20image%2020250905135519.png)](../../Attachments/Pasted%20image%2020250905135519.png)
 
 ### Polypeptides
 

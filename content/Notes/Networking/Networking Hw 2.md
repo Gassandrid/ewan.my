@@ -71,11 +71,11 @@ updated: 2026-02-26T22:32:46-05:00
 
 case for ack corruption where retransmission causes duplication
 
-![[Screenshot 2026-02-26 at 10.27.52 PM.png]]
+[![Screenshot 2026-02-26 at 10.27.52 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.27.52%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.27.52%20PM.png)
 
 case for nak corruption where lost goes is not recovered
 
-![[Screenshot 2026-02-26 at 10.28.27 PM.png]]
+[![Screenshot 2026-02-26 at 10.28.27 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.28.27%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.28.27%20PM.png)
 
 > Fix (rdt2.1): add sequence numbers so the receiver can detect and discard duplicates, making retransmit-on-any-ambiguity safe.
 
@@ -90,9 +90,9 @@ Used a mermaid diagram, as they have a tool for these exact kinds of conversatio
 
 > [!Success] Answer
 
-![[Screenshot 2026-02-26 at 10.32.16 PM.png]]
+[![Screenshot 2026-02-26 at 10.32.16 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.32.16%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.32.16%20PM.png)
 
-![[Screenshot 2026-02-26 at 10.32.38 PM.png]]
+[![Screenshot 2026-02-26 at 10.32.38 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.32.38%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.32.38%20PM.png)
 
 ## Problem 5 (16 points).
 

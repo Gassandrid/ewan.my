@@ -21,7 +21,7 @@ _Cells are the fundamental units of life, which will be structuring our lessons 
 
 There is a 3 level hierarchy of cells, namely molecules, cells, and organisms. Molecules are the smallest level of organization, and they make up cells. Cells are the basic unit of life, and they make up organisms. Organisms are made up of one or more cells.
 
-![[Screenshot 2025-09-03 at 1.20.53 PM.png]]
+[![Screenshot 2025-09-03 at 1.20.53 PM.png](../../Attachments/Screenshot%202025-09-03%20at%201.20.53%20PM.png)](../../Attachments/Screenshot%202025-09-03%20at%201.20.53%20PM.png)
 
 ### Structure Of an Atom
 
@@ -29,11 +29,11 @@ Taking a detour into **Physics**, we note the nature of **Protons**, **Neutrons*
 
 What we care about is the distribution of electrons around the nucleus of an atom. The number of protons in the nucleus determines the element, and the number of electrons determines the chemical properties of the element.
 
-![[Atom.png]]
+[![Atom.png](../../Attachments/Atom.png)](../../Attachments/Atom.png)
 
 Despite the incredible diversity of types of atoms, biology only really ever makes use of a few types of atoms. The most common atoms in biology are [[Carbon]], [[Hydrogen]], [[Oxygen]], [[Nitrogen]], [[Phosphorus]], and [[Sulfur]]. These atoms are the building blocks of life, and they make up the majority of the mass of living organisms.
 
-![[BioAtomsDiagram.png]]
+[![BioAtomsDiagram.png](../../Attachments/BioAtomsDiagram.png)](../../Attachments/BioAtomsDiagram.png)
 
 **Electron Shells** are regions around the nucleus where electrons reside. Examples: [[Hydrogen]] 1 (1st shell); [[Carbon]] 6, [[Nitrogen]] 7, [[Oxygen]] 8 (1st-2nd); [[Phosphorus]] 15, [[Sulfur]] 16 (1st-3rd).
 
@@ -41,7 +41,7 @@ Despite the incredible diversity of types of atoms, biology only really ever mak
 
 Two atoms can form a bond by sharing or transferring electrons. There are two main types of bonds: **Covalent Bonds** and **Ionic Bonds**.
 
-![[Bonding.png]]
+[![Bonding.png](../../Attachments/Bonding.png)](../../Attachments/Bonding.png)
 
 #### Covalent and Ionic Bonds
 
@@ -49,7 +49,7 @@ Two atoms can form a bond by sharing or transferring electrons. There are two ma
 
 **Ionic Bonds** are formed when one atom transfers an electron to another atom, resulting in the formation of ions. The atom that loses an electron becomes a positively charged ion (cation), while the atom that gains an electron becomes a negatively charged ion (anion). Ionic bonds are weaker than covalent bonds and are often found in salts.
 
-![[Ionicvscovalent.png]]
+[![Ionicvscovalent.png](../../Attachments/Ionicvscovalent.png)](../../Attachments/Ionicvscovalent.png)
 
 > [!Example]
 > Based on what we just discussed, covalent bonds between atoms wtih similar electronegativities are **non-polar** bonds, and the covalent bonds between atoms with different electronegativities are **polar** bonds.
@@ -58,7 +58,7 @@ Two atoms can form a bond by sharing or transferring electrons. There are two ma
 
 **Non-Covalent Bonds** are weaker than covalent and ionic bonds, but they are still important in biology. They are distinct because they can connect different molecules together, whereas covalent and ionic bonds connect atoms within a molecule.
 
-![[Pasted image 20250903134805.png]]
+[![Pasted image 20250903134805.png](../../Attachments/Pasted%20image%2020250903134805.png)](../../Attachments/Pasted%20image%2020250903134805.png)
 
 > [!Warning] FYI
 > In the context of chemistry, ionic bonds are said to be stronger vs. covalent bonds. This is true in a theorectical sene, but only between individual ions and not when there's water involved (which there _always_ is in cells!)

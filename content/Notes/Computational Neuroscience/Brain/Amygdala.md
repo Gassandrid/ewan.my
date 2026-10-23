@@ -44,7 +44,7 @@ The amygdala is the brain's threat-detection and emotional learning center. Its 
 
 The "low road" (thalamus→amygdala direct) enables pre-conscious fear responses before full cortical processing completes; the "high road" (thalamus→cortex→amygdala) delivers the full perceptual representation.
 
-![[Pasted image 20250414101333.png]]
+[![Pasted image 20250414101333.png](../../../Attachments/Pasted%20image%2020250414101333.png)](../../../Attachments/Pasted%20image%2020250414101333.png)
 
 ## Structure
 

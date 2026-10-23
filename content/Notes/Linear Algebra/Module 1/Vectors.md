@@ -237,13 +237,13 @@ $$
 
 ### How Do You "Add" Two Vectors Together?
 
-![[Pasted image 20240826123538.png]]
+[![Pasted image 20240826123538.png](../../../Attachments/Pasted%20image%2020240826123538.png)](../../../Attachments/Pasted%20image%2020240826123538.png)
 
 We can use the "tip to tail" method to add two or more vectors together as show in the figure.
 
 ### How Do You "Subtract" Them?
 
-![[Pasted image 20240826123719.png]]
+[![Pasted image 20240826123719.png](../../../Attachments/Pasted%20image%2020240826123719.png)](../../../Attachments/Pasted%20image%2020240826123719.png)
 
 We can subtract two vectors by representing one of them as a negative vector `-v`, and then adding those two together.
 
@@ -261,7 +261,7 @@ $$
 
 ### Multiplication of Vectors
 
-![[Pasted image 20240826124335.png]]
+[![Pasted image 20240826124335.png](../../../Attachments/Pasted%20image%2020240826124335.png)](../../../Attachments/Pasted%20image%2020240826124335.png)
 
 To multiply vectors, we can use the **dot product** to find the magnitude.
 
@@ -271,7 +271,7 @@ $$
 
 We can also use the cross product
 
-![[Pasted image 20240826124530.png]]
+[![Pasted image 20240826124530.png](../../../Attachments/Pasted%20image%2020240826124530.png)](../../../Attachments/Pasted%20image%2020240826124530.png)
 
 The cross product of two vectors is another vector that is perpendicular to both of the original vectors.
 

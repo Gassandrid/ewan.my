@@ -34,9 +34,9 @@ In the classic case of $\mu$ parameter of $2$:
 
 **Fully connected** transition graph, between $0\to1$, midline is $\frac{1}{2}$.
 
-![[transitionGraphLR.png]]
+[![transitionGraphLR.png](../../Attachments/transitionGraphLR.png)](../../Attachments/transitionGraphLR.png)
 
-![[RorLTransitionTree.png]]
+[![RorLTransitionTree.png](../../Attachments/RorLTransitionTree.png)](../../Attachments/RorLTransitionTree.png)
 
 ---
 

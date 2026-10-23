@@ -48,4 +48,4 @@ Parameters/Constants
 
 Great example is a sub critical [[Andronov Hopf Bifurcation]]
 
-![[kirsanovHopfBifurcationSub.png]]
+[![kirsanovHopfBifurcationSub.png](../../../Attachments/kirsanovHopfBifurcationSub.png)](../../../Attachments/kirsanovHopfBifurcationSub.png)

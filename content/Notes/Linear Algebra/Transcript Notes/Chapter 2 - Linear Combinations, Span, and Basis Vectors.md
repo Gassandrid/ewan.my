@@ -10,7 +10,7 @@ Assuming you are already familiar with vectors or looked at the [[Chapter 1 - Ve
 
 To frame the idea of a vector for this content, it is best for you to think of coordinates as a **scalar**, meaning think how each values **stretches** or **squishes** vectors...
 
-![[Screenshot 2025-04-02 at 6.29.28 PM.png]]
+[![Screenshot 2025-04-02 at 6.29.28 PM.png](../../../Attachments/Screenshot%202025-04-02%20at%206.29.28%20PM.png)](../../../Attachments/Screenshot%202025-04-02%20at%206.29.28%20PM.png)
 
 For this purpose, let's familiarize ourselves with **two very important vectors**.
 

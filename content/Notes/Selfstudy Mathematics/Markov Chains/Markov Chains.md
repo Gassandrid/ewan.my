@@ -25,7 +25,7 @@ Let's say we are given a graph with all 3 foods, with arrows pointing to other f
 
 If we are on **pizza** today, we can predict that there is a $70\%$ chance of having **hotdogs** tomorrow.
 
-![[Screenshot 2025-06-26 at 10.09.56 PM.png]]
+[![Screenshot 2025-06-26 at 10.09.56 PM.png](../../../Attachments/Screenshot%202025-06-26%20at%2010.09.56%20PM.png)](../../../Attachments/Screenshot%202025-06-26%20at%2010.09.56%20PM.png)
 
 While quite a simple diagram, this is actually a complete Markov chain!
 
@@ -56,7 +56,7 @@ _However, there are special Markov Chains with unique properties that break this
 
 To get a feel for what you might see over a long time period of this chain, lets _walk_ the chain and see what we get:
 
-![[Screenshot 2025-04-29 at 1.40.45 PM.png]]
+[![Screenshot 2025-04-29 at 1.40.45 PM.png](../../../Attachments/Screenshot%202025-04-29%20at%201.40.45%20PM.png)](../../../Attachments/Screenshot%202025-04-29%20at%201.40.45%20PM.png)
 
 After 10 steps, we are left with this. But how can we find the probability of **each of the food items**, aka a probability distribution? This is not a particularly meaningful question as it is quite simple, but leads to a bigger picture idea later.
 

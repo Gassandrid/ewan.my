@@ -19,4 +19,4 @@ A **hash map** (also known as a hash table) is a data structure that implements 
 
 The hash function is an efficient way to convert a given key into an integer index. The quality of the hash function is crucial for the performance of the hash map, as it affects how evenly the keys are distributed across the buckets.
 
-![[Pasted image 20250902102836.png]]
+[![Pasted image 20250902102836.png](../../Attachments/Pasted%20image%2020250902102836.png)](../../Attachments/Pasted%20image%2020250902102836.png)

@@ -26,7 +26,7 @@ Partiall charges spread out as far as possible in 3D space.
 
 Each water molecule can **form hydrogen bonds with up to 4 other water molecules**.
 
-![[WaterBonds.png]]
+[![WaterBonds.png](../../Attachments/WaterBonds.png)](../../Attachments/WaterBonds.png)
 
 ---
 
@@ -39,9 +39,9 @@ For one, it has a very high heat capacity, meaning it can absorb a lot of heat w
 > [!Example]
 > **evaporative cooling** - lots of hydrogen bonds between water molecules means it takes a lot of energy to pull them apart
 >
-> ![[Pasted image 20250905132929.png]]
+> [![Pasted image 20250905132929.png](../../Attachments/Pasted%20image%2020250905132929.png)](../../Attachments/Pasted%20image%2020250905132929.png)
 
 > [!Example]
 > **expanding when freezing** - hydrogen bonds hold water molecules apart in a crystalline structure
 >
-> ![[Pasted image 20250905133052.png]]
+> [![Pasted image 20250905133052.png](../../Attachments/Pasted%20image%2020250905133052.png)](../../Attachments/Pasted%20image%2020250905133052.png)

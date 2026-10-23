@@ -91,7 +91,7 @@ $$
 
 *see figure 1*
 
-![[Screenshot 2025-02-10 at 8.30.33 PM.png|200|Problem 1 State Diagram]]
+[![Screenshot 2025-02-10 at 8.30.33 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.30.33%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.30.33%20PM.png)
 
 ---
 
@@ -191,13 +191,13 @@ Original NFA $M$:
 
 *see figure 2*
 
-![[Screenshot 2025-02-10 at 8.30.51 PM.png|Original NFA M]]
+[![Screenshot 2025-02-10 at 8.30.51 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.30.51%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.30.51%20PM.png)
 
 Reversed NFA $M^\mathcal{R}$ with new entry point $q_{new}$
 
 *see figure 3*
 
-![[Screenshot 2025-02-10 at 8.31.04 PM.png|Reversed NFA M^R]]
+[![Screenshot 2025-02-10 at 8.31.04 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.04%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.04%20PM.png)
 
 ---
 
@@ -237,7 +237,7 @@ This is a very simple DFA, with only a single state that is both the start and t
 
 *see figure 4*
 
-![[Screenshot 2025-02-10 at 8.32.31 PM.png|Case n=1]]
+[![Screenshot 2025-02-10 at 8.32.31 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.32.31%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.32.31%20PM.png)
 
 #### Case $n=2$
 
@@ -261,7 +261,7 @@ Transitions for these two should be:
 
 *see figure 5*
 
-![[Screenshot 2025-02-10 at 8.32.16 PM.png|Case n=2]]
+[![Screenshot 2025-02-10 at 8.32.16 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.32.16%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.32.16%20PM.png)
 
 ### Case $n=3$
 
@@ -287,7 +287,7 @@ The transitions for these states are as follows:
 
 *see figure 6*
 
-![[Screenshot 2025-02-10 at 8.31.54 PM.png|Case n=3]]
+[![Screenshot 2025-02-10 at 8.31.54 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.54%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.54%20PM.png)
 
 ### Expanding This out to All case $n \geq 1$
 
@@ -318,7 +318,7 @@ Convert the following NFA to an equivalent DFA. For _subset construction_, foll
 
 *see figure 7*
 
-![[Screenshot 2025-02-10 at 8.31.44 PM.png|Extra Credit Problem Demo]]
+[![Screenshot 2025-02-10 at 8.31.44 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.44%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.44%20PM.png)
 
 ### Listing Transitions
 
@@ -422,4 +422,4 @@ $$
 
 *see figure 8*
 
-![[Screenshot 2025-02-10 at 8.31.26 PM.png|Resulting Constructed DFA]] 
+[![Screenshot 2025-02-10 at 8.31.26 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.26%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.26%20PM.png) 

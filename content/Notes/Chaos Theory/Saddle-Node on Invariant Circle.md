@@ -22,4 +22,4 @@ also known as **SNIC**, is a special case bifurcation, where a [[Stable Manifold
 
 This is the primary mechanism for how class 1 [[Neuron|neurons]] transition from a resting state to a continous periodic spiking pattern in models like [[Morris-Lecar Model]] and [[Hodgkin Huxley Model]].
 
-![[SNIC.png]]
+[![SNIC.png](../../Attachments/SNIC.png)](../../Attachments/SNIC.png)

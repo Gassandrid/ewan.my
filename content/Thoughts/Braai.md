@@ -16,4 +16,4 @@ A **Braai** is a term from [[South Africa]] for something like a Barbecue, only 
 
 The meat selection of a Braai is also far wider ranging than the typical american "hotdog and hamburger" options. Some unique meats beyond the conventional would be **Boerewors**, a special kind of sausage. Also usually involves a lot of fish, Lamb Chops even.
 
-![[gaslookingBraai.png]]
+[![gaslookingBraai.png](../Attachments/gaslookingBraai.png)](../Attachments/gaslookingBraai.png)

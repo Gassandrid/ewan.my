@@ -14,4 +14,4 @@ It is also often used in art and literature to convey a sense of existential ang
 
 The painting below is by *Amelia Augustyn*.
 
-![[Pasted image 20250626173511.png]]
+[![Pasted image 20250626173511.png](../Attachments/Pasted%20image%2020250626173511.png)](../Attachments/Pasted%20image%2020250626173511.png)

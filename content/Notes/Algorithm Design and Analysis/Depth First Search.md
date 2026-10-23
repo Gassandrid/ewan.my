@@ -28,7 +28,7 @@ author:
 
 ### Pseudocode
 
-![[Screenshot 2025-09-02 at 11.06.43 AM.png]]
+[![Screenshot 2025-09-02 at 11.06.43 AM.png](../../Attachments/Screenshot%202025-09-02%20at%2011.06.43%20AM.png)](../../Attachments/Screenshot%202025-09-02%20at%2011.06.43%20AM.png)
 
 ## Formal Definition
 

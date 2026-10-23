@@ -9,7 +9,7 @@ updated: 2025-03-27
 ---
 ## Introduction to Non-determinism
 
-![[Pasted image 20250204090735.png]]
+[![Pasted image 20250204090735.png](../../../Attachments/Pasted%20image%2020250204090735.png)](../../../Attachments/Pasted%20image%2020250204090735.png)
 
 Non-determinism is a fundamental concept in computation theory that allows a machine to have multiple possible next states for a given input. Unlike deterministic machines where each input leads to exactly one next state, non-deterministic machines can "guess" or "pursue multiple paths simultaneously."
 

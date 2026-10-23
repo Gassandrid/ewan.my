@@ -23,7 +23,7 @@ Many kinds of networks converge to attractors, the most common example being [[H
 
 ### Point Attractors
 
-![[pointAttractor.png]]
+[![pointAttractor.png](../../../Attachments/pointAttractor.png)](../../../Attachments/pointAttractor.png)
 
 Simplest case, tends towards a [[Attracting fixed point|Fixed Point]]. A classic example of a single dimension fixed point attractor is the equation:
 
@@ -58,7 +58,7 @@ $$
 
 this yields a line attractor looking like the following:
 
-![[lineAttractor.png]]
+[![lineAttractor.png](../../../Attachments/lineAttractor.png)](../../../Attachments/lineAttractor.png)
 
 First dimension means the system is stable on the line, second defines *shape* of the line, and third collapses higher dimensions proportionally to its own current value.
 
@@ -74,7 +74,7 @@ $$
 
 $x$ is again defined over the attractor space, usually of a much lower dimension than the number of nodes in the network.
 
-![[cyclicAttractor.png]]
+[![cyclicAttractor.png](../../../Attachments/cyclicAttractor.png)](../../../Attachments/cyclicAttractor.png)
 
 [[Forced Damped Pendulum]] is a chaotic [[Dynamical Systems Theory|dynamical system]], however under certain conditions it can act as a cyclic attractor(in this case would be known as a *limit cycle*).
 

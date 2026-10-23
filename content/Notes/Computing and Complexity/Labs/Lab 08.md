@@ -35,7 +35,7 @@ updated: 2025-04-01
 
 > For the following Turing Machine, complete the questions below:
 
-![[Screenshot 2025-04-01 at 9.17.47 AM.png|Turing Machine From Sipser]]
+[![Screenshot 2025-04-01 at 9.17.47 AM.png](../../../Attachments/Screenshot%202025-04-01%20at%209.17.47%20AM.png)](../../../Attachments/Screenshot%202025-04-01%20at%209.17.47%20AM.png)
 
 1.  **Work out the complete sequence of configurations which would result if the input were 000**
 
@@ -81,7 +81,7 @@ $$
 
 > Given the Turing machine shown in Sipser ITTTOC Example 3.9, write the complete sequence of configurations that formally describes the computation on the following inputs:
 
-![[Screenshot 2025-04-01 at 9.39.34 AM.png|Turing Machine Sipser 3.9]]
+[![Screenshot 2025-04-01 at 9.39.34 AM.png](../../../Attachments/Screenshot%202025-04-01%20at%209.39.34%20AM.png)](../../../Attachments/Screenshot%202025-04-01%20at%209.39.34%20AM.png)
 
 1. 01#01
 

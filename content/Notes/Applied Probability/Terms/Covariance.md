@@ -13,7 +13,7 @@ updated: 2025-10-15
 
 We can honestly just think of this as the proportion operator $\propto$ associated with two variables.
 
-![[pooledCovariance.png]]
+[![pooledCovariance.png](../../../Attachments/pooledCovariance.png)](../../../Attachments/pooledCovariance.png)
 
 ---
 

@@ -13,7 +13,7 @@ In [[Evolutionary Robotics]], we introduce the concept of [[Gradient Descent]] t
 
 ---
 
-![[gradDescent.png]]
+[![gradDescent.png](../../../Attachments/gradDescent.png)](../../../Attachments/gradDescent.png)
 
 
 When training a model, the goal is to minimize the **cost function** (or **loss function**), which measures how far off the model's predictions are from the actual target values. Gradient Descent finds the direction and step size to adjust the parameters to reduce this loss.

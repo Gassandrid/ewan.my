@@ -55,7 +55,7 @@ Continuous Random Variables are those that can take on any value within a range.
 
 To contrast, a continuous random variable has a infinitely dividable range of values, with "infinite precision"
 
-![[Pasted image 20250203132622.png]]
+[![Pasted image 20250203132622.png](../../../../Attachments/Pasted%20image%2020250203132622.png)](../../../../Attachments/Pasted%20image%2020250203132622.png)
 
 ---
 

@@ -17,4 +17,4 @@ updated: 2025-09-03
 
 It is introduced in a recursive dialogue between two characters, Achilles and the Tortoise, who discuss the nature of self-reference and recursion. The dialogue explores how definitions can be nested within each other, leading to complex and often paradoxical situations.
 
-![[EscherTeselation.png]]
+[![EscherTeselation.png](../../../Attachments/EscherTeselation.png)](../../../Attachments/EscherTeselation.png)

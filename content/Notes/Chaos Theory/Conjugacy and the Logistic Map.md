@@ -23,7 +23,7 @@ For each point in the [[Tent Map]] domain $\{ 0,1 \}$, there is a *companion poi
 
 We say the maps $f$ and $g$ are **conjugate** if they are related by a continuous one to one change of coordinates.
 
-![[Screenshot 2026-02-19 at 10.51.04 AM.png]]
+[![Screenshot 2026-02-19 at 10.51.04 AM.png](../../Attachments/Screenshot%202026-02-19%20at%2010.51.04%20AM.png)](../../Attachments/Screenshot%202026-02-19%20at%2010.51.04%20AM.png)
 
 ```tikz
 \usepackage{tikz-cd}
@@ -114,7 +114,7 @@ So stability of [[Fixed Point Classification|Fixed Point]] of $T$ and stability 
 >  f(I) \supseteq I
 > $$
 >
-> ![[contMapIAandB.png]]
+> [![contMapIAandB.png](../../Attachments/contMapIAandB.png)](../../Attachments/contMapIAandB.png)
 >
 > Then $f$ has a [[Fixed Point Classification|Fixed Point]] in $I$.
 

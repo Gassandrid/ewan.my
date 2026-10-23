@@ -14,7 +14,7 @@ updated: 2026-08-23T13:35:09-07:00
 
 This is just an idea for now, but I have been thinking that the new data collection method I have set up called [[ActivityWatch]] would serve as not only an excellent temporal dataset (website/window interactions can be treated as firing rate spikes, given how often I switch around), but also as a cross correlation comparission with the more traditional [[Vault to Youtube Cross Synchronization]] and the original [[Preliminary Vault Tag and Timeseries Analysis]] data.
 
-![[FiringRateActivityWatch.png]]
+[![FiringRateActivityWatch.png](../Attachments/FiringRateActivityWatch.png)](../Attachments/FiringRateActivityWatch.png)
 
 Not only that, but because of the nature of the fact that we can associate custom vector emdeddings for some streams, like that of the browsing URL data. This could easily be converted into a natural language embedding for most sites, and players like youtube often provide a natural language description of the video as well.
 

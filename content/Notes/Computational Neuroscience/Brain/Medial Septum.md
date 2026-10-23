@@ -10,7 +10,7 @@ updated: 2025-06-19
 ---
 The **medial septum** is a brain structure that is located in the [[Basal Forebrain]], near the **midline** of the brain
 
-![[Pasted image 20250324110145.png]]
+[![Pasted image 20250324110145.png](../../../Attachments/Pasted%20image%2020250324110145.png)](../../../Attachments/Pasted%20image%2020250324110145.png)
 
 ---
 

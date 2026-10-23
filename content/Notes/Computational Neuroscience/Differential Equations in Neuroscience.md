@@ -22,7 +22,7 @@ This video covers **[[Dynamical Systems Theory]]**, and how it can be used to mo
 Looking at a Neuron, how can we apply this?
 
 > [!Info] Graphic
-> ![[Screenshot 2024-10-28 at 12.17.24 PM.png|350]]
+> [![Screenshot 2024-10-28 at 12.17.24 PM.png](../../Attachments/Screenshot%202024-10-28%20at%2012.17.24%20PM.png)](../../Attachments/Screenshot%202024-10-28%20at%2012.17.24%20PM.png)
 
 **Neurons are temporal computers**. Unlike the contrary, neurons don't only have "inputs" and "outputs" as factors, but also what that neuron was doing **1 millisecond ago, 1 second ago, or even minutes before**.
 
@@ -53,7 +53,7 @@ Let's take an example of a **ball in motion**
 >
 > > [!Info] Graphic
 > > 
-> > ![[Screenshot 2024-10-28 at 12.29.43 PM.png|350]]
+> > [![Screenshot 2024-10-28 at 12.29.43 PM.png](../../Attachments/Screenshot%202024-10-28%20at%2012.29.43%20PM.png)](../../Attachments/Screenshot%202024-10-28%20at%2012.29.43%20PM.png)
 
 But this can range depending both on what you are examining, but **also** on what you ACTUALLY care about. Let's explain
 
@@ -66,7 +66,7 @@ But this can range depending both on what you are examining, but **also** on wha
 >
 > > [!Info] Graphic
 > >
-> > ![[Screenshot 2024-10-28 at 1.25.23 PM.png|350]]
+> > [![Screenshot 2024-10-28 at 1.25.23 PM.png](../../Attachments/Screenshot%202024-10-28%20at%201.25.23%20PM.png)](../../Attachments/Screenshot%202024-10-28%20at%201.25.23%20PM.png)
 > >
 > >where $\theta$ is the angle away from center and $\omega$ is its direction/velocity in a said direction, single dimension
 
@@ -102,7 +102,7 @@ aka the [[Hodgkin Huxley Model]] lol
 >
 > >[!Info] Graphic
 > >
-> > ![[Screenshot 2024-10-29 at 10.43.57 AM.png]]
+> > [![Screenshot 2024-10-29 at 10.43.57 AM.png](../../Attachments/Screenshot%202024-10-29%20at%2010.43.57%20AM.png)](../../Attachments/Screenshot%202024-10-29%20at%2010.43.57%20AM.png)
 
 This is a simple growth pattern, for which we can model like the following:
 

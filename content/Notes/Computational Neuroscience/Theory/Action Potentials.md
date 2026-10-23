@@ -20,7 +20,7 @@ This rapid spike is what allows a [[Neuron]] to send a signal across its [[Axons
 
 An important note is that due to the *All-or-none* principle, the "signal strength" of the action potential **does not matter at all**. Instead "intensity"/"importance" is conveyed by the [[Firing Rate Approximation|Firing Rate]] of the neuron itself.
 
-![[Pasted image 20250414094958.png]]
+[![Pasted image 20250414094958.png](../../../Attachments/Pasted%20image%2020250414094958.png)](../../../Attachments/Pasted%20image%2020250414094958.png)
 
 A key part of [[Computational Neuroscience]] involves approximating the **firing rate**, which is the sum of all action potentials. Because action potentials take a form similar to that of the [[Dirac Delta Function]], unique [[Firing Rate Approximation|methods]] are needed to approximate the firing rate.
 

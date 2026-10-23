@@ -40,6 +40,6 @@ There was one that seemed to cross over, but besides that they all kind of swam 
 
 After a while, they all have seemingly swum to the other side.
 
-![[Screenshot 2025-09-12 at 10.29.57 AM.png]]
+[![Screenshot 2025-09-12 at 10.29.57 AM.png](../../../Attachments/Screenshot%202025-09-12%20at%2010.29.57%20AM.png)](../../../Attachments/Screenshot%202025-09-12%20at%2010.29.57%20AM.png)
 
-![[Screenshot 2025-09-12 at 10.26.20 AM.png]]![[Screenshot 2025-09-12 at 10.27.22 AM.png]]
+[![Screenshot 2025-09-12 at 10.26.20 AM.png](../../../Attachments/Screenshot%202025-09-12%20at%2010.26.20%20AM.png)](../../../Attachments/Screenshot%202025-09-12%20at%2010.26.20%20AM.png)[![Screenshot 2025-09-12 at 10.27.22 AM.png](../../../Attachments/Screenshot%202025-09-12%20at%2010.27.22%20AM.png)](../../../Attachments/Screenshot%202025-09-12%20at%2010.27.22%20AM.png)

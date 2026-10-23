@@ -24,7 +24,7 @@ aliases:
 
 The arrangement of grid cells' spatial firing fields, equidistant from neighbors, led to a hypothesis that they encode some neural representation of Euclidean Space. Also hints at a mechanism for dynamic computation of relative/self position based on continous updates regarding direction/position.
 
-![[TopologyGridCell.png]]
+[![TopologyGridCell.png](../../../Attachments/TopologyGridCell.png)](../../../Attachments/TopologyGridCell.png)
 
 ---
 

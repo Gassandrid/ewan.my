@@ -6,7 +6,7 @@ tags:
 date: 2025-06-11
 updated: 2025-06-12
 ---
-![[Pasted image 20250612154422.png]]
+[![Pasted image 20250612154422.png](../../Attachments/Pasted%20image%2020250612154422.png)](../../Attachments/Pasted%20image%2020250612154422.png)
 
 The lambert W function, denoted as $W(x)$, is a special function that is defined as the inverse of the function $f(x) = x e^x$. In other words, if $y = W(x)$, then it satisfies the equation:
 

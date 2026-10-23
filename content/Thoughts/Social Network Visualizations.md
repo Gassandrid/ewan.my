@@ -17,7 +17,7 @@ However, I wanted to try and apply this view to some of the social networks that
 
 A friend on discord showed me how he was using Obsidian as a way to catalog his friendships and use it for data science, and this inspired me to try and automate this by scraping services like Discord and Instagram for local friendship connections.
 
-![[Pasted image 20250224200555.png]]
+[![Pasted image 20250224200555.png](../Attachments/Pasted%20image%2020250224200555.png)](../Attachments/Pasted%20image%2020250224200555.png)
 
 *what a social network graph could look like*
 
@@ -70,4 +70,4 @@ What this ended up doing is:
 
 and Tada! We have a graph now!
 
-![[preview_graph.png]]
+[![preview_graph.png](../Attachments/preview_graph.png)](../Attachments/preview_graph.png)

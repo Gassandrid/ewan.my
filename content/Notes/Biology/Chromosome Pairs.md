@@ -26,7 +26,7 @@ Paired chromosomes swap pieces of DNA with the same genes
 >
 > In your notes, list the gamete genotypes for hte buttefly in each scenario below.
 
-![[chromoAntennaLenght.png]]
+[![chromoAntennaLenght.png](../../Attachments/chromoAntennaLenght.png)](../../Attachments/chromoAntennaLenght.png)
 
 ---
 ## Sex Linked Genes and Traits

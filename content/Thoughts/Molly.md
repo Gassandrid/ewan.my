@@ -20,9 +20,9 @@ This was not something that involved any other person in his life. He taught him
 
 Even the sails, which are such a complicated kind of craft, he specially designed for his exact boat, the exact way he wanted it.
 
-![[MollyBeingBuilt.png]]
+[![MollyBeingBuilt.png](../Attachments/MollyBeingBuilt.png)](../Attachments/MollyBeingBuilt.png)
 
-![[InsideMolly.png]]
+[![InsideMolly.png](../Attachments/InsideMolly.png)](../Attachments/InsideMolly.png)
 
 Now of course, as all things Axel, it was a complete mess on the inside, given that he had to have every tool he needed right at hand. And you can be damn sure he had at least 12 back scratchers in every crevice of that thing.
 

@@ -27,7 +27,7 @@ This is the bridge between linear and nonlinear dynamics.
 
 We are continuing from [[Sinks, Sources, and Saddles|the previous lecture]] on [[Sinks, Sources, and Saddles#Linear Maps|Linear Maps]]. The key insight: eigenvalues determine everything. They tell us whether a region shrinks, expands, or does both (saddle):
 
-> ![[stableUnstableManifolds.png]]
+> [![stableUnstableManifolds.png](../../Attachments/stableUnstableManifolds.png)](../../Attachments/stableUnstableManifolds.png)
 >
 > _Starting from $\vec{x}_0 = (2, 0)$, successive iterations climb along the $\lambda_1$ eigenvector direction (unstable manifold). Since $\lambda_1 = \frac{3}{2} > 1$, points expand along this direction. The $\lambda_2$ eigenvector basis forms the stable manifold - points on this line contract toward the origin since $\lambda_2 = \frac{1}{2} < 1$._
 

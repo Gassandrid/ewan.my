@@ -8,7 +8,7 @@ date: 2025-03-30
 class: note
 updated: 2025-06-22
 ---
-![[Pasted image 20250330142602.png]]
+[![Pasted image 20250330142602.png](../../../Attachments/Pasted%20image%2020250330142602.png)](../../../Attachments/Pasted%20image%2020250330142602.png)
 
 [^1]
 

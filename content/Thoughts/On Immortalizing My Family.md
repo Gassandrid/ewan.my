@@ -15,7 +15,7 @@ What I soon realized was that these archives were more precious to me than anyth
 
 As one might expect from a computer science person, I happen to have a thing for storage and storage mediums. Of the wierd technology that I keep around for god knows what, I have these Blu-ray optical disks called “M-DISCS”. 
 
-![[Pasted image 20250101192508.png]]
+[![Pasted image 20250101192508.png](../Attachments/Pasted%20image%2020250101192508.png)](../Attachments/Pasted%20image%2020250101192508.png)
 
 These ( at least the ones I have ) have a 50gb storage capacity each, which really isn’t a lot given the hoarding tendencies of my family tree. In addition, they suffer the same problems as all other optical disks, that being their slow burn speeds, and they also require some pretty proprietary technology which might not exists in the near future.
 

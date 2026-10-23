@@ -18,14 +18,14 @@ class: note
 ## 12. From the MariaDB Interpreter, Display All the Records in the `test_data` Table by Running the Statement: `SELECT * FROM test_data;`. **Take a screenshot** of the Contents of the Table. (When Ready: `CTRL` + `Z` to Exit MariaDB)
 
 >[!Info]- Photo
-> ![[Screenshot 2024-10-24 at 11.58.13 PM.png]]
+> [![Screenshot 2024-10-24 at 11.58.13 PM.png](../../../Attachments/Screenshot%202024-10-24%20at%2011.58.13%20PM.png)](../../../Attachments/Screenshot%202024-10-24%20at%2011.58.13%20PM.png)
 
 ---
 
 ## 15. Run the Flask App and view the Page in the Browser. Ensure that the Correct Temperature Data is Displayed. **Take a screenshot** of Your Web Page Displayed in the Browser.
 
 >[!Info]- Photo
-> ![[Screenshot 2024-10-25 at 6.10.34 PM.png]]
+> [![Screenshot 2024-10-25 at 6.10.34 PM.png](../../../Attachments/Screenshot%202024-10-25%20at%206.10.34%20PM.png)](../../../Attachments/Screenshot%202024-10-25%20at%206.10.34%20PM.png)
 
 ---
 
@@ -34,4 +34,4 @@ class: note
 `app.py`
 
 >[!Info]- Screenshot
-> ![[Screenshot 2024-10-25 at 12.08.58 PM.png]]
+> [![Screenshot 2024-10-25 at 12.08.58 PM.png](../../../Attachments/Screenshot%202024-10-25%20at%2012.08.58%20PM.png)](../../../Attachments/Screenshot%202024-10-25%20at%2012.08.58%20PM.png)

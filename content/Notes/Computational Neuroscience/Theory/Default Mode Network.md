@@ -17,13 +17,13 @@ aliases:
   - DMN
 ---
 
-![[defModeNetwork.png]]
+[![defModeNetwork.png](../../../Attachments/defModeNetwork.png)](../../../Attachments/defModeNetwork.png)
 
 	
 
 The **Default Mode Network** is best described as the brain state for when a person is not focused on external world, and instead brain it at wakeful rest. Think daydreaming and mind wandering. Primary brain structures involved are [[Medial Prefrontal Cortex]], [[Posterior Cingulate Cortex]], [[Precuneus]], and [[Angular Gyrus]].
 
-![[defModeSubnetworks.png]]
+[![defModeSubnetworks.png](../../../Attachments/defModeSubnetworks.png)](../../../Attachments/defModeSubnetworks.png)
 
 In more technical terms, the **Default Mode Network** is a large-scale brain network that shows higher activity when an individual is at rest and not engaged in specific goal-directed tasks. It is associated with self-referential thinking, autobiographical memory, and envisioning the future. The network is thought to play a role in integrating internal and external information, as well as in social cognition.
 

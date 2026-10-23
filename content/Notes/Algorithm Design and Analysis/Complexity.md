@@ -18,7 +18,7 @@ This is mostly a review from [[Day 1 - Introduction to Computing|Computing And C
 
 As we all know, **procedures** in computer science are not dictated by the actual time they take, but at the rate the time it takes(or memory) scales with input size. We are almost always operating over iterable data structures in algorithms, so this is crucial for efficient computing.
 
-![[Pasted image 20250828101537.png]]
+[![Pasted image 20250828101537.png](../../Attachments/Pasted%20image%2020250828101537.png)](../../Attachments/Pasted%20image%2020250828101537.png)
 
 Having a look an a "simple" operation, and how it scale with input:
 
@@ -68,7 +68,7 @@ $$
 
 And finally, this means that for sufficiently large input sizes, the function $T(n)$ grows at the same rate as a constant multiple of $f(n)$.
 
-![[Pasted image 20250828102506.png]]
+[![Pasted image 20250828102506.png](../../Attachments/Pasted%20image%2020250828102506.png)](../../Attachments/Pasted%20image%2020250828102506.png)
 
 The intuition behind these notations is to provide a way to classify algorithms based on their efficiency and scalability. By understanding the growth rates of different functions, we can make informed decisions about which algorithms to use for specific problems, especially as the size of the input data increases.
 
@@ -118,7 +118,7 @@ $$
 
 This means that if two functions are both tightly bounded by a third function, then their sum is also tightly bounded by that third function.
 
-![[Screenshot 2025-08-28 at 10.41.11 AM.png]]
+[![Screenshot 2025-08-28 at 10.41.11 AM.png](../../Attachments/Screenshot%202025-08-28%20at%2010.41.11%20AM.png)](../../Attachments/Screenshot%202025-08-28%20at%2010.41.11%20AM.png)
 
 As seen above, the law of additivity can be visualized as stringing together two functions. The overall growth rate is determined by the faster-growing function.
 

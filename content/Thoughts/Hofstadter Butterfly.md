@@ -22,7 +22,7 @@ updated: 2026-03-12T16:15:13-07:00
 
 A piece of my own creation, wanted to encode more parameters into the Hofstadter Butterfly to enrich the color.
 
-![[hofstadter_butterfly.png]]
+[![hofstadter_butterfly.png](../Attachments/hofstadter_butterfly.png)](../Attachments/hofstadter_butterfly.png)
 
 ---
 

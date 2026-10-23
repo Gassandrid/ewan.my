@@ -25,4 +25,4 @@ Looks interesting - I am unsure because believing this percepective requires acc
 
 Quite dated, but Penrose is a brilliant thinker and still may be worth reading.
 
-![[empNewMind.png]]
+[![empNewMind.png](../../Attachments/empNewMind.png)](../../Attachments/empNewMind.png)

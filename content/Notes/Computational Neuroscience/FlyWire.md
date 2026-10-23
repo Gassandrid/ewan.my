@@ -19,6 +19,9 @@ aliases:
   - Drosophila melanogaster
   - Fly Brain
 ---
+*let it be known that I was doing this stuff before it went viral and everyone else started putting the [[Connectome]] everywhere!*
+
+---
 
 Part of the brain mapping project, first full connectome of a brain. Partially done by researchers at [[University Of Vermont]]. First full connectome of a living brain!
 
@@ -31,13 +34,13 @@ A funny project you see a lot of people doing is running the connectome as a [[S
 
 I was able to recreate the "fly brain upload" myself quite easily:
 
-![[flyBrainRecreation.mp4]]
+<video src="../../Attachments/flyBrainRecreation.mp4" controls preload="metadata" title="flyBrainRecreation.mp4"></video>
 
 If one wants to run itself as a [[Leaky Integrate And Fire]] model, have a look at [FastFly](https://github.com/eonfathom/FastFly) or the origonal [full brain emulation github project](https://github.com/eonsystemspbc/fly-brain).
 
 Another funny thing being done with this cnnectome is it being used as a base for further RL postraining for other unintended tasks. **Tim Hwang** on twitter was able to train the connectome to drive a little robot vehicle towards a goal.
 
-![[flybrainCar.mp4]]
+<video src="../../Attachments/flybrainCar.mp4" controls preload="metadata" title="flybrainCar.mp4"></video>
 
 ![](https://x.com/timhwang/status/2091554909954961482)
 
@@ -47,7 +50,7 @@ Looks like I was ahead of the curve regarding training the Male CNS connectome t
 
 I am happy to see it, but as David Pfau put it below, it is now the time for [[Computational Neuroscience]] to be in the influencer spotlight with minimal understanding of whats really going on.
 
-![[Screenshot 2026-09-12 at 4.41.19 PM.png]]
+[![Screenshot 2026-09-12 at 4.41.19 PM.png](../../Attachments/Screenshot%202026-09-12%20at%204.41.19%20PM.png)](../../Attachments/Screenshot%202026-09-12%20at%204.41.19%20PM.png)
 
 It is quite reminiscient of [[Pantheon]], what is going on right now.
 

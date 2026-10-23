@@ -30,4 +30,4 @@ $$
 
 In plain english, we are splitting the signal into small chunks using a window function $w(\tau - t)$, and then applying the Fourier Transform to each chunk. The window function is typically a smooth function that tapers off at the edges, such as a Hamming or Gaussian window. We use a sliding window instead of discrete segments to avoid artifacts in the frequency analysis.
 
-![[SpectogramGraph.png]]
+[![SpectogramGraph.png](../../Attachments/SpectogramGraph.png)](../../Attachments/SpectogramGraph.png)

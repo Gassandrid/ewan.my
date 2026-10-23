@@ -19,4 +19,4 @@ updated: 2026-01-24T21:43:50-05:00
 - vital for neuron survival, growth, differentiation, and plasticity, regulating learning, memory ( such as [[Long Term Potentiation]]), and mood
 - also implicated in diseases like cancer when overactive
 
-![[Pasted image 20260124214318.png]]
+[![Pasted image 20260124214318.png](../../../Attachments/Pasted%20image%2020260124214318.png)](../../../Attachments/Pasted%20image%2020260124214318.png)

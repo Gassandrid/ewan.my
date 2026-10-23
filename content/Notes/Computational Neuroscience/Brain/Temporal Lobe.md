@@ -41,7 +41,7 @@ updated: 2026-02-24T15:15:46-05:00
 
 The temporal lobe sits lateral and inferior, near the temples. Think "tempo" — it's the primary auditory processing region. But it does far more: the medial temporal lobe houses the [[Hippocampus]] and [[Entorhinal Cortex]], making it the memory hub; the inferior temporal cortex is the endpoint of the [[Ventral Pathway]] for object and face recognition.
 
-![[TempLobe.png]]
+[![TempLobe.png](../../../Attachments/TempLobe.png)](../../../Attachments/TempLobe.png)
 
 ## Structure and Function
 

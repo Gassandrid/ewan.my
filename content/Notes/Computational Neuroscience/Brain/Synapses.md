@@ -22,4 +22,4 @@ specialized junction where [[Neuron]] passes and electrical/chem signal to anoth
 	- [Synapses with short-term plasticity are optimal estimators of presynaptic membrane potentials](https://pmc.ncbi.nlm.nih.gov/articles/PMC3558743/)
 	
 
-![[synapsethingy.png]]
+[![synapsethingy.png](../../../Attachments/synapsethingy.png)](../../../Attachments/synapsethingy.png)

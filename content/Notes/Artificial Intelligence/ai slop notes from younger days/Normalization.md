@@ -2,7 +2,7 @@
 date: 2024-09-12
 updated: 2024-10-20
 ---
-![[Screenshot 2024-09-17 at 10.22.28 AM.png]]
+[![Screenshot 2024-09-17 at 10.22.28 AM.png](../../../Attachments/Screenshot%202024-09-17%20at%2010.22.28%20AM.png)](../../../Attachments/Screenshot%202024-09-17%20at%2010.22.28%20AM.png)
 
 ## Overview
 Normalization is a preprocessing technique used in machine learning to scale numerical data to a common range, typically between 0 and 1. This ensures that different features contribute equally to the model, preventing features with larger ranges from dominating the learning process.

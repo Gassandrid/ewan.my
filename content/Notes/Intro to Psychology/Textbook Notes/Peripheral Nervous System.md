@@ -16,7 +16,7 @@ Unlike the [[Central Nervous System]], which consists of the brain and spinal co
 	- regulated by [[Hypothalamus]]
 	- fight or flihgt respononse
 
-![[PNS.png]]
+[![PNS.png](../../../Attachments/PNS.png)](../../../Attachments/PNS.png)
 
 ---
 

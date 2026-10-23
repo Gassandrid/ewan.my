@@ -18,7 +18,7 @@ aliases:
 
 For a two dimensional example mapping onto a line, you can think of PCA as finding the best line to fold the data onto, such that the distance from the points to the line is minimized. That "line" is the largest **principle component** of the distribution:
 
-![[PrinceCompANal.png]]
+[![PrinceCompANal.png](../../Attachments/PrinceCompANal.png)](../../Attachments/PrinceCompANal.png)
 
 In the context of **linear algebra**, the **Principle Component** can be thought of as the eigenvector corresponding to the largest eigenvalue of the data's [[covariance]] matrix. This eigenvector points in the direction of maximum variance in the data.
 

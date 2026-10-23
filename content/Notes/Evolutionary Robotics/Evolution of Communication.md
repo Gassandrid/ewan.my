@@ -29,7 +29,7 @@ Like any other evolutionary algorithm, we start with a random initialization of 
 	- cannot signal
 	- are mobile
 
-![[Screenshot 2026-04-02 at 8.38.46 AM.png]]
+[![Screenshot 2026-04-02 at 8.38.46 AM.png](../../Attachments/Screenshot%202026-04-02%20at%208.38.46%20AM.png)](../../Attachments/Screenshot%202026-04-02%20at%208.38.46%20AM.png)
 
 Each male and female starts with its own random neural network, encoding behavior as fixed weights.
 
@@ -59,22 +59,22 @@ no explicit fitness function. selection pressure is implicit: females that emit 
 
 At the very begining, males seem to just wander randomly, and females seem to signal randomly:
 
-![[tableCommunicationSong1.png]]
+[![tableCommunicationSong1.png](../../Attachments/tableCommunicationSong1.png)](../../Attachments/tableCommunicationSong1.png)
 
 at the second evolutionary stage, we see the first obvious step in evolution: males who stood still went completely exctinct:
 
-![[tableCommunicationSong2.png]]
+[![tableCommunicationSong2.png](../../Attachments/tableCommunicationSong2.png)](../../Attachments/tableCommunicationSong2.png)
 
 makes sense, as staying still all but guarentees you dont find a mate.
 
 at the third stage, the males started to evolve more to follow straight lines, and *completely* ignore the signals made by the females:
 
-![[tableCommunicationSong3.png]]
+[![tableCommunicationSong3.png](../../Attachments/tableCommunicationSong3.png)](../../Attachments/tableCommunicationSong3.png)
 
 at the fourth stage, we start to see actual evolution to follow female signals, in that they would evolve to turn when they are on the same row/column as a female. This was an evolution by the females, in that they have evolved to *signal* this information. the females that didnt use it went extinct.
 
-![[tableCommunicationSong4.png]]
+[![tableCommunicationSong4.png](../../Attachments/tableCommunicationSong4.png)](../../Attachments/tableCommunicationSong4.png)
 
 at fifth stage, females have learned to fully utilize and signal rotational cues. when a male is in the cross shaped region of the figure below, they are signal to keep rotation until the male is facing the female. When males enter the 5x5 receptive field, but are not in the cross region, they are just told to go straght, as eventually they will fall into the cross shaped region.
 
-![[Screenshot 2026-04-02 at 9.10.43 AM.png]]
+[![Screenshot 2026-04-02 at 9.10.43 AM.png](../../Attachments/Screenshot%202026-04-02%20at%209.10.43%20AM.png)](../../Attachments/Screenshot%202026-04-02%20at%209.10.43%20AM.png)

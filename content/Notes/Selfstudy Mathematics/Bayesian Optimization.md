@@ -23,7 +23,7 @@ Good for [[Machine Learning]] hyperparameters, use a probablistic model like a [
 
 > Quite an interesting little system, it is something I do need to do. Maybe also integrate with note on [[Kalman Filter]], as that seems vaguely related.
 
-![[bayeOptimize.png]]
+[![bayeOptimize.png](../../Attachments/bayeOptimize.png)](../../Attachments/bayeOptimize.png)
 
 ## Main Components
 

@@ -35,11 +35,11 @@ This is necessary as right now, these vectors only contain a 1-to-1 corresponden
 
 _this case is a $\mathbb{R}^2$ mapping of the vector space, in practice this is extremely high dimensional embedding_
 
-![[VectorEmbeddingMeaning.png]]
+[![VectorEmbeddingMeaning.png](../../Attachments/VectorEmbeddingMeaning.png)](../../Attachments/VectorEmbeddingMeaning.png)
 
 One might imagine that as the process of **attention** takes place, some "path" is taken into an incrementally more specific and rich context in this high dimensional space.
 
-![[VectorSpaceContextEnrichment.png]]
+[![VectorSpaceContextEnrichment.png](../../Attachments/VectorSpaceContextEnrichment.png)](../../Attachments/VectorSpaceContextEnrichment.png)
 
 ---
 

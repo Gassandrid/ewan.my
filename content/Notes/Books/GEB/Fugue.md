@@ -12,6 +12,6 @@ A **fugue** is a musical composition characterized by the systematic repetition 
 
  
 
-![[Pasted image 20250814144606.png]]
+[![Pasted image 20250814144606.png](../../../Attachments/Pasted%20image%2020250814144606.png)](../../../Attachments/Pasted%20image%2020250814144606.png)
 
 Commonly used in classical music, a fugue typically consists of an exposition, where the subject is presented, followed by episodes that develop the theme through variations and counter-subjects. The structure allows for intricate interplay between voices, creating a rich tapestry of sound.

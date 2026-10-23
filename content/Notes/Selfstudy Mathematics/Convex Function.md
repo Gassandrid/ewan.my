@@ -17,4 +17,4 @@ We call this area the **epigraph** of the function, think of the opposite side o
 
 Thinks like $e^x$ and $x^2$ are convex functions, while a normal distribution's bell curve is not. If you can find two points in the epigraph space that dip there, it is not convex.
 
-![[ConvexEpigraph.png]]
+[![ConvexEpigraph.png](../../Attachments/ConvexEpigraph.png)](../../Attachments/ConvexEpigraph.png)

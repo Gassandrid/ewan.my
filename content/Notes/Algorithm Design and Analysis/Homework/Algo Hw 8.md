@@ -46,7 +46,7 @@ For the **Base Case**, we know that $OPT(0)=0$, as an empty string has a quality
 
 See _figure 1_ for the latex pseudocode algorithm, it may be on another page due to compilation quirks.
 
-![[Screenshot 2025-10-31 at 6.01.13 PM.png|Pseudocode using dynamic programming]]
+[![Screenshot 2025-10-31 at 6.01.13 PM.png](../../../Attachments/Screenshot%202025-10-31%20at%206.01.13%20PM.png)](../../../Attachments/Screenshot%202025-10-31%20at%206.01.13%20PM.png)
 
 ### Runtime Complexity Analysis
 

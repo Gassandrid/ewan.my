@@ -47,7 +47,7 @@ _You have conceptualized your world based on your experiences, and you use that 
 **Top Down** is when perception is dictated by what you already know.
 **Bottom Up** is when perception is dictated by what you are currently sensing.
 
-![[Pasted image 20250916115900.png]]
+[![Pasted image 20250916115900.png](../../Attachments/Pasted%20image%2020250916115900.png)](../../Attachments/Pasted%20image%2020250916115900.png)
 
 ---
 

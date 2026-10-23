@@ -120,7 +120,7 @@ Partitions also serve to make your storage safer, as by creating a logical barri
 
 While SSH can be used for all sorts of things like terminal web apps(shown below), it is mostly used in today's world for securely logging in to servers and other headless devices.
 
-![[Attachments/Screenshot 2024-09-11 at 10.12.33 PM.png]]
+[![Screenshot 2024-09-11 at 10.12.33 PM.png](../../../Attachments/Screenshot%202024-09-11%20at%2010.12.33%20PM.png)](../../../Attachments/Screenshot%202024-09-11%20at%2010.12.33%20PM.png)
 
 *SSH being used to buy coffee via `terminal.shop`*
 
@@ -150,7 +150,7 @@ ssh ewan@ewanpi.local
 
 This was me connecting to my Rasberry Pi 5, but I did the same thing for the Pi 4 as well.
 
-![[Screenshot 2024-09-11 at 10.26.21 PM.png]]
+[![Screenshot 2024-09-11 at 10.26.21 PM.png](../../../Attachments/Screenshot%202024-09-11%20at%2010.26.21%20PM.png)](../../../Attachments/Screenshot%202024-09-11%20at%2010.26.21%20PM.png)
 
 ---
 

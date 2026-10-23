@@ -40,7 +40,7 @@ The parietal lobe sits between the frontal lobe (anterior) and occipital lobe (p
 
 The primary [[Somatosensory Cortex]] occupies the postcentral gyrus and is somatotopically organized (the homunculus). The posterior parietal cortex (PPC) is more integrative, feeding into the [[Dorsal Pathway]] for visuospatial action.
 
-![[Parietal Lobe.png]]
+[![Parietal Lobe.png](../../../Attachments/Parietal%20Lobe.png)](../../../Attachments/Parietal%20Lobe.png)
 
 ## Structure and Function
 

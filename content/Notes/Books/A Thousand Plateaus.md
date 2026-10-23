@@ -17,4 +17,4 @@ series:
 date: 2026-02-01 09:11:59-05:00
 updated: 2026-02-03 10:08:27-05:00
 ---
-![[thousandPlateus.png]]
+[![thousandPlateus.png](../../Attachments/thousandPlateus.png)](../../Attachments/thousandPlateus.png)

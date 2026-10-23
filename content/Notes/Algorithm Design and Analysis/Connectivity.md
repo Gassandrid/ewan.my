@@ -37,4 +37,4 @@ Given two vertices s and t in a weighted graph G, find the shortest path from s 
 - maze traversal
 - etc
 
-![[Pasted image 20250902104916.png]]
+[![Pasted image 20250902104916.png](../../Attachments/Pasted%20image%2020250902104916.png)](../../Attachments/Pasted%20image%2020250902104916.png)

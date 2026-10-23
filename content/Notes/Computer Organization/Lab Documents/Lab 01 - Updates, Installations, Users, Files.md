@@ -18,7 +18,7 @@ I am going to skip labeling the steps that don't require any submission, so the 
 ## 2. If You Successfully Join a Wireless Network, Typing `iwgetid` in the Terminal Should Display the Network name as Follows.
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 7.54.45 PM.png]]
+> [![Screenshot 2024-09-19 at 7.54.45 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%207.54.45%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%207.54.45%20PM.png)
 
 **Some Caveats:**
 My Pi did not support **md4** hashing due to its age, so I opted to use **Sha256** instead.
@@ -37,21 +37,21 @@ c19d40e797a1db3e0daa39fda6df3740bdc9b07b91b1989b16c67bbb699aaa7a
 ## 5. Hostname of the Pi, Displaying it via the `hostname` Command.
 
 >[!Info] Screenshot
->![[Screenshot 2024-09-19 at 9.04.04 PM.png]]
+>[![Screenshot 2024-09-19 at 9.04.04 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.04.04%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.04.04%20PM.png)
 
 ---
 
 ## 6. IP Address of the Pi, Displaying it via the `hostname -I` Command.
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.04.56 PM.png]]
+> [![Screenshot 2024-09-19 at 9.04.56 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.04.56%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.04.56%20PM.png)
 
 ---
 
 ## 7. Output of the Command: `df -T`
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.06.12 PM.png]]
+> [![Screenshot 2024-09-19 at 9.06.12 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.06.12%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.06.12%20PM.png)
 
 ---
 
@@ -67,14 +67,14 @@ From the following screenshot, we can determine that the file system type for th
 ## 9. Confirmation Message that Appears after Expanding the File System to Use the Entire microSD Card
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.11.09 PM.png]]
+> [![Screenshot 2024-09-19 at 9.11.09 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.11.09%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.11.09%20PM.png)
 
 ---
 
 ## 10. Use the `ping` Command to Ping the IP Address of UVM's home Page
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.14.15 PM.png]]
+> [![Screenshot 2024-09-19 at 9.14.15 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.14.15%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.14.15%20PM.png)
 
 ---
 
@@ -104,7 +104,7 @@ Therefore, the average was **17.33**ms
 Unfortunately my terminal emulator didn't support **nano** through ssh, so I was forced to use apple terminal! Oh No!
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.25.23 PM.png]]
+> [![Screenshot 2024-09-19 at 9.25.23 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.25.23%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.25.23%20PM.png)
 
 ---
 
@@ -122,12 +122,12 @@ There were other ways to achieve this in the documentation, but I always prefer 
 - `your_name`, with sudo privileges
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.30.21 PM.png]]
+> [![Screenshot 2024-09-19 at 9.30.21 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.30.21%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.30.21%20PM.png)
 
 - `user1`, without sudo privileges
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.31.55 PM.png]]
+> [![Screenshot 2024-09-19 at 9.31.55 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.31.55%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.31.55%20PM.png)
 
 ---
 
@@ -136,14 +136,14 @@ There were other ways to achieve this in the documentation, but I always prefer 
 Since I already daily drive Vim on my own setup, I went ahead and installed my Vim Dotfile Configuration onto my Pi.
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.39.20 PM.png]]
+> [![Screenshot 2024-09-19 at 9.39.20 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.39.20%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.39.20%20PM.png)
 
 ---
 
 ## 17. Create a Directory Called `lab01` Using the `mkdir` Command, and Use the `mv` Command to Move `hello2.py` into It.
 
 >[!Info] Screenshot
-> ![[Screenshot 2024-09-19 at 9.41.07 PM.png]]
+> [![Screenshot 2024-09-19 at 9.41.07 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.41.07%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.41.07%20PM.png)
 
 ---
 
@@ -157,4 +157,4 @@ Since I already daily drive Vim on my own setup, I went ahead and installed my V
 ## 19. Install Any Recent Updates to Your Raspberry Pi OS Distribution via `sudo apt update` and then `sudo apt upgrade`
 
 >[!Info] 
-> Screenshot![[Screenshot 2024-09-19 at 9.43.08 PM.png]]
+> Screenshot[![Screenshot 2024-09-19 at 9.43.08 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.43.08%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.43.08%20PM.png)

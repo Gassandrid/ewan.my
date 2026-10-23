@@ -8,7 +8,7 @@ date: 2025-03-30
 class: note
 updated: 2026-01-10T12:00:42+02:00
 ---
-![[Pasted image 20250330145358.png]]
+[![Pasted image 20250330145358.png](../../../Attachments/Pasted%20image%2020250330145358.png)](../../../Attachments/Pasted%20image%2020250330145358.png)
 
  
 **Dendrites** serve as the conduits of neural signals in the brain. Dendrites receive information through the [[Synapses]] and transmit it to the cell body, which then processes the information and sends it to the [[Axons|axon]].[^1]

@@ -25,4 +25,4 @@ Five main groups:
 4. Inferior longitudinal fasciculus: connects occipital to temporal pole  
 5. Cingulum: connects frontal and parietal lobes to para-hippocampal gyrus and adjacent temporal gyri
 
-![[Screenshot 2026-09-09 at 3.49.08 PM.png]]
+[![Screenshot 2026-09-09 at 3.49.08 PM.png](../../Attachments/Screenshot%202026-09-09%20at%203.49.08%20PM.png)](../../Attachments/Screenshot%202026-09-09%20at%203.49.08%20PM.png)

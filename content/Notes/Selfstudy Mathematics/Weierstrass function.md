@@ -11,7 +11,7 @@ author:
 ---
 In the simplest terms, the Weierstrass function is a mathematical function that is continuous everywhere but differentiable nowhere. This means that while you can draw the function without lifting your pen from the paper, you cannot find a tangent line at any point on the curve.
 
-![[Weierstrass_Animation.gif]]
+[![Weierstrass_Animation.gif](../../Attachments/Weierstrass_Animation.gif)](../../Attachments/Weierstrass_Animation.gif)
 
 ---
 

@@ -23,7 +23,7 @@ Collection of a few sensors, namely:
 - magnetometer
 	- not that useful here, mostly used for orientation
 
-![[Screenshot 2026-09-03 at 5.12.40 PM.png]]
+[![Screenshot 2026-09-03 at 5.12.40 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.12.40%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.12.40%20PM.png)
 
 ## Operating Principles
 
@@ -44,7 +44,7 @@ $$
 V_{meas} \approx V_{in} \cdot \frac{x}{d}
 $$
 
-![[Screenshot 2026-09-03 at 5.15.24 PM.png]]
+[![Screenshot 2026-09-03 at 5.15.24 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.15.24%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.15.24%20PM.png)
 
 ### Gyroscope
 
@@ -57,7 +57,7 @@ $$
 m\ddot{x} + b\dot{x} + kx = F_{ext} \propto \frac{mv^2}{r}
 $$
 
-![[Screenshot 2026-09-03 at 5.18.00 PM.png]]
+[![Screenshot 2026-09-03 at 5.18.00 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.18.00%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.18.00%20PM.png)
 
 ### Magnetometer
 
@@ -70,7 +70,7 @@ $$
 V_{Hall} = R_{Hall} \frac{IB}{t}
 $$
 
-![[Screenshot 2026-09-03 at 5.21.09 PM.png]]
+[![Screenshot 2026-09-03 at 5.21.09 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.21.09%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.21.09%20PM.png)
 
 ## Selecting IMU Operating Parameters
 

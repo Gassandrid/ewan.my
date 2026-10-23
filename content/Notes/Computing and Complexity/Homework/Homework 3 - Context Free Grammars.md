@@ -279,7 +279,7 @@ as required $\square$
 > 
 > Hint: Sipser gives an example in the textbook (2.18) which recognizes all _even-length_ palindromes. You need only modify this machine so that it accepts odd- or even-length palindromes. A fully-labeled state diagram is all you need.
 
-![[Screenshot 2025-03-18 at 11.43.00 PM.png|sipser example]]
+[![Screenshot 2025-03-18 at 11.43.00 PM.png](../../../Attachments/Screenshot%202025-03-18%20at%2011.43.00%20PM.png)](../../../Attachments/Screenshot%202025-03-18%20at%2011.43.00%20PM.png)
 
 *I found the Sipser example(see figure 01), although I am not sure if it is the right one. Regardless, I will be using that as a starting point.*
 
@@ -303,4 +303,4 @@ This isn't a difficult construction given the sipser example, so I wont be verbo
 - q2: Pop Phase
 - qf: Accept
 
-![[problem-05-state-diagram.png|200|figa]]
+[![problem-05-state-diagram.png](../../../Attachments/problem-05-state-diagram.png)](../../../Attachments/problem-05-state-diagram.png)

@@ -7,7 +7,7 @@ updated: 2025-10-15
 ---
 ## Image
 
-![[Pasted image 20241015090052.png]]
+[![Pasted image 20241015090052.png](../../Attachments/Pasted%20image%2020241015090052.png)](../../Attachments/Pasted%20image%2020241015090052.png)
 
 ## Code
 

@@ -138,7 +138,7 @@ $$
 AREA = \int \sqrt{ a^2 - x^2 } dx
 $$
 
-![[Screenshot 2025-06-07 at 1.41.34 PM.png]]
+[![Screenshot 2025-06-07 at 1.41.34 PM.png](../../../Attachments/Screenshot%202025-06-07%20at%201.41.34%20PM.png)](../../../Attachments/Screenshot%202025-06-07%20at%201.41.34%20PM.png)
 
 Bernoulli realized that if he effectively pulled a square root of $-1$ out of his expression, he was able to evaluate the integral:
 

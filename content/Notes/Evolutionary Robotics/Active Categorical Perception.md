@@ -20,7 +20,7 @@ updated: 2026-02-19T09:19:16-05:00
 ---
 **Think of the task**: several objects are placed in front of you. YOu must separate the round from edged objects while wearing a blindfold. How would you interact with the objects?
 
-![[Screenshot 2026-02-17 at 9.31.52 AM.png]]
+[![Screenshot 2026-02-17 at 9.31.52 AM.png](../../Attachments/Screenshot%202026-02-17%20at%209.31.52%20AM.png)](../../Attachments/Screenshot%202026-02-17%20at%209.31.52%20AM.png)
 
 >[!Abstract] Active Categorical Perception
 > The ability of an animal or robot to **interact** with objects of interest to **gather sensorimotor data** sufficient to **categorize** them, where the movement itself is the perceptual act.
@@ -33,7 +33,7 @@ A [[Continuous Time Recurrent Neural Networks|CTRNN]]-controlled agent is evolve
 
 Builds directly on the self/nonself discrimination work from [[Minimal Cognition]]: the arm experiment already required the agent to move to *learn*; ACP scales this to objects external to the agent's body.
 
-![[Screenshot 2026-02-19 at 8.36.35 AM.png]]
+[![Screenshot 2026-02-19 at 8.36.35 AM.png](../../Attachments/Screenshot%202026-02-19%20at%208.36.35%20AM.png)](../../Attachments/Screenshot%202026-02-19%20at%208.36.35%20AM.png)
 
 $$
 \tau_{i} \dot{y}_{I}=\begin{cases}

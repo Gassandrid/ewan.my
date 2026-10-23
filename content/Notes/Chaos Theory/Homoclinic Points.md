@@ -24,7 +24,7 @@ $$
 f(x,y) = \left( \frac{x}{2}, 2y-7x^2 \right)
 $$
 
-![[Screenshot 2026-02-10 at 10.13.29 AM.png]]
+[![Screenshot 2026-02-10 at 10.13.29 AM.png](../../Attachments/Screenshot%202026-02-10%20at%2010.13.29%20AM.png)](../../Attachments/Screenshot%202026-02-10%20at%2010.13.29%20AM.png)
 
 The [[Stable Manifold]] $S$ is a parabola tangent to the x-axis at 0; the [[Unstable Manifold]] $U$ is the y-axis.
 
@@ -102,7 +102,7 @@ $$
 \end{bmatrix}  }_{ \text{or negation of this} }
 $$
 
-![[greatestFuckingIllustrationOAT.png]]
+[![greatestFuckingIllustrationOAT.png](../../Attachments/greatestFuckingIllustrationOAT.png)](../../Attachments/greatestFuckingIllustrationOAT.png)
 
 ```tikz
 \usepackage{tikz}

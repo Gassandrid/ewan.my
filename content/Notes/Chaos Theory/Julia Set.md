@@ -16,7 +16,7 @@ date: 2026-03-19T11:04:57-04:00
 updated: 2026-03-19T11:21:34-04:00
 ---
 
-![[setJulia.png]]
+[![setJulia.png](../../Attachments/setJulia.png)](../../Attachments/setJulia.png)
 
 Consider the quadratic map $P_{c}(z)= z^2 +c$ where $z = x+yi$  and $c = a+bi$ are complex numbers $i=\sqrt{ -1 }$
 

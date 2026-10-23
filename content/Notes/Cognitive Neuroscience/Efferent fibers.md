@@ -18,4 +18,4 @@ aliases:
 - [[Brain Orientation Terminology|anterior]] portions of brain and [[Spinal Cord]]
 - outward flowing information
 
-![[Screenshot 2026-09-02 at 3.46.58 PM.png]]
+[![Screenshot 2026-09-02 at 3.46.58 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.46.58%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.46.58%20PM.png)

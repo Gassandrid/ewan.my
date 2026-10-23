@@ -37,7 +37,7 @@ then normalize: $\hat{e}_k = \dfrac{\vec{u}_k}{\|\vec{u}_k\|}$.
 
 The projection step $\left(\vec{v}_k \cdot \hat{e}_j\right)\hat{e}_j$ removes the component of $\vec{v}_k$ in the $\hat{e}_j$ direction, leaving only what's orthogonal to everything already in the basis.
 
-![[gramShitFigure.png]]
+[![gramShitFigure.png](../../Attachments/gramShitFigure.png)](../../Attachments/gramShitFigure.png)
 
 ## QR Decomposition
 

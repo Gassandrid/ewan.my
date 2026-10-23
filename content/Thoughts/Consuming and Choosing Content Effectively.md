@@ -15,10 +15,16 @@ related:
 author:
 description: extracting meaningful utility in the age of unengaged content consumption
 date: 2025-12-19
-updated: 2026-09-29T17:29:01-04:00
+updated: 2026-10-23T18:07:50-04:00
 status:
 aliases:
   - content consumption
+---
+
+## [[10-23-2026]] Of Note to Visitors
+
+this note started as a [[Write Stub Notes|stub note]] for some thoughts I had about managing the large pile of content I was sitting on like a [[Digesting my Scrapbook|Scrapbook]]. However, nowadays my interests in content consumption are largely concerned with evaluation loops for [[Probing Nurture with Content Consumption]] and modeling the effects of stimulus on oneself as a means of steering yourself to a preferable state. This is much better understood under the lens of [[Mapping The Mind]], and I will eventually rewrite this to better serve the purpose of a hub note for work I do with content consumption like [[Spaced Repetition for Learning Optimization|Anki]] and [[ActivityWatch]]
+
 ---
 
 Above all problems I face, I think the biggest one is regarding the content I choose to consume. I have perfected a lot of my workflow for creating any output I desire through writing and task management, it still relies on the input that I feed myself. Even with all this, it will still come down to mindless media consumption, whether that be instagram reels or sporadic youtube videos, relying on the off chance that my algorithm tuning work will feed me something useful.
@@ -139,3 +145,13 @@ We also need to balance "exploratory" content engagement, where you explore a ne
 
 I think another tasknotes base view would be good with this. Balance with "captures", maybe clean up the learning section and old tasks. The base view should be more about "moving" the cards around rather than completing them, aka you set out a few knowledge sources to "progress" on a certain day and then once you have done that for a good while you move it back to the none section. Will brainstorm more.
 %%
+
+## [[10-10-2026]] Consumption Queue
+
+[[Consumption Queue.base]] brings books, papers, videos, websites, and articles into one curated queue. Set `status: priority` on any resource I specifically want to consume next. This replaces `open` as the selection flag for this queue; the medium-specific Bases still hold the wider backlog.
+
+Once I start, use `in-progress`; after reading or watching, use `consumed` while useful material still needs processing, then `done` once it has a home or needs no further attention. Changing away from `priority` removes the item from the queue.
+
+This follows [[Digesting my Scrapbook]]: develop the resource itself when it becomes a worthwhile note, or route transferable ideas into related concept notes. Keep the original media class when adding `note`, so a matured resource can still be queued later, wherever it lives.
+
+![[Consumption Queue.base]]

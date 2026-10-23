@@ -40,7 +40,7 @@ We recorded the following data:
 
 And found the following statistics:
 
-![[BarChartParamecium.png|Proportion of Paramecia in Control vs Test samples, error bars represent standard deviation.]]
+[![BarChartParamecium.png](../../../Attachments/BarChartParamecium.png)](../../../Attachments/BarChartParamecium.png)
 
 ---
 

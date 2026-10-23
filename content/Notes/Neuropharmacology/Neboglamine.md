@@ -2,7 +2,7 @@
 aliases: []
 image: https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=3074827&t=l
 date: 2026-02-17
-updated: 2026-09-03T11:48:05-04:00
+updated: 2026-10-12T21:11:40-04:00
 class:
   - medication
 category: cognitive
@@ -48,4 +48,4 @@ More potent than D-Serine: ~50mg HED improves learning acquisition in healthy ra
 
 Safer than D-Serine: D-Serine causes oxidative stress even at small amounts, not reversed by L-Serine in vitro [@dasilvaDSerineInducesLipid2009]. The indirect PAM mechanism avoids this entirely. Phase 1 demonstrated safety and tolerability; 200mg selected for maximum effects and demonstrated ischemia prevention at that dose.
 
-Only drug with this mechanism.
+Only drug with this mechanism?

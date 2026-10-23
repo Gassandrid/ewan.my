@@ -18,7 +18,7 @@ class: note
     </div>
 </body>
 
-![[IMG_2329.jpeg|400]]
+[![IMG_2329.jpeg](../../../Attachments/IMG_2329.jpeg)](../../../Attachments/IMG_2329.jpeg)
 
 ---
 
@@ -67,7 +67,7 @@ For this, we are planning to rent an Nvidia A100 for a few days to train the mod
 
 Unlike the chassis, I actually stuck fairly close to the origional design. The only things I really changed is I expanded the DARS computer hardware so it could act as a full web server, and not just a one time, hyper specific project. With the upgrades, I can interface the DARS functionality with my computer science workflow, and have it be usefull beyond managing physical appliances through the ESP-32 network.
 
-![[Screenshot 2024-12-06 at 11.42.37 AM.png]]
+[![Screenshot 2024-12-06 at 11.42.37 AM.png](../../../Attachments/Screenshot%202024-12-06%20at%2011.42.37%20AM.png)](../../../Attachments/Screenshot%202024-12-06%20at%2011.42.37%20AM.png)
 
 This diagram shows the flow of data through the system, and how the various components interact with each other. The system will be able to take in audio input, convert that to text, run the text through the language model, and then generate a JSON output. This JSON output will then be processed by the Langroid stack, which will determine what function calls need to be made. The system will then be able to control devices such as lights, and output audio to the user.
 
@@ -143,7 +143,7 @@ Our timescale is designed to give us enough time to figure out the software chal
 Once we have the hardware side of things complete, there is not much else to improve there besides vanity design choices. But the models behind the project will never be completely perfect, and thus, will always be able to be improved.
 
 **Revised Gantt Chart**
-![[Screenshot 2024-12-06 at 11.39.00 AM.png]]
+[![Screenshot 2024-12-06 at 11.39.00 AM.png](../../../Attachments/Screenshot%202024-12-06%20at%2011.39.00%20AM.png)](../../../Attachments/Screenshot%202024-12-06%20at%2011.39.00%20AM.png)
 
 This revised Gantt chart includes how I did delay the chassis to the end, but also used the time to make some pretty noticeabe upgrades to the LLM backend for function calling.
 

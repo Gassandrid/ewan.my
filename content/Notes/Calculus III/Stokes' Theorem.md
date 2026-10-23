@@ -11,7 +11,7 @@ class:
 We have discussed the orientation of curves and the orientation of surfaces. To state Stoke's Theorem, we need to discuss **boundary orientation**:
 
 > [!Info] Sketch
-> ![[Screenshot 2024-12-02 at 12.24.21 PM.png|350]]
+> [![Screenshot 2024-12-02 at 12.24.21 PM.png](../../Attachments/Screenshot%202024-12-02%20at%2012.24.21%20PM.png)](../../Attachments/Screenshot%202024-12-02%20at%2012.24.21%20PM.png)
 
 We say $\partial S$ has **positive boundary orientation** if $S$ is always on your left as you traverse $\partial S$ while standing in the direction of the unit normal vector $\vec{n}$.
 
@@ -19,7 +19,7 @@ We say $\partial S$ has **positive boundary orientation** if $S$ is always on yo
 > The boundary curve can be thought of as where the surface, ends, or the "edge" of a surface. Some surfaces have more than one boundary curve, and closed surfaces have no boundary curve.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-12-02 at 12.29.01 PM.png|600]]
+> [![Screenshot 2024-12-02 at 12.29.01 PM.png](../../Attachments/Screenshot%202024-12-02%20at%2012.29.01%20PM.png)](../../Attachments/Screenshot%202024-12-02%20at%2012.29.01%20PM.png)
 
 _We will mainly be dealing with surfaces with **one** boundary curve with positive boundary orientation._
 
@@ -71,7 +71,7 @@ $$
 ### Set-up
 
 > [!Info] Sketch
-> ![[Screenshot 2024-12-02 at 12.42.39 PM.png|350]]
+> [![Screenshot 2024-12-02 at 12.42.39 PM.png](../../Attachments/Screenshot%202024-12-02%20at%2012.42.39%20PM.png)](../../Attachments/Screenshot%202024-12-02%20at%2012.42.39%20PM.png)
 
 - Parameterize $S$ by $\vec{r} = \langle x, y, f(x,y)\rangle$
 - Let $\mathcal{D}$ be the projection of $S$ in the xy-plane. Parameterize $\partial \mathcal{D}$ by:

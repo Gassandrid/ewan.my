@@ -52,7 +52,7 @@ $$
 
 This would yield a graph looking like:
 
-![[Screenshot 2025-08-28 at 11.03.12 AM.png]]
+[![Screenshot 2025-08-28 at 11.03.12 AM.png](../../Attachments/Screenshot%202025-08-28%20at%2011.03.12%20AM.png)](../../Attachments/Screenshot%202025-08-28%20at%2011.03.12%20AM.png)
 
 > [!Question]
 > What is the minimum and maximum numbers of edges in an undirected graph with $n$ vertices?
@@ -94,7 +94,7 @@ $$
 
 We get:
 
-![[Screenshot 2025-08-28 at 11.08.24 AM.png]]
+[![Screenshot 2025-08-28 at 11.08.24 AM.png](../../Attachments/Screenshot%202025-08-28%20at%2011.08.24%20AM.png)](../../Attachments/Screenshot%202025-08-28%20at%2011.08.24%20AM.png)
 
 Looks quite similar! But with one obvious change.
 

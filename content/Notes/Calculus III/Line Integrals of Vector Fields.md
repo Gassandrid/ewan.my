@@ -11,7 +11,7 @@ class:
 In physics, the **work** done by a constant force acting on an object taht moves along a line is defined by $W = Force \times Distance$.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-11 at 12.10.27 PM.png|350]]
+> [![Screenshot 2024-11-11 at 12.10.27 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.10.27%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.10.27%20PM.png)
 
 Where work done by $\vec{F}$ moving an object from $P$ to $Q$ is:
 
@@ -24,7 +24,7 @@ This vector $\vec{PQ}$ is called the **displacement vector**.
 In the case where $\vec{F}$ is not parallel to $\vec{PW}$, we define:
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-11 at 12.12.37 PM.png|350]]
+> [![Screenshot 2024-11-11 at 12.12.37 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.12.37%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.12.37%20PM.png)
 
 $$
 Work = | \vec{F} | \cos \theta \cdot | \vec{PQ} |
@@ -35,7 +35,7 @@ $$
 Where $\theta$ is the angle between $\vec{F}$ and $\vec{PQ}$. The interpretation of this definition is that we are multiplying the displacement vector $| \vec{PQ} |$ by the scalar projection of $\vec{F}$ onto $| \vec{PQ}|$.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-11 at 12.16.21 PM.png|350]]
+> [![Screenshot 2024-11-11 at 12.16.21 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.16.21%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.16.21%20PM.png)
 
 From ,[^1] we can write:
 
@@ -56,7 +56,7 @@ $$
 Now suppose $\vec{F}(x,y) = P(x,y) \vec{i} + Q(x,y) \vec{j}$ is a force vector field on $\mathbb{R}^2$. We seek to compute the work done by this force in moving a particle along a curve $C$.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-11 at 12.23.03 PM.png|350]]
+> [![Screenshot 2024-11-11 at 12.23.03 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.23.03%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.23.03%20PM.png)
 >
 > Where:
 >
@@ -66,7 +66,7 @@ Now suppose $\vec{F}(x,y) = P(x,y) \vec{i} + Q(x,y) \vec{j}$ is a force vector f
 To calculate the work, we partition $C$ into n sub-areas, estimate the work done over each sub-arc, and sum them all up.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-11-11 at 12.26.41 PM.png|600]]
+> [![Screenshot 2024-11-11 at 12.26.41 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.26.41%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.26.41%20PM.png)
 
 In the right-hand image, $\vec{F}_{i} = \vec{F} (x_{i},y_{i})$, where $x_{i} = x(t_{i})$ and $y_{i}= y(t_{i})$, and $\vec{T}_{i}$ is the unit tangent vector to $\vec{r}(t)$ at $t_{i}$. Let $\Delta \partial_{i}$ denote the arc length of the sub-arc. As the particle moves along the curve, it moves approximately in the direction of $\vec{T}_{i}$, for a distance of $\Delta \partial_{i}$ units. We can therefore estimate the displacement vector by $\vec{D}_{i} = \vec{T}_{i}\Delta \partial_{i}$.
 

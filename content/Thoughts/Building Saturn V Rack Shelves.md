@@ -22,7 +22,7 @@ Now that I have finished the basis of my [[Saturn V Server Rack]], I have starte
 
 This started what I considered the easiest and least risky to move in, which was the *old* beelink mini pc `cyr` with a design I found online. Since the other mini pc NAS is now set up, I am not as worried about losing the stuff I have on the external hardrives that are attached to the mini pc, as those are far from ideal compared to the new setup. I will still keep the hardrives for the time being as "mess around storage", but I will eventually be moving my [[Nextcloud]] instance onto the NAS.
 
-![[CyrRackmount.png]]
+[![CyrRackmount.png](../Attachments/CyrRackmount.png)](../Attachments/CyrRackmount.png)
 
 ### Raspberry Pi's
 
@@ -30,7 +30,7 @@ I dont really use my two raspberry pis much now that I have a few computers and 
 
 Once again I found a very simple and easy design online, it had 3 slots but I only have two. However, the extra slot ended up being useful for wiring up the Ethernet cables as I have a weird Ethernet switch.
 
-![[PiRackShelf.png]]
+[![PiRackShelf.png](../Attachments/PiRackShelf.png)](../Attachments/PiRackShelf.png)
 
 ### Ethernet
 
@@ -40,10 +40,10 @@ Found a very simple design for a network switch that is slightly bigger than my 
 
 Because I am lazy and it was also quite late when I started this print, I actually canceled it about halfway through because I am sure the hot glue will hold it in place well enough.
 
-![[Screenshot 2025-09-30 at 4.48.55 PM.png]]
+[![Screenshot 2025-09-30 at 4.48.55 PM.png](../Attachments/Screenshot%202025-09-30%20at%204.48.55%20PM.png)](../Attachments/Screenshot%202025-09-30%20at%204.48.55%20PM.png)
 
 ### Me Mini NAS PC
 
 This mini pc has quite an unconventional shape, so I just decided to make a shelf for the bottom of the rack, and have it mounted there along with the two external hard drives from the **Cyr** mini pc.
 
-![[Screenshot 2025-09-30 at 5.59.52 PM.png]]
+[![Screenshot 2025-09-30 at 5.59.52 PM.png](../Attachments/Screenshot%202025-09-30%20at%205.59.52%20PM.png)](../Attachments/Screenshot%202025-09-30%20at%205.59.52%20PM.png)

@@ -24,19 +24,19 @@ class: note
 `Chart.js chart`
 
 >[!Info]- Photo
-> ![[Screenshot 2024-11-07 at 10.54.20 PM.png]]
+> [![Screenshot 2024-11-07 at 10.54.20 PM.png](../../../Attachments/Screenshot%202024-11-07%20at%2010.54.20%20PM.png)](../../../Attachments/Screenshot%202024-11-07%20at%2010.54.20%20PM.png)
 
 `InitialState Chart`
 
 >[!Info]- Photo
-> ![[Screenshot 2024-11-07 at 10.47.30 PM.png]]
+> [![Screenshot 2024-11-07 at 10.47.30 PM.png](../../../Attachments/Screenshot%202024-11-07%20at%2010.47.30%20PM.png)](../../../Attachments/Screenshot%202024-11-07%20at%2010.47.30%20PM.png)
 
 `app.py`
 
 >[!Info]- Photo
-> ![[Screenshot 2024-11-07 at 9.06.31 PM.png]]
+> [![Screenshot 2024-11-07 at 9.06.31 PM.png](../../../Attachments/Screenshot%202024-11-07%20at%209.06.31%20PM.png)](../../../Attachments/Screenshot%202024-11-07%20at%209.06.31%20PM.png)
 
 `is_chart.html`
 
 >[!Info]- Photo
-> ![[Screenshot 2024-11-07 at 10.57.00 PM.png]]
+> [![Screenshot 2024-11-07 at 10.57.00 PM.png](../../../Attachments/Screenshot%202024-11-07%20at%2010.57.00%20PM.png)](../../../Attachments/Screenshot%202024-11-07%20at%2010.57.00%20PM.png)

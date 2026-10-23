@@ -20,7 +20,7 @@ They are particularly useful in [[Computational Neuroscience]] for modeling syst
 
 - has a lot of background coming from [[Group Theory in Neuroscience - Gemini|group theory in neuroscience]], in that it is a physical instantiation of a **topological manifold** where the system's marginal stability mimics a continuous symmetry space. something like a rat turning its head; the activity bump sliding along a ring attractor is an instantiation of the **[[Rotation Group]]**
 
-![[Cann1.gif]]
+[![Cann1.gif](../../../Attachments/Cann1.gif)](../../../Attachments/Cann1.gif)
 
 ---
 

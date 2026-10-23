@@ -15,8 +15,9 @@ author:
 description:
 aliases:
 date: 2026-01-28T08:31:19-05:00
-updated: 2026-01-28T09:23:07-05:00
+updated: 2026-10-22T13:56:31-04:00
 ---
+
 **Logistic Regression** is an exceptional tool for the task of _classification_. It is particularly well-suited for scenarios where the outcome variable is categorical, such as determining whether an email is spam or not spam, or predicting whether a patient has a certain disease based on their symptoms.
 
 Takes a probabilistic approach to learning discriminative functions (i.e. a classifier) from data.
@@ -26,7 +27,7 @@ $h_{\theta}$ should give us $p(y=1 | x; \theta )$ where $y \in {0,1}$
 In plan English:
 
 $$
-h_{\theta}(x) = Prob( \underbrace{ \overbrace{ class = 1 }^{ y=1 } }_{ \text{death} } | x, \vec{\theta} )
+h_{\theta}(x) = Prob( \underbrace{ \overbrace{ class = 1 }^{ y=1 } }_{ \text{death} } | x, \vec{\theta} ) 
 $$
 
 $$
@@ -49,7 +50,7 @@ This line doesnt have to be flat or linear, could be a curve, or any shape reall
 
 ---
 
-## Gradient Descent
+## [[Gradient Descent]]
 
 1. Initialize $\vec{\theta}$ to some value (often zeros)
 2. Repeat $\theta_j := \theta_j - \alpha \frac{ \partial }{ \partial \theta_j } J(\theta)$ until convergence

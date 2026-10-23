@@ -91,4 +91,4 @@ $$
 \frac{1}{N} \sum_{j=1}^{N}  \ln ||\vec{y}_{i}^{j}||
 $$
 
-![[computingLyapunov.png]]
+[![computingLyapunov.png](../../Attachments/computingLyapunov.png)](../../Attachments/computingLyapunov.png)

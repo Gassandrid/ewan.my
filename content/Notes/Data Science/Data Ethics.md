@@ -54,7 +54,7 @@ Use the **mesoscale reflection**:
 - consult with implicated members of the gropus above about your question
 - reflect on your biases - talk to different people about your project and get feedback - their "gut check" might be very different than yours
 
-![[DSLCycle.png]]
+[![DSLCycle.png](../../Attachments/DSLCycle.png)](../../Attachments/DSLCycle.png)
 
 ### Obtain Data - Secondary Data
 
@@ -67,7 +67,7 @@ Use the **mesoscale reflection**:
 
 There is also a question of *data stewardship* - a data management plan. One should follow by the FAIR + CARE plan principles, although the usefulness of a such a system has been mitigated by the introduction of generative AI.
 
-![[FairCare.png]]
+[![FairCare.png](../../Attachments/FairCare.png)](../../Attachments/FairCare.png)
 
 ### Dark Data
 

@@ -69,4 +69,4 @@ author:
 - [ ] [[Functional magnetic resonance imaging]] (MRI)
 - [ ] [[Positron emission tomography]] (PET)
 
-![[Screenshot 2025-09-08 at 12.51.33 PM.png]]
+[![Screenshot 2025-09-08 at 12.51.33 PM.png](../../../Attachments/Screenshot%202025-09-08%20at%2012.51.33%20PM.png)](../../../Attachments/Screenshot%202025-09-08%20at%2012.51.33%20PM.png)

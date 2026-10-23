@@ -6,7 +6,7 @@ updated: 2026-01-16T17:28:48-05:00
 
 ## Inspirations
 
-![[Pasted image 20241002203018.png]]
+[![Pasted image 20241002203018.png](../Attachments/Pasted%20image%2020241002203018.png)](../Attachments/Pasted%20image%2020241002203018.png)
 
 `r/place circa 2022`
 

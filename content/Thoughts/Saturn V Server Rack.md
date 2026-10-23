@@ -6,7 +6,7 @@ tags:
   - projects/homelab/apartment
   - tree
 date: 2025-08-31
-updated: 2026-01-18T08:29:32-05:00
+updated: 2026-10-23T18:20:39-04:00
 class:
   - note
 source:
@@ -16,6 +16,7 @@ author:
 description:
 aliases:
 ---
+
 My current primary **homelab** as per se - it is feature complete in terms of hardware now, the only thing I could really see to add now would be a zig-bee dongle and and SDR for passive RF monitoring. Most work now consists of [[Saturn Rack Software]].
 
 ---
@@ -24,7 +25,7 @@ My current primary **homelab** as per se - it is feature complete in terms of ha
 
 Now that the server rack has been completed, the main task is to build the [[Brainstorming Software Stack|Software Stack]], such that all computers are being evenly distributed. The [[Cyr]] mini pc has the most ram and is the most capable pc in terms of compute, so most services should be focused there. [[Tysis]] is the NAS, only has an intel n100 and thus docker services should not be hosted here, instead having cyr services point to tysis for their data stores.
 
-![[saturnRack.png]]
+[![saturnRack.png](../Attachments/saturnRack.png)](../Attachments/saturnRack.png)
 
 ---
 

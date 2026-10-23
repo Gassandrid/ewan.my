@@ -43,7 +43,7 @@ Beyond its functionality, DARS also features:
 	- What can’t be run on device is run via cloud
 	
 
-![[Screenshot 2024-12-04 at 1.42.47 PM.png|350]]
+[![Screenshot 2024-12-04 at 1.42.47 PM.png](../Attachments/Screenshot%202024-12-04%20at%201.42.47%20PM.png)](../Attachments/Screenshot%202024-12-04%20at%201.42.47%20PM.png)
 
 - Language Model Generates formatted json to run functions
 	- Provides arguments and is pre-prompted on when to call functions
@@ -51,7 +51,7 @@ Beyond its functionality, DARS also features:
 - Function calls are either run on Pi ( note taker, humor setter) or sent to the Master ESP-32
 	- Master can connect to several other ESP-32’s to control room device power
 
-![[Screenshot 2024-12-04 at 1.43.16 PM.png|350]]
+[![Screenshot 2024-12-04 at 1.43.16 PM.png](../Attachments/Screenshot%202024-12-04%20at%201.43.16%20PM.png)](../Attachments/Screenshot%202024-12-04%20at%201.43.16%20PM.png)
 
 ### Hardware Architecture
 

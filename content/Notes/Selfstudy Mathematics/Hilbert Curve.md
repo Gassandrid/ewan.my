@@ -7,7 +7,7 @@ class: note
 ---
 The **Hilbert Curve** is a space filling fractal pattern with the purpose of mapping all natural numbers onto the 2d plane.
 
-![[Pasted image 20250709104553.png]]
+[![Pasted image 20250709104553.png](../../Attachments/Pasted%20image%2020250709104553.png)](../../Attachments/Pasted%20image%2020250709104553.png)
 
 From a conventional standpoint, this feels nearly impossible as it feels as if there is no intuitive way to fill 2d space with a single dimensional line.
 
@@ -21,7 +21,7 @@ But why does this not work for any curve, and why is the **Hilbert Curve** an ex
 
 It is because of how any given natural number input to the curve will "approach" a certain coordinate as the Hilbert Curve $n$ value approaches $\infty$:
 
-![[Screenshot 2025-07-09 at 10.55.36 AM.png]]
+[![Screenshot 2025-07-09 at 10.55.36 AM.png](../../Attachments/Screenshot%202025-07-09%20at%2010.55.36%20AM.png)](../../Attachments/Screenshot%202025-07-09%20at%2010.55.36%20AM.png)
 
 Think of the definition of a Hilbert Curve as something like the following:
 

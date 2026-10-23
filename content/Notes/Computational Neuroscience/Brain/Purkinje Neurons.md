@@ -21,4 +21,4 @@ typically found in the [[Cerebellum]], they are massive, very branched [[Inhibit
 - each cell receives an enourmous number of inputs, with some going up to 200,000 parallel fiber [[Synapses]] from granule cells and a powerful input from a single climbing fiber
 - they release [[GABA]] for surpressing/inhibiting the deep cerebellar nuclei.
 
-![[purkinjeCell.png]]
+[![purkinjeCell.png](../../../Attachments/purkinjeCell.png)](../../../Attachments/purkinjeCell.png)

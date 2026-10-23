@@ -18,7 +18,7 @@ class: note
     </div>
 </body>
 
-![[Pasted image 20240927213640.png]]
+[![Pasted image 20240927213640.png](../../../Attachments/Pasted%20image%2020240927213640.png)](../../../Attachments/Pasted%20image%2020240927213640.png)
 
 _while this isnt what ours will look like, it sure gave us inspiration_
 
@@ -81,7 +81,7 @@ For this, we are planning to rent an Nvidia A100 for a few days to train the mod
 
 This system is going to be much more complicated than we initially thought, as we have to route human natural language through quite a bit of processes before it is turned into a desirable output.
 
-![[Screenshot 2024-09-27 at 7.49.22 PM.png]]
+[![Screenshot 2024-09-27 at 7.49.22 PM.png](../../../Attachments/Screenshot%202024-09-27%20at%207.49.22%20PM.png)](../../../Attachments/Screenshot%202024-09-27%20at%207.49.22%20PM.png)
 
 This diagram shows the flow of data through the system, and how the various components interact with each other. The system will be able to take in audio input, convert that to text, run the text through the language model, and then generate a JSON output. This JSON output will then be processed by the Langroid stack, which will determine what function calls need to be made. The system will then be able to control devices such as lights, and output audio to the user.
 
@@ -98,7 +98,7 @@ While this diagram is quite complex, it is necessary for the system to function 
 For the chassis, we want to create something that looks similar in appearance to TARS, but we do not have the robotics expertise to make it functional. The Black block will server as a small screen to debug and provide further insight into what the system is doing. The Lights on the top will represent options like if DARS is currently listening, if a certain setting is enabled, and what it is currently thinking. This will also include some simple switches, to toggle listening and other options you need easy access to.
 
 **Our Rough Design**
-![[Screenshot 2024-09-27 at 8.17.08 PM.png]]
+[![Screenshot 2024-09-27 at 8.17.08 PM.png](../../../Attachments/Screenshot%202024-09-27%20at%208.17.08%20PM.png)](../../../Attachments/Screenshot%202024-09-27%20at%208.17.08%20PM.png)
 
 **TARS from Interstellar, for comparison**
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*cUU7WTMtIv1i4xUf3eyx4g.jpeg" alt="TARS from Interstellar, for comparrison" style="width: 50%;">
@@ -157,7 +157,7 @@ Once we have the hardware side of things complete, there is not much else to imp
 
 **Gantt Chart**:
 
-![[Screenshot 2024-09-27 at 7.57.22 PM.png]]
+[![Screenshot 2024-09-27 at 7.57.22 PM.png](../../../Attachments/Screenshot%202024-09-27%20at%207.57.22%20PM.png)](../../../Attachments/Screenshot%202024-09-27%20at%207.57.22%20PM.png)
 
 This Gantt chart gives us a rough estimation of our timeline for the project. There is a lot of empty space, but that it because of how unpredictable the troubleshooting in this field can be. The model training may end up being the easiest part, or we could reach a block that could hold us back weeks.
 

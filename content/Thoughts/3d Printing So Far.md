@@ -9,7 +9,7 @@ It has been well over a month since I first got my Bambu Lab P1S, and it has bee
 
 ## Setup
 
-![[IMG_2555.jpeg|400]]
+[![IMG_2555.jpeg](../Attachments/IMG_2555.jpeg)](../Attachments/IMG_2555.jpeg)
 
 I set up my 3d printer in my dorm room above the fridge. While this isnt ideal for emissions, it is right next to the window and has quite a powerful fan right behind it to ventilate. For this reason I am also greatful that I got an enclosed printer, as I can avoid more microplastics and also print with engineering grade filaments.
 
@@ -21,13 +21,13 @@ The biggest realization for my with this printer is the decrease of dependence o
 
 I now can craft purpose-built products for my room and issues. I have been given an outlet to use my computer to design real, tangible products for myself, and I have loved it.
 
-![[IMG_2691.jpeg|400]]
+[![IMG_2691.jpeg](../Attachments/IMG_2691.jpeg)](../Attachments/IMG_2691.jpeg)
 
 A simple thing I have been working on (this is an old picture) is my wall mount for all my supplies. With this wall rack, I can make my tools and maker-supplies close to my work area ( which unfortunately still looks a bit like a mad scientist den )
 
 I didn't just print things for utility and function, however, and did spend some time in the beginning printing some fun little trinkets for myself. One thing I made was the final "Hex Core" from arcane:
 
-![[IMG_2757.jpeg|400]]
+[![IMG_2757.jpeg](../Attachments/IMG_2757.jpeg)](../Attachments/IMG_2757.jpeg)
 
 ---
 

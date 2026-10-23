@@ -24,6 +24,6 @@ updated: 2026-07-16T12:46:45-07:00
 		- https://www.pnas.org/doi/10.1073/pnas.142105611
 - beyond their navigation use cases, they are also implicated in evaluating future possibilities and for [[Sequence Learning]]/sequential organization so that memories dont overwrite one another.
 
-![[placeVsGrid.png]]
+[![placeVsGrid.png](../../../Attachments/placeVsGrid.png)](../../../Attachments/placeVsGrid.png)
 
-![[ratNavigatingPlaceCells.png]]
+[![ratNavigatingPlaceCells.png](../../../Attachments/ratNavigatingPlaceCells.png)](../../../Attachments/ratNavigatingPlaceCells.png)

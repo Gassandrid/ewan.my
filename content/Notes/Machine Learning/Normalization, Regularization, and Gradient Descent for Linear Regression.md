@@ -29,7 +29,7 @@ Then given the gradient of our [[Loss Functions|Loss Function]], we are looking 
 
 We repeat until convergence $\theta_{j}^{new} \leftarrow \theta_{j}^{old} - \eta \frac{\partial}{\partial \theta_{j}} L(\theta)$. This is called [[Batch Gradient Descent]] since we are using the entire dataset to compute the gradient at each step.
 
-![[partialLossLandscape.png]]
+[![partialLossLandscape.png](../../Attachments/partialLossLandscape.png)](../../Attachments/partialLossLandscape.png)
 
 ### Gradient Descent Variations
 
@@ -77,7 +77,7 @@ $$
 
 Regularization is a technique used to prevent overfitting in machine learning models by adding a penalty term to the loss function. This penalty discourages the model from fitting the noise in the training data, leading to better generalization on unseen data.
 
-![[regularization.png]]
+[![regularization.png](../../Attachments/regularization.png)](../../Attachments/regularization.png)
 
 Noise is proprtional to model complexity. The more complex the model, the more it can fit noise.
 

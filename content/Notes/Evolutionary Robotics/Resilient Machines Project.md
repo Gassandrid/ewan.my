@@ -58,13 +58,13 @@ the robot probes its own body with random actions, observes sensory feedback, an
 
 controllers are then evolved inside that self-model and transferred to the real robot. when the robot's body degrades, predicted vs. actual behavior diverges, and the loop restarts: new probes, updated model, new controllers. adaptation is fully autonomous at every stage.
 
-![[Screenshot 2026-03-19 at 8.57.10 AM.png]]
+[![Screenshot 2026-03-19 at 8.57.10 AM.png](../../Attachments/Screenshot%202026-03-19%20at%208.57.10%20AM.png)](../../Attachments/Screenshot%202026-03-19%20at%208.57.10%20AM.png)
 
 > I do this a lot, but this is very similar to [[Active Inference]] again. I have drawn connections to the [[Free Energy Principle]], but here this mirrors how active inference seeks to take [[Epistemic Action]]("active sensing"), instead of passively waiting for information, an agent will *probe* the system to resolve uncertainty/maximize information gain.
 > 
 > agent will probe environment when unsure of the state ( exploration ). drive to reach a goal or state will take over, like for finding food ( exploitation ), all this through the lense of weighing the **expected free energy**, as *resolving uncertainty first makes future goal seeking more efficient*.
 
-> ![[resMachinesContinuousModeling.png]]
+> [![resMachinesContinuousModeling.png](../../Attachments/resMachinesContinuousModeling.png)](../../Attachments/resMachinesContinuousModeling.png)
 >
 > *Outline of the algorithm. The robot continuously cycles through action execution. (A and B) Self-model synthesis. The robot physically performs an action (A). Initially, this action is random; later, it is the best action found in (C). The robot then generates several self-models to match sensor data collected while performing previous actions (B). It does not know which model is correct. (C) Exploratory action synthesis. The robot generates several possible actions that disambiguate competing self-models. (D) Target behavior synthesis. After several cycles of (A) to (C), the currently best model is used to generate locomotion sequences through optimization. (E) The best locomotion sequence is executed by the physical device. (F) The cycle continues at step (B) to further refine models or at step (D) to create new behaviors.*
 

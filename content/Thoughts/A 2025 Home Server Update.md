@@ -25,15 +25,15 @@ The 3d printed solution looks a lot more appealing to me right now, as I not onl
 
 DeskPi T1:
 
-![[Pasted image 20250419150315.png]]
+[![Pasted image 20250419150315.png](../Attachments/Pasted%20image%2020250419150315.png)](../Attachments/Pasted%20image%2020250419150315.png)
 
 Some 3d printed samples:
 
-![[Screenshot 2025-02-04 at 9.57.36 AM.png]]
+[![Screenshot 2025-02-04 at 9.57.36 AM.png](../Attachments/Screenshot%202025-02-04%20at%209.57.36%20AM.png)](../Attachments/Screenshot%202025-02-04%20at%209.57.36%20AM.png)
 
 *from [[A new idea - 3d printed 10" rack]]*
 
-![[Pasted image 20250419150912.png]]
+[![Pasted image 20250419150912.png](../Attachments/Pasted%20image%2020250419150912.png)](../Attachments/Pasted%20image%2020250419150912.png)
 
 from a [reddit post](https://www.reddit.com/r/homelab/comments/1jzx5gq/what_do_you_guys_think_of_my_minilab_saturn_vu/)
 

@@ -15,7 +15,7 @@ description:
 ---
 The **Hilbert Transform** is a tool for signal processing that allows us to convert a real valued signal into its analytic representation, which is a complex-valued signal. This transformation is particularly useful for extracting instantaneous amplitude and phase information from oscillatory signals, such as neural signals in computational neuroscience.
 
-![[hilbertExampleTransform.png]]
+[![hilbertExampleTransform.png](../../../Attachments/hilbertExampleTransform.png)](../../../Attachments/hilbertExampleTransform.png)
 
 In layman's terms, it is a filter that leaves the amplutude of each frequency component unchanged but shifts the phase of each component by 90 degrees. This phase shift allows us to construct a complex signal where the real part is the original signal and the imaginary part is the Hilbert transform of the original signal.
 

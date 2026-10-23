@@ -43,4 +43,4 @@ f_{k}(x)
 \end{align*}
 $$
 
-![[paretoFrontier.png]]
+[![paretoFrontier.png](../../Attachments/paretoFrontier.png)](../../Attachments/paretoFrontier.png)

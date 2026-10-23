@@ -9,7 +9,7 @@ date: 2025-09-08
 updated: 2026-03-17T08:40:12-04:00
 ---
 
-![[Pasted image 20260317084011.png]]
+[![Pasted image 20260317084011.png](../Attachments/Pasted%20image%2020260317084011.png)](../Attachments/Pasted%20image%2020260317084011.png)
 
 an additive manufacturing process where material is deposited layer by layer to build a physical object from a digital model.
 

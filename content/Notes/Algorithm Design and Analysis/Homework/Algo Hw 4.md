@@ -19,7 +19,7 @@ abstract: Show the steps of deriving your answers. Points will be deducted for a
 
 > Consider the four jobs ($Job i, i = 1, 2, 3, 4$) in the table below, where $t_{i}$ is the processing time and $d_{i}$ is the deadline of each Job $i$. Show a job schedule that is optimal but does not follow the earliest-deadline-first strategy and contains at least one adjacent inversion. Then, repeatedly remove inversions until we have an optimal schedule that can be generated using the earliest-deadline-first strategy. Show the job schedule after removing each inversion.
 >  
-> ![[Screenshot 2025-10-03 at 7.20.49 PM.png|Job Schedule]]
+> [![Screenshot 2025-10-03 at 7.20.49 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%207.20.49%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%207.20.49%20PM.png)
 
 Getting the obvious out of the way, we know the earliest-deadline-first strategy would yield:
 
@@ -77,34 +77,34 @@ We could verify, but we have now reached the earliest deadline first schedule an
 
 > Show the tracing of executing Dijkstra’s single-source shortest paths algorithm given below on the undirected graph given below. (We discussed this algorithm implementation in class.)
 >
-> ![[Screenshot 2025-10-03 at 7.40.16 PM.png|Dikstra's Algorithm Pseudocode (left) and undirected graph example (right)]]
+> [![Screenshot 2025-10-03 at 7.40.16 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%207.40.16%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%207.40.16%20PM.png)
 
 *apologies if I did the drawing process incorrectly, I didnt understand the directions perfectly. I made one mistake merging two iterations together, but difficult to recover/fix unforunately.*
 
 ### Starting Point S
 
-![[Screenshot 2025-10-03 at 8.03.58 PM.png|Iteration 1]]
+[![Screenshot 2025-10-03 at 8.03.58 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.03.58%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.03.58%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.05.37 PM.png|Iteration 2]]
+[![Screenshot 2025-10-03 at 8.05.37 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.05.37%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.05.37%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.07.27 PM.png|Iteration 3]]
+[![Screenshot 2025-10-03 at 8.07.27 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.07.27%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.07.27%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.08.50 PM.png|Iteration 4]]
+[![Screenshot 2025-10-03 at 8.08.50 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.08.50%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.08.50%20PM.png)
 
 I skipped an iteration here by accident - cant fix easily, they were merged
 
-![[Screenshot 2025-10-03 at 8.09.18 PM.png|Iteration 5]]
+[![Screenshot 2025-10-03 at 8.09.18 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.09.18%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.09.18%20PM.png)
 
 ### Starting Point Z
 
-![[Screenshot 2025-10-03 at 8.11.32 PM.png|Iteration 1]]
+[![Screenshot 2025-10-03 at 8.11.32 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.11.32%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.11.32%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.14.17 PM.png|Iteration 2]]
+[![Screenshot 2025-10-03 at 8.14.17 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.14.17%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.14.17%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.17.53 PM.png|Iteration 3]]
+[![Screenshot 2025-10-03 at 8.17.53 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.17.53%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.17.53%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.20.16 PM.png|Iteration 4]]
+[![Screenshot 2025-10-03 at 8.20.16 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.20.16%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.20.16%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.20.53 PM.png|Iteration 5]]
+[![Screenshot 2025-10-03 at 8.20.53 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.20.53%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.20.53%20PM.png)
 
-![[Screenshot 2025-10-03 at 8.21.11 PM.png|Iteration 6]]
+[![Screenshot 2025-10-03 at 8.21.11 PM.png](../../../Attachments/Screenshot%202025-10-03%20at%208.21.11%20PM.png)](../../../Attachments/Screenshot%202025-10-03%20at%208.21.11%20PM.png)

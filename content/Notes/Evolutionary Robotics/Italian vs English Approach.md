@@ -25,7 +25,7 @@ Where we do evolutionary robotidcs on a physical robot directly. Emphasis on imp
 > - Diameter: 55 mm
 > - Could perform experiments on a table, rather than in a large arena.
 >
-> ![[Khepara.png]]
+> [![Khepara.png](../../Attachments/Khepara.png)](../../Attachments/Khepara.png)
 
 ### How Italian Approach Learns
 
@@ -36,7 +36,7 @@ For the example of simple navigation through a maze, the Italian Approach has tw
 
 Robot is given the NN architecture shown.
 
-![[ItalianRobotArchitecture.png]]
+[![ItalianRobotArchitecture.png](../../Attachments/ItalianRobotArchitecture.png)](../../Attachments/ItalianRobotArchitecture.png)
 
 **Robot’s wheels can:**
 

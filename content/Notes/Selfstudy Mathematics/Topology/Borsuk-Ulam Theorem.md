@@ -23,7 +23,7 @@ THe most common example is the 2D sphere (the surface of the Earth). According t
 
 Another common one is [[The Stolen Necklace Problem]], a discrete and seemingly unrelated problem regarding dividing a necklace with beads of different colors into two equal parts. The Borsuk-Ulam theorem can be used to prove that it is always possible to make such a division.
 
-![[borsukUlam.png]]
+[![borsukUlam.png](../../../Attachments/borsukUlam.png)](../../../Attachments/borsukUlam.png)
 
 ---
 

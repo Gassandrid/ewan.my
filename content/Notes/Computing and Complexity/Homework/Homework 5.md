@@ -86,7 +86,7 @@ Given that this turing machine decided the membership for all $A$, the language 
 
 Consider this Turing Machine ( adapted from Turing's 1936 paper):
 
-![[Screenshot 2025-05-01 at 9.58.06 AM.png]]
+[![Screenshot 2025-05-01 at 9.58.06 AM.png](../../../Attachments/Screenshot%202025-05-01%20at%209.58.06%20AM.png)](../../../Attachments/Screenshot%202025-05-01%20at%209.58.06%20AM.png)
 
 Assume for the following questions that this Turing Machine starts wtih an *entirely blank tape*.
 

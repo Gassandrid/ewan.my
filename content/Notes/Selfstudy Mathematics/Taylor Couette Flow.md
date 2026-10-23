@@ -26,7 +26,7 @@ Fluid motion between two rotating concentric cylinders. Fundamental problem in f
 
 Onset of [[Chaos]] within this flow often characterized by [[Lorenz Attractor]] type equations.
 
-![[taylCouetteFlow.png]]
+[![taylCouetteFlow.png](../../Attachments/taylCouetteFlow.png)](../../Attachments/taylCouetteFlow.png)
 
 **Reynolds Number ($Re$):** Measures the ratio of inertial forces to  viscous forces.
 

@@ -18,13 +18,13 @@ updated: 2026-02-17T09:14:43-05:00
 ---
 **What would you classify the following objects under?**
 
-![[collectionObjects1.png]]
+[![collectionObjects1.png](../../Attachments/collectionObjects1.png)](../../Attachments/collectionObjects1.png)
 
 Likely some form of chair or place to sit. Collection is obvious.
 
 **What about these following objects:**
 
-![[collectionObjects2.png]]
+[![collectionObjects2.png](../../Attachments/collectionObjects2.png)](../../Attachments/collectionObjects2.png)
 
 You would think of them as fuel sources, also quite obvious. But notice how the wood stump falls under both collections.
 
@@ -34,7 +34,7 @@ This is what can make classification for [[Evolutionary Robotics]]. In neuroscie
 
 For a [[Continuous Time Recurrent Neural Networks|CTRNN]] experimental agent working towards passability experiments. Agent moves horizontally while a wall with an adjustable aperture falls from above. The rays of the agent's proximity sensors are shown.
 
-![[minCognition.png]]
+[![minCognition.png](../../Attachments/minCognition.png)](../../Attachments/minCognition.png)
 
 Our fitness function will look like:
 
@@ -67,13 +67,13 @@ for an aperture wide enough for the agent for pass through, and $d_{i}$ is the f
 
 After performing an evolutionary algorithm, deleting poor performers and making random modifications.
 
-![[Screenshot 2026-02-12 at 8.44.18 AM.png]]
+[![Screenshot 2026-02-12 at 8.44.18 AM.png](../../Attachments/Screenshot%202026-02-12%20at%208.44.18%20AM.png)](../../Attachments/Screenshot%202026-02-12%20at%208.44.18%20AM.png)
 
 ### Strategy
 
 Below graphs how the apertures would move in relation to the agent. Note that while the apertures fall at a consistent rate, the horizontal movement is due to the agent moving from side to side. Left graph is for apertures 1 unit smaller than the agent, right side is 1 unit larger apertures. Time starts at top and increases downward.
 
-![[agentAvoidance.png]]
+[![agentAvoidance.png](../../Attachments/agentAvoidance.png)](../../Attachments/agentAvoidance.png)
 
 ---
 
@@ -81,7 +81,7 @@ Below graphs how the apertures would move in relation to the agent. Note that wh
 
 Agent has now been modified for the task of self/nonself discimination. Agent is now stationary, but can swing an "arm", which also interacts with its proximity sensors. Goal was to see if it could understand the variable it controlled and how it affected its sensors.
 
-![[selfNonSelfDiscrimination.png]]
+[![selfNonSelfDiscrimination.png](../../Attachments/selfNonSelfDiscrimination.png)](../../Attachments/selfNonSelfDiscrimination.png)
 
 ### Fitness Function
 
@@ -101,11 +101,11 @@ and $\theta_{i}$ is the angular error at the end of the $i^{th}$ trial.
 
 As one would expect, model seems to align arm with object. Final angular position of the hand is plotted against the final angle of the object. 
 
-![[armVsObjectAngle.png]]
+[![armVsObjectAngle.png](../../Attachments/armVsObjectAngle.png)](../../Attachments/armVsObjectAngle.png)
 
 Also plotted is arm trajectories over time of the best self/nonself discrimination  agent catching objects at the midline from initial hand positions at either the left or right edge of the visual field. The trajectories are shaded according to the initial angular position of the object as indicated at the top of the plot.
 
-![[angularPosTime.png]]
+[![angularPosTime.png](../../Attachments/angularPosTime.png)](../../Attachments/angularPosTime.png)
 
 ---
 
@@ -113,7 +113,7 @@ Also plotted is arm trajectories over time of the best self/nonself discriminati
 
 We change the goal yet again. The agent now has to *select* which target to focus on, as there are now two ones coming at once. It still has to catch both, but it has to *select* which one to catch first.
 
-![[twoObjectsCognition.png]]
+[![twoObjectsCognition.png](../../Attachments/twoObjectsCognition.png)](../../Attachments/twoObjectsCognition.png)
 
 *Experimental setup for selective attention experiments. The agent can move horizontally while 2 objects fall from above. the initial positions and velocities of the two objects are constrained so that the agent as a reasonable chance of catching both.*
 
@@ -135,7 +135,7 @@ $$
 
 Behavior of the best selective attention agent. Example motion plots are shown for different combinations of passing objects (PO) and object permanence (OP).
 
-![[POvsOP.png]]
+[![POvsOP.png](../../Attachments/POvsOP.png)](../../Attachments/POvsOP.png)
 
 ---
 

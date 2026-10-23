@@ -66,7 +66,7 @@ $$
 Similar to Stokes' Theorem, the Divergence Theorem can be understood visually and intuitively.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-12-11 at 9.26.10 PM.png|350]]
+> [![Screenshot 2024-12-11 at 9.26.10 PM.png](../../Attachments/Screenshot%202024-12-11%20at%209.26.10%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%209.26.10%20PM.png)
 
 The idea is to chop up $E$ into its volume elements. The idea is to sum up the flux through each volume element.
 
@@ -75,7 +75,7 @@ Observe that flux cancels between adjacent volume elements:
 > [!Info] Sketch
 > "Adjacent" Volume Elements share a **common face.**
 >
-> ![[Screenshot 2024-12-11 at 9.27.40 PM.png|600]]
+> [![Screenshot 2024-12-11 at 9.27.40 PM.png](../../Attachments/Screenshot%202024-12-11%20at%209.27.40%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%209.27.40%20PM.png)
 
 When we find the flux through a volume element, we find the flux through each face of the box, The outward normals are exact opposites, so:
 
@@ -106,7 +106,7 @@ When we add together these fluxes, they cancel!
 Consider a volume element with one corner at $(x_{0},y_{0},z_{0})$ and dimensions $\Delta x, \Delta y, \Delta z$. The flux through this element is the sum of the flux across each face.
 
 > [!Info] Sketch
-> ![[Screenshot 2024-12-11 at 9.40.50 PM.png|350]]
+> [![Screenshot 2024-12-11 at 9.40.50 PM.png](../../Attachments/Screenshot%202024-12-11%20at%209.40.50%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%209.40.50%20PM.png)
 
 We'll find the flux across the front and back faces. The other faces follow a similar pattern.
 

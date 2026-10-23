@@ -16,4 +16,4 @@ For [[Neural Networks]], often times, we want to make sure that for calssificati
 
 General rule of thumb is if you only have two classes then just use a single neuron with either 0 or 1 as output. If more, use one hot encoding with a neuron for each classification option.
 
-![[hotEncodingNeuralNetwork.png]]	
+[![hotEncodingNeuralNetwork.png](../../Attachments/hotEncodingNeuralNetwork.png)](../../Attachments/hotEncodingNeuralNetwork.png)	

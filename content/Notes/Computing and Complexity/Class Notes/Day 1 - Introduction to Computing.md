@@ -42,7 +42,7 @@ A language is a **set** of **strings**, where a string is a sequence of symbols.
 
 While Noam Chomsky is not computer scientist, he is known for his work in linguistics. His work has been applied to computer science, where he developed the Chomsky hierarchy. The Chomsky hierarchy is a classification of formal languages based on their generative power.
 
-![[Pasted image 20250114085049.png]]
+[![Pasted image 20250114085049.png](../../../Attachments/Pasted%20image%2020250114085049.png)](../../../Attachments/Pasted%20image%2020250114085049.png)
 
 ---
 

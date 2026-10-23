@@ -13,7 +13,7 @@ class:
 
 **Orthogonality** refers to the concept of perpendicularity in vector spaces. Two vectors are orthogonal if their dot product is zero, indicating that they are at right angles to each other. This concept is fundamental in linear algebra, particularly in the context of inner product spaces.
 
-![[Screenshot 2025-06-17 at 11.13.16 AM.png]]
+[![Screenshot 2025-06-17 at 11.13.16 AM.png](../../../Attachments/Screenshot%202025-06-17%20at%2011.13.16%20AM.png)](../../../Attachments/Screenshot%202025-06-17%20at%2011.13.16%20AM.png)
 
 ---
 

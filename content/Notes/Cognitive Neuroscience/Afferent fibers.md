@@ -13,7 +13,7 @@ description:
 aliases:
 ---
 
-![[Screenshot 2026-09-02 at 3.46.17 PM.png]]
+[![Screenshot 2026-09-02 at 3.46.17 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.46.17%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.46.17%20PM.png)
 
 - carries sensory information from body to [[Central Nervous System]]
 - [[Brain Orientation Terminology|posterior]] portions of brain and [[Spinal Cord]]

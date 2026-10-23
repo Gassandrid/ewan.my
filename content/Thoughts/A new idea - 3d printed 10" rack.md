@@ -19,4 +19,4 @@ This is a great form factor and size given my current dorm arrangement, and woul
 
 Just for reference, this is the one from the video. Very Nice!
 
-![[Screenshot 2025-02-04 at 9.57.36 AM.png]]
+[![Screenshot 2025-02-04 at 9.57.36 AM.png](../Attachments/Screenshot%202025-02-04%20at%209.57.36%20AM.png)](../Attachments/Screenshot%202025-02-04%20at%209.57.36%20AM.png)

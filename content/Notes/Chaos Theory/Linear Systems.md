@@ -19,7 +19,7 @@ lecture-number: 1
 ---
 How do we go about predicting a linear system? Lets look at the example of a **billiards game**
 
-![[billardspath.png]]
+[![billardspath.png](../../Attachments/billardspath.png)](../../Attachments/billardspath.png)
 
 This is a good example of a linear chaotic system, as difference accumulates over time given any set amount of divergences from you estimation. In essence, a small difference in what you do vs what actually happens will lead to a large difference in the end result.
 
@@ -33,7 +33,7 @@ Where $A$ is a transformation matrix that describes how the balls move on the ta
 
 > [!Abstract] Edward Lorenz (1917 - 2008)
 >
-> ![[edwardlorenz.png|100]]
+> [![edwardlorenz.png](../../Attachments/edwardlorenz.png)](../../Attachments/edwardlorenz.png)
 >
 > **Chaos**: When the present determines the future, but the approximate present does not approximately determine the future:
 
@@ -45,7 +45,7 @@ Forecasting in linear systems can be done by iteratively applying the transforma
 
 For a game like **plinko**, if we drop a ball from the top, we can predict its path by applying the transformation matrix at each level of the plinko board. However this gets so complicated that it is often easier to operate over the statistical distribution of outcomes rather than trying to predict the exact path of the ball.
 
-![[plinko.png]]
+[![plinko.png](../../Attachments/plinko.png)](../../Attachments/plinko.png)
 
 ### Solutions
 
@@ -59,13 +59,13 @@ We have two main approaches to dealing with the uncertainty in linear chaotic sy
 
 It reminds me of the [[Kalman Filter]] approach used in control systems and robotics, where predictions are updated based on sensor measurements to improve accuracy.
 
-![[dataAssim.png]]
+[![dataAssim.png](../../Attachments/dataAssim.png)](../../Attachments/dataAssim.png)
 
 ### Ensemble Forecasting
 
 This involves running multiple simulations of the system with slightly varied initial conditions. By analyzing the spread of outcomes from these simulations, we can gain insights into the range of possible future states of the system. This method helps to capture the inherent uncertainty in chaotic systems.
 
-![[ensembleForecasting.png]]
+[![ensembleForecasting.png](../../Attachments/ensembleForecasting.png)](../../Attachments/ensembleForecasting.png)
 
 ---
 
@@ -112,4 +112,4 @@ $$
 
 By taking discrete approximation steps, we notice this "staircase" pattern emerging, where we can see how the function iterates towards the fixed point. You will also notice that if we plot the line $y=x$, the points where the function intersects this line are the fixed points of the system.
 
-![[logmap.png]]
+[![logmap.png](../../Attachments/logmap.png)](../../Attachments/logmap.png)

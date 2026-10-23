@@ -7,7 +7,7 @@ tags:
 ---
  The *Anterior Hypothalamus* is primarily responsible for body temperature regulation( cooling in particular ). It does this by utilizing special temperature sensitive neurons which can detect and respond to changes in body temperature, and elicit response behavior like sweating.
 
-![[Pasted image 20250414160247.png]]
+[![Pasted image 20250414160247.png](../../../Attachments/Pasted%20image%2020250414160247.png)](../../../Attachments/Pasted%20image%2020250414160247.png)
 
 ---
 

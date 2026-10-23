@@ -17,7 +17,7 @@ description:
 aliases:
 ---
 
-![[Screenshot 2026-04-28 at 11.04.30 AM.png]]
+[![Screenshot 2026-04-28 at 11.04.30 AM.png](../../Attachments/Screenshot%202026-04-28%20at%2011.04.30%20AM.png)](../../Attachments/Screenshot%202026-04-28%20at%2011.04.30%20AM.png)
 
 $$
 \begin{align}

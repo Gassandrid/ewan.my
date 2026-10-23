@@ -28,7 +28,7 @@ We need to think about all the things that an intelligent agent _should_ be able
 
 Below is a picture of **Marylin Monroe**. Can you recognize her? This is an example of older computer vision systems failing to deduce the human face in the image. Modern neural networks can easily recognize the face, thanks to advancements in [[Diffusion in machine learning]] through models like [[CLIP]], which learned to associate an image vector with a text vector.
 
-![[aiPatternRecognition.png]]
+[![aiPatternRecognition.png](../../Attachments/aiPatternRecognition.png)](../../Attachments/aiPatternRecognition.png)
 
 ---
 
@@ -41,7 +41,7 @@ The researchers working with Cog treated Cog like a baby, as like most newborn i
 
 In the example below, Cog didn't have any goal, it just moved things around. Would send signals to its motors, see some blobs of motion, and when it stopped sending signals it would suddenly see nothing.
 
-![[cogRobotMotion.png]]
+[![cogRobotMotion.png](../../Attachments/cogRobotMotion.png)](../../Attachments/cogRobotMotion.png)
 
 Cog _learned_ to associate its motor commands with the visual feedback it received. For example, when it moved its arm to the left, it would see a blob of motion on the left side of its visual field. Over time, Cog learned to predict what it would see based on its motor commands.
 
@@ -57,7 +57,7 @@ An iconic and pivotal moment in AI history was when IBM's Deep Blue defeated wor
 
 This is an example of the cognitive ability of **Planning**, where Deep Blue would make complex plans based not only on its own planned moved, but also what it expected Kasparov to do in response(this is what Minimax does).
 
-![[KasparovVDeepBlue.png]]
+[![KasparovVDeepBlue.png](../../Attachments/KasparovVDeepBlue.png)](../../Attachments/KasparovVDeepBlue.png)
 
 Deep blue won its first game **February 1996**, and its first match **May, 1997**.
 
@@ -86,7 +86,7 @@ Not only was there a signal in the EEG data that predicted when the subject woul
 
 Subjects would have already made a decision for when they were ready, _they just didn't know it yet_. Quite unsettling!
 
-![[LibetFreeWillExperiment.png]]
+[![LibetFreeWillExperiment.png](../../Attachments/LibetFreeWillExperiment.png)](../../Attachments/LibetFreeWillExperiment.png)
 
 One possible solution could be that the "Central Coordination Factor" only gets synchronized with the motor action after the action has already been initiated unconsciously. The brain is a distributed system, but our "consciousness" might be a centralized narrative that gets updated after the fact.
 
@@ -106,7 +106,7 @@ The process is as follows:
 2. One behavior is always in control at any one time.
 3. When stimuli are not present, higher levels subsume control of the robot.
 
-![[subsumptionArchitecture.png]]
+[![subsumptionArchitecture.png](../../Attachments/subsumptionArchitecture.png)](../../Attachments/subsumptionArchitecture.png)
 
 Subsumption architecture has been used to build a variety of robots, including the famous **Roomba** vacuum cleaner. An unintuitive but simple approach to building intelligent systems.
 

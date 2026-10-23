@@ -11,7 +11,7 @@ author:
   - "[[Axel Pedersen]]"
 description:
 ---
-![[Pasted image 20241206195004.png]]
+[![Pasted image 20241206195004.png](../Attachments/Pasted%20image%2020241206195004.png)](../Attachments/Pasted%20image%2020241206195004.png)
 
 ---
 
@@ -23,4 +23,4 @@ Diabetes is often thought of as its own form of dementia, and in the case of Axe
 
 ---
 
-![[IMG_5326.jpeg]]![[IMG_5336.jpeg]]![[IMG_5346.jpg]]
+[![IMG_5326.jpeg](../Attachments/IMG_5326.jpeg)](../Attachments/IMG_5326.jpeg)[![IMG_5336.jpeg](../Attachments/IMG_5336.jpeg)](../Attachments/IMG_5336.jpeg)[![IMG_5346.jpg](../Attachments/IMG_5346.jpg)](../Attachments/IMG_5346.jpg)

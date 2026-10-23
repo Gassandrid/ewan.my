@@ -18,7 +18,7 @@ aliases:
 
 In Layman's terms, it does this by computing the nearest neighbors of each point in the high dimensional space, and attempting to fine tune a model in the low dimensional space that matches these distances, such that points that were close in high-dim space remain close in low-dim space. The main difference between this (SNE) and t-SNE is that t-SNE uses a heavy-tailed distribution (Student t-distribution) in the low-dimensional space to better handle the "crowding problem", where points tend to cluster too closely together. In addition, it makes the algorithm more efficient to compute(however, still extremely computationally expensive for large datasets).
 
-![[TsneWordEmbeddings.png]]
+[![TsneWordEmbeddings.png](../../Attachments/TsneWordEmbeddings.png)](../../Attachments/TsneWordEmbeddings.png)
 
 _T-SNE applied to a 19th century word embeddings dataset, showing how words with similar meanings cluster together._
 
@@ -89,7 +89,7 @@ How **T-SNE** works can be understood in two main steps:
 
 A key parameter in T-SNE is **perplexity**, which can be thought of as a smooth measure of the effective number of neighbors. It influences how the algorithm balances attention between local and global aspects of the data. Lower perplexity values focus more on local structures, while higher values capture broader patterns.
 
-![[TsnePerplexityValues.png]]
+[![TsnePerplexityValues.png](../../Attachments/TsnePerplexityValues.png)](../../Attachments/TsnePerplexityValues.png)
 
 _The different perplexity values 5-100 and how they change the depiction of the data._
 

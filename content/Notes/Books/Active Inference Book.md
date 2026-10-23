@@ -23,4 +23,4 @@ updated: 2026-01-18 12:07:54-05:00
 progress:
 status: reading-list
 ---
-![[InferenceActiveBook.png]]
+[![InferenceActiveBook.png](../../Attachments/InferenceActiveBook.png)](../../Attachments/InferenceActiveBook.png)

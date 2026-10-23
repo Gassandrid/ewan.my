@@ -21,7 +21,7 @@ aliases:
 
 Consider the map $f(x) = 3x (mod \ 1)$ on unit interval, Fixed point at $x=\frac{1}{2}$ and $0$. $x=1$ is identical to $x=0$
 
-![[3xmod1Chart.png]]
+[![3xmod1Chart.png](../../Attachments/3xmod1Chart.png)](../../Attachments/3xmod1Chart.png)
 
 $$
 \begin{align*}

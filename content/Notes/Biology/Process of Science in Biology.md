@@ -69,7 +69,7 @@ graph TD;
 
 ### Question: How Can the Properties of Gluten-free Products Be Improved?
 
-![[GlutenFreeDietGraph.png]]
+[![GlutenFreeDietGraph.png](../../Attachments/GlutenFreeDietGraph.png)](../../Attachments/GlutenFreeDietGraph.png)
 
 This is where another step in the [[Process of Science in Biology|scientific process]] comes in: **Hypotheses** and **Hypotheses testing**
 
@@ -125,7 +125,7 @@ Returning to the [[Process of Science in Biology#^e60f0e|prediction]] formed ear
 > [!Warning] Key Point: **Sample size** matters
 > results obtained from a larger number of sample are more _likely to reflect the actual effects_ of the variable you are testing
 >
-> ![[Pasted image 20250827135545.png]]
+> [![Pasted image 20250827135545.png](../../Attachments/Pasted%20image%2020250827135545.png)](../../Attachments/Pasted%20image%2020250827135545.png)
 
 If you had a $sample \ size = 2$, you might see that $100\%$ prefer having more chips on chocalate chips.
 

@@ -13,7 +13,7 @@ author:
 
 The **Latent Space** is a broadly used term to describe the high dimensional nature of data representations in machine learning models, particularly in deep learning. It refers to an abstract multi-dimensional space where complex data structures are encoded into simpler, more manageable forms.
 
-![[latentSpaceML.png]]
+[![latentSpaceML.png](../../Attachments/latentSpaceML.png)](../../Attachments/latentSpaceML.png)
 
 A latent space is achieved through techniques such as autoencoders, [[Variational Autoencoder]]s, and generative adversarial networks (GANs). These models learn to compress input data into a lower-dimensional representation (the latent space) and then reconstruct the original data from this representation.
 

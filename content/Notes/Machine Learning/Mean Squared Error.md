@@ -27,7 +27,7 @@ $$
 - $y_i$ is the actual value for the $i^{th}$ data point
 - $yhat_i$ is the predicted value for the $i^{th}$ data point
 
-![[MSError.png]]
+[![MSError.png](../../Attachments/MSError.png)](../../Attachments/MSError.png)
 
 ---
 

@@ -21,4 +21,4 @@ image: "[[SwapTubeAnim.png]]"
 
 It was created by [[2swap]] for his elegant videos, and it is written in `C++`.
 
-![[SwapTubeAnim.png]]
+[![SwapTubeAnim.png](../Attachments/SwapTubeAnim.png)](../Attachments/SwapTubeAnim.png)

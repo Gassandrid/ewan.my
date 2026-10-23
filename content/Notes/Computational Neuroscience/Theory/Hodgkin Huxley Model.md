@@ -38,6 +38,6 @@ C_{m} \frac{dV}{dt}=\overbrace{ \bar{g}_{Na} \color{red} m\color{white}^3 \color
 \end{cases}
 $$
 
-![[hodHux.png]]
+[![hodHux.png](../../../Attachments/hodHux.png)](../../../Attachments/hodHux.png)
 
 ## Gates

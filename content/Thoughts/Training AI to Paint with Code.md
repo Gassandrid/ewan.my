@@ -19,7 +19,7 @@ Recently I have also been playing around with [[Simone Conradi]]'s Eigen creatur
 
 More generally, I think this approach is the kind of "non slop" artisitic experimentation I would love to see AI go. It reminds me of this chart my friend sent me:
 
-![[sloppinessVsHumannessGraph.png]]
+[![sloppinessVsHumannessGraph.png](../Attachments/sloppinessVsHumannessGraph.png)](../Attachments/sloppinessVsHumannessGraph.png)
 
 ---
 

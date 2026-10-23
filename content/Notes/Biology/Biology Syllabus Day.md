@@ -26,7 +26,7 @@ For this note, I will skip out on the introductory information of the course, an
 This exercise is meant to exemplify the **scientific method** 
 
 >[!Question] How are Geckos able to stick to almost any surface?
-> ![[Pasted image 20250825134355.png]]
+> [![Pasted image 20250825134355.png](../../Attachments/Pasted%20image%2020250825134355.png)](../../Attachments/Pasted%20image%2020250825134355.png)
 
 >[!Abstract] My Hypothesis
 > From the picture above, I noticed some interesting adaptations on their fingers, which looks a bit like plates of some kind.
@@ -45,4 +45,4 @@ Regardless, the geckos stuck to the sides of the chamber, although obviously the
 
 Well, it turns out the hypothesis of the **microfibers** was partially correct. Looking at macro images of their feet, we notice some new patterns that were not visible in the first photo:
 
-![[Pasted image 20250825135641.png]]
+[![Pasted image 20250825135641.png](../../Attachments/Pasted%20image%2020250825135641.png)](../../Attachments/Pasted%20image%2020250825135641.png)

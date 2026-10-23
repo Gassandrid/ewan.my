@@ -75,7 +75,7 @@ $$
 
 When you don't have disjoint events, we use the **inclusion-exclusion principle**:
 
-![[Pasted image 20250115134249.png]]
+[![Pasted image 20250115134249.png](../../../../Attachments/Pasted%20image%2020250115134249.png)](../../../../Attachments/Pasted%20image%2020250115134249.png)
 
 $$
 P(A \cup B) = P(A) + P(B) - P(A \cap B) \pm \dots
@@ -83,7 +83,7 @@ $$
 
 This can be extrapolated to three circles:
 
-![[Pasted image 20250115134529.png]]
+[![Pasted image 20250115134529.png](../../../../Attachments/Pasted%20image%2020250115134529.png)](../../../../Attachments/Pasted%20image%2020250115134529.png)
 
 $$
 \begin{align*}
@@ -93,7 +93,7 @@ $$
 
 And for the sake of it, let's do 4 circles, and we will expand out the full probability this time:
 
-![[Pasted image 20250115134857.png]]
+[![Pasted image 20250115134857.png](../../../../Attachments/Pasted%20image%2020250115134857.png)](../../../../Attachments/Pasted%20image%2020250115134857.png)
 
 $$
 \begin{align*}

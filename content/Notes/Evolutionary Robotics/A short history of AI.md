@@ -131,7 +131,7 @@ Up until quite recently, the most widely accepted test for machine intelligence 
 
 The test is quite simple: a human judge engages in a natural language conversation with both a human and a machine, without knowing which is which. If the judge cannot reliably distinguish between the human and the machine, the machine is said to have passed the Turing Test.
 
-![[turingTest.png]]
+[![turingTest.png](../../Attachments/turingTest.png)](../../Attachments/turingTest.png)
 
 #### The Chinese Room Argument
 
@@ -141,7 +141,7 @@ The Turing Test has been criticized for not truly measuring intelligence or unde
 
 Do they really understand Chinese? No, they are just manipulating symbols based on rules. This suggests that passing the Turing Test does not necessarily imply true understanding or consciousness.
 
-![[chineseRoomARgument.png]]
+[![chineseRoomARgument.png](../../Attachments/chineseRoomARgument.png)](../../Attachments/chineseRoomARgument.png)
 
 Some suggest that intelligence to solve this arrises from levels of abstraction, where the system is not just manipulating symbols, but also has a model of the world and can reason about it.
 
@@ -183,7 +183,7 @@ In the 1980s, the `if then else` modal had been exhasperated. Researchers began 
 
 In essence, there seems to be a "flow" of sensory input, parrelel, that is processed in a distributed manner, leading to motor output.
 
-![[Connectionism.png]]
+[![Connectionism.png](../../Attachments/Connectionism.png)](../../Attachments/Connectionism.png)
 
 This was the birth of Artificial Neural Networks (ANNs), which are inspired by the structure and function of biological neural networks in the brain.
 
@@ -197,7 +197,7 @@ It was mostly due to **deep learning**, where we started building not only large
 
 This allowed for levels of abstraction where nodes in certain layers could learn to recognize simple features, while nodes in higher layers could combine these features to recognize more complex patterns.
 
-![[deepLearningNodes.png]]
+[![deepLearningNodes.png](../../Attachments/deepLearningNodes.png)](../../Attachments/deepLearningNodes.png)
 
 ---
 
@@ -205,4 +205,4 @@ This allowed for levels of abstraction where nodes in certain layers could learn
 
 The graph below shows how [[Artificial Intelligence]] branches off into several related subfields, giving birth to robotics and consequently [[Evolutionary Robotics]], but on the other side we have things like [[A short history of AI#Connectionism|Connectionism]], leading to [[Computational Neuroscience]] ( my field!! ) 
 
-![[AiRoboticsSubfields.png]]
+[![AiRoboticsSubfields.png](../../Attachments/AiRoboticsSubfields.png)](../../Attachments/AiRoboticsSubfields.png)

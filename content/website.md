@@ -23,7 +23,7 @@ A big inspiration for a lot of the styling and workflow choice was [Aarons websi
 
 Traversing this website is a bit unconventional, because Obsidian itself is.
 
-![[Screenshot 2025-03-31 at 11.47.22 AM.png]]
+[![Screenshot 2025-03-31 at 11.47.22 AM.png](Attachments/Screenshot%202025-03-31%20at%2011.47.22%20AM.png)](Attachments/Screenshot%202025-03-31%20at%2011.47.22%20AM.png)
 
 My notes use 3 forms of organization to categorize my thoughts:
 

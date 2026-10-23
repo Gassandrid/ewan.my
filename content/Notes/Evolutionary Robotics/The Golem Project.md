@@ -27,7 +27,7 @@ meant as an attempt to solve the **reality gap** (the discrepancy between simula
 	- 3d printing is great, but it is limited to the static, plastic pieces of the process. All the active mechanical components still had to be added manually.
 3. snap in motors and complex components (human in the loop)
 
-![[ModelgolemProject.png]]
+[![ModelgolemProject.png](../../Attachments/ModelgolemProject.png)](../../Attachments/ModelgolemProject.png)
 
 ### Genotype Encoding
 
@@ -92,11 +92,11 @@ One mutation was applied to each newly created genome. Every time a mutation add
 
 **From one generation**:
 
-![[Screenshot 2026-03-17 at 9.26.30 AM.png]]
+[![Screenshot 2026-03-17 at 9.26.30 AM.png](../../Attachments/Screenshot%202026-03-17%20at%209.26.30%20AM.png)](../../Attachments/Screenshot%202026-03-17%20at%209.26.30%20AM.png)
 
 **From varying generations across one "run"**:
 
-![[Screenshot 2026-03-17 at 9.27.16 AM.png]]
+[![Screenshot 2026-03-17 at 9.27.16 AM.png](../../Attachments/Screenshot%202026-03-17%20at%209.27.16%20AM.png)](../../Attachments/Screenshot%202026-03-17%20at%209.27.16%20AM.png)
 
 ---
 
@@ -104,7 +104,7 @@ One mutation was applied to each newly created genome. Every time a mutation add
 
 Top to bottom is generation timeline, the links display similarity of ancestry. Gives a sense of *which ancestors lead to success*
 
-![[phylogeneticTree.png]]
+[![phylogeneticTree.png](../../Attachments/phylogeneticTree.png)](../../Attachments/phylogeneticTree.png)
 
 We can see **macro evolutionary events**
 

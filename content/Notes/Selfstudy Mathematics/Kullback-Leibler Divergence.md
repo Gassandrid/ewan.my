@@ -17,7 +17,7 @@ updated: 2026-04-22T11:29:23-04:00
 
 **KL Divergence** (Kullback-Leibler Divergence) is a measure of how one probability distribution diverges from a second, expected probability distribution. Extending on the idea of [[Cross Entropy]], KL Divergence provides a way to quantify the difference between two distributions by measuring the inefficiency of assuming that the distribution is $Q$ when the true distribution is $P$.
 
-![[KLDivergence.png]]
+[![KLDivergence.png](../../Attachments/KLDivergence.png)](../../Attachments/KLDivergence.png)
 
 ---
 

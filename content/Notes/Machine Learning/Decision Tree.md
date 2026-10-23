@@ -14,7 +14,7 @@ aliases:
 
 Decision Trees are known for producing robust, *interpreable* cateogories/splits in which data is classified.
 
-![[decTree.png]]
+[![decTree.png](../../Attachments/decTree.png)](../../Attachments/decTree.png)
 
 Here, the top box is the **root node**, containing all the data.
 

@@ -28,4 +28,4 @@ Goes something along the lines of:
 3. cross correlation matrix computed between the two embeddings
 4. loss function consists of an invariance term, forcing the diagonal of the matrix to be 1 and ensuring network always invariant to image distortions, and also a redundancy reduction term to push the off-diagonal elements closer to 0, decorrelates different components of representation vector.
 
-![[architectureBarlowTwins.png]]
+[![architectureBarlowTwins.png](../../Attachments/architectureBarlowTwins.png)](../../Attachments/architectureBarlowTwins.png)

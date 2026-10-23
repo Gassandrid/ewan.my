@@ -21,7 +21,7 @@ Another great example is this obsidian vault, as the property of clustering emer
 
 This leads to something called "information highways", where information can quickly spread across the network due to the presence of these long-range connections, while still benefiting from the local clustering for efficient communication within groups.
 
-![[smallworldGraph.png]]
+[![smallworldGraph.png](../../../Attachments/smallworldGraph.png)](../../../Attachments/smallworldGraph.png)
 
 ---
 

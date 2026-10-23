@@ -28,18 +28,18 @@ I have a raspberry pi 5, as well as some different sensors, but the result is th
 ## 11. Modify `temp_logger.py` to Display _your_ Name, and then Run the Script. Let it Collect at Least 20 Values before Terminating It. **Take a screenshot** of the Output of This Script.
 
 >[!Info]- Photo
-> ![[Screenshot 2024-10-31 at 6.35.12 PM.png]]
+> [![Screenshot 2024-10-31 at 6.35.12 PM.png](../../../Attachments/Screenshot%202024-10-31%20at%206.35.12%20PM.png)](../../../Attachments/Screenshot%202024-10-31%20at%206.35.12%20PM.png)
 
 ---
 
 ## 12. Run `SELECT * FROM temperature_data;` in the MySQL Interpreter to Ensure the Data Was Successfully Inserted into the Table. **Take a screenshot** of the Contents of Your Table.
 
 >[!Info]- Screenshot
-> ![[Screenshot 2024-10-31 at 6.41.58 PM.png]]
+> [![Screenshot 2024-10-31 at 6.41.58 PM.png](../../../Attachments/Screenshot%202024-10-31%20at%206.41.58%20PM.png)](../../../Attachments/Screenshot%202024-10-31%20at%206.41.58%20PM.png)
 
 ---
 
 ## 14. Run Your Flask App and view the Sensor Data in the Browser. **Take a screenshot**.
 
 >[!Info]- Screenshot
-> ![[Screenshot 2024-10-31 at 6.45.38 PM.png]]
+> [![Screenshot 2024-10-31 at 6.45.38 PM.png](../../../Attachments/Screenshot%202024-10-31%20at%206.45.38%20PM.png)](../../../Attachments/Screenshot%202024-10-31%20at%206.45.38%20PM.png)

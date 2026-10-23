@@ -27,6 +27,6 @@ linearly separable gates (single perceptron):
 
 only special case is XOR: the two positive inputs $(1,0), (0,1)$ can't be linearly separated from $(0,0),(1,1)$, so no single perceptron works. you need a hidden layer, e.g. $\text{XOR}(x_1,x_2) = \text{AND}(\text{NAND}(x_1,x_2),\, \text{OR}(x_1,x_2))$.
 
-![[linearSeperableGates.png]]
+[![linearSeperableGates.png](../../Attachments/linearSeperableGates.png)](../../Attachments/linearSeperableGates.png)
 
 in general, any boolean function on $n$ bits can be expressed as a depth-2 network (DNF): one hidden layer for each minterm, OR at the output. this gives a universal approximation result for the discrete case, though the number of neurons can be exponential in $n$.

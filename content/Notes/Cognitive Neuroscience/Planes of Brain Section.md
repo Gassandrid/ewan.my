@@ -26,6 +26,6 @@ verticle plane through one hemisphere
 
 veritcla plane through both hemispheres
 
-![[Screenshot 2026-09-02 at 3.48.24 PM.png]]
+[![Screenshot 2026-09-02 at 3.48.24 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.48.24%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.48.24%20PM.png)
 
-![[Screenshot 2026-09-02 at 3.48.31 PM.png]]
+[![Screenshot 2026-09-02 at 3.48.31 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.48.31%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.48.31%20PM.png)

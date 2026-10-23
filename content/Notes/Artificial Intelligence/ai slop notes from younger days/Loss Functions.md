@@ -13,7 +13,7 @@ description:
 aliases:
   - Loss Function
 ---
-![[LossFunctionMSE.png]]
+[![LossFunctionMSE.png](../../../Attachments/LossFunctionMSE.png)](../../../Attachments/LossFunctionMSE.png)
 
 ### Overview
 

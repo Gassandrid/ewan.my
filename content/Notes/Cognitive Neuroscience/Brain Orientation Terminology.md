@@ -33,11 +33,11 @@ aliases:
 	- Lateral/medial = outside/inside
 	- proximal/distal = closer/farther
 
-![[Screenshot 2026-09-02 at 3.42.05 PM.png]]
+[![Screenshot 2026-09-02 at 3.42.05 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.42.05%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.42.05%20PM.png)
 
 - note: pay attention to left and right when looking at brain images:
 	- "radiological" or clinical" orientation: left side of image = right side of brain. based on the radiologist/clinician's view when facing the patient
 	- "anatomic" or "neurological" orientation: left side of image = left side of brain
 	
 
-![[Screenshot 2026-09-02 at 3.43.55 PM.png]]
+[![Screenshot 2026-09-02 at 3.43.55 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.43.55%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.43.55%20PM.png)

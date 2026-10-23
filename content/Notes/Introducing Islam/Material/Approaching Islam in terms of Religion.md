@@ -18,4 +18,4 @@ updated: 2025-12-21
 ---
 We only read chapter two for class [[Introducing Islam]], and it is contained here:
 
-![[Ernst.Ch2FM.pdf]]
+[Ernst.Ch2FM.pdf](../../../Attachments/Ernst.Ch2FM.pdf)

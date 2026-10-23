@@ -15,7 +15,7 @@ author:
 date: 2025-09-09
 updated: 2025-09-09
 ---
-![[Bipartite.png]]
+[![Bipartite.png](../../Attachments/Bipartite.png)](../../Attachments/Bipartite.png)
 
 ## Definition
 

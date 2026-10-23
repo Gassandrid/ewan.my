@@ -10,4 +10,4 @@ A token is simply an internal representation for Natural Language Processing mod
 
 This has been found to improve accuracy over simply just embedding the word, as some combinations encode general meaning regardless of the word ( example: token**ization**, the "ization" has meaning across words. )
 
-![[TokenizationDemo.png]]
+[![TokenizationDemo.png](../../Attachments/TokenizationDemo.png)](../../Attachments/TokenizationDemo.png)

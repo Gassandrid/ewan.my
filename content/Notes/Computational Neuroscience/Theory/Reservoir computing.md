@@ -22,4 +22,4 @@ efficient [[Machine Learning]] framework based on [[Recurrent Neural Network]]s 
 - excels at pattern recognition, [[Chaos|chaotic]] signal prediction, and speech recognition with lower computational costs
 - turns out to be deeply connected to [[Fourier Transform|Fourier]]'s insight about building any signal from compositional building blocks. it all a matter of looking at the signals the right way.
 
-![[reservoirNetwork.png]]
+[![reservoirNetwork.png](../../../Attachments/reservoirNetwork.png)](../../../Attachments/reservoirNetwork.png)

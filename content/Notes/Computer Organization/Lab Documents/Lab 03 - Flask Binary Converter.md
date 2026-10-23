@@ -18,7 +18,7 @@ class:
 ## 1. 13. **Take A screenshot** of the Conversion of `100010100010` to Decimal in Your Browser.
 
 >[!Info] Screenshot
-![[Screenshot 2024-10-03 at 10.26.15 PM.png]]
+[![Screenshot 2024-10-03 at 10.26.15 PM.png](../../../Attachments/Screenshot%202024-10-03%20at%2010.26.15%20PM.png)](../../../Attachments/Screenshot%202024-10-03%20at%2010.26.15%20PM.png)
 
 ---
 
@@ -27,17 +27,17 @@ class:
 You can't see it from the screenshot, but the glow follows your cursor as you hover over the card.
 
 >[!Info] Screenshot
-![[Screenshot 2024-10-03 at 10.30.33 PM.png]]
+[![Screenshot 2024-10-03 at 10.30.33 PM.png](../../../Attachments/Screenshot%202024-10-03%20at%2010.30.33%20PM.png)](../../../Attachments/Screenshot%202024-10-03%20at%2010.30.33%20PM.png)
 
 ---
 
 ## 3. **(+10%)** Modify the `to_decimal` Function to Process Floating point Binary Too. **Take a Screenshot of** Your Code, and the Conversation of 10.101 to Decimal in Your Browser.
 
 >[!Info] Screenshot
-![[Screenshot 2024-10-03 at 10.33.14 PM.png]]
+[![Screenshot 2024-10-03 at 10.33.14 PM.png](../../../Attachments/Screenshot%202024-10-03%20at%2010.33.14%20PM.png)](../../../Attachments/Screenshot%202024-10-03%20at%2010.33.14%20PM.png)
 
 >[!Info] Screenshot
-![[Screenshot 2024-10-03 at 10.33.52 PM.png]]
+[![Screenshot 2024-10-03 at 10.33.52 PM.png](../../../Attachments/Screenshot%202024-10-03%20at%2010.33.52%20PM.png)](../../../Attachments/Screenshot%202024-10-03%20at%2010.33.52%20PM.png)
 
 ---
 
@@ -46,15 +46,15 @@ You can't see it from the screenshot, but the glow follows your cursor as you ho
 `app.py`
 
 >[!Info] Screenshot
-![[Screenshot 2024-10-03 at 10.37.13 PM.png]]
+[![Screenshot 2024-10-03 at 10.37.13 PM.png](../../../Attachments/Screenshot%202024-10-03%20at%2010.37.13%20PM.png)](../../../Attachments/Screenshot%202024-10-03%20at%2010.37.13%20PM.png)
 
 `binaryconverter.js`
 
 >[!Info] Screenshot
-![[Screenshot 2024-10-03 at 10.38.02 PM.png]]
+[![Screenshot 2024-10-03 at 10.38.02 PM.png](../../../Attachments/Screenshot%202024-10-03%20at%2010.38.02%20PM.png)](../../../Attachments/Screenshot%202024-10-03%20at%2010.38.02%20PM.png)
 
 `binaryconverter.html`
 
->[!Info] Screenshot![[Screenshot 2024-10-03 at 10.39.16 PM.png]]
+>[!Info] Screenshot[![Screenshot 2024-10-03 at 10.39.16 PM.png](../../../Attachments/Screenshot%202024-10-03%20at%2010.39.16%20PM.png)](../../../Attachments/Screenshot%202024-10-03%20at%2010.39.16%20PM.png)
 
 It's just a tad bit small!

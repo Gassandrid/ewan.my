@@ -25,7 +25,7 @@ updated: 2025-10-24
 
 Enzymes increase the rate of chemical reactions by **lowering the activation energy** requires for a reaction to occur.
 
-![[enzymeActivationEnergy.png]]
+[![enzymeActivationEnergy.png](../../Attachments/enzymeActivationEnergy.png)](../../Attachments/enzymeActivationEnergy.png)
 
 ---
 
@@ -36,4 +36,4 @@ Enzymes increase the rate of chemical reactions by **lowering the activation ene
 	- and forms many [[Bonds#Non-Covalent Bonds|noncovalent]] bonds with substrates
 	
 
-![[Screenshot 2025-09-29 at 9.13.50 AM.png]]
+[![Screenshot 2025-09-29 at 9.13.50 AM.png](../../Attachments/Screenshot%202025-09-29%20at%209.13.50%20AM.png)](../../Attachments/Screenshot%202025-09-29%20at%209.13.50%20AM.png)

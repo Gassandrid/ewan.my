@@ -9,7 +9,7 @@ source:
 related:
 author:
 ---
-![[Pasted image 20240924102913.png]]
+[![Pasted image 20240924102913.png](../../../Attachments/Pasted%20image%2020240924102913.png)](../../../Attachments/Pasted%20image%2020240924102913.png)
 
 A Boltzmann Machine is a type of stochastic (randomly determined) neural network that is used to model probability distributions over binary-valued patterns. It's a foundational model in the field of probabilistic graphical models and deep learning. It is named after the Boltzmann distribution in statistical mechanics.
 

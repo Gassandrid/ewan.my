@@ -10,7 +10,7 @@ updated: 2025-04-22
 ---
 Unlike Ion Channels, which are a passive transport mechanism, Ion Pumps are active transport mechanisms that use ATP to move ions against their concentration gradient. This is essential for maintaining the resting membrane potential and the overall ionic balance of the cell. 
 
-![[Pasted image 20250422131644.png]]
+[![Pasted image 20250422131644.png](../../../Attachments/Pasted%20image%2020250422131644.png)](../../../Attachments/Pasted%20image%2020250422131644.png)
 
 ---
 

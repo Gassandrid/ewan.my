@@ -23,4 +23,4 @@ aliases:
 > 
 > for more on this read [[On Self Reported Data]] and [[Self reported data via phone app]]
 
- ![[Pasted image 20250204150000.png]]
+ [![Pasted image 20250204150000.png](../Attachments/Pasted%20image%2020250204150000.png)](../Attachments/Pasted%20image%2020250204150000.png)

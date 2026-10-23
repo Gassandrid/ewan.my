@@ -6,7 +6,7 @@ tags:
 ---
 # Batch Normalization
 
-![[Screenshot 2024-09-17 at 10.22.04 AM.png]]
+[![Screenshot 2024-09-17 at 10.22.04 AM.png](../../../Attachments/Screenshot%202024-09-17%20at%2010.22.04%20AM.png)](../../../Attachments/Screenshot%202024-09-17%20at%2010.22.04%20AM.png)
 
 ## What is Batch Normalization?
 

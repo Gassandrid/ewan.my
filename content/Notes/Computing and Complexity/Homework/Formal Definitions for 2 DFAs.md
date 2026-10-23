@@ -86,7 +86,7 @@ $E:$ Accept State when starting with 0 and ending with 1
 
 *Made with mermaid*
 
-![[Screenshot 2025-01-26 at 9.03.40 PM.png]]
+[![Screenshot 2025-01-26 at 9.03.40 PM.png](../../../Attachments/Screenshot%202025-01-26%20at%209.03.40%20PM.png)](../../../Attachments/Screenshot%202025-01-26%20at%209.03.40%20PM.png)
 
 ---
 
@@ -147,4 +147,4 @@ $D:$ Accept State when string ends in 0
 
 *made with mermaid*
 
-![[Screenshot 2025-01-26 at 9.05.45 PM.png]]
+[![Screenshot 2025-01-26 at 9.05.45 PM.png](../../../Attachments/Screenshot%202025-01-26%20at%209.05.45%20PM.png)](../../../Attachments/Screenshot%202025-01-26%20at%209.05.45%20PM.png)

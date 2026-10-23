@@ -51,7 +51,7 @@ or \quad A = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-> ![[Screenshot 2026-02-05 at 10.21.11 AM.png]]
+> [![Screenshot 2026-02-05 at 10.21.11 AM.png](../../Attachments/Screenshot%202026-02-05%20at%2010.21.11%20AM.png)](../../Attachments/Screenshot%202026-02-05%20at%2010.21.11%20AM.png)
 >
 > Points on the y-axis see origin as a [[Attracting fixed point|sink]]. But we know it is a saddle. $\lambda_{1}=2, \lambda_{2}=\frac{1}{2}, \vec{v}_{1}=\begin{bmatrix}1 \\ 0\end{bmatrix},\vec{v}_{2}=\begin{bmatrix}0 \\ 1\end{bmatrix}$
 

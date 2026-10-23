@@ -23,9 +23,9 @@ tags:
 >
 > Specification of the algorithm run tracing: For each algorithm run tracing, show the content of the cut $S$, the content of the $MST \ T$, and the content of the priority queue $Q$ at the end of the While loop in each iteration. Specifically, show the content of $S$ as a set of nodes, the content of $T$ as a set of edges, and the content of $Q$ as a set of ordered pairs of a node number and a priority key. (For ease of grading, please show the end nodes of an edge in the alphabetical order (e.g., (a, d)), and list the priority queue elements in the alphabetic order of node number.) For example, when the start node is $a$, their contents before the 1st iteration is $S=\{  \}$, $T=\{  \}$, and $Q = \{ (a,0), (b, \infty), (c, \infty), (d,\infty), (e,\infty), (f, \infty), (g,\infty) \}$.
 >
-> ![[primAlgo.png|Given Prim Pseudocode]]
+> [![primAlgo.png](../../../Attachments/primAlgo.png)](../../../Attachments/primAlgo.png)
 > 
-> ![[Screenshot 2025-10-10 at 8.17.16 PM.png|Given Undirected Graph]]
+> [![Screenshot 2025-10-10 at 8.17.16 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%208.17.16%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%208.17.16%20PM.png)
 
 ### 1. Starting at Node $a$
 
@@ -111,7 +111,7 @@ $$
 
 ### 3. MST Drawing
 
-![[Screenshot 2025-10-10 at 11.02.36 PM.png|MST of provided undirected graph]]
+[![Screenshot 2025-10-10 at 11.02.36 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.02.36%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.02.36%20PM.png)
 
 ---
 
@@ -131,9 +131,9 @@ $$
 > - If the disjoint sets do not change in an iteration, you do not need to show the forest structure.
 > - If two trees that are merged have the same size, make the second tree (on the right) a subtree of the first tree (on the left).
 > 
-> ![[Screenshot 2025-10-10 at 11.08.44 PM.png|Kruskal Pseudocode Algorithm]]
+> [![Screenshot 2025-10-10 at 11.08.44 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.08.44%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.08.44%20PM.png)
 > 
-> ![[Screenshot 2025-10-10 at 11.09.16 PM.png|Sample Undirected Graph]]
+> [![Screenshot 2025-10-10 at 11.09.16 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.09.16%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.09.16%20PM.png)
 
 ### 1. Sorting the Edgeso
 
@@ -203,4 +203,4 @@ $$
 
 ### 4. Final MST
 
-![[Screenshot 2025-10-10 at 11.16.47 PM.png|Resulting MST for Second Undirected Graph Sample]]
+[![Screenshot 2025-10-10 at 11.16.47 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.16.47%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.16.47%20PM.png)

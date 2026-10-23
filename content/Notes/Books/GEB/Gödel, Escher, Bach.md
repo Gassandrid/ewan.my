@@ -26,7 +26,7 @@ aliases:
   - Godel, Escher, Bach
   - GEB
 ---
-![[GebCover.png]]
+[![GebCover.png](../../../Attachments/GebCover.png)](../../../Attachments/GebCover.png)
 
 > **Gödel, Escher, Bach**( often abbreviated as **GEB**), is a non fiction book written by American cognitive scientist [[Douglas Hofstadter]]. Through examples from the lives of the mathematician *Kurt Gödel*, the artist *M.C. Escher*, and the classical composer *Johann Sebastian Bach*, Hofstadter seeks to explore the nature of intelligence, symmetry, and mathematics.
 

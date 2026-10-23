@@ -18,12 +18,12 @@ Let $C$ be a simple closed curve and let $\mathcal{D}$ be the region bounded by 
 > [!Info] Positive Orientation
 > $\mathcal{D}$ is always on your **left** as you traverse the curve
 >
-> ![[Screenshot 2024-12-11 at 10.24.17 PM.png|350]]
+> [![Screenshot 2024-12-11 at 10.24.17 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2010.24.17%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2010.24.17%20PM.png)
 
 > [!danger] Negative Orientation
 > $\mathcal{D}$ is always on your **right** as you traverse the curve
 >
-> ![[Screenshot 2024-12-11 at 10.27.26 PM.png|350]]
+> [![Screenshot 2024-12-11 at 10.27.26 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2010.27.26%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2010.27.26%20PM.png)
 
 ---
 
@@ -85,12 +85,12 @@ The result will follow by linearity of the integral.
 Let $\mathcal{D}$ be a simple region with positively-oriented boundary curve $\partial \mathcal{D}$. Consider the case where we view $\mathcal{D}$ as a Type I region:
 
 > [!Info] Sketch
-> ![[Screenshot 2024-12-11 at 11.08.24 PM.png|350]]
+> [![Screenshot 2024-12-11 at 11.08.24 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2011.08.24%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2011.08.24%20PM.png)
 >
 > $\mathcal{D}$ as a Type I region
 
 > [!Info] Sketch
-> ![[Screenshot 2024-12-11 at 11.09.01 PM.png|350]]
+> [![Screenshot 2024-12-11 at 11.09.01 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2011.09.01%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2011.09.01%20PM.png)
 >
 > $\partial \mathcal{D}$ decomposed into $\partial \mathcal{D} - C_{1} \cup C_{2}$
 

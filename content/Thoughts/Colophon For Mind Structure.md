@@ -285,7 +285,7 @@ Please take note that for an inbox system to work, you must utilize [[Using an I
 
 Bit harder and less straightforward. Using the `git` plugin along with some LLM analysis ( easiest way to go about it, you could do without if you are ok with the time sink ), you can get a better feel for how your notes/habits change over time. I myself made a simple MCP server to complement the obsidian cli for an agent that allows it to see topic topology via total # git diffs for notes with a certain tag:
 
-![[tagFiringRates.png]]
+[![tagFiringRates.png](../Attachments/tagFiringRates.png)](../Attachments/tagFiringRates.png)
 
 But the better way to do this is to use links to daily notes excessively. [[Note updates as links to daily notes]] covers this, but essentially you encode the timeseries nature of returning to old notes as headings with a link to the day you made that change. This has the advantage of allowing you to go back to a certain daily note and see the backlinks as what you did.
 

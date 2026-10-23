@@ -13,11 +13,11 @@ updated: 2025-09-24
 
 The goal is to find a strategy that maximizes the information conveyed by the word and number, ideally leading to the correct cards being chosen with minimal ambiguity.
 
-![[Pasted image 20250924112714.png]]
+[![Pasted image 20250924112714.png](../Attachments/Pasted%20image%2020250924112714.png)](../Attachments/Pasted%20image%2020250924112714.png)
 
 However, we also have to account for the fact that half of the cards belong to the opposing team, and we want to avoid them being chosen. This adds a layer of complexity to our strategy.
 
-![[Pasted image 20250924113131.png]]
+[![Pasted image 20250924113131.png](../Attachments/Pasted%20image%2020250924113131.png)](../Attachments/Pasted%20image%2020250924113131.png)
 
 We cannot simply discard using features that are shared with the opposing team, as this would severely limit our options. Instead, we need to find a balance between maximizing the information conveyed about our own cards while minimizing the risk of the opposing team being able to make a correct guess.
 

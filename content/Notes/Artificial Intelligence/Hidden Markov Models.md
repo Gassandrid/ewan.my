@@ -5,6 +5,7 @@ tags:
   - math/linear-algebra/markhov-chains
   - math/probability/bayesian
 source:
+  - https://www.youtube.com/watch?v=ZIT2UH6bF38&sttick=0
 related:
 author:
 description:

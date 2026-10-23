@@ -193,7 +193,7 @@ We talked about this on day 1, but we didnt discuss the bifurcation diagram in d
 
 Have a look at the interactive code block in the [[Logistic Map]] note, it should look something like:
 
-![[LogMapBirfucations.png]]
+[![LogMapBirfucations.png](../../Attachments/LogMapBirfucations.png)](../../Attachments/LogMapBirfucations.png)
 
 Why does this happen? It relates to the stability of fixed points and periodic orbits as we vary the parameter $r$.
 

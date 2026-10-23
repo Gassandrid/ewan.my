@@ -33,4 +33,4 @@ Long post, so read it yourself, but here is the except underlying the figure bel
 
 > Satyam Anand, Guanming Zhang, and Stefano Martiniani study three paradigmatic systems: random organization (RO) and biased random organization (BRO) from soft matter physics, and stochastic gradient descent (SGD) from machine learning. Each system has fundamentally different microscopic noise sources—random kick directions in RO, random kick magnitudes in BRO, and random particle selection in SGD—yet all undergo the same absorbing-to-active phase transition as particle density increases.
 
-![[PhysicsAIHyperuniformity.png]]
+[![PhysicsAIHyperuniformity.png](../Attachments/PhysicsAIHyperuniformity.png)](../Attachments/PhysicsAIHyperuniformity.png)

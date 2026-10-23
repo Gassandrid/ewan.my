@@ -21,4 +21,4 @@ Defined as "God" in Islam. It is important to note that Allah in this case can e
 
 Beyond "Allah", God also has **99** other names.
 
-![[Pasted image 20250915122553.png]]
+[![Pasted image 20250915122553.png](../../../../Attachments/Pasted%20image%2020250915122553.png)](../../../../Attachments/Pasted%20image%2020250915122553.png)

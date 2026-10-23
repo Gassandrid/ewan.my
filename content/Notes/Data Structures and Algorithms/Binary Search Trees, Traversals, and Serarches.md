@@ -23,7 +23,7 @@ There are four common tree traversal methods and two important search strategies
 
 We will be using this tree to illustrate the different strategies you can use to navigate a BST.
 
-![[Pasted image 20241004112328.png]]
+[![Pasted image 20241004112328.png](../../Attachments/Pasted%20image%2020241004112328.png)](../../Attachments/Pasted%20image%2020241004112328.png)
 
 ---
 

@@ -52,7 +52,7 @@ Edge labels:
 
 **Phenotypes:** Simulated robots.
 
-![[recursiveConstruction.png]]
+[![recursiveConstruction.png](../../Attachments/recursiveConstruction.png)](../../Attachments/recursiveConstruction.png)
 
 ### Brain Construction
 

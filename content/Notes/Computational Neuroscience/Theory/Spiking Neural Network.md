@@ -31,4 +31,4 @@ $$
 
 Much harder to train since spiking is non differentiable so [[Gradient Descent]] is not viable.
 
-![[SNN.png]]
+[![SNN.png](../../../Attachments/SNN.png)](../../../Attachments/SNN.png)

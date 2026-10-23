@@ -20,6 +20,6 @@ $$
 S(x) = \frac{1}{1 + e^{-x}}
 $$
 
-![[sigFunction.png]]
+[![sigFunction.png](../../Attachments/sigFunction.png)](../../Attachments/sigFunction.png)
 
 Also usefull for anything involving probabilities, since it maps any input to a value between 0 and 1. Not exactly like [[Softmax]], but similar idea.

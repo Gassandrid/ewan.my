@@ -94,7 +94,7 @@ $$
 \frac{\pi}{3} \ln(2) - \frac{\pi}{3} \ln(1) = \frac{\pi}{3} \ln (2)
 $$
 
-![[Screenshot 2024-10-07 at 3.28.35 PM.png]]
+[![Screenshot 2024-10-07 at 3.28.35 PM.png](../../../Attachments/Screenshot%202024-10-07%20at%203.28.35%20PM.png)](../../../Attachments/Screenshot%202024-10-07%20at%203.28.35%20PM.png)
 
 ## Anohter One
 
@@ -110,11 +110,11 @@ https://www.desmos.com/3d/lxvpnp7b5e
 
 Set 2 of the variables equal to 0
 
-![[Screenshot 2024-10-07 at 3.32.29 PM.png]]
+[![Screenshot 2024-10-07 at 3.32.29 PM.png](../../../Attachments/Screenshot%202024-10-07%20at%203.32.29%20PM.png)](../../../Attachments/Screenshot%202024-10-07%20at%203.32.29%20PM.png)
 
 bringing into 2d
 
-![[Screenshot 2024-10-07 at 3.34.48 PM.png]]
+[![Screenshot 2024-10-07 at 3.34.48 PM.png](../../../Attachments/Screenshot%202024-10-07%20at%203.34.48%20PM.png)](../../../Attachments/Screenshot%202024-10-07%20at%203.34.48%20PM.png)
 
 setting up the integral
 

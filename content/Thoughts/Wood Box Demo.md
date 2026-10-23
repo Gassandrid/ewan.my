@@ -17,4 +17,4 @@ The wood box demo serves as a chassis test, as visual appeal isn't the biggest p
 
 ---
 
-![[IMG_2276.jpeg]]
+[![IMG_2276.jpeg](../Attachments/IMG_2276.jpeg)](../Attachments/IMG_2276.jpeg)

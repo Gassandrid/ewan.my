@@ -16,4 +16,4 @@ progress:
 status: done
 series: "[[The Licanius Trilogy]]"
 ---
-![[lightAllFalls.png]]
+[![lightAllFalls.png](../../Attachments/lightAllFalls.png)](../../Attachments/lightAllFalls.png)

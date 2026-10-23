@@ -34,4 +34,4 @@ updated: 2025-12-25
 
 ### Nye Religion Basics
 
-![[Nye_ReligionSomeBasics.pdf]]
+[Nye_ReligionSomeBasics.pdf](Material/Nye_ReligionSomeBasics.pdf)

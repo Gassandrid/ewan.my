@@ -31,7 +31,7 @@ People use different strategies for understanding human behavior:
 2. Even when we notice patterns, there may be multiple explanations
 3. Confidence in our intuitions does not mean they are correct
 
-![[Pasted image 20250828115516.png]]
+[![Pasted image 20250828115516.png](../../Attachments/Pasted%20image%2020250828115516.png)](../../Attachments/Pasted%20image%2020250828115516.png)
 
 ---
 
@@ -66,7 +66,7 @@ Biases are systematic errors in thinking that affect the decisions and judgments
 
 Confirmation bias is simply defined as the tendancy for people to favor information that confirms their preexisting beliefs or hypotheses.
 
-![[Screenshot 2025-08-28 at 12.19.20 PM.png]]
+[![Screenshot 2025-08-28 at 12.19.20 PM.png](../../Attachments/Screenshot%202025-08-28%20at%2012.19.20%20PM.png)](../../Attachments/Screenshot%202025-08-28%20at%2012.19.20%20PM.png)
 
 ### Overconfidence Bias
 
@@ -74,7 +74,7 @@ This is the tendency to be more confident than correct - to overestimate the acc
 
 A perfect example of this is the Titanic, where the ship was said to be "unsinkable", and the crew were overconfident in their ability to handle any situation.
 
-![[Pasted image 20250828122258.png]]
+[![Pasted image 20250828122258.png](../../Attachments/Pasted%20image%2020250828122258.png)](../../Attachments/Pasted%20image%2020250828122258.png)
 
 ### How Do We Overcome These Challenges?
 

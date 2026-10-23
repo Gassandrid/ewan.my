@@ -105,7 +105,7 @@ A famous plot is that of the **parameter space**. There is a quite popular [[2sw
 
 _see "[Double Pendulums are Chaos'nt](https://www.youtube.com/watch?v=dtjb2OhEQcU)" for a great visual_
 
-![[Screenshot 2026-01-27 at 10.33.44 AM.png]]
+[![Screenshot 2026-01-27 at 10.33.44 AM.png](../../Attachments/Screenshot%202026-01-27%20at%2010.33.44%20AM.png)](../../Attachments/Screenshot%202026-01-27%20at%2010.33.44%20AM.png)
 
 ---
 
@@ -209,6 +209,6 @@ Try different param values and see how they change the plot:
 > \ddot{\theta} = \underbrace{ -c \dot{\theta} }_{ \text{friction} } - \underbrace{ \sin \theta }_{ \text{gravity} } + \underbrace{ \rho \sin t }_{ \text{forcing} }
 > $$
 >
-> ![[pendulumThetas.png]]
+> [![pendulumThetas.png](../../Attachments/pendulumThetas.png)](../../Attachments/pendulumThetas.png)
 
 Parameters are $c, \rho$

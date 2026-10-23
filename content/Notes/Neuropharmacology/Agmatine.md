@@ -29,7 +29,7 @@ tags:
   - health/supplements
 related: []
 date: 2026-02-01T11:39:49-05:00
-updated: 2026-06-12T13:08:16-07:00
+updated: 2026-10-12T21:11:48-04:00
 targets:
   - "[[NMDA Receptor]]"
   - "[[imidazoline receptor]]"

@@ -1,6 +1,6 @@
 ---
 date: 2026-03-17T10:12:37-04:00
-updated: 2026-03-17T11:18:43-04:00
+updated: 2026-10-13T15:26:09-04:00
 class:
   - note
   - lecture
@@ -56,7 +56,7 @@ $$
 \dots K_{\infty}
 $$
 
-![[CantorSetExcalidraw.png]]
+[![CantorSetExcalidraw.png](../../Attachments/CantorSetExcalidraw.png)](../../Attachments/CantorSetExcalidraw.png)
 
 1. What is "length" of $K_{\infty}$ ?
 
@@ -78,7 +78,7 @@ you might think so, given that $K_{\infty}$ is [[Uncountably Infinite]]. BUT the
 
 > A set is **uncountable** if it is not countable.
 
-![[Pasted image 20260317110459.png]]
+[![Pasted image 20260317110459.png](../../Attachments/Pasted%20image%2020260317110459.png)](../../Attachments/Pasted%20image%2020260317110459.png)
 
 ---
 

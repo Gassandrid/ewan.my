@@ -18,7 +18,7 @@ An adjacency list, like an [[Adjacency Matrix]], is a way of representing a grap
 
 Once again consider that one [[Graphs#^4ae3bd|undirected graph example]], we can represent this as a **[[Adjacency List]]** with the following:
 
-![[Screenshot 2025-09-02 at 10.21.16 AM.png]]
+[![Screenshot 2025-09-02 at 10.21.16 AM.png](../../Attachments/Screenshot%202025-09-02%20at%2010.21.16%20AM.png)](../../Attachments/Screenshot%202025-09-02%20at%2010.21.16%20AM.png)
 
 Where it is defined as follows:
 

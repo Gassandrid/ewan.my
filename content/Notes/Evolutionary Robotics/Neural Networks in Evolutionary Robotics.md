@@ -32,7 +32,7 @@ Few terms to introduce:
 
 In more standard machine learning, we just refer to these as "neurons" and "connections".
 
-![[BraitenbergNeurons.png]]
+[![BraitenbergNeurons.png](../../Attachments/BraitenbergNeurons.png)](../../Attachments/BraitenbergNeurons.png)
 
 In the case of the **Braitenberg** vehicles, we had 4 neurons, two inputs and two outputs. There were no "deep" layers or connections, and all the connections did was "criss cross" the inputs and outputs with a particilar weight.
 
@@ -49,7 +49,7 @@ We then apply the activation function to the weighted sum of inputs plus bias to
 
 This is were things get a bit more novel. In the case of the **Braitenberg** vehicles, the activation function was simply **linear** - the more input you had, the more output you got. However, in more complex neural networks, we often use non-linear activation functions to introduce complexity and allow the network to learn more intricate patterns.
 
-![[ActFunctionsRobotics.png]]
+[![ActFunctionsRobotics.png](../../Attachments/ActFunctionsRobotics.png)](../../Attachments/ActFunctionsRobotics.png)
 
 ---
 
@@ -57,7 +57,7 @@ This is were things get a bit more novel. In the case of the **Braitenberg** veh
 
 The most basic example is those of the logic gates, with two inputs and one output. By adjusting the weights and biases, we can create networks that behave like AND, OR, and NOT gates.
 
-![[LogicGateNetwork.png]]
+[![LogicGateNetwork.png](../../Attachments/LogicGateNetwork.png)](../../Attachments/LogicGateNetwork.png)
 
 The best way to think about these shallow networks is as a linear "fold", where one side is classified as a 0 and the other as a 1. It is quite literally just a line drawn on a 2D plane at this scale.
 
@@ -65,7 +65,7 @@ The best way to think about these shallow networks is as a linear "fold", where 
 
 If you think about the plot of the two inputs on the 2d plane, you can imageine the line that would be drawn to classify all the other gates. But, in this case, there is no single line you can draw to seperate the 1s from the 0s. This is why we need deeper networks with more layers to solve more complex problems.
 
-![[XorExcalidrawShallowNetwork.png]]
+[![XorExcalidrawShallowNetwork.png](../../Attachments/XorExcalidrawShallowNetwork.png)](../../Attachments/XorExcalidrawShallowNetwork.png)
 
 ---
 
@@ -81,4 +81,4 @@ Unfortunately backpropagation is prone to a new issue: **overfitting**. This is 
 
 This usually happens when the network starts trying to learn the noise of the data, rather than the latent distribution. There are some techniques using bayesian probability theory called [[Variational Inference]] that treat noise as a probability distribution to be modeled, rather than a set of points to be learned.
 
-![[overfititngEvo.png]]
+[![overfititngEvo.png](../../Attachments/overfititngEvo.png)](../../Attachments/overfititngEvo.png)

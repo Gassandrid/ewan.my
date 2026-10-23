@@ -10,7 +10,7 @@ updated: 2025-09-22
 ---
 In Layman's terms, the characteristic function is just the Fourier transform of a probability distribution. It provides a way to uniquely describe the distribution of a random variable.
 
-![[Pasted image 20250922132141.png]]
+[![Pasted image 20250922132141.png](../../Attachments/Pasted%20image%2020250922132141.png)](../../Attachments/Pasted%20image%2020250922132141.png)
 
 ---
 

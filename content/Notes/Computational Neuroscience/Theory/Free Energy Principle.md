@@ -27,7 +27,7 @@ The **Free Energy Principle** is a mathematical principle borrowed from _informa
 
 The "free energy" quantity can be though of as an **Isomorphism** to the idea of "Entropy" as a quantity in Information Theory, in combination with approaches from [[Bayesian Inference]].
 
-![[FreeEnergyDiagram.png]]
+[![FreeEnergyDiagram.png](../../../Attachments/FreeEnergyDiagram.png)](../../../Attachments/FreeEnergyDiagram.png)
 
 ---
 
