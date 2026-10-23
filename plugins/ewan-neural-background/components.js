@@ -1,18 +1,22 @@
 import { h } from "preact"
 import { createNetwork, stepNetwork } from "./network.js"
+import { createVaultNetwork } from "./vault.js"
 
 const CSS = `
 #neural-canvas{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1;opacity:var(--neural-ink,.78);mask-image:linear-gradient(90deg,#000 0%,#000b 17%,#0006 29%,#0004 36%,#0004 64%,#0006 71%,#000b 83%,#000 100%)}
 #neural-canvas[data-neural-state="off"],#neural-canvas[data-neural-state="waiting"]{visibility:hidden;opacity:0}
+#neural-label{position:fixed;left:0;top:0;z-index:40;pointer-events:none;max-width:15rem;padding:.1rem .3rem;font:.72rem/1.4 var(--bodyFont);color:var(--gray);background:color-mix(in srgb,var(--light) 86%,transparent);opacity:0;transition:opacity .12s}
+#neural-label[data-visible]{opacity:1}
+#neural-label b{display:block;font-weight:600;color:var(--dark)}
 #neural-controls{position:fixed;right:1rem;bottom:1rem;z-index:50;color:var(--darkgray);font: .75rem var(--bodyFont)}
 #neural-controls>summary{list-style:none;cursor:pointer;display:flex;gap:.45rem;align-items:center;padding:.42rem .65rem;background:var(--light);border:1px solid var(--lightgray);border-radius:5px}
 #neural-controls>summary::-webkit-details-marker{display:none}
-#neural-controls>summary::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--pine)}
+#neural-controls>summary::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--darkgray)}
 #neural-controls[open]>summary{border-color:var(--gray)}
 #neural-controls .neural-panel{position:absolute;right:0;bottom:2.7rem;width:min(310px,calc(100vw - 2rem));box-sizing:border-box;padding:1rem;background:var(--light);border:1px solid var(--lightgray);border-radius:6px;box-shadow:0 5px 20px var(--highlight);max-height:70vh;overflow:auto}
 #neural-controls label{display:block;margin:.75rem 0;color:var(--darkgray)}
 #neural-controls label>span{display:flex;justify-content:space-between;gap:1rem}
-#neural-controls input,#neural-controls select{display:block;box-sizing:border-box;width:100%;margin-top:.4rem;accent-color:var(--pine);font:inherit}
+#neural-controls input,#neural-controls select{display:block;box-sizing:border-box;width:100%;margin-top:.4rem;accent-color:var(--darkgray);font:inherit}
 #neural-controls select{padding:.3rem;background:var(--light);color:var(--dark);border:1px solid var(--lightgray);border-radius:3px}
 #neural-controls .neural-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
 #neural-controls .neural-grid label{min-width:0}
@@ -25,10 +29,10 @@ const CSS = `
 #neural-controls button:hover{border-color:var(--secondary);color:var(--dark)}
 #neural-controls output{font-variant-numeric:tabular-nums;color:var(--darkgray);opacity:.85}
 #neural-controls :focus-visible{outline:2px solid var(--secondary);outline-offset:3px}
-@media print{#neural-canvas,#neural-controls{display:none}}
+@media print{#neural-canvas,#neural-controls,#neural-label{display:none}}
 `
 
-function neuralRuntime(create, step) {
+function neuralRuntime(create, step, createVault) {
   if (window.__ewanNeural) return
   const motion = matchMedia("(prefers-reduced-motion: reduce)")
   const compact = matchMedia("(max-width: 800px)")
@@ -44,9 +48,15 @@ function neuralRuntime(create, step) {
     }
   }
   let seed = freshSeed()
-  let layout = ["clusters", "layers", "branches"][seed % 3]
+  let layout = "vault"
   let parameters = null
   let ink = 0.8
+  // The vault network outlives SPA navigation: it keeps firing while the
+  // reader moves through the garden, and only the "you are here" mark moves.
+  let vaultIndex
+  let vaultRequest = null
+  let shared = null
+  let grown = ""
   const parameterFields = [
     ["drive", "Input current", 0, 1, 0.05, "Steady external drive toward the firing threshold"],
     ["coupling", "Recurrence", 0, 1.5, 0.05, "Strength of signals passed between neurons"],
@@ -80,14 +90,49 @@ function neuralRuntime(create, step) {
     current = null
     const canvas = document.getElementById("neural-canvas")
     if (!canvas) return
+    if (layout === "vault" && vaultIndex === undefined) {
+      vaultRequest ??= (
+        typeof fetchData !== "undefined" ? Promise.resolve(fetchData) : Promise.reject()
+      )
+        .then((data) => (vaultIndex = data && typeof data === "object" ? data : null))
+        .catch(() => (vaultIndex = null))
+      vaultRequest.then(() => {
+        if (canvas.isConnected && !current) mount(options)
+      })
+      return
+    }
     const low = compact.matches || (navigator.hardwareConcurrency || 4) <= 4
-    const network = create({
-      count: low ? 80 : 112,
+    const count = low ? 80 : 112
+    const key = layout + "|" + seed + "|" + count
+    let network = shared?.key === key ? shared.network : null
+    if (!network && layout === "vault" && vaultIndex) {
+      const built = createVault(create, vaultIndex, {
+        count,
+        seed,
+        parameters: parameters ?? undefined,
+        aspect: innerWidth / Math.max(1, innerHeight),
+      })
+      if (!built.fallback) shared = { key, network: (network = built) }
+    }
+    network ??= create({
+      count,
       seed,
-      layout,
+      layout: layout === "vault" ? "clusters" : layout,
       parameters: parameters ?? undefined,
     })
     parameters = network.parameters
+    const slug = document.body.dataset.slug || ""
+    const here = (() => {
+      if (!network.nodes[0]?.slug) return -1
+      const bases = [slug, ...(vaultIndex?.[slug]?.links || [])].map((link) =>
+        String(link).split("/").pop(),
+      )
+      for (const base of bases) {
+        const found = network.nodes.findIndex((node) => node.slug.split("/").pop() === base)
+        if (found >= 0) return found
+      }
+      return -1
+    })()
     // A fresh per-page scope owns every renderer, timer, observer and control.
     const controller = new AbortController()
     const signal = controller.signal
@@ -98,7 +143,7 @@ function neuralRuntime(create, step) {
     // input's blur/change event would swallow the click on the next control.
     if (!retainedControls)
       controls.innerHTML =
-        '<summary aria-label="Neural background settings">Network</summary><div class="neural-panel"><div class="neural-grid"><label>Motion<select data-motion aria-label="Background motion"><option value="auto">Auto</option><option value="on">On</option><option value="off">Off</option></select></label><label>Geometry<select data-layout aria-label="Network geometry"><option value="clusters">Islands</option><option value="layers">Layers</option><option value="branches">Branches</option></select></label></div><div class="neural-seed"><label>Seed<input data-seed aria-label="Network seed" type="number" min="0" max="4294967295" step="1"></label><button type="button" data-new-network>New network</button></div><div class="neural-grid">' +
+        '<summary aria-label="Neural background settings">Network</summary><div class="neural-panel"><div class="neural-grid"><label>Motion<select data-motion aria-label="Background motion"><option value="auto">Auto</option><option value="on">On</option><option value="off">Off</option></select></label><label>Geometry<select data-layout aria-label="Network geometry"><option value="vault">Vault</option><option value="clusters">Islands</option><option value="layers">Layers</option><option value="branches">Branches</option></select></label></div><div class="neural-seed"><label>Seed<input data-seed aria-label="Network seed" type="number" min="0" max="4294967295" step="1"></label><button type="button" data-new-network>New network</button></div><div class="neural-grid">' +
         parameterFields
           .map(
             ([key, label, min, max, stepSize, hint]) =>
@@ -124,6 +169,10 @@ function neuralRuntime(create, step) {
         '<label><span>Ink<output data-ink-value></output></span><input data-ink aria-label="Background ink" type="range" min="0.3" max="1" step="0.05"></label></div></div>'
     if (!retainedControls) document.body.appendChild(controls)
     controls.open = Boolean(options.keepOpen)
+    const label = document.getElementById("neural-label") ?? document.createElement("div")
+    label.id = "neural-label"
+    label.setAttribute("aria-hidden", "true")
+    if (!label.isConnected) document.body.appendChild(label)
     const summary = controls.querySelector("summary")
     const select = controls.querySelector("[data-motion]")
     const geometryInput = controls.querySelector("[data-layout]")
@@ -217,7 +266,8 @@ function neuralRuntime(create, step) {
     let height = 0
     let paths = []
     let positions = []
-    let palette = []
+    let shapes = []
+    let inkColor = "#000"
     let raf = 0
     let pending = 0
     let last = 0
@@ -229,8 +279,12 @@ function neuralRuntime(create, step) {
     let overBudget = false
     let running = false
     let theme
+    let hovered = -1
+    let growStart = 0
+    let growing = grown !== key
+    let poke = here
     canvas.dataset.neuralSeed = String(seed)
-    canvas.dataset.neuralLayout = layout
+    canvas.dataset.neuralLayout = network.layout
     canvas.dataset.neuralTopology = network.edges
       .reduce(
         (hash, edge) => Math.imul(hash ^ ((edge.from + 1) * 257 + edge.to), 16777619) >>> 0,
@@ -241,29 +295,153 @@ function neuralRuntime(create, step) {
     canvas.dataset.neuralEdges = String(network.edges.length)
     canvas.dataset.neuralPacketCapacity = String(network.edges.length * 4)
     canvas.dataset.neuralFrames = "0"
-    canvas.dataset.neuralSpikes = "0"
-    canvas.dataset.neuralPending = "0"
-    canvas.dataset.neuralDropped = "0"
+    canvas.dataset.neuralSpikes = String(network.spikes)
+    canvas.dataset.neuralPending = String(network.pending)
+    canvas.dataset.neuralDropped = String(network.dropped)
     canvas.dataset.neuralState = "waiting"
     canvas.dataset.neuralQuality = "off"
-    canvas.dataset.neuralSimTime = "0"
+    canvas.dataset.neuralSimTime = network.time.toFixed(3)
     canvas.dataset.neuralFps = String(low ? 24 : 30)
     delete canvas.dataset.neuralDrawMs
     delete canvas.dataset.neuralFailure
 
+    // Renderer-side history: when each synapse last delivered, the packets
+    // seen last frame, and how often a delivery preceded a postsynaptic spike.
+    const previous = new Float32Array(network.edges.length * 4)
+    network.edges.forEach((edge, i) => previous.set(edge.packets, i * 4))
+    const arrived = new Float64Array(network.edges.length).fill(-100)
+    const credit = (network.credit ??= new Float32Array(network.edges.length))
+    const incoming = network.nodes.map(() => [])
+    network.edges.forEach((edge, i) => incoming[edge.to].push(i))
+
+    // Seeded scribble noise, so the hand-drawn wobble is stable across frames.
+    function noise(k) {
+      let x = Math.imul((k + seed) ^ 0x5bd1e995, 0x27d4eb2d)
+      x ^= x >>> 15
+      x = Math.imul(x, 0x165667b1)
+      x ^= x >>> 13
+      return (x >>> 0) / 4294967296
+    }
+    // A polyline with cumulative length, traced in part for pen-like reveals.
+    function polyline(points) {
+      const pts = Float32Array.from(points)
+      const cum = new Float32Array(pts.length / 2)
+      for (let i = 1; i < cum.length; i++)
+        cum[i] =
+          cum[i - 1] + Math.hypot(pts[i * 2] - pts[i * 2 - 2], pts[i * 2 + 1] - pts[i * 2 - 1])
+      return { pts, cum, len: cum[cum.length - 1] || 1 }
+    }
+    function trace(c, line, a = 0, b = 1, ox = 0, oy = 0) {
+      const { pts, cum, len } = line
+      const from = a * len
+      const to = b * len
+      if (to <= from) return
+      let started = false
+      for (let i = 1; i < cum.length; i++) {
+        if (cum[i] < from) continue
+        const x0 = pts[i * 2 - 2],
+          y0 = pts[i * 2 - 1],
+          x1 = pts[i * 2],
+          y1 = pts[i * 2 + 1]
+        const span = cum[i] - cum[i - 1] || 1
+        if (!started) {
+          const u = Math.max(0, (from - cum[i - 1]) / span)
+          c.moveTo(ox + x0 + (x1 - x0) * u, oy + y0 + (y1 - y0) * u)
+          started = true
+        }
+        if (cum[i] >= to) {
+          const u = (to - cum[i - 1]) / span
+          c.lineTo(ox + x0 + (x1 - x0) * u, oy + y0 + (y1 - y0) * u)
+          return
+        }
+        c.lineTo(ox + x1, oy + y1)
+      }
+    }
+    function traceAll(c, lines, p, ox, oy) {
+      const total = lines.reduce((sum, line) => sum + line.len, 0)
+      let budget = p * total
+      for (const line of lines) {
+        if (budget <= 0) return
+        trace(c, line, 0, Math.min(1, budget / line.len), ox, oy)
+        budget -= line.len
+      }
+    }
+    // A rough loop that overshoots its start, as a pen does.
+    function scribble(radius, k, wobble = 0.1) {
+      const points = []
+      const start = noise(k) * Math.PI * 2
+      const steps = 14
+      for (let i = 0; i <= steps + 2; i++) {
+        const angle = start + (i / steps) * Math.PI * 2
+        const r =
+          radius * (1 + Math.sin(angle * 3 + noise(k + 1) * 6) * wobble + (i > steps ? 0.12 : 0))
+        points.push(Math.cos(angle) * r, Math.sin(angle) * r)
+      }
+      return polyline(points)
+    }
+    // Pyramidal cells read as triangles with an apical dendrite; interneurons
+    // as round somata with short multipolar stubs. The shape alone says E or I.
+    function soma(node, i) {
+      const size = (low ? 2.3 : 2.6) + (node.hub ?? 0.35) * 2.6
+      const k = i * 31
+      if (node.inhibitory) {
+        const lines = [scribble(size * 0.95, k, 0.08)]
+        for (let s = 0; s < 3; s++) {
+          const angle = noise(k + 5 + s) * Math.PI * 2
+          lines.push(
+            polyline([
+              Math.cos(angle) * size,
+              Math.sin(angle) * size,
+              Math.cos(angle + 0.2) * size * 1.9,
+              Math.sin(angle + 0.2) * size * 1.9,
+            ]),
+          )
+        }
+        return { size, lines }
+      }
+      const tilt = (noise(k + 2) - 0.5) * 0.6 - Math.PI / 2
+      const corners = [0, 1, 2, 0, 1].map((n) => {
+        const angle = tilt + (n * Math.PI * 2) / 3
+        const r = size * 1.3 * (0.92 + noise(k + n + 3) * 0.16)
+        return [Math.cos(angle) * r, Math.sin(angle) * r]
+      })
+      const loop = []
+      corners.slice(0, 4).forEach(([x, y]) => loop.push(x, y))
+      // Overshoot a little past the first corner instead of closing cleanly.
+      loop.push(
+        corners[0][0] + (corners[4][0] - corners[0][0]) * 0.22,
+        corners[0][1] + (corners[4][1] - corners[0][1]) * 0.22,
+      )
+      const apex = corners[0]
+      const bend = (noise(k + 9) - 0.5) * 0.5
+      return {
+        size,
+        lines: [
+          polyline(loop),
+          polyline([
+            apex[0],
+            apex[1],
+            apex[0] * 1.9 + bend * size,
+            apex[1] * 1.9,
+            apex[0] * 2.6 - bend * size,
+            apex[1] * 2.7,
+          ]),
+        ],
+      }
+    }
+    function rays(node, i) {
+      const k = i * 53 + 7
+      const total = node.inhibitory ? 7 : 9
+      return Array.from({ length: total }, (_, n) => [
+        ((n + (noise(k + n) - 0.5) * 0.45) / total) * Math.PI * 2,
+        0.7 + noise(k + n + 40) * 0.5,
+      ])
+    }
+
     function colors() {
       const style = getComputedStyle(document.documentElement)
-      palette = ["--pine", "--rust", "--slate", "--secondary", "--dark"].map(
-        (name) =>
-          style.getPropertyValue(name).trim() || style.getPropertyValue("--darkgray").trim(),
-      )
-    }
-    function point(path, t) {
-      const u = 1 - t
-      return [
-        u * u * path.x + 2 * u * t * path.cx + t * t * path.tx,
-        u * u * path.y + 2 * u * t * path.cy + t * t * path.ty,
-      ]
+      inkColor =
+        style.getPropertyValue("--dark").trim() || style.getPropertyValue("--darkgray").trim()
     }
     function resize() {
       if (!ctx || !baseCtx || destroyed || !running) return false
@@ -283,17 +461,32 @@ function neuralRuntime(create, step) {
         baseCtx.setTransform(ratio, 0, 0, ratio, 0, 0)
         canvas.dataset.neuralDpr = String(ratio)
         positions = network.nodes.map((node) => [node.x * width, node.y * height])
-        paths = network.edges.map((edge) => {
+        shapes = network.nodes.map((node, i) => ({ ...soma(node, i), rays: rays(node, i) }))
+        paths = network.edges.map((edge, i) => {
           const [x, y] = positions[edge.from]
           const [tx, ty] = positions[edge.to]
-          return {
-            x,
-            y,
-            tx,
-            ty,
-            cx: (x + tx) / 2 - (ty - y) * edge.bend,
-            cy: (y + ty) / 2 + (tx - x) * edge.bend,
+          const cx = (x + tx) / 2 - (ty - y) * edge.bend
+          const cy = (y + ty) / 2 + (tx - x) * edge.bend
+          const length = Math.hypot(tx - x, ty - y)
+          const steps = Math.max(6, Math.ceil(length / 14))
+          const amplitude = Math.min(1.6, length * 0.012)
+          const phase = noise(i * 13) * 6.28
+          const points = []
+          for (let s = 0; s <= steps; s++) {
+            const t = s / steps
+            const u = 1 - t
+            const px = u * u * x + 2 * u * t * cx + t * t * tx
+            const py = u * u * y + 2 * u * t * cy + t * t * ty
+            const dx = 2 * u * (cx - x) + 2 * t * (tx - cx)
+            const dy = 2 * u * (cy - y) + 2 * t * (ty - cy)
+            const d = Math.hypot(dx, dy) || 1
+            const offset =
+              amplitude *
+              Math.sin(Math.PI * t) *
+              (Math.sin(t * 7 + phase) * 0.6 + Math.sin(t * 17 + phase * 2) * 0.4)
+            points.push(px - (dy / d) * offset, py + (dx / d) * offset)
           }
+          return polyline(points)
         })
         cacheStructure()
         return true
@@ -305,88 +498,246 @@ function neuralRuntime(create, step) {
     function cacheStructure() {
       if (!baseCtx) return
       baseCtx.clearRect(0, 0, width, height)
-      baseCtx.lineWidth = 0.65
+      baseCtx.strokeStyle = inkColor
+      baseCtx.lineCap = baseCtx.lineJoin = "round"
+      baseCtx.lineWidth = 0.5
       network.edges.forEach((edge, i) => {
-        const p = paths[i]
-        if (!p) return
-        baseCtx.strokeStyle = palette[edge.weight < 0 ? 1 : 0]
-        baseCtx.globalAlpha = edge.weight < 0 ? 0.1 : 0.16
+        if (!paths[i]) return
+        baseCtx.globalAlpha = edge.callosal ? 0.035 : 0.065
         baseCtx.beginPath()
-        baseCtx.moveTo(p.x, p.y)
-        baseCtx.quadraticCurveTo(p.cx, p.cy, p.tx, p.ty)
+        trace(baseCtx, paths[i])
         baseCtx.stroke()
       })
+      baseCtx.lineWidth = 0.75
       network.nodes.forEach((node, i) => {
         const [x, y] = positions[i]
-        baseCtx.fillStyle = palette[node.inhibitory ? 1 : 0]
-        baseCtx.globalAlpha = 0.46
+        baseCtx.globalAlpha = 0.34 + (node.hub ?? 0.3) * 0.3
         baseCtx.beginPath()
-        baseCtx.arc(x, y, node.inhibitory ? 1.7 : 1.35, 0, Math.PI * 2)
-        baseCtx.fill()
-        baseCtx.globalAlpha = 0.13
-        baseCtx.beginPath()
-        baseCtx.arc(x, y, 3.3, 0, Math.PI * 2)
-        baseCtx.fill()
+        traceAll(baseCtx, shapes[i].lines, 1, x, y)
+        baseCtx.stroke()
       })
+      if (here >= 0) {
+        const [x, y] = positions[here]
+        baseCtx.globalAlpha = 0.5
+        baseCtx.lineWidth = 0.7
+        baseCtx.beginPath()
+        trace(baseCtx, scribble(shapes[here].size + 7, here * 7, 0.06), 0, 1, x, y)
+        baseCtx.stroke()
+      }
       baseCtx.globalAlpha = 1
     }
+    // Growth: the field is sketched outward from the current note, hop by hop
+    // along its links, somata first and then the fibres between them.
+    let births = []
+    let growEnd = 0
+    function planGrowth() {
+      const root =
+        here >= 0
+          ? here
+          : network.nodes.reduce(
+              (best, node, i) => ((node.hub ?? 0) > (network.nodes[best].hub ?? 0) ? i : best),
+              0,
+            )
+      const neighbours = network.nodes.map(() => [])
+      network.edges.forEach((edge) => {
+        neighbours[edge.from].push(edge.to)
+        neighbours[edge.to].push(edge.from)
+      })
+      const hops = new Array(network.nodes.length).fill(-1)
+      hops[root] = 0
+      const queue = [root]
+      for (let q = 0; q < queue.length; q++)
+        for (const next of neighbours[queue[q]])
+          if (hops[next] < 0) {
+            hops[next] = hops[queue[q]] + 1
+            queue.push(next)
+          }
+      const deepest = Math.max(...hops) + 1
+      const spread = Math.min(0.38, 2.2 / deepest)
+      births = hops.map(
+        (hop, i) => 0.15 + (hop < 0 ? deepest : hop) * spread + noise(i * 3 + 1) * spread * 0.9,
+      )
+      growEnd = Math.max(...births) + 1.6
+    }
+    function renderGrowth(elapsed) {
+      ctx.clearRect(0, 0, width, height)
+      ctx.strokeStyle = inkColor
+      ctx.lineCap = ctx.lineJoin = "round"
+      ctx.lineWidth = 0.5
+      network.edges.forEach((edge, i) => {
+        const start = Math.max(births[edge.from], births[edge.to]) + 0.15
+        const p = Math.min(1, (elapsed - start) / 0.55)
+        if (p <= 0) return
+        const settle = Math.min(1, Math.max(0, (elapsed - start - 0.55) / 1))
+        const rest = edge.callosal ? 0.035 : 0.065
+        ctx.globalAlpha = rest + (0.28 - rest) * (1 - settle)
+        ctx.beginPath()
+        trace(ctx, paths[i], 0, p)
+        ctx.stroke()
+      })
+      ctx.lineWidth = 0.75
+      network.nodes.forEach((node, i) => {
+        const p = Math.min(1, (elapsed - births[i]) / 0.35)
+        if (p <= 0) return
+        const [x, y] = positions[i]
+        ctx.globalAlpha = 0.34 + (node.hub ?? 0.3) * 0.3 + (1 - p) * 0.3
+        ctx.beginPath()
+        traceAll(ctx, shapes[i].lines, p, x, y)
+        ctx.stroke()
+      })
+      if (here >= 0 && elapsed > births[here] + 0.2) {
+        const [x, y] = positions[here]
+        ctx.globalAlpha = 0.5
+        ctx.lineWidth = 0.7
+        ctx.beginPath()
+        trace(
+          ctx,
+          scribble(shapes[here].size + 7, here * 7, 0.06),
+          0,
+          Math.min(1, (elapsed - births[here] - 0.2) / 0.5),
+          x,
+          y,
+        )
+        ctx.stroke()
+      }
+      ctx.globalAlpha = 1
+    }
+    // The synapse glyph from circuit diagrams: an arrowhead for excitation,
+    // a flat bar for inhibition, drawn where the fibre meets its target.
+    function terminal(i, alpha) {
+      const edge = network.edges[i]
+      const { pts } = paths[i]
+      const n = pts.length
+      const dx = pts[n - 2] - pts[n - 4]
+      const dy = pts[n - 1] - pts[n - 3]
+      const d = Math.hypot(dx, dy) || 1
+      const ux = dx / d,
+        uy = dy / d
+      const back = shapes[edge.to].size + 3.5
+      const x = pts[n - 2] - ux * back
+      const y = pts[n - 1] - uy * back
+      ctx.globalAlpha = alpha
+      ctx.setLineDash([])
+      ctx.beginPath()
+      if (edge.weight < 0) {
+        ctx.moveTo(x - uy * 2.6, y + ux * 2.6)
+        ctx.lineTo(x + uy * 2.6, y - ux * 2.6)
+      } else {
+        ctx.moveTo(x - ux * 3 - uy * 2, y - uy * 3 + ux * 2)
+        ctx.lineTo(x, y)
+        ctx.lineTo(x - ux * 3 + uy * 2, y - uy * 3 - ux * 2)
+      }
+      ctx.stroke()
+    }
+    const dashed = [3.2, 3.2]
+    const dotted = [0.9, 2.8]
     function render() {
       if (!ctx) return
+      const now = network.time
       ctx.clearRect(0, 0, width, height)
       ctx.globalAlpha = 1
       ctx.drawImage(base, 0, 0, width, height)
-      ctx.lineWidth = 1.1
-      ctx.lineCap = "round"
+      ctx.strokeStyle = inkColor
+      ctx.lineCap = ctx.lineJoin = "round"
+      ctx.lineWidth = 0.8
       for (let i = 0; i < network.edges.length; i++) {
         const edge = network.edges[i]
         const path = paths[i]
         if (!path) continue
-        ctx.strokeStyle = ctx.fillStyle = palette[edge.weight < 0 ? 1 : 0]
-        for (const remaining of edge.packets) {
-          if (remaining <= 0) continue
-          const t = Math.max(0, Math.min(1, 1 - remaining / edge.delay))
-          ctx.globalAlpha = 0.72
+        let head = -1
+        for (let slot = 0; slot < 4; slot++) {
+          const remaining = edge.packets[slot]
+          if (previous[i * 4 + slot] > 0 && remaining === 0) arrived[i] = now
+          previous[i * 4 + slot] = remaining
+          if (remaining > 0) head = Math.max(head, 1 - remaining / edge.delay)
+        }
+        const dash = edge.weight < 0 ? dotted : dashed
+        // In flight: the dashed fibre is drawn out from the presynaptic soma.
+        if (head > 0) {
+          ctx.setLineDash(dash)
+          ctx.lineDashOffset = 0
+          ctx.globalAlpha = edge.callosal ? 0.28 : 0.45
           ctx.beginPath()
-          for (let j = 0; j <= 4; j++) {
-            const [x, y] = point(path, Math.max(0, t - (4 - j) * 0.018))
-            if (j === 0) ctx.moveTo(x, y)
-            else ctx.lineTo(x, y)
-          }
+          trace(ctx, path, 0, head)
           ctx.stroke()
-          const [x, y] = point(path, t)
-          ctx.globalAlpha = 0.82
+        }
+        // Delivered: the trace is taken back up toward the target and fades.
+        const age = now - arrived[i]
+        if (age >= 0 && age < 0.6) {
+          const fade = 1 - age / 0.6
+          const tail = 1 - fade * fade
+          ctx.setLineDash(dash)
+          ctx.lineDashOffset = -tail * path.len
+          ctx.globalAlpha = (edge.callosal ? 0.28 : 0.45) * fade
           ctx.beginPath()
-          ctx.arc(x, y, 1.35, 0, Math.PI * 2)
-          ctx.fill()
+          trace(ctx, path, tail, 1)
+          ctx.stroke()
+          terminal(i, 0.7 * fade)
         }
       }
+      ctx.setLineDash([])
       network.nodes.forEach((node, i) => {
-        if (node.glow < 0.015) return
+        const age = now - node.lastSpike
+        if (age === 0) for (const e of incoming[i]) if (now - arrived[e] < 0.3) credit[e]++
+        if (i !== hovered && (age < 0 || age > 0.75)) return
         const [x, y] = positions[i]
-        const color = palette[node.inhibitory ? 1 : 0]
-        const age = 1 - node.glow
-        // A short luminous soma and expanding ring mark actual threshold
-        // crossings. No full-screen blur or accumulating trail buffer.
-        ctx.fillStyle = ctx.strokeStyle = color
-        ctx.globalAlpha = node.glow * 0.18
+        const shape = shapes[i]
+        const fade = Math.max(0, 1 - age / 0.75)
+        ctx.lineWidth = 0.95
+        ctx.globalAlpha = Math.max(i === hovered ? 0.75 : 0, 0.5 + fade * 0.45)
         ctx.beginPath()
-        ctx.arc(x, y, 8 + age * 6, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.globalAlpha = node.glow * 0.55
-        ctx.lineWidth = 0.85
-        ctx.beginPath()
-        ctx.arc(x, y, 3.5 + age * 12, 0, Math.PI * 2)
+        traceAll(ctx, shape.lines, 1, x, y)
         ctx.stroke()
-        ctx.globalAlpha = Math.min(1, node.glow * 1.8)
+        if (age < 0 || age > 0.75) return
+        ctx.lineWidth = 0.8
+        ctx.globalAlpha = 0.8 * Math.min(1, fade * 1.6)
         ctx.beginPath()
-        ctx.arc(x, y, 2 + node.glow * 2.2, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.fillStyle = palette[4]
-        ctx.globalAlpha = Math.pow(node.glow, 3) * 0.95
-        ctx.beginPath()
-        ctx.arc(x, y, 1.25, 0, Math.PI * 2)
-        ctx.fill()
+        if (node.inhibitory) {
+          // Inhibition clamps: a rough ring closes in, ticks pointing inward.
+          const k = 1 - Math.pow(1 - Math.min(1, age / 0.4), 3)
+          const r = shape.size + 11 - 7 * k
+          trace(ctx, scribble(r, i * 17, 0.07), 0, 1, x, y)
+          for (const [angle] of shape.rays) {
+            const cx = Math.cos(angle),
+              cy = Math.sin(angle)
+            ctx.moveTo(x + cx * r, y + cy * r)
+            ctx.lineTo(x + cx * (r - 2.6), y + cy * (r - 2.6))
+          }
+        } else {
+          // Excitation radiates: rays shoot out like a sun and then detach.
+          const out = 1 - Math.pow(1 - Math.min(1, age / 0.12), 2)
+          const lift = Math.max(0, Math.min(1, (age - 0.12) / 0.55))
+          const r0 = shape.size * 1.3 + 2.5
+          for (const [angle, reach] of shape.rays) {
+            const length = (5 + shape.size * 1.6) * reach
+            const cx = Math.cos(angle),
+              cy = Math.sin(angle)
+            const a = r0 + length * lift * 0.85
+            const b = r0 + length * out
+            if (b <= a) continue
+            ctx.moveTo(x + cx * a, y + cy * a)
+            ctx.lineTo(x + cx * b, y + cy * b)
+          }
+        }
+        ctx.stroke()
       })
+      // Hover reveals the neuron's wiring as a still, faint dashed sketch.
+      if (hovered >= 0) {
+        ctx.lineWidth = 0.6
+        ctx.globalAlpha = 0.24
+        ctx.setLineDash([2.5, 3])
+        ctx.beginPath()
+        network.edges.forEach((edge, i) => {
+          if (edge.from === hovered || edge.to === hovered) trace(ctx, paths[i])
+        })
+        ctx.stroke()
+        ctx.setLineDash([])
+        const [x, y] = positions[hovered]
+        ctx.globalAlpha = 0.6
+        ctx.beginPath()
+        trace(ctx, scribble(shapes[hovered].size + 6, hovered * 11, 0.08), 0, 1, x, y)
+        ctx.stroke()
+      }
       ctx.globalAlpha = 1
     }
     function animate(now) {
@@ -394,10 +745,28 @@ function neuralRuntime(create, step) {
       if (now - last >= interval - 0.5) {
         try {
           const started = performance.now()
-          const dt = last ? Math.min(0.05, (now - last) / 1000) : interval / 1000
-          last = now
-          step(network, dt, parameters)
-          render()
+          if (growing) {
+            growStart ||= now
+            const elapsed = (now - growStart) / 1000
+            renderGrowth(elapsed)
+            if (elapsed >= growEnd) {
+              growing = false
+              grown = key
+            }
+            last = now
+          } else {
+            const dt = last ? Math.min(0.05, (now - last) / 1000) : interval / 1000
+            last = now
+            // Arriving on a page stimulates its neuron; the wave follows its links.
+            if (poke >= 0) {
+              const node = network.nodes[poke]
+              node.refractory = 0
+              node.voltage = 1.3
+              poke = -1
+            }
+            step(network, dt, parameters)
+            render()
+          }
           totalCost += performance.now() - started
           frames++
           totalFrames++
@@ -425,6 +794,84 @@ function neuralRuntime(create, step) {
       // closed instead of leaving an exception-producing animation loop.
       if (running && !destroyed) raf = requestAnimationFrame(animate)
     }
+
+    // Hover and click reach neurons only over bare page background, never
+    // through text, links or controls.
+    const solid =
+      "a,button,input,select,textarea,summary,label,p,li,h1,h2,h3,h4,h5,h6,pre,code,table,img,svg,video,iframe,figure,blockquote,canvas:not(#neural-canvas),.katex,.search,.graph,.explorer,.toc,.backlinks,#neural-controls"
+    function setHover(index, event) {
+      if (index === hovered) {
+        if (index >= 0) placeLabel(event)
+        return
+      }
+      hovered = index
+      document.documentElement.style.cursor = index >= 0 ? "pointer" : ""
+      if (index < 0) {
+        label.removeAttribute("data-visible")
+        return
+      }
+      const node = network.nodes[index]
+      const partners = []
+      network.edges
+        .map((edge, i) => [credit[i], edge.from === index ? edge.to : edge.from, edge])
+        .filter(([score, , edge]) => score > 0 && (edge.from === index || edge.to === index))
+        .sort((a, b) => b[0] - a[0])
+        .forEach(([, other]) => {
+          const title = network.nodes[other].title
+          if (partners.length < 2 && !partners.includes(title)) partners.push(title)
+        })
+      label.replaceChildren()
+      const name = document.createElement("b")
+      name.textContent = node.title
+      label.append(name, "#" + node.tag)
+      if (partners.length)
+        label.append(document.createElement("br"), "fires with " + partners.join(", "))
+      label.setAttribute("data-visible", "")
+      placeLabel(event)
+      if (node.refractory <= 0) node.voltage = Math.max(node.voltage, 1.3)
+    }
+    function placeLabel() {
+      const [x, y] = positions[hovered]
+      const box = label.getBoundingClientRect()
+      const left =
+        x > width / 2 ? x - box.width - shapes[hovered].size - 12 : x + shapes[hovered].size + 12
+      label.style.transform =
+        "translate(" +
+        Math.round(Math.max(4, left)) +
+        "px," +
+        Math.round(Math.max(4, y - box.height / 2)) +
+        "px)"
+    }
+    document.addEventListener(
+      "pointermove",
+      (event) => {
+        if (!running || growing || !network.nodes[0]?.title || event.pointerType === "touch") return
+        if (event.target?.closest?.(solid)) return setHover(-1)
+        let best = -1,
+          distance = 14
+        positions.forEach(([x, y], i) => {
+          const d = Math.hypot(x - event.clientX, y - event.clientY)
+          if (d < distance) [best, distance] = [i, d]
+        })
+        setHover(best, event)
+      },
+      { passive: true, signal },
+    )
+    document.addEventListener(
+      "click",
+      (event) => {
+        if (hovered < 0 || event.target?.closest?.(solid)) return
+        const depth = (document.body.dataset.slug || "").split("/").length - 1
+        const url = new URL(
+          (depth ? "../".repeat(depth) : "./") + network.nodes[hovered].slug,
+          location.href,
+        )
+        setHover(-1)
+        window.spaNavigate ? window.spaNavigate(url) : location.assign(url)
+      },
+      { signal },
+    )
+
     function fail(error) {
       failed = true
       canvas.dataset.neuralFailure = error?.name || "RenderingError"
@@ -436,6 +883,7 @@ function neuralRuntime(create, step) {
       cancelAnimationFrame(raf)
       running = false
       last = 0
+      setHover(-1)
       const automatic = selectedMode === "auto"
       let reason = ""
       if (failed) reason = "Animation unavailable"
@@ -468,7 +916,14 @@ function neuralRuntime(create, step) {
           canvas.dataset.neuralState = "running"
           running = true
           colors()
-          if (resize()) raf = requestAnimationFrame(animate)
+          if (motion.matches) growing = false
+          if (resize()) {
+            if (growing) {
+              growStart = 0
+              planGrowth()
+            }
+            raf = requestAnimationFrame(animate)
+          }
         } catch (error) {
           fail(error)
         }
@@ -514,6 +969,8 @@ function neuralRuntime(create, step) {
       cancelAnimationFrame(raf)
       controller.abort()
       theme?.disconnect()
+      document.documentElement.style.cursor = ""
+      label.remove()
       if (!keepControls) controls.remove()
       canvas.dataset.neuralState = "destroyed"
       // Release backing stores promptly when a SPA route leaves this page.
@@ -546,6 +1003,6 @@ export function NeuralBackground() {
   }
   Component.displayName = "NeuralBackground"
   Component.css = CSS
-  Component.afterDOMLoaded = `(${neuralRuntime.toString()})(${createNetwork.toString()},${stepNetwork.toString()});`
+  Component.afterDOMLoaded = `(${neuralRuntime.toString()})(${createNetwork.toString()},${stepNetwork.toString()},${createVaultNetwork.toString()});`
   return Component
 }

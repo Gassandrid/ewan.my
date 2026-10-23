@@ -1,6 +1,8 @@
 import test from "node:test"
 import assert from "node:assert/strict"
+import { existsSync, readFileSync } from "node:fs"
 import { createNetwork, stepNetwork } from "./ewan-neural-background/network.js"
+import { createVaultNetwork } from "./ewan-neural-background/vault.js"
 
 const parameterBounds = {
   drive: [0, 1],
@@ -363,3 +365,87 @@ test("legacy numeric activity remains deterministic and zero input settles", () 
   assert.equal(quiet.pending, 0)
   assert.ok(active.spikes > 100)
 })
+
+// A small synthetic vault: three subject families with dense internal links,
+// a few cross-family links, untagged notes, and a dangling shortest-path link.
+function syntheticVault() {
+  const index = {}
+  const families = ["comp-neuro/brain", "math/chaos", "cs/ai"]
+  for (let f = 0; f < 3; f++)
+    for (let i = 0; i < 30; i++) {
+      const slug = `notes/${families[f].split("/")[0]}/note-${f}-${i}`
+      const links = [1, 2, 5].map((step) => `note-${f}-${(i + step) % 30}`)
+      if (i % 9 === 0)
+        links.push(`notes/${families[(f + 1) % 3].split("/")[0]}/note-${(f + 1) % 3}-${i}`)
+      links.push("missing-note")
+      index[slug] = {
+        slug,
+        title: `Note ${f}.${i}`,
+        links,
+        tags: i % 7 ? [families[f], "seed"] : [],
+      }
+    }
+  index["tags/math"] = { slug: "tags/math", title: "math", links: [], tags: [] }
+  return index
+}
+
+test("the vault network maps notes to neurons and links to bounded synapses", () => {
+  const index = syntheticVault()
+  const a = createVaultNetwork(createNetwork, index, { count: 64, seed: 11 })
+  assert.deepEqual(a, createVaultNetwork(createNetwork, index, { count: 64, seed: 11 }))
+  assert.equal(a.layout, "vault")
+  assert.equal(a.nodes.length, 64)
+  assert.equal(new Set(a.nodes.map((node) => node.slug)).size, 64)
+  assert.ok(a.nodes.every((node) => index[node.slug] && !node.slug.startsWith("tags/")))
+  assert.ok(a.modules.length >= 2 && a.modules.length <= 9)
+  const inhibitory = a.nodes.filter((node) => node.inhibitory).length
+  assert.ok(inhibitory > 0 && inhibitory <= Math.round(a.nodes.length * 0.2))
+  for (const node of a.nodes) {
+    assert.ok(node.x >= 0 && node.x <= 1 && node.y >= 0.025 && node.y <= 0.975)
+    if (!node.bridge) assert.ok(node.x <= 0.31 || node.x >= 0.69, "only bridges sit under the text")
+    assert.ok(node.outgoing.length >= 1 && node.outgoing.length <= 7)
+    assert.equal(new Set(node.outgoing.map((i) => a.edges[i].to)).size, node.outgoing.length)
+  }
+  const linked = (from, to) =>
+    index[from].links.some((link) => link.split("/").pop() === to.split("/").pop()) ||
+    index[to].links.some((link) => link.split("/").pop() === from.split("/").pop())
+  const real = a.edges.filter((edge) => linked(a.nodes[edge.from].slug, a.nodes[edge.to].slug))
+  assert.ok(real.length / a.edges.length > 0.8, "most synapses are wikilinks")
+  for (const edge of a.edges) {
+    assert.equal(edge.weight < 0, a.nodes[edge.from].inhibitory)
+    assert.ok(edge.delay >= 0.16 && edge.delay <= 0.7)
+    assert.ok(edge.packets.length * a.nodes[edge.from].refractoryPeriod > edge.delay)
+  }
+  run(a, 1800)
+  assertBounded(a)
+  assert.ok(a.spikes > a.nodes.length)
+})
+
+test("a vault too small to wire falls back to the procedural field", () => {
+  assert.equal(createVaultNetwork(createNetwork, {}, {}).fallback, true)
+  assert.equal(createVaultNetwork(createNetwork, null, {}).fallback, true)
+})
+
+const builtIndex = new URL("../public/static/contentIndex.json", import.meta.url)
+test(
+  "the built vault separates subjects into margins and keeps firing",
+  { skip: !existsSync(builtIndex) },
+  () => {
+    const index = JSON.parse(readFileSync(builtIndex, "utf8"))
+    for (const seed of [1, 7, 271828]) {
+      const field = createVaultNetwork(createNetwork, index, { seed })
+      const left = field.nodes.filter((node) => node.x < 0.5).length
+      assert.ok(
+        Math.abs(left - field.nodes.length / 2) < field.nodes.length * 0.2,
+        "balanced margins",
+      )
+      assert.ok(field.edges.filter((edge) => edge.callosal).length < field.edges.length * 0.2)
+      run(field, 1800)
+      assertBounded(field)
+      assert.ok(
+        new Set(field.nodes.filter((node) => node.lastSpike > 0).map((n) => n.slug)).size >
+          field.nodes.length * 0.9,
+      )
+    }
+  },
+)
