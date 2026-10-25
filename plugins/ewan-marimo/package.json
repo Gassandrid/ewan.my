@@ -18,7 +18,10 @@
     "displayName": "Ewan Marimo Pages",
     "description": "Generate Quartz pages from marimo notebooks.",
     "version": "0.1.0",
-    "category": "pageType",
+    "category": [
+      "pageType",
+      "emitter"
+    ],
     "defaultOrder": 20
   }
 }

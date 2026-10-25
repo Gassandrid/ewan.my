@@ -358,6 +358,12 @@
   }
 }
 
+// Build-time KaTeX stands in until the islands runtime defines <marimo-tex>.
+.marimo-tex-static + marimo-tex:not(:defined),
+.marimo-tex-static:has(+ marimo-tex:defined) {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marimo-loading-spinner {
     animation: none !important;

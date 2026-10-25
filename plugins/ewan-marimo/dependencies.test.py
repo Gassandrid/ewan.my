@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.dont_write_bytecode = True
-from dependencies import browser_dependencies, bootstrap_code
+from dependencies import browser_dependencies, bootstrap_code, build_requirements, warm_plan
 
 
 class BrowserDependencyTests(unittest.TestCase):
@@ -38,6 +38,18 @@ class BrowserDependencyTests(unittest.TestCase):
     def test_lotka_source_gets_both_missing_packages(self):
         source = Path('content/Notes/Modeling Complex Systems/lotka_volterra.marimo.py').read_text()
         self.assertEqual(browser_dependencies(source), ['wigglystuff==0.5.21', 'plotly==5.24.1'])
+
+    def test_build_environment_matches_the_browser_not_author_pins(self):
+        source = ('# /// script\n# dependencies = ["marimo==0.24.2", "numpy==2.4.6", "plotly==7.0.0", "anywidget==0.11.0"]\n# ///\n'
+                  'import json\nimport numpy\nimport plotly.graph_objects\nfrom sklearn import svm\nimport marimo')
+        self.assertEqual(build_requirements(source, '0.23.9'),
+                         ['marimo==0.23.9', 'plotly==7.0.0', 'numpy', 'scikit-learn', 'anywidget'])
+
+    def test_warm_plan_covers_every_notebook_with_one_pin_per_package(self):
+        plan = warm_plan(['import numpy\nfrom wigglystuff import Tangle', 'import scipy\nimport plotly.express',
+                          '# /// script\n# dependencies = ["wigglystuff==0.5.32"]\n# ///\nimport wigglystuff'])
+        self.assertEqual(plan['modules'], ['numpy', 'plotly', 'scipy', 'wigglystuff'])
+        self.assertEqual(sorted(plan['requirements']), ['plotly==5.24.1', 'wigglystuff==0.5.21'])
 
 if __name__ == '__main__':
     unittest.main()

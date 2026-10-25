@@ -6,7 +6,9 @@ export function prepareNotebookPreviews(html) {
   for (const notebook of html.querySelectorAll(".marimo-notebook-page")) {
     notebook.classList.replace("marimo-notebook-page", "marimo-notebook-preview")
     notebook
-      .querySelectorAll("script, .marimo-loading, marimo-cell-code, marimo-code-editor")
+      .querySelectorAll(
+        "script, .marimo-loading, marimo-cell-code, marimo-code-editor, .marimo-tex-static + marimo-tex",
+      )
       .forEach((el) => el.remove())
     // The generator's first non-reactive island is its startup indicator.
     const initializer = notebook.querySelector("marimo-island")

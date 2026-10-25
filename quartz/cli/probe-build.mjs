@@ -119,11 +119,14 @@ for (const [base, members] of baseMemberships) {
 const eigenfish = read("thoughts/eigenfish.html")
 assert.match(eigenfish, /data-marimo-runtime="0\.23\.9"/)
 assert.match(eigenfish, /eigenfish-figure/)
-// Controls are created by browser Python; the site build exports code only.
+// The build paints controls and figures; browser Python reruns every cell.
 assert.match(eigenfish, /<marimo-cell-code\b/)
 assert.match(eigenfish, /mo\.ui\.matrix\(/)
 assert.match(eigenfish, /data-reactive="true"/)
-assert.doesNotMatch(eigenfish, /<marimo-matrix\b/)
+assert.match(eigenfish, /<marimo-matrix\b/)
+assert.match(eigenfish, /data-marimo-links="\/static\/marimo-links\.json\?v=[0-9a-f]{12}"/)
+assert.ok(JSON.parse(read("static/marimo-links.json")).files.length > 0)
+assert.match(read("static/marimo-warm.html"), /ewan-marimo-warm/)
 
 let marimoPagesProbed = 0
 for (const [file, title, islands] of [

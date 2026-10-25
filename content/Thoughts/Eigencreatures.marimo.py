@@ -600,7 +600,7 @@ def bin_points(z, center, half, size):
     x = np.floor((z.real - center.real + half) / (2 * half) * size)
     y = np.floor((center.imag + half - z.imag) / (2 * half) * size)
     inside = finite & (x >= 0) & (x < size) & (y >= 0) & (y < size)
-    return (y[inside] * size + x[inside]).astype(np.int64), inside
+    return (y[inside] * size + x[inside]).astype(np.intp), inside
 
 
 @app.function

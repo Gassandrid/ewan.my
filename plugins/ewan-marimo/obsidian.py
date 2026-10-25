@@ -16,7 +16,7 @@ from markdown.util import AtomicString
 
 def file_key(value):
     value = unquote(value).strip().strip("/")
-    value = re.sub(r"\.(?:marimo\.py|md|html)$", "", value, flags=re.I)
+    value = re.sub(r"\.(?:marimo(?:\.py)?|md|html)$", "", value, flags=re.I)
     return re.sub(r"\s", "-", value).replace("&", "-and-").replace("%", "-percent").replace("?", "").lower()
 
 
@@ -26,17 +26,53 @@ def heading_slug(value, separator="-"):
     return "".join(c for c in value if c in " -_" or unicodedata.category(c)[0] in "LNM").replace(" ", "-")
 
 
+def load_index(url):
+    # The Vault index is one shared, HTTP-cached file instead of being inlined
+    # into every notebook. Workers may use synchronous requests; the page loader
+    # prefetches this URL, so the first link usually reads from cache.
+    import json
+    try:
+        from js import console, location
+        from pyodide.http import open_url
+    except ImportError:
+        # Build-time execution reads the same index from a local file.
+        import os
+        path = os.environ.get("EWAN_MARIMO_LINK_INDEX")
+        if not path:
+            return []
+        with open(path) as file:
+            return json.load(file).get("files", [])
+    try:
+        return json.load(open_url(location.origin + url)).get("files", [])
+    except Exception as error:
+        console.warn(f"[ewan-marimo] link index unavailable: {error}")
+        return []
+
+
 class Resolver:
     def __init__(self, context):
         self.current = context.get("currentSlug", "index")
-        self.entries = context.get("files", [])
-        self.keys = {}
-        for entry in self.entries:
-            for name in [entry["path"], entry["slug"], *entry.get("aliases", [])]:
-                key = file_key(name)
-                self.keys.setdefault(key, [])
-                if entry not in self.keys[key]:
-                    self.keys[key].append(entry)
+        self.index = context.get("index")
+        self._entries = context.get("files")
+        self._keys = None
+
+    @property
+    def entries(self):
+        if self._entries is None:
+            self._entries = load_index(self.index) if self.index else []
+        return self._entries
+
+    @property
+    def keys(self):
+        if self._keys is None:
+            self._keys = {}
+            for entry in self.entries:
+                for name in [entry["path"], entry["slug"], *entry.get("aliases", [])]:
+                    key = file_key(name)
+                    self._keys.setdefault(key, [])
+                    if entry not in self._keys[key]:
+                        self._keys[key].append(entry)
+        return self._keys
 
     def resolve(self, target):
         target = unquote(target).strip()

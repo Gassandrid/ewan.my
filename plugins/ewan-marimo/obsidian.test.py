@@ -41,6 +41,8 @@ class ObsidianMarkdownTests(unittest.TestCase):
             ('#Local heading', '#local-heading'),
             ('#^Block-ID', '#block-id'),
             ('Folder/Folder', '../folder/'),
+            ('Demo.marimo|Notebook', '../thoughts/demo'),
+            ('Thoughts/Demo.marimo.py', '../thoughts/demo'),
             ('Simone Conradi#Parent#A repeated heading', '../people/simone-conradi#a-repeated-heading-1'),
         ]:
             with self.subTest(target=target):
@@ -101,6 +103,25 @@ class ObsidianMarkdownTests(unittest.TestCase):
         self.assertIn('<mark>Value 3</mark>', output)
         self.assertIn('href="../people/simone-conradi"', output)
         self.assertEqual(mo.md('[[Conradi]]')._repr_markdown_(), '[[Conradi]]')
+
+    def test_shared_index_loads_once_on_first_link(self):
+        calls = []
+        original = obsidian.load_index
+        obsidian.load_index = lambda url: calls.append(url) or CONTEXT['files']
+        try:
+            obsidian.install({'currentSlug': 'thoughts/demo', 'index': '/static/marimo-links.json?v=1'})
+            self.assertIn('Plain text', self.render('Plain text'))
+            self.assertEqual(calls, [])
+            self.assertIn('href="../people/simone-conradi"', self.render('[[Conradi]]'))
+            self.assertIn('href="../thoughts/local"', self.render('[[Local]]'))
+            self.assertEqual(calls, ['/static/marimo-links.json?v=1'])
+        finally:
+            obsidian.load_index = original
+
+    def test_unavailable_index_leaves_links_unresolved(self):
+        # Outside Pyodide there is no browser fetch; links must not be guessed.
+        obsidian.install({'currentSlug': 'thoughts/demo', 'index': '/static/marimo-links.json'})
+        self.assertIn('is-unresolved', self.render('[[Conradi]]'))
 
 if __name__ == '__main__':
     unittest.main()

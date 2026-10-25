@@ -1,4 +1,5 @@
 import fs from "node:fs"
+import { Fragment, h } from "preact"
 import { simplifySlug, slugifyFilePath } from "@quartz-community/utils/path"
 
 const MARIMO_ISLANDS_VERSION = "0.23.9"
@@ -7,12 +8,18 @@ const MARIMO_PACKAGE_ROOT = `${MARIMO_CDN_ORIGIN}/npm/@marimo-team/islands@${MAR
 const MARIMO_RUNTIME_URL = `${MARIMO_PACKAGE_ROOT}/main.js`
 const MARIMO_STYLE_URL = `${MARIMO_PACKAGE_ROOT}/style.css`
 const PYODIDE_VERSION = "0.27.7"
+const PYODIDE_ROOT = `${MARIMO_CDN_ORIGIN}/pyodide/v${PYODIDE_VERSION}/full/`
 const OBSIDIAN_EMBEDS_RUNTIME = fs
   .readFileSync(new URL("./obsidian-embeds.js", import.meta.url), "utf8")
   .replace("export function", "function")
 const THEME_RUNTIME = fs
   .readFileSync(new URL("./theme.js", import.meta.url), "utf8")
   .replace("export function", "function")
+
+function warmPageUrl(ctx) {
+  const base = new URL(`https://${ctx?.cfg?.configuration?.baseUrl ?? "example.com"}`).pathname
+  return `${base.replace(/\/?$/, "/")}static/marimo-warm.html?v=${MARIMO_ISLANDS_VERSION}`
+}
 
 function marimoRoutes(ctx) {
   return (ctx?.allFiles ?? [])
@@ -21,7 +28,7 @@ function marimoRoutes(ctx) {
     .map((slug) => (slug === "/" ? "/" : `/${slug}`))
 }
 
-export function createMarimoLoader(routes = []) {
+export function createMarimoLoader(routes = [], warmUrl = null) {
   return `
 (function() {
   if (window.__ewanMarimoLoader) {
@@ -32,7 +39,7 @@ export function createMarimoLoader(routes = []) {
   var marimoRoutes = new Set(${JSON.stringify(routes)});
   var runtimeUrl = ${JSON.stringify(MARIMO_RUNTIME_URL)};
   var styleUrl = ${JSON.stringify(MARIMO_STYLE_URL)};
-  var pyodideRoot = ${JSON.stringify(`${MARIMO_CDN_ORIGIN}/pyodide/v${PYODIDE_VERSION}/full/`)};
+  var pyodideRoot = ${JSON.stringify(PYODIDE_ROOT)};
   var exportContextSource = "ewan-quartz-marimo";
   var mountedRoute = null;
   var readyObserver = null;
@@ -42,6 +49,8 @@ export function createMarimoLoader(routes = []) {
   var clearMarkdown = null;
   var markdownPage = null;
   var clearTheme = null;
+  var warmUrl = ${JSON.stringify(warmUrl)};
+  var warmFrame = null;
   ${OBSIDIAN_EMBEDS_RUNTIME}
   ${THEME_RUNTIME}
   var watchMarkdown = watchObsidianEmbeds;
@@ -162,9 +171,12 @@ export function createMarimoLoader(routes = []) {
   function watchReadiness(page) {
     clearReadiness();
     var update = function() {
-      var error = page.querySelector('marimo-island[data-status="error"]');
       var cells = Array.from(page.querySelectorAll('marimo-island[data-reactive="true"]'));
       var ready = cells.length > 0 && cells.every(function(cell) { return cell.dataset.status === "idle"; });
+      // The first reactive cell is the compiler's setup cell; if it raised,
+      // every notebook cell only shows "An ancestor raised an exception".
+      var error = page.querySelector('marimo-island[data-status="error"]') ||
+        (ready && cells[0].querySelector('[role="alert"]'));
       if (error) {
         setState(page, "error", "Python could not start on this page.");
         return true;
@@ -207,6 +219,23 @@ export function createMarimoLoader(routes = []) {
     document.head.appendChild(script);
   }
 
+  // Large build-time outputs ship as separate files; show each one unless the
+  // live session has already rendered that cell.
+  function fillDeferredOutputs(page) {
+    page.querySelectorAll("marimo-island[data-ewan-output]").forEach(function(island) {
+      var url = island.dataset.ewanOutput;
+      island.removeAttribute("data-ewan-output");
+      fetch(url)
+        .then(function(response) { return response.ok ? response.text() : ""; })
+        .then(function(html) {
+          var output = island.querySelector("marimo-cell-output");
+          if (!html || !output || output.childElementCount || output.textContent.trim()) return;
+          output.innerHTML = html;
+        })
+        .catch(function() {});
+    });
+  }
+
   function hardNavigateCurrentPage() {
     // marimo 0.23.9 owns one global Pyodide session. A second, different
     // notebook needs a fresh browsing context; make that boundary automatic.
@@ -244,6 +273,8 @@ export function createMarimoLoader(routes = []) {
       markdownPage = page;
     }
     preload(true);
+    if (page.dataset.marimoLinks) ensureHint("prefetch", page.dataset.marimoLinks, "fetch");
+    fillDeferredOutputs(page);
     ensureStyle();
     watchReadiness(page);
     ensureScript(page);
@@ -265,7 +296,11 @@ export function createMarimoLoader(routes = []) {
   document.addEventListener("click", function(event) {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     var anchor = event.target?.closest?.("a[href]");
-    if (!mountedRoute || !isMarimoLink(anchor)) return;
+    if (!isMarimoLink(anchor)) return;
+    // A click (or search Enter) is intent: download the runtime and Pyodide
+    // while the router is still fetching and swapping in the page.
+    preload(true);
+    if (!mountedRoute) return;
     var targetRoute = normalizedPath(anchor.href);
     if (targetRoute === mountedRoute || !document.querySelector("script[data-ewan-marimo-runtime]")) return;
     event.preventDefault();
@@ -275,10 +310,14 @@ export function createMarimoLoader(routes = []) {
   document.addEventListener("nav", function() {
     window.setTimeout(ensure, 0);
   });
+  window.addEventListener("popstate", function() {
+    if (marimoRoutes.has(normalizedPath(window.location.pathname))) preload(true);
+  });
   document.addEventListener("prenav", function(event) {
-    if (!mountedPage || !document.querySelector("script[data-ewan-marimo-runtime]")) return;
     var target = event.detail?.url;
     if (!target || !marimoRoutes.has(normalizedPath(target))) return;
+    preload(true);
+    if (!mountedPage || !document.querySelector("script[data-ewan-marimo-runtime]")) return;
     // The pinned runtime has no session teardown. Apply this boundary before
     // DOM replacement, including keyboard search, programmatic nav and Back.
     event.preventDefault();
@@ -286,7 +325,46 @@ export function createMarimoLoader(routes = []) {
     else window.location.assign(target);
   });
 
+  // Most readers arrive on an ordinary note. Once that page is idle, a hidden
+  // warm-up page downloads the runtime, Pyodide and every notebook's packages
+  // into the HTTP cache, so opening a notebook later costs only Python startup.
+  function warm() {
+    if (!warmUrl || warmFrame || !marimoRoutes.size || activeNotebook()) return;
+    var connection = navigator.connection;
+    if (connection?.saveData || /(?:slow-)?2g|3g/.test(connection?.effectiveType || "")) return;
+    var stampKey = "ewan-marimo-warm:" + warmUrl;
+    try {
+      if (Number(localStorage.getItem(stampKey)) > Date.now() - 12 * 3600 * 1000) return;
+    } catch (_) {}
+    var timeout = window.setTimeout(function() { finish(false); }, 180000);
+    function finish(completed) {
+      window.clearTimeout(timeout);
+      window.removeEventListener("message", onMessage);
+      warmFrame?.remove();
+      if (completed) try { localStorage.setItem(stampKey, String(Date.now())); } catch (_) {}
+    }
+    function onMessage(event) {
+      if (event.origin !== window.location.origin || event.source !== warmFrame?.contentWindow) return;
+      if (event.data?.type === "ewan-marimo-warm") finish(event.data.status === "done");
+    }
+    window.addEventListener("message", onMessage);
+    warmFrame = document.createElement("iframe");
+    warmFrame.src = warmUrl;
+    warmFrame.hidden = true;
+    warmFrame.tabIndex = -1;
+    warmFrame.setAttribute("aria-hidden", "true");
+    // Outside <body>: SPA navigation morphs the body and would remove it.
+    document.documentElement.appendChild(warmFrame);
+  }
+
+  function warmWhenIdle() {
+    var idle = window.requestIdleCallback || function(fn) { return window.setTimeout(fn, 1500); };
+    idle(warm, { timeout: 5000 });
+  }
+
   window.__ewanMarimoLoader = { ensure: ensure, preload: preload };
+  if (document.readyState === "complete") warmWhenIdle();
+  else window.addEventListener("load", warmWhenIdle, { once: true });
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", ensure, { once: true });
   } else {
@@ -294,6 +372,27 @@ export function createMarimoLoader(routes = []) {
   }
 })();
 `
+}
+
+function MarimoHints() {
+  const hint = (rel, href, as) =>
+    h("link", {
+      rel,
+      href,
+      as,
+      crossorigin: "anonymous",
+      "data-ewan-marimo-href": href,
+      "data-persist": "true",
+    })
+  return h(
+    Fragment,
+    null,
+    h("link", { rel: "preconnect", href: MARIMO_CDN_ORIGIN, crossorigin: "anonymous" }),
+    hint("modulepreload", MARIMO_RUNTIME_URL),
+    hint("preload", MARIMO_STYLE_URL, "style"),
+    hint("prefetch", `${PYODIDE_ROOT}pyodide.asm.wasm`, "fetch"),
+    hint("prefetch", `${PYODIDE_ROOT}python_stdlib.zip`, "fetch"),
+  )
 }
 
 export default function MarimoResources() {
@@ -304,9 +403,13 @@ export default function MarimoResources() {
     },
     externalResources(ctx) {
       return {
+        // Direct visits: start the runtime and Pyodide while the HTML is still
+        // parsing, instead of after the deferred loader runs. The loader finds
+        // these by data-ewan-marimo-href and does not request them twice.
+        additionalHead: [(fileData) => (fileData.isMarimo ? MarimoHints() : null)],
         js: [
           {
-            script: createMarimoLoader(marimoRoutes(ctx)),
+            script: createMarimoLoader(marimoRoutes(ctx), warmPageUrl(ctx)),
             loadTime: "afterDOMReady",
             contentType: "inline",
             spaPreserve: true,
