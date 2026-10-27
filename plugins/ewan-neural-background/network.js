@@ -1,6 +1,85 @@
 // Dimensionless adaptive leaky integrate-and-fire dynamics for generative art.
 // This is neither recorded activity nor a fitted biological model; frequency is
-// in cycles per animation second. Both functions are self-contained for inlining.
+// in cycles per animation second. The exported functions are inlined into one
+// browser scope, so they may call each other but nothing else in this module.
+
+// Cell classes and their chemistry, loosely after cortex. Pyramidal cells
+// release glutamate onto fast AMPA and slow, voltage-gated NMDA receptors.
+// Basket (PV-like) cells are fast and barely adapt; Martinotti (SST-like) cells
+// adapt, are recruited through facilitating synapses and add slow GABA-B
+// inhibition. A few broadly projecting cells are neuromodulatory: they fire
+// slowly, co-release glutamate, and raise the tone of their targets' areas.
+// Every synapse has Tsodyks–Markram short-term plasticity.
+export const modulators = ["dopamine", "acetylcholine", "serotonin"]
+export function equipNetwork(nodes, edges, modules, random) {
+  for (const module of modules) for (const name of modulators) module[name] = 0
+  const broad = nodes
+    .map((node, i) => i)
+    .filter((i) => !nodes[i].inhibitory && !nodes[i].bridge)
+    .sort((a, b) => nodes[b].outgoing.length - nodes[a].outgoing.length || a - b)
+  const shuffle = (list) => {
+    for (let i = list.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1))
+      ;[list[i], list[j]] = [list[j], list[i]]
+    }
+    return list
+  }
+  // Classes are dealt in exact proportions: per-cell coin flips from this
+  // generator spread far more than a binomial would.
+  const cells = new Map()
+  shuffle(broad.slice(0, Math.ceil(broad.length / 2)))
+    .slice(0, Math.max(1, Math.round(nodes.length * 0.018)) * modulators.length)
+    .forEach((i, k) => cells.set(i, modulators[k % modulators.length]))
+  const interneurons = shuffle(nodes.map((node, i) => i).filter((i) => nodes[i].inhibitory))
+  interneurons.forEach((i, k) =>
+    cells.set(i, k < Math.round(interneurons.length * 0.6) ? "basket" : "martinotti"),
+  )
+  nodes.forEach((node, i) => {
+    node.cell = cells.get(i) || "pyramidal"
+    if (node.cell === "basket") {
+      node.tau = 0.5 + random() * 0.12
+      node.refractoryPeriod = 0.26 + random() * 0.04
+      node.adaptationGain *= 0.25
+      // A shorter membrane time constant also lowers the steady voltage here.
+      node.bias += 0.25
+    } else if (node.cell === "martinotti") {
+      node.tau = 0.85 + random() * 0.2
+      node.adaptationGain = 0.6 + random() * 0.25
+      node.bias += 0.12
+    } else if (node.cell !== "pyramidal") {
+      // Pacemaker-like: slow, regular, hard to drive into fast firing.
+      node.refractoryPeriod = 0.55 + random() * 0.2
+      node.adaptationGain *= 0.5
+      node.bias += 0.15
+    }
+    node.nmda = 0
+    node.gabaB = 0
+    node.input = 0
+  })
+  for (const edge of edges) {
+    const source = nodes[edge.from].cell
+    // Excitation onto Martinotti cells facilitates, so they answer sustained
+    // firing rather than single spikes; every other synapse depresses.
+    const facilitating = !nodes[edge.from].inhibitory && nodes[edge.to].cell === "martinotti"
+    edge.transmitter = nodes[edge.from].inhibitory
+      ? "GABA"
+      : modulators.includes(source)
+        ? source
+        : "glutamate"
+    edge.volume = modulators.includes(source)
+    edge.slow = source === "martinotti" ? 0.3 : nodes[edge.from].inhibitory ? 0 : 0.35
+    edge.facilitating = facilitating
+    edge.U = facilitating ? 0.15 : source === "basket" ? 0.35 : edge.volume ? 0.3 : 0.45
+    edge.tauRecovery = facilitating ? 0.15 : 0.6 + random() * 0.5
+    edge.tauFacilitation = facilitating ? 0.9 + random() * 0.4 : 0.05
+    edge.resource = 1
+    edge.facilitation = 0
+    edge.lastRelease = -100
+    // Efficacy of each packet in flight, relative to a rested synapse.
+    edge.release = new Float32Array(edge.packets.length).fill(1)
+  }
+}
+
 export function createNetwork({
   count = 112,
   seed = 271828,
@@ -193,6 +272,7 @@ export function createNetwork({
       })
     }
   })
+  equipNetwork(nodes, edges, modules, random)
   return {
     seed: networkSeed,
     layout: geometry,
@@ -247,7 +327,11 @@ export function stepNetwork(network, dt = 1 / 30, parametersOrLegacyNumber = net
   network.phase = (network.phase + phaseStep) % (Math.PI * 2)
   const globalWave = Math.sin(network.phase)
   let randomState = network.randomState
+  const toneDecay = Math.exp(-elapsed / 3)
   for (const module of network.modules) {
+    module.dopamine *= toneDecay
+    module.acetylcholine *= toneDecay
+    module.serotonin *= toneDecay
     module.phase = (module.phase + phaseStep * module.frequencyRatio) % (Math.PI * 2)
     const decay = Math.exp(-elapsed / module.noiseTau)
     randomState = (Math.imul(1664525, randomState) + 1013904223) >>> 0
@@ -269,8 +353,22 @@ export function stepNetwork(network, dt = 1 / 30, parametersOrLegacyNumber = net
       if (edge.packets[slot] === 0) {
         const target = network.nodes[edge.to]
         if (target.refractory <= 0) {
-          const weight = edge.weight * coupling * (edge.weight < 0 ? inhibition : 1)
+          const area = network.modules[target.group]
+          // Dopamine scales excitatory gain; the slow share of each packet
+          // charges NMDA (excitation) or GABA-B (Martinotti inhibition).
+          const weight =
+            edge.weight *
+            coupling *
+            edge.release[slot] *
+            (edge.weight < 0 ? inhibition : 1 + 0.6 * area.dopamine)
           target.voltage = Math.max(-0.4, Math.min(2, target.voltage + weight))
+          if (weight > 0) target.nmda = Math.min(2, target.nmda + weight * edge.slow)
+          else target.gabaB = Math.min(2, target.gabaB - weight * edge.slow)
+          if (edge.volume)
+            area[edge.transmitter] = Math.min(
+              1,
+              area[edge.transmitter] + 0.07 * (1 - area[edge.transmitter]),
+            )
         }
       } else network.pending++
     }
@@ -278,8 +376,12 @@ export function stepNetwork(network, dt = 1 / 30, parametersOrLegacyNumber = net
   const noiseDecay = Math.exp(-elapsed / 0.22)
   const noiseScale = Math.sqrt(3 * (1 - noiseDecay * noiseDecay))
   const glowDecay = Math.exp(-elapsed / 0.22)
+  const nmdaDecay = Math.exp(-elapsed / 0.9)
+  const gabaBDecay = Math.exp(-elapsed / 1.2)
   for (const node of network.nodes) {
     node.glow *= glowDecay
+    node.nmda *= nmdaDecay
+    node.gabaB *= gabaBDecay
     node.adaptation *= Math.exp(-elapsed / node.adaptationTau)
     randomState = (Math.imul(1664525, randomState) + 1013904223) >>> 0
     node.noise = Math.max(
@@ -294,8 +396,18 @@ export function stepNetwork(network, dt = 1 / 30, parametersOrLegacyNumber = net
     const module = network.modules[node.group]
     const wave = globalWave * 0.35 + Math.sin(module.phase + node.phase * 0.12) * 0.7
     const fluctuation = noise * (module.noise * 0.4 + node.noise * 0.25)
+    // NMDA conducts only once the cell is depolarized (the magnesium block),
+    // which makes it a coincidence detector that can sustain an up-state.
+    // Serotonin hyperpolarizes; its own cells most (5-HT1A autoreceptors),
+    // which turns a serotonergic lull into a slow calm-and-recover cycle.
+    const block = 1 / (1 + Math.exp((0.55 - node.voltage) * 7))
     const current =
-      drive * (0.8 + node.bias * 2.2 + oscillation * wave + fluctuation) - node.adaptation
+      drive * (0.8 + node.bias * 2.2 + oscillation * wave + fluctuation) -
+      node.adaptation +
+      node.nmda * block -
+      node.gabaB -
+      module.serotonin * (node.cell === "serotonin" ? 0.9 : 0.15)
+    node.input = current
     const leak = Math.exp(-elapsed / node.tau)
     node.voltage = Math.max(
       -0.4,
@@ -304,7 +416,11 @@ export function stepNetwork(network, dt = 1 / 30, parametersOrLegacyNumber = net
     if (node.voltage < 1) continue
     node.voltage = 0
     node.refractory = node.refractoryPeriod
-    node.adaptation = Math.min(4, node.adaptation + adaptation * node.adaptationGain)
+    // Acetylcholine closes the adaptation current, so cholinergic areas sustain firing.
+    node.adaptation = Math.min(
+      4,
+      node.adaptation + adaptation * node.adaptationGain * (1 - 0.6 * module.acetylcholine),
+    )
     node.glow = 1
     node.lastSpike = network.time
     network.spikes++
@@ -313,6 +429,18 @@ export function stepNetwork(network, dt = 1 / 30, parametersOrLegacyNumber = net
       let slot = 0
       while (slot < edge.packets.length && edge.packets[slot] > 0) slot++
       if (slot < edge.packets.length) {
+        // Resources recover and facilitation fades since the last release;
+        // both are integrated lazily, at spikes only.
+        const since = network.time - edge.lastRelease
+        const resource = 1 - (1 - edge.resource) * Math.exp(-since / edge.tauRecovery)
+        const resting = edge.facilitation * Math.exp(-since / edge.tauFacilitation)
+        const use = resting + edge.U * (1 - resting)
+        edge.resource = resource * (1 - use)
+        edge.facilitation = use
+        edge.lastRelease = network.time
+        // A rested synapse transmits 1.25x its weight, so that under ordinary
+        // depression it averages near the weight itself.
+        edge.release[slot] = Math.min(3, (1.25 * use * resource) / edge.U)
         edge.packets[slot] = edge.delay
         network.pending++
       } else network.dropped++

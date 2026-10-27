@@ -1,13 +1,21 @@
 import { h } from "preact"
-import { createNetwork, stepNetwork } from "./network.js"
+import { createNetwork, equipNetwork, modulators, stepNetwork } from "./network.js"
 import { createVaultNetwork } from "./vault.js"
 
 const CSS = `
 #neural-canvas{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1;opacity:var(--neural-ink,.78);mask-image:linear-gradient(90deg,#000 0%,#000b 17%,#0006 29%,#0004 36%,#0004 64%,#0006 71%,#000b 83%,#000 100%)}
 #neural-canvas[data-neural-state="off"],#neural-canvas[data-neural-state="waiting"]{visibility:hidden;opacity:0}
-#neural-label{position:fixed;left:0;top:0;z-index:40;pointer-events:none;max-width:15rem;padding:.1rem .3rem;font:.72rem/1.4 var(--bodyFont);color:var(--gray);background:color-mix(in srgb,var(--light) 86%,transparent);opacity:0;transition:opacity .12s}
+#neural-label{position:fixed;left:0;top:0;z-index:40;pointer-events:none;width:17.5rem;box-sizing:border-box;padding:.7rem .8rem .65rem;background:var(--raised,var(--light));border:1px solid var(--hair,var(--lightgray));color:var(--darkgray);font:.72rem/1.35 var(--bodyFont);opacity:0;transition:opacity .12s}
 #neural-label[data-visible]{opacity:1}
-#neural-label b{display:block;font-weight:600;color:var(--dark)}
+#neural-label .nl-title{display:block;font:400 1.08rem/1.15 var(--fell,var(--headerFont));color:var(--dark)}
+#neural-label .nl-kind{display:block;margin-top:.15rem;font:italic .8rem/1.3 var(--fell,var(--headerFont));color:var(--muted,var(--gray))}
+#neural-label canvas{display:block;width:100%;height:68px;margin:.55rem 0 .4rem}
+#neural-label dl{display:grid;grid-template-columns:auto 1fr auto 1fr;gap:.1rem .55rem;align-items:baseline;margin:0;padding-top:.45rem;border-top:1px solid var(--hair,var(--lightgray))}
+#neural-label dt{font:.76rem/1.35 var(--fell-sc,var(--headerFont));letter-spacing:.04em;color:var(--muted,var(--gray))}
+#neural-label dd{margin:0;font:.66rem/1.35 var(--mono,var(--codeFont));font-variant-numeric:tabular-nums;color:var(--dark);white-space:nowrap}
+#neural-label dd.nl-wide{grid-column:2/-1}
+#neural-label .nl-with{margin:.45rem 0 0;padding-top:.4rem;border-top:1px solid var(--hair,var(--lightgray));font:italic .8rem/1.35 var(--fell,var(--headerFont));color:var(--darkgray)}
+#neural-label .nl-with:empty{display:none}
 #neural-controls{position:fixed;right:1rem;bottom:1rem;z-index:50;color:var(--darkgray);font: .75rem var(--bodyFont)}
 #neural-controls>summary{list-style:none;cursor:pointer;display:flex;gap:.45rem;align-items:center;padding:.42rem .65rem;background:var(--light);border:1px solid var(--lightgray);border-radius:5px}
 #neural-controls>summary::-webkit-details-marker{display:none}
@@ -32,7 +40,7 @@ const CSS = `
 @media print{#neural-canvas,#neural-controls,#neural-label{display:none}}
 `
 
-function neuralRuntime(create, step, createVault) {
+function neuralRuntime(create, step, createVault, modulators) {
   if (window.__ewanNeural) return
   const motion = matchMedia("(prefers-reduced-motion: reduce)")
   const compact = matchMedia("(max-width: 800px)")
@@ -380,13 +388,40 @@ function neuralRuntime(create, step, createVault) {
       return polyline(points)
     }
     // Pyramidal cells read as triangles with an apical dendrite; interneurons
-    // as round somata with short multipolar stubs. The shape alone says E or I.
+    // as round somata with short multipolar stubs, and Martinotti cells add
+    // their ascending axon with its tuft. Neuromodulatory cells are diamonds
+    // around a nucleus. The shape alone says which class a neuron is.
     function soma(node, i) {
       const size = (low ? 2.3 : 2.6) + (node.hub ?? 0.35) * 2.6
       const k = i * 31
+      if (modulators.includes(node.cell)) {
+        const tilt = (noise(k + 2) - 0.5) * 0.4
+        const r = size * 1.3
+        const loop = []
+        for (let n = 0; n <= 4; n++) {
+          const angle = tilt + (n * Math.PI) / 2
+          const reach = r * (n % 2 ? 0.72 : 1) * (0.92 + noise(k + n + 3) * 0.16)
+          loop.push(Math.cos(angle) * reach, Math.sin(angle) * reach)
+        }
+        loop.push(loop[2] * 0.25 + loop[0] * 0.75, loop[3] * 0.25 + loop[1] * 0.75)
+        return { size, lines: [polyline(loop), scribble(size * 0.28, k + 4, 0.05)] }
+      }
       if (node.inhibitory) {
         const lines = [scribble(size * 0.95, k, 0.08)]
-        for (let s = 0; s < 3; s++) {
+        if (node.cell === "martinotti") {
+          const bend = (noise(k + 8) - 0.5) * size
+          const top = -size * 3.6
+          lines.push(
+            polyline([0, -size * 0.95, bend, -size * 2.2, bend * 0.4, top]),
+            polyline([
+              bend * 0.4 - size * 0.9,
+              top - size * 0.2,
+              bend * 0.4 + size * 0.9,
+              top + size * 0.15,
+            ]),
+          )
+        }
+        for (let s = 0; s < (node.cell === "martinotti" ? 2 : 3); s++) {
           const angle = noise(k + 5 + s) * Math.PI * 2
           lines.push(
             polyline([
@@ -619,7 +654,11 @@ function neuralRuntime(create, step, createVault) {
       ctx.globalAlpha = alpha
       ctx.setLineDash([])
       ctx.beginPath()
-      if (edge.weight < 0) {
+      if (edge.volume) {
+        // A varicosity: neuromodulators are released from swellings en passant.
+        ctx.moveTo(x + 1.8, y)
+        ctx.arc(x, y, 1.8, 0, Math.PI * 2)
+      } else if (edge.weight < 0) {
         ctx.moveTo(x - uy * 2.6, y + ux * 2.6)
         ctx.lineTo(x + uy * 2.6, y - ux * 2.6)
       } else {
@@ -631,6 +670,9 @@ function neuralRuntime(create, step, createVault) {
     }
     const dashed = [3.2, 3.2]
     const dotted = [0.9, 2.8]
+    const beaded = [5, 2.2, 0.9, 2.2]
+    // Neuromodulatory release is slow and diffuse, so its mark lingers longer.
+    const lives = network.nodes.map((node) => (modulators.includes(node.cell) ? 1.4 : 0.75))
     function render() {
       if (!ctx) return
       const now = network.time
@@ -651,7 +693,7 @@ function neuralRuntime(create, step, createVault) {
           previous[i * 4 + slot] = remaining
           if (remaining > 0) head = Math.max(head, 1 - remaining / edge.delay)
         }
-        const dash = edge.weight < 0 ? dotted : dashed
+        const dash = edge.volume ? beaded : edge.weight < 0 ? dotted : dashed
         // In flight: the dashed fibre is drawn out from the presynaptic soma.
         if (head > 0) {
           ctx.setLineDash(dash)
@@ -679,20 +721,30 @@ function neuralRuntime(create, step, createVault) {
       network.nodes.forEach((node, i) => {
         const age = now - node.lastSpike
         if (age === 0) for (const e of incoming[i]) if (now - arrived[e] < 0.3) credit[e]++
-        if (i !== hovered && (age < 0 || age > 0.75)) return
+        const life = lives[i]
+        if (i !== hovered && (age < 0 || age > life)) return
         const [x, y] = positions[i]
         const shape = shapes[i]
-        const fade = Math.max(0, 1 - age / 0.75)
+        const fade = Math.max(0, 1 - age / life)
         ctx.lineWidth = 0.95
         ctx.globalAlpha = Math.max(i === hovered ? 0.75 : 0, 0.5 + fade * 0.45)
         ctx.beginPath()
         traceAll(ctx, shape.lines, 1, x, y)
         ctx.stroke()
-        if (age < 0 || age > 0.75) return
+        if (age < 0 || age > life) return
         ctx.lineWidth = 0.8
         ctx.globalAlpha = 0.8 * Math.min(1, fade * 1.6)
         ctx.beginPath()
-        if (node.inhibitory) {
+        if (life > 0.75) {
+          // Volume release: a dotted cloud blooms outward and thins.
+          const k = 1 - Math.pow(1 - age / life, 2)
+          ctx.globalAlpha = 0.55 * fade
+          ctx.setLineDash(dotted)
+          trace(ctx, scribble(shape.size + 4 + 26 * k, i * 19, 0.12), 0, 1, x, y)
+          ctx.stroke()
+          ctx.setLineDash([])
+          return
+        } else if (node.inhibitory) {
           // Inhibition clamps: a rough ring closes in, ticks pointing inward.
           const k = 1 - Math.pow(1 - Math.min(1, age / 0.4), 3)
           const r = shape.size + 11 - 7 * k
@@ -765,7 +817,9 @@ function neuralRuntime(create, step, createVault) {
               poke = -1
             }
             step(network, dt, parameters)
+            record()
             render()
+            if (hovered >= 0) updateCard(totalFrames % 4 === 0)
           }
           totalCost += performance.now() - started
           frames++
@@ -795,57 +849,279 @@ function neuralRuntime(create, step, createVault) {
       if (running && !destroyed) raf = requestAnimationFrame(animate)
     }
 
-    // Hover and click reach neurons only over bare page background, never
-    // through text, links or controls.
+    // The last ten seconds of every neuron, kept on the network so the record
+    // survives SPA navigation with it. At most 30 steps per second fit.
+    const window10 = 10
+    const tape = (network.tape ??= (() => {
+      const size = 330
+      return {
+        size,
+        head: 0,
+        count: 0,
+        time: new Float64Array(size),
+        voltage: new Float32Array(size * network.nodes.length),
+        spiked: new Uint8Array(size * network.nodes.length),
+      }
+    })())
+    function record() {
+      const n = network.nodes.length
+      const at = tape.head
+      tape.time[at] = network.time
+      network.nodes.forEach((node, i) => {
+        tape.voltage[at * n + i] = node.voltage
+        tape.spiked[at * n + i] = node.lastSpike === network.time ? 1 : 0
+      })
+      tape.head = (at + 1) % tape.size
+      tape.count = Math.min(tape.size, tape.count + 1)
+    }
+    // Samples of one neuron from oldest to newest, within the window.
+    function samples(index, visit) {
+      const n = network.nodes.length
+      for (let k = tape.count; k >= 1; k--) {
+        const at = (tape.head - k + tape.size) % tape.size
+        const age = network.time - tape.time[at]
+        if (age > window10) continue
+        visit(age, tape.voltage[at * n + index], tape.spiked[at * n + index])
+      }
+    }
+
+    // The hover card: what kind of cell this is, a strip chart of its
+    // membrane, and its live state and constants.
+    const cells = {
+      pyramidal: ["Pyramidal cell", "glutamate"],
+      basket: ["Basket cell", "GABA-A"],
+      martinotti: ["Martinotti cell", "GABA-A, GABA-B"],
+      dopamine: ["Dopaminergic cell", "dopamine, glutamate"],
+      acetylcholine: ["Cholinergic cell", "acetylcholine, glutamate"],
+      serotonin: ["Serotonergic cell", "serotonin, glutamate"],
+    }
+    const readings = [
+      ["rate", "rate"],
+      ["input", "input"],
+      ["nmda", "NMDA"],
+      ["gabaB", "GABA-B"],
+      ["adaptation", "adaptation"],
+      ["vesicles", "vesicles"],
+      ["tau", "τ membrane"],
+      ["refractory", "refractory"],
+      ["synapses", "synapses", true],
+      ["tone", "area tone", true],
+    ]
+    label.innerHTML =
+      '<span class="nl-title"></span><span class="nl-kind"></span><canvas></canvas><dl>' +
+      readings
+        .map(
+          ([key, name, wide]) =>
+            "<dt>" +
+            name +
+            '</dt><dd data-reading="' +
+            key +
+            '"' +
+            (wide ? ' class="nl-wide"' : "") +
+            "></dd>",
+        )
+        .join("") +
+      '</dl><p class="nl-with"></p>'
+    const chart = label.querySelector("canvas")
+    const chartCtx = chart.getContext("2d")
+    const fields = Object.fromEntries(
+      readings.map(([key]) => [key, label.querySelector('[data-reading="' + key + '"]')]),
+    )
+    let chartInk = {}
+    function drawChart() {
+      const w = chart.clientWidth
+      const h = chart.clientHeight
+      if (!w || !h || !chartCtx) return
+      const ratio = Math.min(devicePixelRatio || 1, 2)
+      if (chart.width !== Math.round(w * ratio)) {
+        chart.width = Math.round(w * ratio)
+        chart.height = Math.round(h * ratio)
+      }
+      const c = chartCtx
+      c.setTransform(ratio, 0, 0, ratio, 0, 0)
+      c.clearRect(0, 0, w, h)
+      const right = w - 34
+      const top = 2
+      const bottom = h - 13
+      const threshold = top + 13
+      const x = (age) => right - (age / window10) * right
+      const y = (v) =>
+        bottom - ((Math.max(-0.4, Math.min(1, v)) + 0.4) / 1.4) * (bottom - threshold)
+      // Strip-chart paper: a rule each second, every fifth stronger.
+      c.lineWidth = 1
+      c.strokeStyle = chartInk.rust
+      for (let s = 0; s <= window10; s++) {
+        c.globalAlpha = s % 5 ? 0.09 : 0.26
+        const sx = Math.round(x(s)) + 0.5
+        c.beginPath()
+        c.moveTo(sx, top)
+        c.lineTo(sx, bottom)
+        c.stroke()
+      }
+      c.globalAlpha = 0.09
+      c.beginPath()
+      c.moveTo(0, Math.round(y(0)) + 0.5)
+      c.lineTo(right, Math.round(y(0)) + 0.5)
+      c.stroke()
+      c.strokeStyle = chartInk.ink
+      c.globalAlpha = 0.35
+      c.setLineDash([2, 3])
+      c.beginPath()
+      c.moveTo(0, threshold + 0.5)
+      c.lineTo(right, threshold + 0.5)
+      c.stroke()
+      c.setLineDash([])
+      // The pen: subthreshold voltage, each spike struck up to the top.
+      c.globalAlpha = 1
+      c.lineJoin = c.lineCap = "round"
+      c.beginPath()
+      let started = false
+      let latest = 0
+      samples(hovered, (age, v, spiked) => {
+        const px = x(age)
+        if (!started) {
+          c.moveTo(px, y(v))
+          started = true
+        } else if (spiked) {
+          c.lineTo(px, threshold)
+          c.lineTo(px, top)
+          c.lineTo(px, y(v))
+        } else c.lineTo(px, y(v))
+        latest = v
+      })
+      c.stroke()
+      // An ochre pointer and the present value at the pen's end.
+      const py = y(latest)
+      c.fillStyle = chartInk.ochre
+      c.beginPath()
+      c.moveTo(right + 2, py)
+      c.lineTo(right + 7, py - 3)
+      c.lineTo(right + 7, py + 3)
+      c.fill()
+      c.font = "9.5px " + chartInk.mono
+      c.fillStyle = chartInk.ink
+      c.textBaseline = "middle"
+      c.textAlign = "left"
+      c.fillText(latest.toFixed(2), right + 9, py)
+      c.fillStyle = chartInk.muted
+      c.textBaseline = "alphabetic"
+      c.fillText("V", right + 9, threshold - 4)
+      c.fillText("−10 s", 0, h - 2)
+      c.textAlign = "center"
+      c.fillText("−5", x(5), h - 2)
+      c.textAlign = "right"
+      c.fillText("0", right, h - 2)
+    }
+    function updateCard(text) {
+      drawChart()
+      if (!text) return
+      const node = network.nodes[hovered]
+      let spikes = 0
+      let span = 0
+      samples(hovered, (age, v, spiked) => {
+        spikes += spiked
+        span = Math.max(span, age)
+      })
+      const outgoing = node.outgoing.map((e) => network.edges[e])
+      const vesicles = outgoing.length
+        ? outgoing.reduce(
+            (sum, edge) =>
+              sum +
+              1 -
+              (1 - edge.resource) * Math.exp(-(network.time - edge.lastRelease) / edge.tauRecovery),
+            0,
+          ) / outgoing.length
+        : 1
+      const area = network.modules[node.group]
+      fields.rate.textContent = (span > 0.5 ? spikes / span : 0).toFixed(2) + " /s"
+      fields.input.textContent = node.input.toFixed(2)
+      fields.nmda.textContent = node.nmda.toFixed(2)
+      fields.gabaB.textContent = node.gabaB.toFixed(2)
+      fields.adaptation.textContent = node.adaptation.toFixed(2)
+      fields.vesicles.textContent = Math.round(vesicles * 100) + "%"
+      fields.tone.textContent =
+        "DA " +
+        area.dopamine.toFixed(2) +
+        " · ACh " +
+        area.acetylcholine.toFixed(2) +
+        " · 5-HT " +
+        area.serotonin.toFixed(2)
+    }
+
+    // Hover reaches neurons only over bare page background, never through
+    // text, links or controls. It reads a neuron; it does not navigate.
     const solid =
       "a,button,input,select,textarea,summary,label,p,li,h1,h2,h3,h4,h5,h6,pre,code,table,img,svg,video,iframe,figure,blockquote,canvas:not(#neural-canvas),.katex,.search,.graph,.explorer,.toc,.backlinks,#neural-controls"
-    function setHover(index, event) {
-      if (index === hovered) {
-        if (index >= 0) placeLabel(event)
-        return
-      }
+    function setHover(index) {
+      if (index === hovered) return
       hovered = index
-      document.documentElement.style.cursor = index >= 0 ? "pointer" : ""
       if (index < 0) {
         label.removeAttribute("data-visible")
         return
       }
       const node = network.nodes[index]
+      const style = getComputedStyle(document.documentElement)
+      const token = (name, fallback) => style.getPropertyValue(name).trim() || fallback
+      chartInk = {
+        ink: inkColor,
+        muted: token("--muted", token("--gray", inkColor)),
+        rust: token("--rust", inkColor),
+        ochre: token("--ochre", inkColor),
+        mono: token("--mono", "ui-monospace, monospace"),
+      }
       const partners = []
       network.edges
         .map((edge, i) => [credit[i], edge.from === index ? edge.to : edge.from, edge])
         .filter(([score, , edge]) => score > 0 && (edge.from === index || edge.to === index))
         .sort((a, b) => b[0] - a[0])
         .forEach(([, other]) => {
-          const title = network.nodes[other].title
+          const title = network.nodes[other].title ?? "neuron " + (other + 1)
           if (partners.length < 2 && !partners.includes(title)) partners.push(title)
         })
-      label.replaceChildren()
-      const name = document.createElement("b")
-      name.textContent = node.title
-      label.append(name, "#" + node.tag)
-      if (partners.length)
-        label.append(document.createElement("br"), "fires with " + partners.join(", "))
+      const [cell, transmitter] = cells[node.cell] ?? cells.pyramidal
+      const subject = node.tag ?? network.modules[node.group]?.name
+      label.querySelector(".nl-title").textContent = node.title ?? "Neuron " + (index + 1)
+      label.querySelector(".nl-kind").textContent = [
+        cell,
+        transmitter,
+        node.bridge ? "commissural" : "",
+        subject,
+      ]
+        .filter(Boolean)
+        .join(" · ")
+      label.querySelector(".nl-with").textContent = partners.length
+        ? "fires with " + partners.join(", ")
+        : ""
+      const facilitating = node.outgoing.filter((e) => network.edges[e].facilitating).length
+      fields.synapses.textContent =
+        incoming[index].length +
+        " in · " +
+        node.outgoing.length +
+        " out" +
+        (facilitating ? ", " + facilitating + " facilitating" : "")
+      fields.tau.textContent = node.tau.toFixed(2) + " s"
+      fields.refractory.textContent = node.refractoryPeriod.toFixed(2) + " s"
+      updateCard(true)
       label.setAttribute("data-visible", "")
-      placeLabel(event)
+      placeLabel()
       if (node.refractory <= 0) node.voltage = Math.max(node.voltage, 1.3)
     }
     function placeLabel() {
       const [x, y] = positions[hovered]
       const box = label.getBoundingClientRect()
-      const left =
-        x > width / 2 ? x - box.width - shapes[hovered].size - 12 : x + shapes[hovered].size + 12
+      const gap = shapes[hovered].size + 14
+      const left = x > width / 2 ? x - box.width - gap : x + gap
       label.style.transform =
         "translate(" +
-        Math.round(Math.max(4, left)) +
+        Math.round(Math.max(8, Math.min(width - box.width - 8, left))) +
         "px," +
-        Math.round(Math.max(4, y - box.height / 2)) +
+        Math.round(Math.max(8, Math.min(height - box.height - 8, y - box.height / 2))) +
         "px)"
     }
     document.addEventListener(
       "pointermove",
       (event) => {
-        if (!running || growing || !network.nodes[0]?.title || event.pointerType === "touch") return
+        if (!running || growing || event.pointerType === "touch") return
         if (event.target?.closest?.(solid)) return setHover(-1)
         let best = -1,
           distance = 14
@@ -853,23 +1129,9 @@ function neuralRuntime(create, step, createVault) {
           const d = Math.hypot(x - event.clientX, y - event.clientY)
           if (d < distance) [best, distance] = [i, d]
         })
-        setHover(best, event)
+        setHover(best)
       },
       { passive: true, signal },
-    )
-    document.addEventListener(
-      "click",
-      (event) => {
-        if (hovered < 0 || event.target?.closest?.(solid)) return
-        const depth = (document.body.dataset.slug || "").split("/").length - 1
-        const url = new URL(
-          (depth ? "../".repeat(depth) : "./") + network.nodes[hovered].slug,
-          location.href,
-        )
-        setHover(-1)
-        window.spaNavigate ? window.spaNavigate(url) : location.assign(url)
-      },
-      { signal },
     )
 
     function fail(error) {
@@ -969,7 +1231,6 @@ function neuralRuntime(create, step, createVault) {
       cancelAnimationFrame(raf)
       controller.abort()
       theme?.disconnect()
-      document.documentElement.style.cursor = ""
       label.remove()
       if (!keepControls) controls.remove()
       canvas.dataset.neuralState = "destroyed"
@@ -1003,6 +1264,7 @@ export function NeuralBackground() {
   }
   Component.displayName = "NeuralBackground"
   Component.css = CSS
-  Component.afterDOMLoaded = `(${neuralRuntime.toString()})(${createNetwork.toString()},${stepNetwork.toString()},${createVaultNetwork.toString()});`
+  // network.js and vault.js share one scope here, as they do as modules.
+  Component.afterDOMLoaded = `(()=>{const modulators=${JSON.stringify(modulators)};${equipNetwork.toString()};${createNetwork.toString()};${stepNetwork.toString()};${createVaultNetwork.toString()};(${neuralRuntime.toString()})(createNetwork,stepNetwork,createVaultNetwork,modulators)})();`
   return Component
 }

@@ -1,7 +1,7 @@
 import test from "node:test"
 import assert from "node:assert/strict"
 import { existsSync, readFileSync } from "node:fs"
-import { createNetwork, stepNetwork } from "./ewan-neural-background/network.js"
+import { createNetwork, modulators, stepNetwork } from "./ewan-neural-background/network.js"
 import { createVaultNetwork } from "./ewan-neural-background/vault.js"
 
 const parameterBounds = {
@@ -49,9 +49,12 @@ function assertBounded(network) {
     assert.ok(node.adaptation >= 0 && node.adaptation <= 4)
     assert.ok(node.glow >= 0 && node.glow <= 1)
     assert.ok(Number.isFinite(node.noise) && Math.abs(node.noise) <= 3)
+    assert.ok(node.nmda >= 0 && node.nmda <= 2 && node.gabaB >= 0 && node.gabaB <= 2)
+    assert.ok(Number.isFinite(node.input))
   }
   for (const module of network.modules) {
     assert.ok(Number.isFinite(module.noise) && Math.abs(module.noise) <= 3)
+    for (const name of modulators) assert.ok(module[name] >= 0 && module[name] <= 1)
     assert.ok(module.phase >= 0 && module.phase < Math.PI * 2)
   }
   for (const edge of network.edges) {
@@ -59,6 +62,9 @@ function assertBounded(network) {
     for (const remaining of edge.packets) {
       assert.ok(Number.isFinite(remaining) && remaining >= 0 && remaining <= edge.delay + 1e-7)
     }
+    assert.ok(edge.resource >= 0 && edge.resource <= 1)
+    assert.ok(edge.facilitation >= 0 && edge.facilitation <= 1)
+    for (const release of edge.release) assert.ok(release >= 0 && release <= 3)
   }
 }
 
@@ -364,6 +370,100 @@ test("legacy numeric activity remains deterministic and zero input settles", () 
   assert.equal(quiet.spikes, 0)
   assert.equal(quiet.pending, 0)
   assert.ok(active.spikes > 100)
+})
+
+test("cell classes fix each synapse's transmitter, receptors and plasticity", () => {
+  for (const layout of layouts) {
+    const field = createNetwork({ seed: 31, layout })
+    const cells = new Set(field.nodes.map((node) => node.cell))
+    for (const cell of ["pyramidal", "basket", "martinotti", ...modulators])
+      assert.ok(cells.has(cell), `${layout} has ${cell} cells`)
+    for (const node of field.nodes)
+      assert.equal(node.inhibitory, node.cell === "basket" || node.cell === "martinotti")
+    for (const edge of field.edges) {
+      const from = field.nodes[edge.from]
+      assert.equal(
+        edge.transmitter,
+        from.inhibitory ? "GABA" : modulators.includes(from.cell) ? from.cell : "glutamate",
+      )
+      assert.equal(edge.volume, modulators.includes(from.cell))
+      assert.equal(
+        edge.facilitating,
+        !from.inhibitory && field.nodes[edge.to].cell === "martinotti",
+      )
+    }
+  }
+})
+
+// Fires one presynaptic neuron through a single synapse at a fixed interval and
+// returns the efficacy of each successive packet.
+function train(edge, field, spikes, interval) {
+  const source = field.nodes[edge.from]
+  source.outgoing = [field.edges.indexOf(edge)]
+  const releases = []
+  for (let spike = 0; spike < spikes; spike++) {
+    source.refractory = 0
+    source.voltage = 1.5
+    stepNetwork(field, 0.02)
+    releases.push(edge.release.find((_, slot) => edge.packets[slot] > 0))
+    for (let t = 0.02; t < interval - 1e-9; t += 0.02) stepNetwork(field, 0.02)
+    edge.packets.fill(0)
+  }
+  return releases
+}
+
+test("depressing synapses weaken and facilitating ones strengthen under a spike train", () => {
+  const field = createNetwork({ seed: 31, parameters: quietParameters })
+  for (const node of field.nodes) node.outgoing = []
+  const depressing = field.edges.find((edge) => edge.weight > 0 && !edge.facilitating)
+  const facilitating = field.edges.find((edge) => edge.facilitating)
+  const down = train(depressing, field, 5, 0.3)
+  const up = train(facilitating, field, 5, 0.3)
+  assert.ok(down[4] < down[0] * 0.7, "a fast train exhausts a depressing synapse")
+  assert.ok(up[4] > up[0] * 1.5, "a fast train builds up a facilitating synapse")
+  // A rested synapse recovers after a pause much longer than its time constant.
+  const rested = train(depressing, field, 1, 0.02)[0]
+  for (let i = 0; i < 300; i++) stepNetwork(field, 0.02)
+  assert.ok(train(depressing, field, 1, 0.02)[0] > rested)
+})
+
+test("NMDA current is gated by depolarization", () => {
+  const inputs = [0.1, 0.8].map((voltage) => {
+    const field = createNetwork({ seed: 31, parameters: quietParameters })
+    const node = field.nodes.find((item) => !item.inhibitory)
+    node.voltage = voltage
+    node.nmda = 1
+    stepNetwork(field, 0.001)
+    return node.input
+  })
+  assert.ok(inputs[1] > inputs[0] * 4, "the magnesium block relieves near threshold")
+})
+
+test("neuromodulatory packets raise their target area's tone, and tone acts", () => {
+  for (const name of modulators) {
+    const field = createNetwork({ seed: 31, parameters: quietParameters })
+    const edge = field.edges.find((item) => item.transmitter === name)
+    const area = field.modules[field.nodes[edge.to].group]
+    edge.packets[0] = 0.01
+    stepNetwork(field, 0.02)
+    assert.ok(area[name] > 0, `${name} reaches the target area`)
+    const before = area[name]
+    for (let i = 0; i < 150; i++) stepNetwork(field, 0.02)
+    assert.ok(area[name] < before * 0.5, `${name} tone decays`)
+  }
+  // Acetylcholine closes the adaptation current; serotonin hyperpolarizes.
+  const fixed = { ...referenceParameters, coupling: 0, oscillation: 0, noise: 0, drive: 0.8 }
+  const spikes = (setup) => {
+    const field = createNetwork({ count: 32, seed: 8, parameters: { ...fixed, adaptation: 1 } })
+    for (let i = 0; i < 900; i++) {
+      for (const module of field.modules) setup(module)
+      stepNetwork(field, 1 / 30)
+    }
+    return field.spikes
+  }
+  const baseline = spikes(() => {})
+  assert.ok(spikes((module) => (module.acetylcholine = 1)) > baseline)
+  assert.ok(spikes((module) => (module.serotonin = 1)) < baseline)
 })
 
 // A small synthetic vault: three subject families with dense internal links,

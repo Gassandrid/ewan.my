@@ -1,7 +1,9 @@
+import { equipNetwork } from "./network.js"
+
 // Builds the neural field from the vault itself: notes are neurons, wikilinks
 // are synapses, tag families are cortical areas. The result is shaped like
-// createNetwork's output so stepNetwork drives it unchanged. Self-contained
-// for inlining; `create` supplies the seeded parameter defaults.
+// createNetwork's output so stepNetwork drives it unchanged. Inlined beside
+// network.js; `create` supplies the seeded parameter defaults.
 export function createVaultNetwork(
   create,
   index,
@@ -430,6 +432,7 @@ export function createVaultNetwork(
       })
     }
   }
+  equipNetwork(nodes, edges, modules, random)
   return {
     seed: template.seed,
     layout: "vault",
