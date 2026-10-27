@@ -2,14 +2,14 @@
 # /// script
 # requires-python = ">=3.14"
 # dependencies = [
-#     "marimo==0.23.9",
-#     "numpy==2.3.5",
+#     "marimo==0.25.2",
+#     "numpy==2.4.3",
 # ]
 # ///
 
 import marimo
 
-__generated_with = "0.23.9"
+__generated_with = "0.25.2"
 app = marimo.App(width="full", app_title="Eigenfish")
 
 

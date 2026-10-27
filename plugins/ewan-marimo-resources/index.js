@@ -2,12 +2,12 @@ import fs from "node:fs"
 import { Fragment, h } from "preact"
 import { simplifySlug, slugifyFilePath } from "@quartz-community/utils/path"
 
-const MARIMO_ISLANDS_VERSION = "0.23.9"
+const MARIMO_ISLANDS_VERSION = "0.25.2"
 const MARIMO_CDN_ORIGIN = "https://cdn.jsdelivr.net"
 const MARIMO_PACKAGE_ROOT = `${MARIMO_CDN_ORIGIN}/npm/@marimo-team/islands@${MARIMO_ISLANDS_VERSION}/dist`
 const MARIMO_RUNTIME_URL = `${MARIMO_PACKAGE_ROOT}/main.js`
 const MARIMO_STYLE_URL = `${MARIMO_PACKAGE_ROOT}/style.css`
-const PYODIDE_VERSION = "0.27.7"
+const PYODIDE_VERSION = "314.0.0"
 const PYODIDE_ROOT = `${MARIMO_CDN_ORIGIN}/pyodide/v${PYODIDE_VERSION}/full/`
 const OBSIDIAN_EMBEDS_RUNTIME = fs
   .readFileSync(new URL("./obsidian-embeds.js", import.meta.url), "utf8")
@@ -26,6 +26,26 @@ function marimoRoutes(ctx) {
     .filter((fp) => fp.endsWith(".marimo.py"))
     .map((fp) => simplifySlug(slugifyFilePath(fp.replace(/\.marimo\.py$/, ".md"))))
     .map((slug) => (slug === "/" ? "/" : `/${slug}`))
+}
+
+// Notes link a notebook as Obsidian needs, `[[Name.marimo.py]]`. Quartz would
+// resolve that to the source file, which downloads; point it at the page.
+export function linkNotebookPages(src, allFiles = []) {
+  const stems = allFiles
+    .filter((fp) => fp.endsWith(".marimo.py"))
+    .map((fp) => fp.slice(0, -".marimo.py".length))
+  return src.replace(
+    /(?<!!)\[\[([^\[\]|#\n]+?)\.marimo(?:\.py)?(#[^\[\]|\n]*)?(\\?\|[^\[\]\n]*)?\]\]/gi,
+    (link, target, anchor = "", alias) => {
+      const name = target.trim().toLowerCase()
+      const matches = stems.filter((stem) => {
+        const lower = stem.toLowerCase()
+        return lower === name || lower.endsWith(`/${name}`)
+      })
+      if (matches.length !== 1) return link
+      return `[[${matches[0]}${anchor}${alias ?? `|${target.trim().split("/").at(-1)}`}]]`
+    },
+  )
 }
 
 export function createMarimoLoader(routes = [], warmUrl = null) {
@@ -237,7 +257,7 @@ export function createMarimoLoader(routes = [], warmUrl = null) {
   }
 
   function hardNavigateCurrentPage() {
-    // marimo 0.23.9 owns one global Pyodide session. A second, different
+    // marimo 0.25.2 owns one global Pyodide session. A second, different
     // notebook needs a fresh browsing context; make that boundary automatic.
     window.location.replace(window.location.href);
   }
@@ -398,8 +418,8 @@ function MarimoHints() {
 export default function MarimoResources() {
   return {
     name: "MarimoResources",
-    textTransform(_ctx, src) {
-      return src
+    textTransform(ctx, src) {
+      return linkNotebookPages(src, ctx?.allFiles)
     },
     externalResources(ctx) {
       return {

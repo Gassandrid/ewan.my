@@ -118,6 +118,16 @@ class ObsidianMarkdownTests(unittest.TestCase):
         finally:
             obsidian.load_index = original
 
+    def test_citations_use_build_time_html_and_stay_literal_otherwise(self):
+        cite = '(<cite><a href="#bib-a" data-bib>A, 2026</a></cite>)'
+        obsidian.install({**CONTEXT, 'citations': {'[@a]': cite}})
+        output = self.render('As shown [@a], not `[@a]`, [@unknown] or [x@y](https://e.org).')
+        self.assertIn(cite, output)
+        self.assertIn('<code>[@a]</code>', output)
+        self.assertIn('[@unknown]', output)
+        self.assertIn('href="https://e.org"', output)
+        self.assertIn(cite, self.render(f'{mo.md("Dynamic [@a]")}'))
+
     def test_unavailable_index_leaves_links_unresolved(self):
         # Outside Pyodide there is no browser fetch; links must not be guessed.
         obsidian.install({'currentSlug': 'thoughts/demo', 'index': '/static/marimo-links.json'})

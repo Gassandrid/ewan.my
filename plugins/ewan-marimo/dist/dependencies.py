@@ -9,7 +9,7 @@ from collections import Counter
 # Pure-Python UI packages absent from Pyodide's bundled package index. Keep this
 # narrow: scientific packages already handled by loadPackagesFromImports stay
 # under Pyodide's version constraints. A notebook can override this fallback.
-BROWSER_PACKAGE_DEFAULTS = {"wigglystuff": "wigglystuff==0.5.21", "plotly": "plotly==5.24.1"}
+BROWSER_PACKAGE_DEFAULTS = {"wigglystuff": "wigglystuff==0.5.36", "plotly": "plotly==5.24.1"}
 
 
 # Import names whose PyPI distribution differs, for build-time execution.
@@ -90,7 +90,7 @@ def bootstrap_code(requirements):
         return ""
     # Pyodide preloads lockfile versions of imported packages (e.g. anywidget
     # 0.10) before any cell runs; a newer pinned widget may require more.
-    # micropip 0.9 cannot upgrade in place, so drop the preloaded one and retry.
+    # micropip refuses to replace it in place, so drop the preloaded one and retry.
     return (
         "import sys as _browser_sys\n"
         "if _browser_sys.platform == 'emscripten':\n"

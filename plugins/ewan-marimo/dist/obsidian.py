@@ -156,6 +156,20 @@ class WikiLinks(InlineProcessor):
         return el, match.start(0), match.end(0)
 
 
+class Citations(InlineProcessor):
+    # `[@key]` groups were formatted at build time by the site's citation plugin
+    # (index.js scans the source for them); unknown keys stay literal, as in notes.
+    def __init__(self, md, citations):
+        super().__init__(r"(?<![\\\[!])\[(?:[^\[\]\n]*?[\s;])?-?@\w[^\[\]\n]*\](?![\[(\]])", md)
+        self.citations = citations
+
+    def handleMatch(self, match, data):
+        cited = self.citations.get(match.group(0))
+        if cited is None:
+            return None, None, None
+        return self.md.htmlStash.store(cited), match.start(0), match.end(0)
+
+
 class RawCode(Preprocessor):
     def run(self, lines):
         text = "\n".join(lines)
@@ -272,14 +286,16 @@ class ObsidianTree(Treeprocessor):
 
 
 class ObsidianExtension(Extension):
-    def __init__(self, resolver):
+    def __init__(self, resolver, citations):
         self.resolver = resolver
+        self.citations = citations
         super().__init__()
 
     def extendMarkdown(self, md):
         md.preprocessors.register(RawCode(md), "obsidian-raw-code", 24.5)
         md.preprocessors.register(Comments(md), "obsidian-comments", 19)
         md.inlinePatterns.register(WikiLinks(md, self.resolver), "obsidian-wikilinks", 181)
+        md.inlinePatterns.register(Citations(md, self.citations), "obsidian-citations", 175)
         md.treeprocessors.register(Callouts(md), "obsidian-callouts", 26)
         md.treeprocessors.register(ObsidianTree(md, self.resolver), "obsidian-tree", 6)
 
@@ -296,6 +312,6 @@ def install(context):
         "name": "mermaid", "class": "mermaid",
         "format": lambda source, language, class_name, options, md, **kwargs: marimo.mermaid(source).text,
     }]
-    md = Markdown(extensions=[*extensions, "pymdownx.mark", ObsidianExtension(Resolver(context))], extension_configs=config)
+    md = Markdown(extensions=[*extensions, "pymdownx.mark", ObsidianExtension(Resolver(context), context.get("citations", {}))], extension_configs=config)
     lock = threading.Lock()
     native._get_markdown = lambda: (md, lock)

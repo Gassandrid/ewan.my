@@ -117,7 +117,7 @@ for (const [base, members] of baseMemberships) {
   }
 }
 const eigenfish = read("thoughts/eigenfish.html")
-assert.match(eigenfish, /data-marimo-runtime="0\.23\.9"/)
+assert.match(eigenfish, /data-marimo-runtime="0\.25\.2"/)
 assert.match(eigenfish, /eigenfish-figure/)
 // The build paints controls and figures; browser Python reruns every cell.
 assert.match(eigenfish, /<marimo-cell-code\b/)
@@ -137,8 +137,8 @@ for (const [file, title, islands] of [
   const html = read(file)
   standardShell(html, title)
   assert.match(html, /class="popover-hint marimo-page"/)
-  assert.match(html, /data-marimo-runtime="0\.23\.9"/)
-  assert.match(html, /data-marimo-version="0\.23\.9"/)
+  assert.match(html, /data-marimo-runtime="0\.25\.2"/)
+  assert.match(html, /data-marimo-version="0\.25\.2"/)
   assert.match(html, new RegExp(`data-marimo-islands="${islands}"`))
   assert.equal((html.match(/<marimo-island\b/g) ?? []).length, islands)
   marimoPagesProbed += 1
@@ -148,8 +148,8 @@ if (exists(showcasePath)) {
   const showcase = read(showcasePath)
   standardShell(showcase, "The Reactive Garden — Marimo × WigglyStuff")
   assert.match(showcase, /class="popover-hint marimo-page"/)
-  assert.match(showcase, /data-marimo-runtime="0\.23\.9"/)
-  assert.match(showcase, /data-marimo-version="0\.23\.9"/)
+  assert.match(showcase, /data-marimo-runtime="0\.25\.2"/)
+  assert.match(showcase, /data-marimo-version="0\.25\.2"/)
   assert.match(showcase, /data-showcase-hero/)
   assert.match(showcase, /data-component-coverage/)
   assert.match(showcase, /WigglyStuff 0\.5\.21 export/)

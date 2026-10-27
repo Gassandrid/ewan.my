@@ -4,19 +4,26 @@ import path from "node:path"
 import { spawnSync } from "node:child_process"
 import { fileURLToPath } from "node:url"
 import katex from "katex"
+import { toJsxRuntime } from "hast-util-to-jsx-runtime"
 import { h } from "preact"
-import { slugifyFilePath, transformLink } from "@quartz-community/utils/path"
+import { Fragment, jsx, jsxs } from "preact/jsx-runtime"
+import { render } from "preact-render-to-string"
+import { slugTag, slugifyFilePath, transformLink } from "@quartz-community/utils/path"
 
-const MARIMO_ISLANDS_VERSION = "0.23.9"
+const MARIMO_ISLANDS_VERSION = "0.25.2"
 const OBSIDIAN_WIKILINK = /(?<!!)\[\[([^\[\]\n]+)\]\]/g
+// Pandoc-style `[@key]` and `[@a; @b, p. 3]`, as notes write them. obsidian.py
+// matches the same groups when it renders Markdown.
+const CITATION_GROUP = /(?<![\\\[!])\[(?:[^\[\]\n]*?[\s;])?-?@\w[^\[\]\n]*\](?![\[(\]])/g
 const RENDER_SCRIPT_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), "render.py")
+const CITATIONS_SCRIPT_PATH = path.join(path.dirname(RENDER_SCRIPT_PATH), "citations.mjs")
 const COMPILER_FILES = ["render.py", "obsidian.py", "dependencies.py"].map((name) =>
   path.join(path.dirname(RENDER_SCRIPT_PATH), name),
 )
 const COMPILER_SOURCE = fs.readFileSync(fileURLToPath(import.meta.url), "utf8")
 const DISK_CACHE_DIR = path.join(process.cwd(), ".quartz-cache", "marimo")
-// Build-time execution matches Pyodide 0.27's interpreter.
-const EXECUTION_PYTHON = "3.12"
+// Build-time execution matches Pyodide 314's interpreter.
+const EXECUTION_PYTHON = "3.14"
 const WARM_PAGE_PATH = "static/marimo-warm.html"
 const DEFERRED_OUTPUT_DIR = "static/marimo-outputs"
 const INLINE_OUTPUT_LIMIT = 48 * 1024
@@ -131,23 +138,153 @@ function parseAppTitle(src) {
   return match ? match[1] : null
 }
 
-function parseDescription(src) {
-  const match = src.match(/^#\s*description:\s*(.+)$/m)
-  return match ? match[1].trim() : null
+// The comment lines above `# /// script` are the notebook's properties, written
+// like a note's frontmatter: `# key: value`, list items as `#   - item`.
+export function parseHeader(src) {
+  const header = {}
+  let key = null
+  for (const line of src.split(/\r?\n/)) {
+    if (!line.startsWith("#") || line.startsWith("# ///")) break
+    const item = key && line.match(/^#\s+-\s+(.*)$/)
+    const field = line.match(/^#\s*([A-Za-z][\w-]*):\s*(.*)$/)
+    if (item) {
+      header[key] = [...(Array.isArray(header[key]) ? header[key] : []), unquote(item[1])]
+    } else if (field) {
+      key = field[1]
+      header[key] = field[2].trim() ? unquote(field[2]) : []
+    }
+  }
+  return header
 }
 
-function parseTags(src) {
-  const match = src.match(/^#\s*tags:\s*(.+)$/m)
-  if (!match) return []
-  return match[1]
-    .split(",")
-    .map((tag) => tag.trim())
+function unquote(value) {
+  return value.trim().replace(/^(["'])(.*)\1$/, "$2")
+}
+
+function headerList(value) {
+  if (value === undefined) return []
+  return (Array.isArray(value) ? value : value.split(","))
+    .map((item) => item.trim())
     .filter(Boolean)
 }
 
-// `# prerender: false` keeps a notebook out of build-time execution.
-function parsePrerender(src) {
-  return !/^#\s*prerender:\s*false\s*$/im.test(src)
+function headerDate(value) {
+  const date = typeof value === "string" && value ? new Date(value) : null
+  return date && !Number.isNaN(date.getTime()) ? date : null
+}
+
+// Note-style properties for the page: tags are slugged as in notes, dates use
+// the same aliases (`date`/`created`, `updated`/`modified`), and anything else
+// (class, related, author, ...) passes through for properties and Bases.
+export function notebookFrontmatter(header, title, description) {
+  const tags = [
+    ...new Set(headerList(header.tags ?? header.tag).map((tag) => slugTag(tag.replace(/^#/, "")))),
+  ]
+  const aliases = headerList(header.aliases ?? header.alias)
+  const { tag, alias, prerender, ...rest } = header
+  return {
+    ...rest,
+    title,
+    description,
+    tags,
+    ...(aliases.length ? { aliases } : {}),
+    cssclasses: ["marimo-page", ...headerList(header.cssclasses)],
+  }
+}
+
+// Every string passed straight to mo.md(...), with its prefix (r, f, rf, ...).
+function markdownBlocks(src) {
+  return Array.from(
+    src.matchAll(/mo\.md\(\s*([rRfFuU]{0,2})("""|'''|"|')([\s\S]*?)(?<!\\)\2/g),
+    (match) => ({ formatted: /f/i.test(match[1]), text: match[3] }),
+  )
+}
+
+// Search, previews and reading time see the notebook's prose, not only its
+// title: links reduced to their labels, citations and f-string fields dropped.
+export function notebookProse(src) {
+  return markdownBlocks(src)
+    .map(({ formatted, text }) => (formatted ? text.replace(/\{[^{}\n]*\}/g, "") : text))
+    .join("\n\n")
+    .replace(CITATION_GROUP, "")
+    .replace(OBSIDIAN_WIKILINK, (_, raw) => parseWikiLink(raw).label)
+    .replace(/\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g, "")
+    .replace(/^\s*(?:#{1,6}|[-*+]|\d+\.)\s+/gm, "")
+    .replace(/[*_`>]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+export function citationGroups(src) {
+  const groups = markdownBlocks(src).flatMap(
+    ({ text }) => text.replace(/(`+)[\s\S]*?\1/g, "").match(CITATION_GROUP) ?? [],
+  )
+  return [...new Set(groups)]
+}
+
+function hastToHtml(children) {
+  return render(
+    toJsxRuntime(
+      { type: "root", children },
+      { Fragment, jsx, jsxs, elementAttributeNameCase: "html" },
+    ),
+  )
+}
+
+// Citations go through the site's configured Citations and EwanCitations
+// transformers, so a notebook's inline cites and bibliography match a note's.
+// rehype-citation is async and generate() is not, so it runs in a child.
+export function renderCitations(ctx, groups) {
+  const transformers = ctx.cfg?.plugins?.transformers ?? []
+  const citations = transformers.find((plugin) => plugin.name === "Citations")
+  if (!groups.length || !citations) return null
+  const [[, options], ...after] = citations.htmlPlugins(ctx)
+  const follow = [
+    ...after,
+    ...(transformers.find((plugin) => plugin.name === "EwanCitations")?.htmlPlugins(ctx) ?? []),
+  ]
+  const locale = ctx.cfg?.configuration?.locale ?? "en-US"
+  let bibliography = ""
+  try {
+    bibliography = fs.readFileSync(path.resolve(options.bibliography), "utf8")
+  } catch {}
+  const key = createHash("sha256")
+    .update(
+      JSON.stringify([groups, options, locale, fs.readFileSync(CITATIONS_SCRIPT_PATH, "utf8")]),
+    )
+    .update(bibliography)
+    .digest("hex")
+  let tree = readDiskCache(`citations-${key}`)
+  if (!tree) {
+    const result = spawnSync(process.execPath, [CITATIONS_SCRIPT_PATH], {
+      encoding: "utf8",
+      input: JSON.stringify({ groups, options, locale }),
+      maxBuffer: 50 * 1024 * 1024,
+      timeout: 120_000,
+    })
+    try {
+      tree = JSON.parse(result.stdout)
+    } catch {
+      console.warn(
+        `[marimo] citations skipped: ${(result.stderr || result.error?.message || "").trim().slice(-400)}`,
+      )
+      return null
+    }
+    writeDiskCache(`citations-${key}`, tree)
+  }
+  for (const plugin of follow) {
+    const [attach, ...args] = Array.isArray(plugin) ? plugin : [plugin]
+    attach(...args)(tree)
+  }
+  const paragraphs = tree.children.filter((node) => node.tagName === "p")
+  if (paragraphs.length !== groups.length) return null
+  const inline = {}
+  groups.forEach((group, i) => {
+    const cited = paragraphs[i].children.some((node) => node.type === "element")
+    if (cited) inline[group] = hastToHtml(paragraphs[i].children)
+  })
+  const section = tree.children.find((node) => node.tagName === "section")
+  return { inline, bibliography: section ? hastToHtml([section]) : "" }
 }
 
 function parseRenderJson(stdout) {
@@ -369,12 +506,12 @@ export function prerenderMath(body) {
   })
 }
 
-function marimoHtml(rendered, runtimeVersion, slug, index, basePath) {
+function marimoHtml(rendered, runtimeVersion, slug, index, basePath, bibliography = "") {
   const loading = `<div class="marimo-loading" aria-live="polite"><span class="marimo-loading-spinner" aria-hidden="true"></span><span class="marimo-loading-text">Starting interactive Python…</span></div>`
   const versionAttr = rendered.marimoVersion
     ? ` data-marimo-version="${escapeHtmlAttr(rendered.marimoVersion)}"`
     : ""
-  return `<div class="marimo-notebook-page" data-marimo-page="${escapeHtmlAttr(slug)}" data-marimo-state="loading" data-marimo-runtime="${escapeHtmlAttr(runtimeVersion)}"${versionAttr} data-marimo-islands="${rendered.islandCount}" data-marimo-reactive-islands="${rendered.reactiveIslandCount}" data-marimo-links="${escapeHtmlAttr(`${index.path}?v=${index.version}`)}">${loading}${deferLargeOutputs(rendered.body.replaceAll(LINK_INDEX_VERSION, index.version), basePath, deferredOutputs)}</div>`
+  return `<div class="marimo-notebook-page" data-marimo-page="${escapeHtmlAttr(slug)}" data-marimo-state="loading" data-marimo-runtime="${escapeHtmlAttr(runtimeVersion)}"${versionAttr} data-marimo-islands="${rendered.islandCount}" data-marimo-reactive-islands="${rendered.reactiveIslandCount}" data-marimo-links="${escapeHtmlAttr(`${index.path}?v=${index.version}`)}">${loading}${deferLargeOutputs(rendered.body.replaceAll(LINK_INDEX_VERSION, index.version), basePath, deferredOutputs)}</div>${bibliography}`
 }
 
 // A standalone page the site loads in a hidden iframe from any page, so the
@@ -486,29 +623,32 @@ export default function MarimoPageType(opts = {}) {
         const src = path.join(contentRoot, fp)
         const basename = path.basename(fp, ".marimo.py")
         const slug = slugifyFilePath(fp.replace(/\.marimo\.py$/, ".md"))
-        let title = filenameToTitle(basename)
-        let description = `Interactive marimo notebook: ${title}`
-        let tags = []
         let fileContent = ""
         try {
           fileContent = fs.readFileSync(src, "utf8")
-          title = parseAppTitle(fileContent) ?? title
-          description = parseDescription(fileContent) ?? description
-          tags = parseTags(fileContent)
         } catch {}
+        const header = parseHeader(fileContent)
+        if (String(header.draft).toLowerCase() === "true") return []
+        const title = parseAppTitle(fileContent) ?? filenameToTitle(basename)
+        const description = header.description || `Interactive marimo notebook: ${title}`
         const obsidianLinks = compileObsidianLinks(fileContent, slug, allSlugs)
+        const citations = renderCitations(ctx, citationGroups(fileContent))
         const rendered = renderIsland(src, {
           failOnError,
           runtimeVersion,
-          execute: execute && parsePrerender(fileContent),
+          execute: execute && String(header.prerender).toLowerCase() !== "false",
           linkIndexFile,
           markdownContext: {
             currentSlug: slug,
             index: `${latestLinkIndex.path}?v=${LINK_INDEX_VERSION}`,
+            ...(citations ? { citations: citations.inline } : {}),
           },
         })
         if (!rendered?.body) return []
         const stat = fs.statSync(src)
+        const created = headerDate(header.created ?? header.date) ?? stat.birthtime
+        const modified =
+          headerDate(header.modified ?? header.updated ?? header.lastmod) ?? stat.mtime
         return [
           {
             slug,
@@ -517,14 +657,21 @@ export default function MarimoPageType(opts = {}) {
               slug,
               relativePath: fp,
               filePath: fp,
-              dates: { created: stat.birthtime, modified: stat.mtime, published: stat.birthtime },
+              dates: { created, modified, published: headerDate(header.published) ?? created },
               defaultDateType: "created",
-              frontmatter: { title, tags, description, cssclasses: ["marimo-page"] },
-              text: `${title}. ${description}`,
+              frontmatter: notebookFrontmatter(header, title, description),
+              text: `${title}. ${description}\n\n${notebookProse(fileContent)}`,
               description,
               links: obsidianLinks.links,
               isMarimo: true,
-              marimoHtml: marimoHtml(rendered, runtimeVersion, slug, latestLinkIndex, basePath),
+              marimoHtml: marimoHtml(
+                rendered,
+                runtimeVersion,
+                slug,
+                latestLinkIndex,
+                basePath,
+                citations?.bibliography,
+              ),
             },
           },
         ]

@@ -3,17 +3,17 @@
 # requires-python = ">=3.12"
 # dependencies = [
 #     "anywidget",
-#     "marimo==0.23.9",
+#     "marimo==0.25.2",
 #     "numpy",
 #     "plotly==5.24.1",
 #     "traitlets",
-#     "wigglystuff==0.5.32",
+#     "wigglystuff==0.5.36",
 # ]
 # ///
 
 import marimo
 
-__generated_with = "0.23.9"
+__generated_with = "0.25.2"
 app = marimo.App(width="columns", app_title="Eigencreatures")
 
 with app.setup(hide_code=True):
@@ -837,8 +837,6 @@ def anatomy_html(body, palette):
 @app.cell(column=0, hide_code=True)
 def _():
     mo.md(r"""
-    # Eigencreatures
-
     Every creature is the spectrum of a matrix pencil
     $A(t) = B + \sum_m t_m E_m$, sampled over many parameter vectors $t$.
     Classic eigenfish ([[Simone Conradi]]) replace a few entries of a small

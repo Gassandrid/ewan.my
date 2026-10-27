@@ -172,7 +172,7 @@ export function watchMarimoTheme(page) {
   function sync() {
     frame = 0
     if (disposed || !page.isConnected) return
-    // 0.23.9 samples the islands host theme once. Its VS Code host attribute is
+    // 0.25.2 samples the islands host theme once. Its VS Code host attribute is
     // its existing live host observer; bridge Quartz through that listener.
     // Scope and restore it when leaving the notebook, without remounting UIs.
     const value = `vscode-${theme()}`

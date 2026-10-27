@@ -4,10 +4,15 @@ import test from "node:test"
 import { spawnSync } from "node:child_process"
 import {
   buildObsidianContext,
+  citationGroups,
   compileObsidianLinks,
   deferLargeOutputs,
   linkIndex,
+  notebookFrontmatter,
+  notebookProse,
+  parseHeader,
   prerenderMath,
+  renderCitations,
   stripStaticWidgets,
 } from "./ewan-marimo/index.js"
 
@@ -143,4 +148,97 @@ test("Browser packages load before notebook cells without replacing Pyodide libr
     timeout: 30000,
   })
   assert.equal(result.status, 0, result.stdout + result.stderr)
+})
+
+const NOTEBOOK = `# description: Models disagree: a test.
+# tags:
+#   - "#comp-neuro/models"
+#   - cs/ai/encoder
+# date: 2026-10-25
+# updated: 2026-10-26
+# class: note
+# /// script
+# dependencies = ["marimo"]
+# ///
+# tags: not-a-header
+
+@app.cell
+def _():
+    mo.md(r"""
+    ## A heading
+    See [[Visual Cortex]] and [[TribeV2|my experiments]] [@henderson2026; @prince2026], with $x^2$.
+    """)
+    mo.md(f"Scores {own:.1f} SDs, not \`[@code]\` or x[a @ b] [@henderson2026].")
+    matrix[a @ b]
+`
+
+test("Notebook header lines are note-style properties", () => {
+  const header = parseHeader(NOTEBOOK)
+  assert.deepEqual(header, {
+    description: "Models disagree: a test.",
+    tags: ["#comp-neuro/models", "cs/ai/encoder"],
+    date: "2026-10-25",
+    updated: "2026-10-26",
+    class: "note",
+  })
+  const fm = notebookFrontmatter(header, "Title", header.description)
+  assert.deepEqual(fm.tags, ["comp-neuro/models", "cs/ai/encoder"])
+  assert.equal(fm.class, "note")
+  assert.deepEqual(fm.cssclasses, ["marimo-page"])
+  assert.deepEqual(notebookFrontmatter(parseHeader("# tags: a, b c\n"), "T", "").tags, ["a", "b-c"])
+})
+
+test("Notebook prose feeds search; citation groups come only from Markdown", () => {
+  const prose = notebookProse(NOTEBOOK)
+  assert.match(prose, /^A heading See Visual Cortex and my experiments , with \. Scores SDs/)
+  assert.doesNotMatch(prose, /@henderson|\{own|\$|##/)
+  assert.deepEqual(citationGroups(NOTEBOOK), ["[@henderson2026; @prince2026]", "[@henderson2026]"])
+})
+
+test("Notebook citations use the site's Citations plugins and bibliography", () => {
+  const ctx = {
+    cfg: {
+      configuration: { locale: "en-US" },
+      plugins: { transformers: [] },
+    },
+  }
+  assert.equal(renderCitations(ctx, ["[@x]"]), null)
+  const bib = "plugins/ewan-marimo/fixtures/citations.bib"
+  const tree = { children: [] }
+  ctx.cfg.plugins.transformers = [
+    {
+      name: "Citations",
+      htmlPlugins: () => [
+        [
+          () => {},
+          {
+            bibliography: bib,
+            linkCitations: true,
+            csl: "apa",
+            lang: "en-US",
+            suppressBibliography: false,
+          },
+        ],
+      ],
+    },
+    {
+      name: "EwanCitations",
+      htmlPlugins: () => [() => (t) => tree.children.push(...t.children)],
+    },
+  ]
+  const out = renderCitations(ctx, [
+    "[@henderson2026]",
+    "[@missing2026]",
+    "[@henderson2026; @prince2026]",
+  ])
+  assert.deepEqual(Object.keys(out.inline), ["[@henderson2026]", "[@henderson2026; @prince2026]"])
+  assert.match(
+    out.inline["[@henderson2026]"],
+    /^<span[^>]*>\(<a href="#bib-henderson2026">Henderson et al\., 2026<\/a>\)<\/span>$/,
+  )
+  assert.match(
+    out.inline["[@henderson2026; @prince2026]"],
+    /2026<\/a>; <a href="#bib-prince2026">Prince et al\., 2026<\/a>\)/,
+  )
+  assert.ok(tree.children.length > 0, "follow-up plugins see the tree")
 })

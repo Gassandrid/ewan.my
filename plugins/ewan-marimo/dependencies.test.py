@@ -10,7 +10,7 @@ from dependencies import browser_dependencies, bootstrap_code, build_requirement
 class BrowserDependencyTests(unittest.TestCase):
     def test_imported_ui_packages_are_installed(self):
         self.assertEqual(browser_dependencies('from wigglystuff import TangleLatex\nimport plotly.graph_objects as go'),
-                         ['wigglystuff==0.5.21', 'plotly==5.24.1'])
+                         ['wigglystuff==0.5.36', 'plotly==5.24.1'])
 
     def test_import_examples_and_stdlib_do_not_trigger_installs(self):
         self.assertEqual(browser_dependencies('import math\ntext = "from wigglystuff import Tangle"\n# import plotly'), [])
@@ -25,7 +25,7 @@ class BrowserDependencyTests(unittest.TestCase):
         self.assertEqual(browser_dependencies(source), [])
 
     def test_bootstrap_is_awaited_browser_only_and_does_not_import_ui_early(self):
-        code = bootstrap_code(['wigglystuff==0.5.21'])
+        code = bootstrap_code(['wigglystuff==0.5.36'])
         tree = ast.parse(code)
         self.assertIsInstance(tree.body[1], ast.If)
         self.assertTrue(any(isinstance(node, ast.Await) for node in ast.walk(tree.body[1])))
@@ -37,19 +37,19 @@ class BrowserDependencyTests(unittest.TestCase):
 
     def test_lotka_source_gets_both_missing_packages(self):
         source = Path('content/Notes/Modeling Complex Systems/lotka_volterra.marimo.py').read_text()
-        self.assertEqual(browser_dependencies(source), ['wigglystuff==0.5.21', 'plotly==5.24.1'])
+        self.assertEqual(browser_dependencies(source), ['wigglystuff==0.5.36', 'plotly==5.24.1'])
 
     def test_build_environment_matches_the_browser_not_author_pins(self):
         source = ('# /// script\n# dependencies = ["marimo==0.24.2", "numpy==2.4.6", "plotly==7.0.0", "anywidget==0.11.0"]\n# ///\n'
                   'import json\nimport numpy\nimport plotly.graph_objects\nfrom sklearn import svm\nimport marimo')
-        self.assertEqual(build_requirements(source, '0.23.9'),
-                         ['marimo==0.23.9', 'plotly==7.0.0', 'numpy', 'scikit-learn', 'anywidget'])
+        self.assertEqual(build_requirements(source, '0.25.2'),
+                         ['marimo==0.25.2', 'plotly==7.0.0', 'numpy', 'scikit-learn', 'anywidget'])
 
     def test_warm_plan_covers_every_notebook_with_one_pin_per_package(self):
         plan = warm_plan(['import numpy\nfrom wigglystuff import Tangle', 'import scipy\nimport plotly.express',
                           '# /// script\n# dependencies = ["wigglystuff==0.5.32"]\n# ///\nimport wigglystuff'])
         self.assertEqual(plan['modules'], ['numpy', 'plotly', 'scipy', 'wigglystuff'])
-        self.assertEqual(sorted(plan['requirements']), ['plotly==5.24.1', 'wigglystuff==0.5.21'])
+        self.assertEqual(sorted(plan['requirements']), ['plotly==5.24.1', 'wigglystuff==0.5.36'])
 
 if __name__ == '__main__':
     unittest.main()

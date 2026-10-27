@@ -7,7 +7,7 @@ import GaggiMatePage from "./ewan-gaggimate-page/index.js"
 import { patchGraphRuntime } from "./ewan-graph/components.js"
 import { LorenzBackground } from "./ewan-lorenz/components.js"
 import { compileObsidianLinks } from "./ewan-marimo/index.js"
-import MarimoResources from "./ewan-marimo-resources/index.js"
+import MarimoResources, { linkNotebookPages } from "./ewan-marimo-resources/index.js"
 import MorrisLecarPage from "./ewan-morris-lecar-page/index.js"
 import EwanMorrisLecar from "./ewan-morris-lecar/index.js"
 import EwanRunPython from "./ewan-run-python/index.js"
@@ -58,7 +58,7 @@ test("Marimo assets are pinned and conditional", () => {
   assert.match(s, /delete window\.__MARIMO_EXPORT_CONTEXT__/)
   assert.doesNotMatch(s, /untouched/)
   assert.doesNotMatch(s, /setTimeout\(function\(\) \{[\s\S]*location\.reload[\s\S]*\}, 250\)/)
-  assert.match(s, /islands@0\.23\.9/)
+  assert.match(s, /islands@0\.25\.2/)
   assert.doesNotMatch(s, /fonts\.googleapis/)
 })
 
@@ -220,4 +220,29 @@ test("graph compatibility patch excludes .base nodes", () => {
   assert.match(patched, /\\\.base/)
   assert.match(patched, /continue/)
   assert.throws(() => patchGraphRuntime("changed upstream"), /runtime changed/)
+})
+
+test("Note links to a notebook source go to its page, not the .py download", () => {
+  const files = [
+    "Thoughts/Eigenfish.marimo.py",
+    "Notes/Eigenfish.md",
+    "A/Twin.marimo.py",
+    "B/Twin.marimo.py",
+  ]
+  const t = (src) => linkNotebookPages(src, files)
+  assert.equal(t("[[Eigenfish.marimo.py|Eigenfish]]"), "[[Thoughts/Eigenfish|Eigenfish]]")
+  assert.equal(t("[[Eigenfish.marimo]]"), "[[Thoughts/Eigenfish|Eigenfish]]")
+  assert.equal(t("[[thoughts/eigenfish.marimo.py#Part]]"), "[[Thoughts/Eigenfish#Part|eigenfish]]")
+  assert.equal(t("| [[Eigenfish.marimo.py\\|Fish]] |"), "| [[Thoughts/Eigenfish\\|Fish]] |")
+  for (const kept of [
+    "![[Eigenfish.marimo.py]]",
+    "[[Twin.marimo.py]]",
+    "[[Eigenfish]]",
+    "[[Missing.marimo.py]]",
+  ])
+    assert.equal(t(kept), kept)
+  assert.equal(
+    MarimoResources().textTransform({ allFiles: files }, "[[Eigenfish.marimo.py]]"),
+    "[[Thoughts/Eigenfish|Eigenfish]]",
+  )
 })
