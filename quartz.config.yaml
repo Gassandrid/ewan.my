@@ -182,8 +182,9 @@ plugins:
   - source: ./plugins/ewan-presence
     enabled: true
     layout:
-      position: afterBody
+      position: beforeBody
       priority: 5
+      group: toolbar
   - source: ./plugins/ewan-marimo-resources
     enabled: true
     order: 120

@@ -1,98 +1,80 @@
-.presence-board {
-  position: relative;
-  container-type: inline-size;
+/* Homepage presence sits on the left of the toolbar, where breadcrumbs go elsewhere. */
+.sticky-header-bar > .flex-component:has(.presence-strip) {
+  flex: 1 1 auto;
   min-width: 0;
-  margin: 1.5rem 0;
-  box-sizing: border-box;
-  padding: 1rem;
-  border: 1px solid var(--lightgray);
-  border-radius: 5px;
-  color: var(--darkgray);
-  font: 0.85rem/1.5 var(--bodyFont);
 }
-.presence-head {
+.sticky-header-bar > .flex-component > div:has(> .presence-strip) {
+  flex: 1 1 auto !important;
+  justify-content: flex-start;
+  width: auto;
+  min-width: 0;
+  margin-right: auto;
+}
+.sticky-header-bar > .flex-component > div:empty {
+  display: none !important;
+}
+
+.presence-strip {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.presence-title {
-  color: var(--dark);
-  font: italic 1.15rem/1.3 var(--headerFont);
-}
-.presence-head [role="status"] {
-  font-size: 0.75rem;
-}
-.presence-head [role="status"]::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  background: var(--gray);
-}
-.presence-board[data-state="live"] [role="status"]::before {
-  background: var(--pine);
-}
-.presence-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin: 1rem 0;
-}
-.presence-columns h2 {
-  margin: 0 0 0.45rem;
-  color: var(--darkgray);
-  font: 0.7rem var(--codeFont);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.presence-columns ul {
+  gap: 0.3rem;
+  min-width: 0;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   list-style: none;
 }
-.presence-columns li {
-  min-width: 0;
+.presence-strip[data-state="offline"] {
+  display: none;
+}
+.presence-strip > li {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0.25rem 0;
-  min-height: 1.5rem;
-}
-.presence-chip {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--visitor-ink);
   flex: 0 0 auto;
-}
-.presence-name {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.presence-columns time {
-  margin-left: auto;
+  align-items: center;
+  gap: 0.3rem;
+  height: 1.4rem;
+  margin: 0;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  border: 1px solid color-mix(in srgb, var(--visitor-ink, var(--gray)) 55%, transparent);
+  border-radius: 4px;
   color: var(--darkgray);
-  font: 0.7rem var(--codeFont);
+  font: 0.68rem/1 var(--codeFont);
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
 }
-.presence-empty {
-  font-size: 0.75rem;
+.presence-strip > li[data-me] {
+  background: color-mix(in srgb, var(--visitor-ink) 14%, transparent);
+  color: var(--dark);
 }
+.presence-strip > .presence-more {
+  border-color: var(--lightgray);
+}
+.presence-arriving {
+  animation: presence-arrive 400ms ease-out;
+}
+@keyframes presence-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+}
+
+.presence-pointer {
+  display: block;
+  flex: 0 0 auto;
+  width: 7px;
+  height: 9px;
+  background: var(--visitor-ink);
+  clip-path: polygon(0 0, 100% 65%, 48% 70%, 22% 100%);
+}
+
 .ewan-shared-cursor {
   pointer-events: none !important;
   z-index: 999 !important;
 }
 .ewan-shared-cursor .presence-pointer {
-  display: block;
   width: 12px;
   height: 16px;
-  background: var(--visitor-ink);
-  clip-path: polygon(0 0, 100% 65%, 48% 70%, 22% 100%);
 }
 .ewan-shared-cursor .presence-cursor-label {
   position: absolute;
@@ -106,82 +88,32 @@
   font: 0.7rem var(--bodyFont);
   white-space: nowrap;
 }
+
+@media (max-width: 800px) {
+  .sticky-header-bar > .flex-component:has(.presence-strip) {
+    padding-left: 0.75rem;
+  }
+}
 @media (max-width: 480px) {
-  .presence-columns {
-    gap: 1rem;
+  .presence-strip > li:not(.presence-more) {
+    width: 1.4rem;
+    padding: 0;
+    justify-content: center;
   }
-  .presence-head {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-  .presence-columns li {
-    flex-wrap: wrap;
-  }
-  .presence-columns time {
-    flex-basis: 100%;
-    margin-left: 14px;
+  .presence-strip time {
+    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .presence-arriving,
   .ewan-shared-cursor {
     transition: none !important;
     animation: none !important;
   }
 }
 @media print {
-  .presence-board,
+  .presence-strip,
   .ewan-shared-cursor {
     display: none !important;
-  }
-}
-
-/* Botanical linework uses the shared theme in both modes. */
-.presence-garden {
-  display: block;
-  width: 180px;
-  height: 48px;
-  margin: 0 auto 0.5rem;
-  stroke: var(--pine);
-  stroke-width: 1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.presence-garden circle {
-  fill: var(--ochre);
-  stroke: none;
-}
-.presence-spark {
-  stroke: var(--secondary);
-}
-.presence-columns > div {
-  min-width: 0;
-}
-.sidebar.left > .presence-board {
-  flex-shrink: 0;
-  width: 100%;
-  margin: 0;
-}
-@container (max-width: 340px) {
-  .presence-head {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-  .presence-columns {
-    grid-template-columns: 1fr;
-  }
-  .presence-columns li {
-    flex-wrap: nowrap;
-  }
-  .presence-columns time {
-    flex-basis: auto;
-    margin-left: auto;
-  }
-}
-@media (min-width: 1200px) {
-  .page > #quartz-body > .sidebar.left:has(> .presence-board) {
-    overflow-y: auto;
-    scrollbar-width: thin;
   }
 }

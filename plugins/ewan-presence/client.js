@@ -49,54 +49,42 @@ function identity(key) {
   }
 }
 
-function note(text) {
-  const li = document.createElement("li")
-  li.className = "presence-empty"
-  li.textContent = text
-  return li
-}
+const clock = new Intl.DateTimeFormat([], { hour: "2-digit", minute: "2-digit", hour12: false })
 
-function row(visitor, timestamp) {
+function pill(visitor) {
   const li = document.createElement("li")
-  const chip = document.createElement("i")
-  chip.className = "presence-chip"
-  chip.style.setProperty("--visitor-ink", visitor.color)
-  chip.setAttribute("aria-hidden", "true")
-  const name = document.createElement("span")
-  name.className = "presence-name"
-  name.textContent = visitor.isMe ? `${visitor.name} (you)` : visitor.name
+  li.style.setProperty("--visitor-ink", visitor.color)
+  li.title = visitor.isMe ? `${visitor.name} (you)` : visitor.name
+  if (visitor.isMe) li.dataset.me = ""
+  const pointer = document.createElement("i")
+  pointer.className = "presence-pointer"
+  pointer.setAttribute("aria-hidden", "true")
   const time = document.createElement("time")
-  time.dateTime = new Date(timestamp).toISOString()
-  time.textContent = new Date(timestamp).toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
+  time.dateTime = new Date(visitor.at).toISOString()
+  time.textContent = clock.format(visitor.at)
+  li.append(pointer, time)
+  li.classList.add("presence-arriving")
+  li.addEventListener("animationend", () => li.classList.remove("presence-arriving"), {
+    once: true,
   })
-  time.title = new Date(timestamp).toLocaleString()
-  li.append(chip, name, time)
   return li
 }
 
 // This is the site's sole PlayHTML owner. Pin the package because its full
 // teardown export is test-oriented; it closes all sockets, observers and cursors.
 let disposePrevious
-export function mount(board) {
+export function mount(strip) {
   disposePrevious?.()
   let disposed = false
   let epoch = 0
   let unsubscribe
   let timeout
   let roster = new Map()
-  let departures = []
-  let firstSnapshot = true
+  let pills = new Map()
   let joined = false
-  const status = board.querySelector("[data-presence-status]")
-  const arrivals = board.querySelector("[data-arrivals]")
-  const departed = board.querySelector("[data-departures]")
 
-  function setState(state, label) {
-    board.dataset.state = state
-    status.textContent = label
+  function setState(state) {
+    strip.dataset.state = state
   }
 
   function render(presences) {
@@ -113,26 +101,32 @@ export function mount(board) {
           : String(id).slice(0, 512)
       next.set(id, { ...identity(key), at, isMe: !!view.isMe })
     }
-    if (!firstSnapshot) {
-      for (const [id, visitor] of roster) {
-        if (!next.has(id) && !visitor.isMe) departures.unshift({ ...visitor, at: now })
-      }
-    }
-    firstSnapshot = false
     roster = next
-    departures = departures.slice(0, 3)
-    const people = [...roster.values()].sort(
-      (a, b) => Number(b.isMe) - Number(a.isMe) || b.at - a.at,
+    const people = [...roster.entries()].sort(
+      ([, a], [, b]) => Number(b.isMe) - Number(a.isMe) || a.at - b.at,
     )
-    setState("live", `${people.length} ${people.length === 1 ? "person" : "people"} here`)
-    const rows = people.slice(0, 5).map((person) => row(person, person.at))
-    if (people.length > 5) rows.push(note(`+${people.length - 5} more`))
-    arrivals.replaceChildren(...(rows.length ? rows : [note("Waiting for arrivals…")]))
-    departed.replaceChildren(
-      ...(departures.length
-        ? departures.map((person) => row(person, person.at))
-        : [note("None seen this visit.")]),
+    setState("live")
+    strip.setAttribute(
+      "aria-label",
+      `${people.length} ${people.length === 1 ? "visitor" : "visitors"} here`,
     )
+    // Reuse pills so only genuine arrivals animate in. Identity can resolve
+    // after the first packet, so the name is part of the key.
+    const kept = new Map()
+    const rows = people.slice(0, 5).map(([id, person]) => {
+      const key = `${id}\n${person.name}\n${person.isMe}`
+      const el = pills.get(key) ?? pill(person)
+      kept.set(key, el)
+      return el
+    })
+    pills = kept
+    if (people.length > 5) {
+      const more = document.createElement("li")
+      more.className = "presence-more"
+      more.textContent = `+${people.length - 5}`
+      rows.push(more)
+    }
+    strip.replaceChildren(...rows)
     // Identity can arrive after the first cursor packet.
     for (const cursor of document.querySelectorAll(".ewan-shared-cursor")) {
       const person = roster.get(cursor.dataset.visitor)
@@ -171,7 +165,7 @@ export function mount(board) {
     }
     joined = false
     roster.clear()
-    firstSnapshot = true
+    pills.clear()
     void resetPlayHTML()
     document.querySelectorAll(".ewan-shared-cursor").forEach((el) => el.remove())
   }
@@ -179,15 +173,15 @@ export function mount(board) {
   function unavailable() {
     if (disposed) return
     disconnect()
-    setState("offline", "Shared space unavailable")
-    arrivals.replaceChildren(note("Connection lost. Reload to reconnect."))
+    setState("offline")
+    strip.replaceChildren()
   }
 
   async function connect() {
     if (disposed) return
     disconnect()
     const ticket = epoch
-    setState("connecting", "Connecting…")
+    setState("connecting")
     timeout = setTimeout(unavailable, 12000)
     try {
       await playhtml.init({

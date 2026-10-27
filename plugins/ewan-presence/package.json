@@ -20,7 +20,7 @@
     "components": {
       "Presence": {
         "displayName": "Homepage arrivals",
-        "defaultPosition": "afterBody",
+        "defaultPosition": "beforeBody",
         "defaultPriority": 5
       }
     }
