@@ -285,6 +285,26 @@ audio::-webkit-media-controls-panel {
       align-items: center;
       justify-content: center;
     }
+
+    > div:empty {
+      display: none !important;
+    }
+
+    // Homepage presence takes the left of the bar, where breadcrumbs go elsewhere.
+    // Lives here, not in the plugin: plugin CSS is layered and loses to these rules.
+    &:has(.presence-strip) {
+      flex: 1 1 auto;
+      min-width: 0;
+      margin-left: 0;
+    }
+
+    > div:has(> .presence-strip) {
+      flex: 1 1 auto !important;
+      justify-content: flex-start;
+      width: auto;
+      min-width: 0;
+      margin-right: auto;
+    }
   }
 
   .search {
@@ -785,6 +805,10 @@ footer {
 
     > .flex-component {
       padding-right: 0.75rem;
+    }
+
+    > .flex-component:has(.presence-strip) {
+      padding-left: 0.75rem;
     }
   }
 
