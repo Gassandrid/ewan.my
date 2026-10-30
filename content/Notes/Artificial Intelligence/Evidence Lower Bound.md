@@ -11,7 +11,7 @@ tags:
   - generated
 class:
   - note
-date: 2025-11-05
+date: 2024-11-05T00:00:00
 source:
   - "[[Evidence Lower Bound (ELBO) - CLEARLY EXPLAINED!]]"
 related:
@@ -19,7 +19,7 @@ related:
   - "[[Jensen's Inequality]]"
   - "[[Variational Inference]]"
   - "[[Variational Autoencoder]]"
-updated: 2026-09-29T15:21:12-04:00
+updated: 2026-10-26T16:19:12-04:00
 ---
 
 The **Evidence Lower Bound (ELBO)** is the core quantity in variational inference and the key optimization objective for training [[Variational Autoencoder|Variational Autoencoders]]. It provides a tractable lower bound on the log marginal likelihood (the "evidence") of observed data. 
@@ -164,7 +164,7 @@ $$
 
 ---
 
-## The Reparameterization Trick
+## Reparameterization Trick
 
 To optimize the ELBO via gradient descent, we need $\nabla_{\phi} \mathcal{L}(\theta, \phi; x)$. The challenge is that the expectation is over $q_{\phi}(z|x)$, which depends on $\phi$.
 
@@ -220,10 +220,7 @@ In practice, $L=1$ (single sample) often works well during training.
 
 ---
 
-## Connections
+also of note....
 
 - **[[Variational Inference]]**: ELBO is the core objective function
-- **[[Kullback-Leibler Divergence]]**: The gap between ELBO and evidence
 - **[[Jensen's Inequality]]**: Alternative derivation of the bound
-- **[[Information Theory]]**: ELBO relates to mutual information and entropy
-- **[[Expectation-Maximization Algorithm]]**: ELBO generalizes the EM algorithm's objective

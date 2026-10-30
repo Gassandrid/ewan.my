@@ -1,6 +1,6 @@
 ---
 date: 2026-09-24T15:35:38-04:00
-updated: 2026-09-29T12:12:51-04:00
+updated: 2026-10-24T12:10:10-04:00
 aliases:
   - NMDAR
   - N-methyl-D-aspartate receptor
