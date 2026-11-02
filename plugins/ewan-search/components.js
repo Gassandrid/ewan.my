@@ -46,6 +46,38 @@ export function patchSearchRuntime(script) {
       ),
     "notebook highlighting",
   )
+  // Upstream indexes every note's full text on every page load, before it
+  // even wires up the search button: the largest main-thread cost on the site.
+  // Build the index once, when search is first opened, and await it before
+  // a query so the first search never reports "No results" early.
+  const init = script.match(
+    /async function (\w+)\(\)\{(\w+)\|\|\(\w+=await \w+\(\),await \w+\(\),\2=!0\)\}/,
+  )
+  if (!init) throw new Error("Quartz search runtime changed; update the lazy index adapter")
+  const initIndex = init[1]
+  replaceOnce(
+    new RegExp(init[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+    () =>
+      `function ${initIndex}(){return ${initIndex}.p??=(async()=>${init[0].slice(init[0].indexOf("{"))})().catch(e=>{${initIndex}.p=null;throw e})}`,
+    "lazy index",
+  )
+  replaceOnce(
+    new RegExp(
+      `(async function \\w+\\(\\)\\{\\w+\\(\\)),await ${initIndex}\\(\\)(,await \\w+\\(\\),\\w+\\(\\)\\})`,
+    ),
+    "$1$2",
+    "index on navigation",
+  )
+  replaceOnce(
+    /(\w+=(\w+)=>\{\w+=\2,\w+&&\(\w+\.style\.zIndex="9999"\),)/,
+    (match) => `${match}${initIndex}().catch(()=>{}),`,
+    "index when search opens",
+  )
+  replaceOnce(
+    /=async (\w+)=>\{let \w+=\1\.target\.value;/,
+    (match) => match.replace("{", `{await ${initIndex}();`),
+    "index before a query",
+  )
   return `const prepareNotebookPreviews = ${prepareNotebookPreviews.toString()};\n${script}`
 }
 

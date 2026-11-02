@@ -26,9 +26,11 @@ const isSamePage = (url: URL): boolean => {
 
 const getOpts = ({ target }: Event): { url: URL; scroll?: boolean } | undefined => {
   if (!isElement(target)) return
-  if (target.attributes.getNamedItem("target")?.value === "_blank") return
   const a = target.closest("a")
   if (!a) return
+  // The anchor decides, not the clicked descendant: a <span> inside a
+  // target="_blank" or download link must keep the browser's behaviour.
+  if ((a.target && a.target !== "_self") || a.hasAttribute("download")) return
   if ("routerIgnore" in a.dataset) return
   const { href } = a
   if (!isLocalUrl(href)) return
@@ -36,6 +38,7 @@ const getOpts = ({ target }: Event): { url: URL; scroll?: boolean } | undefined 
 }
 
 function notifyNav(url: FullSlug) {
+  shownPath = window.location.pathname
   const event: CustomEventMap["nav"] = new CustomEvent("nav", { detail: { url } })
   document.dispatchEvent(event)
 }
@@ -158,17 +161,27 @@ async function navigate(url: URL, isBack: boolean = false) {
 
 window.spaNavigate = navigate
 
+// The document currently shown. A popstate between two entries of the same
+// document (a heading jump and Back) is not a page change.
+let shownPath = window.location.pathname
+
 function createRouter() {
   if (typeof window !== "undefined") {
     window.addEventListener("click", async (event) => {
+      // A component that already handled the click (the contents rail's
+      // smooth scroll, a notebook boundary) owns it; so do modified clicks.
+      if (event.defaultPrevented || event.button !== 0) return
       const { url } = getOpts(event) ?? {}
       // dont hijack behaviour, just let browser act normally
-      if (!url || event.ctrlKey || event.metaKey) return
+      if (!url || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
       event.preventDefault()
 
-      if (isSamePage(url) && url.hash) {
-        const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
-        el?.scrollIntoView()
+      if (isSamePage(url) && (url.hash || url.href.endsWith("#"))) {
+        const el = url.hash
+          ? document.getElementById(decodeURIComponent(url.hash.substring(1)))
+          : null
+        if (el) el.scrollIntoView()
+        else if (!url.hash) window.scrollTo({ top: 0 })
         history.pushState({}, "", url)
         return
       }
@@ -176,11 +189,10 @@ function createRouter() {
       navigate(url, false)
     })
 
-    window.addEventListener("popstate", (event) => {
-      const { url } = getOpts(event) ?? {}
-      if (window.location.hash && window.location.pathname === url?.pathname) return
+    window.addEventListener("popstate", () => {
+      // Same document: the browser restores the scroll position itself.
+      if (window.location.pathname === shownPath) return
       navigate(new URL(window.location.toString()), true)
-      return
     })
   }
 

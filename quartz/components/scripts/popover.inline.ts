@@ -5,64 +5,20 @@ import { preparePopoverDocument } from "./popover-content"
 
 const p = new DOMParser()
 let activeAnchor: HTMLAnchorElement | null = null
+// A pointer sweeping across a list (the explorer, /rank, a margin) would
+// otherwise fetch and parse one whole page per link it crosses.
+const HOVER_INTENT_MS = 70
+let hoverTimer = 0
+const inflight = new Map<string, Promise<HTMLElement | null>>()
 
-async function mouseEnterHandler(
-  this: HTMLAnchorElement,
-  { clientX, clientY }: { clientX: number; clientY: number },
-) {
-  const link = (activeAnchor = this)
-  if (link.dataset.noPopover === "true") {
-    return
-  }
-
-  async function setPosition(popoverElement: HTMLElement) {
-    const { x, y } = await computePosition(link, popoverElement, {
-      strategy: "fixed",
-      middleware: [inline({ x: clientX, y: clientY }), shift(), flip()],
-    })
-    Object.assign(popoverElement.style, {
-      transform: `translate(${x.toFixed()}px, ${y.toFixed()}px)`,
-    })
-  }
-
-  function showPopover(popoverElement: HTMLElement) {
-    clearActivePopover()
-    popoverElement.classList.add("active-popover")
-    setPosition(popoverElement as HTMLElement)
-
-    if (hash !== "") {
-      const inner = popoverElement.querySelector(".popover-inner") as HTMLElement | null
-      if (inner) {
-        const targetAnchor = `#popover-internal-${hash.slice(1)}`
-        const heading = inner.querySelector(targetAnchor) as HTMLElement | null
-        if (heading) {
-          // leave ~12px of buffer when scrolling to a heading
-          inner.scroll({ top: heading.offsetTop - 12, behavior: "instant" })
-        }
-      }
-    }
-  }
-
-  const targetUrl = new URL(link.href)
-  const hash = decodeURIComponent(targetUrl.hash)
-  targetUrl.hash = ""
-  targetUrl.search = ""
-  const popoverId = `popover-${link.pathname}`
-  const prevPopoverElement = document.getElementById(popoverId)
-
-  // dont refetch if there's already a popover
-  if (!!document.getElementById(popoverId)) {
-    showPopover(prevPopoverElement as HTMLElement)
-    return
-  }
-
+async function buildPopover(targetUrl: URL, popoverId: string): Promise<HTMLElement | null> {
   const response = await fetchCanonical(targetUrl).catch((err) => {
     console.error(err)
   })
 
-  if (!response) return
+  if (!response) return null
   const rawContentType = response.headers.get("Content-Type")
-  if (!rawContentType) return
+  if (!rawContentType) return null
   const [contentType] = rawContentType.split(";")
   const [contentTypeCategory, typeInfo] = contentType.split("/")
 
@@ -104,26 +60,95 @@ async function mouseEnterHandler(
         el.id = targetID
       })
       const elts = [...html.getElementsByClassName("popover-hint")]
-      if (elts.length === 0) return
+      if (elts.length === 0) return null
 
       elts.forEach((elt) => popoverInner.appendChild(elt))
   }
 
-  if (!link.isConnected || document.getElementById(popoverId)) {
+  return popoverElement
+}
+
+function loadPopover(link: HTMLAnchorElement, targetUrl: URL, popoverId: string) {
+  let request = inflight.get(popoverId)
+  if (!request) {
+    request = buildPopover(targetUrl, popoverId)
+      .then((popoverElement) => {
+        if (!popoverElement) return null
+        const existing = document.getElementById(popoverId)
+        if (existing) return existing
+        if (!link.isConnected) return null
+        document.body.appendChild(popoverElement)
+        return popoverElement
+      })
+      .finally(() => inflight.delete(popoverId))
+    inflight.set(popoverId, request)
+  }
+  return request
+}
+
+function mouseEnterHandler(
+  this: HTMLAnchorElement,
+  { clientX, clientY }: { clientX: number; clientY: number },
+) {
+  const link = (activeAnchor = this)
+  window.clearTimeout(hoverTimer)
+  if (link.dataset.noPopover === "true") {
     return
   }
 
-  document.body.appendChild(popoverElement)
-  if (activeAnchor !== this) {
+  async function setPosition(popoverElement: HTMLElement) {
+    const { x, y } = await computePosition(link, popoverElement, {
+      strategy: "fixed",
+      middleware: [inline({ x: clientX, y: clientY }), shift(), flip()],
+    })
+    Object.assign(popoverElement.style, {
+      transform: `translate(${x.toFixed()}px, ${y.toFixed()}px)`,
+    })
+  }
+
+  function showPopover(popoverElement: HTMLElement) {
+    clearActivePopover()
+    activeAnchor = link
+    popoverElement.classList.add("active-popover")
+    setPosition(popoverElement as HTMLElement)
+
+    if (hash !== "") {
+      const inner = popoverElement.querySelector(".popover-inner") as HTMLElement | null
+      if (inner) {
+        const targetAnchor = `#popover-internal-${CSS.escape(hash.slice(1))}`
+        const heading = inner.querySelector(targetAnchor) as HTMLElement | null
+        if (heading) {
+          // leave ~12px of buffer when scrolling to a heading
+          inner.scroll({ top: heading.offsetTop - 12, behavior: "instant" })
+        }
+      }
+    }
+  }
+
+  const targetUrl = new URL(link.href)
+  const hash = decodeURIComponent(targetUrl.hash)
+  targetUrl.hash = ""
+  targetUrl.search = ""
+  const popoverId = `popover-${link.pathname}`
+  const prevPopoverElement = document.getElementById(popoverId)
+
+  // dont refetch if there's already a popover
+  if (prevPopoverElement) {
+    showPopover(prevPopoverElement)
     return
   }
 
-  showPopover(popoverElement)
+  hoverTimer = window.setTimeout(async () => {
+    if (activeAnchor !== link) return
+    const popoverElement = await loadPopover(link, targetUrl, popoverId)
+    if (popoverElement && activeAnchor === link && link.isConnected) showPopover(popoverElement)
+  }, HOVER_INTENT_MS)
 }
 
 function clearActivePopover() {
   activeAnchor = null
-  const allPopoverElements = document.querySelectorAll(".popover")
+  window.clearTimeout(hoverTimer)
+  const allPopoverElements = document.querySelectorAll(".popover.active-popover")
   allPopoverElements.forEach((popoverElement) => popoverElement.classList.remove("active-popover"))
 }
 

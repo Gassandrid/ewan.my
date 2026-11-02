@@ -256,6 +256,35 @@ export function createMarimoLoader(routes = [], warmUrl = null) {
     });
   }
 
+  // A link to a notebook heading (#id) finds nothing on arrival: markdown
+  // cells render later, inside shadow roots the browser does not search.
+  // Scroll to the heading once it exists, unless the reader has moved first.
+  var hashWatch = null;
+  function revealHash(page) {
+    hashWatch?.abort();
+    hashWatch = null;
+    var id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (_) { return; }
+    if (!id || document.getElementById(id)) return;
+    var watch = (hashWatch = new AbortController());
+    ["wheel", "touchstart", "keydown", "mousedown"].forEach(function(name) {
+      window.addEventListener(name, function() { watch.abort(); }, { once: true, passive: true, signal: watch.signal });
+    });
+    var tries = 0;
+    (function look() {
+      if (watch.signal.aborted || !page.isConnected || tries++ > 80) return watch.abort();
+      var found = null;
+      page.querySelectorAll("marimo-mime-renderer").forEach(function(host) {
+        if (!found && host.shadowRoot) found = host.shadowRoot.getElementById(id);
+      });
+      if (found) {
+        found.scrollIntoView({ block: "start" });
+        return watch.abort();
+      }
+      window.setTimeout(look, 250);
+    })();
+  }
+
   function hardNavigateCurrentPage() {
     // marimo 0.25.2 owns one global Pyodide session. A second, different
     // notebook needs a fresh browsing context; make that boundary automatic.
@@ -298,6 +327,7 @@ export function createMarimoLoader(routes = [], warmUrl = null) {
     ensureStyle();
     watchReadiness(page);
     ensureScript(page);
+    revealHash(page);
   }
 
   document.addEventListener("pointerover", function(event) {
@@ -352,6 +382,10 @@ export function createMarimoLoader(routes = [], warmUrl = null) {
     if (!warmUrl || warmFrame || !marimoRoutes.size || activeNotebook()) return;
     var connection = navigator.connection;
     if (connection?.saveData || /(?:slow-)?2g|3g/.test(connection?.effectiveType || "")) return;
+    // The warm-up boots Python and pulls every notebook's packages: tens of
+    // megabytes and a busy CPU. As the neural background does, leave phones
+    // and low-memory devices alone; a notebook still loads when opened.
+    if (window.matchMedia("(max-width: 800px)").matches || (navigator.deviceMemory || 8) < 4) return;
     var stampKey = "ewan-marimo-warm:" + warmUrl;
     try {
       if (Number(localStorage.getItem(stampKey)) > Date.now() - 12 * 3600 * 1000) return;

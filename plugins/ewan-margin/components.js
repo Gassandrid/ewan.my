@@ -1,5 +1,6 @@
 import { h } from "preact"
 import { resolveBasesEntries } from "./bases-resolver.js"
+import { FOLD_CSS, FOLD_PRESCRIPT, FOLD_RUNTIME, foldButton } from "./fold.js"
 
 // The reading margin: the works this note cites (the one in view marked) and
 // the notes that cite it, each opening to the sentence where it does, ordered by
@@ -119,6 +120,24 @@ export function listedInBases(allFiles) {
   return listings
 }
 
+const citersCache = new WeakMap()
+
+/** Listed files linking to each note, built once per build instead of per page. */
+export function citedBy(allFiles) {
+  const cached = citersCache.get(allFiles)
+  if (cached) return cached
+  const index = new Map()
+  for (const file of allFiles) {
+    if (file.unlisted === true) continue
+    for (const target of new Set(file.links ?? [])) {
+      if (!index.has(target)) index.set(target, [])
+      index.get(target).push(file)
+    }
+  }
+  citersCache.set(allFiles, index)
+  return index
+}
+
 // --- Where a citing note mentions this one --------------------------------
 
 function needles(title, slug) {
@@ -128,18 +147,32 @@ function needles(title, slug) {
   )
 }
 
+// A hub note is quoted on every page it links to; split and fold it once.
+const blockCache = new Map()
+function textBlocks(text) {
+  const source = String(text ?? "")
+  let cached = blockCache.get(source)
+  if (!cached) {
+    const blocks = source
+      .split(/\n+/)
+      .map((b) => b.replace(/\s+/g, " ").trim())
+      .filter(Boolean)
+    cached = { blocks, lower: blocks.map((b) => b.toLowerCase()) }
+    if (blockCache.size > 4000) blockCache.clear()
+    blockCache.set(source, cached)
+  }
+  return cached
+}
+
 /** The passage (¶, by line block) and a trimmed excerpt around the first mention. */
 export function mention(text, words, reach = 70) {
-  const blocks = String(text ?? "")
-    .split(/\n+/)
-    .map((b) => b.replace(/\s+/g, " ").trim())
-    .filter(Boolean)
+  const { blocks, lower: folded } = textBlocks(text)
   for (const word of words) {
     const lower = word.toLowerCase()
-    const n = blocks.findIndex((b) => b.toLowerCase().includes(lower))
+    const n = folded.findIndex((b) => b.includes(lower))
     if (n < 0) continue
     const block = blocks[n]
-    const at = block.toLowerCase().indexOf(lower)
+    const at = folded[n].indexOf(lower)
     let from = Math.max(0, at - reach)
     let to = Math.min(block.length, at + word.length + reach)
     if (from > 0) from = block.indexOf(" ", from) + 1
@@ -200,7 +233,9 @@ export function sourcesOf(tree) {
       id,
       author: author.split(",")[0].trim(),
       year: text.match(/\((\d{4}[a-z]?|n\.d\.)\)/)?.[1] ?? "",
-      title: text.split(/\)\.\s*/)[1]?.split(/[.?!]\s/)[0] ?? "",
+      // The sentence after the year, without a locator the sentence split cut
+      // short: "Neural Code (p. 2023.11.06)" must not end as "Neural Code (p".
+      title: (text.split(/\)\.\s*/)[1]?.split(/[.?!]\s/)[0] ?? "").replace(/\s*\([^)]*$/, ""),
       cited: citedIn.get(id) ?? [],
     }
   })
@@ -219,9 +254,7 @@ export function ReadingMargin() {
     const metrics = noteMetrics(allFiles)
     const title = fileData.frontmatter?.title ?? here
     const words = needles(title, here)
-    const citing = allFiles.filter(
-      (f) => f.unlisted !== true && f.slug !== slug && (f.links ?? []).includes(here),
-    )
+    const citing = (citedBy(allFiles).get(here) ?? []).filter((f) => f.slug !== slug)
     const notes = citing
       .filter((f) => !String(f.slug).endsWith(".base"))
       .map((f) => ({ file: f, slug: simplifySlug(f.slug), where: mention(f.text, words) }))
@@ -232,7 +265,8 @@ export function ReadingMargin() {
     // Base link metadata only applies global filters; its views may narrow
     // that scope further. Match the actual view results instead.
     const lists = listedInBases(allFiles).get(here) ?? []
-    const sources = tree ? sourcesOf(tree) : []
+    // A notebook's bibliography is part of its rendered body, not a Markdown tree.
+    const sources = sourcesOf(tree?.children?.length ? tree : (fileData.htmlAst ?? tree ?? {}))
     if (sources.length === 0 && notes.length === 0 && lists.length === 0) return null
 
     const link = (f, children, extra = {}) =>
@@ -250,12 +284,12 @@ export function ReadingMargin() {
       },
       sources.length > 0 &&
         h(
-          "div",
-          { class: "rm-sources" },
-          h("h3", { class: "rm-h" }, "Sources"),
+          "section",
+          { class: "rm-sources", "data-panel": "sources" },
+          h("h3", { class: "rm-h" }, foldButton("sources", "Sources", "rm-sources-body")),
           h(
             "ol",
-            null,
+            { class: "panel-body", id: "rm-sources-body" },
             sources.map((s) =>
               h(
                 "li",
@@ -275,56 +309,89 @@ export function ReadingMargin() {
         ),
       (notes.length > 0 || lists.length > 0) &&
         h(
-          "div",
-          { class: "rm-cited" },
-          h("h3", { class: "rm-h" }, "Cited in"),
-          notes.length > 0 &&
-            h(
-              "ul",
-              null,
-              notes.map(({ file, slug: s, where }) => {
-                const pos = metrics.position.get(s)
-                return h(
-                  "li",
-                  { key: s },
-                  h(
-                    "details",
-                    null,
+          "section",
+          { class: "rm-cited", "data-panel": "cited" },
+          h("h3", { class: "rm-h" }, foldButton("cited", "Cited in", "rm-cited-body")),
+          h(
+            "div",
+            { class: "panel-body", id: "rm-cited-body" },
+            notes.length > 0 &&
+              h(
+                "ul",
+                null,
+                notes.map(({ file, slug: s, where }) => {
+                  const pos = metrics.position.get(s)
+                  return h(
+                    "li",
+                    { key: s },
                     h(
-                      "summary",
-                      { title: pos ? ordinal(pos, metrics.count) : undefined },
-                      h("span", null, file.frontmatter?.title ?? s),
-                      where && h("i", { class: "rm-loc" }, `¶ ${where.para}`),
-                    ),
-                    h(
-                      "p",
+                      "details",
                       null,
-                      where
-                        ? ["“", where.before, h("b", null, where.hit), where.after, "”"]
-                        : "Linked without a quotable sentence.",
-                      link(file, `open ${file.frontmatter?.title ?? s} →`, {
-                        class: "internal rm-open",
-                      }),
+                      h(
+                        "summary",
+                        { title: pos ? ordinal(pos, metrics.count) : undefined },
+                        h("span", null, file.frontmatter?.title ?? s),
+                        where && h("i", { class: "rm-loc" }, `¶ ${where.para}`),
+                      ),
+                      h(
+                        "p",
+                        null,
+                        where
+                          ? ["“", where.before, h("b", null, where.hit), where.after, "”"]
+                          : "Linked without a quotable sentence.",
+                        link(file, `open ${file.frontmatter?.title ?? s} →`, {
+                          class: "internal rm-open",
+                        }),
+                      ),
                     ),
-                  ),
-                )
-              }),
-            ),
-          lists.length > 0 &&
-            h(
-              "p",
-              { class: "rm-see" },
-              "Listed in ",
-              lists.flatMap((f, i) => [i > 0 ? "; " : "", link(f, f.frontmatter?.title ?? f.slug)]),
-              ".",
-            ),
+                  )
+                }),
+              ),
+            lists.length > 0 &&
+              h(
+                "p",
+                { class: "rm-see" },
+                "Listed in ",
+                lists.flatMap((f, i) => [
+                  i > 0 ? "; " : "",
+                  link(f, f.frontmatter?.title ?? f.slug),
+                ]),
+                ".",
+              ),
+          ),
         ),
     )
   }
   Component.displayName = "ReadingMargin"
-  Component.css = MARGIN_CSS
-  Component.afterDOMLoaded = MARGIN_RUNTIME
+  Component.css = [FOLD_CSS, MARGIN_CSS]
+  Component.beforeDOMLoaded = FOLD_PRESCRIPT
+  Component.afterDOMLoaded = [FOLD_RUNTIME, MARGIN_RUNTIME]
   return Component
+}
+
+const histogramCache = new WeakMap()
+
+/** The distribution strip is the same on every page: bin it once per build. */
+function histogram(metrics) {
+  const cached = histogramCache.get(metrics)
+  if (cached) return cached
+  const logs = metrics.scores.map((s) => Math.log10(s * metrics.count))
+  let lo = Infinity
+  let hi = -Infinity
+  for (const v of logs) {
+    if (v < lo) lo = v
+    if (v > hi) hi = v
+  }
+  const bins = 36
+  const counts = new Array(bins).fill(0)
+  for (const v of logs)
+    counts[Math.min(bins - 1, Math.floor(((v - lo) / (hi - lo || 1)) * bins))] += 1
+  // Log heights: most notes share the floor score, and the tail is the interest.
+  const peak = Math.log1p(Math.max(...counts))
+  const tall = (c) => Math.max(1.5, (Math.log1p(c) / peak) * 10)
+  const result = { lo, hi, bins, counts, tall }
+  histogramCache.set(metrics, result)
+  return result
 }
 
 /** This note's PageRank: its place among all notes, on a strip of the distribution. */
@@ -335,16 +402,7 @@ export function NoteRank() {
     const position = metrics.position.get(here)
     if (!position || metrics.count < 2) return null
     const score = metrics.score.get(here)
-    const logs = metrics.scores.map((s) => Math.log10(s * metrics.count))
-    const lo = Math.min(...logs)
-    const hi = Math.max(...logs)
-    const bins = 36
-    const counts = new Array(bins).fill(0)
-    for (const v of logs)
-      counts[Math.min(bins - 1, Math.floor(((v - lo) / (hi - lo || 1)) * bins))] += 1
-    // Log heights: most notes share the floor score, and the tail is the interest.
-    const peak = Math.log1p(Math.max(...counts))
-    const tall = (c) => Math.max(1.5, (Math.log1p(c) / peak) * 10)
+    const { lo, hi, bins, counts, tall } = histogram(metrics)
     const w = 120
     const step = w / bins
     const x = ((Math.log10(score * metrics.count) - lo) / (hi - lo || 1)) * w
@@ -471,6 +529,14 @@ const MARGIN_RUNTIME = `
       if (back.length) li.insertAdjacentHTML("beforeend", " " + back.join(" "))
     }
   }
+  // Citations in the article, including those a notebook renders inside its
+  // markdown cells' shadow roots.
+  function citations() {
+    const found = [...document.querySelectorAll("article cite")]
+    for (const host of document.querySelectorAll(".center article marimo-mime-renderer"))
+      if (host.shadowRoot) found.push(...host.shadowRoot.querySelectorAll("cite"))
+    return found
+  }
   function follow() {
     watcher?.disconnect()
     const items = new Map([...document.querySelectorAll(".rm-sources li[data-bib]")].map((li) => [li.dataset.bib, li]))
@@ -478,22 +544,47 @@ const MARGIN_RUNTIME = `
     const visible = new Set()
     watcher = new IntersectionObserver((seen) => {
       seen.forEach((s) => (s.isIntersecting ? visible.add(s.target) : visible.delete(s.target)))
-      const lit = new Set([...visible].map((c) => c.querySelector("a[data-bib]")?.getAttribute("href")?.slice(1)))
+      // A group cite ([@a; @b]) puts every one of its works in view.
+      const lit = new Set()
+      for (const c of visible)
+        for (const a of c.querySelectorAll("a[data-bib]")) lit.add(a.getAttribute("href")?.slice(1))
       items.forEach((li, id) => li.classList.toggle("in-view", lit.has(id)))
     }, { rootMargin: "-10% 0px -30% 0px" })
-    document.querySelectorAll("article cite").forEach((c) => watcher.observe(c))
+    citations().forEach((c) => watcher.observe(c))
     items.forEach((li, id) => {
-      const cites = () => document.querySelectorAll('article cite:has(a[href="#' + CSS.escape(id) + '"])')
+      if (li.dataset.lit) return
+      li.dataset.lit = "1"
+      const href = "#" + id
+      const cites = () => citations().filter((c) => [...c.querySelectorAll("a[data-bib]")].some((a) => a.getAttribute("href") === href))
       li.addEventListener("mouseenter", () => cites().forEach((c) => c.classList.add("is-lit")))
       li.addEventListener("mouseleave", () => cites().forEach((c) => c.classList.remove("is-lit")))
+    })
+  }
+  // A notebook renders its cells late and may rerender them, replacing the
+  // citations being watched: follow again once its cells settle.
+  let notebook
+  let settle = 0
+  function followNotebook() {
+    notebook?.disconnect()
+    notebook = null
+    clearTimeout(settle)
+    const page = document.querySelector(".center .marimo-notebook-page")
+    if (!page || !document.querySelector(".rm-sources")) return
+    notebook = new MutationObserver(() => {
+      clearTimeout(settle)
+      settle = setTimeout(follow, 250)
+    })
+    notebook.observe(page, { subtree: true, attributes: true, attributeFilter: ["data-marimo-state", "data-status"] })
+    customElements.whenDefined("marimo-mime-renderer").then(() => {
+      clearTimeout(settle)
+      settle = setTimeout(follow, 250)
     })
   }
   function run() {
     ink()
     bibliography()
-    const heading = document.querySelector(".graph > h3")
-    if (heading) heading.textContent = "Neighbourhood"
     follow()
+    followNotebook()
   }
   document.addEventListener("nav", run)
   if (document.readyState !== "loading") run()

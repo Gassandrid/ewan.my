@@ -220,7 +220,11 @@ plugins:
     enabled: true
   - source: github:quartz-community/tag-page
     enabled: true
+  # Runtime dependency for the local ewan-explorer wrapper, which keeps the
+  # page where it is on load. Disabled so it is not rendered twice.
   - source: github:quartz-community/explorer
+    enabled: false
+  - source: ./plugins/ewan-explorer
     enabled: true
     options:
       title: Explore

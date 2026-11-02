@@ -44,6 +44,8 @@ export interface BuildCtx {
   componentCssMap?: Map<string, string>
   /** Maps inline CSS/JS content to extracted external file paths. Populated by ComponentResources. */
   extractedInlineResources?: Map<string, string>
+  /** Component scripts the production postscript imports, for modulepreload hints. */
+  postscriptModules?: string[]
 }
 
 export function trieFromAllFiles(allFiles: QuartzPluginData[]): FileTrieNode<BuildTimeTrieData> {

@@ -9,6 +9,9 @@
   --marimo-quartz-text: var(--darkgray);
   --marimo-quartz-heading: var(--dark);
   --marimo-quartz-muted: var(--gray);
+  // The notebook page below reuses --muted for marimo's palette; keep the
+  // site's muted ink for the headings set to match notes (theme.js).
+  --marimo-quartz-muted-ink: var(--muted);
   --marimo-quartz-border: var(--lightgray);
   --marimo-quartz-accent: var(--secondary);
   --marimo-text-font: var(--bodyFont);
@@ -355,6 +358,46 @@
     background: color-mix(in srgb, var(--marimo-quartz-border) 58%, transparent) !important;
     color: var(--marimo-quartz-text, var(--darkgray)) !important;
     font-family: var(--codeFont) !important;
+  }
+
+  // The adopted spec (custom/adopted-spec.scss) sets a note's headings and
+  // citations through `article …` selectors, which cannot match in here.
+  // Repeat them so a notebook reads like a note.
+  h2 {
+    font: 30px/1.12 var(--fell) !important;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    font: italic 23px/1.2 var(--fell) !important;
+  }
+
+  h4 {
+    font: 15px var(--fell-sc) !important;
+    letter-spacing: 0.05em;
+    color: var(--marimo-quartz-muted-ink, var(--muted)) !important;
+  }
+
+  cite {
+    font-style: normal;
+  }
+
+  cite a[data-bib] {
+    font-style: normal !important;
+    font-weight: 400 !important;
+    color: var(--dark) !important;
+    background: none !important;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--rust);
+
+    &:hover {
+      color: var(--rust) !important;
+    }
+  }
+
+  // The reading margin lights a source's citations while it is hovered.
+  cite.is-lit a[data-bib] {
+    background: color-mix(in srgb, var(--ochre) 18%, transparent) !important;
   }
 }
 

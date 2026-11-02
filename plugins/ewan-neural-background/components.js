@@ -1208,7 +1208,21 @@ function neuralRuntime(create, step, createVault, modulators) {
     motion.addEventListener("change", reconcile, { signal })
     compact.addEventListener("change", reconcile, { signal })
     connection?.addEventListener?.("change", reconcile, { signal })
-    window.addEventListener("resize", resize, { passive: true, signal })
+    // A window drag fires resize dozens of times a second, and each one
+    // rebuilds every fibre, soma and the cached structure: once per frame.
+    let resizeFrame = 0
+    window.addEventListener(
+      "resize",
+      () => {
+        if (resizeFrame) return
+        resizeFrame = requestAnimationFrame(() => {
+          resizeFrame = 0
+          resize()
+        })
+      },
+      { passive: true, signal },
+    )
+    signal.addEventListener("abort", () => cancelAnimationFrame(resizeFrame))
     if (ctx && baseCtx) {
       theme = new MutationObserver(() => {
         if (!running) return

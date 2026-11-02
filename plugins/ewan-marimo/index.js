@@ -222,6 +222,80 @@ export function citationGroups(src) {
   return [...new Set(groups)]
 }
 
+// Python-Markdown's toc slugify as obsidian.py configures it (heading_slug):
+// Unicode letters, numbers, marks, spaces, "-" and "_" survive, spaces become "-".
+export function headingSlug(text) {
+  return decodeHtml(String(text).replace(/<[^>]*>/g, ""))
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\p{M} _-]/gu, "")
+    .replace(/ /g, "-")
+}
+
+// Math in a heading reads as its TeX, as a note's contents entry does: drop the
+// build-time KaTeX copy (prerenderMath) and unwrap <marimo-tex>||(x||)</...>.
+function headingText(html) {
+  return decodeHtml(
+    html
+      .replace(/<span class="marimo-tex-static">[\s\S]*?<\/span>(?=<marimo-tex\b)/g, "")
+      .replace(/<marimo-tex\b[^>]*>([\s\S]*?)<\/marimo-tex>/g, (_, tex) =>
+        decodeHtml(tex).replace(/^\s*\|\|[(\[]|\|\|[)\]]\s*$/g, ""),
+      )
+      .replace(/<[^>]+>/g, ""),
+  )
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+function headingsIn(html, found) {
+  for (const match of html.matchAll(/<h([1-6])\b([^>]*)>([\s\S]*?)<\/h\1>/g)) {
+    const id = match[2].match(/\bid=["']([^"']+)["']/)?.[1]
+    const text = headingText(match[3])
+    if (id && text) found.push({ depth: Number(match[1]), text, slug: decodeHtml(id) })
+  }
+}
+
+/**
+ * A notebook's contents, in the shape of the table-of-contents transformer
+ * (depth relative to the top level). Markdown cells ship as JSON in the
+ * mime renderer's data-data attribute, rendered by the islands runtime with
+ * these ids; a notebook that did not run falls back to its mo.md source.
+ */
+export function notebookToc(body, src = "") {
+  const found = []
+  const outputs = body.matchAll(
+    /<h[1-6]\b[\s\S]*?<\/h[1-6]>|<marimo-mime-renderer\b[^>]*\bdata-data='([^']*)'/g,
+  )
+  for (const match of outputs) {
+    if (match[1] === undefined) {
+      headingsIn(match[0], found)
+      continue
+    }
+    try {
+      const value = JSON.parse(decodeHtml(match[1]))
+      if (typeof value === "string") headingsIn(value, found)
+    } catch {}
+  }
+  if (found.length === 0) {
+    for (const { formatted, text } of markdownBlocks(src)) {
+      let fenced = false
+      for (const line of text.split(/\r?\n/)) {
+        if (/^\s*(```|~~~)/.test(line)) fenced = !fenced
+        const heading = !fenced && line.match(/^\s*(#{1,6})\s+(.+?)\s*#*\s*$/)
+        if (!heading) continue
+        const label = (formatted ? heading[2].replace(/\{[^{}\n]*\}/g, "") : heading[2])
+          .replace(OBSIDIAN_WIKILINK, (_, raw) => parseWikiLink(raw).label)
+          .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+          .replace(/[*_`]/g, "")
+          .trim()
+        if (label) found.push({ depth: heading[1].length, text: label, slug: headingSlug(label) })
+      }
+    }
+  }
+  if (found.length < 2) return undefined
+  const top = Math.min(...found.map((entry) => entry.depth))
+  return found.map((entry) => ({ ...entry, depth: entry.depth - top }))
+}
+
 function hastToHtml(children) {
   return render(
     toJsxRuntime(
@@ -663,6 +737,10 @@ export default function MarimoPageType(opts = {}) {
               text: `${title}. ${description}\n\n${notebookProse(fileContent)}`,
               description,
               links: obsidianLinks.links,
+              toc:
+                String(header.enableToc).toLowerCase() === "false"
+                  ? undefined
+                  : notebookToc(rendered.body, fileContent),
               isMarimo: true,
               marimoHtml: marimoHtml(
                 rendered,

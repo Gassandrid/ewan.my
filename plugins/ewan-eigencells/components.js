@@ -1,5 +1,11 @@
+import { h } from "preact"
 import { eigencells } from "./eigencells.js"
 import { POOL } from "./pool.js"
+
+// The culture grows on the homepage alone, so its solver and pool are a
+// module of their own (emitted by index.js) rather than part of every page's
+// scripts; the homepage announces it up front with a modulepreload.
+export const MODULE_PATH = "static/ewan-eigencells.js"
 
 // The banner slot stays the florilegium embed (ewan-svg-embeds), so the boats
 // remain the no-script fallback and disabling this plugin restores them. The
@@ -12,10 +18,6 @@ const CSS = `
 // so the strip fills in like a plate under the microscope. Click to reseed;
 // ?cells=<seed> reproduces a culture.
 function eigencellsRuntime(eigencells, POOL) {
-  if (window.__ewanEigencells) {
-    window.__ewanEigencells.mount()
-    return
-  }
   const E = eigencells(POOL),
     PER_PIXEL = 6,
     SCALE = 2,
@@ -135,8 +137,7 @@ function eigencellsRuntime(eigencells, POOL) {
     }
   }
 
-  function mount() {
-    const host = document.querySelector('body[data-slug="index"] .florilegium-banner')
+  function mount(host) {
     if (job && job.host === host && host?.isConnected) return
     job?.stop()
     job = null
@@ -148,22 +149,45 @@ function eigencellsRuntime(eigencells, POOL) {
         : crypto.getRandomValues(new Uint32Array(1))[0]
     job = grow(host, seed)
   }
-  document.addEventListener("prenav", () => {
+  function stop() {
     job?.stop()
     job = null
-  })
-  document.addEventListener("nav", mount)
-  window.__ewanEigencells = { mount }
-  mount()
+  }
+  return { mount, stop }
 }
 
+export const MODULE_SOURCE = `${eigencells.toString()}
+const POOL = ${JSON.stringify(POOL)};
+export const { mount, stop } = (${eigencellsRuntime.toString()})(eigencells, POOL);
+`
+
+// The only script every page carries: fetch the module where there is a
+// banner to grow, and stop the culture when the reader leaves.
+const LOADER = `(() => {
+  let ticket = 0, current
+  const stop = () => { ticket++; current?.stop(); current = undefined }
+  document.addEventListener("prenav", stop)
+  document.addEventListener("nav", async () => {
+    const host = document.querySelector('body[data-slug="index"] .florilegium-banner')
+    if (!host) return stop()
+    const mine = ++ticket
+    try {
+      const module = await import(new URL(${JSON.stringify("./" + MODULE_PATH)}, document.baseURI).href)
+      if (mine !== ticket || !host.isConnected) return
+      current = module
+      module.mount(host)
+    } catch {}
+  })
+})();`
+
 export function EigencellsBanner() {
-  function Component() {
-    return null
+  function Component({ fileData } = {}) {
+    if (fileData?.slug !== "index") return null
+    return h("link", { rel: "modulepreload", href: `./${MODULE_PATH}` })
   }
   Component.displayName = "EigencellsBanner"
   Component.css = CSS
   Component.beforeDOMLoaded = `document.documentElement.classList.add("eigencells");`
-  Component.afterDOMLoaded = `(${eigencellsRuntime.toString()})(${eigencells.toString()},${JSON.stringify(POOL)});`
+  Component.afterDOMLoaded = LOADER
   return Component
 }

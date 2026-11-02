@@ -361,7 +361,9 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         const scriptFilenames: string[] = []
 
         for (let i = 0; i < scripts.length; i++) {
-          const hash = hashContent(scripts[i])
+          // Each file is imported as a module, so minify it as one.
+          const content = (await transpile(scripts[i], { minify: true, format: "esm" })).code
+          const hash = hashContent(content)
           const slug = `static/scripts/script-${i}-${hash}`
           const filename = `${slug}.js`
           scriptFilenames.push(filename)
@@ -370,9 +372,10 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
             ctx,
             slug: slug as FullSlug,
             ext: ".js",
-            content: scripts[i],
+            content,
           })
         }
+        ctx.postscriptModules = scriptFilenames
 
         // Generate orchestrator: import all component scripts in parallel,
         // then import SPA router last (it dispatches the initial nav event)
@@ -404,29 +407,34 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         include: Features.MediaQueries,
       }).code.toString()
 
+      // Every page links every component stylesheet, so they ship as one
+      // render-blocking file instead of one request each (some are a few
+      // bytes). Each piece keeps its own layer block and its order.
       const cssStringToFilename = new Map<string, string>()
+      const componentCss: string[] = []
       for (const cssString of componentResources.componentCssStrings) {
-        if (cssStringToFilename.has(cssString)) continue
-
         const wrapped = `@layer quartz-base {\n${cssString}\n}`
-        const minified = transform({
-          filename: "component.css",
-          code: Buffer.from(wrapped),
-          minify: true,
-          targets: lightningTargets,
-          include: Features.MediaQueries,
-        }).code.toString()
-
-        const hash = hashContent(minified)
-        const slug = `component-${hash}`
-        const filename = `${slug}.css`
-        cssStringToFilename.set(cssString, filename)
-
+        componentCss.push(
+          transform({
+            filename: "component.css",
+            code: Buffer.from(wrapped),
+            minify: true,
+            targets: lightningTargets,
+            include: Features.MediaQueries,
+          }).code.toString(),
+        )
+      }
+      if (componentCss.length > 0) {
+        const bundled = componentCss.join("\n")
+        const filename = `component-${hashContent(bundled)}.css`
+        for (const cssString of componentResources.componentCssStrings) {
+          cssStringToFilename.set(cssString, filename)
+        }
         yield write({
           ctx,
-          slug: slug as FullSlug,
+          slug: filename.slice(0, -".css".length) as FullSlug,
           ext: ".css",
-          content: minified,
+          content: bundled,
         })
       }
 
