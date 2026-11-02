@@ -96,7 +96,19 @@ export function pageResources(
       },
       ...resolvedJs,
     ],
-    additionalHead: staticResources.additionalHead,
+    additionalHead: [
+      // The postscript imports these only once it has itself downloaded and
+      // run; announcing them up front fetches the whole set alongside the HTML.
+      ...(ctx?.postscriptModules ?? []).map((filename) => (
+        <link
+          rel="modulepreload"
+          href={joinSegments(baseDir, filename)}
+          key={filename}
+          data-persist="true"
+        />
+      )),
+      ...staticResources.additionalHead,
+    ],
   }
 
   resources.js.push({

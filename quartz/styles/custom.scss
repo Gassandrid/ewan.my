@@ -172,40 +172,7 @@ body[data-slug="thoughts/craft"] {
 .left {
   display: flex !important;
   gap: 1.5rem !important;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content min-content min-content;
   align-items: center;
-
-  .page-title {
-    grid-area: 1 / 1 / 2 / 3;
-  }
-
-  .search {
-    grid-area: 2 / 1 / 3 / 2;
-  }
-
-  .darkmode {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-
-  .toc {
-    grid-row: 3;
-    grid-column: 1 / 3;
-  }
-
-  .recent-notes:nth-last-child(2) {
-    grid-area: 3 / 1 / 3 / 3;
-  }
-
-  .recent-notes:nth-last-child(1) {
-    grid-area: 4 / 1 / 4 / 3;
-  }
-
-  @media all and not ($desktop) {
-    display: flex !important;
-  }
-
-  // using new variables and grid layout from variables.scss
 }
 
 hr {
@@ -243,18 +210,6 @@ pre.poetry {
 
 audio::-webkit-media-controls-panel {
   background-color: var(--lightgray);
-}
-
-.popover-hint-ewan {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  width: calc(100% + 4rem);
-  margin-left: -2rem;
-  padding: 0;
-  gap: 0.5rem;
 }
 
 .sticky-header-bar {
@@ -353,53 +308,9 @@ audio::-webkit-media-controls-panel {
   padding-left: 0;
 }
 
-.forced-row {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.3rem;
-  flex: 0 0 auto;
-  margin-left: auto;
-  padding-right: 0;
-
-  & > * {
-    margin: 0 !important;
-    padding: 0;
-    width: 2rem;
-    height: 2rem;
-    min-width: 2rem;
-    min-height: 2rem;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0;
-  }
-
-  @media all and ($mobile) {
-    margin-left: 0;
-    padding-right: 2rem;
-    flex: 0 0 auto;
-    justify-content: flex-end;
-    margin-top: 0;
-  }
-}
-
 .article-title,
 .content-meta {
   width: 100%;
-}
-
-.ewan-divider {
-  flex: 1 1 100%;
-  width: 100%;
-  margin: 0.2rem 0;
-  padding: 0;
-  border: none;
-  border-top: 1px solid var(--gray);
-  opacity: 0.4;
-  box-sizing: border-box;
-  display: none; // No longer needed since we use border-bottom on sticky-header-bar
 }
 
 .article-title {
@@ -414,26 +325,6 @@ audio::-webkit-media-controls-panel {
 // for a div with class graph AND desktop-only, set width to 100%
 .graph {
   width: 100%;
-}
-
-.forced-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  top: 0;
-  box-sizing: border-box;
-  padding: 0;
-  position: initial;
-
-  & .map,
-  .darkmode {
-    margin: 0.4rem;
-  }
-
-  @media all and ($desktop) {
-    justify-content: flex-end;
-  }
 }
 
 /* Dark theme */
@@ -497,122 +388,6 @@ audio::-webkit-media-controls-enclosure {
 
 audio::-webkit-media-controls-timeline:hover {
   opacity: 0.8;
-}
-
-:root {
-  --mov-y: 0px;
-  --rot-y: 0deg;
-}
-
-.ft- {
-  @keyframes rainbow-animate {
-    0% {
-      background-position: 0px 0;
-    }
-
-    50% {
-      background-position: 100px 0;
-    }
-
-    100% {
-      background-position: 200px 0;
-    }
-  }
-
-  @keyframes shake-animate {
-    // CSS Houdini
-    // 0% { --mov-y: 1px }
-    // 100% { --mov-y: -1px }
-    0% {
-      transform: translateY(1px);
-    }
-
-    100% {
-      transform: translateY(-1px);
-    }
-  }
-
-  @keyframes spin-animate {
-    // CSS Houdini
-    // 0% { --rot-y: 0deg }
-    // 100% { --rot-y: 360deg }
-    0% {
-      transform: rotateY(0deg);
-    }
-
-    100% {
-      transform: rotateY(-360deg);
-    }
-  }
-
-  @for $i from 0 through 10 {
-    &char {
-      animation-delay: 10ms;
-    }
-  }
-
-  &letters {
-    white-space: nowrap;
-  }
-
-  &letters span {
-    white-space: pre;
-  }
-
-  &rainbow {
-    background: repeating-linear-gradient(
-      to right,
-      #cb94ff 0px,
-      #028ba1 20px,
-      #4dc725 40px,
-      #ff941a 60px,
-      #d21b1b 80px,
-      #cb94ff 100px
-    );
-    background-size: 100px;
-    background-clip: text;
-    color: transparent !important;
-
-    & span,
-    p {
-      color: transparent;
-    }
-
-    animation: rainbow-animate 2s linear infinite;
-  }
-
-  &shake .char {
-    animation: shake-animate 0.05s linear infinite alternate;
-    display: inline-block;
-
-    @for $i from 0 through 10 {
-      &:nth-child(10n + #{$i}) {
-        animation-delay: #{$i * -20ms};
-      }
-    }
-  }
-
-  &wave .char {
-    animation: shake-animate 0.2s ease-in-out infinite alternate;
-    display: inline-block;
-
-    @for $i from 0 through 10 {
-      &:nth-child(10n + #{$i}) {
-        animation-delay: #{$i * -40ms};
-      }
-    }
-  }
-
-  &spin .char {
-    animation: spin-animate 1s ease-in-out infinite;
-    display: inline-block;
-
-    @for $i from 0 through 10 {
-      &:nth-child(10n + #{$i}) {
-        animation-delay: #{$i * 40ms - 400ms};
-      }
-    }
-  }
 }
 
 // main center border with light/dark mode
@@ -719,14 +494,6 @@ footer {
     box-sizing: border-box;
   }
 
-  // Adjust header layout to not overflow
-  .popover-hint-ewan {
-    width: 100%;
-    margin-left: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   // Minimal padding on all header elements for clean reader mode
   .breadcrumb-container {
     padding: 0.5rem 0.75rem 0.3rem 0.75rem;
@@ -779,12 +546,6 @@ footer {
     padding: 0.5rem 0.75rem;
   }
 
-  .forced-row {
-    padding-right: 0.75rem;
-    padding-left: 0;
-    flex-shrink: 0;
-  }
-
   // Ensure page header doesn't overflow
   .page > #quartz-body .page-header {
     overflow-x: clip;
@@ -823,109 +584,6 @@ footer {
 .footer {
   padding-top: 1rem;
 }
-
-// for sidebar nav from cat code me
-
-// 导航组件样式
-.sidebar-nav {
-  margin: 1rem 0;
-  width: 100%;
-
-  .nav-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    width: 100%;
-
-    // 所有导航按钮的基础样式
-    .nav-button {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.5rem 0.8rem;
-      border-radius: 6px;
-      color: var(--dark);
-      text-decoration: none;
-      transition: all 0.2s ease;
-      background: var(--light);
-      border: 1px solid var(--lightgray);
-      position: relative;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-style: normal;
-      font-family: var(--bodyFont);
-      width: 100%;
-      box-sizing: border-box;
-
-      // 图标样式
-      .nav-icon {
-        font-size: 1.1rem;
-        flex-shrink: 0;
-        font-style: normal;
-        width: 1.5rem; // 固定图标宽度
-        text-align: center; // 图标居中
-      }
-
-      // 文字样式
-      .nav-text {
-        font-weight: 500;
-        transition: color 0.2s ease;
-        font-style: normal;
-        flex: 1;
-        text-align: left;
-        color: var(--secondary);
-      }
-
-      // hover effect
-      &:hover {
-        transform: none;
-        background: var(--lightgray);
-        border-color: var(--secondary);
-
-        .nav-text {
-          color: var(--dark);
-        }
-      }
-
-      // 阅读模式按钮特殊样式
-      &.reading-mode-toggle {
-        .nav-text {
-          text-align: left;
-          color: var(--secondary);
-
-          &:hover {
-            color: var(--dark);
-          }
-        }
-      }
-    }
-  }
-}
-
-.toc-clone {
-  margin-top: 2.5rem;
-}
-
-.toc {
-  margin-top: 2.5rem;
-}
-
-html.reading-mode .sidebar.reading-mode-active .toc-clone {
-  margin-top: 2.5rem;
-}
-
-.cm-s-material-palenight {
-  background: transparent !important;
-}
-
-/* .CodeMirror { */
-/*   background: transparent !important; */
-/* } */
-/**/
-/* .CodeMirror-gutters { */
-/*   background: transparent !important; */
-/*   border-right: none !important; */
-/* } */
 
 .footer {
   padding-top: 4rem !important;
@@ -1162,15 +820,6 @@ figure.tikz {
     outline: 1px solid var(--secondary);
     outline-offset: 2px;
   }
-}
-
-// Labels retain a paper backing where the neural field passes behind the rail.
-.quartztoc .toc-link {
-  background: var(--light) !important;
-  box-shadow:
-    4px 0 var(--light),
-    -4px 0 var(--light);
-  border-radius: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

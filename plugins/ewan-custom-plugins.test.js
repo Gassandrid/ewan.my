@@ -246,3 +246,49 @@ test("Note links to a notebook source go to its page, not the .py download", () 
     "[[Thoughts/Eigenfish|Eigenfish]]",
   )
 })
+
+test("committed dist copies stay identical to their sources", async () => {
+  const fs = await import("node:fs")
+  const path = await import("node:path")
+  const root = new URL(".", import.meta.url).pathname
+  let compared = 0
+  for (const plugin of fs.readdirSync(root, { withFileTypes: true })) {
+    const dist = path.join(root, plugin.name, "dist")
+    if (!plugin.isDirectory() || !fs.existsSync(dist)) continue
+    for (const name of fs.readdirSync(dist)) {
+      const copy = fs.readFileSync(path.join(dist, name), "utf8")
+      const source = path.join(root, plugin.name, name)
+      // A dist file that re-exports its source is not a copy.
+      if (!fs.existsSync(source) || copy.includes('from "../')) continue
+      assert.equal(copy, fs.readFileSync(source, "utf8"), `${plugin.name}/dist/${name} is stale`)
+      compared += 1
+    }
+  }
+  assert.ok(compared > 0)
+})
+
+test("TikZ fonts are pinned and travel with the figure, and its copy button works", async () => {
+  const { default: EwanTikz, TIKZ_FONTS, TIKZ_RUNTIME } = await import("./ewan-tikz/index.js")
+  assert.match(TIKZ_FONTS, /node-tikzjax@\d+\.\d+\.\d+\//)
+  const resources = EwanTikz().externalResources()
+  assert.equal(resources.css, undefined, "no stylesheet on pages without a figure")
+  assert.match(resources.js[0].script, /source-code-button/)
+  assert.doesNotThrow(() => new Function(TIKZ_RUNTIME))
+})
+
+test("search builds its full-text index on first use, not on every page load", async () => {
+  const { Search } = await import("./ewan-search/components.js")
+  const runtime = Search({}).afterDOMLoaded
+  const initIndex = runtime.match(/function (\w+)\(\)\{return \1\.p\?\?=\(async\(\)=>/)?.[1]
+  assert.ok(initIndex, "index initialisation is memoised")
+  assert.doesNotMatch(runtime, new RegExp(`\\(\\),await ${initIndex}\\(\\),await`))
+  assert.match(runtime, new RegExp(`zIndex="9999"\\),${initIndex}\\(\\)`))
+  assert.match(runtime, new RegExp(`=async \\w+=>\\{await ${initIndex}\\(\\);`))
+})
+
+test("explorer reveals the current note without scrolling the page", async () => {
+  const { Explorer } = await import("./ewan-explorer/components.js")
+  const runtime = Explorer({}).afterDOMLoaded
+  assert.doesNotMatch(runtime, /scrollIntoView/)
+  assert.match(runtime, /\.scrollTo\(\{top:/)
+})

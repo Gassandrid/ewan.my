@@ -373,18 +373,7 @@ article section.bibliography li:target {
   border-color: var(--hair) !important;
 }
 
-/* Contents rail: the same ticks, labels in Fell, the current dot in ochre. */
-.quartztoc .toc-link {
-  font: 14.5px/1.3 var(--fell) !important;
-}
-.quartztoc .toc-row.is-active .toc-dot {
-  background: var(--ochre) !important;
-}
-.quartztoc .quartztoc-rail-thumb {
-  background: var(--dark) !important;
-  width: 2px !important;
-  border-radius: 0 !important;
-}
+/* The contents rail is styled by ewan-quartz-toc itself. */
 
 a:focus-visible,
 button:focus-visible {

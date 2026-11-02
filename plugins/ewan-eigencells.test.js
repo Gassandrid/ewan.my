@@ -1,7 +1,7 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 import vm from "node:vm"
-import { EigencellsBanner } from "./ewan-eigencells/components.js"
+import { EigencellsBanner, MODULE_SOURCE } from "./ewan-eigencells/components.js"
 import { eigencells } from "./ewan-eigencells/eigencells.js"
 import { POOL } from "./ewan-eigencells/pool.js"
 
@@ -66,11 +66,20 @@ test("a culture is reproducible, fits the strip, and its cells never overlap", (
   }
 })
 
-test("banner component embeds a runnable runtime with the curated pool", () => {
+test("banner loads its runtime and curated pool on the homepage alone", async () => {
   const component = EigencellsBanner()
-  assert.equal(component(), null)
+  assert.equal(component({ fileData: { slug: "notes/x" } }), null)
+  assert.equal(component({ fileData: { slug: "index" } }).props.rel, "modulepreload")
   assert.match(component.beforeDOMLoaded, /classList\.add\("eigencells"\)/)
   assert.ok(POOL.length > 100 && POOL.every((t) => /^[0ijfab]{36}$/.test(t)))
   assert.doesNotThrow(() => new vm.Script(component.afterDOMLoaded))
-  assert.ok(component.afterDOMLoaded.includes(POOL[0]))
+  assert.ok(!component.afterDOMLoaded.includes(POOL[0]), "the pool stays out of every page")
+  assert.ok(MODULE_SOURCE.includes(POOL[0]))
+  // The module sets itself up on import, as it does in the browser.
+  globalThis.matchMedia ??= () => ({ matches: false })
+  const module = await import(
+    "data:text/javascript;base64," + Buffer.from(MODULE_SOURCE).toString("base64")
+  )
+  assert.equal(typeof module.mount, "function")
+  assert.equal(typeof module.stop, "function")
 })

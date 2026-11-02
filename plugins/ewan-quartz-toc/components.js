@@ -1,24 +1,36 @@
 import { h } from "preact"
 
+// A proportional contents rail after LessWrong's: every heading sits where it
+// falls in the article, and labels surface on hover or as the reader passes.
+// Set in the site's type: a ruler of ticks graded by level, labels in Fell
+// stepping as the article's headings do (roman, italic, small capitals), the
+// current place in ochre over hairlines. All TOC styling lives here.
 const CSS = `
-.quartztoc{position:relative;display:flex;align-self:stretch;flex:1 1 0;min-height:0;width:100%;margin:0;font: .82rem/1.35 var(--bodyFont)}
+.quartztoc{position:relative;display:flex;align-self:stretch;flex:1 1 0;min-height:0;width:100%;margin:0;font:14.5px/1.3 var(--fell,var(--headerFont))}
 .quartztoc.desktop-only{display:flex}
 @media(max-width:800px){.quartztoc.desktop-only{display:none}}
 .quartztoc-track{position:relative;flex:1;min-height:0;margin:8px 0}
-.quartztoc-progress{position:absolute;inset:8px auto 8px 0;width:1px;background:var(--lightgray)}
-.quartztoc-rail-thumb{position:absolute;left:-1px;width:3px;top:var(--viewport-top,0px);height:var(--viewport-height,0px);background:var(--secondary);border-radius:2px}
-.quartztoc-section{position:absolute;left:-3px;width:7px;top:var(--section-top,0px);height:var(--section-height,0px);background:var(--secondary);opacity:.16;border-radius:3px}
+.quartztoc-progress{position:absolute;inset:8px auto 8px 0;width:1px;background:var(--hair,var(--lightgray))}
+.quartztoc-read{position:absolute;left:0;top:0;width:1px;height:var(--viewport-top,0px);background:var(--muted,var(--gray));opacity:.45}
+.quartztoc-section{position:absolute;left:-2px;width:5px;top:var(--section-top,0px);height:var(--section-height,0px);background:color-mix(in srgb,var(--ochre) 24%,transparent)}
+.quartztoc-rail-thumb{position:absolute;left:-.5px;width:2px;top:var(--viewport-top,0px);height:var(--viewport-height,0px);background:var(--dark)}
 .quartztoc .toc-row{position:absolute;left:0;right:0;top:var(--toc-y,0px);height:0}
-.quartztoc .toc-dot{position:absolute;left:-2px;top:-2px;width:5px;height:5px;background:var(--gray);border-radius:50%;opacity:.55;pointer-events:none}
-.quartztoc .toc-level-3 .toc-dot,.quartztoc .toc-level-4 .toc-dot{width:4px;height:4px;opacity:.4}
-.quartztoc .toc-level-5 .toc-dot,.quartztoc .toc-level-6 .toc-dot{width:3px;height:3px;opacity:.35}
-.quartztoc .toc-link{position:absolute;left:18px;right:4px;top:var(--label-offset,-10px);padding:2px 0;line-height:1.35;color:var(--darkgray);text-decoration:none!important;background:none!important;opacity:0;pointer-events:none;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow-wrap:anywhere}
-.quartztoc .toc-level-3 .toc-link{left:26px}.quartztoc .toc-level-4 .toc-link{left:34px}.quartztoc .toc-level-5 .toc-link,.quartztoc .toc-level-6 .toc-link{left:42px}
-.quartztoc .toc-row-title .toc-link{font-family:var(--headerFont);font-weight:500}
-.quartztoc .toc-row.label-visible .toc-link{opacity:.8;pointer-events:auto}
-.quartztoc .toc-row.is-active .toc-dot,.quartztoc .toc-row.is-inspected .toc-dot{opacity:1;background:var(--secondary);box-shadow:0 0 0 2px var(--light)}
-.quartztoc .toc-row.is-active.label-visible .toc-link,.quartztoc .toc-row.is-inspected.label-visible .toc-link,.quartztoc .toc-link:hover{color:var(--dark);opacity:1}
-.quartztoc .toc-link:focus-visible{outline:1px solid var(--secondary);outline-offset:2px;border-radius:2px}
+.quartztoc .toc-dot{position:absolute;left:0;top:-.5px;width:9px;height:1px;background:var(--muted,var(--gray));opacity:.75;pointer-events:none}
+.quartztoc .toc-level-3 .toc-dot{width:6px;opacity:.6}
+.quartztoc .toc-level-4 .toc-dot,.quartztoc .toc-level-5 .toc-dot,.quartztoc .toc-level-6 .toc-dot{width:3px;opacity:.5}
+.quartztoc .toc-row-title .toc-dot{width:12px;background:var(--dark);opacity:.8}
+.quartztoc .toc-row.is-active .toc-dot,.quartztoc .toc-row.is-inspected .toc-dot{top:-1px;height:2px;width:12px;background:var(--ochre);opacity:1}
+.quartztoc .toc-link{position:absolute;left:18px;right:4px;top:var(--label-offset,-10px);padding:1px 0;line-height:1.3;font-weight:400;color:var(--darkgray);text-decoration:none!important;background:var(--light)!important;box-shadow:4px 0 var(--light),-4px 0 var(--light);border-radius:0;opacity:0;pointer-events:none;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow-wrap:anywhere;transition:opacity .12s ease}
+.quartztoc .toc-level-3 .toc-link{left:26px;font-style:italic}
+.quartztoc .toc-level-4 .toc-link,.quartztoc .toc-level-5 .toc-link,.quartztoc .toc-level-6 .toc-link{left:34px;font:12.5px/1.3 var(--fell-sc,var(--headerFont));letter-spacing:.04em;color:var(--muted,var(--gray))}
+.quartztoc .toc-level-5 .toc-link,.quartztoc .toc-level-6 .toc-link{left:42px}
+.quartztoc .toc-row-title .toc-link{font-size:15.5px;line-height:1.25;color:var(--dark)}
+.quartztoc .toc-row.label-visible .toc-link{opacity:.85;pointer-events:auto}
+.quartztoc .toc-row.is-active.label-visible .toc-link,.quartztoc .toc-row.is-inspected.label-visible .toc-link{color:var(--dark);opacity:1}
+.quartztoc .toc-row.label-visible .toc-link:hover{color:var(--rust);opacity:1}
+.quartztoc .toc-link:focus-visible{outline:1.5px solid var(--ochre);outline-offset:2px}
+.quartztoc .toc-row.is-pending{visibility:hidden}
+@media (prefers-reduced-motion:reduce){.quartztoc .toc-link{transition:none}}
 `
 
 // All marks use the same article-to-rail projection. Label visibility may
@@ -89,9 +101,19 @@ function tocRuntime(project, chooseLabels) {
     const track = toc.querySelector(".quartztoc-track")
     const rows = [...toc.querySelectorAll(".toc-row")]
     const links = rows.map((row) => row.querySelector(".toc-link"))
-    const targets = rows.map((row) =>
-      row.dataset.for === "__top__" ? null : document.getElementById(row.dataset.for),
-    )
+    // Resolved on every layout pass: a notebook renders its headings late,
+    // inside the shadow roots of its markdown cells, and may replace them.
+    const targetOf = (row) => {
+      const id = row.dataset.for
+      if (id === "__top__") return null
+      const found = document.getElementById(id)
+      if (found || !article) return found
+      for (const host of article.querySelectorAll("marimo-mime-renderer")) {
+        const inner = host.shadowRoot?.getElementById(id)
+        if (inner) return inner
+      }
+      return null
+    }
     const headingPriority = rows
       .map((row, i) => ({ i, level: Number(row.className.match(/toc-level-(\d)/)?.[1] || 1) }))
       .sort((a, b) => a.level - b.level || a.i - b.i)
@@ -133,9 +155,18 @@ function tocRuntime(project, chooseLabels) {
       const rect = article.getBoundingClientRect()
       if (layout || !offsets.length) {
         extent = track.clientHeight
-        offsets = targets.map((target) =>
-          target ? Math.max(0, target.getBoundingClientRect().top - rect.top) : 0,
-        )
+        offsets = []
+        for (const row of rows) {
+          const heading = targetOf(row)
+          // A heading not rendered yet is held back (and kept in order) until
+          // its notebook cell paints it.
+          row.classList.toggle("is-pending", !heading && row.dataset.for !== "__top__")
+          offsets.push(
+            heading
+              ? Math.max(0, heading.getBoundingClientRect().top - rect.top)
+              : (offsets.at(-1) ?? 0),
+          )
+        }
         heights = links.map((link) => link.offsetHeight)
         labelState = ""
       }
@@ -246,7 +277,8 @@ function tocRuntime(project, chooseLabels) {
         event.altKey
       )
         return
-      const target = document.getElementById(link.dataset.for)
+      const row = link.closest(".toc-row")
+      const target = row ? targetOf(row) : null
       if (!target && link.dataset.for !== "__top__") return
       event.preventDefault()
       const behavior = matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"
@@ -293,7 +325,8 @@ export function QuartzTOC() {
     }
     for (const entry of toc) {
       const slug = String(entry.slug)
-      const level = Math.min(6, Math.max(2, Number(entry.depth) + 1))
+      // depth is relative to the note's top heading level (0 = top).
+      const level = Math.min(6, Math.max(2, Number(entry.depth) + 2))
       rows.push(
         h(
           "div",
@@ -317,7 +350,8 @@ export function QuartzTOC() {
       h(
         "div",
         { class: "quartztoc-progress", "aria-hidden": "true" },
-        h("div", { class: "quartztoc-section", "aria-hidden": "true" }),
+        h("div", { class: "quartztoc-read" }),
+        h("div", { class: "quartztoc-section" }),
         h("div", { class: "quartztoc-rail-thumb" }),
       ),
       h("div", { class: "quartztoc-track" }, rows),

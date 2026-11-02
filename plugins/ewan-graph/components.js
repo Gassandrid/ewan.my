@@ -1,4 +1,6 @@
+import { h } from "preact"
 import { Graph as QuartzGraph } from "../../.quartz/plugins/graph/dist/components/index.js"
+import { FOLD_CSS, FOLD_PRESCRIPT, FOLD_RUNTIME, foldButton } from "../ewan-margin/fold.js"
 
 const GRAPH_DATA_LOOPS = [
   {
@@ -144,12 +146,32 @@ function whenGraphVisible(start) {
   check()
 }
 
+// The panel heading is rendered here rather than renamed by a script after
+// load, and folds like the other sidebar panels. A folded graph is never
+// visible, so whenGraphVisible does not even download its renderer.
+export function foldableGraph(vnode, title = "Neighbourhood") {
+  if (!vnode?.props) return vnode
+  const children = [vnode.props.children]
+    .flat()
+    .map((child) => (child?.type === "h3" ? h("h3", null, foldButton("graph", title)) : child))
+  return h(vnode.type, { ...vnode.props, "data-panel": "graph" }, children)
+}
+
 export function Graph(options) {
-  const Component = QuartzGraph(options)
-  const runtime = patchGraphPerformance(patchGraphRuntime(Component.afterDOMLoaded))
-  Component.afterDOMLoaded = `(${whenGraphVisible.toString()})(function(){
+  const Upstream = QuartzGraph(options)
+  const runtime = patchGraphPerformance(patchGraphRuntime(Upstream.afterDOMLoaded))
+  function Component(props) {
+    return foldableGraph(Upstream(props))
+  }
+  Component.displayName = Upstream.displayName ?? "Graph"
+  Component.css = [Upstream.css, FOLD_CSS].flat().filter(Boolean)
+  Component.beforeDOMLoaded = [Upstream.beforeDOMLoaded, FOLD_PRESCRIPT].flat().filter(Boolean)
+  Component.afterDOMLoaded = [
+    FOLD_RUNTIME,
+    `(${whenGraphVisible.toString()})(function(){
     ${manageGraphRendering.toString()}
     ${runtime}
-  });`
+  });`,
+  ]
   return Component
 }

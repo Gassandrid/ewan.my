@@ -154,8 +154,11 @@ export function hits(graph, iterations = 50) {
   const n = graph.slugs.length
   let hub = new Float64Array(n).fill(1)
   let auth = new Float64Array(n).fill(1)
+  // A loop, not Math.hypot(...v): spreading a large graph overflows the stack.
   const normalise = (v) => {
-    const norm = Math.hypot(...v) || 1
+    let sum = 0
+    for (const x of v) sum += x * x
+    const norm = Math.sqrt(sum) || 1
     return v.map((x) => x / norm)
   }
   for (let it = 0; it < iterations; it += 1) {

@@ -30,15 +30,39 @@ function escapeAttr(value) {
   return escapeHtml(value).replace(/"/g, "&quot;")
 }
 
+// The TeX fonts the SVG text is set in, pinned to the installed node-tikzjax
+// (an immutable, year-cached URL). Linked from the figure itself, so only the
+// handful of pages, popovers and embeds that show a figure fetch it.
+export const TIKZ_FONTS = "https://cdn.jsdelivr.net/npm/node-tikzjax@1.0.5/css/fonts.css"
+
+// The figure's "copy source" button: one delegated listener for every page.
+export const TIKZ_RUNTIME = `(() => {
+  if (window.__ewanTikz) return
+  window.__ewanTikz = true
+  document.addEventListener("click", (event) => {
+    const button = event.target?.closest?.("figure.tikz .source-code-button")
+    if (!button) return
+    const raw = button.closest("figure.tikz")?.querySelector(".tikz-mathml annotation")?.textContent
+    if (!raw || !navigator.clipboard) return
+    let source = raw
+    try { source = JSON.parse(raw) } catch {}
+    navigator.clipboard.writeText(source).then(() => {
+      button.classList.add("check")
+      setTimeout(() => button.classList.remove("check"), 2000)
+    }, () => {})
+  })
+})()`
+
 function makeTikzGraph(node, svg, style = "") {
   const styleAttr = style ? ` style="${escapeAttr(style)}"` : ` style=""`
 
   return `<figure class="tikz" data-remark-tikz="true"${styleAttr}>
+<link rel="stylesheet" href="${TIKZ_FONTS}">
 <span class="tikz-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation encoding="application/x-tex">${escapeHtml(
     docs(node),
   )}</annotation></semantics></math></span>
 ${svg}
-<figcaption><em>source code</em><button class="source-code-button" aria-label="copy source code for this tikz graph" title="copy source code for this tikz graph"><svg class="source-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 -4 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 -4 16 16" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"><path fill-rule="evenodd" fill="rgb(63, 185, 80)" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></button></figcaption>
+<figcaption><em>source code</em><button type="button" class="source-code-button" aria-label="copy source code for this tikz graph" title="copy source code for this tikz graph"><svg class="source-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 -4 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 -4 16 16" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"><path fill-rule="evenodd" fill="rgb(63, 185, 80)" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></button></figcaption>
 </figure>`
 }
 
@@ -76,9 +100,12 @@ export default function EwanTikz(opts = {}) {
     },
     externalResources() {
       return {
-        css: [
+        js: [
           {
-            content: "https://cdn.jsdelivr.net/npm/node-tikzjax@latest/css/fonts.css",
+            script: TIKZ_RUNTIME,
+            loadTime: "afterDOMReady",
+            contentType: "inline",
+            spaPreserve: true,
           },
         ],
       }

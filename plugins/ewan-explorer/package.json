@@ -1,0 +1,32 @@
+{
+  "name": "@ewan/quartz-explorer",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "scripts": {
+    "build": "node --check components.js"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-explorer",
+    "displayName": "Ewan Explorer",
+    "description": "Quartz explorer that keeps the reader's place on load and logs nothing.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 50,
+    "components": {
+      "Explorer": {
+        "displayName": "Explorer",
+        "defaultPosition": "right",
+        "defaultPriority": 20
+      }
+    }
+  }
+}

@@ -225,10 +225,22 @@ function walk(dir) {
   }
 }
 walk(root)
-const tikzPages = htmlFiles.filter((f) => /tikzjax|tikz-container/.test(fs.readFileSync(f, "utf8")))
+// Count rendered figures: the TeX fonts travel with each figure, so a page
+// without one must not load them.
+const tikzPages = []
+for (const file of htmlFiles) {
+  const html = fs.readFileSync(file, "utf8")
+  const figure = /<figure class="tikz"/.test(html)
+  if (figure) tikzPages.push(file)
+  assert.equal(
+    /node-tikzjax@[\d.]+\/css\/fonts\.css/.test(html),
+    figure,
+    `${path.relative(root, file)}: TikZ fonts must load exactly where a figure is shown`,
+  )
+}
 assert.ok(
-  tikzPages.length >= 10,
-  `expected at least 10 TikZ-bearing pages, found ${tikzPages.length}`,
+  tikzPages.length >= 5,
+  `expected TikZ figures on several pages, found ${tikzPages.length}`,
 )
 console.log(
   `Build probe passed: ${htmlFiles.length} HTML pages, ${tikzPages.length} TikZ pages, ${marimoPagesProbed} optional Marimo fixtures, v4 layout and Bases card parity, graph hygiene, RunPython, charts, GaggiMate, Morris-Lecar, telemetry, and adaptive neural background.`,

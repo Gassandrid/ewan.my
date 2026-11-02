@@ -6,10 +6,13 @@
   "exports": {
     ".": "./index.js"
   },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
   "quartz": {
     "name": "ewan-fonts",
     "displayName": "Ewan Fonts",
-    "description": "Load the Lora header face used by the deployed v4 site.",
+    "description": "Load the IM Fell heading faces and warm the body face's download.",
     "version": "1.0.0",
     "quartzVersion": ">=5.0.0",
     "category": "transformer",

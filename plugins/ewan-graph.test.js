@@ -123,7 +123,7 @@ test("graph renders on activity, pauses when hidden, and disposes pending work",
 })
 
 test("graph lifecycle patch accepts the installed upstream runtime and rejects drift", () => {
-  const runtime = Graph().afterDOMLoaded
+  const runtime = [Graph().afterDOMLoaded].flat().join("\n")
   assert.match(runtime, /pixi\.js@8\/dist\/pixi\.min\.js/)
   assert.doesNotThrow(() => new Function(runtime))
   assert.throws(() => patchGraphPerformance("changed upstream"), /runtime changed/)
