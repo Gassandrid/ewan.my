@@ -224,3 +224,7 @@ also of note....
 
 - **[[Variational Inference]]**: ELBO is the core objective function
 - **[[Jensen's Inequality]]**: Alternative derivation of the bound
+
+
+---
+

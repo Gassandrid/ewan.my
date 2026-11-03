@@ -1,6 +1,6 @@
 ---
 date: 2026-02-09T12:50:35-05:00
-updated: 2026-09-04T16:24:45-04:00
+updated: 2026-11-02T14:11:32-05:00
 source:
   - https://artemkirsanov.substack.com/p/the-hardware-lottery
   - https://en.wikipedia.org/wiki/Spiking_neural_network
@@ -15,6 +15,7 @@ author:
 description:
 aliases:
 ---
+
 
 - can be done in [[Brian2]], probably the easiest way to go about it at this point, seems to be the most stable neural computation library and has a CUDA version
 - [[Artem Kirsanov]] seems to like them a lot, he highlighted the "**hardware lottery**", where Spiking neural nets didnt take off because it did not fit into our standard von neumann architecture, and not parellizable in the sense like GPUs allow for

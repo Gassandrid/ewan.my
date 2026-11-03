@@ -7,7 +7,7 @@ tags:
   - cs/ai/llm
   - sapling
 date: 2025-09-25
-updated: 2026-10-29T12:00:00-04:00
+updated: 2026-11-02T14:34:35-05:00
 class:
   - note
 source:
@@ -71,11 +71,13 @@ A theory that has emerged from mechanistic interpretability research is that of 
 - **circuit discovery**: how components cooperate to implement computations
 - **disentanglement metrics**: separation of known generative factors
 
-general approach: probes -> what's recoverable, RSA/CKA -> its organization, SAEs → candidate features, interventions → whether those features actually matter
+general approach: probes -> what's recoverable, RSA/CKA -> its organization, SAEs -> candidate features, interventions -> whether those features actually matter
 
 ---
 
 ## To Look Into
+
+*lot of these are just claude recommended, generally I hate index notes but the insatiable yearning for knowledge wont let me not here*
 
 ### Representation / Embedding Models
 

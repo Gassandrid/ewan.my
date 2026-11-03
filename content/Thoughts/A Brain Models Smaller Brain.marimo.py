@@ -4,8 +4,8 @@
 #   - cs/ai/encoder
 # class:
 #   - note
-# date: 2026-10-27
-# updated: 2026-10-28
+# date: 2026-6-27
+# updated: 2026-9-8
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [

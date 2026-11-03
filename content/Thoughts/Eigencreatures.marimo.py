@@ -1,374 +1,771 @@
-# description: Engineer eigenvalue creatures: draw their outline, paint their body, walk their parameters, and breed them.
+# description: Paint a small matrix, let a few entries wander, and trace every part of the creature back to the entries that made it.
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
 #     "anywidget",
 #     "marimo==0.25.2",
 #     "numpy",
-#     "plotly==5.24.1",
 #     "traitlets",
-#     "wigglystuff==0.5.36",
 # ]
 # ///
 
 import marimo
 
 __generated_with = "0.25.2"
-app = marimo.App(width="columns", app_title="Eigencreatures")
+app = marimo.App(width="medium", app_title="Eigencreatures")
 
 with app.setup(hide_code=True):
     import base64
-    import math
     import struct
     import zlib
 
     import anywidget
     import marimo as mo
     import numpy as np
-    import plotly.graph_objects as go
     import traitlets
-    from wigglystuff import BezierCurve, CurveEditor
 
-    GAUSSIAN_UNITS = np.array([1, -1, 1j, -1j])
-    ALPHABETS = {
-        "±1, ±i": GAUSSIAN_UNITS,
-        "±1": np.array([1.0, -1.0]),
-        "cube roots": np.exp(2j * np.pi * np.arange(3) / 3),
-        "5th roots": np.exp(2j * np.pi * np.arange(5) / 5),
-    }
-    PALETTES = {
-        "Paper · ink": {
-            "paper": (245, 241, 235),
-            "ink": (48, 59, 73),
-            "cycle": [(232, 154, 57), (191, 97, 89), (48, 59, 73), (86, 112, 107)],
-        },
-        "Paper · rust": {
-            "paper": (245, 241, 235),
-            "ink": (191, 97, 89),
-            "cycle": [(191, 97, 89), (232, 154, 57), (86, 112, 107), (48, 59, 73)],
-        },
-        "Night": {
-            "paper": (24, 27, 33),
-            "ink": (236, 228, 214),
-            "cycle": [(232, 154, 57), (236, 228, 214), (122, 160, 152), (214, 128, 118)],
-        },
-    }
-    OVERLAY = {"paper": (0, 0, 0), "ink": (232, 154, 57), "cycle": []}
-    LENSES = {
-        "λ": lambda z: z,
-        "λ²": lambda z: z * z,
-        "1/λ": lambda z: 1 / z,
-        "λ + 1/λ": lambda z: z + 1 / z,
-        "√λ": np.sqrt,
-        "exp λ": np.exp,
-    }
-    MODES = ["Conradi", "Ensemble", "Outline", "Workbench"]
-    SAMPLERS = ["Torus", "Annulus", "Knot", "Drawn path"]
-    FEATURES = ["fill", "porosity", "lace", "symmetry", "evenness"]
+    VALUES = {"0": 0, "1": 1, "i": 1j, "-1": -1, "-i": -1j}
+    POPULATIONS = {"pm": np.array([1, -1], complex), "ik": np.array([1, 1j, -1, -1j])}
+    SLOTS = ("t1", "t2")
+    PROBES = 3000
+    PAPER, INK = (245, 241, 235), (28, 28, 30)
+
+    def _conradi(changes=()):
+        rows = [
+            "-i 0 0 0 0 0",
+            "0 0 1 1 0 1",
+            "i 0 0 1 0 i",
+            "0 0 0 -i -i i",
+            "-i 1 0 0 -i 1",
+            "-i 1 0 0 0 -i",
+        ]
+        cells = [row.split() for row in rows]
+        cells[0][2], cells[0][5] = "t1", "t2"
+        for (i, j), code in changes:
+            cells[i][j] = code
+        return cells
+
+    def _tridiagonal(n, code):
+        return [[code if abs(i - j) <= 1 else "0" for j in range(n)] for i in range(n)]
 
     PRESETS = {
-        "Conradi": {
-            "matrix": [
-                [-2, 0, 0, 0, 0, 0],
-                [0, 0, 1, 1, 0, 1],
-                [2, 0, 0, 1, 0, 2],
-                [0, 0, 0, -2, -2, 2],
-                [-2, 1, 0, 0, -2, 1],
-                [-2, 1, 0, 0, 0, -2],
-            ],
-            "mask": [
-                [0, 0, 1, 0, 0, 1],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0],
-            ],
-        },
-        "Sparse": {
-            "matrix": [
-                [0, 2, 0, 0, -2],
-                [-2, 0, 1, 0, 0],
-                [0, -1, 0, 2, 0],
-                [0, 0, -2, 0, 1],
-                [2, 0, 0, -1, 0],
-            ],
-            "mask": [
-                [0, 0, 1, 0, 0],
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 1],
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0],
-            ],
-        },
-        "Border": {
-            "matrix": [
-                [0, 1, 0, 1],
-                [2, 0, 2, 0],
-                [0, 1, 0, 1],
-                [2, 0, 2, 0],
-            ],
-            "mask": [
-                [0, 1, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 1, 0],
-            ],
-        },
+        "Fish": {"cells": _conradi(), "R": 1, "b": 1},
+        "Wings": {"cells": _conradi(), "R": 1, "b": 0},
+        "Ghosts": {"cells": _conradi([((3, 3), "ik")]), "R": 1, "b": 1},
+        "Collage": {"cells": _conradi([((2, 4), "pm"), ((4, 1), "pm")]), "R": 1, "b": 0},
+        "Lace": {"cells": _tridiagonal(5, "ik"), "R": 1, "b": 1},
     }
-    FISH_OUTLINE = [
-        {"x": 1.7, "y": 0.05},
-        {"x": 0.9, "y": 0.75},
-        {"x": -0.1, "y": 0.85},
-        {"x": -0.9, "y": 0.35},
-        {"x": -1.6, "y": 0.95},
-        {"x": -1.25, "y": 0.0},
-        {"x": -1.6, "y": -0.95},
-        {"x": -0.9, "y": -0.35},
-        {"x": -0.1, "y": -0.8},
-        {"x": 0.9, "y": -0.65},
-    ]
-    PATH_POINTS = [
-        {"x": 1.3, "y": 0.0},
-        {"x": 0.9, "y": 1.9},
-        {"x": -1.9, "y": 1.2},
-        {"x": -0.3, "y": -0.2},
-        {"x": -1.6, "y": -1.8},
-        {"x": 1.4, "y": -1.6},
-    ]
-    SKETCH_ESM = r"""
+    for _spec in PRESETS.values():
+        _spec["key"] = (
+            ";".join(",".join(row) for row in _spec["cells"]) + f"|{_spec['R']}|{_spec['b']}"
+        )
+
+    CREATURE_ESM = r"""
+    const GLYPH = { "0": "", "1": "1", i: "i", "-1": "−1", "-i": "−i", t1: "t₁", t2: "t₂", pm: "±1", ik: "iᵏ" };
+    const NAME = { "0": "zero", "1": "one", i: "i", "-1": "minus one", "-i": "minus i", t1: "t one", t2: "t two", pm: "plus or minus one", ik: "a power of i" };
+    const BRUSHES = ["1", "i", "-1", "-i", "0", "t1", "t2", "pm", "ik"];
+    const POPS = { pm: ["1", "-1"], ik: ["1", "i", "-1", "-i"] };
+    const SLOT_COLOR = { t1: "#E89A39", t2: "#56706B" };
+    const HEAT = "191,97,89";
+    const SNAP = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 15, 20];
+    const RMAX = 20;
+
+    const make = (tag, cls, parent) => {
+      const node = document.createElement(tag);
+      if (cls) node.className = cls;
+      if (parent) parent.appendChild(node);
+      return node;
+    };
+    const decode = (text, Type) => {
+      const raw = atob(text || "");
+      const bytes = new Uint8Array(raw.length);
+      for (let k = 0; k < raw.length; k++) bytes[k] = raw.charCodeAt(k);
+      return new Type(bytes.buffer);
+    };
+    const keyOf = (spec) => spec.cells.map((row) => row.join(",")).join(";") + `|${spec.R}|${spec.b}`;
+    const withKey = (spec) => ({ ...spec, key: keyOf(spec) });
+    const clone = (spec) => ({ cells: spec.cells.map((row) => [...row]), R: spec.R, b: spec.b });
+    const snap = (value) => SNAP.reduce((best, s) => (Math.abs(s - value) < Math.abs(best - value) ? s : best), 0);
+
+    function ellipseTable(R, b, count = 720) {
+      const phi = [], pts = [], arc = [0];
+      for (let k = 0; k <= 2048; k++) {
+        const p = (2 * Math.PI * k) / 2048;
+        phi.push(p);
+        pts.push([R * Math.cos(p), b * Math.sin(p)]);
+        if (k) arc.push(arc[k - 1] + Math.hypot(pts[k][0] - pts[k - 1][0], pts[k][1] - pts[k - 1][1]));
+      }
+      const total = arc[2048];
+      const out = [];
+      let j = 0;
+      for (let k = 0; k < count; k++) {
+        const target = (k / count) * total;
+        while (j < 2047 && arc[j + 1] < target) j++;
+        const f = total ? (target - arc[j]) / Math.max(arc[j + 1] - arc[j], 1e-12) : 0;
+        const p = phi[j] + f * (phi[j + 1] - phi[j]);
+        out.push({ u: k / count, x: R * Math.cos(p), y: b * Math.sin(p) });
+      }
+      return out;
+    }
+
     function render({ model, el }) {
-      const root = document.createElement("div");
-      root.className = "eigen-sketch";
-      const canvas = document.createElement("canvas");
-      canvas.setAttribute("role", "img");
-      canvas.setAttribute("aria-label", "Paint the region the spectrum should occupy, over the current creature");
-      const layer = document.createElement("canvas");
-      const ctx = canvas.getContext("2d");
-      const lctx = layer.getContext("2d");
-      const bar = document.createElement("div");
-      bar.className = "eigen-sketch-bar";
-      const make = (text) => {
-        const b = document.createElement("button");
-        b.type = "button";
-        b.textContent = text;
-        bar.appendChild(b);
-        return b;
-      };
-      const paint = make("Paint");
-      const erase = make("Erase");
-      const undo = make("Undo");
-      const clear = make("Clear");
-      const label = document.createElement("label");
-      label.textContent = "Brush ";
-      const brush = document.createElement("input");
-      brush.type = "range";
-      brush.min = "0.02";
-      brush.max = "0.4";
-      brush.step = "0.01";
-      brush.value = String(model.get("brush"));
-      label.appendChild(brush);
-      bar.appendChild(label);
-      root.append(canvas, bar);
-      el.appendChild(root);
+      const root = make("div", "ec", el);
+      const pills = make("div", "ec-pills", root);
+      const main = make("div", "ec-main", root);
+      const stage = make("div", "ec-stage", main);
+      stage.setAttribute("role", "img");
+      stage.setAttribute("aria-label", "Eigenvalue density of the current matrix");
+      const img = make("div", "ec-img", stage);
+      const over = make("canvas", "ec-over", stage);
+      const side = make("div", "ec-side", main);
+      const brushRow = make("div", "ec-brushes", side);
+      const grid = make("div", "ec-matrix", side);
+      const sizeRow = make("div", "ec-size", side);
+      const plane = make("canvas", "ec-plane", side);
+      plane.setAttribute("aria-label", "Domain of t: drag the handles to stretch it");
+      const hist = make("div", "ec-hist", root);
 
-      let strokes = model.get("strokes") || [];
-      let current = null;
-      let mode = "add";
-      const image = new Image();
+      let spec = clone(model.get("spec"));
+      let frame = null, data = null, view = null, commitTimer = null;
+      let hover = null, pinned = null, brush = "1", painting = null, drag = null;
+      const history = [];
 
-      const setMode = (next) => {
-        mode = next;
-        paint.setAttribute("aria-pressed", String(mode === "add"));
-        erase.setAttribute("aria-pressed", String(mode === "erase"));
-      };
-      const size = () => model.get("size");
-      const extent = () => model.get("extent");
-      const toPx = ([x, y]) => [((x / extent() + 1) / 2) * size(), ((1 - y / extent()) / 2) * size()];
-      const toData = (event) => {
-        const r = canvas.getBoundingClientRect();
-        const px = (event.clientX - r.left) / r.width;
-        const py = (event.clientY - r.top) / r.height;
-        return [Math.round((px * 2 - 1) * extent() * 1000) / 1000, Math.round((1 - py * 2) * extent() * 1000) / 1000];
-      };
-      const resize = () => {
+      const ink = () => getComputedStyle(root).color;
+      const fit = (canvas) => {
         const dpr = window.devicePixelRatio || 1;
-        for (const c of [canvas, layer]) {
-          c.width = size() * dpr;
-          c.height = size() * dpr;
+        const w = canvas.clientWidth;
+        if (canvas.width !== Math.round(w * dpr)) {
+          canvas.width = Math.round(w * dpr);
+          canvas.height = Math.round(w * dpr);
         }
-        canvas.style.width = `${size()}px`;
-        canvas.style.height = `${size()}px`;
-      };
-      const strokePath = (c, stroke) => {
-        c.lineWidth = (stroke.r / extent()) * size();
-        c.lineCap = "round";
-        c.lineJoin = "round";
-        c.beginPath();
-        stroke.pts.forEach((p, i) => {
-          const [x, y] = toPx(p);
-          if (i === 0) c.moveTo(x, y);
-          else c.lineTo(x, y);
-        });
-        if (stroke.pts.length === 1) {
-          const [x, y] = toPx(stroke.pts[0]);
-          c.lineTo(x + 0.01, y);
-        }
-        c.stroke();
-      };
-      const draw = () => {
-        const dpr = window.devicePixelRatio || 1;
-        const s = size();
+        const ctx = canvas.getContext("2d");
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        ctx.clearRect(0, 0, s, s);
-        const [cx, cy] = toPx([0, 0]);
-        ctx.strokeStyle = "rgba(128,128,128,0.4)";
+        return [ctx, w];
+      };
+
+      // ---------- presets, brushes, size ----------
+      const presets = model.get("presets");
+      const presetButtons = Object.entries(presets).map(([name, preset]) => {
+        const button = make("button", "", pills);
+        button.type = "button";
+        button.textContent = name;
+        button.addEventListener("click", () => commit(clone(preset), true));
+        return [button, preset.key];
+      });
+      const brushButtons = BRUSHES.map((code) => {
+        const button = make("button", `ec-brush ec-${code}`, brushRow);
+        button.type = "button";
+        button.textContent = code === "0" ? "0" : GLYPH[code];
+        button.setAttribute("aria-label", `Brush: ${NAME[code]}`);
+        button.addEventListener("click", () => {
+          brush = code;
+          paintBrushes();
+        });
+        return [button, code];
+      });
+      const shrink = make("button", "", sizeRow);
+      shrink.type = "button";
+      shrink.textContent = "−";
+      shrink.setAttribute("aria-label", "Remove the last row and column");
+      const grow = make("button", "", sizeRow);
+      grow.type = "button";
+      grow.textContent = "+";
+      grow.setAttribute("aria-label", "Add a row and column");
+      shrink.addEventListener("click", () => resize(-1));
+      grow.addEventListener("click", () => resize(1));
+
+      function resize(delta) {
+        const n = spec.cells.length + delta;
+        if (n < 2 || n > 10) return;
+        const next = clone(spec);
+        next.cells = Array.from({ length: n }, (_, i) => Array.from({ length: n }, (_, j) => spec.cells[i]?.[j] ?? "0"));
+        commit(next, true);
+      }
+
+      function paintBrushes() {
+        for (const [button, code] of brushButtons) button.setAttribute("aria-pressed", String(code === brush));
+      }
+      function paintPills() {
+        const key = keyOf(spec);
+        for (const [button, presetKey] of presetButtons) button.setAttribute("aria-pressed", String(presetKey === key));
+      }
+
+      function commit(next, resetView) {
+        spec = clone(next);
+        model.set("spec", withKey(spec));
+        if (resetView) model.set("view", []);
+        model.save_changes();
+        stage.classList.add("pending");
+        hover = pinned = null;
+        buildMatrix();
+        paintPills();
+        paintAll();
+      }
+
+      // ---------- matrix ----------
+      let cellNodes = [];
+      function buildMatrix() {
+        const n = spec.cells.length;
+        grid.replaceChildren();
+        grid.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
+        cellNodes = [];
+        spec.cells.forEach((row, i) =>
+          row.forEach((code, j) => {
+            const cell = make("button", "ec-cell", grid);
+            cell.type = "button";
+            cell.dataset.i = i;
+            cell.dataset.j = j;
+            cellNodes.push(cell);
+          })
+        );
+        paintMatrix();
+      }
+      function paintMatrix(heat = null, starValues = null) {
+        const n = spec.cells.length;
+        cellNodes.forEach((cell, k) => {
+          const i = Math.floor(k / n), j = k % n, code = spec.cells[i][j];
+          const fixed = starValues?.[k];
+          cell.textContent = fixed ? GLYPH[fixed] : GLYPH[code];
+          const hot = hover?.kind === "cell" && hover.i === i && hover.j === j;
+          cell.className = `ec-cell ec-${code}${fixed ? " ec-fixed" : ""}${hot ? " ec-hot" : ""}`;
+          cell.setAttribute("aria-label", `Row ${i + 1}, column ${j + 1}: ${NAME[code]}`);
+          const h = heat ? heat[k] : 0;
+          cell.style.background = h > 0.02 ? `rgba(${HEAT},${(0.1 + 0.62 * h).toFixed(3)})` : "";
+        });
+      }
+      const cellAt = (event) => {
+        const rootNode = grid.getRootNode();
+        const hit = (rootNode.elementFromPoint ? rootNode : document).elementFromPoint(event.clientX, event.clientY);
+        return hit && hit.closest ? hit.closest(".ec-cell") : null;
+      };
+      const applyBrush = (cell, toggle) => {
+        const i = +cell.dataset.i, j = +cell.dataset.j;
+        const next = toggle && spec.cells[i][j] === brush ? "0" : brush;
+        if (spec.cells[i][j] === next) return;
+        spec.cells[i][j] = next;
+        painting.changed = true;
+        paintMatrix();
+      };
+      grid.addEventListener("pointerdown", (event) => {
+        const cell = cellAt(event);
+        if (!cell) return;
+        event.preventDefault();
+        painting = { changed: false };
+        applyBrush(cell, true);
+      });
+      grid.addEventListener("pointermove", (event) => {
+        const cell = cellAt(event);
+        if (painting) {
+          if (cell) applyBrush(cell, false);
+          return;
+        }
+        const next = cell ? { kind: "cell", i: +cell.dataset.i, j: +cell.dataset.j } : null;
+        if (JSON.stringify(next) !== JSON.stringify(hover)) {
+          hover = next;
+          paintAll();
+        }
+      });
+      grid.addEventListener("pointerleave", () => {
+        if (hover?.kind === "cell") {
+          hover = null;
+          paintAll();
+        }
+      });
+      const endPaint = () => {
+        if (!painting) return;
+        const changed = painting.changed;
+        painting = null;
+        if (changed) commit(spec, true);
+      };
+      window.addEventListener("pointerup", endPaint);
+
+      // ---------- creature geometry ----------
+      const width = () => stage.clientWidth || 1;
+      const toPx = (x, y) => {
+        const [cx, cy, h] = view, w = width();
+        return [((x - cx) / h + 1) * 0.5 * w, ((cy - y) / h + 1) * 0.5 * w];
+      };
+      const fromPx = (px, py) => {
+        const [cx, cy, h] = view, w = width();
+        return [cx + ((2 * px) / w - 1) * h, cy - ((2 * py) / w - 1) * h];
+      };
+      function placeImage() {
+        if (!frame) return;
+        const [fx, fy, fh] = frame.view;
+        const [left, top] = toPx(fx - fh, fy + fh);
+        const size = (width() * fh) / view[2];
+        Object.assign(img.style, { left: `${left}px`, top: `${top}px`, width: `${size}px`, height: `${size}px` });
+      }
+
+      function hitsNear(x, y) {
+        const { eig, K, n } = data;
+        const r = 0.035 * 2 * view[2], r2 = r * r;
+        const hits = [];
+        for (let p = 0; p < K * n; p++) {
+          const dx = eig[2 * p] - x, dy = eig[2 * p + 1] - y;
+          if (dx * dx + dy * dy < r2) hits.push(p);
+        }
+        return hits;
+      }
+
+      // ---------- t plane ----------
+      let table = [];
+      const PLANE_KNEE = 0.15;
+      const planeScale = (w) => (w / 2 - 10) / Math.log1p((RMAX * 1.1) / PLANE_KNEE);
+      const planePx = (x, y, w) => {
+        const rho = Math.hypot(x, y);
+        if (rho === 0) return [w / 2, w / 2];
+        const s = (planeScale(w) * Math.log1p(rho / PLANE_KNEE)) / rho;
+        return [w / 2 + x * s, w / 2 - y * s];
+      };
+      const planeRho = (d, w) => PLANE_KNEE * Math.expm1(d / planeScale(w));
+
+      function drawPlane(dots = [], marker = null) {
+        const [ctx, w] = fit(plane);
+        const color = ink();
+        ctx.clearRect(0, 0, w, w);
+        ctx.strokeStyle = color;
+        ctx.globalAlpha = 0.18;
         ctx.lineWidth = 1;
-        ctx.setLineDash([3, 4]);
         ctx.beginPath();
-        ctx.moveTo(0, cy);
-        ctx.lineTo(s, cy);
-        ctx.moveTo(cx, 0);
-        ctx.lineTo(cx, s);
+        ctx.moveTo(6, w / 2);
+        ctx.lineTo(w - 6, w / 2);
+        ctx.moveTo(w / 2, 6);
+        ctx.lineTo(w / 2, w - 6);
         ctx.stroke();
+        ctx.setLineDash([2, 3]);
         ctx.beginPath();
-        ctx.arc(cx, cy, s / (2 * extent()), 0, 2 * Math.PI);
+        const unit = planePx(1, 0, w)[0] - w / 2;
+        ctx.arc(w / 2, w / 2, unit, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.setLineDash([]);
+        ctx.globalAlpha = 0.5;
+        ctx.fillStyle = color;
+        ctx.font = "10px var(--codeFont, ui-monospace, monospace)";
+        ctx.fillText("1", w / 2 + unit + 3, w / 2 - 4);
 
-        lctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        lctx.globalCompositeOperation = "source-over";
-        lctx.clearRect(0, 0, s, s);
-        lctx.strokeStyle = "#000";
-        for (const stroke of current ? [...strokes, current] : strokes) {
-          lctx.globalCompositeOperation = stroke.mode === "erase" ? "destination-out" : "source-over";
-          strokePath(lctx, stroke);
+        const R = drag?.axis === "R" ? drag.value : spec.R;
+        const b = drag?.axis === "b" ? drag.value : spec.b;
+        table = ellipseTable(R, b);
+        ctx.globalAlpha = 1;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        table.forEach((p, k) => {
+          const [x, y] = planePx(p.x, p.y, w);
+          if (k) ctx.lineTo(x, y);
+          else ctx.moveTo(x, y);
+        });
+        ctx.closePath();
+        ctx.stroke();
+
+        for (const [x, y, c] of dots) {
+          const [px, py] = planePx(x, y, w);
+          ctx.fillStyle = c;
+          ctx.globalAlpha = 0.75;
+          ctx.beginPath();
+          ctx.arc(px, py, 2.2, 0, 2 * Math.PI);
+          ctx.fill();
         }
-        lctx.globalCompositeOperation = "source-in";
-        lctx.fillStyle = "#56706B";
-        lctx.fillRect(0, 0, s, s);
-        lctx.globalCompositeOperation = "source-over";
-        ctx.save();
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.globalAlpha = 0.38;
-        ctx.drawImage(layer, 0, 0);
-        ctx.restore();
-        if (image.complete && image.naturalWidth) ctx.drawImage(image, 0, 0, s, s);
+        if (marker) {
+          const [px, py] = planePx(marker.x, marker.y, w);
+          ctx.globalAlpha = 1;
+          ctx.strokeStyle = color;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.arc(px, py, 5, 0, 2 * Math.PI);
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+        for (const axis of ["R", "b"]) {
+          const value = axis === "R" ? R : b;
+          const [px, py] = axis === "R" ? planePx(value, 0, w) : planePx(0, value, w);
+          ctx.fillStyle = color;
+          ctx.beginPath();
+          ctx.arc(px, py, drag?.axis === axis ? 6 : 4.5, 0, 2 * Math.PI);
+          ctx.fill();
+          if (drag?.axis === axis) {
+            ctx.font = "11px var(--codeFont, ui-monospace, monospace)";
+            ctx.fillText(String(value), px + 8, py - 8);
+          }
+        }
+      }
+
+      const planePoint = (event) => {
+        const r = plane.getBoundingClientRect();
+        return [event.clientX - r.left, event.clientY - r.top, r.width];
       };
-      const commit = () => {
-        model.set("strokes", strokes);
-        model.set("brush", Number(brush.value));
+      const handleAt = (px, py, w) => {
+        for (const axis of ["R", "b"]) {
+          const [hx, hy] = axis === "R" ? planePx(spec.R, 0, w) : planePx(0, spec.b, w);
+          if (Math.hypot(px - hx, py - hy) < 13) return axis;
+        }
+        return null;
+      };
+      const nearestU = (px, py, w) => {
+        let best = null, dist = 18;
+        for (const p of table) {
+          const [x, y] = planePx(p.x, p.y, w);
+          const d = Math.hypot(px - x, py - y);
+          if (d < dist) {
+            dist = d;
+            best = p;
+          }
+        }
+        return best;
+      };
+      plane.addEventListener("pointerdown", (event) => {
+        const [px, py, w] = planePoint(event);
+        const axis = handleAt(px, py, w);
+        if (axis) {
+          plane.setPointerCapture(event.pointerId);
+          drag = { axis, value: axis === "R" ? spec.R : spec.b };
+          hover = pinned = null;
+          paintAll();
+          return;
+        }
+        const p = nearestU(px, py, w);
+        pinned = p && !(pinned?.kind === "plane" && Math.abs(pinned.u - p.u) < 0.004) ? { kind: "plane", ...p } : null;
+        paintAll();
+      });
+      plane.addEventListener("pointermove", (event) => {
+        const [px, py, w] = planePoint(event);
+        if (drag) {
+          const d = drag.axis === "R" ? px - w / 2 : w / 2 - py;
+          drag.value = Math.min(RMAX, snap(Math.max(0, planeRho(d, w))));
+          drawPlane();
+          return;
+        }
+        const axis = handleAt(px, py, w);
+        plane.style.cursor = axis === "R" ? "ew-resize" : axis === "b" ? "ns-resize" : "crosshair";
+        const p = axis ? null : nearestU(px, py, w);
+        hover = p ? { kind: "plane", ...p } : null;
+        paintAll();
+      });
+      const endDrag = () => {
+        if (!drag) return;
+        const { axis, value } = drag;
+        drag = null;
+        if (value !== spec[axis]) commit({ ...clone(spec), [axis]: value }, true);
+        else paintAll();
+      };
+      plane.addEventListener("pointerup", endDrag);
+      plane.addEventListener("pointercancel", endDrag);
+      plane.addEventListener("pointerleave", () => {
+        if (!drag && hover?.kind === "plane") {
+          hover = null;
+          paintAll();
+        }
+      });
+
+      // ---------- stage interaction ----------
+      const stagePoint = (event) => {
+        const r = stage.getBoundingClientRect();
+        return fromPx(event.clientX - r.left, event.clientY - r.top);
+      };
+      stage.addEventListener("pointermove", (event) => {
+        if (!data) return;
+        const [x, y] = stagePoint(event);
+        hover = { kind: "stage", x, y };
+        paintAll();
+      });
+      stage.addEventListener("pointerleave", () => {
+        hover = null;
+        paintAll();
+      });
+      stage.addEventListener("click", (event) => {
+        if (!data) return;
+        const [x, y] = stagePoint(event);
+        pinned = pinned?.kind === "stage" ? null : { kind: "stage", x, y };
+        paintAll();
+      });
+      stage.addEventListener("dblclick", () => {
+        model.set("view", []);
         model.save_changes();
-        draw();
-      };
-
-      canvas.addEventListener("pointerdown", (event) => {
-        canvas.setPointerCapture(event.pointerId);
-        current = { mode, r: Number(brush.value) * extent(), pts: [toData(event)] };
-        draw();
+        stage.classList.add("pending");
       });
-      canvas.addEventListener("pointermove", (event) => {
-        if (!current) return;
-        const p = toData(event);
-        const last = current.pts[current.pts.length - 1];
-        if (Math.hypot(p[0] - last[0], p[1] - last[1]) > current.r * 0.3) {
-          current.pts.push(p);
-          draw();
+      stage.addEventListener(
+        "wheel",
+        (event) => {
+          if (!view || !(event.ctrlKey || event.metaKey)) return;
+          event.preventDefault();
+          const [x, y] = stagePoint(event);
+          const f = Math.exp(event.deltaY * 0.01);
+          view = [x + (view[0] - x) * f, y + (view[1] - y) * f, view[2] * f];
+          placeImage();
+          paintAll();
+          clearTimeout(commitTimer);
+          commitTimer = setTimeout(() => {
+            model.set("view", [...view]);
+            model.save_changes();
+            stage.classList.add("pending");
+          }, 250);
+        },
+        { passive: false }
+      );
+      const onKey = (event) => {
+        if (event.key === "Escape" && pinned) {
+          pinned = null;
+          paintAll();
         }
-      });
-      const finish = () => {
-        if (!current) return;
-        strokes = [...strokes, current];
-        current = null;
-        commit();
       };
-      canvas.addEventListener("pointerup", finish);
-      canvas.addEventListener("pointercancel", finish);
-      paint.addEventListener("click", () => setMode("add"));
-      erase.addEventListener("click", () => setMode("erase"));
-      undo.addEventListener("click", () => {
-        strokes = strokes.slice(0, -1);
-        commit();
-      });
-      clear.addEventListener("click", () => {
-        strokes = [];
-        commit();
-      });
+      window.addEventListener("keydown", onKey);
 
-      const onBackground = () => {
-        image.src = model.get("background") || "";
-        if (!model.get("background")) draw();
+      // ---------- linked painting ----------
+      function meanShares({ a, b, K, n }) {
+        const mean = new Float32Array(n * n);
+        for (let p = 0; p < K * n; p++)
+          for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) mean[i * n + j] += a[p * n + i] * b[p * n + j];
+        return mean.map((v) => v / (K * n));
+      }
+      // Lift: how much more these eigenvalues depend on an entry than the creature does overall.
+      const lift = (local, mean) => {
+        const ratio = local.map((v, k) => (mean[k] > 1e-6 ? v / mean[k] : 0));
+        const top = Math.max(...ratio);
+        return top > 1.05 ? ratio.map((r) => Math.max(0, (r - 1) / (top - 1))) : null;
       };
-      const onStrokes = () => {
-        strokes = model.get("strokes") || [];
-        draw();
+
+      function paintAll() {
+        if (!data || !view) {
+          drawPlane();
+          return;
+        }
+        const [ctx, w] = fit(over);
+        ctx.clearRect(0, 0, w, w);
+        const active = hover ?? pinned;
+        const { eig, a, b, t, u, draws, K, n, slots, stars } = data;
+        const m = slots.length;
+        let heat = null, starValues = null, dots = [], marker = null;
+
+        if (active?.kind === "stage") {
+          const hits = hitsNear(active.x, active.y);
+          const [px, py] = toPx(active.x, active.y);
+          ctx.strokeStyle = ink();
+          ctx.globalAlpha = 0.55;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.arc(px, py, 0.035 * w, 0, 2 * Math.PI);
+          ctx.stroke();
+          ctx.globalAlpha = 1;
+          if (hits.length) {
+            heat = new Float32Array(n * n);
+            for (const p of hits) {
+              const base = p * n;
+              for (let i = 0; i < n; i++) {
+                const ai = a[base + i];
+                if (!ai) continue;
+                for (let j = 0; j < n; j++) heat[i * n + j] += ai * b[base + j];
+              }
+            }
+            heat = lift(heat.map((h) => h / hits.length), data.mean);
+            const samples = [...new Set(hits.map((p) => Math.floor(p / n)))];
+            for (const s of samples) for (let q = 0; q < m; q++) dots.push([t[2 * (s * m + q)], t[2 * (s * m + q) + 1], SLOT_COLOR[slots[q]]]);
+            if (stars.length && samples.length >= 6) {
+              starValues = {};
+              stars.forEach(([i, j, code], q) => {
+                const counts = new Array(POPS[code].length).fill(0);
+                for (const s of samples) counts[draws[s * stars.length + q]]++;
+                const best = counts.indexOf(Math.max(...counts));
+                if (counts[best] / samples.length > 0.7) starValues[i * n + j] = POPS[code][best];
+              });
+            }
+          }
+        } else if (active?.kind === "cell") {
+          const G = 56, raw = new Float32Array(G * G), rawCount = new Float32Array(G * G);
+          const { i, j } = active;
+          for (let p = 0; p < K * n; p++) {
+            const [px, py] = toPx(eig[2 * p], eig[2 * p + 1]);
+            const gx = Math.floor((px / w) * G), gy = Math.floor((py / w) * G);
+            if (gx < 0 || gy < 0 || gx >= G || gy >= G) continue;
+            raw[gy * G + gx] += a[p * n + i] * b[p * n + j];
+            rawCount[gy * G + gx]++;
+          }
+          // Pool each bin with its neighbours so sparse probes read as a field, not speckle.
+          const sum = new Float32Array(G * G), count = new Float32Array(G * G);
+          for (let gy = 0; gy < G; gy++)
+            for (let gx = 0; gx < G; gx++) {
+              if (!rawCount[gy * G + gx]) continue;
+              for (let dy = -2; dy <= 2; dy++)
+                for (let dx = -2; dx <= 2; dx++) {
+                  const yy = gy + dy, xx = gx + dx;
+                  if (yy < 0 || xx < 0 || yy >= G || xx >= G) continue;
+                  sum[gy * G + gx] += raw[yy * G + xx];
+                  count[gy * G + gx] += rawCount[yy * G + xx];
+                }
+            }
+          const base = data.mean[i * n + j];
+          let top = 0;
+          for (let g = 0; g < G * G; g++) if (count[g] >= 6) top = Math.max(top, sum[g] / count[g] / base);
+          if (base > 1e-6 && top > 1.05) {
+            const off = document.createElement("canvas");
+            off.width = off.height = G;
+            const octx = off.getContext("2d");
+            const image = octx.createImageData(G, G);
+            const [r, gg, bb] = HEAT.split(",").map(Number);
+            for (let g = 0; g < G * G; g++) {
+              if (count[g] < 6) continue;
+              const v = Math.max(0, (sum[g] / count[g] / base - 1) / (top - 1));
+              image.data.set([r, gg, bb, Math.round(210 * v)], 4 * g);
+            }
+            octx.putImageData(image, 0, 0);
+            ctx.imageSmoothingEnabled = true;
+            ctx.drawImage(off, 0, 0, w, w);
+          }
+        } else if (active?.kind === "plane" && m) {
+          marker = active;
+          for (let s = 0; s < K; s++) {
+            for (let q = 0; q < m; q++) {
+              const d = Math.abs(u[s * m + q] - active.u);
+              if (Math.min(d, 1 - d) > 0.008) continue;
+              ctx.fillStyle = SLOT_COLOR[slots[q]];
+              for (let k = 0; k < n; k++) {
+                const [px, py] = toPx(eig[2 * (s * n + k)], eig[2 * (s * n + k) + 1]);
+                ctx.fillRect(px - 1.25, py - 1.25, 2.5, 2.5);
+              }
+            }
+          }
+        }
+        paintMatrix(heat, starValues);
+        plane.classList.toggle("ec-idle", !spec.cells.some((row) => row.some((code) => code === "t1" || code === "t2")));
+        drawPlane(dots, marker);
+      }
+
+      // ---------- history ----------
+      function paintHistory() {
+        hist.replaceChildren();
+        if (history.length < 2) return;
+        const key = keyOf(spec);
+        for (const entry of history) {
+          const button = make("button", "ec-thumb", hist);
+          button.type = "button";
+          button.setAttribute("aria-label", "Return to this creature");
+          button.setAttribute("aria-pressed", String(entry.key === key));
+          const mask = make("span", "", button);
+          mask.style.webkitMaskImage = mask.style.maskImage = `url(${entry.mask})`;
+          button.addEventListener("click", () => commit(clone(entry.spec), true));
+        }
+      }
+
+      // ---------- frames from Python ----------
+      function onFrame() {
+        frame = model.get("frame");
+        if (!frame || !frame.view) return;
+        data = {
+          K: frame.K,
+          n: frame.n,
+          slots: frame.slots,
+          stars: frame.stars,
+          eig: decode(frame.eig, Float32Array),
+          a: Float32Array.from(decode(frame.a, Uint8Array), (v) => v / 255),
+          b: Float32Array.from(decode(frame.b, Uint8Array), (v) => v / 255),
+          t: decode(frame.t, Float32Array),
+          u: decode(frame.u, Float32Array),
+          draws: decode(frame.draws, Uint8Array),
+        };
+        data.mean = meanShares(data);
+        view = [...frame.view];
+        img.style.webkitMaskImage = img.style.maskImage = `url(${frame.mask})`;
+        const current = model.get("spec");
+        if (frame.key === current.key) {
+          spec = clone(current);
+          stage.classList.remove("pending");
+          if (!history.some((entry) => entry.key === frame.key)) {
+            history.push({ key: frame.key, spec: clone(current), mask: frame.thumb });
+            if (history.length > 12) history.shift();
+          }
+        }
+        buildMatrix();
+        paintPills();
+        paintHistory();
+        placeImage();
+        paintAll();
+      }
+      const onResize = () => {
+        placeImage();
+        paintAll();
       };
-      const onSize = () => {
-        resize();
-        draw();
-      };
-      image.onload = draw;
-      model.on("change:background", onBackground);
-      model.on("change:strokes", onStrokes);
-      model.on("change:extent", draw);
-      model.on("change:size", onSize);
-      setMode("add");
-      resize();
-      onBackground();
-      draw();
+      const observer = new ResizeObserver(onResize);
+      observer.observe(stage);
+      // Canvas ink can't follow currentColor, so repaint when the host flips its theme.
+      const themeObserver = new MutationObserver(() => paintAll());
+      for (const node of [document.documentElement, document.body])
+        themeObserver.observe(node, { attributes: true, attributeFilter: ["class", "data-theme", "saved-theme", "style"] });
+      model.on("change:frame", onFrame);
+      paintBrushes();
+      buildMatrix();
+      paintPills();
+      onFrame();
+
       return () => {
-        model.off("change:background", onBackground);
-        model.off("change:strokes", onStrokes);
-        model.off("change:extent", draw);
-        model.off("change:size", onSize);
-        image.onload = null;
+        model.off("change:frame", onFrame);
+        window.removeEventListener("pointerup", endPaint);
+        window.removeEventListener("keydown", onKey);
+        observer.disconnect();
+        themeObserver.disconnect();
+        clearTimeout(commitTimer);
+        root.remove();
       };
     }
     export default { render };
     """
-    SKETCH_CSS = """
-    .eigen-sketch { display: inline-flex; flex-direction: column; gap: 0.5rem; }
-    .eigen-sketch canvas {
-      border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
-      border-radius: 6px;
-      touch-action: none;
-      cursor: crosshair;
+
+    CREATURE_CSS = """
+    .ec { display: flex; flex-direction: column; gap: 0.9rem; color: inherit; font: inherit; }
+    .ec button {
+      font: inherit; color: inherit; background: transparent; cursor: pointer;
+      border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
     }
-    .eigen-sketch-bar { display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; font-size: 0.85rem; }
-    .eigen-sketch-bar button {
-      font: inherit;
-      padding: 0.15rem 0.6rem;
-      border-radius: 4px;
-      border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
-      background: transparent;
-      color: inherit;
-      cursor: pointer;
+    .ec button[aria-pressed="true"] {
+      background: color-mix(in srgb, currentColor 11%, transparent);
+      border-color: color-mix(in srgb, currentColor 50%, transparent);
     }
-    .eigen-sketch-bar button[aria-pressed="true"] { background: color-mix(in srgb, #E89A39 32%, transparent); }
-    .eigen-sketch-bar label { display: inline-flex; gap: 0.3rem; align-items: center; }
+    .ec-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .ec-pills button { border-radius: 999px; padding: 0.1rem 0.75rem; font-size: 0.9rem; }
+    .ec-main { display: grid; grid-template-columns: minmax(0, 1fr) 15.5rem; gap: 1.5rem; align-items: start; }
+    .ec-stage { position: relative; aspect-ratio: 1; overflow: hidden; cursor: crosshair; }
+    .ec-img {
+      position: absolute; background: currentColor;
+      -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      transition: opacity 160ms;
+    }
+    .ec-stage.pending .ec-img { opacity: 0.4; }
+    .ec-over { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .ec-side { display: flex; flex-direction: column; gap: 0.6rem; min-width: 0; }
+    .ec-brushes { display: grid; grid-template-columns: repeat(9, 1fr); gap: 2px; }
+    .ec-brushes button, .ec-size button {
+      border-radius: 4px; padding: 0.15rem 0; font-size: 0.78rem;
+      font-family: var(--codeFont, ui-monospace, monospace);
+    }
+    .ec-matrix { display: grid; gap: 2px; touch-action: none; user-select: none; }
+    .ec-cell {
+      aspect-ratio: 1; border-radius: 3px; padding: 0; min-width: 0;
+      font-size: 0.72rem; font-family: var(--codeFont, ui-monospace, monospace);
+      border-color: color-mix(in srgb, currentColor 13%, transparent) !important;
+      transition: background-color 90ms;
+    }
+    .ec .ec-t1 { color: #E89A39; font-weight: 600; }
+    .ec .ec-t2 { color: #56706B; font-weight: 600; }
+    .ec-cell.ec-pm, .ec-cell.ec-ik { font-style: italic; color: color-mix(in srgb, currentColor 65%, transparent); }
+    .ec-cell.ec-fixed { font-style: normal; font-weight: 700; color: inherit; }
+    .ec-cell.ec-hot { outline: 1.5px solid currentColor; outline-offset: -1px; }
+    .ec-size { display: flex; justify-content: flex-end; gap: 2px; }
+    .ec-size button { width: 1.8rem; }
+    .ec-plane { width: 100%; aspect-ratio: 1; touch-action: none; cursor: crosshair; transition: opacity 160ms; }
+    .ec-plane.ec-idle { opacity: 0.35; }
+    .ec-hist { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .ec-thumb { width: 3.25rem; height: 3.25rem; border-radius: 4px; padding: 3px; }
+    .ec-thumb span {
+      display: block; width: 100%; height: 100%; background: currentColor;
+      -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+    }
+    @media (max-width: 640px) { .ec-main { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { .ec-img, .ec-cell { transition: none; } }
     """
 
 
-@app.class_definition
-class SpectrumSketch(anywidget.AnyWidget):
-    """Paint a target region in the complex plane over the current spectrum.
-
-    `strokes` holds capsules in complex-plane coordinates:
-    `{"mode": "add" | "erase", "r": radius, "pts": [[x, y], ...]}`.
-    """
-
-    _esm = SKETCH_ESM
-    _css = SKETCH_CSS
-    strokes = traitlets.List([]).tag(sync=True)
-    background = traitlets.Unicode("").tag(sync=True)
-    extent = traitlets.Float(2.5).tag(sync=True)
-    brush = traitlets.Float(0.12).tag(sync=True)
-    size = traitlets.Int(420).tag(sync=True)
-
-
-@app.function
+@app.function(hide_code=True)
 def png_bytes(pixels):
-    """Encode an RGB or RGBA uint8 array as PNG without an imaging dependency."""
+    """Encode a uint8 array (gray+alpha, RGB or RGBA) as PNG without an imaging dependency."""
     height, width, channels = pixels.shape
 
     def chunk(kind, data):
@@ -376,7 +773,7 @@ def png_bytes(pixels):
         return struct.pack(">I", len(data)) + kind + data + crc
 
     rows = b"".join(b"\x00" + row.tobytes() for row in pixels)
-    header = struct.pack(">IIBBBBB", width, height, 8, {3: 2, 4: 6}[channels], 0, 0, 0)
+    header = struct.pack(">IIBBBBB", width, height, 8, {2: 4, 3: 2, 4: 6}[channels], 0, 0, 0)
     return (
         b"\x89PNG\r\n\x1a\n"
         + chunk(b"IHDR", header)
@@ -385,974 +782,259 @@ def png_bytes(pixels):
     )
 
 
-@app.function
-def data_url(pixels):
+@app.function(hide_code=True)
+def b64(array, dtype):
+    return base64.b64encode(np.ascontiguousarray(array, dtype=dtype).tobytes()).decode("ascii")
+
+
+@app.function(hide_code=True)
+def ellipse(R, b, u):
+    """The ellipse R cos φ + i b sin φ at arclength fractions u: a circle at b = R, the segment [−R, R] at b = 0."""
+    phi = np.linspace(0, 2 * np.pi, 2049)
+    points = R * np.cos(phi) + 1j * b * np.sin(phi)
+    arc = np.concatenate([[0], np.cumsum(np.abs(np.diff(points)))])
+    if arc[-1] == 0:
+        return np.zeros(np.shape(u), complex)
+    at = np.interp(np.asarray(u) * arc[-1], arc, phi)
+    return R * np.cos(at) + 1j * b * np.sin(at)
+
+
+@app.function(hide_code=True)
+def sample(spec, count, seed=7):
+    """Draw `count` matrices: constants stay, t₁ and t₂ walk the domain, ±1 and iᵏ cells are drawn afresh."""
+    cells = np.array(spec["cells"])
+    rng = np.random.default_rng(seed)
+    base = np.vectorize(lambda code: VALUES.get(code, 0), otypes=[complex])(cells)
+    matrices = np.broadcast_to(base, (count, *base.shape)).copy()
+    slots = [name for name in SLOTS if (cells == name).any()]
+    u = rng.uniform(0, 1, (count, len(slots)))
+    t = ellipse(spec["R"], spec["b"], u)
+    for m, name in enumerate(slots):
+        matrices[:, cells == name] = t[:, m : m + 1]
+    stars = [(int(i), int(j), str(cells[i, j])) for i, j in np.argwhere(np.isin(cells, list(POPULATIONS)))]
+    draws = np.zeros((count, len(stars)), np.uint8)
+    for q, (i, j, code) in enumerate(stars):
+        draws[:, q] = rng.integers(len(POPULATIONS[code]), size=count)
+        matrices[:, i, j] = POPULATIONS[code][draws[:, q]]
+    return {"A": matrices, "t": t, "u": u, "draws": draws, "slots": slots, "stars": stars}
+
+
+@app.function(hide_code=True)
+def sample_count(n):
+    return int(min(30000, 30000 * (6 / n) ** 2))
+
+
+@app.function(hide_code=True)
+def solve(spec):
+    """Eigenvalues of every sample, plus left and right eigenvectors for the first PROBES.
+
+    For a simple eigenvalue λ with right vector x and left vector y,
+    ∂λ/∂A_ij = ȳ_i x_j / (y*x). Its share for entry (i, j) is |y_i||x_j| / (Σ|y|·Σ|x|),
+    so a, b below hold the normalised |y| and |x| of each probed eigenvalue.
+    """
+    n = len(spec["cells"])
+    drawn = sample(spec, sample_count(n))
+    A = drawn["A"]
+    probe = min(PROBES, len(A))
+    lam, X = np.linalg.eig(A[:probe])
+    try:
+        Y = np.linalg.inv(X)
+    except np.linalg.LinAlgError:
+        Y = np.linalg.pinv(X)
+    left = np.abs(Y)
+    right = np.abs(X).transpose(0, 2, 1)
+    left /= left.sum(-1, keepdims=True) + 1e-12
+    right /= right.sum(-1, keepdims=True) + 1e-12
+    rest = np.linalg.eigvals(A[probe:]) if len(A) > probe else np.empty((0, n), complex)
+    return {
+        **drawn,
+        "A": None,
+        "n": n,
+        "lam": lam,
+        "left": left,
+        "right": right,
+        "z": np.concatenate([lam.reshape(-1), rest.reshape(-1)]),
+    }
+
+
+@app.function(hide_code=True)
+def auto_view(z, mass=0.99, pad=1.08):
+    z = z[np.isfinite(z)]
+    if len(z) == 0:
+        return (0.0, 0.0, 1.0)
+    q = (1 - mass) / 2
+    low_re, high_re = np.quantile(z.real, [q, 1 - q])
+    low_im, high_im = np.quantile(z.imag, [q, 1 - q])
+    half = max(high_re - low_re, high_im - low_im, 1e-3) / 2 * pad
+    return (float(low_re + high_re) / 2, float(low_im + high_im) / 2, float(half))
+
+
+@app.function(hide_code=True)
+def tone(z, view, size):
+    """Opacity of stacked translucent points, 1 − (1 − α)^count, with α set so a typical lit pixel reads 0.35."""
+    cx, cy, half = view
+    x = np.floor((z.real - cx + half) / (2 * half) * size)
+    y = np.floor((cy + half - z.imag) / (2 * half) * size)
+    inside = np.isfinite(z) & (x >= 0) & (x < size) & (y >= 0) & (y < size)
+    flat = (y[inside] * size + x[inside]).astype(np.intp)
+    density = np.bincount(flat, minlength=size * size).reshape(size, size).astype(np.float32)
+    lit = density[density > 0]
+    k = -np.log(0.65) / (np.median(lit) if len(lit) else 1.0)
+    return 1 - np.exp(-k * density)
+
+
+@app.function(hide_code=True)
+def mask_url(opacity):
+    """A PNG whose alpha is the creature, so CSS can paint it in the page's own ink."""
+    alpha = np.rint(255 * opacity).astype(np.uint8)
+    pixels = np.dstack([np.zeros_like(alpha), alpha])
     return "data:image/png;base64," + base64.b64encode(png_bytes(pixels)).decode("ascii")
 
 
-@app.function
-def decode_matrix(encoded):
-    """Conradi's integer codes: −2 → −i, −1, 0, 1, 2 → i."""
-    encoded = np.asarray(encoded, dtype=int)
-    matrix = np.zeros(encoded.shape, dtype=np.complex128)
-    for code, value in ((-2, -1j), (-1, -1), (1, 1), (2, 1j)):
-        matrix[encoded == code] = value
-    return matrix
-
-
-@app.function
-def slot_body(name, base, rows, cols):
-    """A pencil whose parameters replace single entries: A(t) = B + Σ tₘ e_{iₘjₘ}."""
-    base = np.array(base, dtype=np.complex128)
-    base[rows, cols] = 0
-    directions = np.zeros((len(rows), *base.shape), dtype=np.complex128)
-    directions[np.arange(len(rows)), rows, cols] = 1
-    labels = [f"t{index + 1}" for index in range(len(rows))]
-    return {"name": name, "B": base, "E": directions, "labels": labels}
-
-
-@app.function
-def conradi_body(matrix, mask):
-    rows, cols = np.nonzero(np.asarray(mask, dtype=float) >= 0.5)
-    return slot_body("Conradi matrix", decode_matrix(matrix), rows, cols)
-
-
-@app.function
-def structure_support(structure, size):
-    i, j = np.indices((size, size))
-    offset = (j - i) % size
-    return {
-        "free": np.ones((size, size), dtype=bool),
-        "cyclic band": (offset <= 2) | (offset >= size - 1),
-        "Hessenberg": j >= i - 1,
-        "tridiagonal": np.abs(i - j) <= 1,
-        "shift + chords": (offset == 1) | (offset == 0) | (offset == size // 2),
-    }[structure]
-
-
-@app.function
-def ensemble_body(size, density, alphabet, structure, slots, seed):
-    """A random sparse matrix over a small alphabet, with `slots` torus entries."""
-    rng = np.random.default_rng(seed)
-    support = structure_support(structure, size)
-    keep = support & (rng.random((size, size)) < density)
-    base = np.where(keep, rng.choice(ALPHABETS[alphabet], (size, size)), 0)
-    candidates = np.argwhere(support)
-    picks = candidates[rng.choice(len(candidates), min(slots, len(candidates)), replace=False)]
-    body = slot_body(f"Ensemble · seed {seed}", base, picks[:, 0], picks[:, 1])
-    body["alphabet"] = alphabet
-    return body
-
-
-@app.function
-def closed_spline(points, per_segment=48):
-    """Closed uniform Catmull–Rom spline through the knots."""
-    z = np.array([point["x"] + 1j * point["y"] for point in points])
-    if len(z) < 3:
-        return z
-    u = np.linspace(0, 1, per_segment, endpoint=False)[:, None]
-    p0, p1, p2, p3 = np.roll(z, 1), z, np.roll(z, -1), np.roll(z, -2)
-    curve = 0.5 * (
-        2 * p1
-        + (p2 - p0) * u
-        + (2 * p0 - 5 * p1 + 4 * p2 - p3) * u**2
-        + (3 * p1 - p0 - 3 * p2 + p3) * u**3
+@app.function(hide_code=True)
+def figure(opacity, label):
+    return (
+        f'<div role="img" aria-label="{label}" style="aspect-ratio:1;background:currentColor;'
+        f'-webkit-mask:url({mask_url(opacity)}) center/100% 100% no-repeat;'
+        f'mask:url({mask_url(opacity)}) center/100% 100% no-repeat"></div>'
     )
-    return curve.T.reshape(-1)
 
 
-@app.function
-def resample_closed(z, count=512):
-    """Resample a closed polyline at equal arclength."""
-    loop = np.append(z, z[0])
-    arc = np.concatenate([[0], np.cumsum(np.abs(np.diff(loop)))])
-    target = np.linspace(0, arc[-1], count, endpoint=False)
-    return np.interp(target, arc, loop.real) + 1j * np.interp(target, arc, loop.imag)
+@app.class_definition(hide_code=True)
+class Creature(anywidget.AnyWidget):
+    """Paint a matrix, stretch the domain of t, and hover to trace features to entries.
 
-
-@app.function
-def outline_body(points, harmonics, size, texture, texture_slots, seed):
-    """A twisted circulant whose spectrum is the drawn outline.
-
-    The outline is γ(θ) = Σ_{|k|≤K} c_k e^{ikθ}. The n×n matrix with c_k on the
-    k-th cyclic diagonal has eigenvalues γ(2πj/n). Multiply its wrap-around
-    entries by τ₊ (above) and τ₋ (below): when τ₊ = z^n and τ₋ = z^{−n}, the
-    eigenvalues are γ evaluated at the n-th roots of z, so a knot with windings
-    (1, −1) traces the outline exactly. Other paths leave the curve and fill it.
+    spec: {"cells": n×n codes, "R": float, "b": float, "key": str}, set by the browser.
+    view: [cx, cy, half] or [] for automatic framing.
+    frame: the rendered mask plus probed eigenvalues, eigenvector shares, t and draws.
     """
-    curve = resample_closed(closed_spline(points))
-    coefficients = np.fft.fft(curve) / len(curve)
-    n = max(size, 2 * harmonics + 1)
-    base = np.zeros((n, n), dtype=np.complex128)
-    upper = np.zeros_like(base)
-    lower = np.zeros_like(base)
-    for k in range(-harmonics, harmonics + 1):
-        c = coefficients[k % len(curve)]
-        for row in range(n):
-            col = row + k
-            if col >= n:
-                upper[row, col - n] += c
-            elif col < 0:
-                lower[row, col + n] += c
-            else:
-                base[row, col] += c
-    rng = np.random.default_rng(seed)
-    if texture > 0:
-        sprinkle = rng.random((n, n)) < 2.5 / n
-        base = base + texture * np.where(sprinkle, rng.choice(GAUSSIAN_UNITS, (n, n)), 0)
-    directions = [upper, lower]
-    labels = ["τ₊", "τ₋"]
-    for index in range(texture_slots if texture > 0 else 0):
-        direction = np.zeros_like(base)
-        direction[rng.integers(n), rng.integers(n)] = texture
-        directions.append(direction)
-        labels.append(f"t{index + 3}")
-    return {
-        "name": f"Outline · {harmonics} harmonics",
-        "B": base,
-        "E": np.array(directions),
-        "labels": labels,
-        "outline": curve,
-    }
+
+    _esm = CREATURE_ESM
+    _css = CREATURE_CSS
+    spec = traitlets.Dict({}).tag(sync=True)
+    view = traitlets.List([]).tag(sync=True)
+    presets = traitlets.Dict({}).tag(sync=True)
+    frame = traitlets.Dict({}).tag(sync=True)
+
+    def __init__(self, spec, **kwargs):
+        self._solved = None
+        super().__init__(spec=spec, presets=PRESETS, **kwargs)
+        if self._solved is None:
+            self._solve()
+
+    @traitlets.observe("spec")
+    def _on_spec(self, change):
+        self._solve()
+
+    @traitlets.observe("view")
+    def _on_view(self, change):
+        if self._solved is not None:
+            self._draw()
+
+    def _solve(self):
+        self._solved = solve(self.spec)
+        self._draw()
+
+    def current_view(self):
+        return tuple(self.view) if len(self.view) == 3 else auto_view(self._solved["z"])
+
+    def poster(self, size=2048):
+        opacity = tone(self._solved["z"], self.current_view(), size)[..., None]
+        paper, ink = np.array(PAPER, np.float32), np.array(INK, np.float32)
+        return png_bytes(np.rint(paper + opacity * (ink - paper)).astype(np.uint8))
+
+    def _draw(self):
+        s = self._solved
+        view = self.current_view()
+        lam = s["lam"]
+        self.frame = {
+            "key": self.spec.get("key", ""),
+            "view": list(view),
+            "mask": mask_url(tone(s["z"], view, 720)),
+            "thumb": mask_url(tone(s["z"], auto_view(s["z"]), 96)),
+            "n": s["n"],
+            "K": int(lam.shape[0]),
+            "slots": s["slots"],
+            "stars": [list(star) for star in s["stars"]],
+            "eig": b64(np.stack([lam.real, lam.imag], -1), np.float32),
+            "a": b64(np.rint(255 * s["left"]), np.uint8),
+            "b": b64(np.rint(255 * s["right"]), np.uint8),
+            "t": b64(np.stack([s["t"].real, s["t"].imag], -1)[: lam.shape[0]], np.float32),
+            "u": b64(s["u"][: lam.shape[0]], np.float32),
+            "draws": b64(s["draws"][: lam.shape[0]], np.uint8),
+        }
 
 
-@app.function
-def bezier_points(points, closed):
-    z = np.array([point["x"] + 1j * point["y"] for point in points])
-    return np.append(z, z[0]) if closed and len(z) else z
-
-
-@app.function
-def bezier_eval(control, u):
-    """Evaluate one Bezier curve of arbitrary degree at parameters u."""
-    degree = len(control) - 1
-    result = np.zeros(np.shape(u), dtype=np.complex128)
-    for k, point in enumerate(control):
-        result += math.comb(degree, k) * u**k * (1 - u) ** (degree - k) * point
-    return result
-
-
-@app.function
-def parse_windings(text):
-    values = []
-    for token in text.replace(",", " ").split():
-        try:
-            values.append(int(token))
-        except ValueError:
-            pass
-    return values or [1]
-
-
-@app.function
-def sample_parameters(kind, m, count, rng, radius, radii, windings, jitter, path, lag):
-    """Draw parameter vectors t ∈ ℂ^m and a scalar position s ∈ [0, 1) per sample."""
-    s = rng.uniform(0, 1, count)
-    if m == 0:
-        return np.zeros((count, 0), dtype=np.complex128), s
-    if kind == "Drawn path":
-        u = (s[:, None] + lag * np.arange(m)[None, :]) % 1
-        noise = rng.normal(size=(count, m)) + 1j * rng.normal(size=(count, m))
-        return bezier_eval(path, u) + jitter * noise / np.sqrt(2), s
-    phase = rng.uniform(0, 2 * np.pi, (count, m))
-    if kind == "Torus":
-        return radius * np.exp(1j * phase), phase[:, 0] / (2 * np.pi)
-    if kind == "Annulus":
-        low, high = np.log(radii[0]), np.log(radii[1])
-        return np.exp(rng.uniform(low, high, (count, m)) + 1j * phase), phase[:, 0] / (2 * np.pi)
-    for index, winding in enumerate(windings[:m]):
-        phase[:, index] = 2 * np.pi * winding * s
-    phase += jitter * rng.normal(size=phase.shape)
-    modulus = radius * np.exp(0.5 * jitter * rng.normal(size=phase.shape))
-    return modulus * np.exp(1j * phase), s
-
-
-@app.function
-def pencil(body, t):
-    return body["B"][None] + np.einsum("sm,mij->sij", t, body["E"])
-
-
-@app.function
-def spectrum(body, t):
-    return np.linalg.eigvals(pencil(body, t))
-
-
-@app.function
-def apply_lens(lens, eigenvalues):
-    with np.errstate(all="ignore"):
-        return LENSES[lens](eigenvalues.astype(np.complex128))
-
-
-@app.function
-def auto_view(z, pad=1.08):
-    z = z[np.isfinite(z)]
-    if len(z) == 0:
-        return 0j, 1.0
-    low_re, high_re = np.quantile(z.real, [0.002, 0.998])
-    low_im, high_im = np.quantile(z.imag, [0.002, 0.998])
-    center = complex((low_re + high_re) / 2, (low_im + high_im) / 2)
-    return center, max(high_re - low_re, high_im - low_im, 1e-6) / 2 * pad
-
-
-@app.function
-def bin_points(z, center, half, size):
-    finite = np.isfinite(z)
-    z = np.where(finite, z, center + 4 * half)
-    x = np.floor((z.real - center.real + half) / (2 * half) * size)
-    y = np.floor((center.imag + half - z.imag) / (2 * half) * size)
-    inside = finite & (x >= 0) & (x < size) & (y >= 0) & (y < size)
-    return (y[inside] * size + x[inside]).astype(np.intp), inside
-
-
-@app.function
-def soften(image):
-    out = image.copy()
-    for dy, dx, weight in (
-        (-1, 0, 0.5), (1, 0, 0.5), (0, -1, 0.5), (0, 1, 0.5),
-        (-1, -1, 0.22), (-1, 1, 0.22), (1, -1, 0.22), (1, 1, 0.22),
-    ):
-        out += weight * np.roll(image, (dy, dx), axis=(0, 1))
-    return out
-
-
-@app.function
-def cycle_colors(angle, colors):
-    colors = np.asarray(colors, dtype=np.float32)
-    position = (angle % (2 * np.pi)) / (2 * np.pi) * len(colors)
-    lower = np.floor(position).astype(int) % len(colors)
-    fraction = (position - np.floor(position))[..., None]
-    return colors[lower] * (1 - fraction) + colors[(lower + 1) % len(colors)] * fraction
-
-
-@app.function
-def render_creature(z, palette, hue=None, size=760, gamma=0.72, view=None, transparent=False):
-    """Log-density image of points z; with `hue` (radians), colour by circular mean."""
-    center, half = view or auto_view(z)
-    flat, inside = bin_points(z, center, half, size)
-    count = size * size
-    density = soften(np.bincount(flat, minlength=count).astype(np.float32).reshape(size, size))
-    tone = np.log1p(density)
-    lit = tone[tone > 0]
-    exposure = float(np.quantile(lit, 0.997)) if len(lit) else 1.0
-    tone = np.clip(tone / max(exposure, 1e-6), 0, 1) ** gamma
-    ink = np.asarray(palette["ink"], dtype=np.float32)
-    color = np.broadcast_to(ink, (size, size, 3))
-    if hue is not None:
-        angle = np.asarray(hue)[inside]
-        cos = soften(np.bincount(flat, np.cos(angle), count).reshape(size, size).astype(np.float32))
-        sin = soften(np.bincount(flat, np.sin(angle), count).reshape(size, size).astype(np.float32))
-        coherence = np.clip(np.hypot(cos, sin) / np.maximum(density, 1e-6), 0, 1)[..., None]
-        color = ink + coherence * (cycle_colors(np.arctan2(sin, cos), palette["cycle"]) - ink)
-    if transparent:
-        return np.rint(np.dstack([color, 255 * tone])).astype(np.uint8)
-    paper = np.asarray(palette["paper"], dtype=np.float32)
-    return np.rint(paper + tone[..., None] * (color - paper)).astype(np.uint8)
-
-
-@app.function
-def shape_features(z, grid=64):
-    """Cheap descriptors on a coarse occupancy grid, in [0, 1]."""
-    center, half = auto_view(z)
-    flat, _ = bin_points(z, center, half, grid)
-    counts = np.bincount(flat, minlength=grid * grid).reshape(grid, grid).astype(float)
-    occupied = counts > 0
-    if not occupied.any():
-        return dict.fromkeys(FEATURES, 0.0)
-    padded = np.pad(~occupied, 1, constant_values=True)
-    reached = np.zeros_like(padded)
-    reached[0, :] = reached[-1, :] = reached[:, 0] = reached[:, -1] = True
-    for _ in range(4 * grid):
-        grown = reached.copy()
-        for axis in (0, 1):
-            for shift in (1, -1):
-                grown |= np.roll(reached, shift, axis=axis)
-        grown &= padded
-        if (grown == reached).all():
-            break
-        reached = grown
-    enclosed = (padded & ~reached)[1:-1, 1:-1]
-    edge = occupied & ~(
-        np.roll(occupied, 1, 0) & np.roll(occupied, -1, 0)
-        & np.roll(occupied, 1, 1) & np.roll(occupied, -1, 1)
-    )
-    p = counts / counts.sum()
-    coarse = p.reshape(16, grid // 16, 16, grid // 16).sum(axis=(1, 3))
-    mirror = max(
-        float((coarse * coarse[:, ::-1]).sum()),
-        float((coarse * coarse[::-1, :]).sum()),
-        float((coarse * coarse[::-1, ::-1]).sum()),
-    ) / float((coarse * coarse).sum())
-    q = p[occupied]
-    return {
-        "fill": float(occupied.mean()),
-        "porosity": float(enclosed.sum() / (occupied.sum() + enclosed.sum())),
-        "lace": float(edge.sum() / occupied.sum()),
-        "symmetry": mirror,
-        "evenness": float(-(q * np.log(q)).sum() / max(np.log(len(q)), 1e-9)),
-    }
-
-
-@app.function
-def mutate(body, strength, rng, name):
-    """Edit a few entries: flip to a unit, zero out, nudge, or move a slot."""
-    base = body["B"].copy()
-    directions = body["E"].copy()
-    n = len(base)
-    nonzero = np.abs(base[base != 0])
-    scale = float(np.median(nonzero)) if len(nonzero) else 1.0
-    slots = [m for m in range(len(directions)) if np.count_nonzero(directions[m]) == 1]
-    for _ in range(strength):
-        i, j = rng.integers(n), rng.integers(n)
-        operation = rng.choice(["flip", "flip", "nudge", "slot"])
-        if operation == "slot" and slots:
-            m = rng.choice(slots)
-            weight = directions[m][directions[m] != 0][0]
-            directions[m] = 0
-            directions[m, i, j] = weight
-            base[i, j] = 0
-        elif operation == "nudge":
-            base[i, j] += 0.35 * scale * (rng.normal() + 1j * rng.normal())
-        else:
-            base[i, j] = 0 if rng.random() < 0.3 else scale * rng.choice(GAUSSIAN_UNITS)
-    return {**body, "name": name, "B": base, "E": directions}
-
-
-@app.function
-def rasterize_strokes(strokes, extent, grid=128):
-    """Rasterize capsule strokes (complex-plane units) onto a grid over [−e, e]²."""
-    cell = 2 * extent / grid
-    xs = -extent + (np.arange(grid) + 0.5) * cell
-    ys = extent - (np.arange(grid) + 0.5) * cell
-    mask = np.zeros((grid, grid), dtype=bool)
-    for stroke in strokes:
-        points = np.asarray(stroke.get("pts", []), dtype=float).reshape(-1, 2)
-        if len(points) == 0:
-            continue
-        radius = float(stroke.get("r", 0.1))
-        segments = list(zip(points[:-1], points[1:])) or [(points[0], points[0])]
-        for a, b in segments:
-            c0 = max(int((min(a[0], b[0]) - radius + extent) / cell), 0)
-            c1 = min(int((max(a[0], b[0]) + radius + extent) / cell) + 2, grid)
-            r0 = max(int((extent - max(a[1], b[1]) - radius) / cell), 0)
-            r1 = min(int((extent - min(a[1], b[1]) + radius) / cell) + 2, grid)
-            if c0 >= c1 or r0 >= r1:
-                continue
-            x = xs[c0:c1][None, :] - a[0]
-            y = ys[r0:r1][:, None] - a[1]
-            d = b - a
-            length = float(d @ d)
-            u = 0 if length == 0 else np.clip((x * d[0] + y * d[1]) / length, 0, 1)
-            hit = (x - u * d[0]) ** 2 + (y - u * d[1]) ** 2 <= radius**2
-            if stroke.get("mode") == "erase":
-                mask[r0:r1, c0:c1] &= ~hit
-            else:
-                mask[r0:r1, c0:c1] |= hit
-    return mask
-
-
-@app.function
-def sculpt(body, target, extent, sampler, steps, rate, coverage, keep_sparsity, seed):
-    """Adam on B so that the spectrum of B + Σ tₘEₘ lands inside and fills `target`.
-
-    For a simple eigenvalue λₖ = eig(A) with right vectors V and left vectors V⁻¹,
-    ∂λₖ/∂A_ij = (V⁻¹)_ki V_jk. A real loss with gradient gₖ = ∂L/∂Re λₖ + i ∂L/∂Im λₖ
-    then has steepest-ascent direction G = V⁻ᴴ diag(g) Vᴴ in each sample.
-    Attraction pulls eigenvalues outside the region to their nearest painted point;
-    coverage pulls the nearest eigenvalue toward random painted points.
-    """
-    rng = np.random.default_rng(seed)
-    grid = target.shape[0]
-    cell = 2 * extent / grid
-    rows, cols = np.nonzero(target)
-    painted = (-extent + (cols + 0.5) * cell) + 1j * (extent - (rows + 0.5) * cell)
-    base = body["B"].copy()
-    support = (base != 0) if keep_sparsity else np.ones(base.shape, dtype=bool)
-    first = np.zeros_like(base)
-    second = np.zeros(base.shape)
-    step_size = rate * extent / 2.5
-    losses = []
-    for step in range(steps):
-        t, _ = sampler(len(body["E"]), 160, rng)
-        values, vectors = np.linalg.eig(base[None] + np.einsum("sm,mij->sij", t, body["E"]))
-        try:
-            inverse = np.linalg.inv(vectors)
-        except np.linalg.LinAlgError:
-            continue
-        stable = np.abs(inverse).max(axis=(1, 2)) < 1e3
-        flat = values.reshape(-1)
-        col = np.floor((flat.real + extent) / cell).astype(int)
-        row = np.floor((extent - flat.imag) / cell).astype(int)
-        valid = (col >= 0) & (col < grid) & (row >= 0) & (row < grid)
-        inside = valid & target[row.clip(0, grid - 1), col.clip(0, grid - 1)]
-        anchors = painted[rng.choice(len(painted), min(600, len(painted)), replace=False)]
-        distance = np.abs(flat[:, None] - anchors[None, :]) ** 2
-        pull = np.where(inside, 0, flat - anchors[distance.argmin(axis=1)])
-        gradient = 2 * pull / flat.size
-        probes = min(300, len(anchors))
-        nearest = distance[:, :probes].argmin(axis=0)
-        reach = flat[nearest] - anchors[:probes]
-        np.add.at(gradient, nearest, coverage * 2 * reach / probes)
-        losses.append(float(np.mean(np.abs(pull) ** 2) + coverage * np.mean(np.abs(reach) ** 2)))
-        g = gradient.reshape(values.shape) * stable[:, None]
-        direction = np.conj(np.swapaxes(inverse, 1, 2)) @ (g[:, :, None] * np.conj(np.swapaxes(vectors, 1, 2)))
-        grad = direction.sum(axis=0) * support
-        first = 0.9 * first + 0.1 * grad
-        second = 0.999 * second + 0.001 * np.abs(grad) ** 2
-        corrected = first / (1 - 0.9 ** (step + 1))
-        base -= step_size * corrected / (np.sqrt(second / (1 - 0.999 ** (step + 1))) + 1e-12)
-    return {**body, "B": base}, losses
-
-
-@app.function
-def anatomy_html(body, palette):
-    """B as a grid: hue = phase, opacity = magnitude; outlined cells carry parameters."""
-    base, directions = body["B"], body["E"]
-    n = len(base)
-    peak = max(float(np.abs(base).max()), 1e-9)
-    active = np.abs(directions).sum(axis=0) > 0 if len(directions) else np.zeros(base.shape, bool)
-    owner = {}
-    for m, direction in enumerate(directions):
-        if np.count_nonzero(direction) == 1:
-            i, j = np.argwhere(direction)[0]
-            owner[(i, j)] = body["labels"][m]
-    cell = max(10, min(34, 300 // n))
-    colors = cycle_colors(np.angle(base), palette["cycle"])
-    rows = []
-    for i in range(n):
-        tds = []
-        for j in range(n):
-            value = base[i, j]
-            alpha = abs(value) / peak
-            r, g, b = (int(v) for v in colors[i, j])
-            border = "2px solid #E89A39" if active[i, j] else "1px solid rgba(128,128,128,.18)"
-            label = owner.get((i, j), "")
-            tds.append(
-                f'<td title="B[{i + 1},{j + 1}] = {value.real:+.3f}{value.imag:+.3f}i" '
-                f'style="width:{cell}px;height:{cell}px;padding:0;border:{border};'
-                f'background:rgba({r},{g},{b},{alpha:.3f});font-size:9px;text-align:center">{label}</td>'
-            )
-        rows.append("<tr>" + "".join(tds) + "</tr>")
-    return f'<table style="border-collapse:collapse;margin:0">{"".join(rows)}</table>'
-
-
-@app.cell(column=0, hide_code=True)
+@app.cell(hide_code=True)
 def _():
     mo.md(r"""
-    Every creature is the spectrum of a matrix pencil
-    $A(t) = B + \sum_m t_m E_m$, sampled over many parameter vectors $t$.
-    Classic eigenfish ([[Simone Conradi]]) replace a few entries of a small
-    $\{\pm1, \pm i\}$ matrix with points on the unit torus. Here you can also
-    draw the outline, paint the body, walk the parameters along a path or knot,
-    and breed variants.
+    An eigencreature is the set of eigenvalues of a small matrix in which a few
+    entries wander. [[Simone Conradi]]'s fish send two entries $t_1, t_2$ around
+    the unit circle; Bohemian matrices draw entries from a finite set such as
+    $\{-1, 1\}$. Both are density plots of the same thing: every eigenvalue of
+    every sample, laid down as a translucent point. Two things shape them:
+    where the wandering entries may go, and which entries each part of the
+    creature listens to.
     """)
     return
 
 
-@app.cell(column=0, hide_code=True)
+@app.cell(hide_code=True)
 def _():
-    get_mode, set_mode = mo.state("Conradi")
-    get_bench, set_bench = mo.state(None)
-    return get_bench, get_mode, set_bench, set_mode
-
-
-@app.cell(column=0, hide_code=True)
-def _(get_mode, set_mode):
-    mode = mo.ui.radio(MODES, value=get_mode(), on_change=set_mode, inline=True, label="**Body**")
-    return (mode,)
-
-
-@app.cell(column=0, hide_code=True)
-def _():
-    preset = mo.ui.dropdown(options=list(PRESETS), value="Conradi", label="Preset")
-    return (preset,)
-
-
-@app.cell(column=0, hide_code=True)
-def _(preset):
-    _selected = PRESETS[preset.value]
-    _labels = [str(index + 1) for index in range(len(_selected["matrix"]))]
-    matrix_editor = mo.ui.matrix(
-        _selected["matrix"], min_value=-2, max_value=2, step=1, precision=0,
-        row_labels=_labels, column_labels=_labels, debounce=True, label="Codes",
-    )
-    mask_editor = mo.ui.matrix(
-        _selected["mask"], min_value=0, max_value=1, step=1, precision=0,
-        row_labels=_labels, column_labels=_labels, debounce=True, label="Parameter slots",
-    )
-    return mask_editor, matrix_editor
-
-
-@app.cell(column=0, hide_code=True)
-def _():
-    ensemble = mo.ui.dictionary({
-        "size": mo.ui.slider(3, 12, value=6, label="Size", show_value=True),
-        "density": mo.ui.slider(0.1, 1.0, step=0.05, value=0.45, label="Density", show_value=True),
-        "alphabet": mo.ui.dropdown(list(ALPHABETS), value="±1, ±i", label="Alphabet"),
-        "structure": mo.ui.dropdown(
-            ["free", "cyclic band", "Hessenberg", "tridiagonal", "shift + chords"],
-            value="free", label="Structure",
-        ),
-        "slots": mo.ui.slider(1, 4, value=2, label="Parameter slots", show_value=True),
-        "seed": mo.ui.number(start=0, stop=10**6, value=11, label="Seed"),
-    })
-    return (ensemble,)
-
-
-@app.cell(column=0, hide_code=True)
-def _():
-    outline_editor = mo.ui.anywidget(CurveEditor(
-        points=FISH_OUTLINE, curve="catmull_rom", closed=True,
-        x_bounds=(-2.0, 2.0), y_bounds=(-2.0, 2.0), width=360, height=360,
-        show_axes=True, sync_throttle_ms=400,
-    ))
-    outline_controls = mo.ui.dictionary({
-        "harmonics": mo.ui.slider(2, 15, value=8, label="Harmonics K", show_value=True),
-        "size": mo.ui.slider(8, 32, value=17, label="Matrix size n", show_value=True),
-        "texture": mo.ui.slider(0.0, 1.0, step=0.02, value=0.3, label="Texture ε", show_value=True),
-        "slots": mo.ui.slider(0, 3, value=1, label="Texture slots", show_value=True),
-        "seed": mo.ui.number(start=0, stop=10**6, value=3, label="Texture seed"),
-    })
-    return outline_controls, outline_editor
-
-
-@app.cell(column=0, hide_code=True)
-def _(
-    ensemble,
-    get_bench,
-    mask_editor,
-    matrix_editor,
-    mode,
-    outline_controls,
-    outline_editor,
-    preset,
-):
-    _bench = get_bench()
-    if mode.value == "Conradi":
-        _panel = mo.vstack([
-            preset,
-            mo.hstack([matrix_editor, mask_editor], justify="start", gap=1.5),
-            mo.md("Codes: `−2 = −i`, `−1`, `0`, `1`, `2 = i`. A `1` in the slot grid turns that entry into a parameter."),
-        ])
-    elif mode.value == "Ensemble":
-        _panel = mo.vstack([
-            mo.hstack([ensemble["size"], ensemble["density"], ensemble["slots"]], justify="start"),
-            mo.hstack([ensemble["alphabet"], ensemble["structure"], ensemble["seed"]], justify="start"),
-        ])
-    elif mode.value == "Outline":
-        _panel = mo.hstack([
-            outline_editor,
-            mo.vstack([
-                *outline_controls.elements.values(),
-                mo.md(r"""
-                Drag knots; double-click to add or remove one. The outline's Fourier
-                series becomes a twisted circulant: path **Knot** with windings `1, -1`
-                and no jitter walks exactly along it, jitter makes it a tube, and
-                **Torus** fills it in.
-                """),
-            ]),
-        ], justify="start", gap=1.5)
-    elif _bench is None:
-        _panel = mo.callout(mo.md("The workbench fills when you **sculpt** or **adopt** a bred creature."), kind="info")
-    else:
-        _panel = mo.md("Lineage: " + " → ".join(_bench["history"]))
-    mo.vstack([mode, _panel], gap=0.75)
-    return
-
-
-@app.cell(column=0, hide_code=True)
-def _(
-    ensemble,
-    get_bench,
-    mask_editor,
-    matrix_editor,
-    mode,
-    outline_controls,
-    outline_editor,
-):
-    if mode.value == "Conradi":
-        body = conradi_body(matrix_editor.value, mask_editor.value)
-    elif mode.value == "Ensemble":
-        _e = ensemble.value
-        body = ensemble_body(_e["size"], _e["density"], _e["alphabet"], _e["structure"], _e["slots"], int(_e["seed"]))
-    elif mode.value == "Outline":
-        _o = outline_controls.value
-        body = outline_body(
-            outline_editor.value["points"], _o["harmonics"], _o["size"],
-            _o["texture"], _o["slots"], int(_o["seed"]),
-        )
-    else:
-        body = get_bench()["body"] if get_bench() else None
-    return (body,)
-
-
-@app.cell(column=0, hide_code=True)
-def _():
-    path_kind = mo.ui.dropdown(SAMPLERS, value="Torus", label="**Parameter path**")
-    path_controls = mo.ui.dictionary({
-        "samples": mo.ui.slider(2000, 60000, step=2000, value=20000, debounce=True, show_value=True, label="Samples"),
-        "radius": mo.ui.slider(0.25, 2.0, step=0.05, value=1.0, debounce=True, show_value=True, label="Radius"),
-        "radii": mo.ui.range_slider(0.2, 3.0, step=0.05, value=[0.7, 1.4], debounce=True, show_value=True, label="Radii"),
-        "windings": mo.ui.text(value="1, -1", label="Windings"),
-        "jitter": mo.ui.slider(0.0, 0.6, step=0.01, value=0.06, debounce=True, show_value=True, label="Jitter"),
-        "lag": mo.ui.slider(0.0, 1.0, step=0.01, value=0.25, debounce=True, show_value=True, label="Lag between slots"),
-    })
-    path_curve = mo.ui.anywidget(BezierCurve(
-        points=PATH_POINTS, closed=True, x_bounds=(-2.0, 2.0), y_bounds=(-2.0, 2.0),
-        width=320, height=320, show_axes=True, sync_throttle_ms=400,
-    ))
-    return path_controls, path_curve, path_kind
-
-
-@app.cell(column=0, hide_code=True)
-def _(path_controls, path_curve, path_kind):
-    _c = path_controls
-    _notes = {
-        "Torus": "Each slot gets an independent phase on a circle of fixed radius: the classic eigenfish.",
-        "Annulus": "Phases are free and radii log-uniform between the bounds, which thickens every strand.",
-        "Knot": "One loop s ∈ [0, 1) drives slot m at phase 2π·wₘ·s; slots without a winding stay free. Jitter turns the loop into a tubule.",
-        "Drawn path": "Slot 1 follows the Bezier path (double-click to add control points); slot m follows it shifted by m·lag. Jitter widens the tube.",
-    }
-    _shown = {
-        "Torus": [_c["radius"]],
-        "Annulus": [_c["radii"]],
-        "Knot": [_c["windings"], _c["radius"], _c["jitter"]],
-        "Drawn path": [_c["lag"], _c["jitter"]],
-    }[path_kind.value]
-    _parts = [mo.hstack([path_kind, _c["samples"]], justify="start"), mo.hstack(_shown, justify="start"), mo.md(_notes[path_kind.value])]
-    if path_kind.value == "Drawn path":
-        _parts.append(path_curve)
-    mo.vstack(_parts, gap=0.6)
-    return
-
-
-@app.cell(column=0, hide_code=True)
-def _(path_controls, path_curve, path_kind):
-    _v = path_controls.value
-    _path = bezier_points(path_curve.value["points"], path_curve.value.get("closed", True))
-    _windings = parse_windings(_v["windings"])
-
-    def sampler(m, count, rng):
-        return sample_parameters(
-            path_kind.value, m, count, rng, _v["radius"], _v["radii"],
-            _windings, _v["jitter"], _path, _v["lag"],
-        )
-
-    sample_count = _v["samples"]
-    return sample_count, sampler
-
-
-@app.cell(column=0, hide_code=True)
-def _():
-    look = mo.ui.dictionary({
-        "palette": mo.ui.dropdown(list(PALETTES), value="Paper · ink", label="Palette"),
-        "color": mo.ui.dropdown(["Ink", "Phase of t₁", "Phase of t₂", "Path position s"], value="Ink", label="Colour by"),
-        "lens": mo.ui.dropdown(list(LENSES), value="λ", label="Lens"),
-        "gamma": mo.ui.slider(0.3, 1.5, step=0.02, value=0.72, show_value=True, label="Gamma"),
-    })
-    mo.vstack([mo.md("**Look**"), mo.hstack(list(look.elements.values()), justify="start")])
-    return (look,)
-
-
-@app.cell(column=0, hide_code=True)
-def _():
-    sketch_widget = SpectrumSketch()
-    sketch = mo.ui.anywidget(sketch_widget)
-    sculpt_controls = mo.ui.dictionary({
-        "extent": mo.ui.number(start=0.5, stop=20, step=0.5, value=2.5, label="Canvas half-width"),
-        "steps": mo.ui.slider(10, 300, step=10, value=80, show_value=True, label="Steps"),
-        "rate": mo.ui.slider(0.002, 0.1, step=0.002, value=0.02, show_value=True, label="Step size"),
-        "coverage": mo.ui.slider(0.0, 3.0, step=0.1, value=1.0, show_value=True, label="Fill pressure"),
-        "sparse": mo.ui.checkbox(value=False, label="Only move nonzero entries"),
-    })
-    return sculpt_controls, sketch, sketch_widget
-
-
-@app.cell(column=0, hide_code=True)
-def _(sculpt_controls, sketch):
+    _flattening = (1, 0.45, 0.15, 0)
+    _spec = PRESETS["Fish"]
+    _panels = []
+    for _b in _flattening:
+        _z = np.linalg.eigvals(sample({**_spec, "b": _b}, 16000)["A"]).reshape(-1)
+        _panels.append(figure(tone(_z, auto_view(_z), 360), f"Creature with the domain of t squashed to height {_b}"))
     mo.vstack([
-        mo.md(r"""
-        ## Paint the body
+        mo.md(rf"""
+        ## Flatten the circle and the fish opens
 
-        Paint where the creature should live, over its current spectrum (ochre).
-        **Sculpt** runs gradient descent on $B$ through
-        $\partial\lambda_k/\partial A_{ij} = (V^{-1})_{ki}V_{jk}$: eigenvalues outside the
-        paint are pulled to it, and fill pressure drags eigenvalues out to empty paint.
-        The result lands on the workbench, so pressing again keeps sculpting.
+        Below, the same $6\times6$ matrix is drawn with $t$ on an ellipse of
+        width 2, squashed from the unit circle down to the segment $[-1, 1]$.
+        On the circle every path through the parameters returns to its start,
+        so the strands close into a body. On the segment, $t$ turns back at the
+        ends, and the strands fold back as open wings. Conradi's black-and-white
+        series lives at this end, with $t$ on the interval $[-20, 20]$.
         """),
-        mo.hstack([
-            sketch,
-            mo.vstack(list(sculpt_controls.elements.values())),
-        ], justify="start", gap=1.5),
-    ])
-    return
-
-
-@app.cell(column=0, hide_code=True)
-def _(look, sculpt_controls, sketch_widget, z):
-    _extent = float(sculpt_controls.value["extent"])
-    sketch_widget.extent = _extent
-    sketch_widget.background = data_url(render_creature(
-        z, OVERLAY, size=420, gamma=look.value["gamma"], view=(0j, _extent), transparent=True,
-    ))
-    return
-
-
-@app.cell(column=0, hide_code=True)
-def _(sculpt_controls, sketch):
-    target = rasterize_strokes(sketch.value["strokes"], float(sculpt_controls.value["extent"]))
-    return (target,)
-
-
-@app.cell(column=0, hide_code=True)
-def _(body, get_bench, sampler, sculpt_controls, set_bench, set_mode, target):
-    # The action lives in on_click: a rerun from the workbench update rebuilds the
-    # button but cannot press it again.
-    def _sculpt(clicks):
-        _s = sculpt_controls.value
-        _history = (get_bench() or {}).get("history") or [body["name"]]
-        _sculpted, _losses = sculpt(
-            body, target, float(_s["extent"]), sampler, _s["steps"], _s["rate"],
-            _s["coverage"], _s["sparse"], seed=len(_history),
-        )
-        _sculpted["name"] = f"sculpted ×{_s['steps']}"
-        set_bench({"body": _sculpted, "history": [*_history, _sculpted["name"]], "losses": _losses})
-        set_mode("Workbench")
-        return clicks + 1
-
-    _ready = body is not None and bool(target.any())
-    sculpt_button = mo.ui.button(value=0, on_click=_sculpt, label="Sculpt", kind="warn", disabled=not _ready)
-    mo.hstack([
-        sculpt_button,
-        mo.md("Sculpting continues from the current body." if _ready else "Paint a region to enable sculpting."),
-    ], justify="start", align="center")
-    return
-
-
-@app.cell(column=1, hide_code=True)
-def _(body, look, sample_count, sampler):
-    mo.stop(
-        body is None,
-        mo.callout(mo.md("The workbench is empty: sculpt a painted region or adopt a bred creature."), kind="info"),
-    )
-    mo.stop(len(body["E"]) == 0, mo.callout(mo.md("Give the matrix at least one parameter slot."), kind="warn"))
-    _rng = np.random.default_rng(7)
-    params, positions = sampler(len(body["E"]), sample_count, _rng)
-    eigenvalues = spectrum(body, params)
-    z = apply_lens(look.value["lens"], eigenvalues).reshape(-1)
-    return eigenvalues, params, positions, z
-
-
-@app.cell(column=1, hide_code=True)
-def _(eigenvalues, look, params, positions):
-    _n = eigenvalues.shape[1]
-    _choice = look.value["color"]
-    if _choice == "Phase of t₁" and params.shape[1] >= 1:
-        hue = np.repeat(np.angle(params[:, 0]), _n)
-    elif _choice == "Phase of t₂" and params.shape[1] >= 2:
-        hue = np.repeat(np.angle(params[:, 1]), _n)
-    elif _choice == "Path position s":
-        hue = np.repeat(2 * np.pi * positions, _n)
-    else:
-        hue = None
-    return (hue,)
-
-
-@app.cell(column=1, hide_code=True)
-def _(body, eigenvalues, hue, look, path_kind, z):
-    _palette = PALETTES[look.value["palette"]]
-    _image = render_creature(z, _palette, hue=hue, gamma=look.value["gamma"])
-    _n = eigenvalues.shape[1]
-
-    def _poster():
-        return png_bytes(render_creature(z, _palette, hue=hue, size=2048, gamma=look.value["gamma"]))
-
-    mo.vstack([
         mo.Html(
-            f'<img src="{data_url(_image)}" style="width:100%;max-width:760px;border-radius:6px" '
-            f'alt="Eigenvalue density of the current creature" />'
+            '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1rem">'
+            + "".join(_panels)
+            + "</div>"
         ),
-        mo.hstack([
-            mo.md(
-                f"{z.size:,} eigenvalues · {_n}×{_n} · {len(body['E'])} parameters "
-                f"({', '.join(body['labels'])}) · {path_kind.value} · lens {look.value['lens']}"
-            ),
-            mo.download(_poster, filename="eigencreature.png", mimetype="image/png", label="PNG 2048²"),
-        ], justify="space-between", align="center"),
-    ])
+    ], gap=0.5)
     return
 
 
-@app.cell(column=1, hide_code=True)
-def _(body, get_bench, look, mode):
-    _bench = get_bench()
-    _parts = [
-        mo.md("### Anatomy of B\nHue is phase, opacity is magnitude, and outlined cells move with a parameter. Hover a cell for its value."),
-        mo.Html(anatomy_html(body, PALETTES[look.value["palette"]])),
-    ]
-    if mode.value == "Workbench" and _bench and _bench.get("losses"):
-        _losses = _bench["losses"]
-        _fig = go.Figure(go.Scatter(y=_losses, mode="lines", line={"color": "#E89A39"}))
-        _fig.update_layout(height=160, margin={"l": 40, "r": 10, "t": 24, "b": 30}, title="Last sculpt: loss per step",
-                           paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font={"color": "#888"})
-        _parts.append(_fig)
-    _source = (
-        "import numpy as np\n"
-        f"B = np.array({np.array2string(body['B'], precision=3, separator=', ', suppress_small=True, max_line_width=110)})\n"
-        f"E = np.array({np.array2string(body['E'], precision=3, separator=', ', suppress_small=True, max_line_width=110, threshold=10**6)})\n"
-        "# A(t) = B + np.einsum('sm,mij->sij', t, E)"
-    )
-    _parts.append(mo.accordion({"Matrix source": mo.ui.code_editor(_source, language="python", disabled=True)}))
-    mo.vstack(_parts)
-    return
-
-
-@app.cell(column=1, hide_code=True)
-def _(eigenvalues, hue, look, params, positions, z):
-    _rng = np.random.default_rng(1)
-    _count = min(9000, z.size)
-    probe_index = np.sort(_rng.choice(z.size, _count, replace=False))
-    probe_sample = probe_index // eigenvalues.shape[1]
-    _palette = PALETTES[look.value["palette"]]
-    _colors = [f"rgb{tuple(c)}" for c in _palette["cycle"]]
-    _scale = [[k / len(_colors), c] for k, c in enumerate(_colors)] + [[1.0, _colors[0]]]
-    _hue = hue[probe_index] if hue is not None else 2 * np.pi * positions[probe_sample]
-    _fig = go.Figure(go.Scattergl(
-        x=z.real[probe_index], y=z.imag[probe_index], mode="markers",
-        marker={"size": 3, "opacity": 0.55, "color": np.mod(_hue, 2 * np.pi), "colorscale": _scale, "cmin": 0, "cmax": 2 * np.pi},
-        hoverinfo="skip",
-    ))
-    _center, _half = auto_view(z)
-    _fig.update_layout(
-        height=440, dragmode="lasso", margin={"l": 30, "r": 10, "t": 10, "b": 30},
-        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font={"color": "#888"},
-        xaxis={"range": [_center.real - _half, _center.real + _half], "showgrid": False, "zeroline": False},
-        yaxis={"range": [_center.imag - _half, _center.imag + _half], "scaleanchor": "x", "showgrid": False, "zeroline": False},
-    )
-    probe = mo.ui.plotly(_fig)
-    mo.vstack([
-        mo.md("## Probe\nLasso part of the creature to see which parameters produce it."),
-        probe,
-    ])
-    return probe, probe_sample
-
-
-@app.cell(column=1, hide_code=True)
-def _(params, path_kind, probe, probe_sample):
-    _chosen = np.unique(probe_sample[np.asarray(probe.indices, dtype=int)]) if probe.indices else np.array([], int)
-    _all = np.unique(probe_sample)
-    _m = params.shape[1]
-
-    def _coords(rows):
-        p = params[rows]
-        if path_kind.value == "Drawn path" or _m == 1:
-            return p[:, 0].real, p[:, 0].imag, "Re t₁", "Im t₁"
-        return np.mod(np.angle(p[:, 0]), 2 * np.pi), np.mod(np.angle(p[:, 1]), 2 * np.pi), "arg t₁", "arg t₂"
-
-    _x, _y, _xl, _yl = _coords(_all)
-    _fig = go.Figure(go.Scattergl(x=_x, y=_y, mode="markers", marker={"size": 3, "color": "rgba(128,128,128,0.25)"}, name="all"))
-    if len(_chosen):
-        _cx, _cy, _, _ = _coords(_chosen)
-        _fig.add_trace(go.Scattergl(x=_cx, y=_cy, mode="markers", marker={"size": 4, "color": "#E89A39"}, name="selected"))
-    _fig.update_layout(
-        height=340, showlegend=False, margin={"l": 40, "r": 10, "t": 10, "b": 40},
-        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font={"color": "#888"},
-        xaxis_title=_xl, yaxis_title=_yl,
-    )
-    _note = (
-        f"{len(_chosen):,} of {len(_all):,} probed samples contribute to the selection."
-        if len(_chosen) else "No selection: every probed parameter sample is shown in grey."
-    )
-    mo.vstack([mo.md(f"**Preimage in parameter space.** {_note}"), _fig])
-    return
-
-
-@app.cell(column=1, hide_code=True)
+@app.cell(hide_code=True)
 def _():
-    breed = mo.ui.dictionary({
-        "source": mo.ui.radio(["Mutate current", "Fresh ensemble"], value="Mutate current", inline=True, label="Source"),
-        "count": mo.ui.slider(8, 48, step=4, value=24, show_value=True, label="Candidates"),
-        "strength": mo.ui.slider(1, 8, value=2, show_value=True, label="Edits per mutant"),
-        "x": mo.ui.dropdown(FEATURES, value="fill", label="x"),
-        "y": mo.ui.dropdown(FEATURES, value="porosity", label="y"),
-    })
-    reroll = mo.ui.button(value=0, on_click=lambda count: count + 1, label="New litter")
-    mo.vstack([
-        mo.md("## Breed\nEach dot is a candidate placed by its shape features. Lasso the ones you like, then adopt one onto the workbench."),
-        mo.hstack([breed["source"], breed["count"], breed["strength"]], justify="start"),
-        mo.hstack([breed["x"], breed["y"], reroll], justify="start"),
-    ])
-    return breed, reroll
+    mo.md(r"""
+    ## Every feature has an address
+
+    Paint the matrix: constants, $t_1$ and $t_2$, which walk the ellipse, and
+    $\pm1$ or $i^k$, which are drawn afresh for every sample as in a Bohemian
+    matrix. Drag the ellipse's handles to reshape where $t$ walks.
+
+    Hover the creature and the matrix lights the entries those eigenvalues
+    lean on more than the rest of the creature does, by
+    $\partial\lambda/\partial A_{ij} = \bar y_i x_j / y^{*}x$. The ellipse
+    marks where $t_1$ and $t_2$ were at the time. Hover an entry or the ellipse
+    to go the other way.
+    """)
+    return
 
 
-@app.cell(column=1, hide_code=True)
-def _(body, breed, ensemble, look, reroll, sampler):
-    mo.stop(body is None and breed.value["source"] == "Mutate current", mo.md("Nothing to mutate yet."))
-    _rng = np.random.default_rng(1000 + reroll.value)
-    _e = ensemble.value
-    candidates = []
-    for _k in range(breed.value["count"]):
-        if breed.value["source"] == "Mutate current":
-            _child = mutate(body, breed.value["strength"], _rng, f"mutant #{_k}")
-        else:
-            _seed = int(_rng.integers(10**6))
-            _child = ensemble_body(_e["size"], _e["density"], _e["alphabet"], _e["structure"], _e["slots"], _seed)
-        _t, _ = sampler(len(_child["E"]), 1500, _rng)
-        _z = apply_lens(look.value["lens"], spectrum(_child, _t)).reshape(-1)
-        candidates.append({
-            "id": _k,
-            "body": _child,
-            "features": shape_features(_z),
-            "thumb": data_url(render_creature(_z, PALETTES[look.value["palette"]], size=150, gamma=look.value["gamma"])),
-        })
-    return (candidates,)
+@app.cell(hide_code=True)
+def _():
+    creature = mo.ui.anywidget(Creature(dict(PRESETS["Fish"])))
+    creature
+    return (creature,)
 
 
-@app.cell(column=1, hide_code=True)
-def _(breed, candidates):
-    _x = [c["features"][breed.value["x"]] for c in candidates]
-    _y = [c["features"][breed.value["y"]] for c in candidates]
-    _fig = go.Figure(go.Scatter(
-        x=_x, y=_y, mode="markers+text", text=[str(c["id"]) for c in candidates], textposition="top center",
-        marker={"size": 11, "color": "#E89A39", "line": {"width": 1, "color": "#303B49"}},
-    ))
-    _fig.update_layout(
-        height=320, dragmode="lasso", margin={"l": 50, "r": 10, "t": 10, "b": 40},
-        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font={"color": "#888"},
-        xaxis_title=breed.value["x"], yaxis_title=breed.value["y"],
-    )
-    litter_plot = mo.ui.plotly(_fig)
-    litter_plot
-    return (litter_plot,)
-
-
-@app.cell(column=1, hide_code=True)
-def _(candidates, litter_plot):
-    _picked = sorted(set(litter_plot.indices)) if litter_plot.indices else []
-    shown = [candidates[i] for i in _picked] or candidates
-    _tiles = "".join(
-        f'<figure style="margin:0;text-align:center"><img src="{c["thumb"]}" width="150" height="150" '
-        f'style="border-radius:4px" alt="Candidate {c["id"]}"/><figcaption style="font-size:11px;opacity:.75">'
-        f'#{c["id"]} · fill {c["features"]["fill"]:.2f} · pores {c["features"]["porosity"]:.2f}</figcaption></figure>'
-        for c in shown
-    )
-    adopt_choice = mo.ui.dropdown({f"#{c['id']}": c["id"] for c in shown}, value=f"#{shown[0]['id']}", label="Candidate")
-    mo.vstack([
-        mo.md(f"{'Selected' if _picked else 'All'} {len(shown)} candidates"),
-        mo.Html(f'<div style="display:grid;grid-template-columns:repeat(auto-fill,150px);gap:10px">{_tiles}</div>'),
-    ])
-    return (adopt_choice,)
-
-
-@app.cell(column=1, hide_code=True)
-def _(adopt_choice, body, candidates, get_bench, set_bench, set_mode):
-    def _adopt(clicks):
-        _child = candidates[adopt_choice.value]["body"]
-        _history = (get_bench() or {}).get("history") or [body["name"] if body else "litter"]
-        set_bench({"body": _child, "history": [*_history, _child["name"]]})
-        set_mode("Workbench")
-        return clicks + 1
-
-    adopt_button = mo.ui.button(value=0, on_click=_adopt, label="Adopt onto workbench", kind="success")
-    mo.hstack([adopt_choice, adopt_button], justify="start")
+@app.cell(hide_code=True)
+def _(creature):
+    mo.download(creature.widget.poster, filename="eigencreature.png", mimetype="image/png", label="PNG 2048²")
     return
 
 
