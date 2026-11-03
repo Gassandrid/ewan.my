@@ -3,7 +3,7 @@ import { createNetwork, equipNetwork, modulators, stepNetwork } from "./network.
 import { createVaultNetwork } from "./vault.js"
 
 const CSS = `
-#neural-canvas{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1;opacity:var(--neural-ink,.78);mask-image:linear-gradient(90deg,#000 0%,#000b 17%,#0006 29%,#0004 36%,#0004 64%,#0006 71%,#000b 83%,#000 100%)}
+#neural-canvas{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1;opacity:var(--neural-ink,.45);mask-image:linear-gradient(90deg,#000 0%,#000b 17%,#0006 29%,#0004 36%,#0004 64%,#0006 71%,#000b 83%,#000 100%)}
 #neural-canvas[data-neural-state="off"],#neural-canvas[data-neural-state="waiting"]{visibility:hidden;opacity:0}
 #neural-label{position:fixed;left:0;top:0;z-index:40;pointer-events:none;width:17.5rem;box-sizing:border-box;padding:.7rem .8rem .65rem;background:var(--raised,var(--light));border:1px solid var(--hair,var(--lightgray));color:var(--darkgray);font:.72rem/1.35 var(--bodyFont);opacity:0;transition:opacity .12s}
 #neural-label[data-visible]{opacity:1}
@@ -58,7 +58,7 @@ function neuralRuntime(create, step, createVault, modulators) {
   let seed = freshSeed()
   let layout = "vault"
   let parameters = null
-  let ink = 0.8
+  let ink = 0.45
   // The vault network outlives SPA navigation: it keeps firing while the
   // reader moves through the garden, and only the "you are here" mark moves.
   let vaultIndex
