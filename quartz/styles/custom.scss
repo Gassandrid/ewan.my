@@ -10,6 +10,7 @@
 @use "./morris-lecar.scss";
 @use "./marimo-islands.scss";
 @use "./variables.scss" as *;
+@use "./custom/theme.generated";
 
 // put your custom CSS here!
 
@@ -26,29 +27,6 @@ article > .markdown-rendered {
       hyphens: none;
     }
   }
-}
-
-// Quartz v5 only emits its core theme keys as CSS variables. Keep the
-// extended v4 palette available to custom components such as rainbow tags.
-:root,
-[saved-theme="light"] {
-  --rust: #ad6e60;
-  --clay: #c18e77;
-  --ochre: #e89a39;
-  --sage: #899780;
-  --pine: #587571;
-  --slate: #748c9c;
-  --mauve: #a08a98;
-}
-
-[saved-theme="dark"] {
-  --rust: #db8e88;
-  --clay: #deaea0;
-  --ochre: #e0bc7e;
-  --sage: #aebd9f;
-  --pine: #8daeb3;
-  --slate: #9bb0bd;
-  --mauve: #c9b1b9;
 }
 
 // ewanfont

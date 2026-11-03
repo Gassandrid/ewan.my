@@ -3,3 +3,6 @@ node_modules
 .quartz-cache
 
 private
+
+# Canonical generator owns this deployable snapshot.
+quartz/styles/custom/_theme.generated.scss

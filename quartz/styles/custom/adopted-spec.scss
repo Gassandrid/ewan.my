@@ -7,19 +7,19 @@
   --raised: #faf8f5;
   --muted: #636670;
   --hair: #d6d1ca;
-  --sage: #899780;
-  --slate: #748c9c;
-  --fell: "IM Fell DW Pica", Georgia, serif;
-  --fell-sc: "IM Fell DW Pica SC", "IM Fell DW Pica", Georgia, serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --sage: var(--ewan-sage);
+  --slate: var(--ewan-slate);
+  --fell: var(--ewan-heading-font);
+  --fell-sc: var(--ewan-heading-sc-font);
+  --mono: var(--ewan-mono-font);
 }
 :root[saved-theme="dark"] {
   --sunk: #1f2023;
   --raised: #2c2d31;
   --muted: #a39e97;
   --hair: #3b3a3d;
-  --sage: #aebd9f;
-  --slate: #9bb0bd;
+  --sage: var(--ewan-sage);
+  --slate: var(--ewan-slate);
 }
 
 /* Grounds: square paper, hairlines instead of tinted boxes. */

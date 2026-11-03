@@ -1,0 +1,123 @@
+/* Generated from ewan-theme/theme.json by scripts/sync-desktop.py; do not edit tokens. */
+:root, :host, .ht {
+  --ewan-light-light: #F5F1EB;
+  --ewan-light-lightgray: #E3DFD9;
+  --ewan-light-gray: #92908E;
+  --ewan-light-darkgray: #4B5058;
+  --ewan-light-dark: #303B49;
+  --ewan-light-secondary: #A38072;
+  --ewan-light-tertiary: #858384;
+  --ewan-light-rust: #AD6E60;
+  --ewan-light-clay: #C18E77;
+  --ewan-light-ochre: #E89A39;
+  --ewan-light-sage: #899780;
+  --ewan-light-pine: #587571;
+  --ewan-light-slate: #748C9C;
+  --ewan-light-mauve: #A08A98;
+  --ewan-dark-light: #25262A;
+  --ewan-dark-lightgray: #353436;
+  --ewan-dark-gray: #8E8983;
+  --ewan-dark-darkgray: #D4CEC7;
+  --ewan-dark-dark: #EBE7E1;
+  --ewan-dark-secondary: #C59B8D;
+  --ewan-dark-tertiary: #A89A8D;
+  --ewan-dark-rust: #DB8E88;
+  --ewan-dark-clay: #DEAEA0;
+  --ewan-dark-ochre: #E0BC7E;
+  --ewan-dark-sage: #AEBD9F;
+  --ewan-dark-pine: #8DAEB3;
+  --ewan-dark-slate: #9BB0BD;
+  --ewan-dark-mauve: #C9B1B9;
+  --ewan-body-font: "PP Neue Montreal", ui-sans-serif, system-ui, sans-serif;
+  --ewan-heading-font: "IM Fell DW Pica", Georgia, serif;
+  --ewan-heading-sc-font: "IM Fell DW Pica SC", "IM Fell DW Pica", Georgia, serif;
+  --ewan-mono-font: "IBM Plex Mono", ui-monospace, monospace;
+  --ewan-terminal-font: "PP Neue Montreal Mono", monospace;
+  --ewan-bg: var(--ewan-light);
+  --ewan-bg-muted: var(--ewan-lightgray);
+  --ewan-fg: var(--ewan-dark);
+  --ewan-fg-muted: var(--ewan-gray);
+  --ewan-heading: var(--ewan-darkgray);
+  --ewan-accent: var(--ewan-rust);
+  --ewan-link: var(--ewan-pine);
+  --ewan-light: var(--ewan-light-light);
+  --ewan-lightgray: var(--ewan-light-lightgray);
+  --ewan-gray: var(--ewan-light-gray);
+  --ewan-darkgray: var(--ewan-light-darkgray);
+  --ewan-dark: var(--ewan-light-dark);
+  --ewan-secondary: var(--ewan-light-secondary);
+  --ewan-tertiary: var(--ewan-light-tertiary);
+  --ewan-rust: var(--ewan-light-rust);
+  --ewan-clay: var(--ewan-light-clay);
+  --ewan-ochre: var(--ewan-light-ochre);
+  --ewan-sage: var(--ewan-light-sage);
+  --ewan-pine: var(--ewan-light-pine);
+  --ewan-slate: var(--ewan-light-slate);
+  --ewan-mauve: var(--ewan-light-mauve);
+}
+@media (prefers-color-scheme: dark) {
+:root:not([saved-theme="light"]):not([data-theme="light"]):not([data-theme="day"]), :host {
+  --ewan-light: var(--ewan-dark-light);
+  --ewan-lightgray: var(--ewan-dark-lightgray);
+  --ewan-gray: var(--ewan-dark-gray);
+  --ewan-darkgray: var(--ewan-dark-darkgray);
+  --ewan-dark: var(--ewan-dark-dark);
+  --ewan-secondary: var(--ewan-dark-secondary);
+  --ewan-tertiary: var(--ewan-dark-tertiary);
+  --ewan-rust: var(--ewan-dark-rust);
+  --ewan-clay: var(--ewan-dark-clay);
+  --ewan-ochre: var(--ewan-dark-ochre);
+  --ewan-sage: var(--ewan-dark-sage);
+  --ewan-pine: var(--ewan-dark-pine);
+  --ewan-slate: var(--ewan-dark-slate);
+  --ewan-mauve: var(--ewan-dark-mauve);
+}
+}
+:root[saved-theme="light"], :root[data-theme="light"], :root[data-theme="day"], :root.light, .ht:not(.ht-dark) {
+  --ewan-light: var(--ewan-light-light);
+  --ewan-lightgray: var(--ewan-light-lightgray);
+  --ewan-gray: var(--ewan-light-gray);
+  --ewan-darkgray: var(--ewan-light-darkgray);
+  --ewan-dark: var(--ewan-light-dark);
+  --ewan-secondary: var(--ewan-light-secondary);
+  --ewan-tertiary: var(--ewan-light-tertiary);
+  --ewan-rust: var(--ewan-light-rust);
+  --ewan-clay: var(--ewan-light-clay);
+  --ewan-ochre: var(--ewan-light-ochre);
+  --ewan-sage: var(--ewan-light-sage);
+  --ewan-pine: var(--ewan-light-pine);
+  --ewan-slate: var(--ewan-light-slate);
+  --ewan-mauve: var(--ewan-light-mauve);
+}
+:root[saved-theme="dark"], :root[data-theme="dark"], :root[data-theme="night"], :root.dark, body.dark, .ht.ht-dark {
+  --ewan-light: var(--ewan-dark-light);
+  --ewan-lightgray: var(--ewan-dark-lightgray);
+  --ewan-gray: var(--ewan-dark-gray);
+  --ewan-darkgray: var(--ewan-dark-darkgray);
+  --ewan-dark: var(--ewan-dark-dark);
+  --ewan-secondary: var(--ewan-dark-secondary);
+  --ewan-tertiary: var(--ewan-dark-tertiary);
+  --ewan-rust: var(--ewan-dark-rust);
+  --ewan-clay: var(--ewan-dark-clay);
+  --ewan-ochre: var(--ewan-dark-ochre);
+  --ewan-sage: var(--ewan-dark-sage);
+  --ewan-pine: var(--ewan-dark-pine);
+  --ewan-slate: var(--ewan-dark-slate);
+  --ewan-mauve: var(--ewan-dark-mauve);
+}
+:root {
+  --light: var(--ewan-light);
+  --lightgray: var(--ewan-lightgray);
+  --gray: var(--ewan-gray);
+  --darkgray: var(--ewan-darkgray);
+  --dark: var(--ewan-dark);
+  --secondary: var(--ewan-secondary);
+  --tertiary: var(--ewan-tertiary);
+  --rust: var(--ewan-rust);
+  --clay: var(--ewan-clay);
+  --ochre: var(--ewan-ochre);
+  --sage: var(--ewan-sage);
+  --pine: var(--ewan-pine);
+  --slate: var(--ewan-slate);
+  --mauve: var(--ewan-mauve);
+}

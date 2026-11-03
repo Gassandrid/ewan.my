@@ -381,8 +381,7 @@ function escapeHtmlAttr(value) {
 function resolvePython() {
   const candidates = [
     process.env.MARIMO_PYTHON,
-    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
-    "/opt/homebrew/Caskroom/miniconda/base/bin/python",
+    ".venv-marimo/bin/python",
     "python3",
   ].filter(Boolean)
   return (

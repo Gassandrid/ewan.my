@@ -1,3 +1,36 @@
+/* ewan-theme:tokens:start */
+/* Generated from ewan-theme/theme.json by scripts/sync-desktop.py; do not edit tokens. */
+main {
+  --ewan-light: #F5F1EB;
+  --ewan-lightgray: #E3DFD9;
+  --ewan-gray: #92908E;
+  --ewan-darkgray: #4B5058;
+  --ewan-dark: #303B49;
+  --ewan-secondary: #A38072;
+  --ewan-tertiary: #858384;
+  --ewan-rust: #AD6E60;
+  --ewan-clay: #C18E77;
+  --ewan-ochre: #E89A39;
+  --ewan-sage: #899780;
+  --ewan-pine: #587571;
+  --ewan-slate: #748C9C;
+  --ewan-mauve: #A08A98;
+  --ewan-light-rgb: 245, 241, 235;
+  --ewan-lightgray-rgb: 227, 223, 217;
+  --ewan-gray-rgb: 146, 144, 142;
+  --ewan-darkgray-rgb: 75, 80, 88;
+  --ewan-dark-rgb: 48, 59, 73;
+  --ewan-secondary-rgb: 163, 128, 114;
+  --ewan-tertiary-rgb: 133, 131, 132;
+  --ewan-rust-rgb: 173, 110, 96;
+  --ewan-clay-rgb: 193, 142, 119;
+  --ewan-ochre-rgb: 232, 154, 57;
+  --ewan-sage-rgb: 137, 151, 128;
+  --ewan-pine-rgb: 88, 117, 113;
+  --ewan-slate-rgb: 116, 140, 156;
+  --ewan-mauve-rgb: 160, 138, 152;
+}
+/* ewan-theme:tokens:end */
 /*! MIT License
  * Copyright (c) 2018 GitHub Inc.
  * https://github.com/primer/primitives/blob/main/LICENSE
@@ -6,86 +39,86 @@
  */
 
 main {
-  --color-prettylights-syntax-comment: #858384;
-  --color-prettylights-syntax-constant: #587571;
-  --color-prettylights-syntax-entity: #a08a98;
-  --color-prettylights-syntax-storage-modifier-import: #4b5058;
-  --color-prettylights-syntax-entity-tag: #899780;
-  --color-prettylights-syntax-keyword: #ad6e60;
-  --color-prettylights-syntax-string: #e89a39;
-  --color-prettylights-syntax-variable: #c18e77;
-  --color-prettylights-syntax-brackethighlighter-unmatched: #ad6e60;
-  --color-prettylights-syntax-invalid-illegal-text: #f5f1eb;
-  --color-prettylights-syntax-invalid-illegal-bg: #ad6e60;
-  --color-prettylights-syntax-carriage-return-text: #f5f1eb;
-  --color-prettylights-syntax-carriage-return-bg: #ad6e60;
-  --color-prettylights-syntax-string-regexp: #899780;
-  --color-prettylights-syntax-markup-list: #e89a39;
-  --color-prettylights-syntax-markup-heading: #748c9c;
-  --color-prettylights-syntax-markup-italic: #4b5058;
-  --color-prettylights-syntax-markup-bold: #4b5058;
-  --color-prettylights-syntax-markup-deleted-text: #ad6e60;
+  --color-prettylights-syntax-comment: var(--ewan-tertiary);
+  --color-prettylights-syntax-constant: var(--ewan-pine);
+  --color-prettylights-syntax-entity: var(--ewan-mauve);
+  --color-prettylights-syntax-storage-modifier-import: var(--ewan-darkgray);
+  --color-prettylights-syntax-entity-tag: var(--ewan-sage);
+  --color-prettylights-syntax-keyword: var(--ewan-rust);
+  --color-prettylights-syntax-string: var(--ewan-ochre);
+  --color-prettylights-syntax-variable: var(--ewan-clay);
+  --color-prettylights-syntax-brackethighlighter-unmatched: var(--ewan-rust);
+  --color-prettylights-syntax-invalid-illegal-text: var(--ewan-light);
+  --color-prettylights-syntax-invalid-illegal-bg: var(--ewan-rust);
+  --color-prettylights-syntax-carriage-return-text: var(--ewan-light);
+  --color-prettylights-syntax-carriage-return-bg: var(--ewan-rust);
+  --color-prettylights-syntax-string-regexp: var(--ewan-sage);
+  --color-prettylights-syntax-markup-list: var(--ewan-ochre);
+  --color-prettylights-syntax-markup-heading: var(--ewan-slate);
+  --color-prettylights-syntax-markup-italic: var(--ewan-darkgray);
+  --color-prettylights-syntax-markup-bold: var(--ewan-darkgray);
+  --color-prettylights-syntax-markup-deleted-text: var(--ewan-rust);
   --color-prettylights-syntax-markup-deleted-bg: #f4d9c6;
-  --color-prettylights-syntax-markup-inserted-text: #899780;
+  --color-prettylights-syntax-markup-inserted-text: var(--ewan-sage);
   --color-prettylights-syntax-markup-inserted-bg: #e8f4e4;
-  --color-prettylights-syntax-markup-changed-text: #e89a39;
+  --color-prettylights-syntax-markup-changed-text: var(--ewan-ochre);
   --color-prettylights-syntax-markup-changed-bg: #f9eed9;
-  --color-prettylights-syntax-markup-ignored-text: #e3dfd9;
-  --color-prettylights-syntax-markup-ignored-bg: #748c9c;
-  --color-prettylights-syntax-meta-diff-range: #a08a98;
-  --color-prettylights-syntax-brackethighlighter-angle: #92908e;
-  --color-prettylights-syntax-sublimelinter-gutter-mark: #92908e;
-  --color-prettylights-syntax-constant-other-reference-link: #748c9c;
-  --color-btn-text: #4b5058; /* --darkgray */
-  --color-btn-bg: #f5f1eb; /* --light */
-  --color-btn-border: rgba(48, 59, 73, 0.15); /* --dark */
-  --color-btn-shadow: 0 1px 0 rgba(48, 59, 73, 0.04);
+  --color-prettylights-syntax-markup-ignored-text: var(--ewan-lightgray);
+  --color-prettylights-syntax-markup-ignored-bg: var(--ewan-slate);
+  --color-prettylights-syntax-meta-diff-range: var(--ewan-mauve);
+  --color-prettylights-syntax-brackethighlighter-angle: var(--ewan-gray);
+  --color-prettylights-syntax-sublimelinter-gutter-mark: var(--ewan-gray);
+  --color-prettylights-syntax-constant-other-reference-link: var(--ewan-slate);
+  --color-btn-text: var(--ewan-darkgray); /* --darkgray */
+  --color-btn-bg: var(--ewan-light); /* --light */
+  --color-btn-border: rgba(var(--ewan-dark-rgb), 0.15); /* --dark */
+  --color-btn-shadow: 0 1px 0 rgba(var(--ewan-dark-rgb), 0.04);
   --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  --color-btn-hover-bg: #e3dfd9;
-  --color-btn-hover-border: rgba(48, 59, 73, 0.15); /* --dark */
-  --color-btn-active-bg: #e3dfd9;
-  --color-btn-active-border: rgba(48, 59, 73, 0.15);
-  --color-btn-selected-bg: #e3dfd9;
-  --color-btn-primary-text: #f5f1eb;
-  --color-btn-primary-bg: #303b49; /* --dark */
-  --color-btn-primary-border: rgba(48, 59, 73, 0.15); /* --dark */
-  --color-btn-primary-shadow: 0 1px 0 rgba(48, 59, 73, 0.1);
+  --color-btn-hover-bg: var(--ewan-lightgray);
+  --color-btn-hover-border: rgba(var(--ewan-dark-rgb), 0.15); /* --dark */
+  --color-btn-active-bg: var(--ewan-lightgray);
+  --color-btn-active-border: rgba(var(--ewan-dark-rgb), 0.15);
+  --color-btn-selected-bg: var(--ewan-lightgray);
+  --color-btn-primary-text: var(--ewan-light);
+  --color-btn-primary-bg: var(--ewan-dark); /* --dark */
+  --color-btn-primary-border: rgba(var(--ewan-dark-rgb), 0.15); /* --dark */
+  --color-btn-primary-shadow: 0 1px 0 rgba(var(--ewan-dark-rgb), 0.1);
   --color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-  --color-btn-primary-hover-bg: #4b5058; /* --darkgray */
-  --color-btn-primary-hover-border: rgba(48, 59, 73, 0.15); /* --dark */
-  --color-btn-primary-selected-bg: #4b5058; /* --darkgray */
-  --color-btn-primary-selected-shadow: inset 0 1px 0 rgba(48, 59, 73, 0.2);
-  --color-btn-primary-disabled-text: rgba(245, 241, 235, 0.8);
-  --color-btn-primary-disabled-bg: rgba(133, 131, 132, 0.6);
-  --color-btn-primary-disabled-border: rgba(48, 59, 73, 0.15);
-  --color-action-list-item-default-hover-bg: rgba(163, 128, 114, 0.1);
-  --color-segmented-control-bg: #e3dfd9;
-  --color-segmented-control-button-bg: #f5f1eb;
-  --color-segmented-control-button-selected-border: #92908e;
-  --color-fg-default: #303b49; /* --dark */
-  --color-fg-muted: #4b5058; /* --darkgray */
-  --color-fg-subtle: #92908e; /* --gray */
-  --color-canvas-default: #f5f1eb; /* --light */
-  --color-canvas-overlay: #f5f1eb;
-  --color-canvas-inset: #e3dfd9; /* --lightgray */
-  --color-canvas-subtle: #e3dfd9;
-  --color-border-default: #e3dfd9;
-  --color-border-muted: #e3dfd9;
-  --color-neutral-muted: rgba(146, 144, 142, 0.2);
-  --color-accent-fg: #748c9c; /* --slate */
-  --color-accent-emphasis: #587571; /* --pine */
-  --color-accent-muted: rgba(116, 140, 156, 0.4);
-  --color-accent-subtle: rgba(116, 140, 156, 0.1);
-  --color-success-fg: #899780; /* --sage */
-  --color-attention-fg: #e89a39; /* --ochre */
-  --color-attention-muted: rgba(232, 154, 57, 0.4);
-  --color-attention-subtle: rgba(232, 154, 57, 0.1);
-  --color-danger-fg: #ad6e60; /* --rust */
-  --color-danger-muted: rgba(173, 110, 96, 0.4);
-  --color-danger-subtle: rgba(173, 110, 96, 0.1);
-  --color-primer-shadow-inset: inset 0 1px 0 rgba(227, 223, 217, 0.2);
-  --color-scale-gray-1: #e3dfd9;
-  --color-scale-blue-1: #748c9c;
+  --color-btn-primary-hover-bg: var(--ewan-darkgray); /* --darkgray */
+  --color-btn-primary-hover-border: rgba(var(--ewan-dark-rgb), 0.15); /* --dark */
+  --color-btn-primary-selected-bg: var(--ewan-darkgray); /* --darkgray */
+  --color-btn-primary-selected-shadow: inset 0 1px 0 rgba(var(--ewan-dark-rgb), 0.2);
+  --color-btn-primary-disabled-text: rgba(var(--ewan-light-rgb), 0.8);
+  --color-btn-primary-disabled-bg: rgba(var(--ewan-tertiary-rgb), 0.6);
+  --color-btn-primary-disabled-border: rgba(var(--ewan-dark-rgb), 0.15);
+  --color-action-list-item-default-hover-bg: rgba(var(--ewan-secondary-rgb), 0.1);
+  --color-segmented-control-bg: var(--ewan-lightgray);
+  --color-segmented-control-button-bg: var(--ewan-light);
+  --color-segmented-control-button-selected-border: var(--ewan-gray);
+  --color-fg-default: var(--ewan-dark); /* --dark */
+  --color-fg-muted: var(--ewan-darkgray); /* --darkgray */
+  --color-fg-subtle: var(--ewan-gray); /* --gray */
+  --color-canvas-default: var(--ewan-light); /* --light */
+  --color-canvas-overlay: var(--ewan-light);
+  --color-canvas-inset: var(--ewan-lightgray); /* --lightgray */
+  --color-canvas-subtle: var(--ewan-lightgray);
+  --color-border-default: var(--ewan-lightgray);
+  --color-border-muted: var(--ewan-lightgray);
+  --color-neutral-muted: rgba(var(--ewan-gray-rgb), 0.2);
+  --color-accent-fg: var(--ewan-slate); /* --slate */
+  --color-accent-emphasis: var(--ewan-pine); /* --pine */
+  --color-accent-muted: rgba(var(--ewan-slate-rgb), 0.4);
+  --color-accent-subtle: rgba(var(--ewan-slate-rgb), 0.1);
+  --color-success-fg: var(--ewan-sage); /* --sage */
+  --color-attention-fg: var(--ewan-ochre); /* --ochre */
+  --color-attention-muted: rgba(var(--ewan-ochre-rgb), 0.4);
+  --color-attention-subtle: rgba(var(--ewan-ochre-rgb), 0.1);
+  --color-danger-fg: var(--ewan-rust); /* --rust */
+  --color-danger-muted: rgba(var(--ewan-rust-rgb), 0.4);
+  --color-danger-subtle: rgba(var(--ewan-rust-rgb), 0.1);
+  --color-primer-shadow-inset: inset 0 1px 0 rgba(var(--ewan-lightgray-rgb), 0.2);
+  --color-scale-gray-1: var(--ewan-lightgray);
+  --color-scale-blue-1: var(--ewan-slate);
 
   /*! Extensions from @primer/css/alerts/flash.scss */
   --color-social-reaction-bg-hover: var(--color-scale-gray-1);
