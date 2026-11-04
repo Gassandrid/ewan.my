@@ -819,7 +819,10 @@ function neuralRuntime(create, step, createVault, modulators) {
             step(network, dt, parameters)
             record()
             render()
-            if (hovered >= 0) updateCard(totalFrames % 4 === 0)
+            if (hovered >= 0) {
+              if (covered(...positions[hovered])) setHover(-1)
+              else updateCard(totalFrames % 4 === 0)
+            }
           }
           totalCost += performance.now() - started
           frames++
@@ -1051,7 +1054,17 @@ function neuralRuntime(create, step, createVault, modulators) {
     // Hover reaches neurons only over bare page background, never through
     // text, links or controls. It reads a neuron; it does not navigate.
     const solid =
-      "a,button,input,select,textarea,summary,label,p,li,h1,h2,h3,h4,h5,h6,pre,code,table,img,svg,video,iframe,figure,blockquote,canvas:not(#neural-canvas),.katex,.search,.graph,.explorer,.toc,.backlinks,#neural-controls"
+      ".center,main,article,header,footer,a,button,input,select,textarea,summary,label,p,li,h1,h2,h3,h4,h5,h6,pre,code,table,img,svg,video,iframe,figure,blockquote,canvas:not(#neural-canvas),.katex,.search,.graph,.explorer,.toc,.backlinks,[role=dialog],#neural-controls"
+    function covered(x, y) {
+      // Protect the whole reading surface, including padding, notebook custom
+      // elements and children that opt out of pointer hit testing.
+      for (const content of document.querySelectorAll(".center,main,article")) {
+        for (const box of content.getClientRects()) {
+          if (x >= box.left && x <= box.right && y >= box.top && y <= box.bottom) return true
+        }
+      }
+      return document.elementsFromPoint(x, y).some((element) => element.closest(solid))
+    }
     function setHover(index) {
       if (index === hovered) return
       hovered = index
@@ -1121,18 +1134,25 @@ function neuralRuntime(create, step, createVault, modulators) {
     document.addEventListener(
       "pointermove",
       (event) => {
-        if (!running || growing || event.pointerType === "touch") return
-        if (event.target?.closest?.(solid)) return setHover(-1)
+        if (!running || growing || event.pointerType === "touch" || event.buttons)
+          return setHover(-1)
+        if (covered(event.clientX, event.clientY)) return setHover(-1)
         let best = -1,
           distance = 14
         positions.forEach(([x, y], i) => {
           const d = Math.hypot(x - event.clientX, y - event.clientY)
-          if (d < distance) [best, distance] = [i, d]
+          // A nearby exposed pointer must not reach a neuron under content.
+          if (d < distance && !covered(x, y)) [best, distance] = [i, d]
         })
         setHover(best)
       },
-      { passive: true, signal },
+      { passive: true, capture: true, signal },
     )
+    const clearHover = () => setHover(-1)
+    document.addEventListener("pointerdown", clearHover, { capture: true, signal })
+    document.addEventListener("scroll", clearHover, { passive: true, capture: true, signal })
+    document.documentElement.addEventListener("pointerleave", clearHover, { signal })
+    window.addEventListener("blur", clearHover, { signal })
 
     function fail(error) {
       failed = true

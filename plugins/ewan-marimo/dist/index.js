@@ -379,11 +379,9 @@ function escapeHtmlAttr(value) {
 }
 
 function resolvePython() {
-  const candidates = [
-    process.env.MARIMO_PYTHON,
-    ".venv-marimo/bin/python",
-    "python3",
-  ].filter(Boolean)
+  const candidates = [process.env.MARIMO_PYTHON, ".venv-marimo/bin/python", "python3"].filter(
+    Boolean,
+  )
   return (
     candidates.find((candidate) => candidate === "python3" || fs.existsSync(candidate)) ?? "python3"
   )
