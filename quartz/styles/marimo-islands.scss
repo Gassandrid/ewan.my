@@ -431,6 +431,13 @@
   color-scheme: inherit !important;
 }
 
+// Tangled equations are edited in place; neither the widget wrapper nor
+// Quartz's display-math styles should turn them into scroll containers.
+.latex-tangle__formula,
+.latex-tangle__formula .katex-display {
+  overflow: visible !important;
+}
+
 :host([data-quartz-theme="light"]) .latex-tangle {
   [data-tangle-param] {
     --lt-param-color: var(--lt-param-light) !important;
