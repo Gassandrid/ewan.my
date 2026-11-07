@@ -1,6 +1,6 @@
 ---
 date: 2025-12-07
-updated: 2025-12-10
+updated: 2026-11-07T16:49:16-05:00
 class:
   - note
 tags:
@@ -13,6 +13,7 @@ related:
 author:
 description:
 ---
+
 The **Hilbert Transform** is a tool for signal processing that allows us to convert a real valued signal into its analytic representation, which is a complex-valued signal. This transformation is particularly useful for extracting instantaneous amplitude and phase information from oscillatory signals, such as neural signals in computational neuroscience.
 
 [![hilbertExampleTransform.png](../../../Attachments/hilbertExampleTransform.png)](../../../Attachments/hilbertExampleTransform.png)
@@ -83,13 +84,13 @@ $$
   x(t) = \cos(\omega t)
 $$
 
-Hilbert Transform shifts it by 90 degrees to become a sine wave:
+transform shifts by 90 degrees to become sine wave:
 
 $$
   \mathcal{H}[\cos(\omega t)] = \sin(\omega t)
 $$
 
-Yielding the analytic signal:
+Yielding analytic signal:
 
 $$
   z(t) = \cos(\omega t) + j \sin(\omega t) = e^{j \omega t}

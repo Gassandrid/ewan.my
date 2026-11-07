@@ -1,0 +1,30 @@
+{
+  "name": "@ewan/quartz-timeline",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "quartz": {
+    "name": "ewan-timeline",
+    "displayName": "Note timeline",
+    "description": "A day-by-day strip of new notes and daily-note updates, inline on the homepage and dropped from the toolbar elsewhere.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": [
+      "transformer",
+      "emitter",
+      "component"
+    ],
+    "defaultOrder": 125,
+    "components": {
+      "TimelineToggle": {
+        "displayName": "Timeline toggle",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 8
+      }
+    }
+  }
+}

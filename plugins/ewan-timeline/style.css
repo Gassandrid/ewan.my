@@ -1,0 +1,335 @@
+/* Three lines of body text tall, the width of the text. One hairline per day;
+   a day with notes stands taller, new notes in ink and updates in rust above. */
+.note-timeline {
+  --nt-pitch: 6px;
+  --nt-labels: 1.05rem;
+  --nt-pad: 0px;
+  position: relative;
+  height: 4.8rem;
+  margin: 1.4rem 0 0.6rem;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.note-timeline[data-state="error"] {
+  display: none;
+}
+
+.nt-scroll {
+  --fade-l: 0px;
+  --fade-r: 0px;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  outline: none;
+  cursor: default;
+  -webkit-mask-image: var(--nt-mask);
+  mask-image: var(--nt-mask);
+  --nt-mask: linear-gradient(
+    to right,
+    transparent 0,
+    #000 var(--fade-l),
+    #000 calc(100% - var(--fade-r)),
+    transparent 100%
+  );
+}
+.nt-scroll::-webkit-scrollbar {
+  display: none;
+}
+.nt-scroll[data-start] {
+  --fade-l: 2rem;
+}
+.nt-scroll[data-end] {
+  --fade-r: 2rem;
+}
+.nt-scroll[data-dragging] {
+  cursor: grabbing;
+}
+.note-timeline:has(.nt-scroll:focus-visible) {
+  box-shadow: 0 1px 0 var(--ochre);
+}
+
+.nt-track {
+  position: relative;
+  height: 100%;
+}
+
+.nt-d {
+  position: absolute;
+  bottom: var(--nt-labels);
+  left: calc(var(--nt-pad) + var(--i) * var(--nt-pitch));
+  width: var(--nt-pitch);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2px;
+  transform-origin: 50% 100%;
+  transition: transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.nt-d > i {
+  display: block;
+  width: 2px;
+  flex: none;
+}
+.nt-d > .nt-t {
+  width: 1px;
+  height: 5px;
+  background: color-mix(in srgb, var(--gray) 50%, transparent);
+}
+.nt-d[data-m] > .nt-t {
+  height: 9px;
+  background: var(--gray);
+}
+.nt-d > .nt-n {
+  background: var(--darkgray);
+}
+.nt-d > .nt-u {
+  background: var(--rust);
+}
+.nt-d.on > .nt-t {
+  background: var(--ochre);
+}
+.note-timeline[data-touch] .nt-d[data-a] {
+  scroll-snap-align: center;
+}
+.note-timeline[data-touch] .nt-scroll {
+  scroll-snap-type: x proximity;
+}
+
+.nt-m {
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--nt-pad) + var(--i) * var(--nt-pitch) + 2px);
+  font: 12.5px/1 var(--fell-sc);
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.nt-cursor {
+  position: absolute;
+  top: 0;
+  bottom: var(--nt-labels);
+  left: var(--nt-pad);
+  width: 4px;
+  background: color-mix(in srgb, var(--ochre) 28%, transparent);
+  transform: translateX(calc(var(--c, 0) * var(--nt-pitch) + 1px));
+  transition:
+    transform 90ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 120ms;
+  opacity: 0;
+  pointer-events: none;
+}
+.note-timeline[data-active] .nt-cursor {
+  opacity: 1;
+}
+/* Under a finger the days move and the cursor stays at the centre. */
+.note-timeline[data-touch] .nt-cursor {
+  display: none;
+}
+.note-timeline[data-touch]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: var(--nt-labels);
+  left: calc(50% - 2px);
+  width: 4px;
+  background: color-mix(in srgb, var(--ochre) 28%, transparent);
+  opacity: 0;
+  transition: opacity 120ms;
+  pointer-events: none;
+}
+.note-timeline[data-touch][data-active]::after {
+  opacity: 1;
+}
+
+.nt-card {
+  position: absolute;
+  z-index: 20;
+  bottom: calc(100% + 0.3rem);
+  left: var(--x, 0px);
+  width: max-content;
+  max-width: min(24rem, 100%);
+  max-height: 13rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0.4rem 0.65rem 0.45rem;
+  background: var(--light);
+  border: 1px solid var(--hair);
+  font: 15px/1.35 var(--fell);
+  color: var(--dark);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 120ms,
+    visibility 0s 120ms;
+}
+.note-timeline[data-active] .nt-card {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 120ms;
+}
+.note-timeline[data-pinned] .nt-card,
+.note-timeline[data-touch] .nt-card {
+  pointer-events: auto;
+}
+.nt-card time {
+  display: block;
+  font: 12.5px/1.3 var(--fell-sc);
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+.nt-card ul {
+  list-style: none;
+  margin: 0.15rem 0 0;
+  padding: 0;
+}
+.nt-card li {
+  margin: 0;
+  padding: 0;
+}
+.nt-card li + li {
+  margin-top: 0.12rem;
+}
+.nt-card a {
+  display: block;
+  color: var(--dark);
+  font-weight: 400;
+  background: none;
+  text-decoration: none;
+}
+.nt-card a:hover,
+.nt-card a:focus-visible {
+  color: var(--rust);
+}
+.nt-k {
+  font: 12.5px/1 var(--fell-sc);
+  letter-spacing: 0.04em;
+  margin-right: 0.45em;
+  color: var(--darkgray);
+}
+.nt-k[data-k="1"] {
+  color: var(--rust);
+}
+.nt-sub {
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nt-d,
+  .nt-cursor,
+  .nt-card {
+    transition: none !important;
+  }
+}
+
+/* Upside down, as the toolbar drops it: months along the top, days hanging
+   from them, the card below. */
+.note-timeline[data-dir="down"] {
+  margin: 0;
+}
+.note-timeline[data-dir="down"] .nt-d {
+  top: var(--nt-labels);
+  bottom: auto;
+  flex-direction: column;
+  transform-origin: 50% 0;
+}
+.note-timeline[data-dir="down"] .nt-m {
+  top: 0;
+  bottom: auto;
+}
+.note-timeline[data-dir="down"] .nt-cursor,
+.note-timeline[data-dir="down"][data-touch]::after {
+  top: var(--nt-labels);
+  bottom: 0;
+}
+.note-timeline[data-dir="down"] .nt-card {
+  top: calc(100% + 0.3rem);
+  bottom: auto;
+}
+
+/* The toolbar button, drawn like dark mode's and search's. */
+.nt-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nt-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--darkgray);
+  cursor: pointer;
+}
+.nt-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+.nt-toggle:hover,
+.nt-toggle[aria-expanded="true"] {
+  color: var(--rust);
+}
+.nt-toggle:focus-visible {
+  outline: 1px solid var(--ochre);
+  outline-offset: 2px;
+}
+
+/* The drop opens below the header rule and pushes the page down: its row grows
+   from nothing while the strip slides out from under the rule. No ground or
+   rules of its own, so once open it reads as part of the page. */
+.nt-drop {
+  --nt-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 300ms var(--nt-ease),
+    visibility 0s 300ms;
+}
+.nt-drop[data-open] {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition: grid-template-rows 300ms var(--nt-ease);
+}
+.nt-panel {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+/* Clipped only while it moves, so the card can hang over the page once open. */
+.nt-drop[data-settled] .nt-panel {
+  overflow: visible;
+}
+.nt-panel > .note-timeline {
+  margin: 0.9rem 0 0.4rem;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition:
+    transform 300ms var(--nt-ease),
+    opacity 220ms;
+}
+.nt-drop[data-open] .nt-panel > .note-timeline {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nt-drop,
+  .nt-panel > .note-timeline {
+    transition: none !important;
+  }
+}

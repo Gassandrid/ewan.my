@@ -189,6 +189,15 @@ plugins:
   - source: ./plugins/ewan-marimo-resources
     enabled: true
     order: 120
+  # Homepage strip of new notes and daily-note updates, read after headings
+  # have their ids and links their slugs.
+  - source: ./plugins/ewan-timeline
+    enabled: true
+    order: 125
+    layout:
+      position: beforeBody
+      priority: 8
+      group: toolbar
   - source: ./plugins/ewan-marimo
     enabled: true
     order: 20

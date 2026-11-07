@@ -115,6 +115,12 @@
       "commit": "local",
       "installedAt": "2026-10-23T22:51:27.527Z"
     },
+    "ewan-explorer": {
+      "source": "./plugins/ewan-explorer",
+      "resolved": "/Users/gassandrid/Lab/projects/ewan.my/plugins/ewan-explorer",
+      "commit": "local",
+      "installedAt": "2026-11-07T20:45:10.501Z"
+    },
     "ewan-fonts": {
       "source": "./plugins/ewan-fonts",
       "resolved": "/private/tmp/ewan-my-v5-local/plugins/ewan-fonts",
@@ -240,6 +246,12 @@
       "resolved": "/private/tmp/ewan-my-v5-local/plugins/ewan-tikz",
       "commit": "local",
       "installedAt": "2026-07-28T00:47:15.718Z"
+    },
+    "ewan-timeline": {
+      "source": "./plugins/ewan-timeline",
+      "resolved": "/Users/gassandrid/Lab/projects/ewan.my/plugins/ewan-timeline",
+      "commit": "local",
+      "installedAt": "2026-11-07T20:45:10.500Z"
     },
     "explorer": {
       "source": "github:quartz-community/explorer",
