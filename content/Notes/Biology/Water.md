@@ -39,7 +39,7 @@ For one, it has a very high heat capacity, meaning it can absorb a lot of heat w
 > [!Example]
 > **evaporative cooling** - lots of hydrogen bonds between water molecules means it takes a lot of energy to pull them apart
 >
-> [![Pasted image 20250905132929.png](../../Attachments/Pasted%20image%2020250905132929.png)](../../Attachments/Pasted%20image%2020250905132929.png)
+> [![Pasted image 20250905132929.png](../../Attachments/Pasted%20image%2020250905132927.png)](../../Attachments/Pasted%20image%2020250905132927.png)
 
 > [!Example]
 > **expanding when freezing** - hydrogen bonds hold water molecules apart in a crystalline structure

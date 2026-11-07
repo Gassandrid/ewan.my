@@ -20,3 +20,7 @@ The important idea is that the main mechanism behind what makes anki effective a
 Has two signals: immediate working memory evaluation for seeing how quickly one learns new/errored cards during a session for a day, and then one for long term memory formation in how cards reviewed/accumulated over a few days are immediately recalled without prior practice for that session.
 
 Also a good implementation of [[Consuming and Choosing Content Effectively]], especially when you can use coding agents to make cards as you go as defined by the [[Spaced Repetition for Learning Optimization|Spaced Repetition]] note.
+
+## [[11-04-2026]] integrate as a signal for [[Maximizing Activation through Differentiable Content Consumption|Stimulus Optimization]]?
+
+quite limited in 

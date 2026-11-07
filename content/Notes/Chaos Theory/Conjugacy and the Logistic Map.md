@@ -14,7 +14,7 @@ author:
 description:
 aliases:
 date: 2026-02-19T10:14:51-05:00
-updated: 2026-02-20T10:05:43-05:00
+updated: 2026-11-04T17:43:42-05:00
 ---
 
 If we want to show that $G(x)=4x(1-x)$ has chaotic orbits, we will do it by comparing with $T(x)$ ( our [[Tent Map]] ).
