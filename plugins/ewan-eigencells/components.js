@@ -14,14 +14,18 @@ const CSS = `
 .florilegium-banner>canvas.eigencells{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:var(--eigencells-ink,.86)}
 `
 
-// Grows one culture per visit: cells are placed and developed one per frame,
-// so the strip fills in like a plate under the microscope. Click to reseed;
-// ?cells=<seed> reproduces a culture.
+// Grows one culture per visit. Each placed cell condenses out of scattered
+// eigenvalues: its points arrive in SLICES even dustings over REVEAL ms, all
+// cells at once, so the strip fills in like a plate under the microscope.
+// Click to reseed; ?cells=<seed> reproduces a culture.
 function eigencellsRuntime(eigencells, POOL) {
   const E = eigencells(POOL),
     PER_PIXEL = 6,
     SCALE = 2,
     GAIN = 1.0,
+    SLICES = 48,
+    REVEAL = 3000,
+    BUDGET = 10,
     motion = matchMedia("(prefers-reduced-motion: reduce)")
   let job = null
 
@@ -54,7 +58,11 @@ function eigencellsRuntime(eigencells, POOL) {
     const small = Math.min(0.3, Math.max(0.11, 13 / Math.max(host.clientHeight, 1)))
     const colony = E.culture(seed, aspect, { small, fullness: 0.72 })
     const cells = []
-    let w = 0,
+    // cells still condensing: { gen, born, slices developed so far }
+    let growing = [],
+      placing = true,
+      turn = 0,
+      w = 0,
       h = 0,
       buf = null,
       image = null,
@@ -72,36 +80,61 @@ function eigencellsRuntime(eigencells, POOL) {
       canvas.height = h
       buf = new Float32Array(w * h)
       image = ctx.createImageData(w, h)
+      // a resize lands every placed cell at once; the unplaced still condense
+      growing = []
       for (const cell of cells) E.develop(cell, buf, w, h, PER_PIXEL)
     }
     function paint() {
       E.paint(buf, w, h, PER_PIXEL, color, GAIN, image.data)
       ctx.putImageData(image, 0, 0)
     }
-    // placement and development interleaved in small slices, ~10 ms a frame
-    function* work() {
-      for (const cell of colony.cells) {
-        if (!cell) {
-          yield
-          continue
+    function place(until) {
+      while (placing && performance.now() < until) {
+        const next = colony.cells.next()
+        if (next.done) placing = false
+        else if (next.value) {
+          cells.push(next.value)
+          growing.push({
+            gen: E.developing(next.value, buf, w, h, PER_PIXEL, SLICES),
+            born: performance.now(),
+            slices: 0,
+          })
         }
-        cells.push(cell)
-        yield* E.developing(cell, buf, w, h, PER_PIXEL)
       }
     }
-    const pending = work()
+    // Round-robin one slice at a time, each cell held to its share of the
+    // reveal clock (eased in, so the scatter lingers before it condenses).
+    // With reduced motion the clock is ignored and the culture appears grown.
+    function condense(until) {
+      let moved = true
+      while (moved && growing.length && performance.now() < until) {
+        moved = false
+        const now = performance.now()
+        for (let n = 0; n < growing.length && performance.now() < until; n++) {
+          const g = growing[(turn + n) % growing.length],
+            t = Math.min(1, (now - g.born) / REVEAL),
+            due = motion.matches ? SLICES + 1 : Math.ceil(SLICES * t * t) + (t >= 1)
+          if (g.slices >= due) continue
+          g.slices++
+          moved = true
+          if (g.gen.next().done) g.slices = Infinity
+        }
+        turn++
+        growing = growing.filter((g) => g.slices !== Infinity)
+      }
+    }
+    // ~10 ms a frame: placement always gets a turn so cells keep arriving
     function step() {
       if (stopped) return
       const begin = performance.now()
-      while (performance.now() - begin < 10) {
-        if (pending.next().done) {
-          done = true
-          canvas.dataset.state = "grown"
-          canvas.dataset.cells = String(cells.length)
-          break
-        }
+      place(begin + BUDGET * 0.3)
+      condense(begin + BUDGET)
+      place(begin + BUDGET)
+      done = !placing && !growing.length
+      if (done) {
+        canvas.dataset.state = "grown"
+        canvas.dataset.cells = String(cells.length)
       }
-      // with reduced motion the culture appears once, fully grown
       if (done || !motion.matches) paint()
       if (!done) frame = requestAnimationFrame(step)
     }

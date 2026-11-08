@@ -571,11 +571,14 @@ function eigencells(POOL) {
 
   // Accumulate density for one cell into buf (w x h pixels; strip height h),
   // yielding between chunks of sweeps so a page can spread the work over frames.
-  function* developing(cell, buf, w, h, perPixel, chunk = 120) {
+  // With slices, the cell arrives in that many equal parts; each sweep lands
+  // across the whole silhouette, so a part reads as an even dusting of it.
+  function* developing(cell, buf, w, h, perPixel, slices = 0) {
     const rand = rng(cell.seed),
       px = cell.s * h,
       areaPx = cell.area * (2 * 1.15 * px) ** 2,
       total = Math.max(30, Math.round((areaPx * perPixel) / (N * 24))),
+      chunk = slices ? Math.ceil(total / slices) : 120,
       sol = solver(cell.tpl, cell.x, cell.r1, cell.r2, rand),
       pts = new Float64Array(2 * N * 24 * Math.min(chunk, total)),
       ca = Math.cos(cell.angle),
@@ -606,15 +609,24 @@ function eigencells(POOL) {
   }
 
   // Density -> RGBA in one ink. gain sets how solid the cell bodies read.
+  // Densities are hit counts, so a table of packed pixels replaces exp per
+  // pixel; the page repaints every frame while a culture grows.
+  const LUT_N = 1024
   function paint(buf, w, h, perPixel, ink, gain = 1.4, rgba) {
     const out = rgba ?? new Uint8ClampedArray(w * h * 4),
-      k = gain / perPixel
+      k = gain / perPixel,
+      table = new Uint8ClampedArray(LUT_N * 4)
+    for (let c = 0; c < LUT_N; c++) {
+      table[4 * c] = ink[0]
+      table[4 * c + 1] = ink[1]
+      table[4 * c + 2] = ink[2]
+      table[4 * c + 3] = Math.round(255 * (1 - Math.exp(-c * k)) * (ink[3] ?? 1))
+    }
+    const lut = new Uint32Array(table.buffer),
+      px = new Uint32Array(out.buffer, out.byteOffset, w * h)
     for (let p = 0; p < w * h; p++) {
-      const a = 1 - Math.exp(-buf[p] * k)
-      out[4 * p] = ink[0]
-      out[4 * p + 1] = ink[1]
-      out[4 * p + 2] = ink[2]
-      out[4 * p + 3] = Math.round(255 * a * (ink[3] ?? 1))
+      const c = buf[p]
+      px[p] = lut[c < LUT_N - 1 ? c | 0 : LUT_N - 1]
     }
     return out
   }
