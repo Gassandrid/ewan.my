@@ -2,7 +2,6 @@
 # tags:
 #   - comp-neuro/equipment/eeg
 #   - university
-#   - generated/claude
 # class:
 #   - note
 # date: 2026-11-12
