@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto"
 import { h } from "preact"
 import { eigencells } from "./eigencells.js"
 import { POOL } from "./pool.js"
@@ -193,6 +194,9 @@ export const MODULE_SOURCE = `${eigencells.toString()}
 const POOL = ${JSON.stringify(POOL)};
 export const { mount, stop } = (${eigencellsRuntime.toString()})(eigencells, POOL);
 `
+// The file name stays fixed, so the URL carries the source hash: a deploy
+// must not be hidden behind the browser's cached copy of the last culture.
+const MODULE_URL = `./${MODULE_PATH}?v=${createHash("sha256").update(MODULE_SOURCE).digest("hex").slice(0, 10)}`
 
 // The only script every page carries: fetch the module where there is a
 // banner to grow, and stop the culture when the reader leaves.
@@ -205,7 +209,7 @@ const LOADER = `(() => {
     if (!host) return stop()
     const mine = ++ticket
     try {
-      const module = await import(new URL(${JSON.stringify("./" + MODULE_PATH)}, document.baseURI).href)
+      const module = await import(new URL(${JSON.stringify(MODULE_URL)}, document.baseURI).href)
       if (mine !== ticket || !host.isConnected) return
       current = module
       module.mount(host)
@@ -216,7 +220,7 @@ const LOADER = `(() => {
 export function EigencellsBanner() {
   function Component({ fileData } = {}) {
     if (fileData?.slug !== "index") return null
-    return h("link", { rel: "modulepreload", href: `./${MODULE_PATH}` })
+    return h("link", { rel: "modulepreload", href: MODULE_URL })
   }
   Component.displayName = "EigencellsBanner"
   Component.css = CSS
