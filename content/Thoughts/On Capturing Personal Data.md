@@ -73,7 +73,7 @@ The next useful additions should add new explanatory axes without demanding a hi
 
 #### EEG
 
-Would likely use something like the [[Ultracortex "Mark IV" EEG Headset]] to record my own data. I compiled some useful information about this + some aliexpress addons under [[Exploring Personal EEG Solutions]].
+Would likely use something like the [[Ultracortex Mark IV EEG Headset]] to record my own data. I compiled some useful information about this + some aliexpress addons under [[Exploring Personal EEG Solutions]].
 
 On further thought, I have decided that this too expensive given the quality of the parts. Yes, OpenBCI is the most trusted in the game, but 600 for the [[Electrodes]], another 350 for the analog chip on ali express, and it gets out of hand. Likely will stick wtih something simpler like a [[BrainAccess HALO]].
 

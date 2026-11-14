@@ -1,6 +1,6 @@
 ---
 date: 2025-12-09
-updated: 2026-10-29T13:43:12-04:00
+updated: 2026-11-12T13:44:33-05:00
 class:
   - note
 tags:
@@ -39,3 +39,9 @@ Headers: IM Fell DW Pica (400 only; vary by size and italic)
 Body: PP Neue Montreal
 
 Code: IBM Plex Mono
+
+---
+
+## Reference
+
+https://palletism.art/collections/sunprint idk seems cool

@@ -25,7 +25,7 @@ If I have access to EEG equipment, I would hope I could do something like the [[
 
 I want something that both gets me the data I need, but also does it without needing some bloated subscription based proprietary software. I also want to own my data, and I want to do this all for a *somewhat* affordable price.
 
-The most obvious choice given these conditions is the [[Ultracortex "Mark IV" EEG Headset]] by OpenBCI. Given the DIY nature of the device, it is a bit of a premium at 600$, but there are a lot of savings given that I dont need to get some extremely overpriced monthly subscription just to access my data. This would be less usefull for the fun "controlling stuff with your brain", and more focused on the research that I would be doing on my own day to day activities, possibly tracking stimulus through the content I consume/write about.
+The most obvious choice given these conditions is the [[Ultracortex Mark IV EEG Headset]] by OpenBCI. Given the DIY nature of the device, it is a bit of a premium at 600$, but there are a lot of savings given that I dont need to get some extremely overpriced monthly subscription just to access my data. This would be less usefull for the fun "controlling stuff with your brain", and more focused on the research that I would be doing on my own day to day activities, possibly tracking stimulus through the content I consume/write about.
 
 Found this post regarding working with **OpenBCI** stuff:
 

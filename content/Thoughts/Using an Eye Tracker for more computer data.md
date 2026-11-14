@@ -23,7 +23,7 @@ I have been thinking about the idea of using an eye tracking device as a source 
 
 I would likely do this by purchasing the [[Tobii Eye Tracker 5]], which is a consumer-grade eye tracker that is relatively affordable and has good software support. I would then set it up to track my eye movements while I work on my computer, and collect the data for analysis.
 
-More affordable alternative to the [[Ultracortex "Mark IV" EEG Headset]] EEG device that I have been looking at ([[Exploring Personal EEG Solutions]]). I do hope to eventually get that as my equipment, which would provide even more cross-correlational data with the eye tracking. However, that is a lot more expensive at around $600 just for the base parts, not including the sensors you need from AliExpress. But a good starting point nonetheless.
+More affordable alternative to the [[Ultracortex Mark IV EEG Headset]] EEG device that I have been looking at ([[Exploring Personal EEG Solutions]]). I do hope to eventually get that as my equipment, which would provide even more cross-correlational data with the eye tracking. However, that is a lot more expensive at around $600 just for the base parts, not including the sensors you need from AliExpress. But a good starting point nonetheless.
 
 ---
 
