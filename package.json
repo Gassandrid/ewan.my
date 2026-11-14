@@ -18,7 +18,7 @@
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "plugins:install": "node ./quartz/bootstrap-cli.mjs plugin install --from-config",
+    "plugins:install": "node ./quartz/bootstrap-cli.mjs plugin install",
     "build": "node ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "probe": "node ./quartz/cli/probe-build.mjs",
     "validate": "npm run plugins:install && npm run check && npm test && npm run build && npm run probe",
