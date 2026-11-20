@@ -45,10 +45,28 @@ function readPluginsJson(): QuartzPluginsJson | null {
     return null
   }
   const raw = fs.readFileSync(configPath, "utf-8")
-  if (configPath.endsWith(".yaml") || configPath.endsWith(".yml")) {
-    return YAML.parse(raw) as QuartzPluginsJson
+  const json =
+    configPath.endsWith(".yaml") || configPath.endsWith(".yml")
+      ? (YAML.parse(raw) as QuartzPluginsJson)
+      : (JSON.parse(raw) as QuartzPluginsJson)
+  return skipPlugins(json)
+}
+
+/** QUARTZ_SKIP_PLUGINS=og-image,... disables plugins for one run (`npm run dev`). */
+function skipPlugins(json: QuartzPluginsJson): QuartzPluginsJson {
+  const skip = new Set(
+    (process.env.QUARTZ_SKIP_PLUGINS ?? "")
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean),
+  )
+  if (skip.size === 0) return json
+  return {
+    ...json,
+    plugins: json.plugins.map((e) =>
+      skip.has(extractPluginName(e.source)) ? { ...e, enabled: false } : e,
+    ),
   }
-  return JSON.parse(raw) as QuartzPluginsJson
 }
 
 function extractPluginName(source: PluginSource): string {

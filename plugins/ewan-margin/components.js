@@ -372,6 +372,10 @@ export function ReadingMargin() {
 const histogramCache = new WeakMap()
 
 /** The distribution strip is the same on every page: bin it once per build. */
+export function rankHistogram(metrics) {
+  return histogram(metrics)
+}
+
 function histogram(metrics) {
   const cached = histogramCache.get(metrics)
   if (cached) return cached
@@ -449,30 +453,30 @@ const MARGIN_CSS = `
 .reading-margin .rm-h{font:13px/1.3 var(--fell-sc);color:var(--muted);letter-spacing:.06em;font-weight:400;margin:0;padding-bottom:6px;border-bottom:1px solid var(--dark)}
 .rm-sources ol{list-style:none;margin:8px 0 0;padding:0}
 .rm-sources li{position:relative;padding:4px 0 4px 18px}
-.rm-sources li::before{content:"";position:absolute;left:2px;top:13px;border:4px solid transparent;border-left:6px solid var(--ochre);opacity:0;transition:opacity .2s}
+.rm-sources li::before{content:"";position:absolute;left:2px;top:13px;border:4px solid transparent;border-left:6px solid var(--gold);opacity:0;transition:opacity .2s}
 .rm-sources li.in-view::before{opacity:1}
 .rm-sources a{display:block;text-decoration:none;background:none!important}
 .rm-sources .rm-a{font:15.5px/1.25 var(--fell-sc);color:var(--dark)}
 .rm-sources .rm-y{font:11px var(--mono);color:var(--muted);margin-left:4px}
 .rm-sources .rm-t{display:block;font:italic 14.5px/1.35 var(--fell);color:var(--darkgray)}
-.rm-sources a:hover .rm-a,.rm-sources a:hover .rm-t{color:var(--rust)}
+.rm-sources a:hover .rm-a,.rm-sources a:hover .rm-t{color:var(--accent-hover)}
 .rm-sources .rm-ln{font:10px var(--mono);color:var(--muted)}
-article cite.is-lit a[data-bib]{background:color-mix(in srgb,var(--ochre) 18%,transparent)!important}
+article cite.is-lit a[data-bib]{background:color-mix(in srgb,var(--gold) 18%,transparent)!important}
 .rm-cited ul{list-style:none;padding:0;margin:8px 0 0;max-height:min(22rem,40vh);overflow-y:auto;scrollbar-width:thin}
 .rm-cited li{margin:0}
 .rm-cited summary{list-style:none;cursor:pointer;padding:4px 0;display:flex;gap:6px;align-items:baseline;justify-content:space-between}
 .rm-cited summary::-webkit-details-marker{display:none}
 .rm-cited summary span{font:15.5px/1.3 var(--fell);color:var(--dark)}
 .rm-cited details[open]>summary span{font-style:italic}
-.rm-cited summary:hover span{color:var(--rust)}
+.rm-cited summary:hover span{color:var(--accent-hover)}
 .rm-cited .rm-loc{font:11px var(--mono);font-style:normal;color:var(--muted);white-space:nowrap}
 .rm-cited details>p{margin:2px 0 8px 12px;padding-left:10px;border-left:1px solid var(--hair);font:italic 14px/1.45 var(--fell);color:var(--darkgray)}
 .rm-cited details>p b{font-weight:400;font-style:normal;color:var(--dark)}
 .rm-cited .rm-open{display:block;margin-top:3px;font:11px var(--mono);font-style:normal;color:var(--muted)!important;background:none!important;padding:0!important}
-.rm-cited .rm-open:hover{color:var(--rust)!important}
+.rm-cited .rm-open:hover{color:var(--accent-hover)!important}
 .rm-see{margin:10px 0 0;font:italic 14px/1.45 var(--fell);color:var(--muted)}
 .rm-see a.internal{background:none!important;padding:0;color:var(--dark)!important;border-bottom:1px solid var(--hair);border-radius:0}
-.reading-margin summary:focus-visible,.reading-margin a:focus-visible{outline:1.5px solid var(--ochre);outline-offset:2px}
+.reading-margin summary:focus-visible,.reading-margin a:focus-visible{outline:1.5px solid var(--gold);outline-offset:2px}
 @media (max-width:1199px){.reading-margin{padding:0 16px;background:none}}
 `
 
@@ -484,7 +488,7 @@ const RANK_CSS = `
 .note-rank .nr-bin{fill:var(--muted);opacity:.5}
 @media (max-width:800px){.note-rank{padding:0 .75rem}}
 .note-rank .nr-axis{stroke:var(--muted);stroke-width:.6}
-.note-rank .nr-pointer{fill:var(--ochre)}
+.note-rank .nr-pointer{fill:var(--gold)}
 `
 
 // Runs after every navigation: stamp ink, bibliography back-references, the

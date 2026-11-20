@@ -14,6 +14,8 @@
   --ewan-light-pine: #587571;
   --ewan-light-slate: #748C9C;
   --ewan-light-mauve: #A08A98;
+  --ewan-light-veld: #5B6B45;
+  --ewan-light-gold: #BC8D2F;
   --ewan-dark-light: #25262A;
   --ewan-dark-lightgray: #353436;
   --ewan-dark-gray: #8E8983;
@@ -28,6 +30,8 @@
   --ewan-dark-pine: #8DAEB3;
   --ewan-dark-slate: #9BB0BD;
   --ewan-dark-mauve: #C9B1B9;
+  --ewan-dark-veld: #ADB98F;
+  --ewan-dark-gold: #D8AE5A;
   --ewan-body-font: "PP Neue Montreal", ui-sans-serif, system-ui, sans-serif;
   --ewan-heading-font: "IM Fell DW Pica", Georgia, serif;
   --ewan-heading-sc-font: "IM Fell DW Pica SC", "IM Fell DW Pica", Georgia, serif;
@@ -39,7 +43,8 @@
   --ewan-fg-muted: var(--ewan-gray);
   --ewan-heading: var(--ewan-darkgray);
   --ewan-accent: var(--ewan-rust);
-  --ewan-link: var(--ewan-pine);
+  --ewan-link: var(--ewan-veld);
+  --ewan-pointer: var(--ewan-gold);
   --ewan-light: var(--ewan-light-light);
   --ewan-lightgray: var(--ewan-light-lightgray);
   --ewan-gray: var(--ewan-light-gray);
@@ -54,6 +59,8 @@
   --ewan-pine: var(--ewan-light-pine);
   --ewan-slate: var(--ewan-light-slate);
   --ewan-mauve: var(--ewan-light-mauve);
+  --ewan-veld: var(--ewan-light-veld);
+  --ewan-gold: var(--ewan-light-gold);
 }
 @media (prefers-color-scheme: dark) {
 :root:not([saved-theme="light"]):not([data-theme="light"]):not([data-theme="day"]), :host {
@@ -71,6 +78,8 @@
   --ewan-pine: var(--ewan-dark-pine);
   --ewan-slate: var(--ewan-dark-slate);
   --ewan-mauve: var(--ewan-dark-mauve);
+  --ewan-veld: var(--ewan-dark-veld);
+  --ewan-gold: var(--ewan-dark-gold);
 }
 }
 :root[saved-theme="light"], :root[data-theme="light"], :root[data-theme="day"], :root.light, .ht:not(.ht-dark) {
@@ -88,6 +97,8 @@
   --ewan-pine: var(--ewan-light-pine);
   --ewan-slate: var(--ewan-light-slate);
   --ewan-mauve: var(--ewan-light-mauve);
+  --ewan-veld: var(--ewan-light-veld);
+  --ewan-gold: var(--ewan-light-gold);
 }
 :root[saved-theme="dark"], :root[data-theme="dark"], :root[data-theme="night"], :root.dark, body.dark, .ht.ht-dark {
   --ewan-light: var(--ewan-dark-light);
@@ -104,6 +115,8 @@
   --ewan-pine: var(--ewan-dark-pine);
   --ewan-slate: var(--ewan-dark-slate);
   --ewan-mauve: var(--ewan-dark-mauve);
+  --ewan-veld: var(--ewan-dark-veld);
+  --ewan-gold: var(--ewan-dark-gold);
 }
 :root {
   --light: var(--ewan-light);
@@ -120,4 +133,6 @@
   --pine: var(--ewan-pine);
   --slate: var(--ewan-slate);
   --mauve: var(--ewan-mauve);
+  --veld: var(--ewan-veld);
+  --gold: var(--ewan-gold);
 }

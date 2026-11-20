@@ -1,0 +1,18 @@
+// Accent order (adopted 2026-11-19), after the South African flag: each colour
+// has one job, in the flag's own proportions. Tokens live in ewan-theme's
+// theme.json; this file only assigns roles. Ink already plays the flag's blue.
+//   1 green (veld)  links and navigation: the large field, used most
+//   2 gold          where you are: pointers, read heads, current item, focus,
+//                   a link's underline on hover; the thin border, used sparingly
+//   3 red (rust)    references and attention: citations, failures
+// Clay, sage, pine, slate, mauve and ochre stay quiet categorical colours.
+:root:root {
+  --secondary: var(--veld);
+  --tertiary: color-mix(in srgb, var(--veld) 72%, var(--dark));
+  --highlight: color-mix(in srgb, var(--veld) 9%, transparent);
+  --textHighlight: color-mix(in srgb, var(--gold) 30%, transparent);
+
+  --accent-link: var(--veld);
+  --accent-hover: var(--tertiary);
+  --accent-pointer: var(--gold);
+}

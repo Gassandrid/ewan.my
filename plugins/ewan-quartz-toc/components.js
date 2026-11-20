@@ -12,14 +12,14 @@ const CSS = `
 .quartztoc-track{position:relative;flex:1;min-height:0;margin:8px 0}
 .quartztoc-progress{position:absolute;inset:8px auto 8px 0;width:1px;background:var(--hair,var(--lightgray))}
 .quartztoc-read{position:absolute;left:0;top:0;width:1px;height:var(--viewport-top,0px);background:var(--muted,var(--gray));opacity:.45}
-.quartztoc-section{position:absolute;left:-2px;width:5px;top:var(--section-top,0px);height:var(--section-height,0px);background:color-mix(in srgb,var(--ochre) 24%,transparent)}
+.quartztoc-section{position:absolute;left:-2px;width:5px;top:var(--section-top,0px);height:var(--section-height,0px);background:color-mix(in srgb,var(--gold) 24%,transparent)}
 .quartztoc-rail-thumb{position:absolute;left:-.5px;width:2px;top:var(--viewport-top,0px);height:var(--viewport-height,0px);background:var(--dark)}
 .quartztoc .toc-row{position:absolute;left:0;right:0;top:var(--toc-y,0px);height:0}
 .quartztoc .toc-dot{position:absolute;left:0;top:-.5px;width:9px;height:1px;background:var(--muted,var(--gray));opacity:.75;pointer-events:none}
 .quartztoc .toc-level-3 .toc-dot{width:6px;opacity:.6}
 .quartztoc .toc-level-4 .toc-dot,.quartztoc .toc-level-5 .toc-dot,.quartztoc .toc-level-6 .toc-dot{width:3px;opacity:.5}
 .quartztoc .toc-row-title .toc-dot{width:12px;background:var(--dark);opacity:.8}
-.quartztoc .toc-row.is-active .toc-dot,.quartztoc .toc-row.is-inspected .toc-dot{top:-1px;height:2px;width:12px;background:var(--ochre);opacity:1}
+.quartztoc .toc-row.is-active .toc-dot,.quartztoc .toc-row.is-inspected .toc-dot{top:-1px;height:2px;width:12px;background:var(--gold);opacity:1}
 .quartztoc .toc-link{position:absolute;left:18px;right:4px;top:var(--label-offset,-10px);padding:1px 0;line-height:1.3;font-weight:400;color:var(--darkgray);text-decoration:none!important;background:var(--light)!important;box-shadow:4px 0 var(--light),-4px 0 var(--light);border-radius:0;opacity:0;pointer-events:none;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow-wrap:anywhere;transition:opacity .12s ease}
 .quartztoc .toc-level-3 .toc-link{left:26px;font-style:italic}
 .quartztoc .toc-level-4 .toc-link,.quartztoc .toc-level-5 .toc-link,.quartztoc .toc-level-6 .toc-link{left:34px;font:12.5px/1.3 var(--fell-sc,var(--headerFont));letter-spacing:.04em;color:var(--muted,var(--gray))}
@@ -27,8 +27,8 @@ const CSS = `
 .quartztoc .toc-row-title .toc-link{font-size:15.5px;line-height:1.25;color:var(--dark)}
 .quartztoc .toc-row.label-visible .toc-link{opacity:.85;pointer-events:auto}
 .quartztoc .toc-row.is-active.label-visible .toc-link,.quartztoc .toc-row.is-inspected.label-visible .toc-link{color:var(--dark);opacity:1}
-.quartztoc .toc-row.label-visible .toc-link:hover{color:var(--rust);opacity:1}
-.quartztoc .toc-link:focus-visible{outline:1.5px solid var(--ochre);outline-offset:2px}
+.quartztoc .toc-row.label-visible .toc-link:hover{color:var(--accent-hover);opacity:1}
+.quartztoc .toc-link:focus-visible{outline:1.5px solid var(--gold);outline-offset:2px}
 .quartztoc .toc-row.is-pending{visibility:hidden}
 @media (prefers-reduced-motion:reduce){.quartztoc .toc-link{transition:none}}
 `

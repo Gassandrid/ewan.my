@@ -52,7 +52,7 @@ export const FOLD_CSS =
 .fold-toggle>span{min-width:0}
 .fold-toggle .fold{flex:none;margin-left:.5rem;opacity:.8;transition:transform .3s ease}
 .fold-toggle:hover{color:var(--rust)}
-.fold-toggle:focus-visible{outline:1.5px solid var(--ochre);outline-offset:2px}
+.fold-toggle:focus-visible{outline:1.5px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){.fold-toggle .fold{transition:none}}
 ` +
   Object.entries(PANELS)

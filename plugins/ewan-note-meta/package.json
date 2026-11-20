@@ -1,0 +1,29 @@
+{
+  "name": "@ewan/quartz-note-meta",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  },
+  "quartz": {
+    "name": "ewan-note-meta",
+    "displayName": "Ewan Note Meta",
+    "description": "One ruled strip under the title: date, PageRank, tags and the neighbourhood, each opening a drawer.",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "category": "component",
+    "defaultOrder": 61,
+    "components": {
+      "NoteMeta": {
+        "displayName": "Note meta",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 40
+      }
+    }
+  }
+}

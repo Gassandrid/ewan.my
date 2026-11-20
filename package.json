@@ -20,6 +20,7 @@
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "plugins:install": "node ./quartz/bootstrap-cli.mjs plugin install",
     "build": "node ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "dev": "QUARTZ_SKIP_PLUGINS=og-image node ./quartz/bootstrap-cli.mjs build --serve",
     "probe": "node ./quartz/cli/probe-build.mjs",
     "validate": "npm run plugins:install && npm run check && npm test && npm run build && npm run probe",
     "page:new": "node quartz/cli/new-react-page.mjs"

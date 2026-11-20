@@ -21,4 +21,4 @@ Useful and common tool for [[Mechanistic Interpretability|Interpretability]] wor
 - one can also train linear probes on a layer by layer basis for activations, such that people can track *where* a network constructs specific concepts
 - very important for self supervised approaches in tasks like that of ImageNet, where self supervised models dont learn to classify the images of the dataset through their labels, only building a good representation of the features of an image that make them identifiable. Linear probes reveal that these SSL models can distinguish the images to their labels with distinct clusters and thresholds.
 
-[![Pasted image 20261013165055.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ab56b013460d40d969152340b8df2c0c8e5f0679b0c447e54cac1d9456ea6faf/Pasted%20image%2020261013165055.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ab56b013460d40d969152340b8df2c0c8e5f0679b0c447e54cac1d9456ea6faf/Pasted%20image%2020261013165055.png)
+[![Pasted image 20261013165055.png](../../Attachments/Pasted%20image%2020261013165055.png)](../../Attachments/Pasted%20image%2020261013165055.png)

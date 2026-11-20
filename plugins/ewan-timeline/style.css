@@ -47,7 +47,7 @@
   cursor: grabbing;
 }
 .note-timeline:has(.nt-scroll:focus-visible) {
-  box-shadow: 0 1px 0 var(--ochre);
+  box-shadow: 0 1px 0 var(--gold);
 }
 
 .nt-track {
@@ -88,7 +88,7 @@
   background: var(--rust);
 }
 .nt-d.on > .nt-t {
-  background: var(--ochre);
+  background: var(--gold);
 }
 .note-timeline[data-touch] .nt-d[data-a] {
   scroll-snap-align: center;
@@ -113,7 +113,7 @@
   bottom: var(--nt-labels);
   left: var(--nt-pad);
   width: 4px;
-  background: color-mix(in srgb, var(--ochre) 28%, transparent);
+  background: color-mix(in srgb, var(--gold) 28%, transparent);
   transform: translateX(calc(var(--c, 0) * var(--nt-pitch) + 1px));
   transition:
     transform 90ms cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -135,7 +135,7 @@
   bottom: var(--nt-labels);
   left: calc(50% - 2px);
   width: 4px;
-  background: color-mix(in srgb, var(--ochre) 28%, transparent);
+  background: color-mix(in srgb, var(--gold) 28%, transparent);
   opacity: 0;
   transition: opacity 120ms;
   pointer-events: none;
@@ -283,7 +283,7 @@
   color: var(--rust);
 }
 .nt-toggle:focus-visible {
-  outline: 1px solid var(--ochre);
+  outline: 1px solid var(--gold);
   outline-offset: 2px;
 }
 

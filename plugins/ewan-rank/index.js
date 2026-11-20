@@ -20,7 +20,7 @@ const CSS = `
 .rank-page .rk-hit{fill:transparent}
 .rank-page .rk-bin{fill:var(--muted);opacity:.34;transition:opacity .12s}
 .rank-page .rk-group:hover .rk-bin{opacity:.7}
-.rank-page .rk-bin.on,.rank-page .rk-group:hover .rk-bin.on{fill:var(--ochre);opacity:1}
+.rank-page .rk-bin.on,.rank-page .rk-group:hover .rk-bin.on{fill:var(--gold);opacity:1}
 .rank-page .rk-axis,.rank-page .rk-tickmark{stroke:var(--dark);stroke-width:1;shape-rendering:crispEdges}
 .rank-page .rk-tick{font:10.5px var(--mono);fill:var(--muted)}
 .rank-page .rk-mean{stroke:var(--rust);stroke-width:1;stroke-dasharray:2 3;shape-rendering:crispEdges}
@@ -32,10 +32,10 @@ const CSS = `
 .rank-page .rk-controls input[type=search]::placeholder{font-style:italic;color:var(--muted);opacity:1}
 .rank-page .rk-controls select{appearance:none;-webkit-appearance:none;padding-right:16px;cursor:pointer;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='5 8 14 8' fill='none' stroke='%23888' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 2px center}
 .rank-page .rk-controls select option{background:var(--light);color:var(--dark)}
-.rank-page .rk-controls input[type=search]:focus,.rank-page .rk-controls select:focus-visible{border-bottom-color:var(--ochre)}
+.rank-page .rk-controls input[type=search]:focus,.rank-page .rk-controls select:focus-visible{border-bottom-color:var(--gold)}
 .rank-page .rk-controls label{display:inline-flex;gap:.45rem;align-items:center;cursor:pointer}
-.rank-page .rk-controls input[type=checkbox]{accent-color:var(--ochre);margin:0;cursor:pointer}
-.rank-page .rk-controls input[type=range]{accent-color:var(--ochre);width:6.5rem;margin:0;cursor:pointer}
+.rank-page .rk-controls input[type=checkbox]{accent-color:var(--gold);margin:0;cursor:pointer}
+.rank-page .rk-controls input[type=range]{accent-color:var(--gold);width:6.5rem;margin:0;cursor:pointer}
 .rank-page .rk-controls output{font:12px var(--mono);letter-spacing:0;color:var(--dark);min-width:2.4em}
 .rank-page .rk-shown{margin-left:auto;font:12px var(--mono);letter-spacing:0;white-space:nowrap}
 .rank-page table{width:100%;border-collapse:collapse;margin:0}
@@ -44,7 +44,7 @@ const CSS = `
 .rank-page thead th[data-sort]{cursor:pointer}
 .rank-page thead th[data-sort]:hover{color:var(--rust)}
 .rank-page thead th.on{color:var(--dark)}
-.rank-page thead th.on::after{content:"\\25BE";display:inline-block;width:.8em;margin-right:-.8em;text-align:right;font-size:10px;color:var(--ochre)}
+.rank-page thead th.on::after{content:"\\25BE";display:inline-block;width:.8em;margin-right:-.8em;text-align:right;font-size:10px;color:var(--gold)}
 .rank-page thead th.on[data-dir="1"]::after{content:"\\25B4"}
 .rank-page td{padding:.3rem .5rem;border-bottom:1px solid var(--hair);text-align:right;font-variant-numeric:tabular-nums;vertical-align:baseline;white-space:nowrap}
 .rank-page td:nth-child(2){text-align:left;white-space:normal;font:15.5px/1.3 var(--fell)}
@@ -52,7 +52,7 @@ const CSS = `
 .rank-page td.num.faint{color:var(--muted);opacity:.55}
 .rank-page td:first-child{color:var(--muted)}
 .rank-page td small{color:var(--muted);font:10.5px var(--mono);margin-left:.45rem;white-space:nowrap}
-.rank-page tbody tr:hover td{background:color-mix(in srgb,var(--ochre) 7%,transparent)}
+.rank-page tbody tr:hover td{background:color-mix(in srgb,var(--gold) 7%,transparent)}
 .rank-page tbody a.internal{background:none!important;padding:0;color:var(--dark);font-weight:400}
 .rank-page tbody a.internal:hover{color:var(--rust)}
 .rank-page tr[hidden]{display:none}

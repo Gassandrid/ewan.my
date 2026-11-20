@@ -16,7 +16,7 @@ const CSS = `
 .neighbourhood .nb-via a{color:var(--muted)}
 .neighbourhood div+div{margin-top:1rem}
 .neighbourhood .nb-sim{margin-left:auto}
-.neighbourhood .nb-bar{margin-left:auto;flex:none;height:3px;background:var(--ochre);opacity:.6}
+.neighbourhood .nb-bar{margin-left:auto;flex:none;height:3px;background:var(--gold);opacity:.6}
 @media (max-width:800px){.neighbourhood{padding-left:.75rem;padding-right:.75rem}}
 `
 

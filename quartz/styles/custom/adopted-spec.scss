@@ -43,7 +43,7 @@
   color: var(--dark) !important;
 }
 .breadcrumb-container .breadcrumb-element a:hover {
-  color: var(--rust) !important;
+  color: var(--accent-hover) !important;
 }
 .sticky-header-bar {
   border-bottom-color: var(--dark) !important;
@@ -86,8 +86,8 @@
   content: none !important;
 }
 .page-header .tags > li > a.internal.tag-link:hover {
-  color: var(--rust) !important;
-  border-bottom-color: var(--rust);
+  color: var(--accent-hover) !important;
+  border-bottom-color: var(--accent-hover);
 }
 
 /* Body type: headings step by size and italic, no bold. */
@@ -225,6 +225,29 @@ article hr::after,
   background: var(--light) !important;
 }
 
+/* Links: role-coloured text over a faint underline that turns gold on hover.
+   No chips: the paper stays square and ruled. */
+article a:is(.internal, .external):not(.tag-link):not([role="anchor"]):not(:has(> img)) {
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 32%, transparent);
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+article
+  a:is(.internal, .external):not(.tag-link):not([role="anchor"]):not(:has(> img)):is(
+    :hover,
+    :focus-visible
+  ) {
+  text-decoration-color: var(--gold);
+}
+
 /* Inline citations: author–year set like a reference, not a link chip. */
 article cite a[data-bib] {
   font-style: normal !important;
@@ -301,7 +324,7 @@ article section.bibliography .bib-back {
   background: none !important;
 }
 article section.bibliography li:target {
-  background: color-mix(in srgb, var(--ochre) 10%, transparent);
+  background: color-mix(in srgb, var(--gold) 10%, transparent);
 }
 
 /* Sidebar headings share the index heading: small caps over a rule. */
@@ -343,11 +366,11 @@ article section.bibliography li:target {
 .sidebar.right .explorer-content li > a.active {
   font-style: italic !important;
   color: var(--dark) !important;
-  box-shadow: inset 2px 0 var(--ochre);
+  box-shadow: inset 2px 0 var(--gold);
 }
 .sidebar.right .explorer-content li > a:hover,
 .sidebar.right .folder-container .folder-title:hover {
-  color: var(--rust) !important;
+  color: var(--accent-hover) !important;
 }
 .sidebar.right .explorer-content ul.content {
   border-left-color: var(--hair) !important;
@@ -377,7 +400,7 @@ article section.bibliography li:target {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 1.5px solid var(--ochre) !important;
+  outline: 1.5px solid var(--gold) !important;
   outline-offset: 2px;
 }
 @media (prefers-reduced-motion: reduce) {

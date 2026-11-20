@@ -808,5 +808,34 @@ figure.tikz {
   }
 }
 
+// One measure: the reading column keeps a single width from tablet up and only
+// narrows on phones. On desktop the sidebars give way first (down to 240px).
+:root {
+  --measure: 720px;
+}
+
+// (min-width: 1201px): at exactly 1200px the tablet grid also matches.
+@media (min-width: 1201px) {
+  .page {
+    max-width: none;
+  }
+
+  .page > #quartz-body {
+    grid-template-columns: minmax(0, 320px) var(--measure) minmax(0, 320px);
+    justify-content: center;
+  }
+}
+
+@media ($tablet) {
+  .page > #quartz-body .center,
+  .page > #quartz-body footer {
+    width: 100%;
+    max-width: var(--measure);
+    min-width: 0;
+    margin-inline: auto;
+  }
+}
+
 // Last, so the adopted spec wins over the rules above.
 @include meta.load-css("./custom/adopted-spec.scss");
+@include meta.load-css("./custom/palette-roles.scss");

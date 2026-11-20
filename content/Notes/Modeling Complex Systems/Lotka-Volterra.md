@@ -1,8 +1,9 @@
 ---
 title: Lotka-Volterra
 tags:
-  - modeling-complex-systems
-  - dynamics
+  - cs/complex-systems
+  - math/dynamical-systems
+  - research/notebook
 marimo-version: 0.24.2
 header: |-
   # Source: https://colab.research.google.com/drive/1dyaxotNxBD92xTXGXNRzkomIrWNf-ch-?usp=sharing

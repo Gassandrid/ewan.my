@@ -76,6 +76,26 @@ test("components render", () => {
   assert.equal((body.match(/data-i=/g) ?? []).length, 6)
 })
 
+test("note meta strip renders date, rank, tags and neighbourhood cells", async () => {
+  const { NoteMeta } = await import("./ewan-note-meta/components.js")
+  const files = chain()
+  const created = new Date("2026-10-13T00:00:00Z")
+  files[0].dates = { created, modified: new Date("2026-11-18T00:00:00Z") }
+  const fileData = {
+    ...files[0],
+    text: "one two three",
+    frontmatter: { title: "A", tags: ["x/y"] },
+  }
+  const html = render(NoteMeta()({ fileData, allFiles: files }))
+  assert.match(html, /class="note-meta"/)
+  assert.match(html, /13 Oct 2026/)
+  assert.match(html, /Revised/)
+  assert.match(html, /PageRank \d+\w\w of 6/)
+  assert.match(html, /href="\.\/tags\/x\/y"/)
+  assert.match(html, /Nearby/)
+  assert.equal(render(NoteMeta()({ fileData: { slug: "f" }, allFiles: [] })), "")
+})
+
 test("similar notes skip links, copies and the note itself", async () => {
   const { similarNotes } = await import("./ewan-rank/similar.js")
   const files = chain().map((f) => ({ ...f, relativePath: `${f.slug}.md` }))
