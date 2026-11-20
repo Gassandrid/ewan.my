@@ -1,7 +1,12 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 import vm from "node:vm"
-import { Graph, manageGraphRendering, patchGraphPerformance } from "./ewan-graph/components.js"
+import {
+  Graph,
+  manageGraphRendering,
+  patchGraphColors,
+  patchGraphPerformance,
+} from "./ewan-graph/components.js"
 
 test("graph renders on activity, pauses when hidden, and disposes pending work", () => {
   const frames = new Map()
@@ -127,4 +132,10 @@ test("graph lifecycle patch accepts the installed upstream runtime and rejects d
   assert.match(runtime, /pixi\.js@8\/dist\/pixi\.min\.js/)
   assert.doesNotThrow(() => new Function(runtime))
   assert.throws(() => patchGraphPerformance("changed upstream"), /runtime changed/)
+})
+
+test("graph colours are rasterised to rgba so color-mix() tokens reach Pixi", () => {
+  const runtime = Graph({}).afterDOMLoaded.at(-1)
+  assert.match(runtime, /getImageData\(0,0,1,1\)/)
+  assert.throws(() => patchGraphColors("changed upstream"), /runtime changed/)
 })

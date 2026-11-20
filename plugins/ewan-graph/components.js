@@ -25,6 +25,20 @@ export function patchGraphRuntime(script) {
   throw new Error("Quartz graph runtime changed; update the .base compatibility patch")
 }
 
+// The upstream graph resolves theme colours through getComputedStyle, which
+// returns `color(srgb ...)` for color-mix() tokens; Pixi cannot parse that.
+// Rasterise the resolved colour to one pixel so Pixi always gets rgba().
+const GRAPH_COLOR_RESOLVE = "var g=getComputedStyle(A).color;return A.remove(),g||w}"
+const GRAPH_COLOR_RGBA =
+  'var g=getComputedStyle(A).color;if(A.remove(),!g)return w;try{var Cc=document.createElement("canvas");Cc.width=Cc.height=1;var Cx=Cc.getContext("2d");Cx.fillStyle=g;Cx.fillRect(0,0,1,1);var Cp=Cx.getImageData(0,0,1,1).data;return"rgba("+Cp[0]+","+Cp[1]+","+Cp[2]+","+Cp[3]/255+")"}catch{return w}}'
+
+export function patchGraphColors(script) {
+  if (!script.includes(GRAPH_COLOR_RESOLVE)) {
+    throw new Error("Quartz graph runtime changed; update the colour resolution patch")
+  }
+  return script.replace(GRAPH_COLOR_RESOLVE, GRAPH_COLOR_RGBA)
+}
+
 // The upstream graph has two independent continuous render loops. D3 already
 // emits ticks while its layout moves, so draw on those ticks and user input.
 // Keep this helper inside the browser bundle, independent of build-time imports.
@@ -159,7 +173,9 @@ export function foldableGraph(vnode, title = "Neighbourhood") {
 
 export function Graph(options) {
   const Upstream = QuartzGraph(options)
-  const runtime = patchGraphPerformance(patchGraphRuntime(Upstream.afterDOMLoaded))
+  const runtime = patchGraphColors(
+    patchGraphPerformance(patchGraphRuntime(Upstream.afterDOMLoaded)),
+  )
   function Component(props) {
     return foldableGraph(Upstream(props))
   }
