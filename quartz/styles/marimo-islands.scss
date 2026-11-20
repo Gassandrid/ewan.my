@@ -166,7 +166,7 @@
   }
 
   &[data-marimo-state="slow"] .marimo-loading {
-    border-color: color-mix(in srgb, var(--gold) 48%, var(--lightgray));
+    border-color: color-mix(in srgb, var(--ochre) 48%, var(--lightgray));
     color: var(--darkgray);
   }
 
@@ -397,7 +397,7 @@
 
   // The reading margin lights a source's citations while it is hovered.
   cite.is-lit a[data-bib] {
-    background: color-mix(in srgb, var(--gold) 18%, transparent) !important;
+    background: color-mix(in srgb, var(--ochre) 18%, transparent) !important;
   }
 }
 

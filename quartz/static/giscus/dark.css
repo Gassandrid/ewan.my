@@ -1,40 +1,40 @@
-/* ewan-theme:tokens:start */
-/* Generated from ewan-theme/theme.json by scripts/sync-desktop.py; do not edit tokens. */
+/* veldink:tokens:start */
+/* Generated from veldink/theme.json by scripts/sync-desktop.py; do not edit tokens. */
 main {
-  --ewan-light: #25262A;
-  --ewan-lightgray: #353436;
-  --ewan-gray: #8E8983;
-  --ewan-darkgray: #D4CEC7;
-  --ewan-dark: #EBE7E1;
-  --ewan-secondary: #C59B8D;
-  --ewan-tertiary: #A89A8D;
-  --ewan-rust: #DB8E88;
-  --ewan-clay: #DEAEA0;
-  --ewan-ochre: #E0BC7E;
-  --ewan-sage: #AEBD9F;
-  --ewan-pine: #8DAEB3;
-  --ewan-slate: #9BB0BD;
-  --ewan-mauve: #C9B1B9;
-  --ewan-veld: #ADB98F;
-  --ewan-gold: #D8AE5A;
-  --ewan-light-rgb: 37, 38, 42;
-  --ewan-lightgray-rgb: 53, 52, 54;
-  --ewan-gray-rgb: 142, 137, 131;
-  --ewan-darkgray-rgb: 212, 206, 199;
-  --ewan-dark-rgb: 235, 231, 225;
-  --ewan-secondary-rgb: 197, 155, 141;
-  --ewan-tertiary-rgb: 168, 154, 141;
-  --ewan-rust-rgb: 219, 142, 136;
-  --ewan-clay-rgb: 222, 174, 160;
-  --ewan-ochre-rgb: 224, 188, 126;
-  --ewan-sage-rgb: 174, 189, 159;
-  --ewan-pine-rgb: 141, 174, 179;
-  --ewan-slate-rgb: 155, 176, 189;
-  --ewan-mauve-rgb: 201, 177, 185;
-  --ewan-veld-rgb: 173, 185, 143;
-  --ewan-gold-rgb: 216, 174, 90;
+  --veldink-light: #25262A;
+  --veldink-lightgray: #353436;
+  --veldink-gray: #8E8983;
+  --veldink-darkgray: #D4CEC7;
+  --veldink-dark: #EBE7E1;
+  --veldink-rust: #E29D91;
+  --veldink-clay: #D2A786;
+  --veldink-ochre: #E3B56D;
+  --veldink-veld: #A9B891;
+  --veldink-pine: #95BAB7;
+  --veldink-slate: #9DB5C8;
+  --veldink-mauve: #C3A8B8;
+  --veldink-gold: #E3B56D;
+  --veldink-sage: #A9B891;
+  --veldink-secondary: #A9B891;
+  --veldink-tertiary: #8E8983;
+  --veldink-light-rgb: 37, 38, 42;
+  --veldink-lightgray-rgb: 53, 52, 54;
+  --veldink-gray-rgb: 142, 137, 131;
+  --veldink-darkgray-rgb: 212, 206, 199;
+  --veldink-dark-rgb: 235, 231, 225;
+  --veldink-rust-rgb: 226, 157, 145;
+  --veldink-clay-rgb: 210, 167, 134;
+  --veldink-ochre-rgb: 227, 181, 109;
+  --veldink-veld-rgb: 169, 184, 145;
+  --veldink-pine-rgb: 149, 186, 183;
+  --veldink-slate-rgb: 157, 181, 200;
+  --veldink-mauve-rgb: 195, 168, 184;
+  --veldink-gold-rgb: 227, 181, 109;
+  --veldink-sage-rgb: 169, 184, 145;
+  --veldink-secondary-rgb: 169, 184, 145;
+  --veldink-tertiary-rgb: 142, 137, 131;
 }
-/* ewan-theme:tokens:end */
+/* veldink:tokens:end */
 /*! MIT License
  * Copyright (c) 2018 GitHub Inc.
  * https://github.com/primer/primitives/blob/main/LICENSE
@@ -43,86 +43,86 @@ main {
  */
 
 main {
-  --color-prettylights-syntax-comment: var(--ewan-tertiary);
-  --color-prettylights-syntax-constant: var(--ewan-pine);
-  --color-prettylights-syntax-entity: var(--ewan-mauve);
-  --color-prettylights-syntax-storage-modifier-import: var(--ewan-darkgray);
-  --color-prettylights-syntax-entity-tag: var(--ewan-sage);
-  --color-prettylights-syntax-keyword: var(--ewan-rust);
-  --color-prettylights-syntax-string: var(--ewan-ochre);
-  --color-prettylights-syntax-variable: var(--ewan-clay);
-  --color-prettylights-syntax-brackethighlighter-unmatched: var(--ewan-rust);
-  --color-prettylights-syntax-invalid-illegal-text: var(--ewan-dark);
+  --color-prettylights-syntax-comment: var(--veldink-tertiary);
+  --color-prettylights-syntax-constant: var(--veldink-pine);
+  --color-prettylights-syntax-entity: var(--veldink-mauve);
+  --color-prettylights-syntax-storage-modifier-import: var(--veldink-darkgray);
+  --color-prettylights-syntax-entity-tag: var(--veldink-sage);
+  --color-prettylights-syntax-keyword: var(--veldink-rust);
+  --color-prettylights-syntax-string: var(--veldink-ochre);
+  --color-prettylights-syntax-variable: var(--veldink-clay);
+  --color-prettylights-syntax-brackethighlighter-unmatched: var(--veldink-rust);
+  --color-prettylights-syntax-invalid-illegal-text: var(--veldink-dark);
   --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
-  --color-prettylights-syntax-carriage-return-text: var(--ewan-dark);
-  --color-prettylights-syntax-carriage-return-bg: var(--ewan-rust);
-  --color-prettylights-syntax-string-regexp: var(--ewan-sage);
-  --color-prettylights-syntax-markup-list: var(--ewan-ochre);
-  --color-prettylights-syntax-markup-heading: var(--ewan-slate);
-  --color-prettylights-syntax-markup-italic: var(--ewan-darkgray);
-  --color-prettylights-syntax-markup-bold: var(--ewan-darkgray);
-  --color-prettylights-syntax-markup-deleted-text: var(--ewan-rust);
+  --color-prettylights-syntax-carriage-return-text: var(--veldink-dark);
+  --color-prettylights-syntax-carriage-return-bg: var(--veldink-rust);
+  --color-prettylights-syntax-string-regexp: var(--veldink-sage);
+  --color-prettylights-syntax-markup-list: var(--veldink-ochre);
+  --color-prettylights-syntax-markup-heading: var(--veldink-slate);
+  --color-prettylights-syntax-markup-italic: var(--veldink-darkgray);
+  --color-prettylights-syntax-markup-bold: var(--veldink-darkgray);
+  --color-prettylights-syntax-markup-deleted-text: var(--veldink-rust);
   --color-prettylights-syntax-markup-deleted-bg: #67060c;
-  --color-prettylights-syntax-markup-inserted-text: var(--ewan-sage);
+  --color-prettylights-syntax-markup-inserted-text: var(--veldink-sage);
   --color-prettylights-syntax-markup-inserted-bg: #033a16;
-  --color-prettylights-syntax-markup-changed-text: var(--ewan-ochre);
+  --color-prettylights-syntax-markup-changed-text: var(--veldink-ochre);
   --color-prettylights-syntax-markup-changed-bg: #5a1e02;
-  --color-prettylights-syntax-markup-ignored-text: var(--ewan-darkgray);
-  --color-prettylights-syntax-markup-ignored-bg: var(--ewan-pine);
-  --color-prettylights-syntax-meta-diff-range: var(--ewan-mauve);
-  --color-prettylights-syntax-brackethighlighter-angle: var(--ewan-gray);
-  --color-prettylights-syntax-sublimelinter-gutter-mark: var(--ewan-gray);
-  --color-prettylights-syntax-constant-other-reference-link: var(--ewan-slate);
-  --color-btn-text: var(--ewan-darkgray); /* --darkgray */
-  --color-btn-bg: var(--ewan-light); /* --light */
-  --color-btn-border: rgba(var(--ewan-dark-rgb), 0.1); /* --dark */
+  --color-prettylights-syntax-markup-ignored-text: var(--veldink-darkgray);
+  --color-prettylights-syntax-markup-ignored-bg: var(--veldink-pine);
+  --color-prettylights-syntax-meta-diff-range: var(--veldink-mauve);
+  --color-prettylights-syntax-brackethighlighter-angle: var(--veldink-gray);
+  --color-prettylights-syntax-sublimelinter-gutter-mark: var(--veldink-gray);
+  --color-prettylights-syntax-constant-other-reference-link: var(--veldink-slate);
+  --color-btn-text: var(--veldink-darkgray); /* --darkgray */
+  --color-btn-bg: var(--veldink-light); /* --light */
+  --color-btn-border: rgba(var(--veldink-dark-rgb), 0.1); /* --dark */
   --color-btn-shadow: 0 0 transparent;
   --color-btn-inset-shadow: 0 0 transparent;
-  --color-btn-hover-bg: var(--ewan-lightgray);
-  --color-btn-hover-border: var(--ewan-gray);
-  --color-btn-active-bg: var(--ewan-lightgray);
-  --color-btn-active-border: var(--ewan-gray);
-  --color-btn-selected-bg: var(--ewan-lightgray);
-  --color-btn-primary-text: var(--ewan-light);
-  --color-btn-primary-bg: var(--ewan-tertiary); /* --tertiary */
-  --color-btn-primary-border: rgba(var(--ewan-dark-rgb), 0.1); /* --dark */
+  --color-btn-hover-bg: var(--veldink-lightgray);
+  --color-btn-hover-border: var(--veldink-gray);
+  --color-btn-active-bg: var(--veldink-lightgray);
+  --color-btn-active-border: var(--veldink-gray);
+  --color-btn-selected-bg: var(--veldink-lightgray);
+  --color-btn-primary-text: var(--veldink-light);
+  --color-btn-primary-bg: var(--veldink-tertiary); /* --tertiary */
+  --color-btn-primary-border: rgba(var(--veldink-dark-rgb), 0.1); /* --dark */
   --color-btn-primary-shadow: 0 0 transparent;
   --color-btn-primary-inset-shadow: 0 0 transparent;
-  --color-btn-primary-hover-bg: var(--ewan-secondary); /* --secondary */
-  --color-btn-primary-hover-border: rgba(var(--ewan-dark-rgb), 0.1); /* --dark */
-  --color-btn-primary-selected-bg: var(--ewan-secondary); /* --secondary */
+  --color-btn-primary-hover-bg: var(--veldink-secondary); /* --secondary */
+  --color-btn-primary-hover-border: rgba(var(--veldink-dark-rgb), 0.1); /* --dark */
+  --color-btn-primary-selected-bg: var(--veldink-secondary); /* --secondary */
   --color-btn-primary-selected-shadow: 0 0 transparent;
-  --color-btn-primary-disabled-text: rgba(var(--ewan-darkgray-rgb), 0.5);
-  --color-btn-primary-disabled-bg: rgba(var(--ewan-tertiary-rgb), 0.6);
-  --color-btn-primary-disabled-border: rgba(var(--ewan-dark-rgb), 0.1);
-  --color-action-list-item-default-hover-bg: rgba(var(--ewan-secondary-rgb), 0.12);
-  --color-segmented-control-bg: rgba(var(--ewan-gray-rgb), 0.1);
-  --color-segmented-control-button-bg: var(--ewan-light);
-  --color-segmented-control-button-selected-border: var(--ewan-gray);
-  --color-fg-default: var(--ewan-dark); /* --dark */
-  --color-fg-muted: var(--ewan-darkgray); /* --darkgray */
-  --color-fg-subtle: var(--ewan-gray); /* --gray */
-  --color-canvas-default: var(--ewan-light); /* --light */
-  --color-canvas-overlay: var(--ewan-lightgray); /* --lightgray */
-  --color-canvas-inset: var(--ewan-light);
-  --color-canvas-subtle: var(--ewan-lightgray);
-  --color-border-default: var(--ewan-lightgray);
-  --color-border-muted: var(--ewan-lightgray);
-  --color-neutral-muted: rgba(var(--ewan-gray-rgb), 0.4);
-  --color-accent-fg: var(--ewan-slate); /* --slate */
-  --color-accent-emphasis: var(--ewan-pine); /* --pine */
-  --color-accent-muted: rgba(var(--ewan-slate-rgb), 0.4);
-  --color-accent-subtle: rgba(var(--ewan-slate-rgb), 0.1);
-  --color-success-fg: var(--ewan-sage); /* --sage */
-  --color-attention-fg: var(--ewan-ochre); /* --ochre */
-  --color-attention-muted: rgba(var(--ewan-ochre-rgb), 0.4);
-  --color-attention-subtle: rgba(var(--ewan-ochre-rgb), 0.15);
-  --color-danger-fg: var(--ewan-rust); /* --rust */
-  --color-danger-muted: rgba(var(--ewan-rust-rgb), 0.4);
-  --color-danger-subtle: rgba(var(--ewan-rust-rgb), 0.1);
+  --color-btn-primary-disabled-text: rgba(var(--veldink-darkgray-rgb), 0.5);
+  --color-btn-primary-disabled-bg: rgba(var(--veldink-tertiary-rgb), 0.6);
+  --color-btn-primary-disabled-border: rgba(var(--veldink-dark-rgb), 0.1);
+  --color-action-list-item-default-hover-bg: rgba(var(--veldink-secondary-rgb), 0.12);
+  --color-segmented-control-bg: rgba(var(--veldink-gray-rgb), 0.1);
+  --color-segmented-control-button-bg: var(--veldink-light);
+  --color-segmented-control-button-selected-border: var(--veldink-gray);
+  --color-fg-default: var(--veldink-dark); /* --dark */
+  --color-fg-muted: var(--veldink-darkgray); /* --darkgray */
+  --color-fg-subtle: var(--veldink-gray); /* --gray */
+  --color-canvas-default: var(--veldink-light); /* --light */
+  --color-canvas-overlay: var(--veldink-lightgray); /* --lightgray */
+  --color-canvas-inset: var(--veldink-light);
+  --color-canvas-subtle: var(--veldink-lightgray);
+  --color-border-default: var(--veldink-lightgray);
+  --color-border-muted: var(--veldink-lightgray);
+  --color-neutral-muted: rgba(var(--veldink-gray-rgb), 0.4);
+  --color-accent-fg: var(--veldink-slate); /* --slate */
+  --color-accent-emphasis: var(--veldink-pine); /* --pine */
+  --color-accent-muted: rgba(var(--veldink-slate-rgb), 0.4);
+  --color-accent-subtle: rgba(var(--veldink-slate-rgb), 0.1);
+  --color-success-fg: var(--veldink-sage); /* --sage */
+  --color-attention-fg: var(--veldink-ochre); /* --ochre */
+  --color-attention-muted: rgba(var(--veldink-ochre-rgb), 0.4);
+  --color-attention-subtle: rgba(var(--veldink-ochre-rgb), 0.15);
+  --color-danger-fg: var(--veldink-rust); /* --rust */
+  --color-danger-muted: rgba(var(--veldink-rust-rgb), 0.4);
+  --color-danger-subtle: rgba(var(--veldink-rust-rgb), 0.1);
   --color-primer-shadow-inset: 0 0 transparent;
-  --color-scale-gray-7: var(--ewan-lightgray);
-  --color-scale-blue-8: var(--ewan-pine);
+  --color-scale-gray-7: var(--veldink-lightgray);
+  --color-scale-blue-8: var(--veldink-pine);
 
   /*! Extensions from @primer/css/alerts/flash.scss */
   --color-social-reaction-bg-hover: var(--color-scale-gray-7);

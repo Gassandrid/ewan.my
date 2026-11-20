@@ -581,7 +581,7 @@ footer {
 
   // Quartz v5 no longer emits v4's data-tag-index attribute. Cycle by list
   // position so both page-header and page-list tags retain the old palette.
-  $tag-colors: rust, clay, ochre, sage, pine, slate, mauve;
+  $tag-colors: rust, clay, ochre, veld, pine, slate, mauve;
   @for $i from 1 through list.length($tag-colors) {
     $color: list.nth($tag-colors, $i);
 
