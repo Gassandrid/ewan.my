@@ -20,4 +20,4 @@ $$
 Cosine \ Similarity = \frac{\mathbf{I}\cdot \mathbf{T}}{||\mathbf{I}||_{2}||\mathbf{T}||_{2}}
 $$
 
-[![SimCosine.png](../../Attachments/SimCosine.png)](../../Attachments/SimCosine.png)
+[![SimCosine.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5872bcb49014ce092a3c3a9a5f019d7bc53991fc50cca1114b5d5947582b0a9e/SimCosine.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5872bcb49014ce092a3c3a9a5f019d7bc53991fc50cca1114b5d5947582b0a9e/SimCosine.png)

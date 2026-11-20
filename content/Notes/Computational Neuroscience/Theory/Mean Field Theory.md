@@ -4,7 +4,7 @@ updated: 2026-03-13T15:19:24-07:00
 tags:
   - comp-neuro/theory
   - physics
-  - math/chaos/dynamics
+  - math/dynamical-systems
 aliases:
   - MFT
 class:
@@ -27,7 +27,7 @@ Mean field theory allows us to bring down the $\sum J_{ij}G(x_{j})$ term into a 
 
 We dont track exactly which neuron pushes which, and instead assume that each neuron $i$ feels a collective average field influence from the rest of the population.
 
-If global population firing rate is $\mathcal{V}(t)$, then input current to neuron $i$ becomes a [[Gaussian Distribution|Gaussian]] [[CH2 - Random Variables|random variable]] thanks to [[Central Limit Theorem]]. $\mu$ as proportional to network activity, and $\sigma^2$ as proportial to network fluctuations/noise.
+If global population firing rate is $\mathcal{V}(t)$, then input current to neuron $i$ becomes a [[Gaussian Distribution|Gaussian]] [[Random Variables|random variable]] thanks to [[Central Limit Theorem]]. $\mu$ as proportional to network activity, and $\sigma^2$ as proportial to network fluctuations/noise.
 
 $$
 \tau \frac{dV}{dt} = -V + \mu(V,t) + \sigma(V,t) \xi(t)

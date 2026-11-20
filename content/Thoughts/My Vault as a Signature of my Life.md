@@ -3,7 +3,7 @@ title: My Vault as a Signature of my Life
 date: 2025-02-07
 updated: 2025-02-09
 tags:
-  - seed
+  - research
 ---
 It's quite obvious that I write in this vault all the time. In the last few months, especially this year, I have really committed to writing a lot for the sake of myself, and I love it.
 

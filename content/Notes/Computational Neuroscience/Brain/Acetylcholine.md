@@ -3,7 +3,7 @@ class:
   - neurotransmitter
   - note
 tags:
-  - comp-neuro/brain/neurotransmitter
+  - neuro/molecular
   - pharmacology/neuro
 source:
 related:

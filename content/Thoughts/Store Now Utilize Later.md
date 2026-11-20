@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - journal/workflow
-  - cs/homelab/data
+  - projects/homelab/data
 source:
 related:
 author:

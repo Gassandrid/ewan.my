@@ -33,8 +33,8 @@ processes:
   - "[[receptor resensitization]]"
   - "[[E/I balance]]"
 tags:
-  - transhumanism/nootropic
-  - health/substance
+  - pharmacology/nootropic
+  - transhumanism
   - pharmacology/neuro
 date: 2026-02-22
 updated: 2026-10-12T21:10:32-04:00

@@ -2,7 +2,6 @@
 date: 2024-10-14
 updated: 2025-09-12
 tags:
-  - junk
   - math/calculus
   - university
 ---

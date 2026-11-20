@@ -14,8 +14,8 @@ reminders:
     offset: -PT15M
 class: task
 tags:
-  - "#university"
-  - "#math/chaos"
+  - university
+  - math/dynamical-systems/chaos
 location:
   - Lafayette L107
 semester: Spring 2026

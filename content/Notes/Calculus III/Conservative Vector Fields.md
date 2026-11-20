@@ -43,7 +43,7 @@ $$
 > $$
 >
 > > [!Note] Sketch
-> > [![Screenshot 2024-11-21 at 12.20.00 PM.png](../../Attachments/Screenshot%202024-11-21%20at%2012.20.00%20PM.png)](../../Attachments/Screenshot%202024-11-21%20at%2012.20.00%20PM.png)
+> > [![Screenshot 2024-11-21 at 12.20.00 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/46583a15dd840c4050d29f50288d9333eeb5b777ff5c547d5f56aff9b6330798/Screenshot%202024-11-21%20at%2012.20.00%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/46583a15dd840c4050d29f50288d9333eeb5b777ff5c547d5f56aff9b6330798/Screenshot%202024-11-21%20at%2012.20.00%20PM.png)
 >
 > 2. Compare with the Fundamental Theorem of Calculus:
 >

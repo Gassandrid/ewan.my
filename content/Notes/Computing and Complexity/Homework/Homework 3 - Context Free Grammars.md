@@ -74,7 +74,7 @@ as required $\square$
 
 ## Problem 02
 
-> Produce a context-free grammar which generates the _complement_ of the language $L = \{ a^{n}b^{n} \mid n \geq 0 \}$
+> Produce a [[Context Free Grammars and Languages|context-free grammar]] which generates the _complement_ of the language $L = \{ a^{n}b^{n} \mid n \geq 0 \}$
 >
 > Hint: First write out $\bar{L}$(the complement of $L$) in set builder notation. You'll find it naturally decomposes into the union of two languages.
 
@@ -279,7 +279,7 @@ as required $\square$
 > 
 > Hint: Sipser gives an example in the textbook (2.18) which recognizes all _even-length_ palindromes. You need only modify this machine so that it accepts odd- or even-length palindromes. A fully-labeled state diagram is all you need.
 
-[![Screenshot 2025-03-18 at 11.43.00 PM.png](../../../Attachments/Screenshot%202025-03-18%20at%2011.43.00%20PM.png)](../../../Attachments/Screenshot%202025-03-18%20at%2011.43.00%20PM.png)
+[![Screenshot 2025-03-18 at 11.43.00 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/71f3b92123cc29861b6d09a34669c27b0c390f5a7d2c9cc0bc6c0fd108b5f3ba/Screenshot%202025-03-18%20at%2011.43.00%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/71f3b92123cc29861b6d09a34669c27b0c390f5a7d2c9cc0bc6c0fd108b5f3ba/Screenshot%202025-03-18%20at%2011.43.00%20PM.png)
 
 *I found the Sipser example(see figure 01), although I am not sure if it is the right one. Regardless, I will be using that as a starting point.*
 
@@ -303,4 +303,4 @@ This isn't a difficult construction given the sipser example, so I wont be verbo
 - q2: Pop Phase
 - qf: Accept
 
-[![problem-05-state-diagram.png](../../../Attachments/problem-05-state-diagram.png)](../../../Attachments/problem-05-state-diagram.png)
+[![problem-05-state-diagram.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6985ee312d81e9d99bb8532f19736f3f44dc45f12e4f7e14895cb20a8858a752/problem-05-state-diagram.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6985ee312d81e9d99bb8532f19736f3f44dc45f12e4f7e14895cb20a8858a752/problem-05-state-diagram.png)

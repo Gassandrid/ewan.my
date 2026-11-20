@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos/cycles
+  - math/dynamical-systems/periodic
 source:
 related:
 author:

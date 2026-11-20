@@ -23,7 +23,8 @@ time-of-day:
   - as-needed
 description:
 tags:
-  - transhumanism/nootropic
+  - pharmacology/nootropic
+  - transhumanism
   - pharmacology/neuro
 related:
   - "[[BPAP]]"

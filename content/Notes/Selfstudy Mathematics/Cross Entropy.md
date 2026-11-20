@@ -3,7 +3,6 @@ id: Cross Entropy
 aliases: []
 tags:
   - math/information/entropy
-  - math/information
 class:
   - note
 date: 2025-09-16

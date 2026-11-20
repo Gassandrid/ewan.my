@@ -4,7 +4,7 @@ date: 2025-03-25
 updated: 2026-01-12T10:53:30-05:00
 tags:
   - biology
-  - comp-neuro/brain
+  - neuro
 class: note
 ---
 Pacemaker Neurons are a type of [[Neuron]] that possess the innate ability to generate a rhythmic burst of activity. This is a crucial mechanism for several rhythmic motor activities, namely **sleep**, **arousal**, and **memory**.
@@ -13,7 +13,7 @@ They do this through a dynamic interplay of [[Ion Channels]], second messengers,
 
 Pacemaker Neurons rely on [[Hyperpolarization Activated Channels]] (HCN channels) to generate this rhytmic activity. These channels open in response to **membrane hyperpolarization**, allowing a mix of `Na+`/`K+` current to depolarize the cell, and thus contributing to the pacemaker activity.
 
-[![Pasted image 20250406084857.png](../../../Attachments/Pasted%20image%2020250406084857.png)](../../../Attachments/Pasted%20image%2020250406084857.png)
+[![Pasted image 20250406084857.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b47f38a73b28715a3dbed21e99defe12db02bad6ab1f4c56f2b844cfa9b1784d/Pasted%20image%2020250406084857.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b47f38a73b28715a3dbed21e99defe12db02bad6ab1f4c56f2b844cfa9b1784d/Pasted%20image%2020250406084857.png)
 
 ---
 

@@ -34,4 +34,4 @@ updated: 2025-12-25
 
 ### Nye Religion Basics
 
-[Nye_ReligionSomeBasics.pdf](Material/Nye_ReligionSomeBasics.pdf)
+[Nye_ReligionSomeBasics.pdf](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e881b5d27b75a3ade035510b92d2cf71dd66539ef475ae48bb891724956b9889/Nye_ReligionSomeBasics.pdf)

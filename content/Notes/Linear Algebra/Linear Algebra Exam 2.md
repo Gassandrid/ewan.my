@@ -19,7 +19,7 @@ The different concepts we should know for the exam
 
 Eigen values
 
-Eigen vectors
+[[Linearization and the Jacobian|Eigen]] vectors
 
 Eigen spaces
 
@@ -27,11 +27,11 @@ Characteristic Polynomials
 
 Diagonalization
 
-Orthogonal Diagonalization
+[[Orthogonality|Orthogonal]] Diagonalization
 
 Similarity
 
-Spectral Theorem
+[[Spectral Theorem]]
 
 Multiplicity
 
@@ -63,7 +63,7 @@ Properties
 
 Elementary Matrices
 
-### Quadratic Forms
+### [[Quadratic Form|Quadratic Forms]]
 
 Matrix Form
 

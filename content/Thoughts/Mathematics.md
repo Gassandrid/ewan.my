@@ -3,7 +3,6 @@ id: Mathematics
 aliases: []
 tags:
   - math
-  - seed
 date: 2025-01-31
 title: Mathematics
 updated: 2026-07-07T11:02:24-07:00

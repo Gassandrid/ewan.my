@@ -24,7 +24,7 @@ author:
 - For each $i,L_{i}$ consists of all nodes at distance exactly $i$ edges from $s$.
 - There is a path from $s$ to $t$ $\iff$ $d(t) < \infty$.
 
-[![BFSearch.png](../../Attachments/BFSearch.png)](../../Attachments/BFSearch.png)
+[![BFSearch.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7ee82ea36e3d584a6b3375268b5f10cc837f23887c5c8b1c20a8c52210a98063/BFSearch.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7ee82ea36e3d584a6b3375268b5f10cc837f23887c5c8b1c20a8c52210a98063/BFSearch.png)
 
 ## Formal Definition
 
@@ -76,4 +76,4 @@ $$
 
 ### Pseudocode
 
-[![Screenshot 2025-09-04 at 10.15.40 AM.png](../../Attachments/Screenshot%202025-09-04%20at%2010.15.40%20AM.png)](../../Attachments/Screenshot%202025-09-04%20at%2010.15.40%20AM.png)
+[![Screenshot 2025-09-04 at 10.15.40 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fa32c4c7d02f4e515387b949ccdd974868bacb5d6933007d707e5c3420c5abde/Screenshot%202025-09-04%20at%2010.15.40%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fa32c4c7d02f4e515387b949ccdd974868bacb5d6933007d707e5c3420c5abde/Screenshot%202025-09-04%20at%2010.15.40%20AM.png)

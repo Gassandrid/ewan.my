@@ -36,8 +36,7 @@ associated-disorders:
   - Tourette syndrome
   - addiction
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 date: 2026-02-22T22:03:44-05:00
 updated: 2026-09-02T15:50:04-04:00
 ---

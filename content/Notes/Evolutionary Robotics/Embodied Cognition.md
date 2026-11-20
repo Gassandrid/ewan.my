@@ -26,9 +26,9 @@ What does it really mean to have a body and _exploit it_ for intelligent action?
 
 We need to think about all the things that an intelligent agent _should_ be able to do. Things like **pattern recognition**.
 
-Below is a picture of **Marylin Monroe**. Can you recognize her? This is an example of older computer vision systems failing to deduce the human face in the image. Modern neural networks can easily recognize the face, thanks to advancements in [[Diffusion in machine learning]] through models like [[CLIP]], which learned to associate an image vector with a text vector.
+Below is a picture of **Marylin Monroe**. Can you recognize her? This is an example of older computer vision systems failing to deduce the human face in the image. Modern [[Neural Networks|neural networks]] can easily recognize the face, thanks to advancements in [[Diffusion in machine learning]] through models like [[CLIP]], which learned to associate an image vector with a text vector.
 
-[![aiPatternRecognition.png](../../Attachments/aiPatternRecognition.png)](../../Attachments/aiPatternRecognition.png)
+[![aiPatternRecognition.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/486cfac2ffda7e6647a32c24286c7a0bf900af12e264ec5881b513d8b574713e/aiPatternRecognition.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/486cfac2ffda7e6647a32c24286c7a0bf900af12e264ec5881b513d8b574713e/aiPatternRecognition.png)
 
 ---
 
@@ -41,7 +41,7 @@ The researchers working with Cog treated Cog like a baby, as like most newborn i
 
 In the example below, Cog didn't have any goal, it just moved things around. Would send signals to its motors, see some blobs of motion, and when it stopped sending signals it would suddenly see nothing.
 
-[![cogRobotMotion.png](../../Attachments/cogRobotMotion.png)](../../Attachments/cogRobotMotion.png)
+[![cogRobotMotion.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e2293d8664056a0c45b459bce6e9694bd0c5d35d3d2c8976d8556e15823227d9/cogRobotMotion.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e2293d8664056a0c45b459bce6e9694bd0c5d35d3d2c8976d8556e15823227d9/cogRobotMotion.png)
 
 Cog _learned_ to associate its motor commands with the visual feedback it received. For example, when it moved its arm to the left, it would see a blob of motion on the left side of its visual field. Over time, Cog learned to predict what it would see based on its motor commands.
 
@@ -51,13 +51,13 @@ See [@mettaBetterVisionManipulation2003] for more.
 
 ## Kasparov Vs Deep Blue
 
-An iconic and pivotal moment in AI history was when IBM's Deep Blue defeated world chess champion Garry Kasparov in 1997. This event highlighted the capabilities of AI in strategic thinking and problem-solving.
+An iconic and pivotal moment in AI history was when IBM's Deep Blue defeated world [[Chess|chess]] champion Garry Kasparov in 1997. This event highlighted the capabilities of AI in strategic thinking and problem-solving.
 
 **How did Deep Blue work?** It used a brute-force search algorithm called [[Minimax]] combined with [[Alpha-Beta Pruning]] to evaluate millions of possible chess positions per second. Deep Blue's strength lay in its ability to analyze vast amounts of data and make optimal decisions based on that analysis.
 
 This is an example of the cognitive ability of **Planning**, where Deep Blue would make complex plans based not only on its own planned moved, but also what it expected Kasparov to do in response(this is what Minimax does).
 
-[![KasparovVDeepBlue.png](../../Attachments/KasparovVDeepBlue.png)](../../Attachments/KasparovVDeepBlue.png)
+[![KasparovVDeepBlue.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8146206c2d123fec31f8e13eb51682dc8399e4772df3693e7ebac7f1aefe06a0/KasparovVDeepBlue.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8146206c2d123fec31f8e13eb51682dc8399e4772df3693e7ebac7f1aefe06a0/KasparovVDeepBlue.png)
 
 Deep blue won its first game **February 1996**, and its first match **May, 1997**.
 
@@ -76,9 +76,9 @@ It would _move_ an inch, _stop_ (this is how it got the name Shakey), _perceive_
 ## Libet Free Will Experiment
 
 > [!Example]
-> Another aspect of human cognition: free will. Most people believe that htey have free willo
+> Another aspect of human cognition: [[Free Will|free will]]. Most people believe that htey have free willo
 
-Researchers hooked up subjects to [[Electroencephalography|EEG]] sensors on their brain, and [[Electromyography|EMG]] sensors on their finger muscles.
+Researchers hooked up subjects to [[Electroencephalography|EEG]] sensors on their [[Brain|brain]], and [[Electromyography|EMG]] sensors on their finger muscles.
 
 Subjects were given the task to, at any given time, decide the retract their index finger. They could randomly choose when to do this, but they had to remember the time on a clock when they first became aware of their intention to move their finger.
 
@@ -86,7 +86,7 @@ Not only was there a signal in the EEG data that predicted when the subject woul
 
 Subjects would have already made a decision for when they were ready, _they just didn't know it yet_. Quite unsettling!
 
-[![LibetFreeWillExperiment.png](../../Attachments/LibetFreeWillExperiment.png)](../../Attachments/LibetFreeWillExperiment.png)
+[![LibetFreeWillExperiment.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/27dfa50772df278a986bf33b0e610f69636293a73583f5d4ac55ad43fc68d0bc/LibetFreeWillExperiment.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/27dfa50772df278a986bf33b0e610f69636293a73583f5d4ac55ad43fc68d0bc/LibetFreeWillExperiment.png)
 
 One possible solution could be that the "Central Coordination Factor" only gets synchronized with the motor action after the action has already been initiated unconsciously. The brain is a distributed system, but our "consciousness" might be a centralized narrative that gets updated after the fact.
 
@@ -96,7 +96,7 @@ See [@libetTimeConsciousIntention1983] for more.
 
 ## Subsumption Architecture
 
-The **Subsumption Architecture** was developed by Rodney Brooks in the 1980s as a way to build intelligent robots that could operate in complex environments without relying on high-level planning or symbolic reasoning.
+The **[[Subsumption Architecture]]** was developed by Rodney Brooks in the 1980s as a way to build intelligent robots that could operate in complex environments without relying on high-level planning or symbolic reasoning.
 
 It got rid of planning altogether, and instead focused on building a set of simple, reactive behaviors that could be combined to produce more complex behavior.
 
@@ -106,7 +106,7 @@ The process is as follows:
 2. One behavior is always in control at any one time.
 3. When stimuli are not present, higher levels subsume control of the robot.
 
-[![subsumptionArchitecture.png](../../Attachments/subsumptionArchitecture.png)](../../Attachments/subsumptionArchitecture.png)
+[![subsumptionArchitecture.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2e0d520117ccd43a48020ac9fc31b641bfac302e8f9bd8388b0e5f1b2d982fd8/subsumptionArchitecture.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2e0d520117ccd43a48020ac9fc31b641bfac302e8f9bd8388b0e5f1b2d982fd8/subsumptionArchitecture.png)
 
 Subsumption architecture has been used to build a variety of robots, including the famous **Roomba** vacuum cleaner. An unintuitive but simple approach to building intelligent systems.
 

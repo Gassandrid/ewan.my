@@ -70,7 +70,7 @@ Or consider **Abraham Lincoln**, an American statesman in the 1800s. He lost his
 
 Add to the pile **Michelangelo**, **Florence Nightingale**, **Beethoven**-all of them slipping into periods when they reported going to a place from which they simply could not find their way back to themselves.
 
-The thing is, we only know about their struggles because their lives are well-studied. We're not famous, but we get the blues too. And oddly, it turns out that our brains mostly process physical pain and emotional pain in the same regions and find it rather hard to tell them apart. The sadness actually *hurts*. Have you hung out with people after their hearts have been broken? It's like they've been shot.
+The thing is, we only know about their struggles because their lives are well-studied. We're not famous, but we get the blues too. And oddly, it turns out that our [[Brain|brains]] mostly process physical pain and emotional pain in the same regions and find it rather hard to tell them apart. The sadness actually *hurts*. Have you hung out with people after their hearts have been broken? It's like they've been shot.
 
 ---
 
@@ -98,7 +98,7 @@ But we're lacking for nice things in English too:
 
 There's something interesting happening here. Your brain is fundamentally a prediction machine. Not in the mystical sense-in the Bayesian sense. Every moment, your cortex is generating predictions about what it expects to experience: sensory input, emotional states, outcomes of actions. When reality violates these predictions, you feel prediction error. This is how you learn, how you navigate the world.
 
-But the brain is also recursive. It predicts predictions. It models itself modeling itself. [[Douglas Hofstadter]] called this a "strange loop"-consciousness emerging from these tangled hierarchies of self-reference. You experience your own thoughts. You have thoughts about your thoughts. You have doubts about your doubts.
+But the brain is also recursive. It predicts predictions. It models itself modeling itself. [[Douglas Hofstadter]] called this a "[[I am a strange loop|strange loop]]"-consciousness emerging from these tangled hierarchies of self-reference. You experience your own thoughts. You have thoughts about your thoughts. You have doubts about your doubts.
 
 Our brain is extraordinarily good at predicting the everyday world. Which coffee mug is on the table. How gravity works. When your friend is going to laugh at a joke. But it's catastrophically bad at predicting certain kinds of things. Your own suffering. Loss. The precise shape of your future. The times when everything falls apart.
 
@@ -112,11 +112,11 @@ This is why the sadness actually *hurts*. Pain, whether physical or emotional, i
 
 There's a useful way to think about consciousness: as a strange loop, a self-referential knot that ties itself. [[Douglas Hofstadter]] spent hundreds of pages showing how **[[Gödel, Escher, Bach]]** explores this: Gödel's incompleteness theorems, the impossible geometry of Escher's staircases, the recursive canons in Bach's compositions-all pointing to the same truth. *Consciousness is self-reference bootstrapping through levels of abstraction.* A mind contains models of minds that contain models of minds. A system that can represent itself, and representations of those representations. The strange loop.
 
-This insight-that intelligence emerges from tangled hierarchies, from a system's ability to model itself-echoes across 2,500 years of Eastern philosophy. The authors of the **Dao De Jing** were grappling with something similar, even if they lacked our terminology. The text itself is recursive: *the Dao that can be spoken is not the eternal Dao.* You cannot capture the pattern in language. The moment you try to define the way things work, you've already limited the way things actually work.
+This insight-that intelligence emerges from tangled hierarchies, from a system's ability to model itself-echoes across 2,500 years of Eastern philosophy. The authors of the **[[Dao De Jing]]** were grappling with something similar, even if they lacked our terminology. The text itself is recursive: *the Dao that can be spoken is not the eternal Dao.* You cannot capture the pattern in language. The moment you try to define the way things work, you've already limited the way things actually work.
 
 The central problem they identified: **Cosmically, we know nothing about why anything exists. Historically, we're powerless. In our personal lives, we're strangers to ourselves. How do we live with this?** This is the question your prediction machine asks when it fails. When your model of reality shatters, and you realize your model of yourself was incomplete all along.
 
-The Daoist answer was *wu wei*-non-action, action without striving, doing by not-doing. Stop trying to impose rigid structure on the world. The sage acts like water: formless, following the path of least resistance, yet capable of wearing away mountains. Paradoxically, when you give up trying to control everything, you become more effective. Your prediction errors decrease because you stop making the mistake of predicting that the universe should match your will.
+The Daoist answer was *[[Wu Wei|wu wei]]*-non-action, action without striving, doing by not-doing. Stop trying to impose rigid structure on the world. The sage acts like water: formless, following the path of least resistance, yet capable of wearing away mountains. Paradoxically, when you give up trying to control everything, you become more effective. Your prediction errors decrease because you stop making the mistake of predicting that the universe should match your will.
 
 Why do birds migrate? Because they respond to what is, without fighting against it. The universe doesn't consult them for a master plan. They simply act. The more you try to overlay your models onto reality, the more the world reveals how little control you actually have. So the Daoists offered: *"Happiness is the absence of striving for happiness"* and *"Do you have the patience to wait until your mud settles and the water is clear?"*
 
@@ -136,7 +136,7 @@ Then 755 AD, the An Lushan Rebellion in China slaughters 30 million. The Mongol 
 
 And yet, from disaster emerges innovation. The Black Death in 1349 kills millions in Europe, and the survivors invent **Humanism** - the radical idea of valuing human reason and compassion over purely theological answers. The Spanish Conquest, the Thirty Years' War (8 million dead), the Industrial Revolution with its urban poverty and genius. Each catastrophe births new philosophies: the Enlightenment, Romanticism, utopianism.
 
-Fifty million dead in World War One. Seventy million in World War Two. And from that rubble: existentialism, absurdism, pacifism - modern attempts to find meaning when the universe clearly has none for us.
+Fifty million dead in World War One. Seventy million in World War Two. And from that rubble: existentialism, [[Absurdism - how to party at the end of meaning|absurdism]], pacifism - modern attempts to find meaning when the universe clearly has none for us.
 
 **It would be better without the tragedies.** But what's remarkable is that we keep surviving them. That despite everything imploding in both our personal lives and on the historical stage, we somehow remain capable of decency, creativity, and strange resilience. That we know - as well as our ancestors did - that life is cruel and intolerably awful at times. Yet if you dare to face directly into that abyss of pain and loss, something unexpected emerges on the other side. Not resolution or victory, but a kind of clarity. New eyes. And maybe beer as well.
 

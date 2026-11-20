@@ -17,7 +17,7 @@ updated: 2025-09-10
 ---
 _Organelles are membrane bound compartments in [[Eukaryotic Cells]] in which specific prcesses occur. What's a benefits of having organelles?_
 
-[![OrganellePic.png](../../Attachments/OrganellePic.png)](../../Attachments/OrganellePic.png)
+[![OrganellePic.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/39c5cc7d225d4447bbec9cbac2b08234a64d888304b41b048b1dbea16eb36617/OrganellePic.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/39c5cc7d225d4447bbec9cbac2b08234a64d888304b41b048b1dbea16eb36617/OrganellePic.png)
 
 ---
 

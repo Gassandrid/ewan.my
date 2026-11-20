@@ -3,8 +3,6 @@ date: 2024-10-28
 tags:
   - comp-neuro
   - cs
-  - sapling
-  - people
 updated: 2025-08-19
 title: Artem Kirsanov
 class:

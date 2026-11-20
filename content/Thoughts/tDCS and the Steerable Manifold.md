@@ -4,8 +4,9 @@ class:
 tags:
   - transhumanism/self-configuration
   - quantified-self
-  - comp-neuro/neuromodulation
+  - neuro/methods/stimulation
   - generated/claude
+  - research
 related:
   - "[[Self Configuration]]"
   - "[[Probing Nurture with Content Consumption]]"
@@ -43,7 +44,7 @@ That's just Bayesian optimization. Each session is one expensive evaluation over
 
 tACS is different: alternating current entrains endogenous oscillations instead of shifting excitability. The relevant band is theta (4-8 Hz), which coordinates working memory operations in parietal cortex. Its edge for arithmetic _learning_ fits, since learning runs on oscillatory coupling between hippocampus and parietal cortex, not just excitability.
 
-Stacked together, [[Probing Nurture with Content Consumption]] is the slow outer loop reshaping what's in the cognitive manifold, tDCS/tACS is the fast inner loop adjusting the accessibility of what's already there, and [[Isomorph]] measures the manifold across both. The [[POMDP]] from Probing Nurture absorbs this by adding stimulation as an action dimension:
+Stacked together, [[Probing Nurture with Content Consumption]] is the slow outer loop reshaping what's in the cognitive manifold, tDCS/tACS is the fast inner loop adjusting the accessibility of what's already there, and [[Isomorph]] measures the manifold across both. The [[Partially Observable Markov Decision Process|POMDP]] from Probing Nurture absorbs this by adding stimulation as an action dimension:
 
 - hidden state: latent cognitive state (capacity, mode, topic activation)
 - observations: EEG, [[ActivityWatch|behavioral telemetry]], vault topology, task performance

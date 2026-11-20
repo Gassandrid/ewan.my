@@ -2,7 +2,6 @@
 class:
   - book
 tags:
-  - books
   - philosophy
   - comp-neuro
 source:
@@ -23,4 +22,4 @@ updated: 2026-01-24 10:12:26-05:00
 ---
 Very recent and thus a better reflection of current thinking on consciousness from a leading researcher in the field.
 
-[![beingYouScience.png](../../Attachments/beingYouScience.png)](../../Attachments/beingYouScience.png)
+[![beingYouScience.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e49ae11738141ca1fad3b1eed7ad214690f4eb130c44b2c9fe7566e5824d6028/beingYouScience.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e49ae11738141ca1fad3b1eed7ad214690f4eb130c44b2c9fe7566e5824d6028/beingYouScience.png)

@@ -35,7 +35,7 @@ associated-disorders:
   - depression
   - schizophrenia
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
   - biology
 date: 2026-02-22T22:03:12-05:00
 updated: 2026-09-02T15:53:43-04:00

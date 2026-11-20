@@ -14,9 +14,9 @@ author:
 description:
 ---
 
-The **Hilbert Transform** is a tool for signal processing that allows us to convert a real valued signal into its analytic representation, which is a complex-valued signal. This transformation is particularly useful for extracting instantaneous amplitude and phase information from oscillatory signals, such as neural signals in computational neuroscience.
+The **Hilbert Transform** is a tool for signal processing that allows us to convert a real valued signal into its analytic representation, which is a complex-valued signal. This transformation is particularly useful for extracting instantaneous amplitude and phase information from oscillatory signals, such as neural signals in [[computational neuroscience]].
 
-[![hilbertExampleTransform.png](../../../Attachments/hilbertExampleTransform.png)](../../../Attachments/hilbertExampleTransform.png)
+[![hilbertExampleTransform.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/43437a7fea1d93c4cdf2490f338a1d39beeef86fe06fde43fff53f48d370aadb/hilbertExampleTransform.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/43437a7fea1d93c4cdf2490f338a1d39beeef86fe06fde43fff53f48d370aadb/hilbertExampleTransform.png)
 
 In layman's terms, it is a filter that leaves the amplutude of each frequency component unchanged but shifts the phase of each component by 90 degrees. This phase shift allows us to construct a complex signal where the real part is the original signal and the imaginary part is the Hilbert transform of the original signal.
 
@@ -24,7 +24,7 @@ In layman's terms, it is a filter that leaves the amplutude of each frequency co
 
 ## Intuition
 
-The goal of the Hilbert Transform is to create its **Analytic Signal**. For real world signals like EEG data, it can be usefull to imagine them as rotating [[Phasor]]s in the complex plane, allowing us to track how their amplitude and phase change over each moment.
+The goal of the Hilbert Transform is to create its **Analytic Signal**. For real world signals like [[On Doing EEG Work|EEG]] data, it can be usefull to imagine them as rotating [[Phasor]]s in the complex plane, allowing us to track how their amplitude and phase change over each moment.
 
 Given a real signal $x(t)$, its analytic signal $z(t)$ is defined as:
 
@@ -60,7 +60,7 @@ Revealing the _local symmetry_ of the signal around each point in time.
 
 ### Frequency Domain
 
-This version is much more intuitive. The Hilbert Transform can be understood in terms of its effect on the frequency components of the signal. In the frequency domain, the Hilbert Transform is defined by multiplying the Fourier Transform of the signal $X(f)$ by $-j \cdot \text{sgn}(f)$, where $\text{sgn}(f)$ is the sign function.
+This version is much more intuitive. The Hilbert Transform can be understood in terms of its effect on the frequency components of the signal. In the frequency domain, the Hilbert Transform is defined by multiplying the [[Fourier Transform]] of the signal $X(f)$ by $-j \cdot \text{sgn}(f)$, where $\text{sgn}(f)$ is the sign function.
 
 $$
 \mathcal{F} \{ \mathcal{H}[x(t)] \} = -j \cdot \text{sgn}(f) \cdot X(\omega)

@@ -23,7 +23,7 @@ Collection of a few sensors, namely:
 - magnetometer
 	- not that useful here, mostly used for orientation
 
-[![Screenshot 2026-09-03 at 5.12.40 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.12.40%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.12.40%20PM.png)
+[![Screenshot 2026-09-03 at 5.12.40 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8ae20322f18fd74252215445893df5704c4bdb36828fde915abcf5a42ccc21de/Screenshot%202026-09-03%20at%205.12.40%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8ae20322f18fd74252215445893df5704c4bdb36828fde915abcf5a42ccc21de/Screenshot%202026-09-03%20at%205.12.40%20PM.png)
 
 ## Operating Principles
 
@@ -44,7 +44,7 @@ $$
 V_{meas} \approx V_{in} \cdot \frac{x}{d}
 $$
 
-[![Screenshot 2026-09-03 at 5.15.24 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.15.24%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.15.24%20PM.png)
+[![Screenshot 2026-09-03 at 5.15.24 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a96ba3e4ccc9a4658bd6b76fb8efc0ba897e426a49b3be9926ca05d2ebf8af8b/Screenshot%202026-09-03%20at%205.15.24%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a96ba3e4ccc9a4658bd6b76fb8efc0ba897e426a49b3be9926ca05d2ebf8af8b/Screenshot%202026-09-03%20at%205.15.24%20PM.png)
 
 ### Gyroscope
 
@@ -57,7 +57,7 @@ $$
 m\ddot{x} + b\dot{x} + kx = F_{ext} \propto \frac{mv^2}{r}
 $$
 
-[![Screenshot 2026-09-03 at 5.18.00 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.18.00%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.18.00%20PM.png)
+[![Screenshot 2026-09-03 at 5.18.00 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a121c02e34a01ed5078dc6e3dcb61b4f1f1fd488f9d8bf57770e9fb7d02b4e70/Screenshot%202026-09-03%20at%205.18.00%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a121c02e34a01ed5078dc6e3dcb61b4f1f1fd488f9d8bf57770e9fb7d02b4e70/Screenshot%202026-09-03%20at%205.18.00%20PM.png)
 
 ### Magnetometer
 
@@ -70,7 +70,7 @@ $$
 V_{Hall} = R_{Hall} \frac{IB}{t}
 $$
 
-[![Screenshot 2026-09-03 at 5.21.09 PM.png](../../Attachments/Screenshot%202026-09-03%20at%205.21.09%20PM.png)](../../Attachments/Screenshot%202026-09-03%20at%205.21.09%20PM.png)
+[![Screenshot 2026-09-03 at 5.21.09 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/786cde6cba28a6e959b6c02713f5de8ba8582be2c1c6a47c418e003102c84592/Screenshot%202026-09-03%20at%205.21.09%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/786cde6cba28a6e959b6c02713f5de8ba8582be2c1c6a47c418e003102c84592/Screenshot%202026-09-03%20at%205.21.09%20PM.png)
 
 ## Selecting IMU Operating Parameters
 

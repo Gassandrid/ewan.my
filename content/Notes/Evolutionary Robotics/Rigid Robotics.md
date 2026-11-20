@@ -23,7 +23,7 @@ Pioneer of evolving 3d morphology on a computer.
 
 ### Body Construction
 
-The trick presented here is to use *recursion* to contruct rigid morphologies.
+The trick presented here is to use *[[Recursion|recursion]]* to contruct rigid morphologies.
 
 **Genotypes:** nested, directed multigraphs.
 
@@ -52,7 +52,7 @@ Edge labels:
 
 **Phenotypes:** Simulated robots.
 
-[![recursiveConstruction.png](../../Attachments/recursiveConstruction.png)](../../Attachments/recursiveConstruction.png)
+[![recursiveConstruction.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b57880cfddf1adc6005ebd9644427d94bd369092decfb7cce3d91ed064168075/recursiveConstruction.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b57880cfddf1adc6005ebd9644427d94bd369092decfb7cce3d91ed064168075/recursiveConstruction.png)
 
 ### Brain Construction
 
@@ -86,4 +86,4 @@ reminds us of [[Chaos, Fractals, and Dynamical Systems|chaos theory]]!
 
 Idea: **self similarity** for robots, not only on morphology but also itsoo
 
-Evolve **small** CPPNs alone, then evolve the fractal-ish collection of small CPPNs as one robot. Dual evolution objective; good alone *and* good together.
+Evolve **small** [[Compositional Pattern-Producing Network|CPPNs]] alone, then evolve the fractal-ish collection of small CPPNs as one robot. Dual evolution objective; good alone *and* good together.

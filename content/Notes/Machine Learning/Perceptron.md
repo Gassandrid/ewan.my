@@ -6,7 +6,7 @@ class:
   - lecture
 tags:
   - university
-  - cs/ai/perceptron
+  - cs/ai/architecture/perceptron
 source:
 related:
 author:

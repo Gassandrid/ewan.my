@@ -4,7 +4,8 @@ updated: 2026-06-01T14:33:47-07:00
 class:
   - note
 tags:
-  - transhumanism/nootropic
+  - pharmacology/nootropic
+  - transhumanism
   - pharmacology/neuro
 source:
 related:

@@ -23,7 +23,7 @@ activators:
   - depolarization
   - calcium-dependent exocytosis
 distribution:
-  - "[[Neocortex]]"
+  - "[[Forebrain|Neocortex]]"
   - "[[Hippocampus]]"
   - "[[Cerebellum]]"
   - "[[Thalamus]]"
@@ -35,7 +35,7 @@ reuptake-transporter:
 degrading-enzyme:
   - glutamine synthetase
 tags:
-  - comp-neuro/brain/neurotransmitter
+  - neuro/molecular
   - pharmacology/neuro
 date: 2026-02-25T14:10:35-05:00
 updated: 2026-06-11T12:59:52-07:00

@@ -13,7 +13,6 @@ related:
 author:
 description:
 tags:
-  - books/geb
   - curation/render
 aliases:
 date: 2026-01-18T09:14:09-05:00
@@ -22,7 +21,7 @@ updated: 2026-03-12T16:15:13-07:00
 
 A piece of my own creation, wanted to encode more parameters into the Hofstadter Butterfly to enrich the color.
 
-[![hofstadter_butterfly.png](../Attachments/hofstadter_butterfly.png)](../Attachments/hofstadter_butterfly.png)
+[![hofstadter_butterfly.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bf2b5f0c93e0b5b2c45ff97668c2ea9cc1173db04166ac3f2acf56f2ff739674/hofstadter_butterfly.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bf2b5f0c93e0b5b2c45ff97668c2ea9cc1173db04166ac3f2acf56f2ff739674/hofstadter_butterfly.png)
 
 ---
 

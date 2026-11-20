@@ -20,4 +20,4 @@ for analysis of timeseries signal to attempt to find and classify periodic signa
 - equivelant to a least squares fit of sine/cosine functions to data.
 - all frequencies from lombscargle are not **angular frequencies**, rather frequencies of oscillation (num cycles per unit time)
 
-[![scargleVsFourier.png](../../Attachments/scargleVsFourier.png)](../../Attachments/scargleVsFourier.png)
+[![scargleVsFourier.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bb9d1448655c948280e91db97367e1c59804c1637a5cc225e3d5d88169f073ed/scargleVsFourier.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bb9d1448655c948280e91db97367e1c59804c1637a5cc225e3d5d88169f073ed/scargleVsFourier.png)

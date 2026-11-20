@@ -3,7 +3,7 @@ id: Local Server Hosting and Network Organization
 aliases:
 tags:
   - cs/web
-  - cs/homelab
+  - projects/homelab
   - generated
 date: 2024-09-12
 updated: 2025-10-15
@@ -77,8 +77,8 @@ ssh <username>@<your-local-ip>
 
 ### Common Networking Protocols
 
-- **HTTP/HTTPS**: Web communication protocols. HTTPS is secure.
-- **TCP/IP**: Fundamental protocol suite for the internet.
+- **[[HTTP Requests|HTTP/HTTPS]]**: Web communication protocols. HTTPS is secure.
+- **[[Computer Networking|TCP/IP]]**: Fundamental protocol suite for the internet.
 - **UDP**: Connectionless protocol for speed over reliability.
 - **SSH (Secure Shell)**: Securely access remote machines.
 
@@ -132,7 +132,7 @@ ssh user@host 'command'
 
 ### Network Analysis
 
-- **Wireshark**: GUI tool for network protocol analysis.
+- **[Wireshark](https://www.wireshark.org/)**: GUI tool for network protocol analysis.
 - **tcpdump**: Command-line packet analyzer.
 
 ```bash

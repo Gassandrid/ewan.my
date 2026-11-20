@@ -27,9 +27,9 @@ Where:
 - $j$ is the imaginary unit, satisfying $j^2 = -1$.
 - $t$ is the time variable.
 
-This is the case for an infinite continuous signal. In practice, we often deal with discrete signals sampled at specific intervals, this can still be done in the continuous domain, but more commonly we use the Discrete Fourier Transform (DFT) for sampled signals.
+This is the case for an infinite continuous signal. In practice, we often deal with discrete signals sampled at specific intervals, this can still be done in the continuous domain, but more commonly we use the [[Discrete Fourier Transform]] (DFT) for sampled signals.
 
-[![TransformFourierSignals.png](../../Attachments/TransformFourierSignals.png)](../../Attachments/TransformFourierSignals.png)
+[![TransformFourierSignals.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b750dbf6707565c42134216d8fbceaf0d678e33b0d7f4bc8ab23b164db6c17fe/TransformFourierSignals.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b750dbf6707565c42134216d8fbceaf0d678e33b0d7f4bc8ab23b164db6c17fe/TransformFourierSignals.png)
 
 ---
 
@@ -65,7 +65,7 @@ However because this is an integral, this is being done for each unit in time, f
 
 ### The Integral
 
-You might recognize the structure of the Fourier transform as mirrorign that of a [[Convolution]]. This is because the Fourier Transform can be thought of as a special case of convolution, where we are convolving the signal with a complex exponential function. By integrating over all time, for each frequency, we are testing different frequencies against the signal to see how much of that frequency is present in the signal.
+You might recognize the structure of the Fourier transform as mirrorign that of a [[Convolutions|Convolution]]. This is because the Fourier Transform can be thought of as a special case of convolution, where we are convolving the signal with a complex exponential function. By integrating over all time, for each frequency, we are testing different frequencies against the signal to see how much of that frequency is present in the signal.
 
 ### Extra: What role does magnitude and phase play?
 
@@ -81,4 +81,4 @@ While incredibly useful, it is rarely used in this exact form in practice. It is
 
 For snippets in time(often with limited samples resolution), we use the [[Discrete Fourier Transform]] (DFT) or its computationally efficient counterpart, the [[Fast Fourier Transform]] (FFT). These transforms operate on discrete signals and provide a frequency-domain representation similar to the CFT.
 
-But you may notice from things like Waterfall spectograms on SDR/Radio stations, is that we seems to have a time-varying frequency representation. This is achieved through the [[Short-Time Fourier Transform]] (STFT), which involves segmenting the signal into smaller time windows and applying the Fourier Transform to each segment. This allows us to analyze how the frequency content of the signal changes over time.
+But you may notice from things like Waterfall spectograms on SDR/Radio stations, is that we seems to have a time-varying frequency representation. This is achieved through the [[Short Time Fourier Transform|Short-Time Fourier Transform]] (STFT), which involves segmenting the signal into smaller time windows and applying the Fourier Transform to each segment. This allows us to analyze how the frequency content of the signal changes over time.

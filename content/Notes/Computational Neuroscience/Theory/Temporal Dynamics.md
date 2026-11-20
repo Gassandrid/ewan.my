@@ -14,7 +14,7 @@ author:
 
 In [[Machine Learning]], we have temporal dynamics in recurrent neural networks (RNNs) and long short-term memory (LSTM) networks, which are designed to handle sequential data and capture temporal dependencies. We also have seen some novel architectures like [[Continuous Thought Machines]] that aim to model continuous temporal dynamics more effectively.
 
-[![TempDynamics.png](../../../Attachments/TempDynamics.png)](../../../Attachments/TempDynamics.png)
+[![TempDynamics.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/92db7359f263725fc3afc6bf3971cd54945ee2ca80ee09d1a69b0e0ae6dda95d/TempDynamics.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/92db7359f263725fc3afc6bf3971cd54945ee2ca80ee09d1a69b0e0ae6dda95d/TempDynamics.png)
 
 ---
 

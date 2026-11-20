@@ -4,7 +4,7 @@ class:
 tags:
   - math/probability
   - math/information
-  - cs/ai/variational
+  - cs/ai/generative/variational
 source:
   - https://www.jemoka.com/posts/kbhjensen_s_inequality/#probabilistic-extension
   - "[[Jensen's Inequality Explained]]"
@@ -17,7 +17,7 @@ updated: 2026-01-21T18:31:21-05:00
 ---
 Probably one of the most fundamental building blocks to fields like [[Information|information theory]] and later [[Variational Inference]]. In laymans terms, it states that for [[Convex Function]], the function of the average is less than or equal to the average of the function. This has deep implications in understanding expectations and variances in probabilistic systems.
 
-[![InequalityJensen.png](../../Attachments/InequalityJensen.png)](../../Attachments/InequalityJensen.png)
+[![InequalityJensen.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/159034c265381de295a979d43dd4846fba068951c5fb91a71d6f6aa18a2a67fb/InequalityJensen.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/159034c265381de295a979d43dd4846fba068951c5fb91a71d6f6aa18a2a67fb/InequalityJensen.png)
 
 ---
 

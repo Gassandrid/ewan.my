@@ -21,7 +21,7 @@ related:
 
 Unlike both [[Principle Component Analysis]] and [[T-distributed stochastic neighbor embedding]], UMAP has an exceptional ability to preserve the structure of the data in a way where you can understand the higher dimensional shape. A great example is mapping a 3d point cloud of a familiar object (like a mammoth) to $\mathbb{R}^2$:
 
-[![UmapMammoth.gif](../../Attachments/UmapMammoth.gif)](../../Attachments/UmapMammoth.gif)
+[![UmapMammoth.gif](https://lab.ewan.my/api/lab/v1/loupe/v1/o/50b1d9eee5c65162860946f3198953e70687c85fbbebae13dd47f98c451a01e9/UmapMammoth.gif?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/50b1d9eee5c65162860946f3198953e70687c85fbbebae13dd47f98c451a01e9/UmapMammoth.gif)
 
 ---
 

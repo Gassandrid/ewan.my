@@ -4,9 +4,10 @@ updated: 2026-09-15T13:21:51-04:00
 class:
   - note
 tags:
-  - transhumanism/tDCS
+  - neuro/methods/stimulation
+  - transhumanism
   - pharmacology/neuro
-  - transhumanism/nootropic
+  - pharmacology/nootropic
 source:
   - "[[Neuropharma tDCS - Gemini]]"
 related:

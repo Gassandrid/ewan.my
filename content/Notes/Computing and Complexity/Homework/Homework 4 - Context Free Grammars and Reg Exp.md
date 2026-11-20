@@ -44,7 +44,7 @@ Therefore we have shown that the procdure above ensures that $ALL_{DFA}$ is deci
 
 > Let $A\epsilon_{CFG}=\{  \langle G \rangle \mid \text{G is a context-free grammar and G generates }\epsilon \}$. Show that $A\epsilon_{CFG}$ is decidable.
 
-Recall the definition of a context free grammar $G$:
+Recall the definition of a [[Context Free Grammars and Languages|context free grammar]] $G$:
 
 $$
 G = \{ V, \Sigma, R,S \}a
@@ -147,7 +147,7 @@ $$
 
 ## Problem 04
 
-> Let $A=\{ \langle R,S \rangle \mid \text{R and S are regular expressions and }\mathcal{L}(R) \subseteq \mathcal{L}(S) \}$. Show that $A$ is decidable.
+> Let $A=\{ \langle R,S \rangle \mid \text{R and S are [[Day 7 - Regular Expressions|regular expressions]] and }\mathcal{L}(R) \subseteq \mathcal{L}(S) \}$. Show that $A$ is decidable.
 
 
 To prove this we must construct a DFA to test for emptiness. We define emptiness with a reachability check. The following procedure proves $A$ is decidable:

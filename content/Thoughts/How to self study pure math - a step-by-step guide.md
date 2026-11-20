@@ -6,7 +6,7 @@ published:
 created: 2025-04-25
 description: This video has a list of books, videos, and exercises that goes through the undergrad pure mathematics curriculum from start to finish. REAL ANALYSISBook:...
 tags:
-  - youtube/math
+  - math
 date: 2025-04-25
 updated: 2025-04-25
 ---
@@ -16,7 +16,7 @@ updated: 2025-04-25
 
 I found this video particularly interesting and useful to me even though I am not a "pure math" person in the slightest. I am peering into a community for which I just barely qualify as educated in, but my enjoyment of the subject matter remains the same.
 
-More importantly, I found some resources from this video to be quite useful for my field of study. I will not be using all the mentioned fields in the video, but **Linear Algebra** is one of the most vital concepts for machine learning and neuroscience alike. Practically everything seems to be represented by vectors, and this knowledge becomes all the more useful when dabbling in **dynamical systems theory**(very important in [[Computational Neuroscience]], although more differential equations than linear algebra).
+More importantly, I found some resources from this video to be quite useful for my field of study. I will not be using all the mentioned fields in the video, but **[[Essence of Linear Algebra|Linear Algebra]]** is one of the most vital concepts for [[Machine Learning|machine learning]] and neuroscience alike. Practically everything seems to be represented by vectors, and this knowledge becomes all the more useful when dabbling in **[[Dynamical Systems Theory|dynamical systems theory]]**(very important in [[Computational Neuroscience]], although more differential equations than linear algebra).
 
 Beyond this, I am also someone who takes self-study to the extreme. For whatever reasons, I am rather poor in my ability to retain information when it is forced upon me through a class. I find that I excel in these same fields that I have classes for, but only when I seek that knowledge out on my own time. This will become more useful in graduate school, but has hindered my performance in many ways for my undergrad.
 

@@ -29,4 +29,4 @@ $$
 - $SD_{1},SD_{2}$ are sample standard deviations
 - $n_{1},n_{2}$ are sample sizes
 
-[![cohenD.png](../../Attachments/cohenD.png)](../../Attachments/cohenD.png)
+[![cohenD.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cf24860033bc19513be30c4b151f8d5c6e6cd315f7701ffc50a6276d03da76ba/cohenD.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cf24860033bc19513be30c4b151f8d5c6e6cd315f7701ffc50a6276d03da76ba/cohenD.png)

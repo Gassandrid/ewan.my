@@ -1,7 +1,6 @@
 ---
 updated: 2026-01-31T19:32:00-05:00
 tags:
-  - seed
   - places
 title: University Of Vermont
 class:

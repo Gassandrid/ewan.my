@@ -22,10 +22,10 @@ _And different models of computation_
 - Deterministic finite automata
   - pattern matching, ex. REGEX
 - Nondeterministic finite automata
-- Context-free grammars
-- Pushdown automata
+- [[Context Free Grammars and Languages|Context-free grammars]]
+- [[Day 11 - Pushdown Automata|Pushdown automata]]
 - Linear boundaries
-- Turing machines
+- [[Turing machines]]
   - Turing machines will be discussed in more detail in a following class.
 
 **Context-Free Languages** are languages that can be recognized by a pushdown automaton. These languages are used in programming languages, such as C, Java, and Python.
@@ -42,7 +42,7 @@ A language is a **set** of **strings**, where a string is a sequence of symbols.
 
 While Noam Chomsky is not computer scientist, he is known for his work in linguistics. His work has been applied to computer science, where he developed the Chomsky hierarchy. The Chomsky hierarchy is a classification of formal languages based on their generative power.
 
-[![Pasted image 20250114085049.png](../../../Attachments/Pasted%20image%2020250114085049.png)](../../../Attachments/Pasted%20image%2020250114085049.png)
+[![Pasted image 20250114085049.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6259aa5bc2dbb140bfc1d3d65fcc70f5d06a0a7921bf044bbc9d39f05f5332bc/Pasted%20image%2020250114085049.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6259aa5bc2dbb140bfc1d3d65fcc70f5d06a0a7921bf044bbc9d39f05f5332bc/Pasted%20image%2020250114085049.png)
 
 ---
 
@@ -161,7 +161,7 @@ In addition we also have a few kinda of sets:
 - **Infinite Set**: A set with an infinite number of elements.
 
 > [!Warning] An important Reminder...
-> At least for this class, infinity comes in multiple sizes. For example, the set of natural numbers is infinite, but the set of real numbers is a larger infinity. For now we only have to be aware of two kinda of infinities:
+> At least for this class, [[infinity]] comes in multiple sizes. For example, the set of natural numbers is infinite, but the set of real numbers is a larger infinity. For now we only have to be aware of two kinda of infinities:
 >
 > - **Countable Infinity**: Can be put into a one-to-one correspondence with the natural numbers.
 >   untable Infinity\*\*: Cannot be put into a one-to-one correspondence with the natural numbers.
@@ -222,7 +222,7 @@ An example of a DFA is a vending machine. The vending machine has a finite numbe
 
 ### Cartesian Product
 
-The cartesian product of two sets $A$ and $B$ is the set of all ordered pairs $(a,b)$ where $a \in A$ and $b \in B$.
+The [[cartesian product]] of two sets $A$ and $B$ is the set of all ordered pairs $(a,b)$ where $a \in A$ and $b \in B$.
 
 An example of a cartesian product is the set of all possible outcomes of a dice roll. The set of all possible outcomes of a dice roll is the cartesian product of the set of all possible outcomes of the first die and the set of all possible outcomes of the second die.
 

@@ -10,7 +10,7 @@ To start this great project of mine, Im going to just be using what I already ha
 
 Instead, I am going to be using all of my old computers in a cluster to achieve the same result. Old laptops are great, they have a built in battery backup, draw very little power, and have a built in console for troubleshooting.
 
-[![IMG_2488.jpeg](../Attachments/IMG_2488.jpeg)](../Attachments/IMG_2488.jpeg)
+[![IMG_2488.jpeg](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a88f65e2f372d357c4d9fa94b24b202045287e84b320f8b60ddf0bf7cde7c2af/IMG_2488.jpeg?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a88f65e2f372d357c4d9fa94b24b202045287e84b320f8b60ddf0bf7cde7c2af/IMG_2488.jpeg)
 
 *And the best part is this isn’t even all my computers! I have 2 more raspberry pi’s not in use, a mini pc, and an old gaming laptop*
 

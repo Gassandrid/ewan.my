@@ -14,7 +14,7 @@ author:
 date: 2025-09-08
 updated: 2025-09-08
 ---
-**Carbohydrates**, in the context of biology, are organic molecules composed of carbon (C), hydrogen (H), and oxygen (O) atoms, typically with a hydrogen to oxygen atom ratio of 2:1, similar to water (H2O). They are one of the four main types of macromolecules essential for life, alongside proteins, lipids, and nucleic acids.
+**Carbohydrates**, in the context of biology, are organic molecules composed of [[Carbon|carbon]] (C), hydrogen (H), and [[Oxygen|oxygen]] (O) atoms, typically with a hydrogen to oxygen atom ratio of 2:1, similar to [[Water|water]] (H2O). They are one of the four main types of [[Macromolecules|macromolecules]] essential for life, alongside proteins, [[Lipids|lipids]], and nucleic acids.
 
 d
 
@@ -26,11 +26,11 @@ _You will note that carbohydrates can be classified based on the number of sugar
 
 **Monosaccharides** are the simplest form of carbohydrates and consist of a single sugar molecule. They are the building blocks for more complex carbohydrates.
 
-A common example would be glucose (C6H12O6), which is a primary energy source for cells. Other examples include fructose (found in fruits) and galactose (part of lactose in milk).
+A common example would be glucose (C6H12O6), which is a primary energy source for [[Cells|cells]]. Other examples include fructose (found in fruits) and galactose (part of lactose in milk).
 
 ### Disaccharides
 
-**Disaccharides** are formed when two monosaccharide molecules are joined together by a glycosidic bond. This bond is created through a dehydration reaction, where a water molecule is removed.
+**Disaccharides** are formed when two monosaccharide molecules are joined together by a [[Bonds|glycosidic bond]]. This bond is created through a dehydration reaction, where a water molecule is removed.
 
 ### Oligosaccharides
 

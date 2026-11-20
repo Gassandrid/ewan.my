@@ -13,7 +13,7 @@ date: 2026-02-05T08:43:11-05:00
 lecture-number: 7
 updated: 2026-02-05T09:46:13-05:00
 ---
-There are two main approaches to evolutionary robotics: the "Italian" approach and the "English" approach. These terms were coined by Stefano Nolfi and Dario Floreano in their book _Evolutionary Robotics_ to describe different philosophies in the field.
+There are two main approaches to [[Evolutionary Robotics|evolutionary robotics]]: the "Italian" approach and the "English" approach. These terms were coined by Stefano Nolfi and Dario Floreano in their book _Evolutionary Robotics_ to describe different philosophies in the field.
 
 ## Italian Approach
 
@@ -25,7 +25,7 @@ Where we do evolutionary robotidcs on a physical robot directly. Emphasis on imp
 > - Diameter: 55 mm
 > - Could perform experiments on a table, rather than in a large arena.
 >
-> [![Khepara.png](../../Attachments/Khepara.png)](../../Attachments/Khepara.png)
+> [![Khepara.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1f44923e226e5df7d7bfb7951afa2793b5b71176ec191cad6d3e19c85f318aa4/Khepara.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1f44923e226e5df7d7bfb7951afa2793b5b71176ec191cad6d3e19c85f318aa4/Khepara.png)
 
 ### How Italian Approach Learns
 
@@ -36,7 +36,7 @@ For the example of simple navigation through a maze, the Italian Approach has tw
 
 Robot is given the NN architecture shown.
 
-[![ItalianRobotArchitecture.png](../../Attachments/ItalianRobotArchitecture.png)](../../Attachments/ItalianRobotArchitecture.png)
+[![ItalianRobotArchitecture.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5c8b07da666c1b1375beb3c65cf3a72568bfc46b46d38d8ebb1b4b01e3a38ce5/ItalianRobotArchitecture.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5c8b07da666c1b1375beb3c65cf3a72568bfc46b46d38d8ebb1b4b01e3a38ce5/ItalianRobotArchitecture.png)
 
 **Robot’s wheels can:**
 
@@ -51,7 +51,7 @@ Robot is given the NN architecture shown.
 - 1 if proximity sensor is touching object.
 - Or anything in this range [0,1]
 
-The algorithm at play here is a simple (1+1) evolutionary strategy, where we include penalties and rewards based on the robot's performance in the maze.
+The algorithm at play here is a simple (1+1) [[Evolution Strategy|evolutionary strategy]], where we include penalties and rewards based on the robot's performance in the maze.
 
 Khepara got penalized for driving into walls, but also for taking too long to complete the maze. It was rewarded for moving forward quickly.
 
@@ -85,7 +85,7 @@ Physics engines like ODE handle the heavy lifting—bodies, joints, collision de
 
 ### English Approach Learning Method
 
-Evolution runs entirely in simulation using a physics engine. Same general structure as the Italian approach—neural network controllers, evolutionary algorithms—but the robot only exists as simulated bodies and joints.
+Evolution runs entirely in simulation using a physics engine. Same general structure as the Italian approach—[[Neural Networks|neural network]] controllers, evolutionary algorithms—but the robot only exists as simulated bodies and joints.
 
 1. Define robot morphology in simulation (bodies, joints, sensors)
 2. Initialize random population of neural network controllers
@@ -93,7 +93,7 @@ Evolution runs entirely in simulation using a physics engine. Same general struc
 4. Select, mutate, recombine—standard evolutionary loop
 5. After convergence, transfer best controller to physical robot
 
-**The Reality Gap Problem:**
+**The [[The Golem Project|Reality Gap]] Problem:**
 
 Simulation is never perfect. Physics engines approximate friction, collision dynamics, sensor noise. Controllers that work flawlessly in simulation often fail on physical hardware due to:
 

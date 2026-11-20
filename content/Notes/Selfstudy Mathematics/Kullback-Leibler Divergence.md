@@ -6,7 +6,6 @@ aliases:
   - KL
 tags:
   - math/information/entropy
-  - math/information
 class:
   - note
 date: 2025-09-16
@@ -15,9 +14,9 @@ source:
 updated: 2026-04-22T11:29:23-04:00
 ---
 
-**KL Divergence** (Kullback-Leibler Divergence) is a measure of how one probability distribution diverges from a second, expected probability distribution. Extending on the idea of [[Cross Entropy]], KL Divergence provides a way to quantify the difference between two distributions by measuring the inefficiency of assuming that the distribution is $Q$ when the true distribution is $P$.
+**KL Divergence** (Kullback-Leibler Divergence) is a measure of how one [[Probability Distribution|probability distribution]] diverges from a second, expected probability distribution. Extending on the idea of [[Cross Entropy]], KL Divergence provides a way to quantify the difference between two distributions by measuring the inefficiency of assuming that the distribution is $Q$ when the true distribution is $P$.
 
-[![KLDivergence.png](../../Attachments/KLDivergence.png)](../../Attachments/KLDivergence.png)
+[![KLDivergence.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2ffa0930cdbdb547228f57bc90aaef53debf202b996f1adb46a39821410cfdf7/KLDivergence.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2ffa0930cdbdb547228f57bc90aaef53debf202b996f1adb46a39821410cfdf7/KLDivergence.png)
 
 ---
 

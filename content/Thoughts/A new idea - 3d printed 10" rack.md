@@ -5,7 +5,6 @@ updated: 2025-02-04
 tags:
   - projects/homelab/hardware
   - projects/homelab/dorm
-  - cs/homelab
 ---
 I was watching [this video](https://www.youtube.com/watch?v=t5ZMkzbdSR8), and, given that I now have a 3d printer, I think this would be a great option for the laptop stack.
 
@@ -19,4 +18,4 @@ This is a great form factor and size given my current dorm arrangement, and woul
 
 Just for reference, this is the one from the video. Very Nice!
 
-[![Screenshot 2025-02-04 at 9.57.36 AM.png](../Attachments/Screenshot%202025-02-04%20at%209.57.36%20AM.png)](../Attachments/Screenshot%202025-02-04%20at%209.57.36%20AM.png)
+[![Screenshot 2025-02-04 at 9.57.36 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2a0ba11f72290d30696e6d28e77a7ca09eb14812d688d395e2d0460e0b6e1b25/Screenshot%202025-02-04%20at%209.57.36%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2a0ba11f72290d30696e6d28e77a7ca09eb14812d688d395e2d0460e0b6e1b25/Screenshot%202025-02-04%20at%209.57.36%20AM.png)

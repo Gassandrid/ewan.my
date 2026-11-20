@@ -39,7 +39,7 @@ associated-disorders:
   - absence epilepsy (thalamocortical loop)
   - chronic pain (thalamic pain syndrome)
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
   - biology
 source:
 related:
@@ -52,6 +52,6 @@ updated: 2026-02-24T15:15:35-05:00
 
 The thalamus is the primary sensory relay station of the brain, situated at the center of the diencephalon. Nearly all sensory input (except olfaction) passes through the thalamus before reaching the cortex. It's not a passive relay — thalamic gating via the reticular nucleus actively modulates which signals reach cortical awareness.
 
-[![thalamusAndConnections.png](../../../Attachments/thalamusAndConnections.png)](../../../Attachments/thalamusAndConnections.png)
+[![thalamusAndConnections.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/37117ec0833c4985934f39edb76e44dbca291d9958b06f0c17eea048f1711505/thalamusAndConnections.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/37117ec0833c4985934f39edb76e44dbca291d9958b06f0c17eea048f1711505/thalamusAndConnections.png)
 
 Each thalamic nucleus maps onto a specific cortical area and sensory/motor modality. The thalamocortical loop (thalamus ↔ cortex) is fundamental to oscillatory dynamics underlying sleep, attention, and consciousness.

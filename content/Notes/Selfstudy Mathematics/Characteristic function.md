@@ -8,9 +8,9 @@ class:
 date: 2025-09-22
 updated: 2025-09-22
 ---
-In Layman's terms, the characteristic function is just the Fourier transform of a probability distribution. It provides a way to uniquely describe the distribution of a random variable.
+In Layman's terms, the characteristic function is just the [[Fourier Transform|Fourier transform]] of a [[Probability Distribution|probability distribution]]. It provides a way to uniquely describe the distribution of a [[Random Variables|random variable]].
 
-[![Pasted image 20250922132141.png](../../Attachments/Pasted%20image%2020250922132141.png)](../../Attachments/Pasted%20image%2020250922132141.png)
+[![Pasted image 20250922132141.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f0c54d6f2f7905c58bc9e46ef31da08f54c90607cd0bf0452def0b45f21d474b/Pasted%20image%2020250922132141.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f0c54d6f2f7905c58bc9e46ef31da08f54c90607cd0bf0452def0b45f21d474b/Pasted%20image%2020250922132141.png)
 
 ---
 
@@ -25,7 +25,7 @@ $$
 and it has several important properties, namely:
 
 - it uniquely determines the probability distribution of \(X\).
-- it can be used to find moments of the distribution (if they exist) by differentiating the characteristic function.
+- it can be used to find [[Moment Generating Function|moments]] of the distribution (if they exist) by differentiating the characteristic function.
 - it is always defined for all real numbers \(t\), even when the moments of the distribution do not exist.
 
 We generally use characteristic functions to analyze the distribution of sums of independent random variables, as the characteristic function of a sum is the product of the individual characteristic functions.

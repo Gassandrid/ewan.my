@@ -1,56 +1,43 @@
 ---
-date: 2025-04-09
-updated: 2025-10-15
 class:
   - note
 tags:
-  - math/probability
+  - math/probability/random-variables
 source:
 related:
+  - "[[Exponential Distribution]]"
+  - "[[Conditional Probability]]"
 author:
+description: An exponential waiting time forgets how long it has already run, so the remaining wait has the same distribution as the original.
+aliases:
+  - Memoryless Property
+  - Memorylessness
+date: 2025-04-09
+updated: 2026-11-19T21:50:00-05:00
 ---
-If $X \sim \text{Exponential}(\lambda)$, then:
+
+- if $X \sim \text{Exp}(\lambda)$, having already waited $s$ tells you nothing about the remaining wait
 
 $$
-\begin{align*}
-P(X>s+ | X>s)=P(X>t),\quad \forall s,t≥0 \\
-P(X > s + t \mid X > s) = P(X > t), \quad \forall s, t \geq 0
-\end{align*}
+P(X > s + t \mid X > s) = P(X > t), \quad \forall s, t \ge 0
 $$
 
-The probability that the process continues for at least another $t$ units of time, given it has already lasted $s$, is the same as the original probability of lasting $t$.
-
-**For PDF:**
-
-$$
-f_{X}(x)=\{ 0,x<0f_X(x) = \begin{cases} \lambda e^{-\lambda x}, & x \geq 0 \\ 0, & x < 0 \end{cases}
-$$
-
-**For CDF:**
+	- the [[Exponential Distribution|exponential]] is the **only** continuous distribution like this ( the geometric is the discrete one )
+- proof, using the tail $P(X > x) = 1 - F_X(x) = e^{-\lambda x}$
 
 $$
-P(X>x)=1−FX(x)=e−λxP(X > x) = 1 - F_X(x) = e^{-\lambda x}
+P(X > s + t \mid X > s) = \frac{P(X > s + t)}{P(X > s)} = \frac{e^{-\lambda(s + t)}}{e^{-\lambda s}} = e^{-\lambda t} = P(X > t)
 $$
 
-**Proof:**
+	- the intersection drops out because $X > s + t$ already implies $X > s$
+- fits the waiting times between events in Poisson problems: radioactive decays, customer arrivals, hardware failure
+- example: from 6:00am birds land on a power line, exponential gaps averaging 7.5 minutes, so $\lambda = \frac{1}{7.5} \approx 0.133$
+	- no bird in the last 5 minutes, chance of none in the next 10:
 
 $$
-\begin{align*}
-P(X > s + t ∣ X >s)&=P(X>s+t)P(X>s) \\ &=e− \lambda (s+t)e− \lambda s=e− \lambda t=P(X>t) \\ \\
-
-
-P(X > s + t \mid X > s)
-&= \frac{P(X > s + t)}{P(X > s)} \\
-&= \frac{e^{-\lambda(s + t)}}{e^{-\lambda s}} \\
-&= e^{-\lambda t} = P(X > t)
-
-\end{align*} 
+P(X > 15 \mid X > 5) = P(X > 10) = e^{-10/7.5} = 0.2636
 $$
 
-The exponential distribution is **memoryless** — it "forgets" how much time has passed. It’s the **only** continuous distribution with this property.
-
-This property is ideal for **Poisson** Problems:
-
-- Time between radioactive decays
-- Time between customer arrivals
-- Time until hardware failure
+	- birds expected in the next hour: $\frac{60}{7.5} = 8$, the count $N$ is Poisson with mean 8
+		- exactly 8: $P(N = 8) = \frac{e^{-8} 8^8}{8!} \approx 0.1396$
+		- at least 10: $P(N \ge 10) = 1 - \sum_{k=0}^{9} \frac{e^{-8} 8^k}{k!} \approx 0.2834$

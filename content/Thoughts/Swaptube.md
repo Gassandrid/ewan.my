@@ -2,8 +2,7 @@
 tags:
   - math
   - cs/cpp
-  - seed
-  - software
+  - cs/software
 class:
   - software
 date: 2025-08-31
@@ -21,4 +20,4 @@ image: "[[SwapTubeAnim.png]]"
 
 It was created by [[2swap]] for his elegant videos, and it is written in `C++`.
 
-[![SwapTubeAnim.png](../Attachments/SwapTubeAnim.png)](../Attachments/SwapTubeAnim.png)
+[![SwapTubeAnim.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/898b63f96b3f8352bafd08cde205e71854e4d83817a038bb605c9d955363c177/SwapTubeAnim.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/898b63f96b3f8352bafd08cde205e71854e4d83817a038bb605c9d955363c177/SwapTubeAnim.png)

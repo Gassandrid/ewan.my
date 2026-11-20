@@ -37,8 +37,7 @@ associated-disorders:
   - vegetative states
   - sleep disorders (insomnia, narcolepsy)
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The reticular formation is a diffuse network of nuclei threaded through the brainstem core, spanning midbrain to medulla. The ascending reticular activating system (ARAS) projects broadly to the [[Thalamus]] and cortex, maintaining wakefulness and modulating attention. Bilateral lesions cause coma.

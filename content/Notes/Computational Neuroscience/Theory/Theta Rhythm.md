@@ -14,7 +14,7 @@ source:
 ---
 Recently, there have been some significant advancements in decoding the hippocampus, and how it is involved in memory. This is a very complex structure, and it is not yet fully understood. However, we do know that the hippocampus is involved in the formation of new memories, and the retrieval of old ones.
 
-More specifically, looking at the brain's internal clock, the **Theta Rhythm** is a very interesting phenomenon. This is a brain wave that is present in the hippocampus, and it is associated with [[Memory Formation]] and retrieval. We believe that the theta rhythm is a clock that helps the brain to organize memories in time.
+More specifically, looking at the brain's internal clock, the **Theta Rhythm** is a very interesting phenomenon. This is a brain wave that is present in the [[hippocampus]], and it is associated with [[Memory Formation]] and retrieval. We believe that the theta rhythm is a clock that helps the brain to organize memories in time.
 
 ---
 
@@ -22,13 +22,13 @@ More specifically, looking at the brain's internal clock, the **Theta Rhythm** i
 
 Let's start by coming to understand what the brains internal waves actually are.
 
-**Brain Waves** were first discovered in the 1920s by a German psychiatrist named Hans Berger. He discovered that the brain emits electrical signals, and that these signals can be measured using an **Electroencephalogram (EEG)**, essentially some electrodes attached to someone's head. This is a device that measures the electrical activity of the brain.
+**Brain Waves** were first discovered in the 1920s by a German psychiatrist named Hans Berger. He discovered that the brain emits electrical signals, and that these signals can be measured using an **Electroencephalogram ([[On Doing EEG Work|EEG]])**, essentially some electrodes attached to someone's head. This is a device that measures the electrical activity of the brain.
 
 What was shown was several different oscillating patterns, which we now call **Brain Waves**. These waves are classified by their frequency, and they are associated with different states of consciousness.
 
 At this point in history, we know quite a lot about the different kinds of brain waves, and the frequencies that they operate at. For example, **Delta Waves** are associated with deep sleep, **Alpha Waves** are associated with relaxation, and **Beta Waves** are associated with alertness.
 
-[![Pasted image 20250324102549.png](../../../Attachments/Pasted%20image%2020250324102549.png)](../../../Attachments/Pasted%20image%2020250324102549.png)
+[![Pasted image 20250324102549.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7c25ff32b685665f6cf13a68e67d85a556c37bef6cd160fc4c6ca6aab3591a5d/Pasted%20image%2020250324102549.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7c25ff32b685665f6cf13a68e67d85a556c37bef6cd160fc4c6ca6aab3591a5d/Pasted%20image%2020250324102549.png)
 
 But for this note, we are interested in the **Theta Rhythm**. This is a wave that operates at a frequency of around 4-8 Hz, and it is associated with the hippocampus.
 
@@ -42,9 +42,9 @@ It is measured by sticking an electrode inside the hippocampus and measure the v
 
 This voltage arises out of the summation of currents of neurons, reflecting synchronous synaptic inputs.
 
-That is, when **one neuron** sends information to another through synapses.
+That is, when **one neuron** sends information to another through [[synapses]].
 
-[![Screenshot 2025-02-03 at 1.53.13 PM.png](../../../Attachments/Screenshot%202025-02-03%20at%201.53.13%20PM.png)](../../../Attachments/Screenshot%202025-02-03%20at%201.53.13%20PM.png)
+[![Screenshot 2025-02-03 at 1.53.13 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/03a54274a791d88ad3949d9418c20149b5a10ce250b0c20e96b8db32ecce2b2d/Screenshot%202025-02-03%20at%201.53.13%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/03a54274a791d88ad3949d9418c20149b5a10ce250b0c20e96b8db32ecce2b2d/Screenshot%202025-02-03%20at%201.53.13%20PM.png)
 
 In the case where there is a large number of neurons surrounding this electrode, and they are constantly sending signals simultaneously, then these individual currents **add up**, leading to the voltage becoming strong enough to be sensed by external electrode.
 
@@ -55,7 +55,7 @@ This special rhythm is generated in a special structure, called the [[Medial Sep
 
 These special neurons have some special proteins called [[Hyperpolarization Activated Channels]](HCNs), which allow Ions to flow into the cell at a regulated time interval, generating this rhythmic pattern.
 
-[![Screenshot 2025-03-26 at 12.07.01 PM.png](../../../Attachments/Screenshot%202025-03-26%20at%2012.07.01%20PM.png)](../../../Attachments/Screenshot%202025-03-26%20at%2012.07.01%20PM.png)
+[![Screenshot 2025-03-26 at 12.07.01 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d2001ff1c511f6897fe1a8d6a87ca7841efa5619806d099f3851d4efbc622c8c/Screenshot%202025-03-26%20at%2012.07.01%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d2001ff1c511f6897fe1a8d6a87ca7841efa5619806d099f3851d4efbc622c8c/Screenshot%202025-03-26%20at%2012.07.01%20PM.png)
 
 > [!Important] Fun Fact
 > These are the same proteins that your heart uses to regulate its beating rhythm.
@@ -71,7 +71,7 @@ In this scenario, it would mean that the hippocampus, much like a well trained o
 
 Goutagny Et al.[^1] found that rhythmic activity arises due to the interactions between excitatory and inhibitory neurons, through a negative feedback loop.
 
-[![Screenshot 2025-03-26 at 12.18.34 PM.png](../../../Attachments/Screenshot%202025-03-26%20at%2012.18.34%20PM.png)](../../../Attachments/Screenshot%202025-03-26%20at%2012.18.34%20PM.png)
+[![Screenshot 2025-03-26 at 12.18.34 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/75e0804f97bef0050bf9ffbd2e45b53c354e6f09b074cce34ce7b76508d8a7fa/Screenshot%202025-03-26%20at%2012.18.34%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/75e0804f97bef0050bf9ffbd2e45b53c354e6f09b074cce34ce7b76508d8a7fa/Screenshot%202025-03-26%20at%2012.18.34%20PM.png)
 
 [^2]
 
@@ -79,7 +79,7 @@ It is quite an elegant mechanism, however a tad bit complex for an introduction 
 
 Aside from that quick detour, let us assume that for the most part, the [[Medial Septum]] is responsible for the beat generation for the [[Hippocampus]]. Even though the hippocampus does have an **intrinsic oscillator** within, a bulk of the computation will come from the **upstream oscillation** of the medial septum.
 
-[![Screenshot 2025-03-26 at 12.29.47 PM.png](../../../Attachments/Screenshot%202025-03-26%20at%2012.29.47%20PM.png)](../../../Attachments/Screenshot%202025-03-26%20at%2012.29.47%20PM.png)
+[![Screenshot 2025-03-26 at 12.29.47 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/66d4081a979cd1446732be701452cb5a2d2409a26a1e8d17a1aa24c15813c92e/Screenshot%202025-03-26%20at%2012.29.47%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/66d4081a979cd1446732be701452cb5a2d2409a26a1e8d17a1aa24c15813c92e/Screenshot%202025-03-26%20at%2012.29.47%20PM.png)
 
 ---
 
@@ -99,7 +99,7 @@ But when this animal starts engaging in an activity such as running or for the s
 
 For the purpose of explaining what he means here, let's think of a [[Notes/Computational Neuroscience/Theory/Memory]] as a **temporal** sequence of neuronal patterns activating one after another. Each one of these patterns is a **collection** of neuronal assemblies, which together form an **integrated representation** of the world.
 
-[![Screenshot 2025-04-05 at 2.43.48 PM.png](../../../Attachments/Screenshot%202025-04-05%20at%202.43.48%20PM.png)](../../../Attachments/Screenshot%202025-04-05%20at%202.43.48%20PM.png)
+[![Screenshot 2025-04-05 at 2.43.48 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/77189e7e0ec0a8904a61459460d29609c40fe213410421104312ad66abb60f1b/Screenshot%202025-04-05%20at%202.43.48%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/77189e7e0ec0a8904a61459460d29609c40fe213410421104312ad66abb60f1b/Screenshot%202025-04-05%20at%202.43.48%20PM.png)
 
 This "integrated representation" has the feature of encoding different modalities of a given experience.
 
@@ -113,13 +113,13 @@ A great example of this is another video made by Artem(which I plan on writing a
 
 However, the [[Hippocampus]] has been shown to encode much more than just spatial variables, things like **sound frequencies**, and even the **identities** of certain people(in the case of humans at the least).
 
-These all come together to form a modality rich experience that represents all of the different sources of information for a given episodic memory.
+These all come together to form a modality rich experience that represents all of the different sources of information for a given [[episodic memory]].
 
 But to form an integrated representation for the external world, the brain has the problem of **unifying** these different modalities into a single "picture". **Theta Rhythm** has the purpose of ensuring that all these separate components link together to form a unified memory.
 
 In addition to the "assembly" of a unified memory, another problem that the brain has to solve is the arrangement of these instantaneous representations into a meaningful **temporal sequence**, to form a meaningful memory which unfolds in time.
 
-[![Screenshot 2025-04-05 at 3.19.03 PM.png](../../../Attachments/Screenshot%202025-04-05%20at%203.19.03%20PM.png)](../../../Attachments/Screenshot%202025-04-05%20at%203.19.03%20PM.png)
+[![Screenshot 2025-04-05 at 3.19.03 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/53c138efbc268d05611bf663828b2ac1efb3944aa4f06d064694861874503462/Screenshot%202025-04-05%20at%203.19.03%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/53c138efbc268d05611bf663828b2ac1efb3944aa4f06d064694861874503462/Screenshot%202025-04-05%20at%203.19.03%20PM.png)
 
 This so-called **sequence organization**(a one dimensional process) is vital for [[Spacial Navigation]], as each trajectory/path is made up of a sequence of activated place cells. But it is also vital for **episodic memory** in general. Theta Rhythm helps in the process of forming these "chains of representation", ensuring the correct temporal order.
 
@@ -141,16 +141,16 @@ One way is to agree on the place to meet like they did, and then occasionally vi
 
 A more intuitive way to us is to **agree on a time** in advance. If they both know that they are meeting each other at _1pm_ tomorrow at their favorite coffee shop, there is no ambiguity left. In layman terms, even if they don't communicate directly, they can use an **external factor**, in the form of time, which they both have access to in order to **coordinate** their arrival.
 
-[![Screenshot 2025-04-06 at 4.16.18 PM.png](../../../Attachments/Screenshot%202025-04-06%20at%204.16.18%20PM.png)](../../../Attachments/Screenshot%202025-04-06%20at%204.16.18%20PM.png)
+[![Screenshot 2025-04-06 at 4.16.18 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e3858c14553f9295cb574f132f082ce38ebc6e1bab70f69567a06d00db0808bc/Screenshot%202025-04-06%20at%204.16.18%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e3858c14553f9295cb574f132f082ce38ebc6e1bab70f69567a06d00db0808bc/Screenshot%202025-04-06%20at%204.16.18%20PM.png)
 
 > [!Abstract] Note
 > In the ancient times before clocks were around, people used the position of the sun for the exact same purpose
 
 In the [[Hippocampus]], the Theta Rhythm, and in particular it's **phase**(between $0^\circ$ and $360^\circ$) is used as this so called "clock". An **external agent"**, which all [[Neuron]]s can listen to, and coordinate their spiking activity.
 
-[![Screenshot 2025-04-06 at 4.50.54 PM.png](../../../Attachments/Screenshot%202025-04-06%20at%204.50.54%20PM.png)](../../../Attachments/Screenshot%202025-04-06%20at%204.50.54%20PM.png)
+[![Screenshot 2025-04-06 at 4.50.54 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/68da1b48629acdd9cd156291748287f52830c431abb552b529e97c54df2afa88/Screenshot%202025-04-06%20at%204.50.54%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/68da1b48629acdd9cd156291748287f52830c431abb552b529e97c54df2afa88/Screenshot%202025-04-06%20at%204.50.54%20PM.png)
 
-Because, for the brain to "link" assemblies together(such as ones representing **where** and **with whom**), spikes from their neurons should arrive at the receiver neuron in a very small time window, with a very short interval between each other. That way, theta oscillation provides a **temporal reference** which can be used by neurons to adjust the timings of their spikes in order to caryr out information transfer more effectively.
+Because, for the brain to "link" assemblies together(such as ones representing **where** and **with whom**), [[Action Potentials|spikes]] from their neurons should arrive at the receiver neuron in a very small time window, with a very short interval between each other. That way, theta oscillation provides a **temporal reference** which can be used by neurons to adjust the timings of their spikes in order to caryr out information transfer more effectively.
 
 The reason why theta rhythm activates during exploratory behavior(running, etc), is that spacial behavior needs navigation and memory encoding. For this reason, our brain requires that we constantly form **integrated representations** of environments.
 
@@ -175,14 +175,14 @@ To achieve this **chaining of assemblies**, there are two possible mechanisms we
 >
 > In that case, visual information, which is organized as a succesion of changing colors, evokes a chain corresponding representations in the brain
 >
-> [![Screenshot 2025-04-06 at 7.09.12 PM.png](../../../Attachments/Screenshot%202025-04-06%20at%207.09.12%20PM.png)](../../../Attachments/Screenshot%202025-04-06%20at%207.09.12%20PM.png)
+> [![Screenshot 2025-04-06 at 7.09.12 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/60342311d1e1dd67819cc4be8473b32ef532b3951e52aaad1fd1cc4f161e42de/Screenshot%202025-04-06%20at%207.09.12%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/60342311d1e1dd67819cc4be8473b32ef532b3951e52aaad1fd1cc4f161e42de/Screenshot%202025-04-06%20at%207.09.12%20PM.png)
 
 2. The alternative and much more interesting option is that of the **internally generated** sequences. This would likely emerge when there are little to no incoming sensory information, and thus it is left up to the brain to organize sequentially
 
 > [!Example]
 > Imagine if that same mouse has sat to lie down with its eyes closed, and is trying to recall the experience of walking through that rainbow gradient corridor. In this case, the sequence representation has to be generated by the brain itself. Connectivity patterns and synaptic strengths between members of the assembly itself. Aka, if the activation of the first assembly leads to the second, and so on and so fourth.
 >
-> [![Screenshot 2025-04-06 at 7.20.02 PM.png](../../../Attachments/Screenshot%202025-04-06%20at%207.20.02%20PM.png)](../../../Attachments/Screenshot%202025-04-06%20at%207.20.02%20PM.png)
+> [![Screenshot 2025-04-06 at 7.20.02 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/94e786fec2e3bdfcabd1d4ff983da08e0ad7f9facdc4c82b6bcf8685a81d09fe/Screenshot%202025-04-06%20at%207.20.02%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/94e786fec2e3bdfcabd1d4ff983da08e0ad7f9facdc4c82b6bcf8685a81d09fe/Screenshot%202025-04-06%20at%207.20.02%20PM.png)
 
 ^4f4e3b
 
@@ -199,7 +199,7 @@ Let's put this in better terms by returning to the [[Theta Rhythm#^85a4a4|cafe e
 
 In this case, just like we saw before, **time serves to coordinate arrivals of individuals** within a couple. But, at the same time, **external clock** is used to separate different sessions in time, to ensure they happen one after another in a well defined order.
 
-[![Screenshot 2025-04-07 at 9.46.48 AM.png](../../../Attachments/Screenshot%202025-04-07%20at%209.46.48%20AM.png)](../../../Attachments/Screenshot%202025-04-07%20at%209.46.48%20AM.png)
+[![Screenshot 2025-04-07 at 9.46.48 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2cef15cba6b42113c35495b6dc0f84c5c6fbfb10a057f6abba6504fc007338b4/Screenshot%202025-04-07%20at%209.46.48%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2cef15cba6b42113c35495b6dc0f84c5c6fbfb10a057f6abba6504fc007338b4/Screenshot%202025-04-07%20at%209.46.48%20AM.png)
 
 Otherwise, it would be somewhat awkward if _all_ the couples showed up for their session at the same time.
 
@@ -213,25 +213,25 @@ Because neurons adjust timings of their spikes to the ticking of the [[Hippocamp
 
 We have already talked about how a **path** through an environment can be represented sequence of [[Place Cells|place cell]] activations(the specialized neurons that encode physical location and subsequent behavior).
 
-Each of those cells has a preffered patch of ground, called the **place field**, where if fires most actively.
+Each of those [[Place Cells|cells]] has a preffered patch of ground, called the **place field**, where if fires most actively.
 
 When the animal enters the place field, reaches center, and leaves it, the **firing rate**(see [[1.2 - Spike Trains and Firing Rates|textbook]]) of that neuron would gradually increase. In reaches its maximum value at the **center** of the place field, and then gradually decreases.
 
-[![Screenshot 2025-04-09 at 4.26.15 PM.png](../../../Attachments/Screenshot%202025-04-09%20at%204.26.15%20PM.png)](../../../Attachments/Screenshot%202025-04-09%20at%204.26.15%20PM.png)
+[![Screenshot 2025-04-09 at 4.26.15 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e8daa1c68818222b9fa2bc630e475fd63d36575f0c7432ae6f727de8947f9b6c/Screenshot%202025-04-09%20at%204.26.15%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e8daa1c68818222b9fa2bc630e475fd63d36575f0c7432ae6f727de8947f9b6c/Screenshot%202025-04-09%20at%204.26.15%20PM.png)
 
 This phenomenon is what we like to call **Rate Coding**, where the information about the position is directly encoded in whatever neuron is currently spiking, and the **firing rate** of said neuron.
 
-[![Screenshot 2025-04-09 at 4.28.20 PM.png](../../../Attachments/Screenshot%202025-04-09%20at%204.28.20%20PM.png)](../../../Attachments/Screenshot%202025-04-09%20at%204.28.20%20PM.png)
+[![Screenshot 2025-04-09 at 4.28.20 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ab358ead89f4db88886efd27883876dc906e6e664aecaecb0e5c8c57ab3b1f5d/Screenshot%202025-04-09%20at%204.28.20%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ab358ead89f4db88886efd27883876dc906e6e664aecaecb0e5c8c57ab3b1f5d/Screenshot%202025-04-09%20at%204.28.20%20PM.png)
 
 However, it turns out that the phase of **Theta Rhythm** at which these neurons spike also plays a role in the information transfer. This is known as **phase coding**.
 
 More specifically, if one was to record the activity of individual neurons in addition to the surrounding Theta Rhythm, you would notice some very bizarre behavior. As the neuron moves through the place field of a neuron, its spikes would occur at early and earlier phases of Theta.
 
-[![Screenshot 2025-04-09 at 4.31.48 PM.png](../../../Attachments/Screenshot%202025-04-09%20at%204.31.48%20PM.png)](../../../Attachments/Screenshot%202025-04-09%20at%204.31.48%20PM.png)
+[![Screenshot 2025-04-09 at 4.31.48 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ed13dc242d0fd03c4c1e518486179bd8ee2d4a86732bf037d92a799731123fda/Screenshot%202025-04-09%20at%204.31.48%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ed13dc242d0fd03c4c1e518486179bd8ee2d4a86732bf037d92a799731123fda/Screenshot%202025-04-09%20at%204.31.48%20PM.png)
 
 It gets even more interesting when you consider this **Phase. Precession** when accounting for multiple neurons. If you look at how multiple place cells **spike** relative to each other, you will see that the **order of spikes** within one **Theta Cycle**(The time window between two peaks) **Recapitulates** the exact order of place fields on the portion of the trajectory.
 
-[![Screenshot 2025-04-09 at 4.36.17 PM.png](../../../Attachments/Screenshot%202025-04-09%20at%204.36.17%20PM.png)](../../../Attachments/Screenshot%202025-04-09%20at%204.36.17%20PM.png)
+[![Screenshot 2025-04-09 at 4.36.17 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cc37eff30e60a7c618d3fc9d8e885c9719df35bb44403311511cd8019e5d5b33/Screenshot%202025-04-09%20at%204.36.17%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cc37eff30e60a7c618d3fc9d8e885c9719df35bb44403311511cd8019e5d5b33/Screenshot%202025-04-09%20at%204.36.17%20PM.png)
 
 Looking at this visualization, you will notice that there the most overlap at the exact center of the "red" spike firing rate. This peak firing rate is observed at the **trough**(valley) of the Theta wave, at around the $180^{\circ}$ mark.
 
@@ -239,7 +239,7 @@ The "recent past" place cells of yellow is gradually shifted to the left as time
 
 Subsequently, the place cells that are just at the beginning of their firing arc represent the **near future** neuronal spikes at the $360^{\circ}$ mark.
 
-[![Screenshot 2025-04-09 at 4.58.28 PM.png](../../../Attachments/Screenshot%202025-04-09%20at%204.58.28%20PM.png)](../../../Attachments/Screenshot%202025-04-09%20at%204.58.28%20PM.png)
+[![Screenshot 2025-04-09 at 4.58.28 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a92ce9b4d9b5607657f544ddf55ac1113f0b91bab258ddde4add012a03c30970/Screenshot%202025-04-09%20at%204.58.28%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a92ce9b4d9b5607657f544ddf55ac1113f0b91bab258ddde4add012a03c30970/Screenshot%202025-04-09%20at%204.58.28%20PM.png)
 
 This way, every cycle of **Theta** bears some sort of information about the past, present, and future, in proper order. As the animal moves and Theta Rhythm progresses, the representations would shift accordingly along the wave to maintain this "time-phase" relationship.
 

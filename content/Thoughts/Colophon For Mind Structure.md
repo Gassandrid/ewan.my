@@ -1,6 +1,6 @@
 ---
 date: 2026-03-30T18:44:51-04:00
-updated: 2026-07-13T19:15:24-07:00
+updated: 2026-11-19T19:45:00-05:00
 class:
   - note
 tags:
@@ -27,7 +27,7 @@ Beyond making latex faster than handwritten math, provides a great engine for in
 
 **Zotero Integration**
 
-If you work with any kind of academic papers this is one of the most useful features of obsidian. Read papers and annotate with zotero, auto import into obsidian extracting all important properties. You can then query with an obsidian base.
+If you work with any kind of academic papers this is one of the most useful features of obsidian. Read papers and annotate with [[Zotero|zotero]], auto import into obsidian extracting all important properties. You can then query with an obsidian base.
 
 **Linter**
 
@@ -51,6 +51,9 @@ I do a lot of data science, and thus having time series data for my notes is a m
 
 Bordering on not being that useful because the author is paywalling a lot of features, but this provides simple semantic search [[Cosine Similarity]] for any given note.
 
+>[!Warning] [[11-19-2026]] Update
+> uninstalled. semantic search runs through [QMD](https://github.com/tobi/qmd) now, the same index my agents use through the vault cli, so there is one embedding system instead of two.
+
 ##### Nitpicks
 
 **Omnisearch**
@@ -65,6 +68,9 @@ Browser style `ctrl+tab` switching, where it is treated as a "most recent" stack
 
 i don't think its that useful, most templates I have are just front matter properties
 
+>[!Warning] [[11-19-2026]] Update
+> uninstalled, core templates is enough when templates are just frontmatter.
+
 **ActivityWatch**
 
 for working with the [[ActivityWatch]] computer usage daemon.
@@ -72,6 +78,9 @@ for working with the [[ActivityWatch]] computer usage daemon.
 **JupyMd**
 
 I dont use this that much, but if I have python codeblocks that are runnable on my website this is a good place to do it. Also converts jupyter notebooks to markdown, a much more token efficient format.
+
+>[!Warning] [[11-19-2026]] Update
+> uninstalled, runnable notebooks are marimo now ( marimo notes plugin ).
 
 **Maps**
 
@@ -132,7 +141,7 @@ Arc/Zen style tabs, nice for me so I can hide/unhide when I please.
 
 ##### Theme
 
-I use **primary** as it was easiest to make in [[My Design Palette]], I would also recommend minimal if you like [[Neovim]]. See my snippet for making primary different.
+I use **primary** as it was easiest to make in [[Philosophy of design]], I would also recommend minimal if you like [[Neovim]]. See my snippet for making primary different.
 
 ### Snippets
 
@@ -267,6 +276,14 @@ I use **primary** as it was easiest to make in [[My Design Palette]], I would al
 
 ### Workflow
 
+>[!Warning] [[11-19-2026]] Update
+> the bigger workflow changes since this was written:
+> - [[Digesting my Scrapbook]]: clippings worth thinking about get digested into real notes ( `class:note` on top of their old class ), the resources folder is a scrapbook not a graveyard
+> - [[Self reported data via phone app]]: supplements, meals and habits left the daily note for a timestamped phone app, retiring [[Habit Tracking Via Daily Note]]
+> - [[When to store content in vault vs links in notes]]: store content I consume fully and return to, bare url for evidence
+> - [[Uncreated Notes]] are ranked by the [[Emergent Links]] plugin now, which also replaced [[Adopting the seed and sapling for notes|seed and sapling]] tags - hierarchy emerges from the graph
+> - [[Tasknotes in my workflow|tasknotes]] and [[Setting Up the Idea of Captures|captures]] are fully gone, inbox + [[Write Stub Notes|stub notes]] + [[Homepage]]
+
 #### Inbox and Task Management
 
 [[Using an Inbox System]] - this is by far the simplest and most ideal way to manage tasks. I think that [[Tasknotes in my workflow]] no longer works for me, as it is simply overcomplex and reduces productivity, I dont need 6 kanban boards for my kind of work.
@@ -283,9 +300,9 @@ Please take note that for an inbox system to work, you must utilize [[Using an I
 
 #### Timeseries and Daily Notes
 
-Bit harder and less straightforward. Using the `git` plugin along with some LLM analysis ( easiest way to go about it, you could do without if you are ok with the time sink ), you can get a better feel for how your notes/habits change over time. I myself made a simple MCP server to complement the obsidian cli for an agent that allows it to see topic topology via total # git diffs for notes with a certain tag:
+Bit harder and less straightforward. Using the `git` plugin along with some [[Large Language Model|LLM]] analysis ( easiest way to go about it, you could do without if you are ok with the time sink ), you can get a better feel for how your notes/habits change over time. I myself made a simple MCP server to complement the obsidian cli for an agent that allows it to see topic topology via total # git diffs for notes with a certain tag:
 
-[![tagFiringRates.png](../Attachments/tagFiringRates.png)](../Attachments/tagFiringRates.png)
+[![tagFiringRates.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/02d7754c98960e4db195daa302098934894b66564cc1b9bbd33a5a5c6a386035/tagFiringRates.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/02d7754c98960e4db195daa302098934894b66564cc1b9bbd33a5a5c6a386035/tagFiringRates.png)
 
 But the better way to do this is to use links to daily notes excessively. [[Note updates as links to daily notes]] covers this, but essentially you encode the timeseries nature of returning to old notes as headings with a link to the day you made that change. This has the advantage of allowing you to go back to a certain daily note and see the backlinks as what you did.
 
@@ -368,7 +385,7 @@ local speech-to-text daemon built on NVIDIA's NeMo Parakeet model, running via M
 
 i lowkey vibe coded this one day out of spite for the fact that whispr flow DOESNT RUN ON DEVICE!?!?!?!?! This runs basically just as fast/good, and is completely local. Assumes you are on a macbook like me though.
 
-uses the `parakeet-mlx` python lib, the MLX port of NVIDIA's `parakeet-tdt-1.1b`, runs fully on the neural engine. Fast enough that streaming transcription during recording is practical.
+uses the `parakeet-mlx` python lib, the MLX port of NVIDIA's `parakeet-tdt-1.1b`, runs fully on the neural engine. Fast enough that streaming [[On Transcribing Audio Recordings|transcription]] during recording is practical.
 
 **Usage convention**: voicenotes get logged with the standard callout:
 
@@ -385,7 +402,7 @@ This marks machine-transcribed content so you know the origin when reviewing lat
 
 Still a work in progress, but I am working on extending this towards spatial microphone arrays for more complex interaction modeling. If you can set this up in your house, this is one of the easiest ways to improve the heuristic of your higher level cognition model. I started this on work for the [[UVM Glass Brain Lab]], but the transcription work can be taken anywhere.
 
-**What it is**: the [[(archived) reSpeaker 4 Mic Array]] is a circular USB mic array with 4 directional microphones. Combined with speaker diarization (determining who said what from spatial audio cues), it produces conversation logs with speaker attribution rather than just a flat transcript.
+**What it is**: the [[(archived) reSpeaker 4 Mic Array]] is a circular USB mic array with 4 directional microphones. Combined with speaker [[Diarization|diarization]] (determining who said what from spatial audio cues), it produces conversation logs with speaker attribution rather than just a flat transcript.
 
 **Pipeline**: `reSpeaker` → raw multi-channel audio → `claude-parakeet-speaker-diarization` → transcribed, diarized JSON/SQLite with `spoken-by` annotations per segment.
 
@@ -395,11 +412,11 @@ Still a work in progress, but I am working on extending this towards spatial mic
 
 ### EEG
 
-I use the [[BrainAccess HALO]], a dry-electrode EEG headband with 4 channels — forehead (Fp1, Fp2) and occipital (O1, O2). 250Hz sampling, Bluetooth, ~$400. No gel, wearable enough for extended sessions.
+I use the [[BrainAccess HALO]], a dry-electrode [[On Doing EEG Work|EEG]] headband with 4 channels — forehead (Fp1, Fp2) and occipital (O1, O2). 250Hz sampling, Bluetooth, ~$400. No gel, wearable enough for extended sessions.
 
 **SDK**: `brainaccess-python` gives you a simple streaming interface. Data comes out as a numpy array at 250Hz; from there it's standard MNE or scipy signal processing.
 
-**ZUNA**: [[Zuna|Zyphra's ZUNA]] is a diffusion VAE foundation model trained on EEG data. Run raw BrainAccess output through it to get denoised, enhanced signals with better spatial resolution than the raw 4-channel recording justifies. Weights on HuggingFace, Python inference. Think of it as the EEG equivalent of a super-resolution model — it uses population-level priors to fill in what 4 electrodes can't directly capture.
+**ZUNA**: [[Zuna|Zyphra's ZUNA]] is a [[Diffusion in Machine Learning|diffusion]] VAE foundation model trained on EEG data. Run raw BrainAccess output through it to get denoised, enhanced signals with better spatial resolution than the raw 4-channel recording justifies. Weights on [[Setting Up Local AI|HuggingFace]], Python inference. Think of it as the EEG equivalent of a super-resolution model — it uses population-level priors to fill in what 4 electrodes can't directly capture.
 
 **Meaningful markers from 4 channels**:
 
@@ -416,7 +433,7 @@ I use the [[BrainAccess HALO]], a dry-electrode EEG headband with 4 channels —
 
 **Practical options for MacBook Pro**:
 
-**Eyeware Beam** — the most pragmatic current solution. Uses your iPhone's TrueDepth camera (the same Face ID sensor) as a research-grade eye tracker. Install the iOS app, the Mac client, and it exposes a gaze stream at 60Hz with ~1-2 degree accuracy. Works with any screen including the built-in display. ~$50/year subscription. Python SDK available. For the Obsidian + computer use pipeline, this is the right choice: always available, no external hardware required, accurate enough for content-level attention tracking.
+**Eyeware Beam** — the most pragmatic current solution. Uses your iPhone's TrueDepth camera (the same Face ID sensor) as a research-grade [[Using an Eye Tracker for more computer data|eye tracker]]. Install the iOS app, the Mac client, and it exposes a gaze stream at 60Hz with ~1-2 degree accuracy. Works with any screen including the built-in display. ~$50/year subscription. Python SDK available. For the Obsidian + computer use pipeline, this is the right choice: always available, no external hardware required, accurate enough for content-level attention tracking.
 
 **Webcam-based gaze estimation** — zero hardware cost, lower accuracy (~3-5 degrees). Useful for coarse attention zones (which part of the screen, which app) rather than precise fixation. Options: `OpenGaze` (GazeML-based, Python), `GazeRecorder` (browser-based). Good for prototyping the analysis pipeline before committing to hardware.
 
@@ -437,7 +454,7 @@ Each layer runs as an independent daemon; integration happens at analysis time v
 | Audio | parakeet + reSpeaker | on-demand / always-on | speech, thoughts, dialogue |
 | Physiology | BrainAccess + ZUNA | 250Hz (sessions) | cognitive mode, load, arousal |
 | Attention | Eyeware Beam / ET5 | 60Hz (sessions) | gaze, fixation, saccade |
-| Content | TRIBE v2 | offline batch | predicted neural fingerprints per stimulus |
+| Content | [[TRIBE v2]] | offline batch | predicted neural fingerprints per stimulus |
 
 The join key across all of them is UTC timestamp. ActivityWatch, EEG, and eye tracking are all timestamped streams. Vault commits give you a lower-frequency but content-rich anchor. The analysis pipeline is just: align on time, build the multi-modal observation vector, feed into whatever latent state model you're running.
 

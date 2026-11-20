@@ -5,7 +5,6 @@ updated: 2025-10-13
 tags:
   - projects
   - cs/python
-  - working/cs
 class:
   - note
 ---
@@ -15,9 +14,9 @@ I have had a lot of fun working with obsidian and its fancy *graph view*, and ho
 
 However, I wanted to try and apply this view to some of the social networks that I use from day to day, perhaps as a tool to visualize my relationships with others.
 
-A friend on discord showed me how he was using Obsidian as a way to catalog his friendships and use it for data science, and this inspired me to try and automate this by scraping services like Discord and Instagram for local friendship connections.
+A friend on [[Compiling all my discord chats|discord]] showed me how he was using Obsidian as a way to catalog his friendships and use it for data science, and this inspired me to try and automate this by scraping services like Discord and [[Instagram]] for local friendship connections.
 
-[![Pasted image 20250224200555.png](../Attachments/Pasted%20image%2020250224200555.png)](../Attachments/Pasted%20image%2020250224200555.png)
+[![Pasted image 20250224200555.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/019b97c406dd9629962a9979cae6c9013486e85a80e1bdf94a57413836e633c0/Pasted%20image%2020250224200555.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/019b97c406dd9629962a9979cae6c9013486e85a80e1bdf94a57413836e633c0/Pasted%20image%2020250224200555.png)
 
 *what a social network graph could look like*
 
@@ -31,7 +30,7 @@ So for this, I decided to have some fun and work with a web scraping library cal
 
 ---
 
-I was able to cobble together a simple selenium python script which accomplished this. Essentially, the process looked something like:
+I was able to cobble together a simple [[Selenium|selenium]] python script which accomplished this. Essentially, the process looked something like:
 
 - open discord website
 - log in
@@ -70,4 +69,4 @@ What this ended up doing is:
 
 and Tada! We have a graph now!
 
-[![preview_graph.png](../Attachments/preview_graph.png)](../Attachments/preview_graph.png)
+[![preview_graph.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/27158d26ca4d1454e6d64d33f539671eda88c94250598e60110d70eed60af0ef/preview_graph.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/27158d26ca4d1454e6d64d33f539671eda88c94250598e60110d70eed60af0ef/preview_graph.png)

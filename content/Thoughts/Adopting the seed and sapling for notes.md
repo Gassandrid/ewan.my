@@ -3,7 +3,6 @@ title: Adopting the seed and sapling for notes
 date: 2025-02-06
 updated: 2026-08-26T10:23:14-07:00
 tags:
-  - seed
 class:
   - note
 source:

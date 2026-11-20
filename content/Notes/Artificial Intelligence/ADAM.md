@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - cs/ai/optimizer
+  - cs/ai/training/optimization
 source:
   - https://arxiv.org/abs/1412.6980
 related:

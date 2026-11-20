@@ -2,7 +2,6 @@
 date: 2025-04-15
 updated: 2025-04-15
 tags:
-  - seed
   - manim
 ---
 From my recent work on my [[Theoretical Neuroscience Textbook]], I have had some fun reimplementing the mathematics as algorithms in an accessible note for everyone else to see. 

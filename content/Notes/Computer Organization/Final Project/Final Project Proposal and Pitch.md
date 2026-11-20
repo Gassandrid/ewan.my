@@ -18,7 +18,7 @@ class: note
     </div>
 </body>
 
-[![Pasted image 20240927213640.png](../../../Attachments/Pasted%20image%2020240927213640.png)](../../../Attachments/Pasted%20image%2020240927213640.png)
+[![Pasted image 20240927213640.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/87e0f3b9e73f120ac38609b1bf2ff893b614c8911e9a74744ac33482ca848011/Pasted%20image%2020240927213640.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/87e0f3b9e73f120ac38609b1bf2ff893b614c8911e9a74744ac33482ca848011/Pasted%20image%2020240927213640.png)
 
 _while this isnt what ours will look like, it sure gave us inspiration_
 
@@ -73,7 +73,7 @@ In addition, DARS will present a simple and expansable interface so that devices
 
 ## Project Detail
 
-This project will involve undertaking the difficult task of training large language models. This is going to be difficult as, even in the smallest of these models, such as the 8B parameter model, the model will be too large to fit on the raspberry pi 5. This will require us to train the model on a more powerful machine, and then convert the model to a smaller size that will fit on the raspberry pi 5.
+This project will involve undertaking the difficult task of training [[Large Language Model|large language models]]. This is going to be difficult as, even in the smallest of these models, such as the 8B parameter model, the model will be too large to fit on the raspberry pi 5. This will require us to train the model on a more powerful machine, and then convert the model to a smaller size that will fit on the raspberry pi 5.
 
 For this, we are planning to rent an Nvidia A100 for a few days to train the model. This will be expensive, but it is necessary for the project to be a success.
 
@@ -81,7 +81,7 @@ For this, we are planning to rent an Nvidia A100 for a few days to train the mod
 
 This system is going to be much more complicated than we initially thought, as we have to route human natural language through quite a bit of processes before it is turned into a desirable output.
 
-[![Screenshot 2024-09-27 at 7.49.22 PM.png](../../../Attachments/Screenshot%202024-09-27%20at%207.49.22%20PM.png)](../../../Attachments/Screenshot%202024-09-27%20at%207.49.22%20PM.png)
+[![Screenshot 2024-09-27 at 7.49.22 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2738ca39247eb3fe8045f20399c628c3b44fcdb34b18e7693ca1b8d6d71f28b5/Screenshot%202024-09-27%20at%207.49.22%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2738ca39247eb3fe8045f20399c628c3b44fcdb34b18e7693ca1b8d6d71f28b5/Screenshot%202024-09-27%20at%207.49.22%20PM.png)
 
 This diagram shows the flow of data through the system, and how the various components interact with each other. The system will be able to take in audio input, convert that to text, run the text through the language model, and then generate a JSON output. This JSON output will then be processed by the Langroid stack, which will determine what function calls need to be made. The system will then be able to control devices such as lights, and output audio to the user.
 
@@ -98,7 +98,7 @@ While this diagram is quite complex, it is necessary for the system to function 
 For the chassis, we want to create something that looks similar in appearance to TARS, but we do not have the robotics expertise to make it functional. The Black block will server as a small screen to debug and provide further insight into what the system is doing. The Lights on the top will represent options like if DARS is currently listening, if a certain setting is enabled, and what it is currently thinking. This will also include some simple switches, to toggle listening and other options you need easy access to.
 
 **Our Rough Design**
-[![Screenshot 2024-09-27 at 8.17.08 PM.png](../../../Attachments/Screenshot%202024-09-27%20at%208.17.08%20PM.png)](../../../Attachments/Screenshot%202024-09-27%20at%208.17.08%20PM.png)
+[![Screenshot 2024-09-27 at 8.17.08 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8f2cdee0b39887e16f343e6076e8b36652d93194c2fb492a0b09a83fad372a59/Screenshot%202024-09-27%20at%208.17.08%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8f2cdee0b39887e16f343e6076e8b36652d93194c2fb492a0b09a83fad372a59/Screenshot%202024-09-27%20at%208.17.08%20PM.png)
 
 **TARS from Interstellar, for comparison**
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*cUU7WTMtIv1i4xUf3eyx4g.jpeg" alt="TARS from Interstellar, for comparrison" style="width: 50%;">
@@ -109,7 +109,7 @@ Keep in mind, this is also a very rough sketch of the model. We are by no means 
 
 ### Software Design Choices
 
-**Language Model**: We chose to use Ollama 3.1 for this project. This is because Ollama is an open source language model that is based on the GPT-3 architecture. Ollama is known for packing the best accuracy for its size, and it is also known for being easy to fine tune. This makes it a great choice for this project, as we will need to fine tune the model to understand human natural language, function calling, and to have a sense of humor.
+**Language Model**: We chose to use Ollama 3.1 for this project. This is because Ollama is an open source language model that is based on the GPT-3 architecture. Ollama is known for packing the best accuracy for its size, and it is also known for being easy to fine tune. This makes it a great choice for this project, as we will need to fine tune the model to understand human natural language, [[function calling]], and to have a sense of humor.
 
 **Speech Synthesis**: We will be using Coqui TTS for this project, as it is open source, lightweight, and supports voice cloning well enough to mimic the voice of TARS. This will allow us to generate audio output that sounds like TARS, which will be important for the project.
 
@@ -157,7 +157,7 @@ Once we have the hardware side of things complete, there is not much else to imp
 
 **Gantt Chart**:
 
-[![Screenshot 2024-09-27 at 7.57.22 PM.png](../../../Attachments/Screenshot%202024-09-27%20at%207.57.22%20PM.png)](../../../Attachments/Screenshot%202024-09-27%20at%207.57.22%20PM.png)
+[![Screenshot 2024-09-27 at 7.57.22 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6287159040feec6cb6d9b02e81cf4aea7f0461a8eff946c4f86caa11e540433b/Screenshot%202024-09-27%20at%207.57.22%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6287159040feec6cb6d9b02e81cf4aea7f0461a8eff946c4f86caa11e540433b/Screenshot%202024-09-27%20at%207.57.22%20PM.png)
 
 This Gantt chart gives us a rough estimation of our timeline for the project. There is a lot of empty space, but that it because of how unpredictable the troubleshooting in this field can be. The model training may end up being the easiest part, or we could reach a block that could hold us back weeks.
 
@@ -179,7 +179,7 @@ While this project itself is mainly geared towards people like me, who enjoy the
 
 Up until this point, voice assistants have been... well... pretty much useless. Yes, you could ask it to play a song or send a text, but anything more complicated or uniquely phrased, they had no idea how to handle.
 
-This project paves the way for a real home assistant that can bridge the gap between human language and the devices in our living areas that we want to control. Translating from natural language to a discrete output is an untapped market with a huge potential to create the virtual assistants we all dreamed of. And with the open source nature of the project, it is easy to see how this could be implemented in a wide variety of devices.
+This project paves the way for a real [[home assistant]] that can bridge the gap between human language and the devices in our living areas that we want to control. Translating from natural language to a discrete output is an untapped market with a huge potential to create the virtual assistants we all dreamed of. And with the open source nature of the project, it is easy to see how this could be implemented in a wide variety of devices.
 
 By building a system that successfully links human natural language to home control, we hope that process can be replicated to other factors of life, where human language is the most efficient way to interface with a system. Cases where advanced machines exists, but are not able to be controlled by a human, are where this technology will shine, as it can make any system more user friendly.
 
@@ -203,4 +203,4 @@ For speech synthesis, Coqui TTS gives us voice cloning and strong voice replicat
 
 - _unslothai/unsloth_. (2024, January 12). GitHub. https://github.com/unslothai/unsloth
 
-For fine tuning the ollama language models, provides some tooling to do it much more efficiently.
+For [[Supervised Fine Tuning|fine tuning]] the ollama language models, provides some tooling to do it much more efficiently.

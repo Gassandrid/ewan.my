@@ -10,9 +10,9 @@ author:
 
 ## Maximum Bipartite Matching: Maxflow Solution
 
-Given the bipartite graph(*Figure 1*) shown below that we used in class, solve the problem of finding a maximum matching by reducing the problem to a maximum flow finding problem. Specifically, show the resulting flow network and residual graph after finding the maximum flow (using the basic Ford-Fulkerson algorithm). The flow network should show on every edge the flow value assigned and the capacity (e.g., f/c) and the residual graph should show on every edge the residual capacity. Additionally, write the maximum flow value and the minimum cut (e.g., ($\{ s,a,b,c \}, \{ d,e,t \}$) resulting from the algorithm. Note the flow values on the individual edges of the flow network may vary a bit depending on the augmenting paths found randomly during the execution of the algorithm, but the maximum flow value is certainly the same and the minimum cut found is observably the same, too.
+Given the [[Bipartite Graphs|bipartite]] graph(*Figure 1*) shown below that we used in class, solve the problem of finding a maximum matching by reducing the problem to a maximum flow finding problem. Specifically, show the resulting flow network and residual graph after finding the maximum flow (using the basic Ford-Fulkerson algorithm). The flow network should show on every edge the flow value assigned and the capacity (e.g., f/c) and the residual graph should show on every edge the residual capacity. Additionally, write the maximum flow value and the minimum cut (e.g., ($\{ s,a,b,c \}, \{ d,e,t \}$) resulting from the algorithm. Note the flow values on the individual edges of the flow network may vary a bit depending on the augmenting paths found randomly during the execution of the algorithm, but the maximum flow value is certainly the same and the minimum cut found is observably the same, too.
 
-[![helpme.png](../../../Attachments/helpme.png)](../../../Attachments/helpme.png)
+[![helpme.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5c505117c845e7b88629bbc9a239d38f9c33d60926469ac316f3a69c32919e28/helpme.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5c505117c845e7b88629bbc9a239d38f9c33d60926469ac316f3a69c32919e28/helpme.png)
 
 ### Initial Bipartite Graph Edges
 

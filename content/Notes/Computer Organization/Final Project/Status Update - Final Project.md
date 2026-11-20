@@ -21,7 +21,7 @@ class: note
 
 | date      | Name | Role                   | Description                                                        | Time(Hrs) |
 | --------- | ---- | ---------------------- | ------------------------------------------------------------------ | --------- |
-| 9/17/2024 | Ewan | Lead Model Engineer    | Researched LANGROID and function calling                           | 3.5       |
+| 9/17/2024 | Ewan | Lead Model Engineer    | Researched LANGROID and [[function calling]]                           | 3.5       |
 | 9/20      | Ewan | Lead Creative Designer | Browsed open source models for most tunable, choosing Llama 3.1 8b | 1.5       |
 | 9/20      | Ewan | Lead Creative Designer | Simple cad model for the shell                                     | 0.5       |
 
@@ -37,7 +37,7 @@ I should also start looking into online GPU renting solutions, as training the m
 
 ## 4. Challenges
 
-The biggest issue by far is going to be optimization. LLM's require an enormous amount of computer, and even the smallest models on the market (8b parameters) won't run very fast on my Pi alone. For this reason, I will most likely need to purchase a TPU add-on, which adds another layer of complexity and debugging. 
+The biggest issue by far is going to be optimization. [[Large Language Model|LLM]]'s require an enormous amount of computer, and even the smallest models on the market (8b parameters) won't run very fast on my Pi alone. For this reason, I will most likely need to purchase a TPU add-on, which adds another layer of complexity and debugging. 
 
 If this doesn't work out, I always have the fallback of running the models through the cloud, and only interacting with them through API's. 
 

@@ -44,7 +44,7 @@ By the conservation property we can state that at every intermediate node, the t
 
 ### Backward Edges for Ford Fulkerson
 
-The big idea is that we can use the function of residual graphs that have backward edges as a method to repair wrong choices made.
+The big idea is that we can use the function of [[Graphs|residual graphs]] that have backward edges as a method to repair wrong choices made.
 
 When our algorithm makes a suboptimal flow decision along an edge, it can later be undone or reduced by sending flow backward along that edge. This can be defined by:
 
@@ -74,7 +74,7 @@ A minimum cut is represented as a bottleneck in this network being pushed to its
 > 2. Write the final (i.e., maximum) flow value on every edge in the flow network and also write the calculated max flow value and the min cut capacity. Additionally, draw a line showing the minimum cut across the flow network (see the lecture slide for an example). 
 > 3. Draw the final residual graph with all the final residual capacities – both forward and backward – shown on the edges. Additionally, draw a line surrounding the nodes reached from the source node s at the end of the algorithm execution (see the demo slide for an example).
 > 
-> [![Screenshot 2025-11-14 at 10.41.49 PM.png](../../../Attachments/Screenshot%202025-11-14%20at%2010.41.49%20PM.png)](../../../Attachments/Screenshot%202025-11-14%20at%2010.41.49%20PM.png)
+> [![Screenshot 2025-11-14 at 10.41.49 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a1e22a123d073b8f8818938048f64b9b0cf99f35ffcda59c097c2e3032d0b835/Screenshot%202025-11-14%20at%2010.41.49%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a1e22a123d073b8f8818938048f64b9b0cf99f35ffcda59c097c2e3032d0b835/Screenshot%202025-11-14%20at%2010.41.49%20PM.png)
 
 ### Augmenting Paths
 
@@ -104,7 +104,7 @@ Minimum Cut Capacity: $8 + 5 + 3 + 5 = 21$
 
 Flow Network with Minimum Cut: *see figure 2*
 
-[![Screenshot 2025-11-14 at 11.14.56 PM.png](../../../Attachments/Screenshot%202025-11-14%20at%2011.14.56%20PM.png)](../../../Attachments/Screenshot%202025-11-14%20at%2011.14.56%20PM.png)
+[![Screenshot 2025-11-14 at 11.14.56 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5e8b108848b12d428b44d8caab04f6174405a0a917de7df2b8c7a167824dda68/Screenshot%202025-11-14%20at%2011.14.56%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5e8b108848b12d428b44d8caab04f6174405a0a917de7df2b8c7a167824dda68/Screenshot%202025-11-14%20at%2011.14.56%20PM.png)
 
 The cut separates nodes ${s, a}$ from ${b, c, d, t}$.
 
@@ -112,7 +112,7 @@ The cut separates nodes ${s, a}$ from ${b, c, d, t}$.
 
 The residual graph shows remaining forward capacities and backward capacities: *see figure 3*, sorry for poor quality sketch as I was having difficulties wtih my conventional approach.
 
-[![Screenshot 2025-11-14 at 11.19.11 PM.png](../../../Attachments/Screenshot%202025-11-14%20at%2011.19.11%20PM.png)](../../../Attachments/Screenshot%202025-11-14%20at%2011.19.11%20PM.png)
+[![Screenshot 2025-11-14 at 11.19.11 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/25fb5b375147fe2e92ebbe856fdada60f1b2f869e3257e679859204255b663e5/Screenshot%202025-11-14%20at%2011.19.11%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/25fb5b375147fe2e92ebbe856fdada60f1b2f869e3257e679859204255b663e5/Screenshot%202025-11-14%20at%2011.19.11%20PM.png)
 
 **Residual Capacities (Forward/Backward):**
 

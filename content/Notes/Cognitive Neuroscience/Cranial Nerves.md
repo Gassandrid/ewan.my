@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - comp-neuro/brain/nerves
+  - neuro/anatomy
 source:
 related:
 author:
@@ -13,7 +13,7 @@ updated: 2026-09-02T16:27:43-04:00
 ---
 
 - originate from [[Brainstem]] and innervate muscles of the head, neck, face, tongue, larunx, pharunc, and glands
-- important for sensory [[Perception]], speech, motor functions
+- important for sensory [[Yap about Perception|Perception]], speech, motor functions
 - 12 pairs
 - numbered with roman numberals ( CN I - CN XII )
 - Each has a special function ( no way )

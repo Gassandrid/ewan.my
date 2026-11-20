@@ -24,7 +24,7 @@ aliases:
 
 **Dynamic** balance: the ability to keep the Center of Mass within the Base of Support over multiple gait cycles.
 
-[![Screenshot 2026-09-08 at 4.49.53 PM.png](../../Attachments/Screenshot%202026-09-08%20at%204.49.53%20PM.png)](../../Attachments/Screenshot%202026-09-08%20at%204.49.53%20PM.png)
+[![Screenshot 2026-09-08 at 4.49.53 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/df4c52ad8fed700c8b5c2f502251926a6c363201869321480e7b8ed825f4fa39/Screenshot%202026-09-08%20at%204.49.53%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/df4c52ad8fed700c8b5c2f502251926a6c363201869321480e7b8ed825f4fa39/Screenshot%202026-09-08%20at%204.49.53%20PM.png)
 
 ## Why Balance is a Complex Processo
 

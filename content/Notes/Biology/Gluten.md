@@ -11,7 +11,7 @@ tags:
 
 **Glutenin** on the other hand, is a specific protein that is a major component of gluten. It is responsible for the elasticity and strength of the dough.
 
-[![Pasted image 20250827133206.png](../../Attachments/Pasted%20image%2020250827133206.png)](../../Attachments/Pasted%20image%2020250827133206.png)
+[![Pasted image 20250827133206.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/be82053bf694420e58277fb18737c80ce65d6b9bfab017e6d8ed877b7b349a54/Pasted%20image%2020250827133206.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/be82053bf694420e58277fb18737c80ce65d6b9bfab017e6d8ed877b7b349a54/Pasted%20image%2020250827133206.png)
 
 ---
 
@@ -36,7 +36,7 @@ Gluten is not water-soluble, which means it does not dissolve in water. Instead,
 
 This is because the **Glutenin** proteins form long, coiled structures that can stretch and then return to their original shape, while the **Gliadin** proteins provide the dough with its ability to flow and deform.
 
-[![Pasted image 20250827133711.png](../../Attachments/Pasted%20image%2020250827133711.png)](../../Attachments/Pasted%20image%2020250827133711.png)
+[![Pasted image 20250827133711.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/99ca2cee9134a9afcbd9e282722ad73467d79b47eb84e111b3c497aef1aaf6c5/Pasted%20image%2020250827133711.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/99ca2cee9134a9afcbd9e282722ad73467d79b47eb84e111b3c497aef1aaf6c5/Pasted%20image%2020250827133711.png)
 
 2. Viscous-elastic properties of gluten are important for desired qualities of certain foods (e.g. bread )
 
@@ -49,4 +49,4 @@ This is because the **Glutenin** proteins form long, coiled structures that can 
 
 ## Question: How Can the Properties of Gluten-free Products Be Improved?
 
-[![GlutenFreeDietGraph.png](../../Attachments/GlutenFreeDietGraph.png)](../../Attachments/GlutenFreeDietGraph.png)
+[![GlutenFreeDietGraph.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cc8fe0cfa63d4b55ea843b29bdf2154516f63b5eb404680acdfff6c17ad63465/GlutenFreeDietGraph.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cc8fe0cfa63d4b55ea843b29bdf2154516f63b5eb404680acdfff6c17ad63465/GlutenFreeDietGraph.png)

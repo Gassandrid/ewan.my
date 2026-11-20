@@ -16,6 +16,6 @@ $$
 Y_t = \int_0^t H_s \, dX_s
 $$
 
-[![itoCalculusVsBrownian.png](../../Attachments/itoCalculusVsBrownian.png)](../../Attachments/itoCalculusVsBrownian.png)
+[![itoCalculusVsBrownian.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/41ecb08dadd7c90c8da33c42bc62d3eb5c3279c25318a27ad46e72bd9e868297/itoCalculusVsBrownian.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/41ecb08dadd7c90c8da33c42bc62d3eb5c3279c25318a27ad46e72bd9e868297/itoCalculusVsBrownian.png)
 
 *The above graph represents the **Ito Integral**(blue) compared to [[Brownian Motion]] (red) *

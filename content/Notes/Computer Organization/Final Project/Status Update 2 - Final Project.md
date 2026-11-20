@@ -26,7 +26,7 @@ Up until this second update, I have been focusing on laying the foundations for 
 | date       | Name | Role                | Description                                                | Time(Hrs) |
 | ---------- | ---- | ------------------- | ---------------------------------------------------------- | --------- |
 | 10/01/2024 | Ewan | Lead Model Engineer | Purchased full list of parts for project                   | 2         |
-| 10/04/2024 | Ewan | Lead Model Engineer | Started collecting labeled TARS voicelogs for LLM training | 2         |
+| 10/04/2024 | Ewan | Lead Model Engineer | Started collecting labeled TARS voicelogs for [[Large Language Model\|LLM]] training | 2         |
 | 10/9/2024  | Ewan | Lead Model Engineer | Began training VOICE generation AI model using Cocqui      | 4         |
 
 ---
@@ -39,6 +39,6 @@ As I said in the summary, it has been mostly software up until this point. Going
 
 ## 4. Challenges
 
-Data collection has been a lot harder than I thought. Despite his fame in the fan base, there wasn't that much dialogue in the movie Inters taller for TARS, so I have been having to generate some extra textual dialogue for fine tuning the language model. 
+Data collection has been a lot harder than I thought. Despite his fame in the fan base, there wasn't that much dialogue in the movie Inters taller for TARS, so I have been having to generate some extra textual dialogue for [[Supervised Fine Tuning|fine tuning]] the language model. 
 
 This doesn't work for the speech synthesis model, however, as I need actual audio recordings to train it. Luckily, the speech models require much less sample material to get to a functioning prototype.

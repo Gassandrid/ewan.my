@@ -9,7 +9,7 @@ class:
   - note
 tags:
   - comp-neuro/models
-  - cs/ai/spiking
+  - cs/ai/architecture/spiking
 related:
 author:
 description:
@@ -32,4 +32,4 @@ $$
 
 Much harder to train since spiking is non differentiable so [[Gradient Descent]] is not viable.
 
-[![SNN.png](../../../Attachments/SNN.png)](../../../Attachments/SNN.png)
+[![SNN.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f74a21dcf6279f5a166bf07174887fd1d02124d794ab5bbe4fe49defabd263bd/SNN.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f74a21dcf6279f5a166bf07174887fd1d02124d794ab5bbe4fe49defabd263bd/SNN.png)

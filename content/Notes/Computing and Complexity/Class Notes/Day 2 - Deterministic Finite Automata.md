@@ -18,7 +18,7 @@ In this class we will continue our work on [[Day 1 - Introduction to Computing#D
 
 The pigeonhole principle is a simple but useful concept in combinatorics. It states that if you have more pigeons than pigeonholes, then at least one pigeonhole must contain more than one pigeon.
 
-[![Pasted image 20250116083819.png](../../../Attachments/Pasted%20image%2020250116083819.png)](../../../Attachments/Pasted%20image%2020250116083819.png)
+[![Pasted image 20250116083819.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/529283be11e00e40a922f3c7d64510908b4b4c5007dc526690af47151a7f3f3a/Pasted%20image%2020250116083819.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/529283be11e00e40a922f3c7d64510908b4b4c5007dc526690af47151a7f3f3a/Pasted%20image%2020250116083819.png)
 
 ---
 
@@ -51,7 +51,7 @@ $$
 
 This yields a graph that we can consider to look like this:
 
-[![Pasted image 20250116084351.png](../../../Attachments/Pasted%20image%2020250116084351.png)](../../../Attachments/Pasted%20image%2020250116084351.png)
+[![Pasted image 20250116084351.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f7f5c6cfc879a227f100ac53ab03f92429cd9a3ca1f9aa59a23a6129b2d5fa48/Pasted%20image%2020250116084351.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f7f5c6cfc879a227f100ac53ab03f92429cd9a3ca1f9aa59a23a6129b2d5fa48/Pasted%20image%2020250116084351.png)
 
 ### Directed and Undirected Graphs
 

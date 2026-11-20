@@ -4,7 +4,7 @@ updated: 2026-08-31T17:18:41-04:00
 class:
   - note
 tags:
-  - comp-neuro/cognition
+  - neuro/cognition
   - university
 source:
 related:

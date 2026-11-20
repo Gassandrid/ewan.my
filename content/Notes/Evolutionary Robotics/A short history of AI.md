@@ -19,7 +19,7 @@ updated: 2026-01-20T08:42:42-05:00
 ---
 ## A short Recap
 
-We looked at flexible muscle based locomotion for bipedal creatures. This was done by creating a simulation environment where creatures with different morphologies could be evolved to walk using a genetic algorithm.
+We looked at flexible muscle based locomotion for bipedal creatures. This was done by creating a simulation environment where creatures with different morphologies could be evolved to walk using a [[Evolutionary Algorithm|genetic algorithm]].
 
 > [!Example] What is the task of the evolutionary algorithm of a quadruped robot?
 >
@@ -27,7 +27,7 @@ We looked at flexible muscle based locomotion for bipedal creatures. This was do
 >
 > 1. Create a **task environment**: A simulated world where the robot can move and interact.
 > 2. Create the **robot**
-> 3. Create the robot's brain, or Artificial Neural Network (ANN)
+> 3. Create the robot's [[Brain|brain]], or [[Neural Networks|Artificial Neural Network]] (ANN)
 > 4. Use an **evolutionary algorithm** to evolve the robot's morphology and control system to perform the task of walking.
 
 _Every time the robot gets closer to the reward (in this case, grabbing the blue bock), it gets a higher fitness score._ We then make the goal **harder** by moving the block further away.
@@ -127,11 +127,11 @@ The lesson? Humans often **anthropomorphize** machines, attributing human-like q
 
 Hence to say, if it is this easy to fool humans into thinking they are talking to a human, how do we actually test for intelligence in machines?
 
-Up until quite recently, the most widely accepted test for machine intelligence was the **Turing Test**, proposed by Alan Turing in 1950.
+Up until quite recently, the most widely accepted test for machine intelligence was the **[[Turing Test]]**, proposed by Alan Turing in 1950.
 
 The test is quite simple: a human judge engages in a natural language conversation with both a human and a machine, without knowing which is which. If the judge cannot reliably distinguish between the human and the machine, the machine is said to have passed the Turing Test.
 
-[![turingTest.png](../../Attachments/turingTest.png)](../../Attachments/turingTest.png)
+[![turingTest.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/33ef51a8b97b5c274853120e3ed294ad3116070c00a9a7762cbc3b45cdec72ac/turingTest.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/33ef51a8b97b5c274853120e3ed294ad3116070c00a9a7762cbc3b45cdec72ac/turingTest.png)
 
 #### The Chinese Room Argument
 
@@ -141,7 +141,7 @@ The Turing Test has been criticized for not truly measuring intelligence or unde
 
 Do they really understand Chinese? No, they are just manipulating symbols based on rules. This suggests that passing the Turing Test does not necessarily imply true understanding or consciousness.
 
-[![chineseRoomARgument.png](../../Attachments/chineseRoomARgument.png)](../../Attachments/chineseRoomARgument.png)
+[![chineseRoomARgument.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4204551df847bb09d755e9d8dcb00914b24e356a3c0fafb34ef6084bce0153a0/chineseRoomARgument.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4204551df847bb09d755e9d8dcb00914b24e356a3c0fafb34ef6084bce0153a0/chineseRoomARgument.png)
 
 Some suggest that intelligence to solve this arrises from levels of abstraction, where the system is not just manipulating symbols, but also has a model of the world and can reason about it.
 
@@ -183,7 +183,7 @@ In the 1980s, the `if then else` modal had been exhasperated. Researchers began 
 
 In essence, there seems to be a "flow" of sensory input, parrelel, that is processed in a distributed manner, leading to motor output.
 
-[![Connectionism.png](../../Attachments/Connectionism.png)](../../Attachments/Connectionism.png)
+[![Connectionism.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bebd9d699e80c63b4371a16db605ed7bc2b9cab98b9c7b6873791b6e8431302b/Connectionism.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bebd9d699e80c63b4371a16db605ed7bc2b9cab98b9c7b6873791b6e8431302b/Connectionism.png)
 
 This was the birth of Artificial Neural Networks (ANNs), which are inspired by the structure and function of biological neural networks in the brain.
 
@@ -193,11 +193,11 @@ After this, we entered an **AI Winter**, a period of reduced funding and interes
 
 ## What Ended the AI Winter?
 
-It was mostly due to **deep learning**, where we started building not only larger neural networks, but _deeper_ neural networks with many layers of interconnected nodes.
+It was mostly due to **[[Understanding Deep Learning|deep learning]]**, where we started building not only larger neural networks, but _deeper_ neural networks with many layers of interconnected nodes.
 
 This allowed for levels of abstraction where nodes in certain layers could learn to recognize simple features, while nodes in higher layers could combine these features to recognize more complex patterns.
 
-[![deepLearningNodes.png](../../Attachments/deepLearningNodes.png)](../../Attachments/deepLearningNodes.png)
+[![deepLearningNodes.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/67d35310ad895346f13abb14eb08316b13f2cb625340ab1c997ab4bd280e61cc/deepLearningNodes.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/67d35310ad895346f13abb14eb08316b13f2cb625340ab1c997ab4bd280e61cc/deepLearningNodes.png)
 
 ---
 
@@ -205,4 +205,4 @@ This allowed for levels of abstraction where nodes in certain layers could learn
 
 The graph below shows how [[Artificial Intelligence]] branches off into several related subfields, giving birth to robotics and consequently [[Evolutionary Robotics]], but on the other side we have things like [[A short history of AI#Connectionism|Connectionism]], leading to [[Computational Neuroscience]] ( my field!! ) 
 
-[![AiRoboticsSubfields.png](../../Attachments/AiRoboticsSubfields.png)](../../Attachments/AiRoboticsSubfields.png)
+[![AiRoboticsSubfields.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b5b4abd2cba8d8ec92fa9dad2138d73b3e81d7aa229fb722a2ba33a4955c7b4/AiRoboticsSubfields.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b5b4abd2cba8d8ec92fa9dad2138d73b3e81d7aa229fb722a2ba33a4955c7b4/AiRoboticsSubfields.png)

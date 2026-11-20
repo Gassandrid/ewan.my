@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - cs/data-science
-  - cs/homelab/data
+  - projects/homelab/data
   - journal
 source:
 related:
@@ -15,6 +15,6 @@ Yes, I know, yet another autistic idea relating to [[On Capturing Personal Data]
 
 Thinking about it, this is somewhat what I have already started to do wtih obsidian, only that it is for mapping my brain *outputs* rather than the inputs.
 
-That actually brings me back to the reason for all of this: I use my computer for just about everything, it is safe to say my computer is my life. If I can map out everything I do from it, both the inputs and outputs, I have a reasonable path forward for both understanding and modeling my mind, but also for optmiziing it. I have had some silly ideas for [[an Internet Consumption a Loss Gradient For Mind Optimization]], but I am not guarenteeing that it is an idea that will bare any fruits.
+That actually brings me back to the reason for all of this: I use my computer for just about everything, it is safe to say my computer is my life. If I can map out everything I do from it, both the inputs and outputs, I have a reasonable path forward for both understanding and modeling my mind, but also for optmiziing it. I have had some silly ideas for [[2026-02-04-0958 an Internet Consumption a Loss Gradient For Mind Optimization|an Internet Consumption a Loss Gradient For Mind Optimization]], but I am not guarenteeing that it is an idea that will bare any fruits.
 
 For this, I found [[ActivityWatch]]. It is a godsend piece of software. It works right out of the box, is completely local and open source, and has support for just about everything in my toolchain (obsidian, neovim, firefox). It is extremely easy to integrate into my [[Setting up a sort of Monorepo for personal data|monorepo]] and [[Saturn Rack Software|homelab]], as it has both an API and several configuration options for a server/other devices on the network.

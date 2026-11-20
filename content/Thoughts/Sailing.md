@@ -4,7 +4,6 @@ updated: 2025-02-06
 title: Sailing
 tags:
   - hobbies
-  - seed
 ---
 > [!Info]- Video
 > ![[IMG_1783 2.mov|50x50]]

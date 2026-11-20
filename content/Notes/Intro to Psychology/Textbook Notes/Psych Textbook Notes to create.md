@@ -7,7 +7,7 @@ class:
 tags:
   - university
   - psych
-  - todo/neuro
+  - neuro
 course: "[[Intro to Psychological Science]]"
 lesson:
   - textbook
@@ -66,7 +66,7 @@ author:
 - [ ] [[Event-related potential]] (ERP)
 - [ ] [[Diffusion tensor imaging]] (DTI)
 - [ ] [[Magnetic resonance imaging]] (MRI)
-- [ ] [[Functional magnetic resonance imaging]] (MRI)
+- [ ] [[fMRI|Functional magnetic resonance imaging]] (MRI)
 - [ ] [[Positron emission tomography]] (PET)
 
-[![Screenshot 2025-09-08 at 12.51.33 PM.png](../../../Attachments/Screenshot%202025-09-08%20at%2012.51.33%20PM.png)](../../../Attachments/Screenshot%202025-09-08%20at%2012.51.33%20PM.png)
+[![Screenshot 2025-09-08 at 12.51.33 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/92e0c8b04ec2591b6abe0e68e22585692069a736c990ae8392b53d2147266d26/Screenshot%202025-09-08%20at%2012.51.33%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/92e0c8b04ec2591b6abe0e68e22585692069a736c990ae8392b53d2147266d26/Screenshot%202025-09-08%20at%2012.51.33%20PM.png)

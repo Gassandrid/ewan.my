@@ -4,7 +4,7 @@ updated: 2026-03-18T09:10:37-04:00
 class:
   - note
 tags:
-  - cs/ai/perceptron
+  - cs/ai/architecture/perceptron
   - math/discrete/boolean
 source:
 related:
@@ -27,6 +27,6 @@ linearly separable gates (single perceptron):
 
 only special case is XOR: the two positive inputs $(1,0), (0,1)$ can't be linearly separated from $(0,0),(1,1)$, so no single perceptron works. you need a hidden layer, e.g. $\text{XOR}(x_1,x_2) = \text{AND}(\text{NAND}(x_1,x_2),\, \text{OR}(x_1,x_2))$.
 
-[![linearSeperableGates.png](../../Attachments/linearSeperableGates.png)](../../Attachments/linearSeperableGates.png)
+[![linearSeperableGates.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e45e7129b4cc2f46ccce34ae151a5f6df5eba4977a4160ecabc34c06d81f7871/linearSeperableGates.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e45e7129b4cc2f46ccce34ae151a5f6df5eba4977a4160ecabc34c06d81f7871/linearSeperableGates.png)
 
 in general, any boolean function on $n$ bits can be expressed as a depth-2 network (DNF): one hidden layer for each minterm, OR at the output. this gives a universal approximation result for the discrete case, though the number of neurons can be exponential in $n$.

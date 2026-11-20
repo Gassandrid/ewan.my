@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - comp-neuro/brain/neurons
+  - neuro/cellular
   - math/topology
 source:
   - "[[Toroidal topology of population activity in grid cells - Nature]]"
@@ -22,14 +22,14 @@ aliases:
   - Grid Neuron
 ---
 
-The arrangement of grid cells' spatial firing fields, equidistant from neighbors, led to a hypothesis that they encode some neural representation of Euclidean Space. Also hints at a mechanism for dynamic computation of relative/self position based on continous updates regarding direction/position.
+The arrangement of grid cells' spatial firing fields, equidistant from neighbors, led to a hypothesis that they encode some [[Representation|neural representation]] of [[Euclidean Space]]. Also hints at a mechanism for dynamic computation of relative/self position based on continous updates regarding direction/position.
 
-[![TopologyGridCell.png](../../../Attachments/TopologyGridCell.png)](../../../Attachments/TopologyGridCell.png)
+[![TopologyGridCell.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f07e783dcbb4ef9d9093619403fb7ef313bff72837935587010f85f1da34cadf/TopologyGridCell.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f07e783dcbb4ef9d9093619403fb7ef313bff72837935587010f85f1da34cadf/TopologyGridCell.png)
 
 ---
 
 ## Toroidal Topology of Grid Cells
 
-It is theorized that [[Continuous Attractor Network]]s serve as a substrate of the grid pattern. However it is still unclear if they really show Continuous Attractor Dynamics.
+It is theorized that [[Continuous Attractor Network]]s serve as a substrate of the grid pattern. However it is still unclear if they really show [[Attractor Network|Continuous Attractor Dynamics]].
 
-When looking at grid cells in the medial [[Entorhinal Cortex]] fire at various locations, a distinct periodic hexogonal pattern emerges. However, when looking at the **population activity**(collective grid cell firing rate patterns), researchers ( [@gardnerToroidalTopologyPopulation2022] ) found that 2d grid pattern could not extend to this case. Rather, it was constrained to the surface of a Torus. *Certainly more to investigate regarding these cells when I get the time*
+When looking at grid cells in the medial [[Entorhinal Cortex]] fire at various locations, a distinct periodic hexogonal pattern emerges. However, when looking at the **population activity**(collective grid cell firing rate patterns), researchers ( [@gardnerToroidalTopologyPopulation2022] ) found that 2d grid pattern could not extend to this case. Rather, it was constrained to the surface of a [[Your brain is moving along the surface of the torus 🤯|Torus]]. *Certainly more to investigate regarding these cells when I get the time*

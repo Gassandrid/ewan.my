@@ -21,7 +21,7 @@ The **key difference** between previous Transformer implementations ( translator
 
 They have also broken a long standing precedent of specialized models for specific tasks, instead being able to perform well on a variety of tasks with minimal fine-tuning. This came as a particular surprise, as LLMs were found to be **better** at highly specific tasks than models that were trained specifically for those tasks(review categorization, etc).
 
-[![LLMArchitecture.png](../../Attachments/LLMArchitecture.png)](../../Attachments/LLMArchitecture.png)
+[![LLMArchitecture.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bf9fb0812b90836c9a5aafd772decb5266e608e4912c9f29549788b9e7f7a590/LLMArchitecture.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bf9fb0812b90836c9a5aafd772decb5266e608e4912c9f29549788b9e7f7a590/LLMArchitecture.png)
 
 ---
 

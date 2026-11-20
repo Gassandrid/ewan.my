@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos/fixed-point
+  - math/dynamical-systems/fixed-point
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 3
 source:
@@ -41,7 +41,7 @@ $$
 
 _($f^2$ is **f composed with f**, not f squared, see [[Linear Systems]])_
 
-Applying the chain rule:
+Applying the [[14.5 - Multivariable Chain Rule|chain rule]]:
 
 $$
 (f^2)'(x) = f'(f(x)) \cdot f'(x)
@@ -93,7 +93,7 @@ In plain English, every point in a period-$k$ orbit has the same derivative when
 
 > **Definition:** A periodic orbit $\{ p_{1},p_{2},\dots,p_{k} \}$ is a [[Attracting fixed point|sink]] (attracting) if $\left|f'(p_{k}) \cdot f'(p_{k-1}) \cdot \ldots \cdot f'(p_{1})\right| < 1$
 
-The orbit is a **source** (repelling) if the product has absolute value greater than 1.
+The orbit is a **[[Repelling fixed point|source]]** (repelling) if the product has absolute value greater than 1.
 
 ---
 
@@ -101,7 +101,7 @@ The orbit is a **source** (repelling) if the product has absolute value greater 
 
 As you take higher compositions ($f^3, f^4, f^7, \ldots$), the pattern continues:
 
-**For $f^n$, the fixed points include:**
+**For $f^n$, the [[Fixed Point Classification|fixed points]] include:**
 
 - All original fixed points of $f$
 - All period-2 orbits (if $n$ is even, or any multiple of 2)
@@ -193,7 +193,7 @@ We talked about this on day 1, but we didnt discuss the bifurcation diagram in d
 
 Have a look at the interactive code block in the [[Logistic Map]] note, it should look something like:
 
-[![LogMapBirfucations.png](../../Attachments/LogMapBirfucations.png)](../../Attachments/LogMapBirfucations.png)
+[![LogMapBirfucations.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a9aad93cc738cdf8549025a8c1c3e804a98865e8f863267dcb7bdda05135ac18/LogMapBirfucations.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a9aad93cc738cdf8549025a8c1c3e804a98865e8f863267dcb7bdda05135ac18/LogMapBirfucations.png)
 
 Why does this happen? It relates to the stability of fixed points and periodic orbits as we vary the parameter $r$.
 

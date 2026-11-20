@@ -2,9 +2,8 @@
 date: 2024-12-10
 tags:
   - math
-  - seed
   - cs/python
-  - software
+  - cs/software
 updated: 2025-02-06
 title: Manim
 class:
@@ -18,7 +17,7 @@ interface:
   - Library
 image: "[[ManimBanner.png]]"
 ---
-[![ManimBanner.png](../Attachments/ManimBanner.png)](../Attachments/ManimBanner.png)
+[![ManimBanner.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cd756093298e0496b81eafa324ef8fa54be053889ad58f7873c137ddd13d6060/ManimBanner.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cd756093298e0496b81eafa324ef8fa54be053889ad58f7873c137ddd13d6060/ManimBanner.png)
 
 Manim is a really useful tool that allows you to create animations and illustrations programmatically, which is a much nicer experience than doing it by hand in Blender.
 

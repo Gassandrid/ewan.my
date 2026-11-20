@@ -3,7 +3,6 @@ id: The Stolen Necklace Problem
 aliases: []
 tags:
   - math/topology
-  - seed
 date: 2025-08-19
 class:
   - note
@@ -16,7 +15,7 @@ The stolen necklace problem presents itself as a simple problem: given a necklac
 
 I found out about this problem while watching a video from [[3blue1brown]] on the [[Borsuk-Ulam Theorem]]. The problem is a classic example of how topology can be applied to discrete problems, and it has a surprisingly elegant solution.
 
-[![Pasted image 20250819160648.png](../../../Attachments/Pasted%20image%2020250819160648.png)](../../../Attachments/Pasted%20image%2020250819160648.png)
+[![Pasted image 20250819160648.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/03498e7202589901878238b2f0e9a9746c71117df32e9d406160064ff1dbd522/Pasted%20image%2020250819160648.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/03498e7202589901878238b2f0e9a9746c71117df32e9d406160064ff1dbd522/Pasted%20image%2020250819160648.png)
 
 ---
 

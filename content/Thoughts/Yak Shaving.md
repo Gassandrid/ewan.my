@@ -3,7 +3,6 @@ title: Yak Shaving
 date: 2025-02-04
 updated: 2026-02-27T11:48:49-05:00
 tags:
-  - seed
   - journal/workflow
 ---
 

@@ -25,7 +25,7 @@ However, its applicability extends beyond magnetism and physics itself. The **Is
 
 The characteristics of this "critical point" are that the "patterns" we see are **scale-invariant**, meaning they look similar regardless of the scale at which we observe them. This property is crucial in understanding complex systems, as it suggests that the same underlying principles govern behavior across different scales.
 
-[![IsingScaleInvariance.png](../../Attachments/IsingScaleInvariance.png)](../../Attachments/IsingScaleInvariance.png)
+[![IsingScaleInvariance.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b90979b1d34d4eb6e46cae53582c00c8ddcb3debe1d86238e394feea8401d29/IsingScaleInvariance.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b90979b1d34d4eb6e46cae53582c00c8ddcb3debe1d86238e394feea8401d29/IsingScaleInvariance.png)
 
 ---
 

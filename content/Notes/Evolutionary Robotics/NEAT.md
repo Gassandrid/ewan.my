@@ -20,13 +20,13 @@ date: 2026-03-05T08:34:20-05:00
 updated: 2026-03-05T09:11:45-05:00
 ---
 
-**NEAT**: method for evolving both **weights** *and* **topology** of neural networks. The main insight is that naive crossover of variable-topology networks breaks badly, and NEAT is specifically engineered to fix this.
+**NEAT**: method for evolving both **weights** *and* **topology** of [[Neural Networks|neural networks]]. The main insight is that naive [[Crossover|crossover]] of variable-topology networks breaks badly, and NEAT is specifically engineered to fix this.
 
 ---
 
 ## Competing Conventions Problem
 
-Before NEAT, the fundamental issue with evolving neural networks was crossover. Two networks can encode the *same function* with different internal structures -- say, the same hidden neurons labeled in different orders. When you cross these, the offspring inherit mismatched parts from each parent and lose information.
+Before NEAT, the fundamental issue with evolving neural networks was crossover. Two networks can encode the *same function* with different internal structures -- say, the same hidden [[Neuron|neurons]] labeled in different orders. When you cross these, the offspring inherit mismatched parts from each parent and lose information.
 
 This is the **competing conventions problem**: no matter how to cross two networks that use different structural conventions, the children will be worse than either parent.
 
@@ -36,13 +36,13 @@ NEAT solves this by giving every structural innovation a global ID -- the **inno
 
 ## Genetic Encoding
 
-[![NEATMutations.png](../../Attachments/NEATMutations.png)](../../Attachments/NEATMutations.png)
+[![NEATMutations.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/60de30dfcf9be6bbf9ae44552dfbdbb86e2006015df8fb28b96ea5d773be0ef2/NEATMutations.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/60de30dfcf9be6bbf9ae44552dfbdbb86e2006015df8fb28b96ea5d773be0ef2/NEATMutations.png)
 
 A NEAT genome has two gene types:
 
 **Node genes**: simply list the nodes, each tagged as sensor (input), hidden, or output.
 
-**Connection genes**: each encodes a single synapse:
+**Connection genes**: each encodes a single [[Synapses|synapse]]:
 
 - `In` / `Out` (pre- and post-synaptic node IDs)
 - `Weight`
@@ -90,7 +90,7 @@ offspring topology is determined by which genes get inherited. Because alignment
 
 HyperNEAT extends NEAT by using evolved networks not as controllers directly, but as **weight generators** for a separate substrate network.
 
-The idea: use NEAT to evolve a **CPPN** (Compositional Pattern-Producing Network) -- a network that takes spatial coordinates as input and produces a value. CPPNs naturally express regular, symmetric, periodic patterns because their activation functions (Gaussian, sine, etc.) compose cleanly.
+The idea: use NEAT to evolve a **[[Compositional Pattern-Producing Network|CPPN]]** (Compositional Pattern-Producing Network) -- a network that takes spatial coordinates as input and produces a value. CPPNs naturally express regular, symmetric, periodic patterns because their [[Activation Functions|activation functions]] (Gaussian, sine, etc.) compose cleanly.
 
 You then "paint" this CPPN over the substrate: for each synapse in the controller network (defined by the 3D positions of its pre- and post-synaptic neurons), query the CPPN with those coordinates to get the synaptic weight.
 

@@ -5,7 +5,6 @@ aliases:
 tags:
   - cs/ai/interpretability
   - cs/ai/llm
-  - sapling
 date: 2025-09-25
 updated: 2026-11-02T14:34:35-05:00
 class:
@@ -33,7 +32,7 @@ What this looks like in practice looking at the probability distribution for a s
 
 When you have found a neuron of interest, you could try a few things to investigate, something like modifying the neuron value to see how it affects the output, or plotting a heatmap over the token sequence to see what parts of the input are activating the neuron.
 
-> [![anthropicGoldenGateNeuron.png](../../Attachments/anthropicGoldenGateNeuron.png)](../../Attachments/anthropicGoldenGateNeuron.png)
+> [![anthropicGoldenGateNeuron.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f457dfed73c7d9348c1f78b3c11b9077b390a37e89491193ba3c87c0a90085c5/anthropicGoldenGateNeuron.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f457dfed73c7d9348c1f78b3c11b9077b390a37e89491193ba3c87c0a90085c5/anthropicGoldenGateNeuron.png)
 >
 >  
 > _Anthropic: A feature sensitive to mentions of the Golden Gate Bridge fires on a range of model inputs, from English mentions of the name of the bridge to discussions in Japanese, Chinese, Greek, Vietnamese, Russian, and an image. The orange color denotes the words or word-parts on which the feature is active._
@@ -105,7 +104,7 @@ general approach: probes -> what's recoverable, RSA/CKA -> its organization, SAE
 - [[Mixed Selectivity]]: neuro analog of [[Polysemanticity]]
 - [[Sparse Coding]] (Olshausen & Field): the ancestor of [[Sparse Autoencoder]]s
 - **fixed point analysis** (Sussillo & Barak): linearize trained RNNs around fixed/slow points
-- population methods: [[dPCA]], [[jPCA]], [[LFADS]], [[CEBRA]]
+- population methods: [[dPCA]], [[jPCA]], [[Latent Factor Analysis via Dynamical Systems|LFADS]], [[CEBRA]]
 - **in silico electrophysiology**: optimal stimulus synthesis, inception loops (Walker 2019), neural control (Bashivan 2019), XDream
 - [[Model Metamers]] (Feather et al.): stimuli a model treats as identical, test against human perception
 - **natural language neuron descriptions** for V1/V4 ([2026 preprint](https://arxiv.org/abs/2605.12485)): auto-interp applied to real neurons

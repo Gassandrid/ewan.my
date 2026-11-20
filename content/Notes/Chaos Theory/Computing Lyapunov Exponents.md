@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos/sensitivity
+  - math/dynamical-systems/chaos
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 20
 source:
@@ -91,4 +91,4 @@ $$
 \frac{1}{N} \sum_{j=1}^{N}  \ln ||\vec{y}_{i}^{j}||
 $$
 
-[![computingLyapunov.png](../../Attachments/computingLyapunov.png)](../../Attachments/computingLyapunov.png)
+[![computingLyapunov.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c8880b7ef2ccdaa57d3e94a47e4461df2f4710dde9e1a97ebe4fc8ca4e290526/computingLyapunov.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c8880b7ef2ccdaa57d3e94a47e4461df2f4710dde9e1a97ebe4fc8ca4e290526/computingLyapunov.png)

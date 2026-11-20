@@ -3,7 +3,6 @@ class:
   - note
 tags:
   - math/information/entropy
-  - math/information
 source:
   - "[[Entropy for Data science clearly explained]]"
 related:
@@ -11,13 +10,13 @@ author:
 date: 2025-09-15
 updated: 2025-11-14
 ---
-Entropy is a very simple concept, but it has a lot of depth. It is a measure of uncertainty or randomness in a system. In information theory, entropy quantifies the amount of information contained in a message or data source. The more uncertain or random the data, the higher the entropy.
+Entropy is a very simple concept, but it has a lot of depth. It is a measure of uncertainty or randomness in a system. In [[Information Theory|information theory]], entropy quantifies the amount of information contained in a message or data source. The more uncertain or random the data, the higher the entropy.
 
 ---
 
 ## Quantifying Surprise
 
-Entropy in a sense is the [[CH28 - Expected Values of Continuous Random Variables|expected value]] of **surprise**. If you have a fair coin, the outcome of a flip is uncertain, and thus has high entropy. If you have a biased coin that always lands on heads, the outcome is certain, and thus has low entropy.
+Entropy in a sense is the [[Expected Value of Continuous Random Variables|expected value]] of **surprise**. If you have a fair coin, the outcome of a flip is uncertain, and thus has high entropy. If you have a biased coin that always lands on heads, the outcome is certain, and thus has low entropy.
 
 Surprise should be high when something unlikely happens, and low when something likely happens. The key difference between surprise and probability is that surprise is inversely related to probability, AND that compounding suprise is additive, not multiplicative.
 
@@ -47,7 +46,7 @@ In essence, the logarithm turns the multiplication of probabilities into an addi
 
 ## Entropy of a Random Variable
 
-We achieve entropy by taking the expected value of the surprise over all possible outcomes of a random variable.
+We achieve entropy by taking the expected value of the surprise over all possible outcomes of a [[Random Variables|random variable]].
 
 This involves first multiplying the surprise of each outcome by its respective probability, and then summing these products over all possible outcomes.
 
@@ -63,4 +62,4 @@ _This reframes the surprise function $h(s)$ into the entropy function $H(X)$ by 
 
 Entropy provides a measure of the uncertainty or unpredictability associated with a random variable. A higher entropy value indicates greater uncertainty, while a lower entropy value indicates less uncertainty.
 
-While not clear from this introduction, entropy can be applied in various contexts, the main ones being comparing different probability distributions, optimizing data encoding schemes, and measuring information gain in machine learning.
+While not clear from this introduction, entropy can be applied in various contexts, the main ones being comparing different [[Probability Distribution|probability distributions]], optimizing data encoding schemes, and measuring [[Mutual Information|information gain]] in [[Machine Learning|machine learning]].

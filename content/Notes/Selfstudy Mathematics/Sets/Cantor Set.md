@@ -11,7 +11,7 @@ updated: 2026-10-20T18:57:37-04:00
 
 The **Cantor Set** is a classic example of a set that is uncountably infinite, yet has measure zero. It is constructed by repeatedly removing the middle third of intervals, leading to a fractal structure.
 
-[![CantorSetExcalidraw.png](../../../Attachments/CantorSetExcalidraw.png)](../../../Attachments/CantorSetExcalidraw.png)
+[![CantorSetExcalidraw.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/81690e8083daf23709442c13f6525ad3286c95ec84e8749a0fb123c9b9bb0933/CantorSetExcalidraw.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/81690e8083daf23709442c13f6525ad3286c95ec84e8749a0fb123c9b9bb0933/CantorSetExcalidraw.png)
 
 It is interesting in that it in of itself is a subset of the uncountably infinite set between $0$ and $1$, but it is uncountably infinite in itself. It is also a perfect set, meaning it is closed and contains no isolated points. And yet, the area of the Cantor set is zero, as it is constructed by removing intervals of positive length.
 

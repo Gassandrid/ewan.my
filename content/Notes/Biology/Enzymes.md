@@ -25,7 +25,7 @@ updated: 2025-10-24
 
 Enzymes increase the rate of chemical reactions by **lowering the activation energy** requires for a reaction to occur.
 
-[![enzymeActivationEnergy.png](../../Attachments/enzymeActivationEnergy.png)](../../Attachments/enzymeActivationEnergy.png)
+[![enzymeActivationEnergy.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b0920930559bd62f283268a2c0c7f00034c02559a802888805a9ca7d033d6274/enzymeActivationEnergy.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b0920930559bd62f283268a2c0c7f00034c02559a802888805a9ca7d033d6274/enzymeActivationEnergy.png)
 
 ---
 
@@ -36,4 +36,4 @@ Enzymes increase the rate of chemical reactions by **lowering the activation ene
 	- and forms many [[Bonds#Non-Covalent Bonds|noncovalent]] bonds with substrates
 	
 
-[![Screenshot 2025-09-29 at 9.13.50 AM.png](../../Attachments/Screenshot%202025-09-29%20at%209.13.50%20AM.png)](../../Attachments/Screenshot%202025-09-29%20at%209.13.50%20AM.png)
+[![Screenshot 2025-09-29 at 9.13.50 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/de4f0bcb7cc435109c5dbb69d9c62a659de4cf504c6cbbc091443bf2fd56db11/Screenshot%202025-09-29%20at%209.13.50%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/de4f0bcb7cc435109c5dbb69d9c62a659de4cf504c6cbbc091443bf2fd56db11/Screenshot%202025-09-29%20at%209.13.50%20AM.png)

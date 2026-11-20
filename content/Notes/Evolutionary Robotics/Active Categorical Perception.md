@@ -20,10 +20,10 @@ updated: 2026-02-19T09:19:16-05:00
 ---
 **Think of the task**: several objects are placed in front of you. YOu must separate the round from edged objects while wearing a blindfold. How would you interact with the objects?
 
-[![Screenshot 2026-02-17 at 9.31.52 AM.png](../../Attachments/Screenshot%202026-02-17%20at%209.31.52%20AM.png)](../../Attachments/Screenshot%202026-02-17%20at%209.31.52%20AM.png)
+[![Screenshot 2026-02-17 at 9.31.52 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8b24e7265fd6d3516b8b4de8aa188171c3f7f9980d696484f09dc699c9c56b81/Screenshot%202026-02-17%20at%209.31.52%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8b24e7265fd6d3516b8b4de8aa188171c3f7f9980d696484f09dc699c9c56b81/Screenshot%202026-02-17%20at%209.31.52%20AM.png)
 
 >[!Abstract] Active Categorical Perception
-> The ability of an animal or robot to **interact** with objects of interest to **gather sensorimotor data** sufficient to **categorize** them, where the movement itself is the perceptual act.
+> The ability of an animal or robot to **interact** with objects of interest to **gather [[Sensation vs Perception|sensorimotor data]]** sufficient to **categorize** them, where the movement itself is the perceptual act.
 
 ---
 
@@ -33,7 +33,7 @@ A [[Continuous Time Recurrent Neural Networks|CTRNN]]-controlled agent is evolve
 
 Builds directly on the self/nonself discrimination work from [[Minimal Cognition]]: the arm experiment already required the agent to move to *learn*; ACP scales this to objects external to the agent's body.
 
-[![Screenshot 2026-02-19 at 8.36.35 AM.png](../../Attachments/Screenshot%202026-02-19%20at%208.36.35%20AM.png)](../../Attachments/Screenshot%202026-02-19%20at%208.36.35%20AM.png)
+[![Screenshot 2026-02-19 at 8.36.35 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/07b77d31d771897a535309b087a09740ee6ee65d3554ea7d038a6df731685195/Screenshot%202026-02-19%20at%208.36.35%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/07b77d31d771897a535309b087a09740ee6ee65d3554ea7d038a6df731685195/Screenshot%202026-02-19%20at%208.36.35%20AM.png)
 
 $$
 \tau_{i} \dot{y}_{I}=\begin{cases}
@@ -54,11 +54,11 @@ $$
 \sigma(x)=\frac{1}{1+e^{-x}}
 $$
 
-Why 14($31\to 44$) motor neurons, but only 7 joints? Why two different forms for $\tau_{i}\dot{y}_{i}$? What does the $n=1, m=30, \quad for \ i = 23, \dots,30$ mean?
+Why 14($31\to 44$) motor [[Neuron|neurons]], but only 7 joints? Why two different forms for $\tau_{i}\dot{y}_{i}$? What does the $n=1, m=30, \quad for \ i = 23, \dots,30$ mean?
 
 ---
 
-Mental representations of spheres and ellipsoids:
+Mental [[Representation|representations]] of spheres and ellipsoids:
 
 $$
 \sigma(y_{47}(t) + \beta_{47}) = \text{Value of neuron 47 at time step t}

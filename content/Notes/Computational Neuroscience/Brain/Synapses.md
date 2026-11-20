@@ -3,7 +3,7 @@ date: 2025-04-14
 updated: 2026-05-22T19:23:14-07:00
 tags:
   - biology
-  - comp-neuro/brain/neurons
+  - neuro/cellular
 class:
   - note
 source:
@@ -22,4 +22,4 @@ specialized junction where [[Neuron]] passes and electrical/chem signal to anoth
 	- [Synapses with short-term plasticity are optimal estimators of presynaptic membrane potentials](https://pmc.ncbi.nlm.nih.gov/articles/PMC3558743/)
 	
 
-[![synapsethingy.png](../../../Attachments/synapsethingy.png)](../../../Attachments/synapsethingy.png)
+[![synapsethingy.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8edc2bf2fe3a216748e20edc578b25dc2ab1dc9b32f0dfe8f53afc98a024148e/synapsethingy.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8edc2bf2fe3a216748e20edc578b25dc2ab1dc9b32f0dfe8f53afc98a024148e/synapsethingy.png)

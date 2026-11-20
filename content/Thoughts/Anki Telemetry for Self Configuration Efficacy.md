@@ -6,6 +6,7 @@ class:
 tags:
   - transhumanism/self-configuration
   - pharmacology/neuro
+  - research
 source:
 related:
 author:

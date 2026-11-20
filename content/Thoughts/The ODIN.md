@@ -3,7 +3,6 @@ source: https://www.the-odin.com/
 image: https://www.google.com/s2/favicons?domain=https://www.the-odin.com/&sz=256
 class: website
 tags:
-  - website
   - transhumanism/biohacking
 related:
 date: 2026-06-29T09:56:39-07:00

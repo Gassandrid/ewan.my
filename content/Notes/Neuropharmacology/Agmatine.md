@@ -25,8 +25,9 @@ time-of-day:
   - night
 description:
 tags:
-  - transhumanism/nootropic
-  - health/supplements
+  - pharmacology/nootropic
+  - transhumanism
+  - pharmacology/supplement
 related: []
 date: 2026-02-01T11:39:49-05:00
 updated: 2026-10-12T21:11:48-04:00

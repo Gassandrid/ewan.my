@@ -3,7 +3,6 @@ source: https://www.lesswrong.com/
 image: https://www.google.com/s2/favicons?domain=https://www.lesswrong.com/&sz=256
 class: website
 tags:
-  - website
   - philosophy/rationalism
   - transhumanism/self-configuration
 related:

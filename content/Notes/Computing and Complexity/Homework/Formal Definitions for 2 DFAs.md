@@ -86,7 +86,7 @@ $E:$ Accept State when starting with 0 and ending with 1
 
 *Made with mermaid*
 
-[![Screenshot 2025-01-26 at 9.03.40 PM.png](../../../Attachments/Screenshot%202025-01-26%20at%209.03.40%20PM.png)](../../../Attachments/Screenshot%202025-01-26%20at%209.03.40%20PM.png)
+[![Screenshot 2025-01-26 at 9.03.40 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/95f73a6ac8290852dc985655356bf8daaeade92f08c0ce127e0579e8098ecdb2/Screenshot%202025-01-26%20at%209.03.40%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/95f73a6ac8290852dc985655356bf8daaeade92f08c0ce127e0579e8098ecdb2/Screenshot%202025-01-26%20at%209.03.40%20PM.png)
 
 ---
 
@@ -147,4 +147,4 @@ $D:$ Accept State when string ends in 0
 
 *made with mermaid*
 
-[![Screenshot 2025-01-26 at 9.05.45 PM.png](../../../Attachments/Screenshot%202025-01-26%20at%209.05.45%20PM.png)](../../../Attachments/Screenshot%202025-01-26%20at%209.05.45%20PM.png)
+[![Screenshot 2025-01-26 at 9.05.45 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/be4cbad313526e7005f39ea211828ecb648ac82e75c96c4e5329031503784b13/Screenshot%202025-01-26%20at%209.05.45%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/be4cbad313526e7005f39ea211828ecb648ac82e75c96c4e5329031503784b13/Screenshot%202025-01-26%20at%209.05.45%20PM.png)

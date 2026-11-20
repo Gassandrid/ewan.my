@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - math/linear-algebra
-  - math/chaos
+  - math/dynamical-systems/chaos
   - generated/claude
 source:
 related:
@@ -33,11 +33,11 @@ $$
 \end{align}
 $$
 
-then normalize: $\hat{e}_k = \dfrac{\vec{u}_k}{\|\vec{u}_k\|}$.
+then [[Normalization|normalize]]: $\hat{e}_k = \dfrac{\vec{u}_k}{\|\vec{u}_k\|}$.
 
 The projection step $\left(\vec{v}_k \cdot \hat{e}_j\right)\hat{e}_j$ removes the component of $\vec{v}_k$ in the $\hat{e}_j$ direction, leaving only what's orthogonal to everything already in the basis.
 
-[![gramShitFigure.png](../../Attachments/gramShitFigure.png)](../../Attachments/gramShitFigure.png)
+[![gramShitFigure.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f4415b02a8c8e471ae0c53e14708178f700dbed32bbf29d98a7fee9fd6516605/gramShitFigure.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f4415b02a8c8e471ae0c53e14708178f700dbed32bbf29d98a7fee9fd6516605/gramShitFigure.png)
 
 ## QR Decomposition
 
@@ -50,7 +50,7 @@ So QR decomposition and Gram-Schmidt are the same computation, just described fr
 
 ## Why It Preserves Volume
 
-The key property used in Lyapunov exponent computation: orthogonalizing the $\vec{z}_i$ vectors into $\vec{y}_i$ **preserves the volume** of the parallelepiped they span. The lengths $\|\vec{u}_k\|$ before normalization are what get logged to accumulate the Lyapunov exponents -- no information is thrown away, it's just repackaged into an axis-aligned ellipsoid.
+The key property used in [[Lyapunov Exponents|Lyapunov exponent]] computation: orthogonalizing the $\vec{z}_i$ vectors into $\vec{y}_i$ **preserves the volume** of the parallelepiped they span. The lengths $\|\vec{u}_k\|$ before normalization are what get logged to accumulate the Lyapunov exponents -- no information is thrown away, it's just repackaged into an axis-aligned ellipsoid.
 
 ## In Lyapunov Exponent Computation
 

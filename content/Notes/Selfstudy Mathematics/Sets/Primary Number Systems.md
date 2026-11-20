@@ -51,4 +51,4 @@ The complex numbers include all real numbers as well as imaginary numbers (numbe
 
 ---
 
-At this point we can contruct extensions of the Complex numbers, such as the Quaternions and Octonions, but these are less commonly used in basic mathematics and more often found in advanced fields such as theoretical physics and computer graphics. Some of these that might be usefull are the dual numbers, which are used in automatic differentiation, and the p-adic numbers, which are used in number theory. This field of study is known as **Ring Theory**.
+At this point we can contruct extensions of the Complex numbers, such as the [[Visualizing the 4d numbers Quaternions|Quaternions]] and Octonions, but these are less commonly used in basic mathematics and more often found in advanced fields such as theoretical physics and computer graphics. Some of these that might be usefull are the dual numbers, which are used in [[Automatic Differentiation|automatic differentiation]], and the p-adic numbers, which are used in number theory. This field of study is known as **Ring Theory**.

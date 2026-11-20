@@ -12,9 +12,9 @@ author:
 ---
 ## Part A
 
-1. Describe the Elaboration Likelyhood Model (make sure to define the central and peripheral routes).
+1. Describe the [[Elaboration Likelihood Model|Elaboration Likelyhood Model]] (make sure to define the central and peripheral routes).
 
-The Elaboration Likelihood Model (ELM) is a theory in social psychology that explains how people are persuaded to change their attitudes or behaviors. It posits two main routes to persuasion: the central route and the peripheral route.
+The Elaboration Likelihood Model (ELM) is a theory in [[Social Psychology|social psychology]] that explains how people are persuaded to change their attitudes or behaviors. It posits two main routes to persuasion: the central route and the peripheral route.
 
 2. Describe a time that you used the peripheral route and a time you used the central route.
 
@@ -28,7 +28,7 @@ We may use the central route when we are motivated and able to process informati
 
 ## Part B
 
-1. What do we do to relieve feelings of cognitive dissonance?
+1. What do we do to relieve feelings of [[Cognitive Dissonance|cognitive dissonance]]?
 
 We can relieve feelings of cognitive dissonance by changing our attitudes, beliefs, or behaviors to make them more consistent. This can involve rationalizing our actions, seeking new information that supports our current beliefs, or minimizing the importance of the conflicting information.
 

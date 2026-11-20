@@ -41,7 +41,7 @@ degrading-enzyme:
   - monoamine oxidase B (MAO-B)
   - catechol-O-methyltransferase (COMT)
 tags:
-  - comp-neuro/brain/neurotransmitter
+  - neuro/molecular
   - pharmacology/neuro
 date: 2026-09-21T15:50:54-04:00
 updated: 2026-09-21T19:14:48-04:00

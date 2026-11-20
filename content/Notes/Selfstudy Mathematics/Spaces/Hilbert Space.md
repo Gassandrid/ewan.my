@@ -3,7 +3,6 @@ date: 2025-06-13
 updated: 2025-09-09
 tags:
   - math/analysis
-  - todo/math
 source: "[[What is a Hilbert Space?]]"
 class:
   - transcript
@@ -14,19 +13,19 @@ class:
 
 Let's start with a simple vector. Imagine an arrow in the two dimensional plane. By choosing a specific coordinate system, we can specify the location of this vector with just two numbers: # of steps in x direction, and # of steps in y direction:
 
-[![Screenshot 2025-06-13 at 2.28.36 PM.png](../../../Attachments/Screenshot%202025-06-13%20at%202.28.36%20PM.png)](../../../Attachments/Screenshot%202025-06-13%20at%202.28.36%20PM.png)
+[![Screenshot 2025-06-13 at 2.28.36 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bc06af1bebbc235fca61b763b0ebf670eb425c948df9c3ee9774274560389c61/Screenshot%202025-06-13%20at%202.28.36%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bc06af1bebbc235fca61b763b0ebf670eb425c948df9c3ee9774274560389c61/Screenshot%202025-06-13%20at%202.28.36%20PM.png)
 
 While this is generally the standard coordinate system used by all, there is nothing preventing us from using an alternative one.
 
 We could just as easily use any other two [[Notes/Linear Algebra/Module 1/Vectors|vectors]] to form our coordinate system( so long as they have a $90^\circ$ angle between them ):
 
-[![Screenshot 2025-06-13 at 2.34.15 PM.png](../../../Attachments/Screenshot%202025-06-13%20at%202.34.15%20PM.png)](../../../Attachments/Screenshot%202025-06-13%20at%202.34.15%20PM.png)
+[![Screenshot 2025-06-13 at 2.34.15 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/334d18bd891779befdb9459d99fc34617999c6b26d9d22867da400e6d7c363e4/Screenshot%202025-06-13%20at%202.34.15%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/334d18bd891779befdb9459d99fc34617999c6b26d9d22867da400e6d7c363e4/Screenshot%202025-06-13%20at%202.34.15%20PM.png)
 
 Within the field of [[Essence of Linear Algebra|Linear Algebra]], we would say that these two [[Notes/Linear Algebra/Module 1/Vectors|vectors]] are [[Orthogonality|Orthogonal]] to each other.
 
 And, since any other vector in the plane can be expressed as some combination of these two [[Notes/Linear Algebra/Module 1/Vectors|vectors]]:
 
-[![Screenshot 2025-06-17 at 2.22.07 PM.png](../../../Attachments/Screenshot%202025-06-17%20at%202.22.07%20PM.png)](../../../Attachments/Screenshot%202025-06-17%20at%202.22.07%20PM.png)
+[![Screenshot 2025-06-17 at 2.22.07 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4a14bb8971d8657b1c1d777f3c7fc067a6adf040f7f77730c4e3aa0e84562721/Screenshot%202025-06-17%20at%202.22.07%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4a14bb8971d8657b1c1d777f3c7fc067a6adf040f7f77730c4e3aa0e84562721/Screenshot%202025-06-17%20at%202.22.07%20PM.png)
 
 Then they form an **[[Orthogonality|orthogonal]] basis**
 
@@ -60,7 +59,7 @@ What a **Hilbert Space** is then, is the extension of these concepts to an **inf
 
 These live in the **Vector Space**, which is a well-defined collection of objects that satisfy certain rules. Namely, you can scale and add [[Notes/Linear Algebra/Module 1/Vectors|vectors]] without leaving the space.
 
-[![Screenshot 2025-06-17 at 4.12.49 PM.png](../../../Attachments/Screenshot%202025-06-17%20at%204.12.49%20PM.png)](../../../Attachments/Screenshot%202025-06-17%20at%204.12.49%20PM.png)
+[![Screenshot 2025-06-17 at 4.12.49 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f83daae34a08d05304b0b5eb018ec69acc66396587c7d8eeef0275cd98ec3ef4/Screenshot%202025-06-17%20at%204.12.49%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f83daae34a08d05304b0b5eb018ec69acc66396587c7d8eeef0275cd98ec3ef4/Screenshot%202025-06-17%20at%204.12.49%20PM.png)
 
 A lot of things can fall under this classification. For example:
 

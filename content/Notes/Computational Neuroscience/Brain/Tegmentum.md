@@ -33,8 +33,7 @@ associated-disorders:
   - addiction
   - chronic pain syndromes
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The tegmentum is the ventral portion of the midbrain. It houses several key nuclei including the [[Ventral Tegmental Area]] (reward/dopamine), the periaqueductal gray (pain gating), and the red nucleus (motor coordination). It forms the floor of the cerebral aqueduct.

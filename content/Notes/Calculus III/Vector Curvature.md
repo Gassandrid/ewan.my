@@ -13,7 +13,7 @@ Does a circle have a curvature? Yeah, it has some curvature.
 
 It is our job to quantify how "much" curvature is in a given problem.
 
-## Recalling [[Notes/Calculus III/Conceptual Notes/Vectors]]
+## Recalling [[Vectors]]
 
 Lets have a look at a simple circle.
 

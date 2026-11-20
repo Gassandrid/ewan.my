@@ -3,7 +3,7 @@ date: 2024-09-12
 updated: 2025-10-15
 tags:
   - cs/web
-  - cs/homelab
+  - projects/homelab
 class:
   - note
 source:

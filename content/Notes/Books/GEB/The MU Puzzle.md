@@ -2,15 +2,13 @@
 id: The MIU Puzzle
 aliases:
 tags:
-  - books/geb
-  - seed
   - math/logic
 date: 2025-06-24
 updated: 2025-08-13
 class:
   - note
 ---
-The MU puzzle is a formal system created by Douglas Hofstadter in [[Gödel, Escher, Bach]]. It is a simple set of rules that can be used to manipulate strings of characters. The goal is to determine whether the string `MI` can be transformed into the string `MU` using the rules of the system.
+The MU puzzle is a [[Formal System|formal system]] created by [[Douglas Hofstadter]] in [[Gödel, Escher, Bach]]. It is a simple set of rules that can be used to manipulate strings of characters. The goal is to determine whether the string `MI` can be transformed into the string `MU` using the rules of the system.
 
 | #   | Formal rule    | Informal explanation                             | Example          |
 | --- | -------------- | ------------------------------------------------ | ---------------- |
@@ -73,6 +71,6 @@ $$
 N \equiv 1 \quad or \quad N \equiv 2 \pmod{3}
 $$
 
-Let $n$ be a natural number such that $2^n > N$ and $2^n \equiv N \pmod{3}$. Starting from the axiom `MI`, applying the second rule $n$ times produces a string with $2^n$ consecutive `I`s after the `M`. Since $2^n - N$ is divisible by 3, applying the third rule $(2^n - N)/3$ times will produce a string with exactly $N$ `I`s, followed by some `U`s. The `U` count can be made even by applying the first rule once if necessary. 
+Let $n$ be a natural number such that $2^n > N$ and $2^n \equiv N \pmod{3}$. Starting from the [[Axiom|axiom]] `MI`, applying the second rule $n$ times produces a string with $2^n$ consecutive `I`s after the `M`. Since $2^n - N$ is divisible by 3, applying the third rule $(2^n - N)/3$ times will produce a string with exactly $N$ `I`s, followed by some `U`s. The `U` count can be made even by applying the first rule once if necessary. 
 
 Applying the fourth rule repeatedly, all `U`s can be removed, resulting in a string with $N_I + 3N_U$ consecutive `I`s. Finally, applying the third rule strategically to reduce triplets of `I` into a `U` will produce the desired string. Therefore, any string conforming to the system's properties can be derived from `MI`.

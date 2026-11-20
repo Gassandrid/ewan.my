@@ -4,7 +4,7 @@ updated: 2026-08-13T12:08:29-07:00
 class:
   - note
 tags:
-  - math/chaos/fixed-point
+  - math/dynamical-systems/fixed-point
 source:
 related:
 author:

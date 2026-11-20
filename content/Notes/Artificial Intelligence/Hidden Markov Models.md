@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/linear-algebra/markhov-chains
+  - math/probability/markov
   - math/probability/bayesian
 source:
   - https://www.youtube.com/watch?v=ZIT2UH6bF38&sttick=0

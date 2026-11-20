@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos/discrete
+  - math/dynamical-systems/maps
 source:
 related:
 author:
@@ -34,9 +34,9 @@ In the classic case of $\mu$ parameter of $2$:
 
 **Fully connected** transition graph, between $0\to1$, midline is $\frac{1}{2}$.
 
-[![transitionGraphLR.png](../../Attachments/transitionGraphLR.png)](../../Attachments/transitionGraphLR.png)
+[![transitionGraphLR.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3f1836177153f0e3a41082b84bb1b9787c16c08e007095a4d6e3b59fb0dd125d/transitionGraphLR.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3f1836177153f0e3a41082b84bb1b9787c16c08e007095a4d6e3b59fb0dd125d/transitionGraphLR.png)
 
-[![RorLTransitionTree.png](../../Attachments/RorLTransitionTree.png)](../../Attachments/RorLTransitionTree.png)
+[![RorLTransitionTree.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/40b3ee3e4adceb2b2006575a2d64b5620f80388cce61979bfbd354fec115a753/RorLTransitionTree.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/40b3ee3e4adceb2b2006575a2d64b5620f80388cce61979bfbd354fec115a753/RorLTransitionTree.png)
 
 ---
 

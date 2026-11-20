@@ -19,4 +19,4 @@ There are two phases of the refractory period:
 - **Absolute refractory period**: During this phase, the neuron is completely incapable of firing another action potential. This is due to the inactivation of sodium channels that were opened during the action potential.
 - **Relative refractory period**: In this phase, the neuron can fire another action potential, but it is more difficult than usual. This is because some sodium channels have returned to their resting state, but the neuron is still [[Hyperpolarization|hyperpolarized]] due to the continued efflux of potassium ions.
 
-[![Pasted image 20250909115524.png](../../../Attachments/Pasted%20image%2020250909115524.png)](../../../Attachments/Pasted%20image%2020250909115524.png)
+[![Pasted image 20250909115524.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b2d619f97318d0c954d36ca1b4d890320464321b9f2c338590648fa414a8ddf1/Pasted%20image%2020250909115524.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b2d619f97318d0c954d36ca1b4d890320464321b9f2c338590648fa414a8ddf1/Pasted%20image%2020250909115524.png)

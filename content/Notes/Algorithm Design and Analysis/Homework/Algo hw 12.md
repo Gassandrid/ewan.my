@@ -102,7 +102,7 @@ $$
 
 All other pairs are disjoint. See *Figure 1* for a rough visualization of this graph.
 
-[![Screenshot 2025-12-05 at 7.22.16 PM.png](Screenshot_2025-12-05_at_7.22.16_PM.png)](Screenshot_2025-12-05_at_7.22.16_PM.png)
+[![Screenshot 2025-12-05 at 7.22.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/72e7a7a221825a33a196e22dc0d76f35ce1bed05123f969864f0e2426190abb7/Screenshot%202025-12-05%20at%207.22.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/72e7a7a221825a33a196e22dc0d76f35ce1bed05123f969864f0e2426190abb7/Screenshot%202025-12-05%20at%207.22.16%20PM.png)
 
 To proove the correctness, we must now define our theorem that SET-PACKING has a solution of size $\geq k \iff G$ has an independent set of size $\geq k$.
 

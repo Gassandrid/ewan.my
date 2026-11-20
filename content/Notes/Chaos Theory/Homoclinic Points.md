@@ -6,7 +6,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos
+  - math/dynamical-systems/chaos
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 9
 source:
@@ -24,7 +24,7 @@ $$
 f(x,y) = \left( \frac{x}{2}, 2y-7x^2 \right)
 $$
 
-[![Screenshot 2026-02-10 at 10.13.29 AM.png](../../Attachments/Screenshot%202026-02-10%20at%2010.13.29%20AM.png)](../../Attachments/Screenshot%202026-02-10%20at%2010.13.29%20AM.png)
+[![Screenshot 2026-02-10 at 10.13.29 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3803d116cfeff00bd155ff94e369d991502c6d813c44035507b1b8107a02982b/Screenshot%202026-02-10%20at%2010.13.29%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3803d116cfeff00bd155ff94e369d991502c6d813c44035507b1b8107a02982b/Screenshot%202026-02-10%20at%2010.13.29%20AM.png)
 
 The [[Stable Manifold]] $S$ is a parabola tangent to the x-axis at 0; the [[Unstable Manifold]] $U$ is the y-axis.
 
@@ -102,7 +102,7 @@ $$
 \end{bmatrix}  }_{ \text{or negation of this} }
 $$
 
-[![greatestFuckingIllustrationOAT.png](../../Attachments/greatestFuckingIllustrationOAT.png)](../../Attachments/greatestFuckingIllustrationOAT.png)
+[![greatestFuckingIllustrationOAT.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7b26f6729fabad0e2bb0de25a70e925777b0c3a902b28d57a341275cecd184d2/greatestFuckingIllustrationOAT.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7b26f6729fabad0e2bb0de25a70e925777b0c3a902b28d57a341275cecd184d2/greatestFuckingIllustrationOAT.png)
 
 ```tikz
 \usepackage{tikz}

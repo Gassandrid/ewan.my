@@ -34,8 +34,7 @@ associated-disorders:
   - schizophrenia
   - anhedonia
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 date: 2026-02-22T19:06:55-08:00
 updated: 2026-07-24T13:50:05-07:00
 ---

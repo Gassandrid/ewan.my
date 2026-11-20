@@ -19,7 +19,7 @@ fig values: $c(x,w)=2$, $c(x,y)=5$, $c(w,y)=2$. given $D_w(u)=5$, $D_y(u)=6$. so
 
 ### A
 
-bellman-ford at x. two next-hops: w (cost 2) and y (cost 5).
+[[Bellman-Ford Algorithm|bellman-ford]] at x. two next-hops: w (cost 2) and y (cost 5).
 
 - $D_x(w) = \min\{2,\ 5+2\} = 2$ (direct)
 - $D_x(y) = \min\{5,\ 2+2\} = 4$ (via w, not direct; w-y link costs 2)
@@ -41,7 +41,7 @@ raise $c(x,y)$. $D_x(u)$ still $\min\{7, c(x,y)+6\} = 7$, y-route never competit
 ## Problem 2
 
 > [!Question]
-> Describe how loops in paths can be detected in BGP.
+> Describe how loops in paths can be detected in [[Border Gateway Protocol|BGP]].
 
 bgp is **path vector** protocol. every route advertisement carries full ordered AS-PATH, not just a scalar distance. on receipt, a router checks whether its own ASN already appears in AS-PATH; if yes, the route is dropped.
 

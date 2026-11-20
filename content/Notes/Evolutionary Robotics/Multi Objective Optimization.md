@@ -43,4 +43,4 @@ f_{k}(x)
 \end{align*}
 $$
 
-[![paretoFrontier.png](../../Attachments/paretoFrontier.png)](../../Attachments/paretoFrontier.png)
+[![paretoFrontier.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a3c4c5c72f59777c1816c900e5f7d8f2a4e0015bfa8b05830bb7fcc2f3e622f9/paretoFrontier.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a3c4c5c72f59777c1816c900e5f7d8f2a4e0015bfa8b05830bb7fcc2f3e622f9/paretoFrontier.png)

@@ -23,11 +23,11 @@ Goods Reddit thread covers my questions:
 
 ## Ideas
 
-- **Proxmox** as hypervisor software on lowest level
-	- Can run **Home Assistant as well** - <https://tteck.github.io/Proxmox/#proxmox-ve-tools>
+- **[[Proxmox on old Macbooks|Proxmox]]** as hypervisor software on lowest level
+	- Can run **[[Home Assistant]] as well** - <https://tteck.github.io/Proxmox/#proxmox-ve-tools>
 - **Home Assistant** as the end-all-be-all top level management for all the systems.
 	- This gives me a great one place dashboard to control everything as well as monitor the systems on the homelab as well
-- Open WebUI + Home assistant LLM for a great home control interface
+- [Open WebUI](https://openwebui.com/) + Home assistant [[Large Language Model|LLM]] for a great home control interface
 	- <https://github.com/maxi1134/Home-Assistant-Config/blob/master/documentation/guides/voice_assistance_guide_open_webui.md>
 - Open WebUI + Comfy UI to integrate image generation into the server
 	- <https://www.youtube.com/watch?v=t68_mYLnSG4>
@@ -58,8 +58,8 @@ For setting up an API to pass other services to the open webui backend, good for
 
 ## Node Orchestration
 
-I want to get familiar with both Kubernetes and docker compose with this project. Deciding which to use what on is quite important, but a simple answer.
+I want to get familiar with both [[Kompose - Docker Compose to Kubernetes|Kubernetes]] and docker compose with this project. Deciding which to use what on is quite important, but a simple answer.
 
-My AI Proxmox VM, which is entirely a local endeavor, does not need scaling abilities, and would be best to pair with docker compose to tie together things like comfyui, ollama.cpp, and open webui
+My AI Proxmox VM, which is entirely a local endeavor, does not need scaling abilities, and would be best to pair with docker compose to tie together things like comfyui, [[Setting Up Local AI|ollama]].cpp, and open webui
 
 My public facing website on the other hand might face scaling requirements, and is a simple enough starting point for me to get to know Kubernetes better.

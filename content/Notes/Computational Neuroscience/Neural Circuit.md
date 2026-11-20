@@ -22,7 +22,7 @@ Beyond the classic structures of a [[Neuron]] ( [[Notes/Computational Neuroscien
 
 We also have **Glial Cells**, which provide structural support, insulation (myelin), and nutrients to neurons. They also play a role in synaptic transmission and circuit plasticity.
 
-[![GleMicrocircuit.png](../../Attachments/GleMicrocircuit.png)](../../Attachments/GleMicrocircuit.png)
+[![GleMicrocircuit.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/735f6411ebef6cf9e268aa9487ab08d33f429c61ab99f3a95ee3faf6ed5b3efc/GleMicrocircuit.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/735f6411ebef6cf9e268aa9487ab08d33f429c61ab99f3a95ee3faf6ed5b3efc/GleMicrocircuit.png)
 
 This figure is a theoretical microcircuit from paper [[ellenbergerBackpropagationSpaceTime2025b]] [@ellenbergerBackpropagationSpaceTime2025b]
 

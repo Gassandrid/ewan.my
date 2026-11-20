@@ -1,139 +1,60 @@
 ---
-id: CH6 - Chi Squared Tests
-aliases:
-  - Chi Squared
-tags:
-  - university
-  - math/probability/statistics
-date: 2024-12-13
-updated: 2026-01-10T10:46:25+02:00
 class:
   - note
+tags:
+  - math/probability/statistics
+  - university
 source:
+  - "[[Statistics Index]]"
 related:
+  - "[[Categorical Variables]]"
+  - "[[Hypothesis Testing]]"
+  - "[[Null Hypothesis]]"
 author:
-description: a "goodness of fit" test for comparing two distributions
+description: Tests that compare observed category counts with the counts a null hypothesis expects, either against a claimed distribution or for independence of two categorical variables.
+aliases:
+  - Chi Squared
+  - Chi Squared Test
+  - Chi-Square Test
+  - Goodness of Fit Test
+  - Test of Independence
+date: 2024-12-13
+updated: 2026-11-19T21:50:00-05:00
 ---
-There are two kinds of Chi Squared Tests we should be familiar with:
-
----
-
-## Goodness of Fit Test (GOF)
-
-Goodness of Fit Test is used to determine whether the distribution of a sample is consistent with a hypothesized distribution.
-
-Think of it as a comparison between the observed distribution and the expected distribution.
-
-We use a GOF Test when we have a single categorical variable, and we want to compare the distribution of the observed data to an expected distribution.
-
----
-
-## Test of Independence
-
-Test of Independence is used to determine whether there is a significant association between two categorical variables.
-
-Think of it as a comparison between the observed frequencies and the expected frequencies.
-
-We use a Test of Independence when we have two categorical variables, and we want to determine whether they are independent of each other.
-
----
-
-## Math Behind the Tests
-
-Both the GOF Test and the Test of Independence use the Chi Squared Test statistic, which is calculated as follows:
+- two tests on [[Categorical Variables|categorical]] counts, same statistic
 
 $$
 \chi^2 = \sum \frac{(O - E)^2}{E}
 $$
 
-Where:
+	- $O$ observed count, $E$ count expected under $H_0$, summed over every category or cell
+	- big $\chi^2$ means observed is far from expected; compare against a $\chi^2$ distribution with the right df
+- **goodness of fit** ( GOF ): one categorical variable, does the [[Sample|sample]] match a hypothesized distribution?
+	- $E = (\text{hypothesized proportion}) \times (\text{grand total})$, $df = k - 1$ for $k$ categories
+- **test of independence**: two categorical variables in a contingency table, are they associated?
+	- $E = \frac{\text{row total} \times \text{column total}}{\text{grand total}}$, $df = (r - 1)(c - 1)$
+- both want every expected count around 5 or more
+- TI-84
+	- GOF: observed in `L1`, expected in `L2`, `STAT` > `TESTS` > `χ²GOF-Test` with $df = k - 1$
+	- independence: observed in matrix `[A]`, `STAT` > `TESTS` > `χ²-Test`, it writes the expected counts into `[B]`
+	- [[P-Value|p-value]] $< \alpha$ ( say 0.05 ): reject the [[Null Hypothesis|null hypothesis]] ( [[Hypothesis Testing]] )
 
-- $\chi^2$ = Chi Squared Test Statistic
-- $O$ = Observed Frequency
-- $E$ = Expected Frequency
-- $\sum$ = Summation over all categories or cells
+## example: goodness of fit
 
-### Calculating Expected Frequencies
+| color  | hypothesized proportion | observed | expected |
+| ------ | ----------------------- | -------- | -------- |
+| brown  | .125                    | 339      | 335      |
+| blue   | .25                     | 583      | 670      |
+| yellow | .125                    | 359      | 335      |
+| orange | .25                     | 493      | 670      |
+| green  | .125                    | 515      | 335      |
+| red    | .125                    | 391      | 335      |
+| total  | 1                       | 2680     | 2680     |
 
-#### For Goodness of Fit:
-
-The expected frequency for each category is calculated as:
-
-$$
-E = (\text{Proportion of Expected Frequency}) \times (\text{Grand Total})
-$$
-
-#### For Test of Independence:
-
-The expected frequency for each cell in the contingency table is calculated as:
-
-$$
-E = \frac{(\text{Row Total} \times \text{Column Total})}{\text{Grand Total}}
-$$
-
-Where:
-
-- $E$ = Expected Frequency
-- $\text{Row Total}$ = Total count for the row
-- $\text{Column Total}$ = Total count for the column
-- $\text{Grand Total}$ = Total count of all observations
-
----
-
-## Performing $\chi^2$ Test on a TI-84 Calculator
-
-To perform these tests on a TI-84 calculator, follow these steps:
-
-1. Enter the observed frequencies into a matrix (e.g., `[A]`).
-2. Enter the expected frequencies into a matrix (e.g., `[B]`).
-3. Use the $\chi^2$ Test function to calculate the test statistic and p-value:
-   - Press `STAT` > `TESTS` > `χ²-Test`.
-   - Assign the observed and expected matrices.
-4. Interpret the results:
-   - Compare the p-value to the significance level ($\alpha$) to make a decision.
-   - A low p-value (typically $< \alpha = 0.05$) indicates that the observed and expected distributions differ significantly.
-
----
-
-## Example: Goodness of Fit Test
-
-Let's perform a Goodness of Fit test on the following data:
-
-| Color  | Frequency | Observed Counts | Expected Counts |
-| ------ | --------- | --------------- | --------------- |
-| Brown  | .125      | 339             | 335.0           |
-| Blue   | .25       | 583             | 670.0           |
-| Yellow | .125      | 359             | 335.0           |
-| Orange | .25       | 493             | 670.0           |
-| Green  | .125      | 515             | 335.0           |
-| Red    | .125      | 391             | 335.0           |
-| Total  | 1         | 2680            | 2680.0          |
-
-### Step 1: Calculate $\chi^2$
-
-Using the formula:
+- contributions: brown $\frac{(339-335)^2}{335} = 0.048$, blue $\frac{(583-670)^2}{670} = 11.297$, yellow $1.719$, orange $46.760$, green $96.716$, red $9.361$
 
 $$
-\chi^2 = \sum \frac{(O - E)^2}{E}
+\chi^2 = 0.048 + 11.297 + 1.719 + 46.760 + 96.716 + 9.361 = 165.90, \qquad df = 5
 $$
 
-We calculate for each color:
-
-1. Brown: $\frac{(339 - 335)^2}{335} = 0.048$
-2. Blue: $\frac{(583 - 670)^2}{670} = 10.716$
-3. Yellow: $\frac{(359 - 335)^2}{335} = 1.792$
-4. Orange: $\frac{(493 - 670)^2}{670} = 48.668$
-5. Green: $\frac{(515 - 335)^2}{335} = 94.373$
-6. Red: $\frac{(391 - 335)^2}{335} = 8.008$
-
-Summing these gives:
-
-$$
-\chi^2 = 0.048 + 10.716 + 1.792 + 48.668 + 94.373 + 8.008 = 163.605
-$$
-
-### Step 2: Interpret Results
-
-Compare $\chi^2$ to the critical value from the Chi Squared table (or use the p-value from your calculator).
-
-If $\chi^2$ is greater than the critical value, or if the p-value is less than $\alpha$, reject the null hypothesis that the distributions are the same.
+- p-value $\approx 5 \times 10^{-34}$, reject $H_0$: the colors don't come in the claimed proportions, mostly too much green and too little orange

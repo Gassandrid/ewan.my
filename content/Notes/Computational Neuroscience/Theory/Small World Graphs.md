@@ -13,7 +13,7 @@ description: graphs with high clustering coefficient, high locality with "inform
 date: 2025-11-07
 updated: 2026-01-18T08:24:33-05:00
 ---
-**Small World Graphs** are a classification of graphs that have a property of "clustering" in combination with "short path lengths". This means that nodes in the graph tend to form tightly-knit groups (high clustering coefficient), while still being connected to other groups through a few long-range connections (short average path length).
+**Small World Graphs** are a classification of [[graphs]] that have a property of "clustering" in combination with "short path lengths". This means that nodes in the graph tend to form tightly-knit groups (high clustering coefficient), while still being connected to other groups through a few long-range connections (short average path length).
 
 The key importance of small world graphs is that they tend to show up in biological, social, and technological networks. For example, social networks often exhibit small world properties, where individuals are part of close-knit communities but can also connect to distant acquaintances through a few intermediaries.
 
@@ -21,7 +21,7 @@ Another great example is this obsidian vault, as the property of clustering emer
 
 This leads to something called "information highways", where information can quickly spread across the network due to the presence of these long-range connections, while still benefiting from the local clustering for efficient communication within groups.
 
-[![smallworldGraph.png](../../../Attachments/smallworldGraph.png)](../../../Attachments/smallworldGraph.png)
+[![smallworldGraph.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f15e858e900c13cd7d1c4422ae7a94441e71e1a88418f04c2e815362aaf4f15b/smallworldGraph.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f15e858e900c13cd7d1c4422ae7a94441e71e1a88418f04c2e815362aaf4f15b/smallworldGraph.png)
 
 ---
 

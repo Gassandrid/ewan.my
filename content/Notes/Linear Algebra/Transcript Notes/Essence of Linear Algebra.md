@@ -3,7 +3,6 @@ date: 2025-04-02
 updated: 2025-04-14
 tags:
   - math/linear-algebra
-  - todo/math
 ---
 *for [3b1b series on youtube](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)* 
 

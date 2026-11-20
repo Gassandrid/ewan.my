@@ -11,16 +11,16 @@ class:
 Suppose the curve $C$ in the xy-plane has the vector equation $\vec{r}(t) = \langle x(t),y(t) \rangle$. Suppose $C$ lies below the surface $z=f(x,y)$, and consider the problem of find the area of the **"sheet"** between the $C$ and the **surface**.
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-06 at 12.12.04 PM.png](../../Attachments/Screenshot%202024-11-06%20at%2012.12.04%20PM.png)](../../Attachments/Screenshot%202024-11-06%20at%2012.12.04%20PM.png)
+> [![Screenshot 2024-11-06 at 12.12.04 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/23eb1b5e9a6fbbec5795c98cd62579b43a017e2190aa3bb03b4071cc514d08f1/Screenshot%202024-11-06%20at%2012.12.04%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/23eb1b5e9a6fbbec5795c98cd62579b43a017e2190aa3bb03b4071cc514d08f1/Screenshot%202024-11-06%20at%2012.12.04%20PM.png)
 
 - $C$ is a curve in the xy-plane
 - The blue space curve $L$ lives on the surface $z=f(x,y)$. It is the curve obtained by lifting $C$ to the surface
 - WE seek the **area of the sheet** between $C$ and $L$.
 
-We proceed the dividing $C$ into n sub-arcs. This is achieved by sub-dividing the parameter interval $[a,b]$ into n sub-intervals of width $\Delta t = \frac{(b-a)}{n}$.
+We proceed the dividing $C$ into n sub-arcs. This is achieved by sub-dividing the [[Parameter|parameter]] interval $[a,b]$ into n sub-intervals of width $\Delta t = \frac{(b-a)}{n}$.
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-06 at 12.14.58 PM.png](../../Attachments/Screenshot%202024-11-06%20at%2012.14.58%20PM.png)](../../Attachments/Screenshot%202024-11-06%20at%2012.14.58%20PM.png)
+> [![Screenshot 2024-11-06 at 12.14.58 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f0d6862d501e52a4263eabad74f7eec49e63069eeb96cf8682571cc2ec9aac03/Screenshot%202024-11-06%20at%2012.14.58%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f0d6862d501e52a4263eabad74f7eec49e63069eeb96cf8682571cc2ec9aac03/Screenshot%202024-11-06%20at%2012.14.58%20PM.png)
 
 The point $t_{i}$ in the parameter interval corresponds to the point on $C$ with position vector $P_{i}= \langle x(t_{i}), y(t_{i}) \rangle$
 
@@ -36,7 +36,7 @@ $$
 
 [^1]
 
-_But we already know $\Delta \partial i$ is the arc length differential(see [[13.3 - Arc Length|section 13.3a]])_
+_But we already know $\Delta \partial i$ is the [[13.3 - Arc Length|arc length]] differential(see [[13.3 - Arc Length|section 13.3a]])_
 
 $$
 \Delta \partial i = \sqrt{ (\dot{x}(t_{i}))^2 + (\dot{y}(t_{i}))^2 } \Delta t
@@ -83,7 +83,7 @@ This particular integral is called the [[Line Integral]]:
 >
 > > [!Info] Sketch
 > >
-> > [![Screenshot 2024-11-06 at 12.48.07 PM.png](../../Attachments/Screenshot%202024-11-06%20at%2012.48.07%20PM.png)](../../Attachments/Screenshot%202024-11-06%20at%2012.48.07%20PM.png)
+> > [![Screenshot 2024-11-06 at 12.48.07 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/158cd87fd5613665bcaf5cb9143f0bc07376153ef976f5c1abd40b31f18b790c/Screenshot%202024-11-06%20at%2012.48.07%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/158cd87fd5613665bcaf5cb9143f0bc07376153ef976f5c1abd40b31f18b790c/Screenshot%202024-11-06%20at%2012.48.07%20PM.png)
 
 Now we know what we are looking for, let's go through the steps to evaluate:
 
@@ -192,7 +192,7 @@ $$
 > $$
 >
 > 2. The geometric interpretation is less intuitive than the line integral with respect to arc length. The line integral with respect to x, for example, can be interpreted as the **area of the projection of the sheet onto the xz-plane** ( see the beginning for the sheet sketch, and then imagine that pushing against the xz-plane).
-> 3. The utility of this type of integral will become apparent when we study line integrals of vector fields; for now, we are learning the mechanics of working with them.
+> 3. The utility of this type of integral will become apparent when we study [[Line Integrals of Vector Fields|line integrals of vector fields]]; for now, we are learning the mechanics of working with them.
 
 > [!Example]
 > Evaluate $\int_{C}y^2 \ dx + \int_{C} x \ dy$ for the following paths:
@@ -278,7 +278,7 @@ $$
 1. A parameterization $\vec{r}(t)$ of $C$ comes with an orientation. In the previous example [[16.2a - Line Integrals Of Scalar Fields#A.|A]] and [[16.2a - Line Integrals Of Scalar Fields#B.|B]], we had:
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-08 at 12.15.08 PM.png](../../Attachments/Screenshot%202024-11-08%20at%2012.15.08%20PM.png)](../../Attachments/Screenshot%202024-11-08%20at%2012.15.08%20PM.png)
+> [![Screenshot 2024-11-08 at 12.15.08 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/42fe535bb5da376f396502061ee15d922bb3e9083fc0f2b9a9dff7fb7e68a159/Screenshot%202024-11-08%20at%2012.15.08%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/42fe535bb5da376f396502061ee15d922bb3e9083fc0f2b9a9dff7fb7e68a159/Screenshot%202024-11-08%20at%2012.15.08%20PM.png)
 
 If $-C$ denotes $C$ but traversed "backwards", then the previous example suggests:
 
@@ -296,7 +296,7 @@ _i.e._ **reversing the orientation of $C$ flips the sign of the line integral.**
 2. Suppose $C$ is a finite union of paths.
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-08 at 12.21.46 PM.png](../../Attachments/Screenshot%202024-11-08%20at%2012.21.46%20PM.png)](../../Attachments/Screenshot%202024-11-08%20at%2012.21.46%20PM.png)
+> [![Screenshot 2024-11-08 at 12.21.46 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e74cfe83b95cd56563daf598bfc63c074d5cb07f46b1602e65f19f0b4e904e9d/Screenshot%202024-11-08%20at%2012.21.46%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e74cfe83b95cd56563daf598bfc63c074d5cb07f46b1602e65f19f0b4e904e9d/Screenshot%202024-11-08%20at%2012.21.46%20PM.png)
 
 To find $\int_{C}f \ d\partial$ (or dx), we add up the line integral of each piece, _e.g._
 

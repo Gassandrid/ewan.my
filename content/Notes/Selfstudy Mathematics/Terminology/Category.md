@@ -3,7 +3,6 @@ class:
   - note
 tags:
   - math/category
-  - todo/math/category
 source:
 related:
 author:
@@ -13,7 +12,7 @@ updated: 2025-11-25
 ---
 A **category** defines the abstraction of *composition*. We primarily understand a category as a collection of some objects which satisfy a set of formal rules concerning [[Composition]], [[Associativity]], and [[Identity]].
 
-[![category.png](../../../Attachments/category.png)](../../../Attachments/category.png)
+[![category.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1de01b070f0894c24f1b01a03961374eac9dcc4225254f1f351a0c8009c01579/category.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1de01b070f0894c24f1b01a03961374eac9dcc4225254f1f351a0c8009c01579/category.png)
 
 ---
 

@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos
+  - math/dynamical-systems/chaos
 source:
 related:
 author:
@@ -32,9 +32,9 @@ $$
   y = x
 $$
 
-creating a "cobweb" of vertical and horizontal steps that converge toward fixed points, cycles, or chaos, revealing the long-term behavior of the system
+creating a "cobweb" of vertical and horizontal steps that converge toward [[Fixed Point Classification|fixed points]], cycles, or [[Chaos|chaos]], revealing the long-term behavior of the system
 
-[![cobPlot.png](../../Attachments/cobPlot.png)](../../Attachments/cobPlot.png)G
+[![cobPlot.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0e080eb7ecbb675428589d7cce8d5b2d5385b1a374650f031c54dd1e1add9446/cobPlot.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0e080eb7ecbb675428589d7cce8d5b2d5385b1a374650f031c54dd1e1add9446/cobPlot.png)G
 
 Important Terms:
 

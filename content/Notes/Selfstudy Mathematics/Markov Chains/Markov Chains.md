@@ -2,7 +2,7 @@
 id: Markov Chains Explained - 1
 aliases:
 tags:
-  - math/linear-algebra/markhov-chains
+  - math/probability/markov
 date: 2025-04-29
 class:
   - transcript
@@ -11,7 +11,7 @@ source:
   - "[[Markov Chains Clearly Explained! Part - 1]]"
 ---
 
-Markov chains are used for everything - statistics, biology, and machine learning of course. They allow for some very interesting probability theory.
+Markov chains are used for everything - statistics, biology, and [[Machine Learning|machine learning]] of course. They allow for some very interesting probability theory.
 
 Let's start with an example.
 
@@ -25,7 +25,7 @@ Let's say we are given a graph with all 3 foods, with arrows pointing to other f
 
 If we are on **pizza** today, we can predict that there is a $70\%$ chance of having **hotdogs** tomorrow.
 
-[![Screenshot 2025-06-26 at 10.09.56 PM.png](../../../Attachments/Screenshot%202025-06-26%20at%2010.09.56%20PM.png)](../../../Attachments/Screenshot%202025-06-26%20at%2010.09.56%20PM.png)
+[![Screenshot 2025-06-26 at 10.09.56 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/764c09754d2ca72314216cc0694975e937ae34347909fd83c91013105ef78fbc/Screenshot%202025-06-26%20at%2010.09.56%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/764c09754d2ca72314216cc0694975e937ae34347909fd83c91013105ef78fbc/Screenshot%202025-06-26%20at%2010.09.56%20PM.png)
 
 While quite a simple diagram, this is actually a complete Markov chain!
 
@@ -35,7 +35,7 @@ $$
 P(X_{n+1} = x | X_{1}=x_{1}, X_{2}=x_{2},\dots,X_{n}=x_{n})
 $$
 
-This is the **essential** property of Markov chains: you **only** need the previous state to figure out the next, and not the whole history/probability distribution.
+This is the **essential** property of Markov chains: you **only** need the previous state to figure out the next, and not the whole history/[[Probability Distribution|probability distribution]].
 
 > [!Example]
 > For finding the probability of getting **Hotdog** given that the previous day had **Pizza**(on the $4_{th}$ day):
@@ -56,7 +56,7 @@ _However, there are special Markov Chains with unique properties that break this
 
 To get a feel for what you might see over a long time period of this chain, lets _walk_ the chain and see what we get:
 
-[![Screenshot 2025-04-29 at 1.40.45 PM.png](../../../Attachments/Screenshot%202025-04-29%20at%201.40.45%20PM.png)](../../../Attachments/Screenshot%202025-04-29%20at%201.40.45%20PM.png)
+[![Screenshot 2025-04-29 at 1.40.45 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7ccba6dc41bea541f827bfa1d229916698550d77e3cc0ef0ddc4b4c78bb37f6b/Screenshot%202025-04-29%20at%201.40.45%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7ccba6dc41bea541f827bfa1d229916698550d77e3cc0ef0ddc4b4c78bb37f6b/Screenshot%202025-04-29%20at%201.40.45%20PM.png)
 
 After 10 steps, we are left with this. But how can we find the probability of **each of the food items**, aka a probability distribution? This is not a particularly meaningful question as it is quite simple, but leads to a bigger picture idea later.
 
@@ -139,7 +139,7 @@ Well, there is a better way to represent it, through the user of **Linear Algebr
 
 In reality, a Markov change is essentially just a **directed graph**, something we are very familiar with (as computer scientists for graph databases, and in theory of computing with Automota)
 
-Because of this, we can represent the previous graph with a simple adjacency matrix:
+Because of this, we can represent the previous graph with a simple [[Adjacency Matrix|adjacency matrix]]:
 
 $$
 \begin{array}{c|ccc}

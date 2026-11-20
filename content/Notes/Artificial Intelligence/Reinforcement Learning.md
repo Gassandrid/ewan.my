@@ -22,7 +22,7 @@ We all know what RL is, this is just going to serve as a high level note on the 
 
 ## Main [[Markov Decision Process]] Loop
 
-[![Screenshot 2026-09-11 at 7.42.25 PM.png](../../Attachments/Screenshot%202026-09-11%20at%207.42.25%20PM.png)](../../Attachments/Screenshot%202026-09-11%20at%207.42.25%20PM.png)
+[![Screenshot 2026-09-11 at 7.42.25 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/afd9b623962c4330307afe4621f42cf3b71d76887842a8b5d78dbea4a0e1aeee/Screenshot%202026-09-11%20at%207.42.25%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/afd9b623962c4330307afe4621f42cf3b71d76887842a8b5d78dbea4a0e1aeee/Screenshot%202026-09-11%20at%207.42.25%20PM.png)
 
 - **Agent**
 	- represent that which learns and takes **actions** at each moment in time $T$
@@ -115,7 +115,7 @@ $$
 > 
 > we can picture these distributions as heatmaps:
 > 
-> [![Screenshot 2026-09-11 at 8.05.25 PM.png](../../Attachments/Screenshot%202026-09-11%20at%208.05.25%20PM.png)](../../Attachments/Screenshot%202026-09-11%20at%208.05.25%20PM.png)
+> [![Screenshot 2026-09-11 at 8.05.25 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a924d65245cbb193ad19d66852c7fac92be4bff0a10fd0f552493527e5ad7031/Screenshot%202026-09-11%20at%208.05.25%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a924d65245cbb193ad19d66852c7fac92be4bff0a10fd0f552493527e5ad7031/Screenshot%202026-09-11%20at%208.05.25%20PM.png)
 
 **State Value Function**
 

@@ -2,11 +2,10 @@
 class:
   - note
 tags:
-  - seed
   - health
   - pharmacology/neuro
   - transhumanism/biohacking/wgs
-  - cs/homelab/data
+  - projects/homelab/data
 related:
   - "[[My Eternal Golden Braid]]"
   - "[[Self Configuration]]"

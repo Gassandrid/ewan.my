@@ -4,8 +4,8 @@ updated: 2025-12-18
 class:
   - note
 tags:
-  - cs/ai/diffusion
-  - cs/ai/variational
+  - cs/ai/generative/diffusion
+  - cs/ai/generative/variational
   - math/information
 source:
   - "[[Denoising Diffusion Probabilistic Models]]"
@@ -14,9 +14,9 @@ author:
 aliases:
   - diffusion
 ---
-**Diffusion** is a novel class of generatative modeling that, in most cases, work to denoise data by learning to reverse a gradual noising process. Diffusion models have recently gained significant attention in the field of machine learning, particularly for their ability to generate high-quality images, audio, and other types of data.
+**Diffusion** is a novel class of generatative modeling that, in most cases, work to denoise data by learning to reverse a gradual noising process. Diffusion models have recently gained significant attention in the field of [[Machine Learning|machine learning]], particularly for their ability to generate high-quality images, audio, and other types of data.
 
-In the world of [[Variational Inference]], diffusion models can be understood as a type of latent variable model where the latent variables represent progressively noisier versions of the data. The model is trained to predict the original data from these noisy versions, effectively learning to reverse the diffusion process.
+In the world of [[Variational Inference]], diffusion models can be understood as a type of latent variable model where the [[Latent Variables|latent variables]] represent progressively noisier versions of the data. The model is trained to predict the original data from these noisy versions, effectively learning to reverse the diffusion process.
 
 However, these models are NOT simply told to denoise data directly. Instead, they are trained to predict the noise added at each step of the diffusion process, and then follow it by adding ANOTHER noise to the denoised output. This iterative process continues until the model reaches a point where the data is sufficiently denoised.
 

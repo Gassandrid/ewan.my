@@ -36,8 +36,7 @@ associated-disorders:
   - frontotemporal dementia
   - Broca's aphasia
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The frontal lobe is the largest cortical lobe and the seat of executive function. The [[Prefrontal Cortex]] handles abstract reasoning, planning, and working memory; the motor cortex (M1) drives voluntary movement via the corticospinal tract.

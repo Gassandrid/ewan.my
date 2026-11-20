@@ -20,7 +20,7 @@ $$
 \frac{d\mathbf{h}(t)}{dt}= f_{\theta}(\mathbf{h}(t), t)
 $$
 
-where $\theta$ network parameters determine how state changes
+where $\theta$ network [[Parameter|parameters]] determine how state changes
 
 ## What is Being Learned?
 
@@ -30,7 +30,7 @@ $$
 \mathbf h(t_1)=\mathbf h(t_0)+\int_{t_0}^{t_1}f_\theta(\mathbf h(t),t)\,dt.
 $$
 
-[[Eulers Method]] gives  $\mathbf h_{k+1}=\mathbf h_k+\Delta t\,f_\theta(\mathbf h_k,t_k)$, which looks like a [[Residual Network]] update. In a neural ODE, solver controls integration steps instead of treating each step as a separately learned layer. See [Chen et al. (2018)](https://arxiv.org/abs/1806.07366).
+[[Eulers Method]] gives  $\mathbf h_{k+1}=\mathbf h_k+\Delta t\,f_\theta(\mathbf h_k,t_k)$, which looks like a [[Residual Network]] update. In a neural ODE, [[Ordinary Differential Equation|solver]] controls integration steps instead of treating each step as a separately learned layer. See [Chen et al. (2018)](https://arxiv.org/abs/1806.07366).
 
 ## Latent State, Inputs, and Observations
 
@@ -42,7 +42,7 @@ $$
 \mathbf y_i=g_\phi(\mathbf z(t_i))+\boldsymbol\epsilon_i.
 $$
 
-- $\mathbf y_i$: measured EEG or behavioral features at recorded times.
+- $\mathbf y_i$: measured [[On Doing EEG Work|EEG]] or behavioral features at recorded times.
 - $\mathbf z(t)$: inferred latent state; not directly measured.
 - $\mathbf u(t)$: observed inputs, such as stimulus features.
 - $g_\phi$: observation model, connecting the latent state to a particular sensor.

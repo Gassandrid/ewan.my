@@ -2,7 +2,6 @@
 date: 2025-02-07
 updated: 2025-09-05
 tags:
-  - seed
   - academia
 title: How To Read a Research Paper Effectively
 ---

@@ -35,7 +35,7 @@ associated-disorders:
   - temporal lobe epilepsy
   - PTSD
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
   - biology
 date: 2026-02-22T22:16:36-05:00
 updated: 2026-02-26T14:27:53-05:00
@@ -48,7 +48,7 @@ In addition to memory and navigation, the dentate gyrus is one of the few region
 - receives sensory information from [[Lateral Entorhinal Cortex]]
 - receives structural information from [[Medial Entorhinal Cortex]]
 
-[![Pasted image 20250331092645.png](../../../Attachments/Pasted%20image%2020250331092645.png)](../../../Attachments/Pasted%20image%2020250331092645.png)
+[![Pasted image 20250331092645.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5ffe54fe7ec22de1a997f0287848e57c4f3daaaa50d7526b1cb6c3767d7059c1/Pasted%20image%2020250331092645.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5ffe54fe7ec22de1a997f0287848e57c4f3daaaa50d7526b1cb6c3767d7059c1/Pasted%20image%2020250331092645.png)
 
 [^1]
 

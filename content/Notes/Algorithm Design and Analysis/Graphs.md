@@ -52,7 +52,7 @@ $$
 
 This would yield a graph looking like:
 
-[![Screenshot 2025-08-28 at 11.03.12 AM.png](../../Attachments/Screenshot%202025-08-28%20at%2011.03.12%20AM.png)](../../Attachments/Screenshot%202025-08-28%20at%2011.03.12%20AM.png)
+[![Screenshot 2025-08-28 at 11.03.12 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c0f308de0434d11088511bbc028bd272dbf0a134c8ceb840549dd25d1ade0f7c/Screenshot%202025-08-28%20at%2011.03.12%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c0f308de0434d11088511bbc028bd272dbf0a134c8ceb840549dd25d1ade0f7c/Screenshot%202025-08-28%20at%2011.03.12%20AM.png)
 
 > [!Question]
 > What is the minimum and maximum numbers of edges in an undirected graph with $n$ vertices?
@@ -94,7 +94,7 @@ $$
 
 We get:
 
-[![Screenshot 2025-08-28 at 11.08.24 AM.png](../../Attachments/Screenshot%202025-08-28%20at%2011.08.24%20AM.png)](../../Attachments/Screenshot%202025-08-28%20at%2011.08.24%20AM.png)
+[![Screenshot 2025-08-28 at 11.08.24 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b693f84f9fa7da5bd34534d4fe854513fea4d80432194156071c762a989e6fbf/Screenshot%202025-08-28%20at%2011.08.24%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b693f84f9fa7da5bd34534d4fe854513fea4d80432194156071c762a989e6fbf/Screenshot%202025-08-28%20at%2011.08.24%20AM.png)
 
 Looks quite similar! But with one obvious change.
 

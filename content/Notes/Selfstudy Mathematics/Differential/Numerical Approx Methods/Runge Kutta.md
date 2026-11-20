@@ -14,7 +14,7 @@ updated: 2025-10-15
 
 It is a _much_ better approximation method than [[Eulers Method]], as it uses multiple evaluations of the derivative within each step to achieve higher accuracy.
 
-[![RungeKutta.png](../../../../Attachments/RungeKutta.png)](../../../../Attachments/RungeKutta.png)
+[![RungeKutta.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2a40461298908479a842d22d8222fb3192a2f0a561f760e1478deac7a1aa3e7a/RungeKutta.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2a40461298908479a842d22d8222fb3192a2f0a561f760e1478deac7a1aa3e7a/RungeKutta.png)
 
 ## Forms and Formula
 

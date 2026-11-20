@@ -237,13 +237,13 @@ $$
 
 ### How Do You "Add" Two Vectors Together?
 
-[![Pasted image 20240826123538.png](../../../Attachments/Pasted%20image%2020240826123538.png)](../../../Attachments/Pasted%20image%2020240826123538.png)
+[![Pasted image 20240826123538.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f75b5ed02e68c9780435d19a339b5a1519cfb7095bb47265a695de2dd2b4e8d3/Pasted%20image%2020240826123538.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f75b5ed02e68c9780435d19a339b5a1519cfb7095bb47265a695de2dd2b4e8d3/Pasted%20image%2020240826123538.png)
 
 We can use the "tip to tail" method to add two or more vectors together as show in the figure.
 
 ### How Do You "Subtract" Them?
 
-[![Pasted image 20240826123719.png](../../../Attachments/Pasted%20image%2020240826123719.png)](../../../Attachments/Pasted%20image%2020240826123719.png)
+[![Pasted image 20240826123719.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5f2bb9244c8538cbbaa93385a1700f05b6d3a467f8f9d8accb020b368c2858b5/Pasted%20image%2020240826123719.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5f2bb9244c8538cbbaa93385a1700f05b6d3a467f8f9d8accb020b368c2858b5/Pasted%20image%2020240826123719.png)
 
 We can subtract two vectors by representing one of them as a negative vector `-v`, and then adding those two together.
 
@@ -261,7 +261,7 @@ $$
 
 ### Multiplication of Vectors
 
-[![Pasted image 20240826124335.png](../../../Attachments/Pasted%20image%2020240826124335.png)](../../../Attachments/Pasted%20image%2020240826124335.png)
+[![Pasted image 20240826124335.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1b19d8c857ebce94042a972350078d2adf545a785b3055debfaf2fee166a70a9/Pasted%20image%2020240826124335.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1b19d8c857ebce94042a972350078d2adf545a785b3055debfaf2fee166a70a9/Pasted%20image%2020240826124335.png)
 
 To multiply vectors, we can use the **dot product** to find the magnitude.
 
@@ -271,7 +271,7 @@ $$
 
 We can also use the cross product
 
-[![Pasted image 20240826124530.png](../../../Attachments/Pasted%20image%2020240826124530.png)](../../../Attachments/Pasted%20image%2020240826124530.png)
+[![Pasted image 20240826124530.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/217ac9048d93acc89751cc6cbefaccd9b5f3278c234e1eb52ca449e45b280280/Pasted%20image%2020240826124530.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/217ac9048d93acc89751cc6cbefaccd9b5f3278c234e1eb52ca449e45b280280/Pasted%20image%2020240826124530.png)
 
 The cross product of two vectors is another vector that is perpendicular to both of the original vectors.
 

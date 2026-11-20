@@ -20,7 +20,7 @@ $$
 y_{n+1} = y_n + h f(t_n, y_n)
 $$
 
-[![EulerMethod.png](../../../../Attachments/EulerMethod.png)](../../../../Attachments/EulerMethod.png)
+[![EulerMethod.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2eba768cdc037477cb742df629098e5c2dfa1d000a081ce8cedffaae123de1e0/EulerMethod.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2eba768cdc037477cb742df629098e5c2dfa1d000a081ce8cedffaae123de1e0/EulerMethod.png)
 
 ---
 

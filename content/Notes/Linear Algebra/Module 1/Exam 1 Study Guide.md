@@ -8,7 +8,7 @@ tags:
 The exams will cover the following topics:
 
 1. Can you even RREF?
-	- reduced echelon form
+	- [[Reduced Echelon Form|reduced echelon form]]
 	- elementary operations
 2. Vector / Matrix Algebra
 	- Matrix-Matrix multiplication
@@ -16,18 +16,18 @@ The exams will cover the following topics:
 	- Dot product
 	- vector matrix addition
 	- consine law
-	- orthogonality
+	- [[Orthogonality|orthogonality]]
 	- length of a vector
 	- scalar multiplication
-	- matrix transpose
+	- [[Matrix Transpose|matrix transpose]]
 
-- Basic solutions of homogeneous systems:
-	- span
-	- linear independence
+- Basic solutions of [[Homogeneous Systems|homogeneous systems]]:
+	- [[Chapter 2 - Linear Combinations, Span, and Basis Vectors|span]]
+	- [[Shrinking and Linear Independence|linear independence]]
 	- bases
 	- shrinking
 	- dimension
-	- subspaces
+	- [[Subspace|subspaces]]
 	- Back substitution
 	- First/lead varaibles
 	- Linear combination
@@ -40,7 +40,7 @@ The exams will cover the following topics:
 
 ---	
 
-3. Systems of linear equations
+3. Systems of [[Linear Equations|linear equations]]
 	- basic solutions
 	- consistent/inconsistent
 	- particular + homogeneous

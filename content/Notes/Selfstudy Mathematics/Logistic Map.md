@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos
+  - math/dynamical-systems/chaos
   - math/linear-algebra
 source:
 related:
@@ -41,7 +41,7 @@ $$
   f: x \mapsto r x (1 - x)
 $$
 
-It can be seen as a tool for studying bifurcations, chaos, and the transition from order to chaos in dynamical systems. As $r$ increases, the system undergoes a series of bifurcations leading to chaotic behavior.
+It can be seen as a tool for studying bifurcations, [[Chaos|chaos]], and the transition from order to chaos in dynamical systems. As $r$ increases, the system undergoes a series of bifurcations leading to chaotic behavior.
 
 ---
 
@@ -88,4 +88,4 @@ plt.grid(False)
 plt.show()
 ```
 
-This interesting behavior illustrates how simple deterministic systems can exhibit complex and unpredictable dynamics, a hallmark of chaos theory.
+This interesting behavior illustrates how simple deterministic systems can exhibit complex and unpredictable dynamics, a hallmark of [[Dynamical Systems Theory|chaos theory]].

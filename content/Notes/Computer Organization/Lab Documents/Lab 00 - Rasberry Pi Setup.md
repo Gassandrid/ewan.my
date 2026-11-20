@@ -99,7 +99,7 @@ graph LR
 
 ## 3. Which File System Does _Raspberry Pi OS_ Use?
 
-Since the Raspberry Pi runs on Rasbian, a fork of Debian, Linux, it uses the Unix File System like most other Linux computers.
+Since the Raspberry Pi runs on Rasbian, a fork of Debian, Linux, it uses the [[Unix File System]] like most other Linux computers.
 
 ---
 
@@ -116,11 +116,11 @@ Partitions also serve to make your storage safer, as by creating a logical barri
 
 ## 5. What is SSH? Describe.
 
-**SSH**, also known as the Secure Shell Protocol, is command line tool and important protocol for secure communication across computers through a network.
+**[[SSH]]**, also known as the Secure Shell Protocol, is command line tool and important protocol for secure communication across computers through a network.
 
 While SSH can be used for all sorts of things like terminal web apps(shown below), it is mostly used in today's world for securely logging in to servers and other headless devices.
 
-[![Screenshot 2024-09-11 at 10.12.33 PM.png](../../../Attachments/Screenshot%202024-09-11%20at%2010.12.33%20PM.png)](../../../Attachments/Screenshot%202024-09-11%20at%2010.12.33%20PM.png)
+[![Screenshot 2024-09-11 at 10.12.33 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5ce7a6e97793de294854b18771575140ce7ac2131af201be6e979e12ff7aaeba/Screenshot%202024-09-11%20at%2010.12.33%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5ce7a6e97793de294854b18771575140ce7ac2131af201be6e979e12ff7aaeba/Screenshot%202024-09-11%20at%2010.12.33%20PM.png)
 
 *SSH being used to buy coffee via `terminal.shop`*
 
@@ -150,7 +150,7 @@ ssh ewan@ewanpi.local
 
 This was me connecting to my Rasberry Pi 5, but I did the same thing for the Pi 4 as well.
 
-[![Screenshot 2024-09-11 at 10.26.21 PM.png](../../../Attachments/Screenshot%202024-09-11%20at%2010.26.21%20PM.png)](../../../Attachments/Screenshot%202024-09-11%20at%2010.26.21%20PM.png)
+[![Screenshot 2024-09-11 at 10.26.21 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a6be9166c4f13ffdef57e049b06d26171e9aaae17a2c04b7042362f03365f8e0/Screenshot%202024-09-11%20at%2010.26.21%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a6be9166c4f13ffdef57e049b06d26171e9aaae17a2c04b7042362f03365f8e0/Screenshot%202024-09-11%20at%2010.26.21%20PM.png)
 
 ---
 

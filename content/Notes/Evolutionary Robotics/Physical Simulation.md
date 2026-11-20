@@ -131,7 +131,7 @@ These have to be defined before the simulation starts, and define how the bodies
 
 #### Important Part - Be Aware of DEgrees of Freedom
 
-Possibly the most important part of joints is understanding how many degrees of freedom (DOF) a joint has. This defines how many independent movements the joint allows.
+Possibly the most important part of joints is understanding how many [[Degrees of Freedom|degrees of freedom]] (DOF) a joint has. This defines how many independent movements the joint allows.
 
 More degrees of freedom means more complex movement, but also more complexity in the simulation. We usually are looking to minimize the degrees of freedom to make the simulation more stable and efficient.
 
@@ -165,7 +165,7 @@ To keep pairs from colliding:
 
 Contacts define the interaction between colliding bodies. When two geoms collide, a contact point is generated, and the physics engine calculates the forces needed to resolve the collision.
 
-Something you might not be used to is the idea of **event driven programming**. Instead of operating in a linear fashion, computer keeps track of important events, and you implement functions called **callbacks** that get executed when those events happen.
+Something you might not be used to is the idea of **[[Event-Driven Programming|event driven programming]]**. Instead of operating in a linear fashion, computer keeps track of important events, and you implement functions called **callbacks** that get executed when those events happen.
 
 ```cpp
 

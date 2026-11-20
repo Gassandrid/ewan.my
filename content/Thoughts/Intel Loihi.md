@@ -3,9 +3,8 @@ source: https://www.intel.com/content/www/us/en/research/neuromorphic-computing-
 image: https://www.google.com/s2/favicons?domain=https://www.intel.com/content/www/us/en/research/neuromorphic-computing-loihi-2-technology-brief.html&sz=256
 class: website
 tags:
-  - website
   - comp-neuro/models
-  - cs/ai/spiking
+  - cs/ai/architecture/spiking
 related:
 date: 2026-05-23T11:25:49-07:00
 updated: 2026-10-13T12:52:30-04:00

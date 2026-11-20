@@ -35,7 +35,7 @@ updated: 2025-04-01
 
 > For the following Turing Machine, complete the questions below:
 
-[![Screenshot 2025-04-01 at 9.17.47 AM.png](../../../Attachments/Screenshot%202025-04-01%20at%209.17.47%20AM.png)](../../../Attachments/Screenshot%202025-04-01%20at%209.17.47%20AM.png)
+[![Screenshot 2025-04-01 at 9.17.47 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/428e21bd10951b5a07b265186ef1964c4a29a18e91f99735ad0ecb1e2e685942/Screenshot%202025-04-01%20at%209.17.47%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/428e21bd10951b5a07b265186ef1964c4a29a18e91f99735ad0ecb1e2e685942/Screenshot%202025-04-01%20at%209.17.47%20AM.png)
 
 1.  **Work out the complete sequence of configurations which would result if the input were 000**
 
@@ -81,7 +81,7 @@ $$
 
 > Given the Turing machine shown in Sipser ITTTOC Example 3.9, write the complete sequence of configurations that formally describes the computation on the following inputs:
 
-[![Screenshot 2025-04-01 at 9.39.34 AM.png](../../../Attachments/Screenshot%202025-04-01%20at%209.39.34%20AM.png)](../../../Attachments/Screenshot%202025-04-01%20at%209.39.34%20AM.png)
+[![Screenshot 2025-04-01 at 9.39.34 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8fd9aec97cf738d02ad6688616b3062e6b1d1170962ea8311d6fd0b4df78ad03/Screenshot%202025-04-01%20at%209.39.34%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8fd9aec97cf738d02ad6688616b3062e6b1d1170962ea8311d6fd0b4df78ad03/Screenshot%202025-04-01%20at%209.39.34%20AM.png)
 
 1. 01#01
 

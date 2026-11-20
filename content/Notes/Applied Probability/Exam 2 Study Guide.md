@@ -13,20 +13,20 @@ For the Exam on Wednesday, March 5.
 
 ## **1. Discrete Random Variables (RV), Mass Function, CDF, Expected Value, and Variance**
 
-- **Definition**: A discrete random variable (RV) takes on a countable number of values.
+- **Definition**: A discrete [[Random Variables|random variable]] (RV) takes on a countable number of values.
 - **Probability Mass Function (PMF)**: P(X=x)P(X = x)
-- **Cumulative Distribution Function (CDF)**: F(x)=P(X≤x)F(x) = P(X \leq x)
-- **Expected Value**: E[X]=∑xP(X=x)E[X] = \sum x P(X = x)
-- **Variance**: Var(X)=E[X2]−(E[X])2Var(X) = E[X^2] - (E[X])^2
+- **[[Joint CDF|Cumulative Distribution Function (CDF)]]**: F(x)=P(X≤x)F(x) = P(X \leq x)
+- **[[Expected Value of Discrete Random Variables|Expected Value]]**: E[X]=∑xP(X=x)E[X] = \sum x P(X = x)
+- **[[Variance of Sums|Variance]]**: Var(X)=E[X2]−(E[X])2Var(X) = E[X^2] - (E[X])^2
 - **Properties**: Linearity of expectation, rules for variance calculation
 
 ## **2. Discrete RV’s Joint and Conditional Distributions**
 
 - **Joint PMF**: P(X=x,Y=y)P(X = x, Y = y)
 - **Marginal PMF**: P(X=x)=∑yP(X=x,Y=y)P(X = x) = \sum_y P(X = x, Y = y)
-- **Conditional PMF**: P(X=x∣Y=y)=P(X=x,Y=y)P(Y=y)P(X = x | Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)}
-- **Independence**: P(X=x,Y=y)=P(X=x)P(Y=y)P(X = x, Y = y) = P(X = x) P(Y = y)
-- **Expectation and Covariance**: Cov(X,Y)=E[XY]−E[X]E[Y]Cov(X, Y) = E[XY] - E[X]E[Y]
+- **[[Conditional Probability|Conditional PMF]]**: P(X=x∣Y=y)=P(X=x,Y=y)P(Y=y)P(X = x | Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)}
+- **[[Independence of Random Variables|Independence]]**: P(X=x,Y=y)=P(X=x)P(Y=y)P(X = x, Y = y) = P(X = x) P(Y = y)
+- **Expectation and [[Covariance]]**: Cov(X,Y)=E[XY]−E[X]E[Y]Cov(X, Y) = E[XY] - E[X]E[Y]
 
 ## **3. Bernoulli Distribution**
 
@@ -62,7 +62,7 @@ For the Exam on Wednesday, March 5.
 - **PMF**: P(X=k)=e−λλkk!P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}, for k=0,1,2,...k = 0,1,2,...
 - **Expectation**: E[X]=λE[X] = \lambda
 - **Variance**: Var(X)=λVar(X) = \lambda
-- **Poisson Approximation**: Approximates Binomial when nn is large and pp is small with λ=np\lambda = np.
+- **Poisson Approximation**: Approximates [[Binomial Distribution|Binomial]] when nn is large and pp is small with λ=np\lambda = np.
 
 ## **Study Tips**
 

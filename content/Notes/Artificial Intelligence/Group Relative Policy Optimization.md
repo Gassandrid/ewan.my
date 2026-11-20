@@ -22,10 +22,10 @@ Instead of local reward model, GRPO generates a group of $G$  responses for the 
 
 This is also the "hot stuff" right now (May 2026)
 
-[![GRPO.png](../../Attachments/GRPO.png)](../../Attachments/GRPO.png)
+[![GRPO.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6981ebf9ba089bea1ec59465cb0b15ec059a935319677dcf0698ade8d5d0c5da/GRPO.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6981ebf9ba089bea1ec59465cb0b15ec059a935319677dcf0698ade8d5d0c5da/GRPO.png)
 
 ## Breakdown
 
 [[TRL]] from huggingface has some great methods for their `GRPOTrainer`
 
-[![grpoImplementation.png](../../Attachments/grpoImplementation.png)](../../Attachments/grpoImplementation.png)
+[![grpoImplementation.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b60f024f1ac8b4d6a847cda986e96a8fe7cb1a7765122327a19ec28f235e4543/grpoImplementation.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b60f024f1ac8b4d6a847cda986e96a8fe7cb1a7765122327a19ec28f235e4543/grpoImplementation.png)

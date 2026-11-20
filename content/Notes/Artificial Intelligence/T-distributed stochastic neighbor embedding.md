@@ -18,7 +18,7 @@ aliases:
 
 In Layman's terms, it does this by computing the nearest neighbors of each point in the high dimensional space, and attempting to fine tune a model in the low dimensional space that matches these distances, such that points that were close in high-dim space remain close in low-dim space. The main difference between this (SNE) and t-SNE is that t-SNE uses a heavy-tailed distribution (Student t-distribution) in the low-dimensional space to better handle the "crowding problem", where points tend to cluster too closely together. In addition, it makes the algorithm more efficient to compute(however, still extremely computationally expensive for large datasets).
 
-[![TsneWordEmbeddings.png](../../Attachments/TsneWordEmbeddings.png)](../../Attachments/TsneWordEmbeddings.png)
+[![TsneWordEmbeddings.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4281fe49fb2b7ed9822067432a484f677298259fb240d7995927166129c3005e/TsneWordEmbeddings.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4281fe49fb2b7ed9822067432a484f677298259fb240d7995927166129c3005e/TsneWordEmbeddings.png)
 
 _T-SNE applied to a 19th century word embeddings dataset, showing how words with similar meanings cluster together._
 
@@ -50,7 +50,7 @@ $$
 q_{ij} = \frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}}
 $$
 
-where $y_i$ and $y_j$ are the low-dimensional representations of $x_i$ and $x_j$.
+where $y_i$ and $y_j$ are the low-dimensional [[Representation|representations]] of $x_i$ and $x_j$.
 
 ### Optimization Objective
 
@@ -66,11 +66,11 @@ $$
 \frac{\delta C}{\delta y_i} = 4 \sum_j (p_{ij} - q_{ij})(y_i - y_j)(1 + ||y_i - y_j||^2)^{-1}
 $$
 
-This gradient is optimized using gradient descent with momentum.
+This gradient is optimized using [[Gradient Descent|gradient descent]] with momentum.
 
 ### Perplexity and $\sigma_i$
 
-The perplexity is related to the entropy of the conditional probability distribution:
+The perplexity is related to the entropy of the conditional [[Probability Distribution|probability distribution]]:
 
 $$
 \text{Perp}(P_i) = 2^{H(P_i)} = 2^{-\sum_j p_{j|i} \log_2 p_{j|i}}
@@ -89,7 +89,7 @@ How **T-SNE** works can be understood in two main steps:
 
 A key parameter in T-SNE is **perplexity**, which can be thought of as a smooth measure of the effective number of neighbors. It influences how the algorithm balances attention between local and global aspects of the data. Lower perplexity values focus more on local structures, while higher values capture broader patterns.
 
-[![TsnePerplexityValues.png](../../Attachments/TsnePerplexityValues.png)](../../Attachments/TsnePerplexityValues.png)
+[![TsnePerplexityValues.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/837682d09b06d92d2f5bbfeb43475ba45c99af675406f58699773bbcf7397135/TsnePerplexityValues.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/837682d09b06d92d2f5bbfeb43475ba45c99af675406f58699773bbcf7397135/TsnePerplexityValues.png)
 
 _The different perplexity values 5-100 and how they change the depiction of the data._
 
@@ -97,7 +97,7 @@ _The different perplexity values 5-100 and how they change the depiction of the 
 
 ## Limitations
 
-While a great approximation for many dimension reduction tasks, **T-SNE** has a few key issues. Namely, it is completely non-deterministic, and is unable to generalize to new data like [[Principle Component Analysis]]. It is a "trained" model in the sense that it learns this data distribution specifically, and that also comes with the downside of **computational complexity**, $O(N^2)$. In addition, many features of the visualization have no inherent meaning, namely that the distances between different clusters hold no value, and the cluster sizes themselves are arbitrary
+While a great approximation for many [[Principle Component Analysis|dimension reduction]] tasks, **T-SNE** has a few key issues. Namely, it is completely non-deterministic, and is unable to generalize to new data like [[Principle Component Analysis]]. It is a "trained" model in the sense that it learns this data distribution specifically, and that also comes with the downside of **computational complexity**, $O(N^2)$. In addition, many features of the visualization have no inherent meaning, namely that the distances between different clusters hold no value, and the cluster sizes themselves are arbitrary
 
 ### When To Use What
 
@@ -105,4 +105,4 @@ While a great approximation for many dimension reduction tasks, **T-SNE** has a 
 
 **Use [[Principle Component Analysis|PCA]] when**: You need deterministic results, global structure preservation, or the ability to transform new data.
 
-**Use UMAP when**: You want fast computation with both local and global structure preserved and the ability to transform new data.
+**Use [[Uniform Manifold Approximation and Projection|UMAP]] when**: You want fast computation with both local and global structure preserved and the ability to transform new data.

@@ -1,7 +1,6 @@
 ---
 date: 2024-10-01
 tags:
-  - math
   - university
   - math/calculus
   - math/sets

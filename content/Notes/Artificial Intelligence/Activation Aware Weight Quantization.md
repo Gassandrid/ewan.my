@@ -17,4 +17,4 @@ observes that salient weights are always tied to high-magnitude activation chann
 
 - https://arxiv.org/html/2502.13178v4
 
-[![activeAwareQuantization.png](../../Attachments/activeAwareQuantization.png)](../../Attachments/activeAwareQuantization.png)
+[![activeAwareQuantization.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/aaa380c63fc80a8dfe8f03e565043dc27e79c51106db8950f915daea3fe36893/activeAwareQuantization.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/aaa380c63fc80a8dfe8f03e565043dc27e79c51106db8950f915daea3fe36893/activeAwareQuantization.png)

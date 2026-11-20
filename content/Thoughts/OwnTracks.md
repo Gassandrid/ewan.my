@@ -4,8 +4,8 @@ image: https://www.google.com/s2/favicons?domain=https://owntracks.org/&sz=256
 class:
   - software
 tags:
-  - cs/software/homelab
-  - cs/homelab/data
+  - projects/homelab/software
+  - projects/homelab/data
 related:
   - "[[Home Assistant]]"
 interface:

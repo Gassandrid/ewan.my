@@ -12,7 +12,7 @@ aliases:
 date: 2026-02-02T08:31:43-05:00
 updated: 2026-02-02T09:11:53-05:00
 ---
-**Cross Validation** is the primary statistical method used to estimate the skill of machine learning models. It is used to protect against overfitting in a predictive model, particularly in a case where the amount of data may be limited.
+**Cross Validation** is the primary statistical method used to estimate the skill of [[Machine Learning|machine learning]] models. It is used to protect against overfitting in a predictive model, particularly in a case where the amount of data may be limited.
 
 ---
 
@@ -20,7 +20,7 @@ updated: 2026-02-02T09:11:53-05:00
 
 ### Repeated Random Sub-sampling Validation
 
-[![reSubSample.png](../../Attachments/reSubSample.png)](../../Attachments/reSubSample.png)
+[![reSubSample.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8c62a2f70a3d9f454a8dffbfed26e2188e9654aaa6c3f2bc3b4d14aec4902952/reSubSample.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8c62a2f70a3d9f454a8dffbfed26e2188e9654aaa6c3f2bc3b4d14aec4902952/reSubSample.png)
 
 Also known as **[[Monte Carlo Simulations|Monte Carlo]] cross-validation**, this method involves randomly splitting the dataset into training and testing data multiple times. Each time, a model is trained on the training set and evaluated on the test set. The results are then averaged to provide an overall performance estimate.
 
@@ -28,7 +28,7 @@ This is a simple and effective method, but it can be computationally expensive, 
 
 ### K-Fold Cross Validation
 
-[![kFoldCross.png](../../Attachments/kFoldCross.png)](../../Attachments/kFoldCross.png)
+[![kFoldCross.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c5b8a84623230424030ad144f64d1b004f9a5a6f3942757a6f6cb420d3ddf9a6/kFoldCross.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c5b8a84623230424030ad144f64d1b004f9a5a6f3942757a6f6cb420d3ddf9a6/kFoldCross.png)
 
 Splits the dataset into _k_ equally sized folds. The model is trained _k_ times, each time using a different fold as the test set and the remaining _k-1_ folds as the training set. The results are then averaged to provide an overall performance estimate.
 
@@ -46,7 +46,7 @@ Upside is there is a lot of training data used for each model.
 
 ## Grid Vs Random Search for Model Selection
 
-When tuning the hyperparameters of an estimator, **Grid Search** and **Random Search** are two common methods used to find the best combination of hyperparameters.
+When tuning the [[Hyperparameter Tuning|hyperparameters]] of an estimator, **Grid Search** and **Random Search** are two common methods used to find the best combination of hyperparameters.
 
 ### Grid Search
 
@@ -68,11 +68,11 @@ We generally:
 
 ## Bias Vs Variance
 
-[![biasVariance.png](../../Attachments/biasVariance.png)](../../Attachments/biasVariance.png)
+[![biasVariance.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6e99713c505a9299df8b7601096be4b424295ceb3da47f00026b94ff710631fd/biasVariance.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6e99713c505a9299df8b7601096be4b424295ceb3da47f00026b94ff710631fd/biasVariance.png)
 
 Analogous to the [[Uncertainty Principle]], there is a trade-off between bias and variance in model performance. Fundamental law of nature, also visible in the [[Fourier Transform]].
 
-In this case, a model with high bias pays little attention to the training data and oversimplifies the model, leading to high error on both training and test data. A model with high variance pays too much attention to the training data and does not generalize well to unseen data, leading to low error on training data but high error on test data.
+In this case, a model with [[Bias-Variance Tradeoff|high bias]] pays little attention to the training data and oversimplifies the model, leading to high error on both training and test data. A model with high variance pays too much attention to the training data and does not generalize well to unseen data, leading to low error on training data but high error on test data.
 
 A learning curve plots your training/validation error against hte number of trianing examples. To plot it, run your algorithm using different training set sizes.
 

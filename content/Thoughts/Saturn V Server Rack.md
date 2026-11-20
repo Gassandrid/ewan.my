@@ -2,9 +2,7 @@
 tags:
   - engineering/3dprinting
   - projects/homelab/hardware
-  - cs/homelab
   - projects/homelab/apartment
-  - tree
 date: 2025-08-31
 updated: 2026-10-23T18:20:39-04:00
 class:
@@ -25,7 +23,7 @@ My current primary **homelab** as per se - it is feature complete in terms of ha
 
 Now that the server rack has been completed, the main task is to build the [[Brainstorming Software Stack|Software Stack]], such that all computers are being evenly distributed. The [[Cyr]] mini pc has the most ram and is the most capable pc in terms of compute, so most services should be focused there. [[Tysis]] is the NAS, only has an intel n100 and thus docker services should not be hosted here, instead having cyr services point to tysis for their data stores.
 
-[![saturnRack.png](../Attachments/saturnRack.png)](../Attachments/saturnRack.png)
+[![saturnRack.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9d49f8c73d126508e7a68d53845931c4f866f457b7bc57c051699a2b117f649b/saturnRack.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9d49f8c73d126508e7a68d53845931c4f866f457b7bc57c051699a2b117f649b/saturnRack.png)
 
 ---
 

@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - cs/ai/llm
-  - cs/ai/tuning
+  - cs/ai/training/fine-tuning
 source:
   - https://arxiv.org/abs/2106.09685
 related:

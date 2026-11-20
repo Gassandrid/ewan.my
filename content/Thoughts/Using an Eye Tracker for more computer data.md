@@ -2,10 +2,9 @@
 class:
   - note
 tags:
-  - cs/homelab/data
-  - comp-neuro/equipment/eye-tracking
+  - projects/homelab/data
+  - neuro/methods/eye-tracking
   - cs/data-science
-  - seed
 source:
 related:
   - "[[Tobii Eye Tracker 5]]"

@@ -4,10 +4,9 @@ aliases:
   - ELBO
   - Variational Lower Bound
 tags:
-  - math/information
   - math/probability/bayesian
   - math/information/entropy
-  - cs/ai/variational
+  - cs/ai/generative/variational
   - generated
 class:
   - note
@@ -28,7 +27,7 @@ The **Evidence Lower Bound (ELBO)** is the core quantity in variational inferenc
 
 ## The Problem: Intractable Posteriors
 
-In many probabilistic models, we want to compute the posterior distribution $p_{\theta}(z|x)$ of latent variables $z$ given observed data $x$. Using Bayes' rule:
+In many probabilistic models, we want to compute the posterior distribution $p_{\theta}(z|x)$ of [[Latent Variables|latent variables]] $z$ given observed data $x$. Using [[Bayes Rule|Bayes' rule]]:
 
 $$
 p_{\theta}(z|x) = \frac{p_{\theta}(x|z)p_{\theta}(z)}{p_{\theta}(x)}
@@ -106,7 +105,7 @@ $$
 
 This form has a clear interpretation:
 
-- **Reconstruction term**: $\mathbb{E}_{q_{\phi}(z|x)}\left[\log p_{\theta}(x|z)\right]$ - how well we can reconstruct $x$ from samples of $z$
+- **Reconstruction term**: $\mathbb{E}_{q_{\phi}(z|x)}\left[\log p_{\theta}(x|z)\right]$ - how well we can reconstruct $x$ from [[Sample|samples]] of $z$
 - **Regularization term**: $-D_{KL}(q_{\phi}(z|x) \| p_{\theta}(z))$ - how close our approximate posterior is to the prior
 
 ### Negative Free Energy
@@ -166,9 +165,9 @@ $$
 
 ## Reparameterization Trick
 
-To optimize the ELBO via gradient descent, we need $\nabla_{\phi} \mathcal{L}(\theta, \phi; x)$. The challenge is that the expectation is over $q_{\phi}(z|x)$, which depends on $\phi$.
+To optimize the ELBO via [[Gradient Descent|gradient descent]], we need $\nabla_{\phi} \mathcal{L}(\theta, \phi; x)$. The challenge is that the expectation is over $q_{\phi}(z|x)$, which depends on $\phi$.
 
-The **reparameterization trick** transforms the random variable $z \sim q_{\phi}(z|x)$ into a deterministic function of $\phi$ plus independent noise:
+The **[[Reparameterization Trick|reparameterization trick]]** transforms the random variable $z \sim q_{\phi}(z|x)$ into a deterministic function of $\phi$ plus independent noise:
 
 For a Gaussian approximate posterior $q_{\phi}(z|x) = \mathcal{N}(z; \mu_{\phi}(x), \sigma_{\phi}^2(x))$:
 

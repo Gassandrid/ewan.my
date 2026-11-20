@@ -24,4 +24,4 @@ updated: 2026-10-18T16:40:23-04:00
 	- While crawling over the desk, the reptiles interact with the dodecahedron and the zoology book, the relationship between a whole and its parts.
 	- system that is stricly rule bound but also capable of referring to and interacting wtih itself on multiple levels.
 
-[![EscherTeselation.png](../Attachments/EscherTeselation.png)](../Attachments/EscherTeselation.png)
+[![EscherTeselation.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/da094ba96980528ddf4de546a4dcb29671e0dcfc05e4d643b756a6465bdf4c91/EscherTeselation.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/da094ba96980528ddf4de546a4dcb29671e0dcfc05e4d643b756a6465bdf4c91/EscherTeselation.png)

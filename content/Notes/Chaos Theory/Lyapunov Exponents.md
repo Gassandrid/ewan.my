@@ -1,11 +1,10 @@
 ---
 date: 2026-02-12T10:20:31-05:00
-updated: 2026-09-29T15:02:54-04:00
+updated: 2026-11-16T12:40:14-05:00
 class:
   - note
 tags:
-  - math/chaos
-  - math/dynamical-systems
+  - math/dynamical-systems/chaos
 source:
 related:
 author:
@@ -59,7 +58,7 @@ For maps or flows on $\mathbb{R}^n$ there is a full **Lyapunov spectrum** $\lamb
 
 For $f_r(x) = rx(1-x)$, $\lambda = \ln 2 \approx 0.693$ at $r = 4$ (fully chaotic, conjugate to the tent map). In periodic windows $\lambda < 0$, and $\lambda = 0$ exactly at bifurcation points.
 
-[![p5_lyapunov.png](../../Attachments/p5_lyapunov.png)](../../Attachments/p5_lyapunov.png)
+[![p5_lyapunov.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4829bcc53dab7ac43b9a435fd9c6c2b461879da551e5176e2502f48d422dd001/p5_lyapunov.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4829bcc53dab7ac43b9a435fd9c6c2b461879da551e5176e2502f48d422dd001/p5_lyapunov.png)
 
 ---
 

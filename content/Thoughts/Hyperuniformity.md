@@ -4,10 +4,9 @@ updated: 2026-01-28T10:26:34-05:00
 class:
   - note
 tags:
-  - seed
   - philosophy
   - math/probability/stochastic
-  - cs/ai/diffusion
+  - cs/ai/generative/diffusion
 source:
   - https://x.com/bravo_abad/status/2016211127374360855/photo/1
 related:
@@ -19,7 +18,7 @@ While **Hyperuniformity** defined as "the suppression of density fluctuations at
 
 For as long as I have been deeply interested in [[Mathematics]], I have always wondered one thing. **How does noise and inherent randomness create order, and, paradoxically, be the key to modeling all the modern systems behind the "order" in our art?**
 
-Diffusion Image Generation models, Language Model Transformers, and even the stock market all rely on randomness to create order. This is counterintuitive to the human mind, which often associates randomness with chaos and disorder.
+[[Diffusion in Machine Learning|Diffusion]] Image Generation models, Language Model Transformers, and even the stock market all rely on randomness to create order. This is counterintuitive to the human mind, which often associates randomness with chaos and disorder.
 
 Noise is usually the enemy of structure and order. But in many systems, noise is not just a nuisance but a fundamental component that enables the emergence of order. This phenomenon is often referred to as "order from noise" or "stochastic resonance."
 
@@ -31,6 +30,6 @@ I saw this post on [X (formerly Twitter)](https://x.com/bravo_abad/status/201621
 
 Long post, so read it yourself, but here is the except underlying the figure below:
 
-> Satyam Anand, Guanming Zhang, and Stefano Martiniani study three paradigmatic systems: random organization (RO) and biased random organization (BRO) from soft matter physics, and stochastic gradient descent (SGD) from machine learning. Each system has fundamentally different microscopic noise sources—random kick directions in RO, random kick magnitudes in BRO, and random particle selection in SGD—yet all undergo the same absorbing-to-active phase transition as particle density increases.
+> Satyam Anand, Guanming Zhang, and Stefano Martiniani study three paradigmatic systems: random organization (RO) and biased random organization (BRO) from soft matter physics, and stochastic [[Gradient Descent|gradient descent]] (SGD) from [[Machine Learning|machine learning]]. Each system has fundamentally different microscopic noise sources—random kick directions in RO, random kick magnitudes in BRO, and random particle selection in SGD—yet all undergo the same absorbing-to-active phase transition as particle density increases.
 
-[![PhysicsAIHyperuniformity.png](../Attachments/PhysicsAIHyperuniformity.png)](../Attachments/PhysicsAIHyperuniformity.png)
+[![PhysicsAIHyperuniformity.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/90cba33b02121237ae4fc1b90272f79b55d5998dc3a3b3a4fccc1cfde8fad298/PhysicsAIHyperuniformity.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/90cba33b02121237ae4fc1b90272f79b55d5998dc3a3b3a4fccc1cfde8fad298/PhysicsAIHyperuniformity.png)

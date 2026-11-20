@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos
+  - math/dynamical-systems/chaos
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 10
 source:
@@ -23,7 +23,7 @@ For each point in the [[Tent Map]] domain $\{ 0,1 \}$, there is a *companion poi
 
 We say the maps $f$ and $g$ are **conjugate** if they are related by a continuous one to one change of coordinates.
 
-[![Screenshot 2026-02-19 at 10.51.04 AM.png](../../Attachments/Screenshot%202026-02-19%20at%2010.51.04%20AM.png)](../../Attachments/Screenshot%202026-02-19%20at%2010.51.04%20AM.png)
+[![Screenshot 2026-02-19 at 10.51.04 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1d7ce7c1483bdf2c8f4e6fe543cd9cfdc31bbcec0db5923d0735839292f1270b/Screenshot%202026-02-19%20at%2010.51.04%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1d7ce7c1483bdf2c8f4e6fe543cd9cfdc31bbcec0db5923d0735839292f1270b/Screenshot%202026-02-19%20at%2010.51.04%20AM.png)
 
 ```tikz
 \usepackage{tikz-cd}
@@ -114,7 +114,7 @@ So stability of [[Fixed Point Classification|Fixed Point]] of $T$ and stability 
 >  f(I) \supseteq I
 > $$
 >
-> [![contMapIAandB.png](../../Attachments/contMapIAandB.png)](../../Attachments/contMapIAandB.png)
+> [![contMapIAandB.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9f4b208eabec15a7a7c19de5cb3081e878e1f50480b604f74d38b2ab15e803c4/contMapIAandB.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9f4b208eabec15a7a7c19de5cb3081e878e1f50480b604f74d38b2ab15e803c4/contMapIAandB.png)
 >
 > Then $f$ has a [[Fixed Point Classification|Fixed Point]] in $I$.
 

@@ -17,13 +17,13 @@ aliases:
   - DMN
 ---
 
-[![defModeNetwork.png](../../../Attachments/defModeNetwork.png)](../../../Attachments/defModeNetwork.png)
+[![defModeNetwork.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/30b7b2aef58477ab95d59c3241742a2bb31b372865bb16a7f5107c87c42a4ab8/defModeNetwork.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/30b7b2aef58477ab95d59c3241742a2bb31b372865bb16a7f5107c87c42a4ab8/defModeNetwork.png)
 
 	
 
 The **Default Mode Network** is best described as the brain state for when a person is not focused on external world, and instead brain it at wakeful rest. Think daydreaming and mind wandering. Primary brain structures involved are [[Medial Prefrontal Cortex]], [[Posterior Cingulate Cortex]], [[Precuneus]], and [[Angular Gyrus]].
 
-[![defModeSubnetworks.png](../../../Attachments/defModeSubnetworks.png)](../../../Attachments/defModeSubnetworks.png)
+[![defModeSubnetworks.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e37f45ddffdfbc67a718bec8169f8945d0cfee44ddd5d5a37c51c80908a0ad6a/defModeSubnetworks.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e37f45ddffdfbc67a718bec8169f8945d0cfee44ddd5d5a37c51c80908a0ad6a/defModeSubnetworks.png)
 
 In more technical terms, the **Default Mode Network** is a large-scale brain network that shows higher activity when an individual is at rest and not engaged in specific goal-directed tasks. It is associated with self-referential thinking, autobiographical memory, and envisioning the future. The network is thought to play a role in integrating internal and external information, as well as in social cognition.
 

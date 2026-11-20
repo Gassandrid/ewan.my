@@ -31,7 +31,7 @@ associated-disorders:
   - Weber's syndrome
   - Parinaud's syndrome
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
   - biology
 date: 2026-02-22T22:03:45-05:00
 updated: 2026-02-24T15:19:21-05:00

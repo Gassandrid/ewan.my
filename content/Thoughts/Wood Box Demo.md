@@ -17,4 +17,4 @@ The wood box demo serves as a chassis test, as visual appeal isn't the biggest p
 
 ---
 
-[![IMG_2276.jpeg](../Attachments/IMG_2276.jpeg)](../Attachments/IMG_2276.jpeg)
+[![IMG_2276.jpeg](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d7313a2253bdf99f27271ae60837786e0bcdd9b9bc97ecdf37f1e2ce86023ccf/IMG_2276.jpeg?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d7313a2253bdf99f27271ae60837786e0bcdd9b9bc97ecdf37f1e2ce86023ccf/IMG_2276.jpeg)

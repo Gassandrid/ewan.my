@@ -4,8 +4,7 @@ class:
 tags:
   - journal/workflow
   - academia
-  - seed
-  - comp-neuro/cognition/content-consumption
+  - neuro/cognition
 source:
 related:
   - "[[How To Read a Research Paper Effectively]]"
@@ -47,7 +46,7 @@ However, active engagement puts you in circumstances much like real world proble
 
 ### Active Mode
 
-Active mode represents a state of mind where you have to reread/rewatch said content, gradually building up your internel representation and integrating external research into a piece(learning about a papers concepts, etc), and taking notes for the sake of thinking through a particular concept. It is a lot harder, and takes a lot more motivation to get started on, but represents a kind of work in which you engage with content as if you are solving a problem in of itself.
+Active mode represents a state of mind where you have to reread/rewatch said content, gradually building up your internel [[Representation|representation]] and integrating external research into a piece(learning about a papers concepts, etc), and taking notes for the sake of thinking through a particular concept. It is a lot harder, and takes a lot more motivation to get started on, but represents a kind of work in which you engage with content as if you are solving a problem in of itself.
 
 Any type of content can be consumed in these modes (youtube is usually passive, but if you engage/capture content then you are consuming actively). Academic papers are reading and have to be engaged with actively to understand, whereas novella and some books (maybe even GEB) _can_ be actively engaged with but also tend to explain themselves to you, doing the engagement for you.
 
@@ -75,7 +74,7 @@ This is where I am getting niche to my experiece. Laberynths are any form of con
 
 ## How Do I Fix My Content Consumption
 
-I have already taken the first step, which is cutting out ultra short form content like instagram reels. While there were a lot of interesting math reels there that explained concepts effectively and intuitively, I have found it has lead me to "vibing out" the shortest path to understanding without really engaging with the tasks the content demands.
+I have already taken the first step, which is cutting out ultra short form content like [[Instagram|instagram]] reels. While there were a lot of interesting math reels there that explained concepts effectively and intuitively, I have found it has lead me to "vibing out" the shortest path to understanding without really engaging with the tasks the content demands.
 
 Obviously I need to find a way to not only balance categories of content ( some reading, some watching, and some traversing ), but also the modes of content ( long form youtube lectures, real papers and textbooks instead of "enjoyment" reading ).
 
@@ -117,7 +116,7 @@ A few weeks ago I made the difficult decision to abandon tasknotes. While I love
 
 In honesty, the solution is right in front of us. I have talked a lot about how each source of input content has a well defined schema. I use this mostly for [[Zotero]] and youtube stuff, but also applies for books and textbooks.
 
-The neat change I made recently is integrating the `status` property everywhere. Before this was used by tasknotes, but now its multi modal. In the context of my nootropics and pharmacology research, status represents if I am taking this, or considering, or dropping. For a book, it is if its to read, reading, or read. for a youtube video, its to watch or watched.
+The neat change I made recently is integrating the `status` property everywhere. Before this was used by tasknotes, but now its multi modal. In the context of my [[Nootropics|nootropics]] and pharmacology research, status represents if I am taking this, or considering, or dropping. For a book, it is if its to read, reading, or read. for a youtube video, its to watch or watched.
 
 thinking about re-implementing [[Consuming and Choosing Content Effectively]] through the bases views I have regarding [[Youtube.base]], [[Books.base]], and [[Papers.base]]. All classes use the `status` property, which we can rework to set an actual content curation system for myself. The neat thing is that I can define a property to represent **consume** - and this can apply for ALL learning resources.
 

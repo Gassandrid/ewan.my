@@ -4,7 +4,7 @@ updated: 2026-09-14T10:47:29-04:00
 class:
   - note
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
 source:
 related:
 author:

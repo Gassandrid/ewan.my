@@ -29,7 +29,7 @@ The boundary between bounded and unbounded points is the [[Julia Set]]. The **fi
 
 ## Fractal Dimension
 
-[![boxCountingDimension.png](../../Attachments/boxCountingDimension.png)](../../Attachments/boxCountingDimension.png)
+[![boxCountingDimension.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5991f6f7b201a3c09086cfb2dfb2dc669f5834162dfa1adcfe0068d76528e042/boxCountingDimension.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5991f6f7b201a3c09086cfb2dfb2dc669f5834162dfa1adcfe0068d76528e042/boxCountingDimension.png)
 
 measuring the dimension of a line: the number of boxes of size $\epsilon$ needed to cover an interval scales as $\frac{1}{\epsilon}$, i.e. $\mathbb{N}(\epsilon) \leq \frac{c}{\epsilon}$ for some constant $c$ analogous to length.
 
@@ -49,7 +49,7 @@ $$
 
 The *slope* of this plot is the box counting dimension.
 
-[![Screenshot 2026-03-26 at 10.23.04 AM.png](../../Attachments/Screenshot%202026-03-26%20at%2010.23.04%20AM.png)](../../Attachments/Screenshot%202026-03-26%20at%2010.23.04%20AM.png)
+[![Screenshot 2026-03-26 at 10.23.04 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/159f840bc795cac69ef73db1420c4370a43bf327afd8ea62acc5bde3a599ff4e/Screenshot%202026-03-26%20at%2010.23.04%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/159f840bc795cac69ef73db1420c4370a43bf327afd8ea62acc5bde3a599ff4e/Screenshot%202026-03-26%20at%2010.23.04%20AM.png)
 
 > **Figure 4.16 Box-counting dimension of the H´enon attractor.**
 > A graphical report of the results of the box counts in Figures 4.13 and 4.15. The box- counting dimension is the limit of $\frac{\log_{2} N(\epsilon)}{\log_{2}\left( \frac{1}{\epsilon} \right)}$. The dimension corresponds to the limiting slope of the line shown, as $\epsilon\to 0$, which is toward the right in this graph. The line shown has slope $\approx 1.27$.

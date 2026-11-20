@@ -34,7 +34,6 @@ processes:
   - "[[neuroinflammation]]"
 tags:
   - transhumanism/longevity
-  - health/substance
   - pharmacology/neuro
 date: 2026-02-22
 updated: 2026-06-06T10:47:59-07:00

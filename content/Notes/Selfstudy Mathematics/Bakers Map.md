@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos
+  - math/dynamical-systems/chaos
 source:
   - https://en.wikipedia.org/wiki/Baker%27s_map
 related:

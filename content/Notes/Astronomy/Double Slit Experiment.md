@@ -11,7 +11,7 @@ class:
 ---
 The **Double Slit Experiment** is a famous physics experiment that demonstrates the wave-particle duality of light and matter. It was first performed by Thomas Young in 1801 to show that light behaves as a wave, but later experiments revealed that light also exhibits particle-like properties.
 
-[![dblSlitExperiment.png](../../Attachments/Pasted%20image%2020240903105449.png)](../../Attachments/Pasted%20image%2020240903105449.png)
+[![dblSlitExperiment.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/18f8080f43327771d72119ae069660894e718dc47d1f87c4bb5cdfedf0ed989c/dblSlitExperiment.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/18f8080f43327771d72119ae069660894e718dc47d1f87c4bb5cdfedf0ed989c/dblSlitExperiment.png)
 
 ## The Oddities of Light
 

@@ -3,7 +3,6 @@ class:
   - software
 tags:
   - cs/software
-  - seed
   - cs/workflow
 source:
   - https://neovim.io/
@@ -30,4 +29,4 @@ Neovim is a terminal/CLI app, and thus allows me to stay in the terminal for my 
 
 My config is built off of a prebuilt distro *LazyVim*, main changes being using a different file explorer that treats files like its own text buffer.
 
-[![Screenshot 2025-09-19 at 1.46.27 PM.png](../Attachments/Screenshot%202025-09-19%20at%201.46.27%20PM.png)](../Attachments/Screenshot%202025-09-19%20at%201.46.27%20PM.png)
+[![Screenshot 2025-09-19 at 1.46.27 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2fa09004947beb37c2a0826eb9b3d85ea86681e98ea29d8d307235dc6d219fad/Screenshot%202025-09-19%20at%201.46.27%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2fa09004947beb37c2a0826eb9b3d85ea86681e98ea29d8d307235dc6d219fad/Screenshot%202025-09-19%20at%201.46.27%20PM.png)

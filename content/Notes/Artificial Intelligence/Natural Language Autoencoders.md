@@ -4,9 +4,8 @@ image:
 class:
   - note
 tags:
-  - website
   - cs/ai/interpretability
-  - cs/ai/variational
+  - cs/ai/generative/variational
 related:
 author:
 description:

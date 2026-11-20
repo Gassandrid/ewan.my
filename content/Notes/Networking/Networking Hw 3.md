@@ -11,12 +11,12 @@ updated: 2026-04-02T19:51:51-04:00
 ---
 
 > [!Note] Note about Go-Back-N
-> Consistent with the course textbook definition, we assume that the Go-Back-N receiver does not buffer packets received out-of-order, but just discards them.
+> Consistent with the course textbook definition, we assume that the [[Go-Back-N]] receiver does not buffer packets received out-of-order, but just discards them.
 
 ## Problem 1 (24 points).
 
 > [!Question]
-> Consider the Go-Back-N and Selective Repeat protocols. Assume that 8 packets with sequence numbers 0-7 are to be sent, with a window size N=4. Using messaging diagrams in the style we've been using, show the sequence of exchanges that result for both Go-Back-N and selective repeat given all of the following assumptions:
+> Consider the Go-Back-N and [[Selective Repeat]] protocols. Assume that 8 packets with sequence numbers 0-7 are to be sent, with a window size N=4. Using messaging diagrams in the style we've been using, show the sequence of exchanges that result for both Go-Back-N and selective repeat given all of the following assumptions:
 >
 > - RTT does not change, and is less than the protocol timeout intervals.
 > - The transmission rate of packets is negligible.
@@ -32,9 +32,9 @@ we see cumalative acks, ACK 2 lost howevr ACK 3 arrives, thus sender slides wind
 > [!Success] Answer
 > *warning diagram may be on another page*
 
-[![Screenshot 2026-04-02 at 7.47.45 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.47.45%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.47.45%20PM.png)
+[![Screenshot 2026-04-02 at 7.47.45 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b52dc490b0792a0c7f698fc850bc3e217de1a6d743f9f68f7bc7fcc7241055a5/Screenshot%202026-04-02%20at%207.47.45%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b52dc490b0792a0c7f698fc850bc3e217de1a6d743f9f68f7bc7fcc7241055a5/Screenshot%202026-04-02%20at%207.47.45%20PM.png)
 
-[![Screenshot 2026-04-02 at 7.48.16 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.48.16%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.48.16%20PM.png)
+[![Screenshot 2026-04-02 at 7.48.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ee4fff23bb9bf128357c2bb19c2950824e6300bb53133878a14a370efea0e6cf/Screenshot%202026-04-02%20at%207.48.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ee4fff23bb9bf128357c2bb19c2950824e6300bb53133878a14a370efea0e6cf/Screenshot%202026-04-02%20at%207.48.16%20PM.png)
 
 #### Selective Repeat
 
@@ -43,9 +43,9 @@ just individual acks, ACK 2 lost triggers a timeout for packet 2 only. out-of-or
 > [!Success] Answer
 > *warning diagram may be on another page*
 
-[![Screenshot 2026-04-02 at 7.49.03 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.49.03%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.49.03%20PM.png)
+[![Screenshot 2026-04-02 at 7.49.03 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0bedad0bf3e76eab1b5932803780b63097923bec70901e481a73a888d278e865/Screenshot%202026-04-02%20at%207.49.03%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0bedad0bf3e76eab1b5932803780b63097923bec70901e481a73a888d278e865/Screenshot%202026-04-02%20at%207.49.03%20PM.png)
 
-[![Screenshot 2026-04-02 at 7.49.16 PM.png](../../Attachments/Screenshot%202026-04-02%20at%207.49.16%20PM.png)](../../Attachments/Screenshot%202026-04-02%20at%207.49.16%20PM.png)
+[![Screenshot 2026-04-02 at 7.49.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/38e121cf324b6888732360e02fc82d23ee0936b2bac05c9af9e1f3900315a4f8/Screenshot%202026-04-02%20at%207.49.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/38e121cf324b6888732360e02fc82d23ee0936b2bac05c9af9e1f3900315a4f8/Screenshot%202026-04-02%20at%207.49.16%20PM.png)
 
 > [!Question]
 > Consider the Go-Back-N protocol with a window size N = 50. Suppose only 30 packets are to be sent with sequence numbers 0-29, and also assume the following:

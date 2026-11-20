@@ -24,7 +24,8 @@ time-of-day:
 source: https://www.reddit.com/r/NooTopics/comments/yvzo2n/neboglamine_and_the_concept_of_glutamate_fine/
 description: NMDA glycine site PAM, amplifies endogenous D-Serine binding during learning events
 tags:
-  - transhumanism/nootropic
+  - pharmacology/nootropic
+  - transhumanism
   - pharmacology/neuro
 related: []
 targets:

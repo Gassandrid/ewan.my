@@ -18,7 +18,7 @@ class: note
     </div>
 </body>
 
-[![IMG_2329.jpeg](../../../Attachments/IMG_2329.jpeg)](../../../Attachments/IMG_2329.jpeg)
+[![IMG_2329.jpeg](https://lab.ewan.my/api/lab/v1/loupe/v1/o/810246dc1b2e598bb2819df9f33e7af01dd565d3cb01439f27919a0b74bd5de6/IMG_2329.jpeg?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/810246dc1b2e598bb2819df9f33e7af01dd565d3cb01439f27919a0b74bd5de6/IMG_2329.jpeg)
 
 ---
 
@@ -59,7 +59,7 @@ In addition, DARS will present a simple and expansable interface so that devices
 
 ## Project Detail
 
-This project will involve undertaking the difficult task of training large language models. This is going to be difficult as, even in the smallest of these models, such as the 8B parameter model, the model will be too large to fit on the raspberry pi 5. This will require us to train the model on a more powerful machine, and then convert the model to a smaller size that will fit on the raspberry pi 5.
+This project will involve undertaking the difficult task of training [[Large Language Model|large language models]]. This is going to be difficult as, even in the smallest of these models, such as the 8B parameter model, the model will be too large to fit on the raspberry pi 5. This will require us to train the model on a more powerful machine, and then convert the model to a smaller size that will fit on the raspberry pi 5.
 
 For this, we are planning to rent an Nvidia A100 for a few days to train the model. This will be expensive, but it is necessary for the project to be a success.
 
@@ -67,7 +67,7 @@ For this, we are planning to rent an Nvidia A100 for a few days to train the mod
 
 Unlike the chassis, I actually stuck fairly close to the origional design. The only things I really changed is I expanded the DARS computer hardware so it could act as a full web server, and not just a one time, hyper specific project. With the upgrades, I can interface the DARS functionality with my computer science workflow, and have it be usefull beyond managing physical appliances through the ESP-32 network.
 
-[![Screenshot 2024-12-06 at 11.42.37 AM.png](../../../Attachments/Screenshot%202024-12-06%20at%2011.42.37%20AM.png)](../../../Attachments/Screenshot%202024-12-06%20at%2011.42.37%20AM.png)
+[![Screenshot 2024-12-06 at 11.42.37 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5dc573dc3c79e712f8c9eb678aa6738767c8d7b7eadb6172ff8b805330ea686e/Screenshot%202024-12-06%20at%2011.42.37%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5dc573dc3c79e712f8c9eb678aa6738767c8d7b7eadb6172ff8b805330ea686e/Screenshot%202024-12-06%20at%2011.42.37%20AM.png)
 
 This diagram shows the flow of data through the system, and how the various components interact with each other. The system will be able to take in audio input, convert that to text, run the text through the language model, and then generate a JSON output. This JSON output will then be processed by the Langroid stack, which will determine what function calls need to be made. The system will then be able to control devices such as lights, and output audio to the user.
 
@@ -128,7 +128,7 @@ While we thought that the A100 rental was going to be the most expensive, we fou
 
 We ended up going with the cheaper version of the coral TPU, as the models best fit for using it were not big enough to justify 150 dollars of my own money on it! The 80$ ended up working just fine, and being a lot easier to work with regarding TensorFlow Lite.
 
-The Pi 5 upgrade was a much needed expense, as it allowed us to run Ollama 3.1 8B locally without much issue ( although still quite slow! )
+The Pi 5 upgrade was a much needed expense, as it allowed us to run [[Setting Up Local AI|Ollama]] 3.1 8B locally without much issue ( although still quite slow! )
 
 ## Time
 
@@ -143,9 +143,9 @@ Our timescale is designed to give us enough time to figure out the software chal
 Once we have the hardware side of things complete, there is not much else to improve there besides vanity design choices. But the models behind the project will never be completely perfect, and thus, will always be able to be improved.
 
 **Revised Gantt Chart**
-[![Screenshot 2024-12-06 at 11.39.00 AM.png](../../../Attachments/Screenshot%202024-12-06%20at%2011.39.00%20AM.png)](../../../Attachments/Screenshot%202024-12-06%20at%2011.39.00%20AM.png)
+[![Screenshot 2024-12-06 at 11.39.00 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6f938f0a2db39d5f554198050c5a072fc43d93e19b44dbb2646967487b062bc1/Screenshot%202024-12-06%20at%2011.39.00%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6f938f0a2db39d5f554198050c5a072fc43d93e19b44dbb2646967487b062bc1/Screenshot%202024-12-06%20at%2011.39.00%20AM.png)
 
-This revised Gantt chart includes how I did delay the chassis to the end, but also used the time to make some pretty noticeabe upgrades to the LLM backend for function calling.
+This revised Gantt chart includes how I did delay the chassis to the end, but also used the time to make some pretty noticeabe upgrades to the LLM backend for [[function calling]].
 
 ### Fallback Plan
 
@@ -159,7 +159,7 @@ While this project itself is mainly geared towards people like me, who enjoy the
 
 Up until this point, voice assistants have been... well... pretty much useless. Yes, you could ask it to play a song or send a text, but anything more complicated or uniquely phrased, they had no idea how to handle.
 
-This project paves the way for a real home assistant that can bridge the gap between human language and the devices in our living areas that we want to control. Translating from natural language to a discrete output is an untapped market with a huge potential to create the virtual assistants we all dreamed of. And with the open source nature of the project, it is easy to see how this could be implemented in a wide variety of devices.
+This project paves the way for a real [[home assistant]] that can bridge the gap between human language and the devices in our living areas that we want to control. Translating from natural language to a discrete output is an untapped market with a huge potential to create the virtual assistants we all dreamed of. And with the open source nature of the project, it is easy to see how this could be implemented in a wide variety of devices.
 
 By building a system that successfully links human natural language to home control, we hope that process can be replicated to other factors of life, where human language is the most efficient way to interface with a system. Cases where advanced machines exists, but are not able to be controlled by a human, are where this technology will shine, as it can make any system more user friendly.
 

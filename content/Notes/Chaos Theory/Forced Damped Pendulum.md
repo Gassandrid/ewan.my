@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos
+  - math/dynamical-systems/chaos
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 5
 source:
@@ -105,7 +105,7 @@ A famous plot is that of the **parameter space**. There is a quite popular [[2sw
 
 _see "[Double Pendulums are Chaos'nt](https://www.youtube.com/watch?v=dtjb2OhEQcU)" for a great visual_
 
-[![Screenshot 2026-01-27 at 10.33.44 AM.png](../../Attachments/Screenshot%202026-01-27%20at%2010.33.44%20AM.png)](../../Attachments/Screenshot%202026-01-27%20at%2010.33.44%20AM.png)
+[![Screenshot 2026-01-27 at 10.33.44 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/761a0d61c9042b3f4beece8c24c4a741a977d95d198c282e011848a78b797821/Screenshot%202026-01-27%20at%2010.33.44%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/761a0d61c9042b3f4beece8c24c4a741a977d95d198c282e011848a78b797821/Screenshot%202026-01-27%20at%2010.33.44%20AM.png)
 
 ---
 
@@ -119,7 +119,7 @@ $$
 
 Showed that quadratic maps of the plane can exhibit the same behavior as [[Poìncaré Maps]] for ODEs. (e.g., forced damped pendulum, or N-body simulations of gravity)
 
-Hėnon discovered that for certain values of $a$ and $b$, the map exhibits chaotic behavior, leading to the famous Hėnon attractor.
+Hėnon discovered that for certain values of $a$ and $b$, the map exhibits chaotic behavior, leading to the famous [[Hénon Map|Hėnon attractor]].
 
 ### How to Use the Hėnon Map
 
@@ -144,7 +144,7 @@ Iterations are perfomed with the following process:
 1. Start with an initial point $(x_0, y_0)$
 2. Apply the transformation repeatedly
 3. After transient behavior settles (typically discard first 100-1000 iterations), the remaining points trace out the attractor
-4. The system exhibits sensitive dependence on initial conditions, a hallmark of chaos
+4. The system exhibits [[Sensitive Dependence on Initial Conditions|sensitive dependence on initial conditions]], a hallmark of [[Chaos|chaos]]
 
 **Poìncaré Maps** are a technique used to analyze continuous dynamical systems by taking snapshots of the system at regular intervals, much like our initial interpretations of how to map the "flow" to points.
 
@@ -209,6 +209,6 @@ Try different param values and see how they change the plot:
 > \ddot{\theta} = \underbrace{ -c \dot{\theta} }_{ \text{friction} } - \underbrace{ \sin \theta }_{ \text{gravity} } + \underbrace{ \rho \sin t }_{ \text{forcing} }
 > $$
 >
-> [![pendulumThetas.png](../../Attachments/pendulumThetas.png)](../../Attachments/pendulumThetas.png)
+> [![pendulumThetas.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2c8e66cb2cf1f42249ce5d0e81f41a73ba2fb68dbe099bccb6799c7a007c2364/pendulumThetas.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2c8e66cb2cf1f42249ce5d0e81f41a73ba2fb68dbe099bccb6799c7a007c2364/pendulumThetas.png)
 
 Parameters are $c, \rho$

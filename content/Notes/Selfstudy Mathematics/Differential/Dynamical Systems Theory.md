@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - math/calculus/differential
-  - math/chaos/dynamics
+  - math/dynamical-systems
 source:
   - "[[Chaos Theory the language of (in)stability]]"
 related:
@@ -20,7 +20,7 @@ aliases:
 
 **Dynamical Systems Theory** is the study of systems that evolve over time according to a set of rules. It is a branch of mathematics that deals with the behavior of complex systems and how they change over time.
 
-[![LorenzAtt.png](../../../Attachments/LorenzAtt.png)](../../../Attachments/LorenzAtt.png)
+[![LorenzAtt.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e3dca9dc2440378d94eda5d3c596a0199f3d78129cd40939490dafd1a9567ad3/LorenzAtt.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e3dca9dc2440378d94eda5d3c596a0199f3d78129cd40939490dafd1a9567ad3/LorenzAtt.png)
 
 ---
 
@@ -30,7 +30,7 @@ One example would be the interest in high dimensional _manifolds_ and their prop
 
 For [[Computational Neuroscience]], Dynamical Systems Theory is particularly relevant because it provides a framework for understanding how neural systems evolve over time and how they respond to external stimuli. And, at least for [[Grid Cells]], they can be mapped to manifolds like a Torus.
 
-[![Pasted image 20250912133313.png](../../../Attachments/Pasted%20image%2020250912133313.png)](../../../Attachments/Pasted%20image%2020250912133313.png)
+[![Pasted image 20250912133313.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9f27bf206105b400f92b1c0768674679644922aad1757e46c637cbc449bf05ae/Pasted%20image%2020250912133313.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9f27bf206105b400f92b1c0768674679644922aad1757e46c637cbc449bf05ae/Pasted%20image%2020250912133313.png)
 
 These kind of manfiold embeddings only emerge because we have paired many different state variables as dimensions in a high dimensional space. This is a common technique in Dynamical Systems Theory, where we often study the behavior of systems in high-dimensional spaces. Then, we can get a visual understanding of the system's behavior by projecting it onto a lower-dimensional space using techniques like [[Uniform Manifold Approximation and Projection|UMAP]].
 

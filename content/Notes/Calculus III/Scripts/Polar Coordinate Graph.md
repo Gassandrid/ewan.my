@@ -13,7 +13,7 @@ This script demonstrates polar and Cartesian coordinates, annotating both the ra
 ## Image
 
 
-[![Screenshot 2024-10-09 at 12.27.19 PM.png](../../../Attachments/Screenshot%202024-10-09%20at%2012.27.19%20PM.png)](../../../Attachments/Screenshot%202024-10-09%20at%2012.27.19%20PM.png)
+[![Screenshot 2024-10-09 at 12.27.19 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7c2e989d1ff1655b6acc4b50f3dfbe8e760fc401f17d448ae60523936a7d444d/Screenshot%202024-10-09%20at%2012.27.19%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7c2e989d1ff1655b6acc4b50f3dfbe8e760fc401f17d448ae60523936a7d444d/Screenshot%202024-10-09%20at%2012.27.19%20PM.png)
 
 ## Code
 

@@ -4,8 +4,8 @@ updated: 2026-06-17T13:40:21-07:00
 class:
   - note
 tags:
-  - workflow
-  - cs/homelab/data/reported
+  - journal/workflow
+  - projects/homelab/data/reported
 source:
 related:
   - "[[On Self Reported Data]]"

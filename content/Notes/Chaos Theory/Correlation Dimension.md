@@ -6,7 +6,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos/attractor
+  - math/dynamical-systems/attractor
 source:
 related:
 author:

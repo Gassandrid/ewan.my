@@ -4,8 +4,7 @@ updated: 2026-03-05
 class:
   - note
 tags:
-  - math/chaos
-  - math/dynamical-systems
+  - math/dynamical-systems/chaos
 source:
 related:
 author:

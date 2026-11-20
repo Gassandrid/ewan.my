@@ -3,7 +3,7 @@ title: Superposition and Subspace
 date: 2025-02-03
 updated: 2025-04-02
 tags:
-  - "#math/linear-algebra"
+  - math/linear-algebra
 ---
 Some terms we will be look at today:
 

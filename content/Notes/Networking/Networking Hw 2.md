@@ -17,7 +17,7 @@ updated: 2026-02-26T22:32:46-05:00
 
 ### Solutions
 
-1. Two different clients can send application layer data to the same host over the same UDP socket.
+1. Two different clients can send application layer data to the same host over the same UDP [[Sockets|socket]].
 
 > [!Success] True
 > udp is connectionless, server can recieve from multiple clients simultaneously
@@ -37,7 +37,7 @@ updated: 2026-02-26T22:32:46-05:00
 > [!Error] False
 > udp has no latency control system, no flow control, etc. can send whenever, but no control of comm latency
 
-5. The UDP checksum guarantees integrity of messages.
+5. The UDP [[Checksum|checksum]] guarantees integrity of messages.
 
 > [!Error] False
 > can miss certain error patterns, think two bit flips that cancel out. error detection is probablistic, so not a "guarantee"
@@ -71,18 +71,18 @@ updated: 2026-02-26T22:32:46-05:00
 
 case for ack corruption where retransmission causes duplication
 
-[![Screenshot 2026-02-26 at 10.27.52 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.27.52%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.27.52%20PM.png)
+[![Screenshot 2026-02-26 at 10.27.52 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/038c3ecf2787c50f509d5a54b612f60757c3d2c7cdea72825dd6aef5c38920f4/Screenshot%202026-02-26%20at%2010.27.52%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/038c3ecf2787c50f509d5a54b612f60757c3d2c7cdea72825dd6aef5c38920f4/Screenshot%202026-02-26%20at%2010.27.52%20PM.png)
 
 case for nak corruption where lost goes is not recovered
 
-[![Screenshot 2026-02-26 at 10.28.27 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.28.27%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.28.27%20PM.png)
+[![Screenshot 2026-02-26 at 10.28.27 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/294091d4a496b443c6a9aa6efca31c0b8672be062460f8734193cfd0354bcb52/Screenshot%202026-02-26%20at%2010.28.27%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/294091d4a496b443c6a9aa6efca31c0b8672be062460f8734193cfd0354bcb52/Screenshot%202026-02-26%20at%2010.28.27%20PM.png)
 
 > Fix (rdt2.1): add sequence numbers so the receiver can detect and discard duplicates, making retransmit-on-any-ambiguity safe.
 
 ## Problem 4 (17 points).
 
 > [!Question]
-> Consider the alternating bit protocol rdt3.0 described in Section 3.4.1 in the textbook (and in the course Chapter 3 slides 58-63), and suppose that 5 data messages (numbered 0-4) are to be sent by the application, and each message is sent as a distinct segment (packet) by the sender. Using messaging diagrams in the style of the text and slides (e.g., slides 62-63), show the sequence of message exchanges under the assumption that the first send of message 2 is lost and that the first ack of the message 3 packet is corrupted.
+> Consider the [[Reliable Data Transfer|alternating bit protocol]] rdt3.0 described in Section 3.4.1 in the textbook (and in the course Chapter 3 slides 58-63), and suppose that 5 data messages (numbered 0-4) are to be sent by the application, and each message is sent as a distinct segment (packet) by the sender. Using messaging diagrams in the style of the text and slides (e.g., slides 62-63), show the sequence of message exchanges under the assumption that the first send of message 2 is lost and that the first ack of the message 3 packet is corrupted.
 
 ### Solution
 
@@ -90,9 +90,9 @@ Used a mermaid diagram, as they have a tool for these exact kinds of conversatio
 
 > [!Success] Answer
 
-[![Screenshot 2026-02-26 at 10.32.16 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.32.16%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.32.16%20PM.png)
+[![Screenshot 2026-02-26 at 10.32.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fe397990e4850e23540fda8a874d885dacd02ff4f5be6c54c73df00eebe7a561/Screenshot%202026-02-26%20at%2010.32.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fe397990e4850e23540fda8a874d885dacd02ff4f5be6c54c73df00eebe7a561/Screenshot%202026-02-26%20at%2010.32.16%20PM.png)
 
-[![Screenshot 2026-02-26 at 10.32.38 PM.png](../../Attachments/Screenshot%202026-02-26%20at%2010.32.38%20PM.png)](../../Attachments/Screenshot%202026-02-26%20at%2010.32.38%20PM.png)
+[![Screenshot 2026-02-26 at 10.32.38 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0a70c2cd601f9532321a35158ad5fcee41de9b0674d3445f76b097ff7315dc8d/Screenshot%202026-02-26%20at%2010.32.38%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0a70c2cd601f9532321a35158ad5fcee41de9b0674d3445f76b097ff7315dc8d/Screenshot%202026-02-26%20at%2010.32.38%20PM.png)
 
 ## Problem 5 (16 points).
 

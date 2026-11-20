@@ -11,7 +11,7 @@ class:
 In physics, the **work** done by a constant force acting on an object taht moves along a line is defined by $W = Force \times Distance$.
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-11 at 12.10.27 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.10.27%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.10.27%20PM.png)
+> [![Screenshot 2024-11-11 at 12.10.27 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bfad0a3fc1a906b00fd14ba94738e63d04f89df94f5108cdee0731e7a478f968/Screenshot%202024-11-11%20at%2012.10.27%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bfad0a3fc1a906b00fd14ba94738e63d04f89df94f5108cdee0731e7a478f968/Screenshot%202024-11-11%20at%2012.10.27%20PM.png)
 
 Where work done by $\vec{F}$ moving an object from $P$ to $Q$ is:
 
@@ -24,7 +24,7 @@ This vector $\vec{PQ}$ is called the **displacement vector**.
 In the case where $\vec{F}$ is not parallel to $\vec{PW}$, we define:
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-11 at 12.12.37 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.12.37%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.12.37%20PM.png)
+> [![Screenshot 2024-11-11 at 12.12.37 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/53b36538f3352739b22b8e0c7789b6cc6c709cfd2f6fd96c8a083d30ed511239/Screenshot%202024-11-11%20at%2012.12.37%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/53b36538f3352739b22b8e0c7789b6cc6c709cfd2f6fd96c8a083d30ed511239/Screenshot%202024-11-11%20at%2012.12.37%20PM.png)
 
 $$
 Work = | \vec{F} | \cos \theta \cdot | \vec{PQ} |
@@ -35,7 +35,7 @@ $$
 Where $\theta$ is the angle between $\vec{F}$ and $\vec{PQ}$. The interpretation of this definition is that we are multiplying the displacement vector $| \vec{PQ} |$ by the scalar projection of $\vec{F}$ onto $| \vec{PQ}|$.
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-11 at 12.16.21 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.16.21%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.16.21%20PM.png)
+> [![Screenshot 2024-11-11 at 12.16.21 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fc2f56c14290e06791e9853b0768198a8a7b68ac6c14e2b5db39ec6897a0c6cc/Screenshot%202024-11-11%20at%2012.16.21%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fc2f56c14290e06791e9853b0768198a8a7b68ac6c14e2b5db39ec6897a0c6cc/Screenshot%202024-11-11%20at%2012.16.21%20PM.png)
 
 From ,[^1] we can write:
 
@@ -56,7 +56,7 @@ $$
 Now suppose $\vec{F}(x,y) = P(x,y) \vec{i} + Q(x,y) \vec{j}$ is a force vector field on $\mathbb{R}^2$. We seek to compute the work done by this force in moving a particle along a curve $C$.
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-11 at 12.23.03 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.23.03%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.23.03%20PM.png)
+> [![Screenshot 2024-11-11 at 12.23.03 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b29a46d842a20a92e0465ad0b85c41e9ff0d3f4c5e4bc84d5749fb797969cd0e/Screenshot%202024-11-11%20at%2012.23.03%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b29a46d842a20a92e0465ad0b85c41e9ff0d3f4c5e4bc84d5749fb797969cd0e/Screenshot%202024-11-11%20at%2012.23.03%20PM.png)
 >
 > Where:
 >
@@ -66,7 +66,7 @@ Now suppose $\vec{F}(x,y) = P(x,y) \vec{i} + Q(x,y) \vec{j}$ is a force vector f
 To calculate the work, we partition $C$ into n sub-areas, estimate the work done over each sub-arc, and sum them all up.
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-11 at 12.26.41 PM.png](../../Attachments/Screenshot%202024-11-11%20at%2012.26.41%20PM.png)](../../Attachments/Screenshot%202024-11-11%20at%2012.26.41%20PM.png)
+> [![Screenshot 2024-11-11 at 12.26.41 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1ae376efc3a2209eeae1568d618c7e4357ce2e286fb49a23d6e39c33b6156f4d/Screenshot%202024-11-11%20at%2012.26.41%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1ae376efc3a2209eeae1568d618c7e4357ce2e286fb49a23d6e39c33b6156f4d/Screenshot%202024-11-11%20at%2012.26.41%20PM.png)
 
 In the right-hand image, $\vec{F}_{i} = \vec{F} (x_{i},y_{i})$, where $x_{i} = x(t_{i})$ and $y_{i}= y(t_{i})$, and $\vec{T}_{i}$ is the unit tangent vector to $\vec{r}(t)$ at $t_{i}$. Let $\Delta \partial_{i}$ denote the arc length of the sub-arc. As the particle moves along the curve, it moves approximately in the direction of $\vec{T}_{i}$, for a distance of $\Delta \partial_{i}$ units. We can therefore estimate the displacement vector by $\vec{D}_{i} = \vec{T}_{i}\Delta \partial_{i}$.
 

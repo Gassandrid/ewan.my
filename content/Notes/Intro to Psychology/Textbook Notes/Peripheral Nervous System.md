@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
 source:
 related:
 author:
@@ -16,7 +16,7 @@ Unlike the [[Central Nervous System]], which consists of the brain and spinal co
 	- regulated by [[Hypothalamus]]
 	- fight or flihgt respononse
 
-[![PNS.png](../../../Attachments/PNS.png)](../../../Attachments/PNS.png)
+[![PNS.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b6dcee9b4dde5838c9890e08a18b9dad88ebe7493a7f3d7a9d950c0d612f88dc/PNS.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b6dcee9b4dde5838c9890e08a18b9dad88ebe7493a7f3d7a9d950c0d612f88dc/PNS.png)
 
 ---
 

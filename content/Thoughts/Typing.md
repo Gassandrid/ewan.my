@@ -1,6 +1,5 @@
 ---
 tags:
-  - seed
   - hobbies
 title: Typing
 date: 2024-11-20

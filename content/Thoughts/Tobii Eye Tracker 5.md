@@ -6,9 +6,8 @@ image: https://gaming.tobii.com/wp-content/uploads/2020/04/seo-tobii-eye-tracker
 class: product
 related:
 tags:
-  - products
-  - cs/homelab/data
-  - comp-neuro/equipment/eye-tracking
+  - projects/homelab/data
+  - neuro/methods/eye-tracking
 status:
 brand:
 date: 2025-10-22

@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos/fixed-point
+  - math/dynamical-systems/fixed-point
 source:
   - "[[Fixed Point Iteration Examples, Analysis, and the Banach Fixed Point Theorem]]"
 related:

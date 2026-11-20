@@ -5,9 +5,7 @@ class:
   - website
   - note
 tags:
-  - website
   - transhumanism/self-configuration
-  - meta/cognition
   - philosophy/rationalism
 related:
   - "[[LessWrong]]"

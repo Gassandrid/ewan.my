@@ -3,11 +3,11 @@ class:
   - note
 tags:
   - cs/data-science
-  - cs/homelab/data
+  - projects/homelab/data
   - comp-neuro
   - journal
   - OCD
-  - tree
+  - research
 source:
 related:
 author:

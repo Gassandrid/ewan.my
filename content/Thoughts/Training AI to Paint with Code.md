@@ -3,7 +3,6 @@ source: https://surya.website/rling-qwen-to-paint-with-code
 image: https://www.google.com/s2/favicons?domain=https://surya.website/rling-qwen-to-paint-with-code&sz=256
 class: website
 tags:
-  - website
 related:
 status: none
 author:
@@ -19,7 +18,7 @@ Recently I have also been playing around with [[Simone Conradi]]'s Eigen creatur
 
 More generally, I think this approach is the kind of "non slop" artisitic experimentation I would love to see AI go. It reminds me of this chart my friend sent me:
 
-[![sloppinessVsHumannessGraph.png](../Attachments/sloppinessVsHumannessGraph.png)](../Attachments/sloppinessVsHumannessGraph.png)
+[![sloppinessVsHumannessGraph.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0ed73889f3404df4a582da894f9ceceff7bb7cff57a655e8a082bfe14cc93f20/sloppinessVsHumannessGraph.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0ed73889f3404df4a582da894f9ceceff7bb7cff57a655e8a082bfe14cc93f20/sloppinessVsHumannessGraph.png)
 
 ---
 
@@ -27,7 +26,7 @@ More generally, I think this approach is the kind of "non slop" artisitic experi
 
 ![](https://framerusercontent.com/images/x4oWuVVsCOF7J5vt3CkwLLpaiQ.png?width=1890&height=1200)
 
-When you make an image with an AI model, the only way to participate is the prompt. You cannot edit the image directly. To change anything you go back to the model and prompt again. That limitation is what started this project. My friend [Cameron](https://x.com/hollowaya_x) and I trained a language model to make images by writing code, using reinforcement learning. The code is the artefact, and the code is editable. You can change what the model produced more granularly without going to prompt.  
+When you make an image with an AI model, the only way to participate is the prompt. You cannot edit the image directly. To change anything you go back to the model and prompt again. That limitation is what started this project. My friend [Cameron](https://x.com/hollowaya_x) and I trained a language model to make images by writing code, using [[Reinforcement Learning|reinforcement learning]]. The code is the artefact, and the code is editable. You can change what the model produced more granularly without going to prompt.  
 
 The deeper question this project asks is how to do reinforcement learning on creative and design tasks. RL works when the reward is verifiable. A math problem is right or wrong. A game is won or lost. Aesthetic quality is neither. The design problem becomes the reward function and the criteria a judge is asked to apply. Too rigid, and the model converges. Too loose, and the model drifts.
 
@@ -39,7 +38,7 @@ A Watercolour painting of a Hibiscus flower made in code.
 
 The system is a four-step loop, run thousands of times during training.
 
-The model receives a prompt, something like *draw a peach hibiscus in watercolour*, and writes a complete p5.brush JavaScript sketch. The sketch is rendered in a sandboxed Puppeteer environment, which produces a PNG. The PNG is judged against two random reference paintings sampled from a hand-rated pool, with a separate judge model picking the better watercolour. The judgment is converted into a reward signal, GRPO updates the model, and the loop runs again.
+The model receives a prompt, something like *draw a peach hibiscus in watercolour*, and writes a complete p5.brush JavaScript sketch. The sketch is rendered in a sandboxed Puppeteer environment, which produces a PNG. The PNG is judged against two random reference paintings sampled from a hand-rated pool, with a separate judge model picking the better watercolour. The judgment is converted into a reward signal, [[Group Relative Policy Optimization|GRPO]] updates the model, and the loop runs again.
 
 The non-obvious choices live in what is being judged, how the judgment is made, what is in the reference pool, and how the system prompt is written. Each is the subject of a section below.
 
@@ -47,7 +46,7 @@ The non-obvious choices live in what is being judged, how the judgment is made, 
 
 ## Reward Functions
 
-The first rubric had nine separate signals. A compilation gate. A check that the code actually used p5.brush rather than native p5. A code length ramp targeting around 3,000 tokens. HPSv3, a human preference model. Prompt adherence, judged by a council of GPT-5.4 and Gemini. And four more quality judges: recognisability, aesthetics, technique, depth.
+The first rubric had nine separate signals. A compilation gate. A check that the code actually used p5.brush rather than native p5. A code length ramp targeting around 3,000 [[Token|tokens]]. HPSv3, a human preference model. Prompt adherence, judged by a council of GPT-5.4 and Gemini. And four more quality judges: recognisability, aesthetics, technique, depth.
 
 The model plateaued around 0.65 reward and stayed there. Every rollout looked the same. A flat, clip-art flower with five rounded petals. The reward kept going up but the capabilities didn't seem to improve.
 

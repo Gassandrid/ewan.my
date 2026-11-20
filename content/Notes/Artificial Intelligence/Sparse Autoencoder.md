@@ -18,7 +18,7 @@ author:
 ---
 **Sparse Autoencoders** are a technique for investigating [[Mechanistic Interpretability]] and the idea of [[Mechanistic Interpretability#Superposition and Polysemanticity|Superposition and Polysemanticity]].
 
-[![SparseEncoder.png](../../Attachments/SparseEncoder.png)](../../Attachments/SparseEncoder.png)
+[![SparseEncoder.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a2208be0f8ac82beb02d99f82350ad68998ea1541fa446a01ae4d628433733ad/SparseEncoder.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a2208be0f8ac82beb02d99f82350ad68998ea1541fa446a01ae4d628433733ad/SparseEncoder.png)
 
 The key idea is to use a separate learning algorithm to extract model features that often align with human-understandable concepts. Researchers can then amplify or suppress these features to observe their effect on the model's behavior.
 

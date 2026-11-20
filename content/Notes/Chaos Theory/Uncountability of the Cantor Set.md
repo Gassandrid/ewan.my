@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos/fractals
+  - math/dynamical-systems/fractals
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 15
 source:

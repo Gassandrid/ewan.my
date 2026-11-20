@@ -44,7 +44,7 @@ Since both possibilities lead to contradiction, therefore every edge $G$ must be
 
 > Given the DAG below, list all possible topological orders and state how many there are. Do it manually (it won’t take too long). Additionally, run any Java program code you can obtain to verify the manually run result (you can use any data structure to represent the graph); cite the source of the program code (e.g., URL) in the homework answer, and submit the code as a separate file. (This is not a programming exercise but part of a written exercise.)
 
-[![Screenshot 2025-09-19 at 7.15.21 PM.png](../../../Attachments/Screenshot%202025-09-19%20at%207.15.21%20PM.png)](../../../Attachments/Screenshot%202025-09-19%20at%207.15.21%20PM.png)
+[![Screenshot 2025-09-19 at 7.15.21 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/004f3ec21e513f0bc249d8bbd21b1fc967aa292664f3be04387367a3f04173a3/Screenshot%202025-09-19%20at%207.15.21%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/004f3ec21e513f0bc249d8bbd21b1fc967aa292664f3be04387367a3f04173a3/Screenshot%202025-09-19%20at%207.15.21%20PM.png)
 
 I was able to find 13 possible combinations. Unfortunately I did not handwrite this assignment, so there is no proof of work. I will provide a trace diagram to show SOME element of work.
 
@@ -74,9 +74,9 @@ I was able to find 13 possible combinations. Unfortunately I did not handwrite t
 8. remove node $I$
 9. remove node $F$
 
-**Decision Tree Diagram: see *figure 2***
+**[[Decision Tree]] Diagram: see *figure 2***
 
-[![Screenshot 2025-09-19 at 7.56.10 PM.png](../../../Attachments/Screenshot%202025-09-19%20at%207.56.10%20PM.png)](../../../Attachments/Screenshot%202025-09-19%20at%207.56.10%20PM.png)
+[![Screenshot 2025-09-19 at 7.56.10 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f1d3c17801503ee315be5b2349a52daf29712242ee01db0dc7ae73bff96a91c7/Screenshot%202025-09-19%20at%207.56.10%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f1d3c17801503ee315be5b2349a52daf29712242ee01db0dc7ae73bff96a91c7/Screenshot%202025-09-19%20at%207.56.10%20PM.png)
 
 For the code, I used GeeksForGeeks'[^1] implementation. This implementation worked on numbers nodes, so I just used the mapping $0-10$: 
 

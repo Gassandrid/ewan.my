@@ -34,7 +34,7 @@ I drew an analog to something learned in [[Psychology Scientific Method|Psycholo
 
 ### Discussion
 
-There is nothing really wrong with the data analysis of the paper itself, the issue is primarily with how the data is gathered. In addition to the snowball sampling technique, it should also be noted where the surveys were placed on the internet. Namely, the survey was only posted on forums noted as "trans critical".
+There is nothing really wrong with the data analysis of the paper itself, the issue is primarily with how the data is gathered. In addition to the [[Snowball Sampling|snowball sampling]] technique, it should also be noted where the surveys were placed on the internet. Namely, the survey was only posted on forums noted as "trans critical".
 
 ---
 
@@ -54,20 +54,20 @@ Use the **mesoscale reflection**:
 - consult with implicated members of the gropus above about your question
 - reflect on your biases - talk to different people about your project and get feedback - their "gut check" might be very different than yours
 
-[![DSLCycle.png](../../Attachments/DSLCycle.png)](../../Attachments/DSLCycle.png)
+[![DSLCycle.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0fe1f33e8ec97873f6c02a10a453989f1eb392b03534ab34a831c69b3b42504a/DSLCycle.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0fe1f33e8ec97873f6c02a10a453989f1eb392b03534ab34a831c69b3b42504a/DSLCycle.png)
 
 ### Obtain Data - Secondary Data
 
 - Is this data balanced and representative
 - Who are the data collectors, how was this collected, and in what context? - what are their biases?
 - What metadata is available? If none, reach out talk to them
-- Did the collectors get informed consent?
+- Did the collectors get [[Informed Consent|informed consent]]?
 - Did the collectors have an IRB?
 - *etc...*
 
 There is also a question of *data stewardship* - a data management plan. One should follow by the FAIR + CARE plan principles, although the usefulness of a such a system has been mitigated by the introduction of generative AI.
 
-[![FairCare.png](../../Attachments/FairCare.png)](../../Attachments/FairCare.png)
+[![FairCare.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/904dff76206aa3c491702d5d48e53029115022378271486e76f70ea1b89d8f65/FairCare.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/904dff76206aa3c491702d5d48e53029115022378271486e76f70ea1b89d8f65/FairCare.png)
 
 ### Dark Data
 

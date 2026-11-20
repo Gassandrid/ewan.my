@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos/fractals
+  - math/dynamical-systems/fractals
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 15
 source:
@@ -16,7 +16,7 @@ date: 2026-03-19T11:04:57-04:00
 updated: 2026-03-19T11:21:34-04:00
 ---
 
-[![setJulia.png](../../Attachments/setJulia.png)](../../Attachments/setJulia.png)
+[![setJulia.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/18caf65694066d24437597ba39dc3a40af07542875f91e7976734cf7b45f138d/setJulia.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/18caf65694066d24437597ba39dc3a40af07542875f91e7976734cf7b45f138d/setJulia.png)
 
 Consider the quadratic map $P_{c}(z)= z^2 +c$ where $z = x+yi$  and $c = a+bi$ are complex numbers $i=\sqrt{ -1 }$
 

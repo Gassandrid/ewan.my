@@ -5,6 +5,7 @@ class:
   - note
 tags:
   - transhumanism/self-configuration
+  - research
 source:
 related:
   - "[[Upgrading]]"
@@ -19,13 +20,13 @@ This might be a dumb idea but I’m kind of fixating on the idea of self configu
 
 It’s one of those things where I feel like so many other different parts of my life full under this
 
-Idea of cognitive enhancement via pharmacology, modeling human content consumption and their spoken language dynamics, etc
+Idea of [[Nootropics|cognitive enhancement]] via [[Pharmacology|pharmacology]], modeling human [[Consuming and Choosing Content Effectively|content consumption]] and their spoken language dynamics, etc
 
 We have talked about similar ideas in the past but I think this is where our chosen passions share common ground
 
-The idea of brain computer interfaces also lie here
+The idea of [[Brain Computer Interfaces|brain computer interfaces]] also lie here
 
-Ironically this also feels very in line with GEB’s ideas about “self configuration functions” as a model of consciousness
+Ironically this also feels very in line with [[Gödel, Escher, Bach|GEB]]’s ideas about “self configuration functions” as a model of consciousness
 
 This is deeply tied to [[My Eternal Golden Braid]], as it is antoher great way to codify the intersection of all my interests.
 

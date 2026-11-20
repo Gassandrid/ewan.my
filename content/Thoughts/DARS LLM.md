@@ -4,7 +4,7 @@ tags:
 date: 2024-11-21
 updated: 2025-06-20
 ---
-Two main parts to the LLM structure behind DARS.
+Two main parts to the [[Large Language Model|LLM]] structure behind [[DARS]].
 
 ## Frontend
 
@@ -12,7 +12,7 @@ A silly way to put it, but the frontend is responsible for the personality and a
 
 Uses Ollama 3.1 8B
 
-Speech recognition is handled by Vosk
+Speech recognition is handled by [Vosk](https://alphacephei.com/vosk/)
 
 ## Backend
 
@@ -21,5 +21,5 @@ Includes a variety of API's to give DARS all the resources it needs for web rela
 Uses:
 
 - OpenAI / Claude / etc. API
-- Eleven Labs for voice synthesis
+- [Eleven Labs](https://elevenlabs.io/) for voice synthesis
 - various information-gathering API's

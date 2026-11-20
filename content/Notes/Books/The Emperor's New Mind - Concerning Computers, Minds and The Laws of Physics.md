@@ -4,7 +4,6 @@ updated: 2026-01-24 10:15:39-05:00
 class:
   - book
 tags:
-  - books
   - philosophy
   - comp-neuro
 source:
@@ -25,4 +24,4 @@ Looks interesting - I am unsure because believing this percepective requires acc
 
 Quite dated, but Penrose is a brilliant thinker and still may be worth reading.
 
-[![empNewMind.png](../../Attachments/empNewMind.png)](../../Attachments/empNewMind.png)
+[![empNewMind.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f92a996e219747b439f9ae1e6030bc2f17507a83d87d340a023db4b44ba67987/empNewMind.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f92a996e219747b439f9ae1e6030bc2f17507a83d87d340a023db4b44ba67987/empNewMind.png)

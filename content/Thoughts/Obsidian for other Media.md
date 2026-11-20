@@ -10,7 +10,6 @@ description:
 aliases:
 tags:
   - journal/workflow
-  - papers
   - curation
 ---
 Not sure how I would want to go about this, but it itching me in a few ways.

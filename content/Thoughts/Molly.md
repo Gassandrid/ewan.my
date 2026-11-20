@@ -2,7 +2,6 @@
 date: 2025-04-14
 updated: 2025-12-04
 tags:
-  - seed
   - sailing
 class:
   - note
@@ -20,9 +19,9 @@ This was not something that involved any other person in his life. He taught him
 
 Even the sails, which are such a complicated kind of craft, he specially designed for his exact boat, the exact way he wanted it.
 
-[![MollyBeingBuilt.png](../Attachments/MollyBeingBuilt.png)](../Attachments/MollyBeingBuilt.png)
+[![MollyBeingBuilt.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/02b7e9ec57e627338cd15c548ad09fa64b0f10c9551ecd6e3216ac4423606d0f/MollyBeingBuilt.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/02b7e9ec57e627338cd15c548ad09fa64b0f10c9551ecd6e3216ac4423606d0f/MollyBeingBuilt.png)
 
-[![InsideMolly.png](../Attachments/InsideMolly.png)](../Attachments/InsideMolly.png)
+[![InsideMolly.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3a035f1e7bdc7b48b1af26b121750921721a4b2f665151bb5eefde20be87e2d6/InsideMolly.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3a035f1e7bdc7b48b1af26b121750921721a4b2f665151bb5eefde20be87e2d6/InsideMolly.png)
 
 Now of course, as all things Axel, it was a complete mess on the inside, given that he had to have every tool he needed right at hand. And you can be damn sure he had at least 12 back scratchers in every crevice of that thing.
 

@@ -7,9 +7,9 @@ class:
   - website
   - note
 tags:
-  - website
   - cs/ai
   - comp-neuro/models
+  - research
 related:
   - "[[Zuna]]"
   - "[[TRIBE v2 model architecture and implementation]]"

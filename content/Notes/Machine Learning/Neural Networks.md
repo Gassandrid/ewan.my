@@ -15,7 +15,7 @@ aliases:
 
 Im just makign this note for linking purposes, and that needs composition. we all know what a neural network is!
 
-- origionally a biologically inspired way of learning, however was not relevant until [[Backward Propagation]] was invented for training.
+- origionally a biologically inspired way of learning, however was not relevant until [[Backpropagation]] was invented for training.
 - series of nodes and connections organized into 
 	- we call the nodes [[Artificial Neuron|neuron]]s or [[Perceptron]]s, with their connections being weights.
 

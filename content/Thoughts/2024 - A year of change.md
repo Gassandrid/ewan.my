@@ -2,7 +2,6 @@
 date: 2025-01-01
 updated: 2025-06-26
 tags:
-  - seed
 title: 2024 - A year of change
 ---
 2024 has by far been the most eventful year in my life, both in terms of tangible events and trends that affected me, but also for the deep, saturated changes in my own sense of self and life.
@@ -23,6 +22,6 @@ This has manifested as a problem with my sternum and ribcage. Essentially, somet
 
 A big thing I struggled with at the beginning of the year was a sense of work ethic. Purpose has never been a problem for me, and I consider myself above the average when it comes to knowing what you want to do with your life. But despite this, I struggled with actually getting work done in class. I was great at studying what I loved, and would do an absurd amount of self-education in my free time. But come the classroom, I would almost always slack off just because I could and get away with a mediocre but solid grade. But this is not a way to live life.
 
-But later in the year I finally started to get my act together when it comes to note-taking. That is a bit of an understatement, as I frankly fell in love with writing and documenting everything. The benefits of obsidian really started to show for me, where I felt a genuine desire to write down more and expand beyond just class notes and journaling.
+But later in the year I finally started to get my act together when it comes to note-taking. That is a bit of an understatement, as I frankly fell in love with writing and documenting everything. The benefits of [[Colophon For Mind Structure|obsidian]] really started to show for me, where I felt a genuine desire to write down more and expand beyond just class notes and journaling.
 
 Overall, I cant say this was even close to one of the best years of my life, but coming out of it I feel more prepared and sure of what I want to do than ever before.

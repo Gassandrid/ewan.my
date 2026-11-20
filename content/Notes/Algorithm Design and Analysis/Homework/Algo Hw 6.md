@@ -12,7 +12,7 @@ abstract: Show the steps of deriving your answers. Points will be deducted for a
 
 > Consider the counting inversion algorithm. Sort-and-Count studied in class and shown below.
 > 
-> [![Screenshot 2025-10-17 at 10.55.49 AM.png](../../../Attachments/Screenshot%202025-10-17%20at%2010.55.49%20AM.png)](../../../Attachments/Screenshot%202025-10-17%20at%2010.55.49%20AM.png)
+> [![Screenshot 2025-10-17 at 10.55.49 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e71b9974dd4d5766876c8905b7777bf2cd05057f4c5b772878c2964f1aecfc86/Screenshot%202025-10-17%20at%2010.55.49%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e71b9974dd4d5766876c8905b7777bf2cd05057f4c5b772878c2964f1aecfc86/Screenshot%202025-10-17%20at%2010.55.49%20AM.png)
 > 
 > Run this algorithm against the input file shown below, and: 
 > 
@@ -35,9 +35,9 @@ $$
 
 *See Figure 2 and Figure 3(may be on a separate page due to LaTeX compilation bs*
 
-[![Screenshot 2025-10-17 at 12.01.27 PM.png](../../../Attachments/Screenshot%202025-10-17%20at%2012.01.27%20PM.png)](../../../Attachments/Screenshot%202025-10-17%20at%2012.01.27%20PM.png)
+[![Screenshot 2025-10-17 at 12.01.27 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/10079ad7260649b346309047d860c76a4a3b67e3048d1a53b92a686771d8c14f/Screenshot%202025-10-17%20at%2012.01.27%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/10079ad7260649b346309047d860c76a4a3b67e3048d1a53b92a686771d8c14f/Screenshot%202025-10-17%20at%2012.01.27%20PM.png)
 
-[![Screenshot 2025-10-17 at 12.02.50 PM.png](../../../Attachments/Screenshot%202025-10-17%20at%2012.02.50%20PM.png)](../../../Attachments/Screenshot%202025-10-17%20at%2012.02.50%20PM.png)
+[![Screenshot 2025-10-17 at 12.02.50 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4826c08c064763d10f5ba48935ad3aaec8806b0d3a116961bea6bec0991e36a0/Screenshot%202025-10-17%20at%2012.02.50%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4826c08c064763d10f5ba48935ad3aaec8806b0d3a116961bea6bec0991e36a0/Screenshot%202025-10-17%20at%2012.02.50%20PM.png)
 
 ### 2. Returned Results in Execution Order
 
@@ -111,7 +111,7 @@ This **contradics** our initial premise that $|C| > \frac{n}{2}$, and thus our a
 
 *see figure 4(might be on another page)*
 
-[![Screenshot 2025-10-17 at 4.26.54 PM.png](../../../Attachments/Screenshot%202025-10-17%20at%204.26.54%20PM.png)](../../../Attachments/Screenshot%202025-10-17%20at%204.26.54%20PM.png)
+[![Screenshot 2025-10-17 at 4.26.54 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e0304cf1fdfcef02fe759dde0b8f8eddfc67651b59b9ee8bada903796e7ed8d2/Screenshot%202025-10-17%20at%204.26.54%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e0304cf1fdfcef02fe759dde0b8f8eddfc67651b59b9ee8bada903796e7ed8d2/Screenshot%202025-10-17%20at%204.26.54%20PM.png)
 
 ### 3. Run-time
 

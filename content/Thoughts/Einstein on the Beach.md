@@ -18,4 +18,4 @@ I have always been a fan of [[Philip Glass]], and he is by far my favorite compo
 
 Extremely esoteric and experimental, but that is exactly what I love about [[Philip Glass]] and his other collections like [[Koyaanisqatsi]] and [[Naqoyqatsi]].
 
-[![BeachEinstein.png](../Attachments/BeachEinstein.png)](../Attachments/BeachEinstein.png)
+[![BeachEinstein.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bdf6c28353feb62e038d7252d41924382c4c385fb292daede2b73ede8d22d0d3/BeachEinstein.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bdf6c28353feb62e038d7252d41924382c4c385fb292daede2b73ede8d22d0d3/BeachEinstein.png)

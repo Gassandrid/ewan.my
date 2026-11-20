@@ -2,7 +2,6 @@
 date: 2024-12-10
 updated: 2025-09-12
 tags:
-  - junk
   - university
 ---
 ## 1 Polar Coordinate Practice

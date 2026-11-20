@@ -5,7 +5,7 @@ class:
   - website
   - note
 tags:
-  - website
+  - research
 related:
 status: none
 author:
@@ -14,9 +14,9 @@ date: 2026-09-04T19:18:29-04:00
 updated: 2026-09-14T16:01:37-04:00
 ---
 
-This is a recent project, in part, done by [[Sophia Sanborn]] at Stanford. What really speaks to me about this is the idea of [[In Silico]] models again. This is reminiscent of what I've been doing with [[Maximizing Activation through Differentiable Content Consumption]] and the work with [[TRIBE v2]]. Specifically, the idea that you train deep learning models to predict the activity of naturalistic stimuli, and then take that model and then reverse the process to find what makes that model activates to regenerate stimuli and even find stimuli that would maximize activation. This is influencing me a lot in that is starting to define the kind of work I imagine myself doing as I plan my PhD.
+This is a recent project, in part, done by [[Sophia Sanborn]] at Stanford. What really speaks to me about this is the idea of [[In Silico]] models again. This is reminiscent of what I've been doing with [[Maximizing Activation through Differentiable Content Consumption]] and the work with [[TRIBE v2]]. Specifically, the idea that you train deep learning models to predict the activity of naturalistic stimuli, and then take that model and then reverse the process to find what makes that model activates to regenerate stimuli and even find stimuli that would maximize activation. This is influencing me a lot in that is starting to define the kind of work I imagine myself doing as I plan my [[On Planning my PhD|PhD]].
 
-In that, I mean that I see myself taking a path towards working to make representation models ( like my [[On Doing EEG Work|EEG Representation Model]] but also using sparse sources of cognition as described in [[Mapping The Mind]] ), and then treating these models as [[In Silico]] for [[Mechanistic Interpretability]] surrogates to understand what our brains our encoding. This should suggest a path forward with encoder models, likely self supervised ones.
+In that, I mean that I see myself taking a path towards working to make [[Representation|representation]] models ( like my [[On Doing EEG Work|EEG Representation Model]] but also using sparse sources of cognition as described in [[Mapping The Mind]] ), and then treating these models as [[In Silico]] for [[Mechanistic Interpretability]] surrogates to understand what our [[Brain|brains]] our encoding. This should suggest a path forward with encoder models, likely self supervised ones.
 
 ---
 
@@ -24,13 +24,13 @@ In that, I mean that I see myself taking a path towards working to make represen
 
 ### Prediction Isn't Understanding
 
-The classical view of a visual neuron is a feature detector that fires when its preferred stimulus appears and remains largely silent otherwise. In early visual cortex (V1), this view has been remarkably productive -- where neurons behave like oriented edge filters. But the classical feature detector picture says little about the other side of a V1 neuron, what silences it.
+The classical view of a visual [[Neuron|neuron]] is a feature detector that fires when its preferred stimulus appears and remains largely silent otherwise. In early [[Visual Cortex|visual cortex]] (V1), this view has been remarkably productive -- where neurons behave like oriented edge filters. But the classical feature detector picture says little about the other side of a V1 neuron, what silences it.
 
 Moving up the visual hierarchy, to midlevel visual cortex (V4), what excites and supresses a neuron becomes harder to pin down. Neurons respond to complex conjunctions of shape, color, and texture. We know this from decades of painstaking experiments, each testing a hand-crafted hypothesis about what a single neuron might prefer. The approach works, but it doesn't scale, and it has not produced a general vocabulary for selectivity. We believe natural language can help fill that gap.
 
 Deep learning has begun to change this paradigm, where a network trained on a neuron's responses to thousands of natural images can predict its response to almost any new image with high accuracy. These "digital twins" of visual cortex let us screen millions of images in seconds, and better probe what drives and suppresses a neuron.
 
-But knowing which images drive a neuron isn't the same as knowing what it's tuned for. The digital twin is accurate in predictions but does not provide a human interpretable description of what the neuron encodes.
+But knowing which images drive a neuron isn't the same as knowing what it's tuned for. The [[Digital Twin|digital twin]] is accurate in predictions but does not provide a human interpretable description of what the neuron encodes.
 
 ### Functional Digital Twins of Visual Cortex
 
@@ -86,7 +86,7 @@ Projecting V4 neurons into two dimensions using population activity similarity a
 
 ![UMAP semantic clustering](https://enigma-brain.github.io/letting-the-neural-code-speak/Figures/Fig_Cluster.png)
 
-**Semantic structure of neural selectivity.** *Left:* UMAP embedding annotated with nouns and adjectives from each neuron's hypothesis, showing smooth transitions from eyes and organic forms to geometric textures. *Right:* Individual neurons tile localized, semantically coherent regions with smoothly varying activation.
+**Semantic structure of neural selectivity.** *Left:* [[Uniform Manifold Approximation and Projection|UMAP]] embedding annotated with nouns and adjectives from each neuron's hypothesis, showing smooth transitions from eyes and organic forms to geometric textures. *Right:* Individual neurons tile localized, semantically coherent regions with smoothly varying activation.
 
 ### What This Opens up
 

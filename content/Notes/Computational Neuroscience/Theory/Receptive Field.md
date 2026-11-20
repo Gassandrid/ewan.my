@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - comp-neuro/brain
+  - neuro
   - comp-neuro/theory
 source:
 related:
@@ -21,4 +21,4 @@ As defined by [[Theoretical Neuroscience Textbook]],
 	- in the neuro case, receptive fields get larger and more complex as the information moves up the neural pathway, starting at the basic photoreceptors and going all the way up to complex cortical cells that recognize shapes for faces
 		- a great example of seeing what higher level receptive fields encode in the visual cortex can be seen in [[Sophia Sanborn]]'s project [[Letting the Neural Code Speak]]
 
-[![fieldReceptive.png](../../../Attachments/fieldReceptive.png)](../../../Attachments/fieldReceptive.png)
+[![fieldReceptive.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1570d08c43e1ed4da18980d55bd1ee77cbc66cb772eb9410f165c3e4c584957f/fieldReceptive.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1570d08c43e1ed4da18980d55bd1ee77cbc66cb772eb9410f165c3e4c584957f/fieldReceptive.png)

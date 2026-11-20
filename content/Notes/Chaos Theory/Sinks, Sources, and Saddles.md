@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos
+  - math/dynamical-systems/chaos
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 6
 source:
@@ -18,27 +18,27 @@ updated: 2026-02-20T10:03:25-05:00
 
 ## Sink at Origin (Stable Fixed Point)
 
-> [![sinkAtOriginHenon.png](../../Attachments/sinkAtOriginHenon.png)](../../Attachments/sinkAtOriginHenon.png)
+> [![sinkAtOriginHenon.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8ecf713a0ca8d39567c42d1e7a677ed651e487b24bbe615d314864f87a10d48a/sinkAtOriginHenon.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8ecf713a0ca8d39567c42d1e7a677ed651e487b24bbe615d314864f87a10d48a/sinkAtOriginHenon.png)
 >
 > _A neighborhood N (red circle) centered at the origin contracts under the map f to a smaller region f(N) (green irregular shape) strictly contained within N._
 
-At a sink, both eigenvalues of the [[Jacobian]] have absolute value less than 1. Under iteration of the [[Hénon Map]] $x_{n+1} = 1 - ax_n^2 + y_n$, $y_{n+1} = bx_n$, trajectories starting in a neighborhood of the fixed point spiral inward. The contraction is visible as $f(N) \subset N$, indicating the basin of attraction. For the [[Hénon Map]], this occurs when the parameters $(a, b)$ satisfy conditions where $|\lambda_1|, |\lambda_2| < 1$.
+At a [[Attracting fixed point|sink]], both eigenvalues of the [[Jacobian]] have absolute value less than 1. Under iteration of the [[Hénon Map]] $x_{n+1} = 1 - ax_n^2 + y_n$, $y_{n+1} = bx_n$, trajectories starting in a neighborhood of the [[Fixed Point Classification|fixed point]] spiral inward. The contraction is visible as $f(N) \subset N$, indicating the [[Basin of Attraction|basin of attraction]]. For the [[Hénon Map]], this occurs when the parameters $(a, b)$ satisfy conditions where $|\lambda_1|, |\lambda_2| < 1$.
 
 ## Source at Origin (Unstable Fixed Point - Repeller)
 
-> [![sourceAtOriginHenon.png](../../Attachments/sourceAtOriginHenon.png)](../../Attachments/sourceAtOriginHenon.png)
+> [![sourceAtOriginHenon.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9eb10ba9020ef02b9c09238b3fd066473ee06020159dd1d3e8e1396059b2eabb/sourceAtOriginHenon.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9eb10ba9020ef02b9c09238b3fd066473ee06020159dd1d3e8e1396059b2eabb/sourceAtOriginHenon.png)
 >
 > _A neighborhood N (tan/beige inner circle) expands under the map to a larger region f(N) (green irregular shape) that extends beyond the original neighborhood._
 
-At a source, both eigenvalues have absolute value greater than 1. Trajectories flow away from the fixed point in all directions. The expansion $f(N) \supset N$ shows that nearby points are pushed outward under iteration. In the Henon map, this behavior is time-reversed from a sink - if you ran the dynamics backward, a source would become a sink.
+At a [[Repelling fixed point|source]], both eigenvalues have absolute value greater than 1. Trajectories flow away from the fixed point in all directions. The expansion $f(N) \supset N$ shows that nearby points are pushed outward under iteration. In the Henon map, this behavior is time-reversed from a sink - if you ran the dynamics backward, a source would become a sink.
 
 ## Saddle at Origin (Hyperbolic Fixed Point)
 
-> [![saddleAtOriginHenon.png](../../Attachments/saddleAtOriginHenon.png)](../../Attachments/saddleAtOriginHenon.png)
+> [![saddleAtOriginHenon.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/532b310ecb7636cbad9792cc619f5278cd8f772739a7f3e530eadc5e85fab65f/saddleAtOriginHenon.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/532b310ecb7636cbad9792cc619f5278cd8f772739a7f3e530eadc5e85fab65f/saddleAtOriginHenon.png)
 >
-> _A neighborhood N experiences both contraction and expansion. The red region shows the stable manifold (attracting direction), while the green lobes of f(N) show the unstable manifold (repelling direction). The image stretches along one axis while contracting along another._
+> _A neighborhood N experiences both contraction and expansion. The red region shows the [[Stable Manifold|stable manifold]] (attracting direction), while the green lobes of f(N) show the [[Unstable Manifold|unstable manifold]] (repelling direction). The image stretches along one axis while contracting along another._
 
-At a saddle point, one eigenvalue has $|\lambda_1| < 1$ (stable direction) and the other has $|\lambda_2| > 1$ (unstable direction). This is the most common and important case for the Henon map in its chaotic regime. The stable manifold (red) represents the set of points that approach the fixed point under forward iteration, while the unstable manifold (green lobes) represents points that approached the fixed point under backward iteration. The characteristic saddle topology - stretching in one direction, contracting in another - is fundamental to the horseshoe dynamics and chaotic behavior of the Henon map.
+At a [[Saddle fixed point|saddle]] point, one eigenvalue has $|\lambda_1| < 1$ (stable direction) and the other has $|\lambda_2| > 1$ (unstable direction). This is the most common and important case for the Henon map in its [[Chaos|chaotic]] regime. The stable manifold (red) represents the set of points that approach the fixed point under forward iteration, while the unstable manifold (green lobes) represents points that approached the fixed point under backward iteration. The characteristic saddle topology - stretching in one direction, contracting in another - is fundamental to the horseshoe dynamics and chaotic behavior of the Henon map.
 
 ```tikz
 \usepackage{tikz}
@@ -119,7 +119,7 @@ $$
 
 > Applying the linear map $A$ to an eigenvector $\vec{v}_{0}$ simply scales the vector by the eigenvalue $\lambda$. Repeated applications of $A$ scale the vector by successive powers of $\lambda$.
 
-[![eigenVectorMapping.png](../../Attachments/eigenVectorMapping.png)](../../Attachments/eigenVectorMapping.png)
+[![eigenVectorMapping.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3068e3157e3d16f20e59568b885125b1fe84d9cb70f014ac2ba316a52cf5c4b8/eigenVectorMapping.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3068e3157e3d16f20e59568b885125b1fe84d9cb70f014ac2ba316a52cf5c4b8/eigenVectorMapping.png)
 
 Say we have the matrix:
 
@@ -162,7 +162,7 @@ $$
 
 **Yields:**
 
-> [![stableUnstableManifolds.png](../../Attachments/stableUnstableManifolds.png)](../../Attachments/stableUnstableManifolds.png)
+> [![stableUnstableManifolds.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b16ac073247fcf0eddbd9cf9d20282899c2eb6ca854c01779f8ebbdfbaa83a4a/stableUnstableManifolds.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b16ac073247fcf0eddbd9cf9d20282899c2eb6ca854c01779f8ebbdfbaa83a4a/stableUnstableManifolds.png)
 >
 > _Starting from $\vec{x}_0 = (2, 0)$, successive iterations climb along the $\lambda_1$ eigenvector direction (unstable manifold). Since $\lambda_1 = \frac{3}{2} > 1$, points expand along this direction. The $\lambda_2$ eigenvector basis forms the stable manifold - points on this line contract toward the origin since $\lambda_2 = \frac{1}{2} < 1$._
 

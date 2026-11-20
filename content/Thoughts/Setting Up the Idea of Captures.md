@@ -9,9 +9,12 @@ source:
 related:
 author:
 date: 2025-10-11
-updated: 2026-01-12T11:22:58-05:00
+updated: 2026-11-19T19:45:00-05:00
 ---
-I know I know, this is yet another note about taking notes and workflow stuff - it usually misses the point. By now I have done several notes on how to deal with [[Tasknotes in my workflow]] and [[Private/Inbox/Uncreated Notes]]. But it all really boils down to one simple idea, and the reason I had kanban boards in the first place.
+>[!Warning] [[01-12-2026]] Update
+> retired, replaced by [[Using an Inbox System]]. see the update below.
+
+I know I know, this is yet another note about taking notes and workflow stuff - it usually misses the point. By now I have done several notes on how to deal with [[Tasknotes in my workflow]] and [[Uncreated Notes]]. But it all really boils down to one simple idea, and the reason I had kanban boards in the first place.
 
 I have ideas. I dont always have time. I want to write down ideas to write about later, with just enough information so I can regain my train of thought when I return to a capture.
 
@@ -27,7 +30,7 @@ This is a bit of a weird choice, but I have been feeling the desire to simplify 
 
 ## What is a Capture?
 
-A capture for me is now simply a category of my tasknotes board (called a context) that I can pin notes to. It means I can make tasks reminding myself what to do and write about, and then track my progress on these over time.
+A capture for me is now simply a category of my [[Tasknotes in my workflow|tasknotes]] board (called a context) that I can pin notes to. It means I can make tasks reminding myself what to do and write about, and then track my progress on these over time.
 
 ### Why This, and not just the Todo Tag?
 
@@ -41,6 +44,6 @@ Captures allow me to use the tasks' own individual note to capture the essence o
 
 **Todo when:** you have a well established family of notes, with some that are lacking and incomplete. A good example is my differential equation self study, which has a few approx methods todo'ed, which I plan to redo. Ideally now that we have captures you should never just create a note and todo it.
 
-**Task when:** you have a general field which you want to investigate/return to. I can't put all of Game or Information theory in the capture section, so instead have tasks for learning routes you want to take.
+**Task when:** you have a general field which you want to investigate/return to. I can't put all of Game or [[Information Theory|Information theory]] in the capture section, so instead have tasks for learning routes you want to take.
 
 ---

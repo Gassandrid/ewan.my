@@ -5,8 +5,6 @@ date: 2025-04-02
 updated: 2025-08-19
 tags:
   - math
-  - seed
-  - people
 image: https://m.media-amazon.com/images/M/MV5BZWRlZjBkY2YtNDVhMy00YThkLWFhMWItMGYyMjEzYzJhZmM5XkEyXkFqcGc@._V1_.jpg
 relationship: influencer/youtuber
 sex: male

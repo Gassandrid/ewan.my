@@ -40,7 +40,7 @@ _This will discuss:_
 
 > _The most recent part of the brain from an evolutionary point of view_
 >
-> [![Pasted image 20250909115024.png](../../Attachments/Pasted%20image%2020250909115024.png)](../../Attachments/Pasted%20image%2020250909115024.png)
+> [![Pasted image 20250909115024.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/02b12bfa5462b9687961452ecce08e57905fb052a6c937c84bbd66f3f10aba52/Pasted%20image%2020250909115024.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/02b12bfa5462b9687961452ecce08e57905fb052a6c937c84bbd66f3f10aba52/Pasted%20image%2020250909115024.png)
 
 ### Do We Have Free Will?
 

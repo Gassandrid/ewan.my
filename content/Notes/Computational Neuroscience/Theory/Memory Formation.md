@@ -17,7 +17,7 @@ The [[Amygdala]] is also a key player in the formation of emotional memories, wh
 
 ## Patient H.M.
 
-One such case is that of **Patient H.M.**,[^1] who had his a large portion of his anterior hippocampi surgically removed. While the surgery did cure his **Epilepsy**, he lost the ability to form new long term memories - roughly 10 minutes after a conversation everything would be forgotten. Though new ones could not be performed, he retained his memories up until the surgery.
+One such case is that of **Patient H.M.**,[^1] who had his a large portion of his anterior hippocampi surgically removed. While the surgery did cure his **[[Epilepsy]]**, he lost the ability to form new long term memories - roughly 10 minutes after a conversation everything would be forgotten. Though new ones could not be performed, he retained his memories up until the surgery.
 
 Interestingly however, Patient H.M. was still able to form some different kinds of long term memory. He was able to recall the layout of room in an institute, a place in which he only knew after his surgery. Not only that, but some of his motor control skill were able to develop, suggesting that "muscle memory" might also be independent of the Hippocampus.
 
@@ -27,13 +27,13 @@ Interestingly however, Patient H.M. was still able to form some different kinds 
 
 Memory Encoding differs depending on if it is a short term or long term memory. Short term memories are typically encoded in the [[Prefrontal Cortex]] and are often lost after a few minutes. Long term memories are encoded in the [[Hippocampus]] and are stored in the [[Cerebral Cortex]].
 
-The process of encoding is not fully understood, but it is thought to involve the strengthening of synaptic connections between neurons, a process known as **synaptic plasticity**. This is thought to be mediated by the release of neurotransmitters such as **glutamate** and **dopamine**, which play a key role in the formation of new synapses.
+The process of encoding is not fully understood, but it is thought to involve the strengthening of synaptic connections between [[Neuron|neurons]], a process known as **[[synaptic plasticity]]**. This is thought to be mediated by the release of [[neurotransmitters]] such as **[[glutamate]]** and **[[dopamine]]**, which play a key role in the formation of new [[synapses]].
 
 ---
 
 ## Consolidation
 
-During sleep, the brain undergoes a process called **memory consolidation**, where newly formed memories are stabilized and integrated into existing memory networks. This process is thought to involve the reactivation of neural circuits that were active during the initial encoding of the memory.
+During sleep, the brain undergoes a process called **[[Memory Consolidation - Time Machine of the Brain|memory consolidation]]**, where newly formed memories are stabilized and integrated into existing memory networks. This process is thought to involve the reactivation of [[Neural Circuit|neural circuits]] that were active during the initial encoding of the memory.
 
 I will write a more detailed section on this later, but it is thought that the **Hippocampus** plays a key role in this process, as it is involved in the transfer of information from short-term to long-term memory.
 

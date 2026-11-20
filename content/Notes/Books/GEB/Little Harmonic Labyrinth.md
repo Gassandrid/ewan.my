@@ -2,7 +2,6 @@
 class:
   - note
 tags:
-  - books/geb
   - music/classical
   - philosophy
 source:
@@ -30,4 +29,4 @@ The musical piece itself is described in this chapter by how it leaves the reade
 
 Just like how our logical brains are looking for a base case or a stopping point, the music seems to be trying to trick us into thinking it is just about to return to its starting point, but it never quite does.
 
-[![Screenshot 2025-09-03 at 1.56.33 PM.png](../../../Attachments/Screenshot%202025-09-03%20at%201.56.33%20PM.png)](../../../Attachments/Screenshot%202025-09-03%20at%201.56.33%20PM.png)
+[![Screenshot 2025-09-03 at 1.56.33 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e99eb0c467c14348557fc34c770ced8c3c2b0eed136bcf20922d4f0c937396c3/Screenshot%202025-09-03%20at%201.56.33%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e99eb0c467c14348557fc34c770ced8c3c2b0eed136bcf20922d4f0c937396c3/Screenshot%202025-09-03%20at%201.56.33%20PM.png)

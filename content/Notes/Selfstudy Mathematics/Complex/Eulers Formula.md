@@ -1,6 +1,5 @@
 ---
 tags:
-  - todo/math
   - math/complex
 created: 2025-04-25
 source: "[[The most beautiful equation in math, explained visually Euler’s Formula]]"
@@ -138,7 +137,7 @@ $$
 AREA = \int \sqrt{ a^2 - x^2 } dx
 $$
 
-[![Screenshot 2025-06-07 at 1.41.34 PM.png](../../../Attachments/Screenshot%202025-06-07%20at%201.41.34%20PM.png)](../../../Attachments/Screenshot%202025-06-07%20at%201.41.34%20PM.png)
+[![Screenshot 2025-06-07 at 1.41.34 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b62b657811e1247eaeba502e1cd0ba4170ce0004e2cf08dbbe55be969b5104a/Screenshot%202025-06-07%20at%201.41.34%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b62b657811e1247eaeba502e1cd0ba4170ce0004e2cf08dbbe55be969b5104a/Screenshot%202025-06-07%20at%201.41.34%20PM.png)
 
 Bernoulli realized that if he effectively pulled a square root of $-1$ out of his expression, he was able to evaluate the integral:
 

@@ -49,7 +49,7 @@ pams-used:
 agonists-used: []
 antagonists-used: []
 tags:
-  - comp-neuro/brain/receptor
+  - neuro/molecular
 source:
   - https://www.science.org/doi/10.1126/science.ads4706
   - "[[Why Different Neuron Parts Learn Differently?]]"

@@ -3,9 +3,7 @@ title: exurb1a
 date: 2025-02-20
 updated: 2025-08-21
 tags:
-  - seed
   - philosophy
-  - people/online
 class:
   - person
 birthdate: 01/01/2000

@@ -3,14 +3,13 @@ date: 2025-04-02
 updated: 2025-04-23
 tags:
   - math/linear-algebra
-  - todo/math
 class: note
 ---
 Assuming you are already familiar with vectors or looked at the [[Chapter 1 - Vectors|previous chapter]]... 
 
 To frame the idea of a vector for this content, it is best for you to think of coordinates as a **scalar**, meaning think how each values **stretches** or **squishes** vectors...
 
-[![Screenshot 2025-04-02 at 6.29.28 PM.png](../../../Attachments/Screenshot%202025-04-02%20at%206.29.28%20PM.png)](../../../Attachments/Screenshot%202025-04-02%20at%206.29.28%20PM.png)
+[![Screenshot 2025-04-02 at 6.29.28 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/daf0f317839eadbccdb38b76354359ed6f1351a8f62e0c089cc7aaf41de5297c/Screenshot%202025-04-02%20at%206.29.28%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/daf0f317839eadbccdb38b76354359ed6f1351a8f62e0c089cc7aaf41de5297c/Screenshot%202025-04-02%20at%206.29.28%20PM.png)
 
 For this purpose, let's familiarize ourselves with **two very important vectors**.
 

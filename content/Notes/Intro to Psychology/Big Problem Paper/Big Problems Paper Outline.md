@@ -22,11 +22,11 @@ abstract: "INSTRUCTIONS: The purpose of this worksheet is to build your initial 
 
 **Looking at your notes & readings, what psychological theory/process/factor will you likely connect to the development of your big problem? Why?**
 
-> Primary focus on executive function / cognitive load theory, where we explore the effect of "digital multitasking" and how fragmented attention weakens sustained focus / working memory ( primary from  *Bal et al., 2024* ). Not as focused on in-class work, but Boredom/Avoidance and Attention Control theory have a place in this big problem in explaining how the constant novelty-seeking behavior in the digital realm leads to a overall shallow engagement with content in general.
+> Primary focus on [[Executive Function|executive function]] / [[Cognitive Load Theory|cognitive load theory]], where we explore the effect of "digital multitasking" and how fragmented attention weakens sustained focus / working memory ( primary from  *Bal et al., 2024* ). Not as focused on in-class work, but Boredom/Avoidance and Attention Control theory have a place in this big problem in explaining how the constant novelty-seeking behavior in the digital realm leads to a overall shallow engagement with content in general.
 
 **What order will they go in?  Why is this logical?  (explain why you picked this order)**
 
-> We will start with cognitive development with the foundational changes to the learning methods in the brain, and then shift focus to the boredom and attention switching aspect which shows the behavioral consequences in adults.
+> We will start with cognitive development with the foundational changes to the learning methods in the [[Brain|brain]], and then shift focus to the boredom and attention switching aspect which shows the behavioral consequences in adults.
 
 **Looking at your notes & readings, what psychological theory/process/factor will you likely connect to potential solutions for your big problem? Why?**
 
@@ -87,7 +87,7 @@ As a child raised on a screen matures, their early habits evolve into adult patt
 
 1.   **Which ideas would be discussed in this section?**  
 	- How adults use rapid media switching/multitasking to avoid boredom, but, paradoxically, become even more bored with a weakened attention span
-	- linking the ideas of boredom, attention regulation, and the dopamine reward system
+	- linking the ideas of boredom, attention regulation, and the [[Dopamine|dopamine]] reward system
 
 2.   **Detailed annotation of research articles to be discussed in this section (repeat this for however many articles you will discuss here):**
 
@@ -130,7 +130,7 @@ The existense of these differences may imply that the digital paradigm has a non
 
 1.   **Which ideas would be discussed in this section?**
 	- The use of computers regularly could protect cognitive function by engaging executive function systems.
-	- That the purposeful engagement with technology could enhance neuroplasticity.
+	- That the purposeful engagement with technology could enhance [[Neuroplasticity|neuroplasticity]].
 
 2.   **Detailed annotation of research articles to be discussed in this section (repeat this for however many articles you will discuss here):**
 

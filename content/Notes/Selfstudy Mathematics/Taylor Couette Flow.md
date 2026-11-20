@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos
+  - math/dynamical-systems/chaos
   - math/calculus/differential
   - physics
 source:
@@ -26,7 +26,7 @@ Fluid motion between two rotating concentric cylinders. Fundamental problem in f
 
 Onset of [[Chaos]] within this flow often characterized by [[Lorenz Attractor]] type equations.
 
-[![taylCouetteFlow.png](../../Attachments/taylCouetteFlow.png)](../../Attachments/taylCouetteFlow.png)
+[![taylCouetteFlow.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1605f8d8274f50ca0170771c390098978254a56495307143bad236fcb66fc915/taylCouetteFlow.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1605f8d8274f50ca0170771c390098978254a56495307143bad236fcb66fc915/taylCouetteFlow.png)
 
 **Reynolds Number ($Re$):** Measures the ratio of inertial forces to  viscous forces.
 

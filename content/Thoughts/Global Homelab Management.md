@@ -4,7 +4,7 @@ updated: 2026-01-18T08:29:09-05:00
 class:
   - note
 tags:
-  - cs/homelab/monitoring
+  - projects/homelab/monitoring
   - projects/homelab/apartment
 source:
 related:

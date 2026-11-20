@@ -24,10 +24,10 @@ tags:
 
 Consider the directed graph shown below.
 
-1. Show both an adjacency matrix representation and an adjacency list representation of the graph. A node is not adjacent to itself unless there is a self-loop.
+1. Show both an [[Adjacency Matrix|adjacency matrix]] representation and an [[Adjacency List|adjacency list]] representation of the graph. A node is not adjacent to itself unless there is a self-loop.
 2. For each of the adjacency matrix and adjacency list representation of the graph in the exercise a, write in pseudocode the algorithm of a function Find_all_edges that outputs all edges in the graph, and show its big-O run-time complexity – make sure to show the steps of deriving the run-time complexity; no point will be given to an answer without the steps.
 
-[![Screenshot 2025-09-09 at 10.02.27 AM.png](../../../Attachments/Screenshot%202025-09-09%20at%2010.02.27%20AM.png)](../../../Attachments/Screenshot%202025-09-09%20at%2010.02.27%20AM.png)
+[![Screenshot 2025-09-09 at 10.02.27 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5de6f0c444efbd77a0c95f3bfde9427a16a0aef932cbfaed2462b344d653fca8/Screenshot%202025-09-09%20at%2010.02.27%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5de6f0c444efbd77a0c95f3bfde9427a16a0aef932cbfaed2462b344d653fca8/Screenshot%202025-09-09%20at%2010.02.27%20AM.png)
 
 ### 1. Adjacency Matrix and Adjacency List
 
@@ -51,15 +51,15 @@ $$
 
 For the adjacency list, see *figure 2*, where `red` index represents an unreachable point.
 
-[![Screenshot 2025-09-10 at 1.51.44 PM.png](../../../Attachments/Screenshot%202025-09-10%20at%201.51.44%20PM.png)](../../../Attachments/Screenshot%202025-09-10%20at%201.51.44%20PM.png)
+[![Screenshot 2025-09-10 at 1.51.44 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1f297913258d4d361dd1e5c5d0598dd856a0a973de1e6787166ff4c42095eafb/Screenshot%202025-09-10%20at%201.51.44%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1f297913258d4d361dd1e5c5d0598dd856a0a973de1e6787166ff4c42095eafb/Screenshot%202025-09-10%20at%201.51.44%20PM.png)
 
 ### 2. Pseudocode Algorithms
 
-[![Screenshot 2025-09-10 at 8.52.03 PM.png](../../../Attachments/Screenshot%202025-09-10%20at%208.52.03%20PM.png)](../../../Attachments/Screenshot%202025-09-10%20at%208.52.03%20PM.png)
+[![Screenshot 2025-09-10 at 8.52.03 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/465a0695f659320653a9a5666642cdc5191fa0ede2284488da7994aa50e82da3/Screenshot%202025-09-10%20at%208.52.03%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/465a0695f659320653a9a5666642cdc5191fa0ede2284488da7994aa50e82da3/Screenshot%202025-09-10%20at%208.52.03%20PM.png)
 
 This one is $O(n^2)$, as there are two nested $for$ loops iterating over the whole set of vertices.
 
-[![Screenshot 2025-09-10 at 8.52.13 PM.png](../../../Attachments/Screenshot%202025-09-10%20at%208.52.13%20PM.png)](../../../Attachments/Screenshot%202025-09-10%20at%208.52.13%20PM.png)
+[![Screenshot 2025-09-10 at 8.52.13 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f7877d8fa713c915a446b88f13828195f4bb96f42d2385c97c40c1d13f811a83/Screenshot%202025-09-10%20at%208.52.13%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f7877d8fa713c915a446b88f13828195f4bb96f42d2385c97c40c1d13f811a83/Screenshot%202025-09-10%20at%208.52.13%20PM.png)
 
 This one is $O(n+k)$, as while there are two $for$ loops, the second one one iterates over all $v$ that are in the subset of $G[i]$ 
 
@@ -69,7 +69,7 @@ This one is $O(n+k)$, as while there are two $for$ loops, the second one one ite
 
 Consider the recursive depth-first search algorithm, the graph, and its adjacency list representation shown below. Consider the nodes in a linked list of the adjacency list in the order from left to right exactly as shown. (Note that, at each recursive call, there can be only one possible node to be invoked upon, that is, the first node in the linked list.) Do algorithm tracing on the graph twice: once for the start node 2 and once for the start node 6, and show the tracing outputs for each. The tracing output should include the sequence of recursive calls and returns from those calls in the following format: “call DFS(a); call DFS(b); call DFS(c); return from DFS(c); call DFS(d); return from DFS(d); return from DFS(b); return from DFS(a)”. Additionally, show the depth-first search tree resulting from each run of the algorithm for the different start nodes; use the format shown in Figure 3.5(g) of the textbook (page 85). Note this is not a programming exercise but a written exercise.
 
-[![Screenshot 2025-09-11 at 12.02.37 PM.png](../../../Attachments/Screenshot%202025-09-11%20at%2012.02.37%20PM.png)](../../../Attachments/Screenshot%202025-09-11%20at%2012.02.37%20PM.png)
+[![Screenshot 2025-09-11 at 12.02.37 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6cb7c0eec395246fd2003bd168c7fed60773620ff7e59a3521e1e3b568b28446/Screenshot%202025-09-11%20at%2012.02.37%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6cb7c0eec395246fd2003bd168c7fed60773620ff7e59a3521e1e3b568b28446/Screenshot%202025-09-11%20at%2012.02.37%20PM.png)
 
 ### Node 2
 
@@ -86,7 +86,7 @@ return from DFS(3); return from DFS(1); return from DFS(2)
 
    
 
-[![Screenshot 2025-09-12 at 12.53.36 PM.png](../../../Attachments/Screenshot%202025-09-12%20at%2012.53.36%20PM.png)](../../../Attachments/Screenshot%202025-09-12%20at%2012.53.36%20PM.png)
+[![Screenshot 2025-09-12 at 12.53.36 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/82a1c7f5de999a01a8e83aeef71087b282c7a90995d6b06d2c19a2023b6adea2/Screenshot%202025-09-12%20at%2012.53.36%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/82a1c7f5de999a01a8e83aeef71087b282c7a90995d6b06d2c19a2023b6adea2/Screenshot%202025-09-12%20at%2012.53.36%20PM.png)
 
    
 *created with mermaid*
@@ -105,7 +105,7 @@ return from DFS(4); return from DFS(2); return from DFS(5); return from DFS(6)
 
    
 
-[![Screenshot 2025-09-12 at 12.56.42 PM.png](../../../Attachments/Screenshot%202025-09-12%20at%2012.56.42%20PM.png)](../../../Attachments/Screenshot%202025-09-12%20at%2012.56.42%20PM.png)
+[![Screenshot 2025-09-12 at 12.56.42 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/21a3911193c36965a5bb759f6d79387ab1af58d5323edc0424fd59ab5fea1e06/Screenshot%202025-09-12%20at%2012.56.42%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/21a3911193c36965a5bb759f6d79387ab1af58d5323edc0424fd59ab5fea1e06/Screenshot%202025-09-12%20at%2012.56.42%20PM.png)
 
    
 *created with mermaid*

@@ -5,7 +5,7 @@ updated: 2026-02-10T14:57:01-05:00
 ---
 ## Description
 
-This course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (linear regression, logistic regression, neural networks, support vector machines, decision tree, ensemble models, random forest); unsupervised learning (clustering, dimensionality reduction, kernel methods); The course will also introduce deep learning such as convolutional neural networks and discuss recent applications of machine learning in addition to advice on applying machine learning algorithms.
+This course provides a broad introduction to [[Machine Learning|machine learning]] and statistical pattern recognition. Topics include: supervised learning ([[Linear and Nonlinear Regression|linear regression]], [[Logistic Regression|logistic regression]], [[Neural Networks|neural networks]], [[Support Vector Machines|support vector machines]], [[Decision Tree|decision tree]], ensemble models, random forest); unsupervised learning (clustering, dimensionality reduction, kernel methods); The course will also introduce deep learning such as convolutional neural networks and discuss recent applications of machine learning in addition to advice on applying machine learning algorithms.
 
 ## Objectives
 
@@ -25,10 +25,10 @@ Late Lab Assignments: 5 TOTAL days of “slip-time” (for all lab assignments (
 
 Exams: All exams will be timed, delivered in class and will be proctored remotely. Make-up exams will be given at the discretion of the instructor, and appropriate documentation of absence will be required for consideration of a make-up exam. It is strongly encouraged to obtain prier permission from the instructor. Additional instructions will be posted on Bb a week prior to the exam date.
 
-ML in the era of LLMs: In this course, we will engage in hands-on exercises and discussions that demonstrate how to design and implement a machine learning project using recent large language model (LLM) tools. You will learn how to leverage these tools to generate code, test it, validate its functionality, and explore strategies for improving model performance. Through interactive use of LLM-based assistants, you will also gain experience in iteratively refining your workflow and problem-solving approach. For the final project, however, you are expected to work independently, without relying on LLM tools to generate or modify your work. Once your project is complete, you may include a reflection on how AI/LLM tools could have supported your project, what benefits they might provide, and how you addressed their potential role in your workflow.
+ML in the era of LLMs: In this course, we will engage in hands-on exercises and discussions that demonstrate how to design and implement a machine learning project using recent [[Large Language Model|large language model]] (LLM) tools. You will learn how to leverage these tools to generate code, test it, validate its functionality, and explore strategies for improving model performance. Through interactive use of LLM-based assistants, you will also gain experience in iteratively refining your workflow and problem-solving approach. For the final project, however, you are expected to work independently, without relying on LLM tools to generate or modify your work. Once your project is complete, you may include a reflection on how AI/LLM tools could have supported your project, what benefits they might provide, and how you addressed their potential role in your workflow.
 
 Collaboration and Academic Integrity: You are encouraged to share your knowledge with other students, including ideas that might be relevant to assigned lab assignments. However, once you start writing your solutions or code, no further collaboration on that assignment is allowed. The paper and/or the code that you turn in should consist of your individual effort. Although true research into course topics is encouraged, the recommended text books and class notes are the only sanctioned sources of information for lab assignments and project. In particular, solution sets obtained via unsanctioned means– from friends, from online, or from taking the course previously– are not sanctioned and any discovered use of them will be considered a violation of academic integrity” Every phrase that is not your own should appear be-  
-tween quotation marks (or be typeset as an indented, single-spaced, quotation) with a footnote or end-note that indicates the source. refer to UVM’s Code of Academic Integrity posted at [www.uvm.edu/policies/student/acadintegrity.pdf](http://www.uvm.edu/policies/student/acadintegrity.pdf).
+tween quotation marks (or be typeset as an indented, single-spaced, quotation) with a footnote or end-note that indicates the source. refer to [[University Of Vermont|UVM]]’s Code of Academic Integrity posted at [www.uvm.edu/policies/student/acadintegrity.pdf](http://www.uvm.edu/policies/student/acadintegrity.pdf).
 
 ## Course Topics
 
@@ -38,7 +38,7 @@ The following sequence of topics may be modified during the course of the semest
 | ---------------------------------------------------------------------------- | ---------------------------------------- |
 | Introduction to Machine Learning                                             | Neural networks basics                   |
 | Linear Regression                                                            | Backpropagation                          |
-| Logistic Regression                                                          | Activation functions, regularization     |
+| Logistic Regression                                                          | [[Activation Functions\|Activation functions]], regularization     |
 | Support vector machines                                                      | Data augmentation, dropout, GD updates.  |
 | Decision trees, ensemble methods, and random forest                          | Convolutional neural networks            |
 | Learning theory                                                              | Transfer learning                        |

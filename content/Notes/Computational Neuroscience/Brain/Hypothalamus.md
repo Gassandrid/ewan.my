@@ -41,8 +41,7 @@ associated-disorders:
   - sleep disorders
   - hypopituitarism
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The hypothalamus sits below the thalamus and above the brainstem, acting as the master regulator of homeostasis. It interfaces between the CNS and the endocrine system via its control of the pituitary gland, and directly drives autonomic outputs. The suprachiasmatic nucleus (SCN) is the brain's master circadian clock.

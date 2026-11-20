@@ -43,7 +43,7 @@ Beyond its functionality, DARS also features:
 	- What can’t be run on device is run via cloud
 	
 
-[![Screenshot 2024-12-04 at 1.42.47 PM.png](../Attachments/Screenshot%202024-12-04%20at%201.42.47%20PM.png)](../Attachments/Screenshot%202024-12-04%20at%201.42.47%20PM.png)
+[![Screenshot 2024-12-04 at 1.42.47 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/52a0b1d0716761963dd192979e1f9303571d189daa9a14da77742485290519aa/Screenshot%202024-12-04%20at%201.42.47%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/52a0b1d0716761963dd192979e1f9303571d189daa9a14da77742485290519aa/Screenshot%202024-12-04%20at%201.42.47%20PM.png)
 
 - Language Model Generates formatted json to run functions
 	- Provides arguments and is pre-prompted on when to call functions
@@ -51,7 +51,7 @@ Beyond its functionality, DARS also features:
 - Function calls are either run on Pi ( note taker, humor setter) or sent to the Master ESP-32
 	- Master can connect to several other ESP-32’s to control room device power
 
-[![Screenshot 2024-12-04 at 1.43.16 PM.png](../Attachments/Screenshot%202024-12-04%20at%201.43.16%20PM.png)](../Attachments/Screenshot%202024-12-04%20at%201.43.16%20PM.png)
+[![Screenshot 2024-12-04 at 1.43.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fe9fa7d00d96c6cd1acf32311e52cc962042a87788ebd997a189e602443967b8/Screenshot%202024-12-04%20at%201.43.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fe9fa7d00d96c6cd1acf32311e52cc962042a87788ebd997a189e602443967b8/Screenshot%202024-12-04%20at%201.43.16%20PM.png)
 
 ### Hardware Architecture
 

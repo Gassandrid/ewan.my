@@ -6,7 +6,7 @@ updated: 2026-01-16T17:28:48-05:00
 
 ## Inspirations
 
-[![Pasted image 20241002203018.png](../Attachments/Pasted%20image%2020241002203018.png)](../Attachments/Pasted%20image%2020241002203018.png)
+[![Pasted image 20241002203018.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d96d50aaff0e72a4f2e855a11a73269ab20af6aa31c237d382505a169aa71f7e/Pasted%20image%2020241002203018.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d96d50aaff0e72a4f2e855a11a73269ab20af6aa31c237d382505a169aa71f7e/Pasted%20image%2020241002203018.png)
 
 `r/place circa 2022`
 

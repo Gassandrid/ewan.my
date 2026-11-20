@@ -2,7 +2,6 @@
 date: 2025-12-26
 description: works and people that have shaped how i think
 tags:
-  - seed
   - philosophy
 updated: 2026-09-07T11:46:07-04:00
 ---

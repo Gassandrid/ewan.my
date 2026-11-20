@@ -13,7 +13,7 @@ source:
 related:
 ---
 - _Psychology as a science_
-- _Understanding Cognitive Bias_
+- _Understanding [[Cognitive Bias]]_
 - _Scientifically Understanding Human Behavior_
 
 ---
@@ -31,7 +31,7 @@ People use different strategies for understanding human behavior:
 2. Even when we notice patterns, there may be multiple explanations
 3. Confidence in our intuitions does not mean they are correct
 
-[![Pasted image 20250828115516.png](../../Attachments/Pasted%20image%2020250828115516.png)](../../Attachments/Pasted%20image%2020250828115516.png)
+[![Pasted image 20250828115516.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/279e0a7e6da6b76a12fa07a608ab547fed83173e71e032493714a47ec281ebee/Pasted%20image%2020250828115516.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/279e0a7e6da6b76a12fa07a608ab547fed83173e71e032493714a47ec281ebee/Pasted%20image%2020250828115516.png)
 
 ---
 
@@ -64,9 +64,9 @@ Biases are systematic errors in thinking that affect the decisions and judgments
 
 ### Confirmation Bias
 
-Confirmation bias is simply defined as the tendancy for people to favor information that confirms their preexisting beliefs or hypotheses.
+[[Confirmation Bias|Confirmation bias]] is simply defined as the tendancy for people to favor information that confirms their preexisting beliefs or hypotheses.
 
-[![Screenshot 2025-08-28 at 12.19.20 PM.png](../../Attachments/Screenshot%202025-08-28%20at%2012.19.20%20PM.png)](../../Attachments/Screenshot%202025-08-28%20at%2012.19.20%20PM.png)
+[![Screenshot 2025-08-28 at 12.19.20 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/868c3ad54af762826a900b64f5f09ceb73d5e8e0f9186fbae85379e4f715ced4/Screenshot%202025-08-28%20at%2012.19.20%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/868c3ad54af762826a900b64f5f09ceb73d5e8e0f9186fbae85379e4f715ced4/Screenshot%202025-08-28%20at%2012.19.20%20PM.png)
 
 ### Overconfidence Bias
 
@@ -74,7 +74,7 @@ This is the tendency to be more confident than correct - to overestimate the acc
 
 A perfect example of this is the Titanic, where the ship was said to be "unsinkable", and the crew were overconfident in their ability to handle any situation.
 
-[![Pasted image 20250828122258.png](../../Attachments/Pasted%20image%2020250828122258.png)](../../Attachments/Pasted%20image%2020250828122258.png)
+[![Pasted image 20250828122258.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/52a4f66a126ad5565ff3b6f33a12bab8dc142a77374f85c3eb3b5a0076a447ac/Pasted%20image%2020250828122258.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/52a4f66a126ad5565ff3b6f33a12bab8dc142a77374f85c3eb3b5a0076a447ac/Pasted%20image%2020250828122258.png)
 
 ### How Do We Overcome These Challenges?
 

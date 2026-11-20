@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - comp-neuro/theory
-  - cs/ai/learning
+  - cs/ai/training
 source:
   - https://artemkirsanov.substack.com/p/every-spike-rewires-the-rule
 related:

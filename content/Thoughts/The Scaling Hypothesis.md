@@ -2,7 +2,6 @@
 id: The Scaling Hypothesis
 aliases:
 tags:
-  - seed
   - cs/ai
 date: 2025-02-04
 title: The Scaling Hypothesis
@@ -18,7 +17,7 @@ We will examine an [essay](https://gwern.net/scaling-hypothesis) written by *Gwe
 
 ## Essence of the Scaling Hypothesis
 
-When neural networks were first introduced, they were a novel concept. The idea of using a network of neurons to solve problems was revolutionary. However, it was not until the introduction of the transformer architecture that neural networks truly began to shine.
+When [[Neural Networks|neural networks]] were first introduced, they were a novel concept. The idea of using a network of [[Neuron|neurons]] to solve problems was revolutionary. However, it was not until the introduction of the transformer architecture that neural networks truly began to shine.
 
 Many before believed that we required more complex architectures to solve problems. But what if the key to solving problems was simply scaling up the size of the network? What if intelligence emerges naturally as a result of scaling?
 

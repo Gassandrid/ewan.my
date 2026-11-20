@@ -2,7 +2,6 @@
 id: The Golden Properties
 aliases:
 tags:
-  - seed
   - OCD
 date: 2025-07-03
 class: journal

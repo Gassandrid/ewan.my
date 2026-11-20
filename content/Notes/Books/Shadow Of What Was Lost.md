@@ -2,7 +2,6 @@
 class:
   - book
 tags:
-  - books
 source:
 image: "[[ShadowWhatWasLost.png]]"
 author:
@@ -16,4 +15,4 @@ status: done
 date: 2026-01-19 10:01:50-05:00
 updated: 2026-01-19 10:21:01-05:00
 ---
-[![ShadowWhatWasLost.png](../../Attachments/ShadowWhatWasLost.png)](../../Attachments/ShadowWhatWasLost.png)
+[![ShadowWhatWasLost.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e721cbd9ded2245ca579b34bc4b18e1367849de31b9b24fb6eb52b274096ed5f/ShadowWhatWasLost.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e721cbd9ded2245ca579b34bc4b18e1367849de31b9b24fb6eb52b274096ed5f/ShadowWhatWasLost.png)

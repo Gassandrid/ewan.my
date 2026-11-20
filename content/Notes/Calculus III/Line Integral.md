@@ -1,6 +1,5 @@
 ---
 tags:
-  - math
   - math/calculus/multivariable
   - university
 date: 2024-11-07

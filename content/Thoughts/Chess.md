@@ -5,7 +5,6 @@ class:
   - note
 tags:
   - chess
-  - seed
 source:
 related:
 author:

@@ -27,8 +27,7 @@ associated-disorders:
   - achromatopsia
   - akinetopsia
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The occipital lobe sits at the posterior pole of the cerebral cortex and is the primary visual processing center. V1 (primary visual cortex) receives input from the [[Thalamus|LGN]] and projects forward into the [[Dorsal Pathway]] ("where/how") and [[Ventral Pathway]] ("what").

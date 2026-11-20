@@ -14,13 +14,13 @@ updated: 2026-02-10T19:19:11-05:00
 
 ## Current(and planned) Capabilities
 
-DARS is designed to leverage the power of language models to bridge the connection between natural language and programmatic output. This can be anything from a simple song request, to turning on/off a light in my room, to drafting a custom schedule for the day that automatically gets synced with my obsidian calendar. 
+DARS is designed to leverage the power of [[Large Language Model|language models]] to bridge the connection between natural language and programmatic output. This can be anything from a simple song request, to turning on/off a light in my room, to drafting a custom schedule for the day that automatically gets synced with my obsidian calendar. 
 
 DARS serves to give Language Models the tools to interact with the real world, and in this case, my room and computer science automation tasks.
 
 How this works right now is that speech is heard and recognized via a model, it is sent to both the frontend and backend language models for their respective responses, and a voice is synthesized from the frontend response to sound like TARS. The backend prepares a function call to get/send information, giving the project its ability to interact with the world. 
 
-If it is a room control function, the Pi calls the master ESP-32 to send a signal to a specified slave ESP-32 via the ESP-NOW protocol. This could be something like the [[DARS Media Gallery#Relay for Appliance Power Control|esp-controlled relay switch]].
+If it is a room control function, the Pi calls the master ESP-32 to send a signal to a specified slave ESP-32 via the [ESP-NOW](https://www.espressif.com/en/solutions/low-power-solutions/esp-now) protocol. This could be something like the [[DARS Media Gallery#Relay for Appliance Power Control|esp-controlled relay switch]].
 
 **Hardware Stack**
 
@@ -31,11 +31,11 @@ If it is a room control function, the Pi calls the master ESP-32 to send a signa
 
 **Software Stack:**
 
-- A fine-tuned local Ollama  3.1 7B for the frontend "personality" of DARS
+- A fine-tuned local [[Setting Up Local AI|Ollama]]  3.1 7B for the frontend "personality" of DARS
 	- GPT 4o backend for [[Function Calling]]
 - Speech Synthesis to sound like TARS
 - Speech Recognition running Locally
-- Langroid for [[Function Calling]] and Framework
+- [Langroid](https://github.com/langroid/langroid) for [[Function Calling]] and Framework
 - Quartz for Website architecture(this website), hosted on DARS.
 
 ### Planned Features

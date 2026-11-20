@@ -7,7 +7,6 @@ tags:
   - cs/software
   - cs/crypto
   - generated
-  - resource/programming/cli
 source:
 related:
   - "[[Age]]"

@@ -2,7 +2,6 @@
 date: 2024-10-06
 tags:
   - hobbies
-  - seed
 updated: 2025-02-06
 title: Woodwork
 ---
@@ -12,7 +11,7 @@ I do a little bit of woodwork from time to time, and find it to be quite an enjo
 
 My grandfather is by far the most skilled carpenter in my family, as he has done it for decades upon decades for his profession as a boat maker. 
 
-My father, growing up under this environment, learned from the best, and coming from South Africa to Colombia, I can't imagine what else he would do for his free time!
+My [[Liam Pedersen|father]], growing up under this environment, learned from the best, and coming from [[South Africa]] to Colombia, I can't imagine what else he would do for his free time!
 
 But because of this, I was lucky to grow up with a family that taught me these things when I was young. Sure, I had my fair share of cuts and injuries, but I have come out able to easily work with carpentry heavy equipment and make all sorts of things for my personal projects.
 

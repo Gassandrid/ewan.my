@@ -23,9 +23,9 @@ tags:
 >
 > Specification of the algorithm run tracing: For each algorithm run tracing, show the content of the cut $S$, the content of the $MST \ T$, and the content of the priority queue $Q$ at the end of the While loop in each iteration. Specifically, show the content of $S$ as a set of nodes, the content of $T$ as a set of edges, and the content of $Q$ as a set of ordered pairs of a node number and a priority key. (For ease of grading, please show the end nodes of an edge in the alphabetical order (e.g., (a, d)), and list the priority queue elements in the alphabetic order of node number.) For example, when the start node is $a$, their contents before the 1st iteration is $S=\{  \}$, $T=\{  \}$, and $Q = \{ (a,0), (b, \infty), (c, \infty), (d,\infty), (e,\infty), (f, \infty), (g,\infty) \}$.
 >
-> [![primAlgo.png](../../../Attachments/primAlgo.png)](../../../Attachments/primAlgo.png)
+> [![primAlgo.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6208f4c6d8f43ed1242b2c4b0a0efdf77581adc369378ea27397f3c02e26d190/primAlgo.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6208f4c6d8f43ed1242b2c4b0a0efdf77581adc369378ea27397f3c02e26d190/primAlgo.png)
 > 
-> [![Screenshot 2025-10-10 at 8.17.16 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%208.17.16%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%208.17.16%20PM.png)
+> [![Screenshot 2025-10-10 at 8.17.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1e6c1b124e0ddfa1bc035d7e0c103a43d8d4d7bffc9dc55c349f2e1e8bcbd6dd/Screenshot%202025-10-10%20at%208.17.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1e6c1b124e0ddfa1bc035d7e0c103a43d8d4d7bffc9dc55c349f2e1e8bcbd6dd/Screenshot%202025-10-10%20at%208.17.16%20PM.png)
 
 ### 1. Starting at Node $a$
 
@@ -111,7 +111,7 @@ $$
 
 ### 3. MST Drawing
 
-[![Screenshot 2025-10-10 at 11.02.36 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.02.36%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.02.36%20PM.png)
+[![Screenshot 2025-10-10 at 11.02.36 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/221096e76732e41ff9ea471dd054864f0321e2ae1392a6b2093f1d803e210494/Screenshot%202025-10-10%20at%2011.02.36%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/221096e76732e41ff9ea471dd054864f0321e2ae1392a6b2093f1d803e210494/Screenshot%202025-10-10%20at%2011.02.36%20PM.png)
 
 ---
 
@@ -131,9 +131,9 @@ $$
 > - If the disjoint sets do not change in an iteration, you do not need to show the forest structure.
 > - If two trees that are merged have the same size, make the second tree (on the right) a subtree of the first tree (on the left).
 > 
-> [![Screenshot 2025-10-10 at 11.08.44 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.08.44%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.08.44%20PM.png)
+> [![Screenshot 2025-10-10 at 11.08.44 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/41b0a72084a565bf9a1d8d390b4cf59d8f28225806525dd0229d4489d9e97729/Screenshot%202025-10-10%20at%2011.08.44%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/41b0a72084a565bf9a1d8d390b4cf59d8f28225806525dd0229d4489d9e97729/Screenshot%202025-10-10%20at%2011.08.44%20PM.png)
 > 
-> [![Screenshot 2025-10-10 at 11.09.16 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.09.16%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.09.16%20PM.png)
+> [![Screenshot 2025-10-10 at 11.09.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fd5d977bfdf4b6d2fa07f1a16e5165172b4437130d445f4f09c5fbd38fbe125d/Screenshot%202025-10-10%20at%2011.09.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fd5d977bfdf4b6d2fa07f1a16e5165172b4437130d445f4f09c5fbd38fbe125d/Screenshot%202025-10-10%20at%2011.09.16%20PM.png)
 
 ### 1. Sorting the Edgeso
 
@@ -203,4 +203,4 @@ $$
 
 ### 4. Final MST
 
-[![Screenshot 2025-10-10 at 11.16.47 PM.png](../../../Attachments/Screenshot%202025-10-10%20at%2011.16.47%20PM.png)](../../../Attachments/Screenshot%202025-10-10%20at%2011.16.47%20PM.png)
+[![Screenshot 2025-10-10 at 11.16.47 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d4839df4a32569b09cbacc55cf3426eccb0aba2e8439564ca064258478ac0f48/Screenshot%202025-10-10%20at%2011.16.47%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d4839df4a32569b09cbacc55cf3426eccb0aba2e8439564ca064258478ac0f48/Screenshot%202025-10-10%20at%2011.16.47%20PM.png)

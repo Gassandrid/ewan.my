@@ -2,7 +2,7 @@
 id: Homogeneous Systems
 aliases:
 tags:
-  - "#math/linear-algebra"
+  - math/linear-algebra
 date: 2025-01-29
 title: Homogeneous Systems
 updated: 2025-04-02

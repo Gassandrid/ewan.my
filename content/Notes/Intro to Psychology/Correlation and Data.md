@@ -163,7 +163,7 @@ This is where neither the participants nor the researchers know who is in which 
 
 ---
 
-*from this point forward in the lecture, just refer to [[CH1 - Sampling and Descriptive Statistics]] basics from [[Statistics Index|Statistics for Engineering]]*
+*from this point forward in the lecture, just refer to [[Descriptive Statistics]] basics from [[Statistics Index|Statistics for Engineering]]*
 
 ---
 

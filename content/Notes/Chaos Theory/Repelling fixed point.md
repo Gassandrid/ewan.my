@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos
+  - math/dynamical-systems/chaos
   - university
 source:
 related:

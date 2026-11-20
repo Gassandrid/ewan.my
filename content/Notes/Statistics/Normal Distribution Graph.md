@@ -1,16 +1,34 @@
 ---
+class:
+  - note
 tags:
-  - university
+  - math/probability/statistics
   - cs/python
+  - university
+source:
+  - "[[Statistics Index]]"
+related:
+  - "[[Confidence Intervals]]"
+  - "[[Sampling Distribution]]"
+  - "[[Hypothesis Testing]]"
+author:
+description: A matplotlib figure of the standard normal curve with its central 95% marked at plus or minus 1.96 standard deviations.
+aliases:
+  - Normal Curve
+  - Normal Distribution Plot
 date: 2024-10-15
-updated: 2025-10-15
+updated: 2026-11-19T21:50:00-05:00
 ---
-## Image
+- the [[Gaussian Distribution|normal]] curve behind [[Confidence Intervals]] and [[Hypothesis Testing]], with the middle 95% marked
 
-[![Pasted image 20241015090052.png](../../Attachments/Pasted%20image%2020241015090052.png)](../../Attachments/Pasted%20image%2020241015090052.png)
+$$
+f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
 
-## Code
+	- 95% of the area sits within $\mu \pm 1.96\sigma$, the $z$ behind a 95% confidence interval
+	- read as a CI the center is $\hat{p}$ and the dashed lines are $\hat{p} \pm E$
 
+[![Pasted image 20241015090052.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3f7c3db968720fcbe40eba10a77afe25f256ac2b1fb8ee814d00ea0d0c8e16dd/Pasted%20image%2020241015090052.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3f7c3db968720fcbe40eba10a77afe25f256ac2b1fb8ee814d00ea0d0c8e16dd/Pasted%20image%2020241015090052.png)
 ```python-r
 import numpy as np
 import matplotlib.pyplot as plt

@@ -37,7 +37,7 @@ tags:
 > 1. Write a recurrence relation that expresses the run-time, T(n), of the recursive algorithm, and
 > explain how each term in the recurrence relation is formed.
 > 
-> 2. Write the steps of solving the recurrence relation to derive the run-time complexity T(n) = O(nlg3) (=O(n1.585)). (Here, lg3 $\equiv$ log23.) Use the recursion tree technique to derive the run- time complexity; make a simplifying assumption that n is a power of 2 integer. Do not use the master theorem in Section 5.2. There is no need to give a formal proof of big-O. 
+> 2. Write the steps of solving the recurrence relation to derive the [[Complexity|run-time complexity]] T(n) = O(nlg3) (=O(n1.585)). (Here, lg3 $\equiv$ log23.) Use the recursion tree technique to derive the run- time complexity; make a simplifying assumption that n is a power of 2 integer. Do not use the master theorem in Section 5.2. There is no need to give a formal proof of big-O. 
 
 ### 1. Key Idea
 
@@ -59,7 +59,7 @@ Leaving us with a problem of only 3 recursive multiplacions, which greatly reduc
 
 *See figure 1(may be on a different page due to latex compilation quirks*.
 
-[![Screenshot 2025-10-24 at 8.35.39 PM.png](../../../Attachments/Screenshot%202025-10-24%20at%208.35.39%20PM.png)](../../../Attachments/Screenshot%202025-10-24%20at%208.35.39%20PM.png)
+[![Screenshot 2025-10-24 at 8.35.39 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6e22056d8d19c5e9081a57ba7adb9b70aed19f25eb0728a97a2ab9cc2aacbe11/Screenshot%202025-10-24%20at%208.35.39%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6e22056d8d19c5e9081a57ba7adb9b70aed19f25eb0728a97a2ab9cc2aacbe11/Screenshot%202025-10-24%20at%208.35.39%20PM.png)
 
 ### 3. Recurrence Relation
 
@@ -121,7 +121,7 @@ Consider the dynamic programming algorithm we discussed for the weighted interva
 3. The memoization table (array) filled in *after each iteration* of the algorithm, with arrows pointing to the array entries containing solutions to the two subproblems.
 4. the set of jobs selected as sa result. (There are two alternative optimal sets of jobs possible with the algoirthm; either one can be given as the answer)
 
-[![Screenshot 2025-10-24 at 7.49.46 PM.png](../../../Attachments/Screenshot%202025-10-24%20at%207.49.46%20PM.png)](../../../Attachments/Screenshot%202025-10-24%20at%207.49.46%20PM.png)
+[![Screenshot 2025-10-24 at 7.49.46 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/138e02a353f1a873453d0bdd211a23da147cf103b89426e4a6e0f05e1d34d246/Screenshot%202025-10-24%20at%207.49.46%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/138e02a353f1a873453d0bdd211a23da147cf103b89426e4a6e0f05e1d34d246/Screenshot%202025-10-24%20at%207.49.46%20PM.png)
 
 ### 1. Sort Job by Finishing time
 
@@ -131,7 +131,7 @@ $$
 
 Jobs sorted by finish time as a gantt diagram made using mermaid: *see figure 03*
 
-[![Screenshot 2025-10-24 at 8.14.31 PM.png](../../../Attachments/Screenshot%202025-10-24%20at%208.14.31%20PM.png)](../../../Attachments/Screenshot%202025-10-24%20at%208.14.31%20PM.png)
+[![Screenshot 2025-10-24 at 8.14.31 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6415ca4e3da21c1f87e39288eb6d1d6525ea520e198e454674e5021c3f685beb/Screenshot%202025-10-24%20at%208.14.31%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6415ca4e3da21c1f87e39288eb6d1d6525ea520e198e454674e5021c3f685beb/Screenshot%202025-10-24%20at%208.14.31%20PM.png)
 
 ### 2. COmpute $p(i)$ Values
 

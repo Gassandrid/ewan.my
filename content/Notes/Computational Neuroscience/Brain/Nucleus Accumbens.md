@@ -1,8 +1,6 @@
 ---
 tags:
-  - todo/neuro
-  - comp-neuro/brain/region
-  - comp-neuro/brain
+  - neuro/anatomy
 date: 2025-04-14
 updated: 2026-01-12T11:34:02-05:00
 ---

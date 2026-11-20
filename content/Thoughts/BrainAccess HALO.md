@@ -6,8 +6,7 @@ image: https://www.brainaccess.ai/wp-content/uploads/2022/02/buy-eeg-headband-ma
 class: product
 related:
 tags:
-  - products
-  - comp-neuro/equipment/eeg
+  - neuro/methods/eeg
 status: bought
 brand:
 date: 2025-02-12T13:55:21

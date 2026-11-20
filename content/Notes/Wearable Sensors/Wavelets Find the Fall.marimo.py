@@ -71,7 +71,7 @@ with app.setup(hide_code=True):
 @app.cell(hide_code=True)
 def _():
     mo.md("""
-    *I had Claude create this marimo notebook for visualization as a test of learning capabilities.*
+    *I had Claude create this marimo notebook for visualization as a test of learning capabilities.* Usually dont like to have these notebooks be slop, but wanted a quick demo for teaching concepts elegantly.
     """)
     return
 
@@ -79,10 +79,7 @@ def _():
 @app.cell(hide_code=True)
 def _():
     mo.md(r"""
-    A fall is a slow change of posture with a sharp impact at its end. A wavelet transform measures
-    both at once: it slides a short wiggle along the signal and records how much area the two
-    share at every moment and every frequency. Below, sliding as area ([[Convolutions|convolution]]),
-    then a wavelet you shape, then the nine BME3740 sample trials from a trunk [[Inertial measurement units|IMU]].
+
     """)
     return
 
@@ -119,7 +116,7 @@ def _():
     _bx = 6 / 10 * _sw
     _by = _h - _burst / 1.1 * _h
     mo.md(rf"""
-    ## Fourier hears the burst but not when
+    ## Fourier annihalates all time domain information
 
     The test signal is a slow swell with a small 6 Hz burst riding on it. Its spectrum shows both
     frequencies, but the burst's peak carries no clock: the same [[Fourier Transform|spectrum]] fits a burst at any time.

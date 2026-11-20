@@ -35,8 +35,7 @@ associated-disorders:
   - SIDS (sudden infant death syndrome)
   - central apnea
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The medulla oblongata is the most caudal brainstem structure, continuous with the spinal cord. It contains the critical autonomic control centers for cardiovascular and respiratory function — damage here is immediately life-threatening. The nucleus tractus solitarius (NTS) integrates visceral sensory input from cranial nerves IX and X.

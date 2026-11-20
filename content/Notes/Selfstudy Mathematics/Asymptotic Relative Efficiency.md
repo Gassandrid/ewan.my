@@ -21,4 +21,4 @@ A measure of the performance of two statistical procedures, either tests or esti
 
 For two estimators $\hat{\theta_{1}}$ and $\hat{\theta_{2}}$  along with asymptotic variances $\sigma_{1}^{2}$ and $\sigma_{2}^{2}$, **ARE** is typically defined as $\frac{\sigma_{2}^{2}}{\sigma_{1}^{2}}$
 
-[![asympRelaEfficiency.png](../../Attachments/asympRelaEfficiency.png)](../../Attachments/asympRelaEfficiency.png)
+[![asympRelaEfficiency.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c447cd80cd50bd4bccaf73d0a950b2ec5de94f38432ba5426f303e5925d67d48/asympRelaEfficiency.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c447cd80cd50bd4bccaf73d0a950b2ec5de94f38432ba5426f303e5925d67d48/asympRelaEfficiency.png)

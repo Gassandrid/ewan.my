@@ -2,7 +2,6 @@
 date: 2024-12-10
 updated: 2025-09-12
 tags:
-  - junk
   - math/calculus
   - university
 class:
@@ -94,7 +93,7 @@ $$
 \frac{\pi}{3} \ln(2) - \frac{\pi}{3} \ln(1) = \frac{\pi}{3} \ln (2)
 $$
 
-[![Screenshot 2024-10-07 at 3.28.35 PM.png](../../../Attachments/Screenshot%202024-10-07%20at%203.28.35%20PM.png)](../../../Attachments/Screenshot%202024-10-07%20at%203.28.35%20PM.png)
+[![Screenshot 2024-10-07 at 3.28.35 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/515172bf3a58dee1a0bf12fc40c9e0dc4f91bef695d4b654eba58550ee660f9f/Screenshot%202024-10-07%20at%203.28.35%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/515172bf3a58dee1a0bf12fc40c9e0dc4f91bef695d4b654eba58550ee660f9f/Screenshot%202024-10-07%20at%203.28.35%20PM.png)
 
 ## Anohter One
 
@@ -110,11 +109,11 @@ https://www.desmos.com/3d/lxvpnp7b5e
 
 Set 2 of the variables equal to 0
 
-[![Screenshot 2024-10-07 at 3.32.29 PM.png](../../../Attachments/Screenshot%202024-10-07%20at%203.32.29%20PM.png)](../../../Attachments/Screenshot%202024-10-07%20at%203.32.29%20PM.png)
+[![Screenshot 2024-10-07 at 3.32.29 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b736b0d14e71121d9dff3adaa12d958a5716bf3f4eb1628d3ec6d7ff060b224f/Screenshot%202024-10-07%20at%203.32.29%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b736b0d14e71121d9dff3adaa12d958a5716bf3f4eb1628d3ec6d7ff060b224f/Screenshot%202024-10-07%20at%203.32.29%20PM.png)
 
 bringing into 2d
 
-[![Screenshot 2024-10-07 at 3.34.48 PM.png](../../../Attachments/Screenshot%202024-10-07%20at%203.34.48%20PM.png)](../../../Attachments/Screenshot%202024-10-07%20at%203.34.48%20PM.png)
+[![Screenshot 2024-10-07 at 3.34.48 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/34effca9c813a686d91f98ae3b3fc0dc4f9d8c4347b5d0476296d6baf6b5476f/Screenshot%202024-10-07%20at%203.34.48%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/34effca9c813a686d91f98ae3b3fc0dc4f9d8c4347b5d0476296d6baf6b5476f/Screenshot%202024-10-07%20at%203.34.48%20PM.png)
 
 setting up the integral
 

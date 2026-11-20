@@ -1,7 +1,7 @@
 ---
 tags:
   - comp-neuro
-  - todo/neuro
+  - neuro
   - math/calculus/differential
 date: 2024-10-28
 updated: 2026-09-03T15:28:45-04:00
@@ -19,16 +19,16 @@ source:
 
 This video covers **[[Dynamical Systems Theory]]**, and how it can be used to model the behavior of systems in which time is a factor.
 
-Looking at a Neuron, how can we apply this?
+Looking at a [[Neuron]], how can we apply this?
 
 > [!Info] Graphic
-> [![Screenshot 2024-10-28 at 12.17.24 PM.png](../../Attachments/Screenshot%202024-10-28%20at%2012.17.24%20PM.png)](../../Attachments/Screenshot%202024-10-28%20at%2012.17.24%20PM.png)
+> [![Screenshot 2024-10-28 at 12.17.24 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7fc155b53a5ae5140b67933800b3f8b1aa1e0a363c6b8b7849236b52d896b4f8/Screenshot%202024-10-28%20at%2012.17.24%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7fc155b53a5ae5140b67933800b3f8b1aa1e0a363c6b8b7849236b52d896b4f8/Screenshot%202024-10-28%20at%2012.17.24%20PM.png)
 
 **Neurons are temporal computers**. Unlike the contrary, neurons don't only have "inputs" and "outputs" as factors, but also what that neuron was doing **1 millisecond ago, 1 second ago, or even minutes before**.
 
-This is exactly what **[[Dynamical Systems Theory]]** is all about. This will cover differential equations, limit cycles, equilibrium points, and phase portraits.
+This is exactly what **[[Dynamical Systems Theory]]** is all about. This will cover [[Ordinary Differential Equation|differential equations]], [[Limit Cycle|limit cycles]], [[Equilibrium Point|equilibrium points]], and [[Phase Portrait|phase portraits]].
 
-We will learn the fundamentals in this note, and later apply it to **Neuronal Dynamics**
+We will learn the fundamentals in this note, and later apply it to **[[Dynamical Systems in Neuroscience|Neuronal Dynamics]]**
 
 ---
 
@@ -53,7 +53,7 @@ Let's take an example of a **ball in motion**
 >
 > > [!Info] Graphic
 > > 
-> > [![Screenshot 2024-10-28 at 12.29.43 PM.png](../../Attachments/Screenshot%202024-10-28%20at%2012.29.43%20PM.png)](../../Attachments/Screenshot%202024-10-28%20at%2012.29.43%20PM.png)
+> > [![Screenshot 2024-10-28 at 12.29.43 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ca1f822253c0c653b219d468ad9b2d6eadb14f84febb0c8c25720375a8f66a5c/Screenshot%202024-10-28%20at%2012.29.43%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ca1f822253c0c653b219d468ad9b2d6eadb14f84febb0c8c25720375a8f66a5c/Screenshot%202024-10-28%20at%2012.29.43%20PM.png)
 
 But this can range depending both on what you are examining, but **also** on what you ACTUALLY care about. Let's explain
 
@@ -66,7 +66,7 @@ But this can range depending both on what you are examining, but **also** on wha
 >
 > > [!Info] Graphic
 > >
-> > [![Screenshot 2024-10-28 at 1.25.23 PM.png](../../Attachments/Screenshot%202024-10-28%20at%201.25.23%20PM.png)](../../Attachments/Screenshot%202024-10-28%20at%201.25.23%20PM.png)
+> > [![Screenshot 2024-10-28 at 1.25.23 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/60bc908312f66ffd0fb83f32509c579ee76ce8fdba00db9ae243b45ca86676d8/Screenshot%202024-10-28%20at%201.25.23%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/60bc908312f66ffd0fb83f32509c579ee76ce8fdba00db9ae243b45ca86676d8/Screenshot%202024-10-28%20at%201.25.23%20PM.png)
 > >
 > >where $\theta$ is the angle away from center and $\omega$ is its direction/velocity in a said direction, single dimension
 
@@ -102,7 +102,7 @@ aka the [[Hodgkin Huxley Model]] lol
 >
 > >[!Info] Graphic
 > >
-> > [![Screenshot 2024-10-29 at 10.43.57 AM.png](../../Attachments/Screenshot%202024-10-29%20at%2010.43.57%20AM.png)](../../Attachments/Screenshot%202024-10-29%20at%2010.43.57%20AM.png)
+> > [![Screenshot 2024-10-29 at 10.43.57 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d1cdaafd032912e8466866bdc28958aa96a583e924e065f404877427ded2a134/Screenshot%202024-10-29%20at%2010.43.57%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d1cdaafd032912e8466866bdc28958aa96a583e924e065f404877427ded2a134/Screenshot%202024-10-29%20at%2010.43.57%20AM.png)
 
 This is a simple growth pattern, for which we can model like the following:
 

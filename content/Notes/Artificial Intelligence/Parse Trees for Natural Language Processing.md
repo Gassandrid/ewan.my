@@ -3,7 +3,7 @@ id: Parse Trees for Natural Language Processing
 aliases:
   - Syntax Tree
 tags:
-  - cs/ai/diffusion
+  - cs/ai/generative/diffusion
 date: 2025-08-12
 source: "[[Diffusion-LM Improves Controllable Text Generation]]"
 updated: 2025-08-14
@@ -12,7 +12,7 @@ While parse trees are a concept from standard data structures, they are also use
 
 This is also known as a **Syntax Tree** for fields like **Formal Linguistics** and **Computing Theory**.
 
-[![Screenshot 2025-08-12 at 3.07.37 PM.png](../../Attachments/Screenshot%202025-08-12%20at%203.07.37%20PM.png)](../../Attachments/Screenshot%202025-08-12%20at%203.07.37%20PM.png)
+[![Screenshot 2025-08-12 at 3.07.37 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f9ec30167156e788c55726805e7a6b55c8275c6553492d6c7d4277e020099881/Screenshot%202025-08-12%20at%203.07.37%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f9ec30167156e788c55726805e7a6b55c8275c6553492d6c7d4277e020099881/Screenshot%202025-08-12%20at%203.07.37%20PM.png)
 
 For [[Large Language Model|Large Language Models]], parse trees can be used to guide the generation of text in a way that adheres to specific syntactic structures. This can be particularly useful in applications where the structure of the output is important, such as in legal or technical writing.
 

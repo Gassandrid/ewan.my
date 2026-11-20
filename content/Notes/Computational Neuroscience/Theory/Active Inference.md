@@ -17,7 +17,7 @@ updated: 2025-09-24
 ---
 **Active Inference** is a theoretical framework in [[Computational Neuroscience]] that describes how biological systems, particularly the brain, interact with their environment to minimize uncertainty and maintain homeostasis. It stems from the concepts of the [[Free Energy Principle]] and [[Bayesian Inference]], proposing that organisms actively infer the causes of their sensory inputs and take actions to fulfill their predictions about the world.
 
-[![ReactiveSentientAndIntentionalBehavior.png](../../../Attachments/ReactiveSentientAndIntentionalBehavior.png)](../../../Attachments/ReactiveSentientAndIntentionalBehavior.png)
+[![ReactiveSentientAndIntentionalBehavior.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/768d595acb49c30054a9604edeb530d2c11fb3b2e031f881d5c6eb4208886e19/ReactiveSentientAndIntentionalBehavior.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/768d595acb49c30054a9604edeb530d2c11fb3b2e031f881d5c6eb4208886e19/ReactiveSentientAndIntentionalBehavior.png)
 
 _Figure 1 shows three types of behavior: **Reactive** - simple reflex responses to stimuli; **Sentient** - perception and response to environmental changes; **Intentional** - goal-directed actions based on future predictions._
 

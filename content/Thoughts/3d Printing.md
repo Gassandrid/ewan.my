@@ -3,13 +3,12 @@ class:
   - journal
   - note
 tags:
-  - seed
   - engineering/3dprinting
 date: 2025-09-08
 updated: 2026-03-17T08:40:12-04:00
 ---
 
-[![Pasted image 20260317084011.png](../Attachments/Pasted%20image%2020260317084011.png)](../Attachments/Pasted%20image%2020260317084011.png)
+[![Pasted image 20260317084011.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c8bd6aeff091e1aac892de2d422716d95f68cab2600885c2e2e2a1c6782c642f/Pasted%20image%2020260317084011.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c8bd6aeff091e1aac892de2d422716d95f68cab2600885c2e2e2a1c6782c642f/Pasted%20image%2020260317084011.png)
 
 an additive manufacturing process where material is deposited layer by layer to build a physical object from a digital model.
 

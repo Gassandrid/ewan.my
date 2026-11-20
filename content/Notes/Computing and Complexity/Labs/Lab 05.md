@@ -6,7 +6,7 @@ author: Ewan Pedersen, Sylvan Franklin
 ---
 ## Exercise 01
 
-The pumping lemma for regular languages (Sipser, Theorem 1.70) states: “If $A$ is a regular language, then there is a number $p$ where if $s$ is any string in $A$ of length at least $p$, then $s$ may be divided into three pieces $s=xyzs=xyz$, satisfying the following conditions:
+The [[Pumping Lemma|pumping lemma]] for [[Day 9 - Non Regular Languages and Context Free Grammars|regular languages]] (Sipser, Theorem 1.70) states: “If $A$ is a regular language, then there is a number $p$ where if $s$ is any string in $A$ of length at least $p$, then $s$ may be divided into three pieces $s=xyzs=xyz$, satisfying the following conditions:
 
 $$
 \begin{align*}
@@ -30,7 +30,7 @@ Write a proof by contradiction which uses the pumping lemma to show that the lan
 
 ## Exercise 02
 
-Consider the following context-free grammar, $G$:
+Consider the following [[Context Free Grammars and Languages|context-free grammar]], $G$:
 
 $$
 \begin{align*}
@@ -93,7 +93,7 @@ $$
 \end{align*}
 $$
 
-Give a parse tree and leftmost derivations for the following strings:
+Give a [[Parse Trees for Natural Language Processing|parse tree]] and leftmost derivations for the following strings:
 
 1. $a+a$
 2. $((a))$

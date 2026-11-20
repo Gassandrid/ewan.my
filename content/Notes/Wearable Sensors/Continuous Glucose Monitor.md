@@ -19,4 +19,4 @@ aliases:
 
 I have got one before, but due to being consumable and rather expensive ( along with not being prediabetic ), it is not the best use of my money right now. I have got the [[Dexcom Stelo]]
 
-[![Pasted image 20260903170508.png](../../Attachments/Pasted%20image%2020260903170508.png)](../../Attachments/Pasted%20image%2020260903170508.png)
+[![Pasted image 20260903170508.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/81b896cbd527bc7220029f1882991a74284c3399ce01ee5cbee729a4446aef65/Pasted%20image%2020260903170508.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/81b896cbd527bc7220029f1882991a74284c3399ce01ee5cbee729a4446aef65/Pasted%20image%2020260903170508.png)

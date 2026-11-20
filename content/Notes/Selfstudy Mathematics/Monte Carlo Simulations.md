@@ -24,4 +24,4 @@ $$
 Area = \frac{red \ points}{all \ points} = 3.1415\dots
 $$
 
-[![monteCarloCircleArea.png](../../Attachments/monteCarloCircleArea.png)](../../Attachments/monteCarloCircleArea.png)
+[![monteCarloCircleArea.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c9c86fc92c951fd39c0f21334e3ec82f43509a76f5d52337d43cd28f34074367/monteCarloCircleArea.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c9c86fc92c951fd39c0f21334e3ec82f43509a76f5d52337d43cd28f34074367/monteCarloCircleArea.png)

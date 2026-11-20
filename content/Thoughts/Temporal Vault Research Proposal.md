@@ -18,7 +18,7 @@ The main problem that I am faced with is narrowing down a question which I can a
 
 > "To what extent can conventional data analysis methods, combined with biologically-inspired temporal modeling architectures, evaluate and enhance the quality of user-generated semantic labels in a personal knowledge management system?"
 
-*this one is good because it makes the primary task evaluating my own organization structure (tags, frontmatter, links, all stuff I have to do from judgement) for how well it describes the features of my data. This can be evaluated with standard modeling techniques from information theory(entropy, etc), and small world graphs(a feature of biological brains, by using "information highways" for efficient graph traversal. This presents an interesting use for the [[Continuous Thought Machines]] as we can evaluate the interpretability of the biologically accurate neurons, and how they "synchronize" to tell us if there are features of the semantic dataset that we are missing.*
+*this one is good because it makes the primary task evaluating my own organization structure (tags, frontmatter, links, all stuff I have to do from judgement) for how well it describes the features of my data. This can be evaluated with standard modeling techniques from [[Information Theory|information theory]](entropy, etc), and [[Small World Graphs|small world graphs]](a feature of biological brains, by using "information highways" for efficient graph traversal. This presents an interesting use for the [[Continuous Thought Machines]] as we can evaluate the [[Mechanistic Interpretability|interpretability]] of the biologically accurate [[Neuron|neurons]], and how they "synchronize" to tell us if there are features of the semantic dataset that we are missing.*
 
 If we want to describe it more techincally:
 
@@ -28,7 +28,7 @@ If we want to describe it more techincally:
 
 **Comparison of Emergent vs Explicit Semantic Structure**
 
-Would involve performing a bunch of statistical tests to measure and quantify the effectiveness of my vaults semantic structure, and then would involve both learning how the CTM captures semantic structure, and IF it is better than
+Would involve performing a bunch of statistical tests to measure and quantify the effectiveness of my vaults semantic structure, and then would involve both learning how the [[Continuous Thought Machines|CTM]] captures semantic structure, and IF it is better than
 
 > To what extent do emergent neural synchronization patterns in a CTM trained on temporal navigation data recapitulate explicit semantic structures (tags, links, over time) versus discovering abstract latent organization structure?
 
@@ -44,4 +44,4 @@ We can measure how my "interest" moves over time according to tags in the obsidi
 
 Youtube data is a lot more concrete, where it is a guarentee to represent my mind whereas I dont always write what I am thinking on my vault. I hypothesize that youtube videos serve as a strong predictor for what I will write about.
 
->Can a CTM trained both on Obsidian navigation and YouTube consumption learn some abstract latent space where synchronization patterns predict cross-modal topic transitions and information integration?
+>Can a CTM trained both on Obsidian navigation and YouTube consumption learn some abstract [[Latent Space|latent space]] where synchronization patterns predict cross-modal topic transitions and information integration?

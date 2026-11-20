@@ -3,7 +3,6 @@ date: 2024-12-28
 updated: 2026-08-06T09:25:44-07:00
 tags:
   - OCD
-  - seed
 title: Tech Stacks
 ---
 

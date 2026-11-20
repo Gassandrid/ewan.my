@@ -2,7 +2,6 @@
 class:
   - book
 tags:
-  - books
 source:
   - https://digitalphysics.ru/pdf/Kaminskii_A_V/I_Am_a_Strange_Loop_-_Douglas_Hofstadter.pdf
   - Paperback
@@ -18,4 +17,4 @@ status: none
 date: 2026-01-16 17:36:01-05:00
 updated: 2026-01-18 12:09:49-05:00
 ---
-[![strangeLoop.png](../../Attachments/strangeLoop.png)](../../Attachments/strangeLoop.png)
+[![strangeLoop.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/51e8e19e615358a89d5c42ea89c856445b900265815dd181f6b9b7df83fbe0e2/strangeLoop.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/51e8e19e615358a89d5c42ea89c856445b900265815dd181f6b9b7df83fbe0e2/strangeLoop.png)

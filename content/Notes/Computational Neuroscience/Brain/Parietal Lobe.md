@@ -31,7 +31,7 @@ associated-disorders:
   - Gerstmann syndrome
   - astereognosis
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
 date: 2026-02-22T22:16:38-05:00
 updated: 2026-02-24T15:16:23-05:00
 ---
@@ -40,7 +40,7 @@ The parietal lobe sits between the frontal lobe (anterior) and occipital lobe (p
 
 The primary [[Somatosensory Cortex]] occupies the postcentral gyrus and is somatotopically organized (the homunculus). The posterior parietal cortex (PPC) is more integrative, feeding into the [[Dorsal Pathway]] for visuospatial action.
 
-[![Parietal Lobe.png](../../../Attachments/Parietal%20Lobe.png)](../../../Attachments/Parietal%20Lobe.png)
+[![Parietal Lobe.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6e3eeba4e84fc86a77c6373a7f42d8d32dad3b4f25044f10820a768e770d06ee/Parietal%20Lobe.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6e3eeba4e84fc86a77c6373a7f42d8d32dad3b4f25044f10820a768e770d06ee/Parietal%20Lobe.png)
 
 ## Structure and Function
 

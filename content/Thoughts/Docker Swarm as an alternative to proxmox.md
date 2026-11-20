@@ -2,9 +2,7 @@
 date: 2025-02-12
 updated: 2025-07-26
 tags:
-  - seed
   - projects/homelab/software
-  - cs/homelab
   - projects/homelab/dorm
 title: Docker Swarm as an alternative to proxmox
 ---

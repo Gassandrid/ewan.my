@@ -15,7 +15,7 @@ lesson:
   - lecture
 updated: 2025-09-22
 ---
-[![Muhammad.png](../../../../Attachments/Muhammad.png)](../../../../Attachments/Muhammad.png)
+[![Muhammad.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/360f4357936a344d37796ca9b8677d1afca339c3e7975c7a0d6e73685922c926/Muhammad.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/360f4357936a344d37796ca9b8677d1afca339c3e7975c7a0d6e73685922c926/Muhammad.png)
 
 **Muhammad** (570 - 632 CE) is considered the "last prophet" in Islam.
 

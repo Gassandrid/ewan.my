@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - comp-neuro/brain/receptor
+  - neuro/molecular
   - biology
 source:
 related:

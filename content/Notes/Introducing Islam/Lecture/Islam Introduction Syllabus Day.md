@@ -30,7 +30,7 @@ Every single class has homework. Reading complex arguments, histories, facts; re
 The words we use to talk about religion really matter. **Lots of people**(most American adults, statistically) make big mistakes about word that have to do with Islam.
 
 > [!Abstract] Key Idea
-> **Religion** is what people **do**
+> **[[Defining Religion|Religion]]** is what people **do**
 
 ### What is Islam?
 
@@ -41,9 +41,9 @@ Mostly: one way roughly 2 billion people express their culture, belief history, 
 A key property of this is that everyone values different things at a different scale. There is a nuance.
 
 >[!Abstract] Main Definitions
->  **Islam**: the *religion*
-> **Muslim**: a *person* who follows Islam
-> **[[Allah]]:** the name for *a* God in Arabic
+>  **[[Introducing Islam|Islam]]**: the *religion*
+> **[[Muslim]]**: a *person* who follows Islam
+> **[[Allah]]:** the name for *a* God in [[Arabic]]
 > **[[Qur'an]]:** Islam's holiest text
 
 #### Some Denominations

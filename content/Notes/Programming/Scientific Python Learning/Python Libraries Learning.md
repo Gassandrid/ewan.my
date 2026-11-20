@@ -4,10 +4,8 @@ updated: 2026-05-07T17:38:54-04:00
 title: Python Libraries to Learn
 tags:
   - cs/python
-  - resource/programming
-  - todo/programming
-  - todo/neuro
-  - todo/math
+  - neuro
+  - math
 ---
 
 not really a "learning" file, but a reference for cool toolboxes in python that I should have a look at.

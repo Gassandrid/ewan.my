@@ -35,8 +35,7 @@ associated-disorders:
   - intention tremor
   - dysdiadochokinesia
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
   - comp-neuro
 ---
 

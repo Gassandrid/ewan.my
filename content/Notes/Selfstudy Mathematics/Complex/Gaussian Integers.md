@@ -10,7 +10,7 @@ updated: 2025-08-11
 ---
 Gaussian integers are complex numbers of the form $a + bi$ where both $a$ and $b$ are integers. They form a ring, denoted by $\mathbb{Z}[i]$, which is the set of all Gaussian integers.
 
-[![Screenshot 2025-08-11 at 6.32.00 PM.png](../../../Attachments/Screenshot%202025-08-11%20at%206.32.00%20PM.png)](../../../Attachments/Screenshot%202025-08-11%20at%206.32.00%20PM.png)
+[![Screenshot 2025-08-11 at 6.32.00 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ba10a7e74dc6488fa4b3b590e160c797485b6ef79353035811839ca7c571b3b4/Screenshot%202025-08-11%20at%206.32.00%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ba10a7e74dc6488fa4b3b590e160c797485b6ef79353035811839ca7c571b3b4/Screenshot%202025-08-11%20at%206.32.00%20PM.png)
 
 Not quite a complete ring, as it does not have a multiplicative identity (1 is not in the set). However, it is a subring of the complex numbers $\mathbb{C}$.
 

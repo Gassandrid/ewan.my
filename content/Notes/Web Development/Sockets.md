@@ -15,7 +15,7 @@ In layman terms, **Sockets** serve to enable communication between different **p
 
 Sockets are **endpoints** in a two-way communication channel:
 
-[![Screenshot 2025-04-25 at 1.23.03 PM.png](../../Attachments/Screenshot%202025-04-25%20at%201.23.03%20PM.png)](../../Attachments/Screenshot%202025-04-25%20at%201.23.03%20PM.png)
+[![Screenshot 2025-04-25 at 1.23.03 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d987c07979b62d959b554c682a95a405568284afd510e5dd4dab50442cdeaa0d/Screenshot%202025-04-25%20at%201.23.03%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d987c07979b62d959b554c682a95a405568284afd510e5dd4dab50442cdeaa0d/Screenshot%202025-04-25%20at%201.23.03%20PM.png)
 
 Think of a socket as a software construct that combines both the IP address of a computer and the port number of an application:
 
@@ -33,9 +33,9 @@ The two parties must dial correctly in order to establish a connection.
 
 ---
 
-To understand **Sockets** in context, we need define where they fit inside the **OSI Model**.
+To understand **Sockets** in context, we need define where they fit inside the **[[Computer Networking|OSI Model]]**.
 
-[![Pasted image 20250425155856.png](../../Attachments/Pasted%20image%2020250425155856.png)](../../Attachments/Pasted%20image%2020250425155856.png)
+[![Pasted image 20250425155856.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/de2159abe2566fa481fc97c39e797f72f64783c5ee3e6f99cdd2d70d0485a3d5/Pasted%20image%2020250425155856.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/de2159abe2566fa481fc97c39e797f72f64783c5ee3e6f99cdd2d70d0485a3d5/Pasted%20image%2020250425155856.png)
 
 **Sockets** operate primarily at the **Transport** layer(layer 4 of the model).
 
@@ -47,19 +47,19 @@ The socket then wraps the data into TCP or UDP segments, adds some headers, then
 
 ## TCP/UDP Sockets
 
-There are actually two main kinds of sockets, **TCP** and **UDP**. 
+There are actually two main kinds of sockets, **[[TCP]]** and **[[UDP]]**. 
 
 **TCP**(Transmission control protocol) sockets are *connection oriented*, and provide a reliable, ordered, and error checked transmission. Before data gets sent, a three way handshake is performed to establish a connection, involving an exchange of  SYN and ACK packets. This guarantees that both sides are ready for the transmission.
 
 TCP guarantees that data will be ordered and have a non-duplicated delivery. This makes it ideal for applications like web browsing, database access, or file transfers.
 
-[![Screenshot 2025-04-25 at 4.04.39 PM.png](../../Attachments/Screenshot%202025-04-25%20at%204.04.39%20PM.png)](../../Attachments/Screenshot%202025-04-25%20at%204.04.39%20PM.png)
+[![Screenshot 2025-04-25 at 4.04.39 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e5d9f3b33e640154480c1f4ff94ab7b9f16912703f5c4c7a4fea51e9e0c226ad/Screenshot%202025-04-25%20at%204.04.39%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e5d9f3b33e640154480c1f4ff94ab7b9f16912703f5c4c7a4fea51e9e0c226ad/Screenshot%202025-04-25%20at%204.04.39%20PM.png)
 
 **UDP**(user datagram protocol) on the other hand, is connectionless and unreliable. It goes straight to sending data between the sender and the client without any kind of handshake. There is no way to guarentee to deliver, order, or integrity. 
 
 However, it is much faster than TCP, what it sacrifices in reliability it makes up for in speed. This makes it ideal for real-time applications like video streaming, where speed is a necessity.
 
-[![Screenshot 2025-04-25 at 4.09.12 PM.png](../../Attachments/Screenshot%202025-04-25%20at%204.09.12%20PM.png)](../../Attachments/Screenshot%202025-04-25%20at%204.09.12%20PM.png)
+[![Screenshot 2025-04-25 at 4.09.12 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7c6a337cd232f9ba1ccb28a85e458e253ce58fb88d0a01c699ec5f405092b3cc/Screenshot%202025-04-25%20at%204.09.12%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7c6a337cd232f9ba1ccb28a85e458e253ce58fb88d0a01c699ec5f405092b3cc/Screenshot%202025-04-25%20at%204.09.12%20PM.png)
 
 ---
 
@@ -71,7 +71,7 @@ It starts with the creation of a **listening socket**, which gets bound to a spe
 
 Once A client initiates a connection, the server accepts and creates a new socket instance dedicated to that client. The origional listening socket goes back to listening for requests.
 
-[![Screenshot 2025-04-25 at 4.15.32 PM.png](../../Attachments/Screenshot%202025-04-25%20at%204.15.32%20PM.png)](../../Attachments/Screenshot%202025-04-25%20at%204.15.32%20PM.png) ^475fe5
+[![Screenshot 2025-04-25 at 4.15.32 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e193b8ffe345bddf8706d1f6b17249c5e28de294ac24f1a59457413e853e42cc/Screenshot%202025-04-25%20at%204.15.32%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e193b8ffe345bddf8706d1f6b17249c5e28de294ac24f1a59457413e853e42cc/Screenshot%202025-04-25%20at%204.15.32%20PM.png) ^475fe5
 
 The new socket on the other hand becomes the channel for all communication with that specific client. This enables the server to handle multiple different clients concurrently, each with its own socket. This can be accomplished with multithreading in **synchronous** setups, where each client is handled by a thread or process, however this does not scale well.
 
@@ -85,7 +85,7 @@ After the communication is completed, both the server and client are expected to
 
 Sockets are differentiated by a 5 tuple:
 
-[![Screenshot 2025-04-28 at 3.34.03 PM.png](../../Attachments/Screenshot%202025-04-28%20at%203.34.03%20PM.png)](../../Attachments/Screenshot%202025-04-28%20at%203.34.03%20PM.png)
+[![Screenshot 2025-04-28 at 3.34.03 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0104d54212249c638268786307543c57b8b084d9a6bd9efbc90cb96cfdb18988/Screenshot%202025-04-28%20at%203.34.03%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0104d54212249c638268786307543c57b8b084d9a6bd9efbc90cb96cfdb18988/Screenshot%202025-04-28%20at%203.34.03%20PM.png)
 
 This complexity ensures no duplicate sockets, and allows for two machine to have multiple connections over the same port. (eg, multiple connections on one machine to example.com)
 

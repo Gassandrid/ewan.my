@@ -6,7 +6,6 @@ class:
 tags:
   - math/linear-algebra
   - cs/ai/llm/transformer
-  - todo/cs/ai
 source:
   - "[[Attention in transformers, visually explained - DL6]]"
   - "[[Attention Is All You Need]]"
@@ -35,11 +34,11 @@ This is necessary as right now, these vectors only contain a 1-to-1 corresponden
 
 _this case is a $\mathbb{R}^2$ mapping of the vector space, in practice this is extremely high dimensional embedding_
 
-[![VectorEmbeddingMeaning.png](../../Attachments/VectorEmbeddingMeaning.png)](../../Attachments/VectorEmbeddingMeaning.png)
+[![VectorEmbeddingMeaning.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9109844c49cd1213944f65ea387ceb7d287d8b858fddc8179cef17b8965c98ef/VectorEmbeddingMeaning.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9109844c49cd1213944f65ea387ceb7d287d8b858fddc8179cef17b8965c98ef/VectorEmbeddingMeaning.png)
 
-One might imagine that as the process of **attention** takes place, some "path" is taken into an incrementally more specific and rich context in this high dimensional space.
+One might imagine that as the process of **[[Attention|attention]]** takes place, some "path" is taken into an incrementally more specific and rich context in this high dimensional space.
 
-[![VectorSpaceContextEnrichment.png](../../Attachments/VectorSpaceContextEnrichment.png)](../../Attachments/VectorSpaceContextEnrichment.png)
+[![VectorSpaceContextEnrichment.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ebb6b35419cf3abea23ecc73bdbab6e6397a89b5aa2775786d9919f99f8acb57/VectorSpaceContextEnrichment.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ebb6b35419cf3abea23ecc73bdbab6e6397a89b5aa2775786d9919f99f8acb57/VectorSpaceContextEnrichment.png)
 
 ---
 
@@ -133,7 +132,7 @@ $$
 W_{K} \times \vec{E}_{i} = \vec{K}_{i}
 $$
 
-The next step is quite trivial, we compute how well a key matches with a value by performing a **cosine similarity test**, or in simpler terms, just taking the dot product of the two.
+The next step is quite trivial, we compute how well a key matches with a value by performing a **[[Cosine Similarity|cosine similarity]] test**, or in simpler terms, just taking the dot product of the two.
 
 |       | The                             | quick                           | brown   | fox     | jumps   | over    | the     | lazy    | dog                             |
 | ----- | ------------------------------- | ------------------------------- | :------ | :------ | :------ | :------ | :------ | :------ | ------------------------------- |
@@ -158,7 +157,7 @@ $$
 
 This means that every column will contain a series of values somewhere $0 \leq j \leq  1$, where each column's values will add up to $1$.
 
-What we have essentially created here is a probability distribution for each words' relative importance to every other word.
+What we have essentially created here is a [[Probability Distribution|probability distribution]] for each words' relative importance to every other word.
 
 This is where the final step of the attention block comes in: the **Value Matrix**.
 

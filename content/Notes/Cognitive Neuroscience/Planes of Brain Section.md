@@ -5,7 +5,7 @@ class:
   - note
 tags:
   - university
-  - comp-neuro/brain
+  - neuro
 source:
 related:
 author:
@@ -26,6 +26,6 @@ verticle plane through one hemisphere
 
 veritcla plane through both hemispheres
 
-[![Screenshot 2026-09-02 at 3.48.24 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.48.24%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.48.24%20PM.png)
+[![Screenshot 2026-09-02 at 3.48.24 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4600c65f1fc88acfafe3ad1c4f4f9e642da1162acd4f1a70c55427424a8b0844/Screenshot%202026-09-02%20at%203.48.24%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4600c65f1fc88acfafe3ad1c4f4f9e642da1162acd4f1a70c55427424a8b0844/Screenshot%202026-09-02%20at%203.48.24%20PM.png)
 
-[![Screenshot 2026-09-02 at 3.48.31 PM.png](../../Attachments/Screenshot%202026-09-02%20at%203.48.31%20PM.png)](../../Attachments/Screenshot%202026-09-02%20at%203.48.31%20PM.png)
+[![Screenshot 2026-09-02 at 3.48.31 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/043a941a91d498c67181d6476ca31e700b5412fa51a68e605d11bfceb9627350/Screenshot%202026-09-02%20at%203.48.31%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/043a941a91d498c67181d6476ca31e700b5412fa51a68e605d11bfceb9627350/Screenshot%202026-09-02%20at%203.48.31%20PM.png)

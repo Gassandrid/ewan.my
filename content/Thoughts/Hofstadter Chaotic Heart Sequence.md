@@ -4,7 +4,6 @@ updated: 2026-08-25T15:10:58-07:00
 class:
   - note
 tags:
-  - books/geb
   - math/logic
   - cs/python
 source:

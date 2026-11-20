@@ -79,7 +79,7 @@ plt.show()
 
 One way to approximate the firing rate is through the use of _binning_. This procedure generates an estimate of the firing rate that is a piecewise constant function of time, something of a _histogram_.
 
-Because spike counts can take only integer values, the rates computed by this method will always be integer multiples of $\frac{1}{\Delta t}$, and thus they only take discrete values.
+Because [[Action Potentials|spike]] counts can take only integer values, the rates computed by this method will always be integer multiples of $\frac{1}{\Delta t}$, and thus they only take discrete values.
 
 For this approach, we will use bins of size $\Delta t = 100ms$.
 
@@ -219,9 +219,9 @@ plt.show()
 
 ## Causal Window Function
 
-For biological neurons, however, the firing rate is not symmetric around the spike time. The firing rate is often higher before the spike than after it. This is due to the refractory period of the neuron, which is a period of time after a spike during which the neuron is less likely to fire again.
+For biological neurons, however, the firing rate is not symmetric around the spike time. The firing rate is often higher before the spike than after it. This is due to the [[refractory period]] of the neuron, which is a period of time after a spike during which the neuron is less likely to fire again.
 
-A postsynaptic neuron monitoring the spike train of a presynaptic cell has access only to spikes that have previously occurred. Therefore, an approximation of the firing rate at a given time should use a window function that "vanishes" when its argument is negative. We call this window function a **causal**.
+A [[Postsynaptic Neurons|postsynaptic neuron]] monitoring the spike train of a presynaptic cell has access only to spikes that have previously occurred. Therefore, an approximation of the firing rate at a given time should use a window function that "vanishes" when its argument is negative. We call this window function a **causal**.
 
 For this, we will use one called the $\alpha$ function:
 

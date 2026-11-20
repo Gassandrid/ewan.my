@@ -38,7 +38,7 @@ Where
 	between 0 and infinity
 	
 
-[![Screenshot 2026-01-21 at 4.10.26 PM.png](../../../../Attachments/Screenshot%202026-01-21%20at%204.10.26%20PM.png)](../../../../Attachments/Screenshot%202026-01-21%20at%204.10.26%20PM.png)
+[![Screenshot 2026-01-21 at 4.10.26 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2d6285ebec7b44ded9e0d32d46793bdb8ae9b6670ee129abc82764fc695c4521/Screenshot%202026-01-21%20at%204.10.26%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2d6285ebec7b44ded9e0d32d46793bdb8ae9b6670ee129abc82764fc695c4521/Screenshot%202026-01-21%20at%204.10.26%20PM.png)
 
 This equation yields a "helix" shape, one of the primary shapes that come from a vector function
 

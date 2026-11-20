@@ -34,8 +34,7 @@ associated-disorders:
   - central pontine myelinolysis
   - brainstem stroke
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The pons sits between the midbrain above and medulla below, forming a prominent ventral bulge on the brainstem. It contains the locus coeruleus (primary norepinephrine source), key nuclei for REM sleep, and serves as the major relay for cortical signals destined for the [[Cerebellum]].

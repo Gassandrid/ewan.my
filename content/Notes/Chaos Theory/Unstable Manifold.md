@@ -5,7 +5,7 @@ aliases:
   - Unstable Direction
 tags:
   - university
-  - math/chaos
+  - math/dynamical-systems/chaos
 class:
   - note
 course: "[[Chaos, Fractals, and Dynamical Systems]]"

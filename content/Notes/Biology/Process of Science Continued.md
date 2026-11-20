@@ -69,4 +69,4 @@ This is a classic problem in science. Just because two things are correlated doe
 
 **Causation** means that one event is the result of the occurrence of the other event; there is a cause-and-effect relationship between the two events.
 
-[![CorrelationvCausation.png](../../Attachments/CorrelationvCausation.png)](../../Attachments/CorrelationvCausation.png)
+[![CorrelationvCausation.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b2fbfb460c54b9dcd81c4877aa1d0a9c5db348a34856176a9f202d8bc9885400/CorrelationvCausation.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b2fbfb460c54b9dcd81c4877aa1d0a9c5db348a34856176a9f202d8bc9885400/CorrelationvCausation.png)

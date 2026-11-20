@@ -23,8 +23,8 @@ We will explore the theories, research, and applications of psychology
 to understanding human behavior. We will explore the **five pillars** of  
 psychology: biological, cognitive, developmental, social/personality,  
 and mental health. Specifically, we will learn about psychological  
-research, neuroscience, sensation and perception, consciousness,  
-learning, memory, cognition, language, intelligence, development,  
+research, neuroscience, [[Sensation vs Perception|sensation and perception]], consciousness,  
+learning, [[Notes/Computational Neuroscience/Theory/Memory|memory]], cognition, language, intelligence, development,  
 personality, health psychology, and psychological disorders and their  
-treatment, and social psychology. This course should provide a strong  
-foundation for you to take into other psychology courses at UVM!
+treatment, and [[Social Psychology|social psychology]]. This course should provide a strong  
+foundation for you to take into other psychology courses at [[University Of Vermont|UVM]]!

@@ -2,20 +2,23 @@
 class:
   - note
 tags:
-  - cs/ai/gradient-descent
+  - cs/ai/training/optimization
   - math/probability/stochastic
 source:
   - "[[What the Books Get Wrong about AI (Double Descent)]]"
 related:
 author:
 date: 2025-10-22
-updated: 2025-10-22
+updated: 2026-11-19T20:40:28-05:00
 ---
-**Double Descent** is a fairly recent discovery in the field of machine learning and statistics that challenges traditional notions of model complexity and generalization error. It describes a phenomenon where increasing the complexity of a model beyond a certain point can lead to a decrease in generalization error, resulting in a "double descent" curve when plotting error against model complexity.
+
+**Double Descent** is a fairly recent discovery in the field of [[Machine Learning|machine learning]] and statistics that challenges traditional notions of model complexity and generalization error. It describes a phenomenon where increasing the complexity of a model beyond a certain point can lead to a decrease in generalization error, resulting in a "double descent" curve when plotting error against model complexity.
+
+- usually noted in the context of [[Grokking]] now 
 
 This is particularly interesting, as the models are oftentimes still doing what we consider "overfitting" in traditional statistics(by memorising the noise in the training data), yet they still manage to generalize well to unseen data.
 
-[![doubDescent.png](../../Attachments/doubDescent.png)](../../Attachments/doubDescent.png)
+[![doubDescent.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/51c49f5df955e1eb24bbd94fe0ebc2edd1db66506ef72dc50ea9204655199cf7/doubDescent.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/51c49f5df955e1eb24bbd94fe0ebc2edd1db66506ef72dc50ea9204655199cf7/doubDescent.png)
 
 **Why does Double Descent occur?**
 
@@ -23,4 +26,4 @@ While the exact mechanisms behind Double Descent are still being studied, severa
 
 1. The Role of Interpolation: In the over-parameterized regime, models can perfectly interpolate the training data. However, this interpolation can lead to a form of implicit regularization that helps the model generalize better.
 2. Model Averaging: Over-parameterized models can be seen as ensembles of simpler models, which can lead to better generalization through a form of model averaging.
-3. Implicit Bias of Optimization Algorithms: The optimization algorithms used to train these models (like stochastic gradient descent) may have an implicit bias towards solutions that generalize well, even in the presence of overfitting.
+3. Implicit Bias of Optimization Algorithms: The optimization algorithms used to train these models (like stochastic [[Gradient Descent|gradient descent]]) may have an implicit bias towards solutions that generalize well, even in the presence of overfitting.

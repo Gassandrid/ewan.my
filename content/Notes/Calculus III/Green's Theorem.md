@@ -18,12 +18,12 @@ Let $C$ be a simple closed curve and let $\mathcal{D}$ be the region bounded by 
 > [!Info] Positive Orientation
 > $\mathcal{D}$ is always on your **left** as you traverse the curve
 >
-> [![Screenshot 2024-12-11 at 10.24.17 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2010.24.17%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2010.24.17%20PM.png)
+> [![Screenshot 2024-12-11 at 10.24.17 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1891629c0bfa167d3bd1c73f91cabaff44613c9a6ff42c8b27bdcd7550b29146/Screenshot%202024-12-11%20at%2010.24.17%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1891629c0bfa167d3bd1c73f91cabaff44613c9a6ff42c8b27bdcd7550b29146/Screenshot%202024-12-11%20at%2010.24.17%20PM.png)
 
 > [!danger] Negative Orientation
 > $\mathcal{D}$ is always on your **right** as you traverse the curve
 >
-> [![Screenshot 2024-12-11 at 10.27.26 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2010.27.26%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2010.27.26%20PM.png)
+> [![Screenshot 2024-12-11 at 10.27.26 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/76e0939e6e8a3c8a1c5a89c5577bd2ae28c58d81b8de424f9e071b6732d945ff/Screenshot%202024-12-11%20at%2010.27.26%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/76e0939e6e8a3c8a1c5a89c5577bd2ae28c58d81b8de424f9e071b6732d945ff/Screenshot%202024-12-11%20at%2010.27.26%20PM.png)
 
 ---
 
@@ -85,12 +85,12 @@ The result will follow by linearity of the integral.
 Let $\mathcal{D}$ be a simple region with positively-oriented boundary curve $\partial \mathcal{D}$. Consider the case where we view $\mathcal{D}$ as a Type I region:
 
 > [!Info] Sketch
-> [![Screenshot 2024-12-11 at 11.08.24 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2011.08.24%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2011.08.24%20PM.png)
+> [![Screenshot 2024-12-11 at 11.08.24 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e443a63e5da7e1bd632abea2b7f0e8ca8ad33f905377b8f6ee0b3fcb39b3ec77/Screenshot%202024-12-11%20at%2011.08.24%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e443a63e5da7e1bd632abea2b7f0e8ca8ad33f905377b8f6ee0b3fcb39b3ec77/Screenshot%202024-12-11%20at%2011.08.24%20PM.png)
 >
 > $\mathcal{D}$ as a Type I region
 
 > [!Info] Sketch
-> [![Screenshot 2024-12-11 at 11.09.01 PM.png](../../Attachments/Screenshot%202024-12-11%20at%2011.09.01%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%2011.09.01%20PM.png)
+> [![Screenshot 2024-12-11 at 11.09.01 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9b3727384d8114eeee2e9fcdada71c0f72bbddd03e99bb870eab20fabddb4a62/Screenshot%202024-12-11%20at%2011.09.01%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9b3727384d8114eeee2e9fcdada71c0f72bbddd03e99bb870eab20fabddb4a62/Screenshot%202024-12-11%20at%2011.09.01%20PM.png)
 >
 > $\partial \mathcal{D}$ decomposed into $\partial \mathcal{D} - C_{1} \cup C_{2}$
 

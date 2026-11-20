@@ -34,7 +34,7 @@ The **Lateral Inhibition Primitive** is composed of an assembly of excitatory an
 
 In plain english, this means that any excitatory neuron that gets activated will activate the inhibitory neuron, which then inhibits all other excitatory neurons. This creates a "winner-takes-all" effect where only the most active neuron can respond.
 
-[![LateralInhibition.png](../../../Attachments/LateralInhibition.png)](../../../Attachments/LateralInhibition.png)
+[![LateralInhibition.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c42cfd69cc8af4bab893bd863cb9e8272f04e2744142bf4377b9bd7dd7304cb2/LateralInhibition.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c42cfd69cc8af4bab893bd863cb9e8272f04e2744142bf4377b9bd7dd7304cb2/LateralInhibition.png)
 
 _(B) Lateral inhibition primitive closeup. This cortical assembly is composed of four excitatory cells and one inhibitory cell. As input signals arrive, voltage builds up in the cells based on the number of active inputs and synaptic connections. The most-activated excitatory cell reaches threshold first (1), then activates the local inhibitory cell (2), which inhibits all excitatory cells (3). This creates a "winner-takes-all" effect where only the most active cell can respond._
 

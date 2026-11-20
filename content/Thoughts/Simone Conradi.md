@@ -11,7 +11,6 @@ related:
 description: Quick impressions or key facts
 relationship:
 tags:
-  - people
 source:
   - https://profconradi.github.io/
 date: 2026-08-25T14:43:08-07:00

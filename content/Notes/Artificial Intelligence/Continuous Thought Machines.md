@@ -6,7 +6,6 @@ class:
 tags:
   - cs/ai/temporal
   - math/linear-algebra
-  - todo/comp-neuro
   - comp-neuro
 source:
   - "[[Continuous Thought Machines Paper]]"

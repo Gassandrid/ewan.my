@@ -3,9 +3,8 @@ source: https://optuna.org/
 image: https://www.google.com/s2/favicons?domain=https://optuna.org/&sz=256
 class: website
 tags:
-  - website
   - math/probability/bayesian
-  - cs/ai/hyperparameter
+  - cs/ai/training/hyperparameter
 related:
 status: none
 author:

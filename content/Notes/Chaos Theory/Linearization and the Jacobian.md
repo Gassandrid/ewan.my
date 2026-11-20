@@ -17,7 +17,7 @@ description: how linear maps describe local behavior of nonlinear systems via th
 lecture-number: 7
 updated: 2026-02-03T14:23:20-05:00
 ---
-Linear maps describe **local behavior** of nonlinear systems. Near a fixed point, any smooth map looks linear. The [[Jacobian]] matrix(the derivative of a nonlinear map) is exactly this linear approximation. So understanding how linear maps behave (sinks, sources, saddles) directly tells us how a nonlinear system behaves near its fixed points.
+Linear maps describe **local behavior** of [[Nonlinear|nonlinear]] systems. Near a fixed point, any smooth map looks linear. The [[Jacobian]] matrix(the derivative of a nonlinear map) is exactly this linear approximation. So understanding how linear maps behave (sinks, sources, saddles) directly tells us how a nonlinear system behaves near its fixed points.
 
 This is the bridge between linear and nonlinear dynamics.
 
@@ -27,11 +27,11 @@ This is the bridge between linear and nonlinear dynamics.
 
 We are continuing from [[Sinks, Sources, and Saddles|the previous lecture]] on [[Sinks, Sources, and Saddles#Linear Maps|Linear Maps]]. The key insight: eigenvalues determine everything. They tell us whether a region shrinks, expands, or does both (saddle):
 
-> [![stableUnstableManifolds.png](../../Attachments/stableUnstableManifolds.png)](../../Attachments/stableUnstableManifolds.png)
+> [![stableUnstableManifolds.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b16ac073247fcf0eddbd9cf9d20282899c2eb6ca854c01779f8ebbdfbaa83a4a/stableUnstableManifolds.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b16ac073247fcf0eddbd9cf9d20282899c2eb6ca854c01779f8ebbdfbaa83a4a/stableUnstableManifolds.png)
 >
-> _Starting from $\vec{x}_0 = (2, 0)$, successive iterations climb along the $\lambda_1$ eigenvector direction (unstable manifold). Since $\lambda_1 = \frac{3}{2} > 1$, points expand along this direction. The $\lambda_2$ eigenvector basis forms the stable manifold - points on this line contract toward the origin since $\lambda_2 = \frac{1}{2} < 1$._
+> _Starting from $\vec{x}_0 = (2, 0)$, successive iterations climb along the $\lambda_1$ eigenvector direction ([[Unstable Manifold|unstable manifold]]). Since $\lambda_1 = \frac{3}{2} > 1$, points expand along this direction. The $\lambda_2$ eigenvector basis forms the [[Stable Manifold|stable manifold]] - points on this line contract toward the origin since $\lambda_2 = \frac{1}{2} < 1$._
 
-The Hénon Map has two [[Fixed Point Classification|fixed points]] where we can compute these eigendirections:
+The [[Hénon Map]] has two [[Fixed Point Classification|fixed points]] where we can compute these eigendirections:
 
 $$
 (0,0) \quad \text{and} \quad (-0.6, -0.6)
@@ -128,7 +128,7 @@ $$
 
 ### Why Does This Work?
 
-We will look at uses of the Taylor Series next class, heres a snippet
+We will look at uses of the [[Taylor Series]] next class, heres a snippet
 
 $$
 (in \ \mathbb{R}^1): \quad f(x + h) = f(x) + f'(x)h + f''(x) \frac{h^{2}}{2!} + \dots

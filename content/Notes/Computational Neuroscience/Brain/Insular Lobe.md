@@ -36,8 +36,7 @@ associated-disorders:
   - anxiety disorders
   - eating disorders
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 date: 2026-02-22T19:03:18-08:00
 updated: 2026-05-23T13:05:07-07:00
 ---

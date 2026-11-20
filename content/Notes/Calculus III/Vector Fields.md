@@ -11,7 +11,7 @@ class:
 A **vector field** is a function that associates a point with a vector. An example is Earth's **gravitational field**:
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-04 at 12.07.15 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.07.15%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.07.15%20PM.png)
+> [![Screenshot 2024-11-04 at 12.07.15 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/034f7bd015df317f52e4be66e9e60b0e41dde6ee129fa767675b5082f7a92227/Screenshot%202024-11-04%20at%2012.07.15%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/034f7bd015df317f52e4be66e9e60b0e41dde6ee129fa767675b5082f7a92227/Screenshot%202024-11-04%20at%2012.07.15%20PM.png)
 
 The **Earth** exerts an attractive force on a point-mass located anywhere inthe universe. At every point $P$, wer draw a vector pointing in the direction of the attractive force with length equal to the magnitude of the force.
 
@@ -20,7 +20,7 @@ _(according to Newton, the magnitude of the force is inversely proportional to t
 Vector fields are convenient for problems involving **Flow**. Consider the problem of water flowing through a stream:
 
 > [!Info] Sketch
-> [![Screenshot 2024-11-04 at 12.09.45 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.09.45%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.09.45%20PM.png)
+> [![Screenshot 2024-11-04 at 12.09.45 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d66363b52782925be58b9e1d666c635f88d606cc3d275d5d9790e3b82ab080e5/Screenshot%202024-11-04%20at%2012.09.45%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d66363b52782925be58b9e1d666c635f88d606cc3d275d5d9790e3b82ab080e5/Screenshot%202024-11-04%20at%2012.09.45%20PM.png)
 
 At every point in the stream, we can assign a vector whivh tells use the direction the water is moving. The magnitude of the vector tells us the velocity of the water at that point.
 
@@ -44,20 +44,20 @@ Where $P$ and $Q$ are scalar functions.
 >
 > > [!Info] Sketch
 > >
-> > [![Screenshot 2024-11-04 at 12.15.52 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.15.52%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.15.52%20PM.png)
+> > [![Screenshot 2024-11-04 at 12.15.52 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/53a223565896aebc4080d7fe5d4c7d411d8ac4612f63bc4b70bbb2d8a8e142a4/Screenshot%202024-11-04%20at%2012.15.52%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/53a223565896aebc4080d7fe5d4c7d411d8ac4612f63bc4b70bbb2d8a8e142a4/Screenshot%202024-11-04%20at%2012.15.52%20PM.png)
 >
 > > [!Abstract] Remark
 > >
 > > The initial points of the vector are drawn from the point $(x,y)$; e.g. at $(1,1)$ we draw the vector $\langle 1,1 \rangle$
 
 > [!Warning] Observe
-> The vectors in this field "diverge" from a source, such as the velocity of air in an explosion
+> The vectors in this field "[[Curl and Divergence|diverge]]" from a source, such as the velocity of air in an explosion
 
 > [!Example] Sketch the field $\vec{F} = -y \vec{i}+x \vec{j} =\langle-y,x\rangle$
 >
 > > [!Info] Sketch
 > >
-> > [![Screenshot 2024-11-04 at 12.18.57 PM.png](../../Attachments/Screenshot%202024-11-04%20at%2012.18.57%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%2012.18.57%20PM.png)
+> > [![Screenshot 2024-11-04 at 12.18.57 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ebb644b427e5a81f1997ac49f2da0aa62e75c03c2e51f2d95a9c335b84d50f51/Screenshot%202024-11-04%20at%2012.18.57%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ebb644b427e5a81f1997ac49f2da0aa62e75c03c2e51f2d95a9c335b84d50f51/Screenshot%202024-11-04%20at%2012.18.57%20PM.png)
 >
 > This sketch comes from plotting a few example vectors until we notice that pattern:
 >
@@ -129,7 +129,7 @@ plt.show()
 Recall that $\nabla f = \langle f_{x}, f_{y}, f_{z} \rangle = f_{x} \vec{i} + f_{y} \vec{j} +f_{z} \vec{k}$. Thus, the gradient vector is really a vector field.
 
 > [!Info] Graph
-> [![Screenshot 2024-11-04 at 1.46.19 PM.png](../../Attachments/Screenshot%202024-11-04%20at%201.46.19%20PM.png)](../../Attachments/Screenshot%202024-11-04%20at%201.46.19%20PM.png)
+> [![Screenshot 2024-11-04 at 1.46.19 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8ec5bdecabf0ca8f7fbaff4df4043dc85bf4f14c9f15642651e733abfd0d711b/Screenshot%202024-11-04%20at%201.46.19%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8ec5bdecabf0ca8f7fbaff4df4043dc85bf4f14c9f15642651e733abfd0d711b/Screenshot%202024-11-04%20at%201.46.19%20PM.png)
 
 > [!Example]
 > The gradient vector field for $f(x,y) = x^2y-y^3$, superimposed on the contour map. As we would expect, the gradient vectors are perpendicular to the contours.
@@ -138,4 +138,4 @@ Recall that $\nabla f = \langle f_{x}, f_{y}, f_{z} \rangle = f_{x} \vec{i} + f_
 
 ## Conservative Vector Fields
 
-We say $\vec{F}$ is a **conservative vector field** if $\vec{F} = \nabla f$ for some scalar function $f$. In this context, $f$ is called a **potential function** for $\vec{F}$. Conservative vector fields will be important to us soon...
+We say $\vec{F}$ is a **conservative vector field** if $\vec{F} = \nabla f$ for some scalar function $f$. In this context, $f$ is called a **potential function** for $\vec{F}$. [[Conservative Vector Fields|Conservative vector fields]] will be important to us soon...

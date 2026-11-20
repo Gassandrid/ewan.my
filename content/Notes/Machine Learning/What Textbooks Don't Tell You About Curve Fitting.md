@@ -6,7 +6,6 @@ source: https://www.youtube.com/watch?v=q7seckj1hwM&t=556s
 image: https://i.ytimg.com/vi/q7seckj1hwM/maxresdefault.jpg
 class: video
 tags:
-  - youtube
 related:
   - "[[Linear and Nonlinear Regression]]"
   - "[[Mean Squared Error]]"
@@ -25,7 +24,7 @@ status: done
 > 
 > My name is Artem, I'm a graduate student at NYU Center for Neural Science and researcher at Flatiron Institute.
 > 
-> In this video we dive deep into a probabilistic interpretation behind the core linear regression algorithm from the ground up. We talk about how the least squares objective naturally arises when we try to maximize the probability of observed data under the model, and how the square is a result of assuming Gaussian distribution of the noise in the samples. We also explore how incorporating prior beliefs about the distribution of model parameters leads to different kinds of regularization in objective functions.
+> In this video we dive deep into a probabilistic interpretation behind the core [[Linear and Nonlinear Regression|linear regression]] algorithm from the ground up. We talk about how the [[Mean Squared Error|least squares]] objective naturally arises when we try to maximize the probability of observed data under the model, and how the square is a result of assuming Gaussian distribution of the noise in the samples. We also explore how incorporating prior beliefs about the distribution of model parameters leads to different kinds of regularization in objective functions.
 > 
 > Outline:
 > 00:00 Introduction
@@ -34,8 +33,8 @@ status: done
 > 06:02 Deriving Least Squares
 > 07:46 Sponsor: Squarespace
 > 09:04 Incorporating Priors
-> 12:06 L2 regularization as Gaussian Prior
-> 14:30 L1 regularization as Laplace Prior
+> 12:06 [[Normalization, Regularization, and Gradient Descent for Linear Regression|L2 regularization]] as Gaussian Prior
+> 14:30 L1 regularization as [[Laplace Distribution|Laplace]] Prior
 > 16:16 Putting all together
 
 > [!note]- Transcript (Youtube)

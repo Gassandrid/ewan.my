@@ -21,9 +21,9 @@ A **Kalman Filter** is a tool for incorporating noisy measurements over time to 
 
 A great way to understand the Kalman Filter is to think of it as a [[Hidden Markov Models|hidden Markov model]] where the hidden states evolve over time according to a linear dynamical system, and the observations are noisy measurements of these states.
 
-[![exampleKalmanFilter.png](../../../Attachments/exampleKalmanFilter.png)](../../../Attachments/exampleKalmanFilter.png)
+[![exampleKalmanFilter.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e92a82cd61a7795ef060f53f11cd3c3262ff904402abe022bc2781edc6947487/exampleKalmanFilter.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/e92a82cd61a7795ef060f53f11cd3c3262ff904402abe022bc2781edc6947487/exampleKalmanFilter.png)
 
-*Model underlying the Kalman filter. Squares represent matrices. Ellipses represent [multivariate normal distributions](https://en.wikipedia.org/wiki/Multivariate_normal_distribution "Multivariate normal distribution") (with the mean and covariance matrix enclosed). Unenclosed values are [vectors](https://en.wikipedia.org/wiki/Vector_space "Vector space"). For the simple case, the various matrices are constant with time, and thus the subscripts are not used, but Kalman filtering allows any of them to change each time step.*
+*Model underlying the Kalman filter. Squares represent matrices. Ellipses represent [multivariate normal distributions](https://en.wikipedia.org/wiki/Multivariate_normal_distribution "Multivariate normal distribution") (with the mean and [[Covariance|covariance matrix]] enclosed). Unenclosed values are [vectors](https://en.wikipedia.org/wiki/Vector_space "Vector space"). For the simple case, the various matrices are constant with time, and thus the subscripts are not used, but Kalman filtering allows any of them to change each time step.*
 
 **Where**:
 
@@ -36,7 +36,7 @@ A great way to understand the Kalman Filter is to think of it as a [[Hidden Mark
 
 ## The Kalman Filter Algorithm
 
-[![IntuitionKalmanFilter.png](../../../Attachments/IntuitionKalmanFilter.png)](../../../Attachments/IntuitionKalmanFilter.png)
+[![IntuitionKalmanFilter.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d23966b6a095ec0df0e5d32258f4179ec78efc0df990709e756c9f65a3efbc4d/IntuitionKalmanFilter.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d23966b6a095ec0df0e5d32258f4179ec78efc0df990709e756c9f65a3efbc4d/IntuitionKalmanFilter.png)
 
 The Kalman Filter operates in two stages: **predict** and **update**. At each time step $k$, we maintain an estimate of the state $\hat{\mathbf{x}}_k$ and its uncertainty ([[covariance]]) $\mathbf{P}_k$.
 
@@ -91,7 +91,7 @@ Where:
 
 ### From a Bayesian point of view
 
-The Kalman Filter is the optimal Bayesian filter for linear-Gaussian systems. At each step, we are looking to find:
+The Kalman Filter is the optimal [[Bayesian Inference|Bayesian filter]] for linear-Gaussian systems. At each step, we are looking to find:
 
 $$
 p(\mathbf{x}_k | \mathbf{z}_{1:k}) \propto p(\mathbf{z}_k | \mathbf{x}_k) \cdot p(\mathbf{x}_k | \mathbf{z}_{1:k-1})
@@ -118,7 +118,7 @@ The update equation $\hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + \mathbf
 
 ### Optimality
 
-The Kalman Filter minimizes the **mean squared error** of the state estimate. It is provably optimal for linear systems with Gaussian noise. The covariance matrix $\mathbf{P}_k$ tracks our uncertainty, which typically decreases as we incorporate more measurements.
+The Kalman Filter minimizes the **[[Mean Squared Error|mean squared error]]** of the state estimate. It is provably optimal for [[Linear Systems|linear systems]] with Gaussian noise. The covariance matrix $\mathbf{P}_k$ tracks our uncertainty, which typically decreases as we incorporate more measurements.
 
 ---
 

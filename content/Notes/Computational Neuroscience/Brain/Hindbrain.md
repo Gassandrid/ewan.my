@@ -34,8 +34,7 @@ associated-disorders:
   - respiratory failure
   - brainstem stroke
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 date: 2026-02-22T22:06:55-05:00
 updated: 2026-09-14T10:43:03-04:00
 ---

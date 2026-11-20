@@ -40,7 +40,7 @@ We recorded the following data:
 
 And found the following statistics:
 
-[![BarChartParamecium.png](../../../Attachments/BarChartParamecium.png)](../../../Attachments/BarChartParamecium.png)
+[![BarChartParamecium.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fbc3efe61aee8d772619d843cb5d07c2e65c1fbc318486e327e628fe5ab3297a/BarChartParamecium.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fbc3efe61aee8d772619d843cb5d07c2e65c1fbc318486e327e628fe5ab3297a/BarChartParamecium.png)
 
 ---
 

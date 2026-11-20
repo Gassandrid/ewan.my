@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - healthtrac
+  - projects/HealthTRAC
   - math/waves/signals
 source:
   - https://en.wikipedia.org/wiki/Mel-frequency_cepstrum

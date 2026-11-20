@@ -20,4 +20,4 @@ updated: 2025-09-03
 
 Marids are often described as the most powerful type of jinn, having especially great powers. They are the most arrogant and proud as well. Like every jinn, they have free will. They can become **companions** to humans but it involves battle, imprisonment, rituals, or copious amounts of flattery.
 
-[![Pasted image 20250903123400.png](../../../../Attachments/Pasted%20image%2020250903123400.png)](../../../../Attachments/Pasted%20image%2020250903123400.png)
+[![Pasted image 20250903123400.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/365e05d1f3258e89db919bc36a02da449580c93fd93633f5efdbf33d30e2f2d5/Pasted%20image%2020250903123400.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/365e05d1f3258e89db919bc36a02da449580c93fd93633f5efdbf33d30e2f2d5/Pasted%20image%2020250903123400.png)

@@ -15,7 +15,7 @@ author:
 date: 2025-09-09
 updated: 2025-09-09
 ---
-[![Bipartite.png](../../Attachments/Bipartite.png)](../../Attachments/Bipartite.png)
+[![Bipartite.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cb4e7b48f2859304ef7cd3f93ca03da759d8dc9c826a0bfa16b7933952ef8eee/Bipartite.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cb4e7b48f2859304ef7cd3f93ca03da759d8dc9c826a0bfa16b7933952ef8eee/Bipartite.png)
 
 ## Definition
 

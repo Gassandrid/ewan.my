@@ -11,11 +11,11 @@ related:
 author:
 ---
 
-The **Latent Space** is a broadly used term to describe the high dimensional nature of data representations in machine learning models, particularly in deep learning. It refers to an abstract multi-dimensional space where complex data structures are encoded into simpler, more manageable forms.
+The **Latent Space** is a broadly used term to describe the high dimensional nature of data [[Representation|representations]] in [[Machine Learning|machine learning]] models, particularly in deep learning. It refers to an abstract multi-dimensional space where complex data structures are encoded into simpler, more manageable forms.
 
-[![latentSpaceML.png](../../Attachments/latentSpaceML.png)](../../Attachments/latentSpaceML.png)
+[![latentSpaceML.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f6443f04ed922e6259c6fb84973d117e31423e5da6895a84140b0d9fcbf4a1a3/latentSpaceML.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f6443f04ed922e6259c6fb84973d117e31423e5da6895a84140b0d9fcbf4a1a3/latentSpaceML.png)
 
-A latent space is achieved through techniques such as autoencoders, [[Variational Autoencoder]]s, and generative adversarial networks (GANs). These models learn to compress input data into a lower-dimensional representation (the latent space) and then reconstruct the original data from this representation.
+A latent space is achieved through techniques such as autoencoders, [[Variational Autoencoder]]s, and [[Generative Adversarial Network|generative adversarial networks]] (GANs). These models learn to compress input data into a lower-dimensional representation (the latent space) and then reconstruct the original data from this representation.
 
 Think of it as a feature extraction process, where the model identifies the most important characteristics of the data and represents them in a way that captures the underlying patterns and relationships. This allows for efficient data manipulation, generation, and analysis.
 

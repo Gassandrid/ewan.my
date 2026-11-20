@@ -17,7 +17,7 @@ updated: 2025-08-29
 _How we can study religion without being religious ourselves, or if we are from another religion._
 
 - _descriptive vs prescriptive_
-- _who are muslims + demographics_
+- _who are [[Muslim|muslims]] + demographics_
 - _some historic names and Islamic concepts to note_
 - _looking ahead_
 
@@ -25,7 +25,7 @@ _How we can study religion without being religious ourselves, or if we are from 
 
 ## Descriptive Vs Prescriptive
 
-How do we talk about religion? **Descriptive.** This is for _scholars of religion_ - us! Interpret data, texts, art, etc
+How do we talk about religion? **Descriptive.** This is for _scholars of [[Defining Religion|religion]]_ - us! Interpret data, texts, art, etc
 
 1. We **describe** what we observe
 2. We **do not** assign _value_
@@ -47,7 +47,7 @@ Any time you hear "good muslim", "real muslim", "true muslim", "authentic muslim
 
 ## Who Are Muslims?
 
-[![Pasted image 20250829122950.png](../../../Attachments/Pasted%20image%2020250829122950.png)](../../../Attachments/Pasted%20image%2020250829122950.png)
+[![Pasted image 20250829122950.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f517965b4ae865807814b1e3ad98a97d516f5e985e4b1e58290c66a9e644085f/Pasted%20image%2020250829122950.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f517965b4ae865807814b1e3ad98a97d516f5e985e4b1e58290c66a9e644085f/Pasted%20image%2020250829122950.png)
 
 Some things you might notice from this chart is the that Middle East has a **minority** of the world's muslims. The largest populations are in South Asia (India, Pakistan, Bangladesh) and Indonesia.
 

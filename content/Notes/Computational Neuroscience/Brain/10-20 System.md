@@ -4,7 +4,7 @@ updated: 2026-07-28T18:35:16-07:00
 class:
   - note
 tags:
-  - comp-neuro/equipment/eeg
+  - neuro/methods/eeg
 source:
 related:
 author:
@@ -26,4 +26,4 @@ Primary standardized method for applying patch [[Electrodes]] for [[On Doing EEG
 - numbers corresp to side
 	- even numbers on left on right side, odd on left
 
-[![1020system.png](../../../Attachments/1020system.png)](../../../Attachments/1020system.png)
+[![1020system.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/945f43d699054a6d1c5e859e8d6ba04a539a3cab811fa65a851a52858fe238b2/1020system.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/945f43d699054a6d1c5e859e8d6ba04a539a3cab811fa65a851a52858fe238b2/1020system.png)

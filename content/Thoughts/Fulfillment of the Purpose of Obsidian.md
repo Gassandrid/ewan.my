@@ -4,7 +4,6 @@ updated: 2025-12-15
 class:
   - journal
 tags:
-  - seed
 source:
 related:
 author:
@@ -19,7 +18,7 @@ Since the introduction of [Bases](https://help.obsidian.md/bases), I felt like I
 
 But once I integrated data with the **Obsidian Web Clipper**, it all started to make sense. Suddenly, I was able to truly view my mind like its own database, combining the best of structure from the digital world and chaos from the neural one.
 
-[![baseyoutube.png](../Attachments/screenshotYTBase.png)](../Attachments/screenshotYTBase.png)
+[![baseyoutube.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1187b0243701949aae70dbb9c9e0e4e20df998d33a8f2651c7f34fc63a939e9c/baseyoutube.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/1187b0243701949aae70dbb9c9e0e4e20df998d33a8f2651c7f34fc63a939e9c/baseyoutube.png)
 
 In the context of **youtube videos**, this allowed me to track my self study with fields for which I had watched, and which I had written about ( along with providing a really neat tracker for all the data that comes with it, authors, connections, etc )
 
@@ -29,4 +28,4 @@ Following this, I soon adopted this practice across my entire vault. With the he
 
 As a reference, here is what my graph view looks like at this point in time (including my private notes, which is about 60% of my note volume)
 
-[![Screenshot 2025-09-02 at 11.21.28 AM.png](../Attachments/Screenshot%202025-09-02%20at%2011.21.28%20AM.png)](../Attachments/Screenshot%202025-09-02%20at%2011.21.28%20AM.png)
+[![Screenshot 2025-09-02 at 11.21.28 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/86fe03669a94ddbcd77a5e79fd8ba96de0775fa3826e04eac297295a5d84ac07/Screenshot%202025-09-02%20at%2011.21.28%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/86fe03669a94ddbcd77a5e79fd8ba96de0775fa3826e04eac297295a5d84ac07/Screenshot%202025-09-02%20at%2011.21.28%20AM.png)

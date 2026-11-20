@@ -2,7 +2,6 @@
 class:
   - note
 tags:
-  - books/geb
 source:
   - "[[Gödel, Escher, Bach]]"
 related:

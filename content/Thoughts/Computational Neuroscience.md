@@ -3,7 +3,6 @@ id: Computational Neuroscience
 aliases: []
 tags:
   - comp-neuro
-  - sapling
 date: 2025-01-31
 title: Computational Neuroscience
 updated: 2026-01-16T10:57:35-05:00
@@ -18,11 +17,11 @@ I have always been a computer and math person. I love finding ways to describe t
 
 However, one thing I have never been good at( or had a desire to be good at, for the matter ), is the natural sciences ( excluding physics, which I love ). Biology and chemistry have always been subjects that I have struggled with, and I have never had a desire to learn more about them, even if they are interesting in ways.
 
-But a question that has always intrigued my mind is the puzzle of our own intelligence. I have been pursuing the field of artificial intelligence for a while now, and I have always been perplexed by the idea of creating a machine that can think and learn like a human. But the question that has always been in the back of my mind is, how do we even understand the human brain in the first place? How do we even begin to understand the complexities of the human mind?
+But a question that has always intrigued my mind is the puzzle of our own intelligence. I have been pursuing the field of [[Artificial Intelligence|artificial intelligence]] for a while now, and I have always been perplexed by the idea of creating a machine that can think and learn like a human. But the question that has always been in the back of my mind is, how do we even understand the human brain in the first place? How do we even begin to understand the complexities of the human mind?
 
 For me, this involves investigating a fundamental problem with modern [[Machine Learning]]:
 
-> Would making neural networks more biologically plausible help in acurately modelling the human mind? Is there a funademntal component of human intelligence(say [[Temporal Dynamics]], or neuromodulation) that is missing from current AI systems?
+> Would making [[Neural Networks|neural networks]] more [[Learning Algorithm Of Biological Networks|biologically plausible]] help in acurately modelling the human mind? Is there a funademntal component of human intelligence(say [[Temporal Dynamics]], or [[Neuromodulation|neuromodulation]]) that is missing from current AI systems?
 
 This has always been a neuroscience problem, which, unfortunately, involved a lot of biology and chemistry. And, despite my love for computer science and Artificial Intelligence, I feel as though the field of AI is going in the direction of advanced data science and statistics( which is still very cool! ), rather than the understanding of the human mind.
 

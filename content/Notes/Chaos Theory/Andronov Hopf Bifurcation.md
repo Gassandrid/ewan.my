@@ -4,7 +4,7 @@ class:
   - website
 tags:
   - comp-neuro/theory
-  - math/chaos/bifurcation
+  - math/dynamical-systems/bifurcation
 source:
   - "[[Elegant Geometry of Neural Computations]]"
   - http://www.scholarpedia.org/article/Andronov-Hopf_bifurcation
@@ -140,7 +140,7 @@ with $n_s+n_u+2=n\ .$ According to the [Center Manifold Theorem](http://www.scho
 
 [![](http://www.scholarpedia.org/w/images/thumb/5/58/3DHopf.gif/500px-3DHopf.gif)](http://www.scholarpedia.org/article/File:3DHopf.gif)
 
-Moreover, under the non-degeneracy conditions (AH.1) and (AH.2), the $n$ -dimensional system is locally [topologically equivalent](http://www.scholarpedia.org/article/Topological_Equivalence "Topological Equivalence") near the origin to the suspension of the normal form by the *standard saddle*, i.e.
+Moreover, under the non-degeneracy conditions (AH.1) and (AH.2), the $n$ -dimensional system is locally [topologically equivalent](http://www.scholarpedia.org/article/Topological_Equivalence "Topological Equivalence") near the origin to the suspension of the normal form by the *standard [[Saddle fixed point|saddle]]*, i.e.
 
 $$
 y˙1=βy1−y2+σy1(y21+y22) ,

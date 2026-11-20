@@ -10,7 +10,7 @@ updated: 2025-07-28
 ---
 > **Abstract**
 
-> This document the formal definitions and constructs for 3 primary DFAs/NFAs, with two extra considered for extra credit. We seek to prove that a language is regular by providing a DFA that recognizes it.
+> This document the formal definitions and constructs for 3 primary [[Day 2 - Deterministic Finite Automata|DFAs]]/NFAs, with two extra considered for extra credit. We seek to prove that a language is regular by providing a DFA that recognizes it.
 
 **IMPORTANT NOTE:** My image rendered is currently a bit broken, and will sometimes jump a page(will rewrite myself soon). For now, refer to figure caption to match images to their respective location.
 
@@ -91,7 +91,7 @@ $$
 
 *see figure 1*
 
-[![Screenshot 2025-02-10 at 8.30.33 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.30.33%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.30.33%20PM.png)
+[![Screenshot 2025-02-10 at 8.30.33 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c88b1693bd4c2e827fb338d2b6df36db8c10a316d36a123db309627cb9445171/Screenshot%202025-02-10%20at%208.30.33%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/c88b1693bd4c2e827fb338d2b6df36db8c10a316d36a123db309627cb9445171/Screenshot%202025-02-10%20at%208.30.33%20PM.png)
 
 ---
 
@@ -191,13 +191,13 @@ Original NFA $M$:
 
 *see figure 2*
 
-[![Screenshot 2025-02-10 at 8.30.51 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.30.51%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.30.51%20PM.png)
+[![Screenshot 2025-02-10 at 8.30.51 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/240c489b90f01ed26a33394abc9b10bea746fc2f92aac26af0b9bc3a27ef87ac/Screenshot%202025-02-10%20at%208.30.51%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/240c489b90f01ed26a33394abc9b10bea746fc2f92aac26af0b9bc3a27ef87ac/Screenshot%202025-02-10%20at%208.30.51%20PM.png)
 
 Reversed NFA $M^\mathcal{R}$ with new entry point $q_{new}$
 
 *see figure 3*
 
-[![Screenshot 2025-02-10 at 8.31.04 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.04%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.04%20PM.png)
+[![Screenshot 2025-02-10 at 8.31.04 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dae41d8c0c38b6869379ebf7d22df7f2d833f18a20377824f043ed2aa780f680/Screenshot%202025-02-10%20at%208.31.04%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dae41d8c0c38b6869379ebf7d22df7f2d833f18a20377824f043ed2aa780f680/Screenshot%202025-02-10%20at%208.31.04%20PM.png)
 
 ---
 
@@ -237,7 +237,7 @@ This is a very simple DFA, with only a single state that is both the start and t
 
 *see figure 4*
 
-[![Screenshot 2025-02-10 at 8.32.31 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.32.31%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.32.31%20PM.png)
+[![Screenshot 2025-02-10 at 8.32.31 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3ef378c985dee9e8cedd62815ad7bdda9ccf89621328644b1992dcf9d06637f7/Screenshot%202025-02-10%20at%208.32.31%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3ef378c985dee9e8cedd62815ad7bdda9ccf89621328644b1992dcf9d06637f7/Screenshot%202025-02-10%20at%208.32.31%20PM.png)
 
 #### Case $n=2$
 
@@ -261,7 +261,7 @@ Transitions for these two should be:
 
 *see figure 5*
 
-[![Screenshot 2025-02-10 at 8.32.16 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.32.16%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.32.16%20PM.png)
+[![Screenshot 2025-02-10 at 8.32.16 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/48905f5f0223bf3860e262b5e28d72f890526fd31945e0286e72b886ff21611b/Screenshot%202025-02-10%20at%208.32.16%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/48905f5f0223bf3860e262b5e28d72f890526fd31945e0286e72b886ff21611b/Screenshot%202025-02-10%20at%208.32.16%20PM.png)
 
 ### Case $n=3$
 
@@ -287,7 +287,7 @@ The transitions for these states are as follows:
 
 *see figure 6*
 
-[![Screenshot 2025-02-10 at 8.31.54 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.54%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.54%20PM.png)
+[![Screenshot 2025-02-10 at 8.31.54 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2cf1c9f77e4d91f7ad2b710dc93d44df374eba7f1567ecb2ca70c1a85be11c04/Screenshot%202025-02-10%20at%208.31.54%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2cf1c9f77e4d91f7ad2b710dc93d44df374eba7f1567ecb2ca70c1a85be11c04/Screenshot%202025-02-10%20at%208.31.54%20PM.png)
 
 ### Expanding This out to All case $n \geq 1$
 
@@ -318,7 +318,7 @@ Convert the following NFA to an equivalent DFA. For _subset construction_, foll
 
 *see figure 7*
 
-[![Screenshot 2025-02-10 at 8.31.44 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.44%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.44%20PM.png)
+[![Screenshot 2025-02-10 at 8.31.44 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3f9d0cb178b07a971c981df95f1126b33918f4c9679b46e8bb8f3ee627e179a3/Screenshot%202025-02-10%20at%208.31.44%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3f9d0cb178b07a971c981df95f1126b33918f4c9679b46e8bb8f3ee627e179a3/Screenshot%202025-02-10%20at%208.31.44%20PM.png)
 
 ### Listing Transitions
 
@@ -422,4 +422,4 @@ $$
 
 *see figure 8*
 
-[![Screenshot 2025-02-10 at 8.31.26 PM.png](../../../Attachments/Screenshot%202025-02-10%20at%208.31.26%20PM.png)](../../../Attachments/Screenshot%202025-02-10%20at%208.31.26%20PM.png) 
+[![Screenshot 2025-02-10 at 8.31.26 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cf1e7ea826026092134100dd38beff7ade96747c0f57d0f097db3c7f244c9de2/Screenshot%202025-02-10%20at%208.31.26%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/cf1e7ea826026092134100dd38beff7ade96747c0f57d0f097db3c7f244c9de2/Screenshot%202025-02-10%20at%208.31.26%20PM.png) 

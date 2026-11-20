@@ -22,7 +22,7 @@ $$
  f: \mathbb N \to A.
 $$
 
-Equivalently, $A$ is uncountable if it is not countable (i.e., not finite and not countably infinite). In cardinal notation, this means $|A| > \aleph_0$.
+Equivalently, $A$ is uncountable if it is not countable (i.e., not finite and not [[Countably Infinite|countably infinite]]). In cardinal notation, this means $|A| > \aleph_0$.
 
 Useful equivalent formulations:
 
@@ -31,8 +31,8 @@ Useful equivalent formulations:
 
 ## Canonical Examples
 
-1. The real numbers $\mathbb R$ are uncountable (Cantor’s diagonal argument).
-2. Any non-degenerate interval $(a,b)\subseteq\mathbb R$ is uncountable and in fact has the same cardinality as $\mathbb R$:
+1. The real numbers $\mathbb R$ are uncountable ([[Cantor's diagonal argument|Cantor’s diagonal argument]]).
+2. Any non-degenerate interval $(a,b)\subseteq\mathbb R$ is uncountable and in fact has the same [[Cardinality|cardinality]] as $\mathbb R$:
 
 $$
 |(a,b)| = |\mathbb R| = |(0,1)| =: \mathfrak c.

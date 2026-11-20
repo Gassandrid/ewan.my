@@ -2,7 +2,7 @@
 date: 2026-02-08T15:48:06-05:00
 updated: 2026-09-24T15:35:37-04:00
 tags:
-  - comp-neuro/brain/receptor
+  - neuro/molecular
 class:
   - receptor
   - note

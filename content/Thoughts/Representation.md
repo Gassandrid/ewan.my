@@ -2,6 +2,7 @@
 class:
   - note
 tags:
+  - research
 source:
 related:
 author:

@@ -1,80 +1,46 @@
 ---
-date: 2024-09-12
+class:
+  - note
 tags:
+  - math/sets
   - math/probability/statistics
   - university
-updated: 2025-06-21
+source:
+related:
+  - "[[Complement]]"
+  - "[[Notes/Statistics/Event|Event]]"
+author:
+description: "Taking a complement swaps union and intersection: not (A or B) is neither, not both is at least one missing."
+aliases:
+  - De Morgan's Laws
+  - DeMorgan's Law
+  - De Morgans Law
+  - De Morgan's Law in Detail
+date: 2024-09-12
+updated: 2026-11-20T01:57:53-05:00
 ---
-# De Morgan's Law in Statistics
+- **De Morgan's laws**: taking the [[Complement|complement]] swaps union and intersection
 
-**De Morgan's Laws** are fundamental principles in set theory and probability theory that describe the relationship between the complement of unions and intersections of sets (or events, in the context of probability). They provide a way to simplify complex expressions involving complements, unions, and intersections.
+	$$
+	(A \cup B)^c = A^c \cap B^c \qquad (A \cap B)^c = A^c \cup B^c
 
-## The Laws
 
-Given two events \( A \) and \( B \) in a sample space \( S \), De Morgan's Laws state:
-
-1. **Complement of a Union:**
-   
-  $$ (A \cup B)^c = A^c \cap B^c
-  $$ 
-   - The complement of the union of two events is equal to the intersection of their complements.
-
-2. **Complement of an Intersection:**
-   
-  $$ (A \cap B)^c = A^c \cup B^c
-  $$ 
-   - The complement of the intersection of two events is equal to the union of their complements.
-
-### Intuitive Explanation
-
-- **First Law (Union):** The complement of "either A or B happens" is "neither A nor B happens." In other words, if you want both events **not** to occur, you must exclude both individually.
-- **Second Law (Intersection):** The complement of "both A and B happen" is "either A doesn't happen or B doesn't happen (or both)." So, if you're looking to avoid both events happening, you just need to avoid one of them.
-
-## Example in Probability
-
-### Scenario:
-Consider a standard deck of cards, where:
-- Event \( A \): Drawing a heart (13 hearts in the deck).
-- Event \( B \): Drawing a face card (12 face cards in the deck: J, Q, K of all suits).
-
-#### 1. **Complement of a Union**:
-   - \( A \cup B \): The event of drawing either a heart or a face card.
-   - \( (A \cup B)^c \): The event of drawing neither a heart nor a face card (i.e., drawing a non-heart, non-face card).
-
-   Applying De Morgan’s Law:
-   
-  $$ (A \cup B)^c = A^c \cap B^c
-  $$ 
-   This means the complement of drawing a heart or a face card is equivalent to drawing a card that is both **not a heart** and **not a face card**.
-
-#### 2. **Complement of an Intersection**:
-   - \( A \cap B \): The event of drawing a card that is both a heart and a face card (3 cards: Jack, Queen, and King of hearts).
-   - \( (A \cap B)^c \): The event of **not** drawing a card that is both a heart and a face card.
-
-   Applying De Morgan’s Law:
-   
-  $$ (A \cap B)^c = A^c \cup B^c
-  $$ 
-   This means the complement of drawing both a heart and a face card is equivalent to drawing a card that is either **not a heart** or **not a face card** (or both).
-
-## Application in Probability
-
-De Morgan's Laws are particularly useful for simplifying complex probability problems involving multiple events. For example, in calculating the probability of the complement of a union or intersection, the laws allow us to break down the problem into more manageable pieces.
-
-### Example:
-Given events \( A \) and \( B \), the probability of their complement can be expressed using De Morgan's Laws:
-
-1. **Complement of a Union**:
-   
-  $$ P((A \cup B)^c) = P(A^c \cap B^c)
-  $$ 
-2. **Complement of an Intersection**:
-   
-  $$ P((A \cap B)^c) = P(A^c \cup B^c)
-  $$ 
-
-These laws help transform complicated probability expressions into simpler, more intuitive forms.
-
-## Conclusion
-
-De Morgan’s Laws are vital in probability theory and statistics, as they provide an elegant way to work with complements, unions, and intersections of events. By using these laws, we can simplify and solve problems involving the complement of combined events.
+$$
+	- "not ( $A$ or $B$ )" is "neither": to avoid both you have to miss each one
+	- "not both" is "at least one fails": to avoid the pair you only have to miss one
+	- holds for any finite or infinite collection of [[Notes/Statistics/Event|events]] $A_1, A_2, \dots$: $\left(\bigcup_j A_j\right)^c = \bigcap_j A_j^c$ and $\left(\bigcap_j A_j\right)^c = \bigcup_j A_j^c$
+- in [[Probability|probability]] it turns "none of them" into one minus a union: $P(A^c \cap B^c) = 1 - P(A \cup B)$, then expand the union with inclusion-exclusion
+	- example, one card: $A$ = heart ( 13 ), $B$ = face card ( 12 ), $A \cap B$ = J, Q, K of hearts ( 3 )
+		- neither a heart nor a face card: $1 - \frac{13 + 12 - 3}{52} = \frac{30}{52}$
+		- not the heart face cards: $P(A^c \cup B^c) = 1 - \frac{3}{52} = \frac{49}{52}$
+- the other set laws it sits with
+	- commutative: $A \cup B = B \cup A$, $A \cap B = B \cap A$
+	- associative: $(A \cup B) \cup C = A \cup (B \cup C)$, same for $\cap$
+	- distributive: $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ and $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+- worked example: a power cell has two subcells, each giving 0 to 5 volts independently of the other; the cell works iff the voltages sum to at least 6; record both voltages $(x, y)$
+	- [[Sample Space|sample space]] $S = \{(x, y) : 0 \le x \le 5,\ 0 \le y \le 5\}$, a square, so events are regions
+	- functional: $A = \{(x, y) \in S : x + y \ge 6\}$
+	- equal voltages: $B = \{(x, y) \in S : x = y\}$
+	- first strictly higher: $C = \{(x, y) \in S : x > y\}$
+	- not functional but less than one volt short: $D = \{(x, y) \in S : 5 < x + y < 6\}$
+	- De Morgan: neither functional nor equal is $(A \cup B)^c = A^c \cap B^c = \{x + y < 6,\ x \ne y\}$

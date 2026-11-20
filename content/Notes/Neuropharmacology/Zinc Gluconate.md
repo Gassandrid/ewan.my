@@ -22,8 +22,9 @@ time-of-day:
   - morning
 description:
 tags:
-  - transhumanism/nootropic
-  - health/vitamin/mineral
+  - pharmacology/nootropic
+  - transhumanism
+  - pharmacology/supplement
   - pharmacology/neuro
 related: []
 targets:

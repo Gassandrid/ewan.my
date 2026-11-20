@@ -2,8 +2,7 @@
 class:
   - note
 tags:
-  - todo/neuro
-  - comp-neuro/brain/neurons
+  - neuro/cellular
 source:
   - "[[Place cells - How your brain creates maps of abstract spaces]]"
 related:
@@ -24,6 +23,6 @@ updated: 2026-07-16T12:46:45-07:00
 		- https://www.pnas.org/doi/10.1073/pnas.142105611
 - beyond their navigation use cases, they are also implicated in evaluating future possibilities and for [[Sequence Learning]]/sequential organization so that memories dont overwrite one another.
 
-[![placeVsGrid.png](../../../Attachments/placeVsGrid.png)](../../../Attachments/placeVsGrid.png)
+[![placeVsGrid.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/23f712f8e50224a87cce57fed4e396ed65a7666dddb220586bdc64f76fbfb834/placeVsGrid.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/23f712f8e50224a87cce57fed4e396ed65a7666dddb220586bdc64f76fbfb834/placeVsGrid.png)
 
-[![ratNavigatingPlaceCells.png](../../../Attachments/ratNavigatingPlaceCells.png)](../../../Attachments/ratNavigatingPlaceCells.png)
+[![ratNavigatingPlaceCells.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/57cad167a92fab0dc3c3512bf27eb477a180dc90d8c95ff3b1a9070e705b0660/ratNavigatingPlaceCells.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/57cad167a92fab0dc3c3512bf27eb477a180dc90d8c95ff3b1a9070e705b0660/ratNavigatingPlaceCells.png)

@@ -21,7 +21,7 @@ In plain english, they seek to find a "road" in the feature space that separates
 
 > $H_{1}$ does not separate the classes. $H_{2}$ does, but only with a small margin. $H_{3}$ separates them with the maximal margin.
 >
-> [![SVM.png](../../Attachments/SVM.png)](../../Attachments/SVM.png)
+> [![SVM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0811430e47cdb2fd0a4153515c59b1aa04742ae436a0df122ebaf18c7201e1da/SVM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/0811430e47cdb2fd0a4153515c59b1aa04742ae436a0df122ebaf18c7201e1da/SVM.png)
 
 ---
 
@@ -29,7 +29,7 @@ In plain english, they seek to find a "road" in the feature space that separates
 
 Margins serve to increase the classifier's robustness to noise and improve generalization to unseen data.
 
-[![hardVsSoftMarginSVM.png](../../Attachments/hardVsSoftMarginSVM.png)](../../Attachments/hardVsSoftMarginSVM.png)
+[![hardVsSoftMarginSVM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dd0056b3cb7a367796be78fac8fc90be439fd0a4b2083d3a29f348fa40cc97fc/hardVsSoftMarginSVM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dd0056b3cb7a367796be78fac8fc90be439fd0a4b2083d3a29f348fa40cc97fc/hardVsSoftMarginSVM.png)
 
 Hard margins will strictly impose all instances to be correctly classified, meaning no data points can fall within the margin or on the wrong side of the hyperplane.
 
@@ -41,11 +41,11 @@ Soft margins are more flexible, allowing some data points to be within the margi
 
 ## Nonlinear SVMs
 
-Linear SVMs work very well, however there will always be datasets that are not even close to being linearly separable. To handle such cases, SVMs can be extended to nonlinear decision boundaries using the kernel trick.
+Linear SVMs work very well, however there will always be datasets that are not even close to being linearly separable. To handle such cases, SVMs can be extended to nonlinear decision boundaries using the [[Kernel Trick|kernel trick]].
 
 The trick we use is to "transform" the data and THEN apply a linear SVM in this transformed space. The transformation is done using a kernel function, which computes the inner product of the data points in the transformed space without explicitly performing the transformation.
 
-[![nonLinearSVM.png](../../Attachments/nonLinearSVM.png)](../../Attachments/nonLinearSVM.png)
+[![nonLinearSVM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/08786938e5ccafe6cfc2cdddc5d3856c80e4bce31b839b541fdef4bc1d59f3b3/nonLinearSVM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/08786938e5ccafe6cfc2cdddc5d3856c80e4bce31b839b541fdef4bc1d59f3b3/nonLinearSVM.png)
 
 The classic case as seen above is the squaring, where the transformation is $\phi(x_1, x_2) = (x_1^2, \sqrt{2}x_1x_2, x_2^2)$.
 
@@ -61,7 +61,7 @@ $$
 
 ### Gaussian (RBF) Kernel
 
-Another common transformation is the Gaussian or Radial Basis Function (RBF) kernel, which maps data into an infinite-dimensional space. The RBF kernel is defined as:
+Another common transformation is the Gaussian or [[Radial Basis Function Kernel|Radial Basis Function (RBF) kernel]], which maps data into an infinite-dimensional space. The RBF kernel is defined as:
 
 $$
 K(x_i, x_j) = \exp\left(-\frac{\|x_i - x_j\|^2}{2\sigma^2}\right)
@@ -71,8 +71,8 @@ We use something called "landmarks" to represent the data in this infinite-dimen
 
 ### Other Kernels
 
-**Cosine Similarity Kernel**: for text data, measures the cosine of the angle between two vectors.
+**[[Cosine Similarity]] Kernel**: for text data, measures the cosine of the angle between two vectors.
 
-**Sigmoid Kernel**: resembles the behavior of neural networks, defined as $K(x_i, x_j) = \tanh(\alpha \langle x_i, x_j \rangle + c)$.
+**[[Sigmoid Function|Sigmoid]] Kernel**: resembles the behavior of [[Neural Networks|neural networks]], defined as $K(x_i, x_j) = \tanh(\alpha \langle x_i, x_j \rangle + c)$.
 
 **Chi-Squared Kernel**: often used in image classification tasks, particularly with histogram data.

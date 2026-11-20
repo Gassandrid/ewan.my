@@ -14,12 +14,12 @@ We are looking to test the condition of the **sugar type** and its affct on the 
 
 We learned many relevant points, but these six stand out:
 
-1. Sugar type has a significant influence on the rate of fermentation by yeast (Rivera Flores et al., 2021).
-2. The yeast **Saccharomyces cerevisiae** ferments glucose more rapidly than fructose (Berthels et al., 2004). **Saccharomyces cerevisiae** was a recurrent subject in our sources, and other sources which we did not cite. 
+1. Sugar type has a significant influence on the rate of [[Fermentation Analysis Lab 3|fermentation]] by yeast (Rivera Flores et al., 2021).
+2. The yeast **[[Saccharomyces cerevisiae]]** ferments glucose more rapidly than fructose (Berthels et al., 2004). **Saccharomyces cerevisiae** was a recurrent subject in our sources, and other sources which we did not cite. 
 3. While glucose is the preferred sugar for many yeast strains, some strains can also efficiently ferment other sugars like maltose and sucrose (D’Amore et al., 1989). 
 4. The presence of some sugars occasionally lead to certain byproducts that may inhibit fermentation (Rivera Flores et al., 2021). 
 5. In environments containing both glucose and fructose, **Saccharomyces cerevisiae** often consumes glucose first before utilizing fructose. This preference can sometimes result in "stuck" or incomplete fermentations in industries like winemaking (Berthels et al., 2004). 
-6. The transport of sugars into the yeast cell is a key regulatory step; glucose and fructose, for instance, are transported by the same system (D’Amore et al., 1989).
+6. The transport of sugars into the [[Cell|yeast cell]] is a key regulatory step; glucose and fructose, for instance, are transported by the same system (D’Amore et al., 1989).
 
 Our background research yielded 3[^1][^2][^3] sources, which provided the following relevant information:
 

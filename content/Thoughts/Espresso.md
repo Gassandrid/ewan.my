@@ -4,7 +4,6 @@ class:
 tags:
   - hobbies/coffee
   - journal
-  - seed
 source:
 related:
 author:
@@ -18,7 +17,7 @@ I love the process of "tuning the parameters" of my coffee like descending the g
 
 I have always been a coffee person, but this has made it difficult to just be a "any" coffee drinker. I find myself craving the rich, concentrated flavors of espresso over the more diluted taste of drip coffee. The ritual of pulling a shot, the aroma that fills the room, and the satisfying crema on top all contribute to the experience.
 
-[![coffeInRoom.png](../Attachments/coffeInRoom.png)](../Attachments/coffeInRoom.png)
+[![coffeInRoom.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/162ff5fd8c64b47e12272d2ddbd065976eb23bf69a5b22e78dd2b8177d0de8dd/coffeInRoom.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/162ff5fd8c64b47e12272d2ddbd065976eb23bf69a5b22e78dd2b8177d0de8dd/coffeInRoom.png)
 
 I am not a rich college student by any means, so my setup is a little limited. I had done a lot of research for getting the most bang for my buck, and I am very happy with what I ended up with. For the main machine, I am using a [[Bambino Plus]] from Breville. For the grinder, arguebly much more important, I am using a Baratza [[Encore Esp]]. The bambino would have been a lot, but thanks to my roomate getting a strong bestbuy discount I was able to get both for 200$ each.
 
@@ -26,4 +25,4 @@ However, coffee snobery is so much more than the main machines. There is a whole
 
 _For reference, this is what you can pull when you have a bottomless portafilter:_
 
-[![bottomlessPortafilter.png](../Attachments/bottomlessPortafilter.png)](../Attachments/bottomlessPortafilter.png)
+[![bottomlessPortafilter.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8efb78012896ccd4260f4aec8d49e3d5c9f4ee0283f0d648551f2792be1f519e/bottomlessPortafilter.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8efb78012896ccd4260f4aec8d49e3d5c9f4ee0283f0d648551f2792be1f519e/bottomlessPortafilter.png)

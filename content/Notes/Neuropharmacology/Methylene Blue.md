@@ -31,7 +31,8 @@ source:
 description: controversial but an effective supplement, as long as you dont take too much.
 tags:
   - health
-  - transhumanism/nootropic
+  - pharmacology/nootropic
+  - transhumanism
   - pharmacology/neuro
 related:
 cycle: 5/2

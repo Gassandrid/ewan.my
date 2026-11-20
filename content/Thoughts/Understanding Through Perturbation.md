@@ -4,6 +4,7 @@ class:
 tags:
   - philosophy/epistemology
   - philosophy/cybernetics
+  - research
 source:
 related:
 author:

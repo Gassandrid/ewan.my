@@ -3,7 +3,7 @@ class:
   - note
   - journal
 tags:
-  - cs/homelab/data
+  - projects/homelab/data
   - cs/data-science
   - journal
 source:

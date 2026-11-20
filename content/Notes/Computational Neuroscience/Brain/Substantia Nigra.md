@@ -28,8 +28,7 @@ associated-disorders:
   - Parkinson's disease (SNc degeneration)
   - Lewy body dementia
 tags:
-  - neuroscience
-  - brain-region
+  - neuro/anatomy
 ---
 
 The substantia nigra ("black substance") gets its name from the melanin-pigmented dopaminergic neurons of the pars compacta (SNc). SNc projects dopamine to the [[Basal Ganglia|striatum]], modulating the direct/indirect pathways. The GABAergic pars reticulata (SNr) functions as a primary output nucleus of the basal ganglia, projecting to the thalamus.

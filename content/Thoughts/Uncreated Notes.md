@@ -1,6 +1,5 @@
 ---
 tags:
-  - seed
   - journal/workflow
 date: 2025-07-28
 updated: 2026-09-02T20:25:54-04:00

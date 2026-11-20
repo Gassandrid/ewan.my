@@ -3,7 +3,7 @@ id: Ion Channels
 aliases: []
 tags:
   - biology
-  - comp-neuro/brain
+  - neuro
 date: 2025-04-11
 updated: 2026-02-10T10:52:52-05:00
 class:
@@ -13,9 +13,9 @@ related:
 author:
 description:
 ---
-[![Pasted image 20250411134040.png](../../../Attachments/Pasted%20image%2020250411134040.png)](../../../Attachments/Pasted%20image%2020250411134040.png)
+[![Pasted image 20250411134040.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8fa361e6da3e2e83df0162ea04c003d28c4c9cf1d8da02dd203961d96e260673/Pasted%20image%2020250411134040.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8fa361e6da3e2e83df0162ea04c003d28c4c9cf1d8da02dd203961d96e260673/Pasted%20image%2020250411134040.png)
 
-**Ion Channels** act as the brains of the cell, allowing ions to flow in and out of the cell. They are integral membrane proteins that form pores in the cell membrane, allowing specific ions to pass through. Ion channels are crucial for various cellular processes, including maintaining the resting membrane potential, generating action potentials, and regulating intracellular calcium levels.
+**Ion Channels** act as the brains of the cell, allowing ions to flow in and out of the cell. They are integral membrane proteins that form pores in the cell membrane, allowing specific ions to pass through. Ion channels are crucial for various cellular processes, including maintaining the resting [[Membrane Potential|membrane potential]], generating action potentials, and regulating intracellular calcium levels.
 
 ---
 
@@ -33,11 +33,11 @@ Mechanosensitive channels respond to **physical deformation** of the cell membra
 
 ### Cyclic Nucleotide-Gated
 
-Cyclic nucleotide-gated (CNG) channels open when intracellular **cAMP** or **cGMP** levels rise. Unlike many ion channels, these don't stay permanently open—they're activated by second messenger systems in response to signals like light or smell. CNG channels are essential for **sensory transduction** in vision (where light activates a cascade producing cGMP) and **olfaction** (where odorant binding triggers cAMP production). Their activation allows both Na⁺ and Ca²⁺ influx, initiating neural signaling cascades.
+Cyclic nucleotide-gated (CNG) channels open when intracellular **[[cAMP]]** or **cGMP** levels rise. Unlike many ion channels, these don't stay permanently open—they're activated by second messenger systems in response to signals like light or smell. CNG channels are essential for **sensory transduction** in vision (where light activates a cascade producing cGMP) and **olfaction** (where odorant binding triggers cAMP production). Their activation allows both Na⁺ and Ca²⁺ influx, initiating neural signaling cascades.
 
 ### Voltage-gated
 
-Voltage-gated channels open and close in response to changes in **membrane potential**. These channels contain voltage sensors (specialized protein domains rich in charged residues) that detect the electric field across the membrane. When the membrane depolarizes, voltage sensors undergo conformational changes, opening the gate and allowing ions to flow. Voltage-gated channels exhibit complex **kinetics**:
+Voltage-gated channels open and close in response to changes in **membrane potential**. These channels contain voltage sensors (specialized protein domains rich in charged residues) that detect the electric field across the membrane. When the membrane [[Depolarization|depolarizes]], voltage sensors undergo conformational changes, opening the gate and allowing ions to flow. Voltage-gated channels exhibit complex **[[Hodgkin Huxley Model|kinetics]]**:
 
 - **Activation**: Upon depolarization, channels open with a timescale of ~1ms
 - **Inactivation**: After opening, many channels enter a refractory state where they cannot reopen, lasting 2-3ms. This is crucial for preventing runaway depolarization
@@ -51,11 +51,11 @@ These dynamics shape [[Action Potentials]], allowing rapid depolarization follow
 
 ### Cl⁻ Channels
 
-Chloride channels allow chloride ions to flow across the membrane. When activated, they typically cause **hyperpolarization** of the cell—making the membrane potential more negative and pushing the neuron further from firing threshold. This is the primary mechanism by which fast inhibitory synapses (like GABA$_A$ receptors) suppress neural activity.
+Chloride channels allow chloride ions to flow across the membrane. When activated, they typically cause **[[Hyperpolarization|hyperpolarization]]** of the cell—making the membrane potential more negative and pushing the [[Neuron|neuron]] further from firing threshold. This is the primary mechanism by which fast inhibitory [[Synapses|synapses]] (like GABA$_A$ [[GABA Receptor|receptors]]) suppress neural activity.
 
 ### K⁺ Channels
 
-Potassium channels allow potassium ions to flow out of the cell. Activation drives the membrane potential toward the potassium equilibrium potential (typically around -90mV), causing **hyperpolarization**. Different K⁺ channel subtypes operate on different timescales—some activate quickly (fast outward rectifier), others slowly (delayed rectifier)—allowing them to shape both rapid action potential repolarization and longer-lasting inhibitory effects.
+Potassium channels allow potassium ions to flow out of the cell. Activation drives the membrane potential toward the potassium [[Equilibrium Potential|equilibrium potential]] (typically around -90mV), causing **hyperpolarization**. Different K⁺ channel subtypes operate on different timescales—some activate quickly (fast outward rectifier), others slowly (delayed rectifier)—allowing them to shape both rapid action potential repolarization and longer-lasting inhibitory effects.
 
 ### Na⁺ Channels
 
@@ -63,7 +63,7 @@ Sodium channels are the primary drivers of **action potential depolarization**. 
 
 ### Ca²⁺ Channels
 
-Calcium channels allow calcium ions to flow into the cell, serving multiple critical functions. Unlike Na⁺ channels which primarily depolarize, Ca²⁺ channels trigger **neurotransmitter release** when activated at presynaptic terminals—Ca²⁺ influx couples action potentials to synaptic transmission. Ca²⁺ also acts as a **second messenger**, activating intracellular signaling cascades that modulate gene expression, enzyme activity, and cellular responses. Multiple Ca²⁺ channel subtypes exist (L-type, N-type, P/Q-type, R-type, T-type), differing in voltage sensitivity, activation kinetics, and tissue distribution. T-type channels activate at more negative potentials and help generate pacemaker rhythms in neurons and cardiac cells, while L-type and N-type channels are prominent in synaptic transmission and neuroendocrine secretion.
+Calcium channels allow calcium ions to flow into the cell, serving multiple critical functions. Unlike Na⁺ channels which primarily depolarize, Ca²⁺ channels trigger **[[Neurotransmitters|neurotransmitter]] release** when activated at presynaptic terminals—Ca²⁺ influx couples action potentials to synaptic transmission. Ca²⁺ also acts as a **second messenger**, activating intracellular signaling cascades that modulate gene expression, enzyme activity, and cellular responses. Multiple Ca²⁺ channel subtypes exist (L-type, N-type, P/Q-type, R-type, T-type), differing in voltage sensitivity, activation kinetics, and tissue distribution. T-type channels activate at more negative potentials and help generate pacemaker rhythms in neurons and cardiac cells, while L-type and N-type channels are prominent in synaptic transmission and neuroendocrine secretion.
 
 ---
 
@@ -79,7 +79,7 @@ Some channels use "knock-on" permeation, where ions queue up single-file within 
 
 ## Gating Mechanisms
 
-**Gating** refers to the opening and closing of ion channels through conformational changes. Channels typically contain an **activation gate** (which opens to allow ion flow) and sometimes an **inactivation gate** (which closes independently after activation, creating a refractory period).
+**Gating** refers to the opening and closing of ion channels through conformational changes. Channels typically contain an **activation gate** (which opens to allow ion flow) and sometimes an **inactivation gate** (which closes independently after activation, creating a [[Refractory Period|refractory period]]).
 
 The **ball-and-chain** inactivation model, discovered in voltage-gated channels, describes how a short protein chain (the "ball") swings into the channel pore following activation, physically blocking ion flow. This mechanical blocking is reversible—when the channel returns to its resting state, the ball is released, restoring the ability to activate again.
 
@@ -90,4 +90,4 @@ Different gating mechanisms respond to different stimuli:
 - **Mechanical gating**: Membrane stretch or tension gates the channel
 - **Chemically-gated**: Intracellular signaling molecules (e.g., IP₃, ATP) or metabolic states control gating
 
-Channels also exhibit **temporal dynamics**—the timescales of activation and inactivation vary widely. Fast channels (millisecond timescale) shape action potentials; slower channels (hundreds of milliseconds) contribute to plateau potentials and bursting. These kinetic differences arise from the underlying protein structures and are tunable targets for both natural evolution and pharmacological intervention (many drugs and toxins work by modulating channel gating kinetics).
+Channels also exhibit **[[Temporal Dynamics|temporal dynamics]]**—the timescales of activation and inactivation vary widely. Fast channels (millisecond timescale) shape action potentials; slower channels (hundreds of milliseconds) contribute to plateau potentials and bursting. These kinetic differences arise from the underlying protein structures and are tunable targets for both natural evolution and pharmacological intervention (many drugs and toxins work by modulating channel gating kinetics).

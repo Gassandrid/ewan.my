@@ -1,7 +1,5 @@
 ---
 tags:
-  - projects/homelab
-  - cs/homelab
   - projects/homelab/apartment
 date: 2025-08-27
 updated: 2026-01-18T08:29:05-05:00

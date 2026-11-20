@@ -27,9 +27,9 @@ We start by initializing $\theta$ parameters, usually either zeros or just rando
 
 Then given the gradient of our [[Loss Functions|Loss Function]], we are looking to find the direction of fastest descent. Then we update our parameters in that direction scaled by a learning rate $\eta$. This all comes together in the partial derivative of the loss function with respect to each parameter $\theta_{j}$. If not familiar, I recommend reviewing [[Partial Derivatives]], [[Vector Fields]], and maybe [[14.6 - Directional Derivatives]].
 
-We repeat until convergence $\theta_{j}^{new} \leftarrow \theta_{j}^{old} - \eta \frac{\partial}{\partial \theta_{j}} L(\theta)$. This is called [[Batch Gradient Descent]] since we are using the entire dataset to compute the gradient at each step.
+We repeat until convergence $\theta_{j}^{new} \leftarrow \theta_{j}^{old} - \eta \frac{\partial}{\partial \theta_{j}} L(\theta)$. This is called [[Gradient Descent|Batch Gradient Descent]] since we are using the entire dataset to compute the gradient at each step.
 
-[![partialLossLandscape.png](../../Attachments/partialLossLandscape.png)](../../Attachments/partialLossLandscape.png)
+[![partialLossLandscape.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4dd8583248cb946765cd5d5004918b61df504b27fb2d672b2a70477d8cc3520b/partialLossLandscape.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4dd8583248cb946765cd5d5004918b61df504b27fb2d672b2a70477d8cc3520b/partialLossLandscape.png)
 
 ### Gradient Descent Variations
 
@@ -63,7 +63,7 @@ _Can_ we use a linera model to fit it? Yah, but wont fit well.
 
 How can we fix? We can add powers of features to create a polynomial regression model.
 
-Polynomial regression can fit just about any curve, but be careful of overfitting. Use cross validation to select the right degree of polynomial.
+Polynomial regression can fit just about any curve, but be careful of overfitting. Use [[Cross Validation|cross validation]] to select the right degree of polynomial.
 
 This is what is used in [[Taylor Series]] approximations, but this time for regression. Polynomials in this case will look something like:
 
@@ -75,9 +75,9 @@ $$
 
 ## Regularization
 
-Regularization is a technique used to prevent overfitting in machine learning models by adding a penalty term to the loss function. This penalty discourages the model from fitting the noise in the training data, leading to better generalization on unseen data.
+Regularization is a technique used to prevent overfitting in [[Machine Learning|machine learning]] models by adding a penalty term to the loss function. This penalty discourages the model from fitting the noise in the training data, leading to better generalization on unseen data.
 
-[![regularization.png](../../Attachments/regularization.png)](../../Attachments/regularization.png)
+[![regularization.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/864626eda0cd9ca407b95743e458264b555329015c7ca11987a20f92a6eb769f/regularization.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/864626eda0cd9ca407b95743e458264b555329015c7ca11987a20f92a6eb769f/regularization.png)
 
 Noise is proprtional to model complexity. The more complex the model, the more it can fit noise.
 

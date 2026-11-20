@@ -2,8 +2,6 @@
 date: 2025-06-23
 updated: 2025-06-23
 tags:
-  - seed
-  - junk
 ---
 You might see something of the sort of:
 

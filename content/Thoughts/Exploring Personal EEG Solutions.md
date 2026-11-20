@@ -3,7 +3,7 @@ class:
   - note
 tags:
   - journal
-  - comp-neuro/equipment/eeg
+  - neuro/methods/eeg
 source:
 related:
 author:

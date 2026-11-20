@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - cs/homelab/data
+  - projects/homelab/data
   - cs/data-science
   - transhumanism/longevity/biomarkers
   - projects/homelab/hardware

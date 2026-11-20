@@ -18,10 +18,10 @@ I am going to skip labeling the steps that don't require any submission, so the 
 ## 2. If You Successfully Join a Wireless Network, Typing `iwgetid` in the Terminal Should Display the Network name as Follows.
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 7.54.45 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%207.54.45%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%207.54.45%20PM.png)
+> [![Screenshot 2024-09-19 at 7.54.45 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bbb4b08ae383c96d721acb1cde5a75579874cc9ee293b5874e49597b4db2e538/Screenshot%202024-09-19%20at%207.54.45%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/bbb4b08ae383c96d721acb1cde5a75579874cc9ee293b5874e49597b4db2e538/Screenshot%202024-09-19%20at%207.54.45%20PM.png)
 
 **Some Caveats:**
-My Pi did not support **md4** hashing due to its age, so I opted to use **Sha256** instead.
+My Pi did not support **md4** [[hashing]] due to its age, so I opted to use **Sha256** instead.
 
 c19d40e797a1db3e0daa39fda6df3740bdc9b07b91b1989b16c67bbb699aaa7a
 
@@ -37,21 +37,21 @@ c19d40e797a1db3e0daa39fda6df3740bdc9b07b91b1989b16c67bbb699aaa7a
 ## 5. Hostname of the Pi, Displaying it via the `hostname` Command.
 
 >[!Info] Screenshot
->[![Screenshot 2024-09-19 at 9.04.04 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.04.04%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.04.04%20PM.png)
+>[![Screenshot 2024-09-19 at 9.04.04 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8346ffad40bc529eff4ebb1cd0a75845cfad39e9891685758872db2f5256786e/Screenshot%202024-09-19%20at%209.04.04%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8346ffad40bc529eff4ebb1cd0a75845cfad39e9891685758872db2f5256786e/Screenshot%202024-09-19%20at%209.04.04%20PM.png)
 
 ---
 
 ## 6. IP Address of the Pi, Displaying it via the `hostname -I` Command.
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.04.56 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.04.56%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.04.56%20PM.png)
+> [![Screenshot 2024-09-19 at 9.04.56 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5beee41a64bfc4147d30fc51d2faf25423d19f69db1e7a30e472269937a7996b/Screenshot%202024-09-19%20at%209.04.56%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5beee41a64bfc4147d30fc51d2faf25423d19f69db1e7a30e472269937a7996b/Screenshot%202024-09-19%20at%209.04.56%20PM.png)
 
 ---
 
 ## 7. Output of the Command: `df -T`
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.06.12 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.06.12%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.06.12%20PM.png)
+> [![Screenshot 2024-09-19 at 9.06.12 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/35345e7d568afc3bac4a953bea504f573d9be0d2d2c773e106bfba5a9ee9ec4a/Screenshot%202024-09-19%20at%209.06.12%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/35345e7d568afc3bac4a953bea504f573d9be0d2d2c773e106bfba5a9ee9ec4a/Screenshot%202024-09-19%20at%209.06.12%20PM.png)
 
 ---
 
@@ -67,14 +67,14 @@ From the following screenshot, we can determine that the file system type for th
 ## 9. Confirmation Message that Appears after Expanding the File System to Use the Entire microSD Card
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.11.09 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.11.09%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.11.09%20PM.png)
+> [![Screenshot 2024-09-19 at 9.11.09 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/205786053c422dde3adae570b52d999ee3057d13da6b1b2b6fd377e4a002c418/Screenshot%202024-09-19%20at%209.11.09%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/205786053c422dde3adae570b52d999ee3057d13da6b1b2b6fd377e4a002c418/Screenshot%202024-09-19%20at%209.11.09%20PM.png)
 
 ---
 
 ## 10. Use the `ping` Command to Ping the IP Address of UVM's home Page
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.14.15 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.14.15%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.14.15%20PM.png)
+> [![Screenshot 2024-09-19 at 9.14.15 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2a22ba5bfdf4361f6555ea299150db5658a27f2a512c45aeb1cf6533b6316b8b/Screenshot%202024-09-19%20at%209.14.15%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/2a22ba5bfdf4361f6555ea299150db5658a27f2a512c45aeb1cf6533b6316b8b/Screenshot%202024-09-19%20at%209.14.15%20PM.png)
 
 ---
 
@@ -104,7 +104,7 @@ Therefore, the average was **17.33**ms
 Unfortunately my terminal emulator didn't support **nano** through ssh, so I was forced to use apple terminal! Oh No!
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.25.23 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.25.23%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.25.23%20PM.png)
+> [![Screenshot 2024-09-19 at 9.25.23 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9d49a036e79cec5fb972ce03ec9ca8b5188515ecdd2866455d60ac315944c682/Screenshot%202024-09-19%20at%209.25.23%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9d49a036e79cec5fb972ce03ec9ca8b5188515ecdd2866455d60ac315944c682/Screenshot%202024-09-19%20at%209.25.23%20PM.png)
 
 ---
 
@@ -122,12 +122,12 @@ There were other ways to achieve this in the documentation, but I always prefer 
 - `your_name`, with sudo privileges
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.30.21 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.30.21%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.30.21%20PM.png)
+> [![Screenshot 2024-09-19 at 9.30.21 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4bf0ebff70550f03146d0146cc7f3c9338824bcc3a4ddd6fda8df986ee38f231/Screenshot%202024-09-19%20at%209.30.21%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4bf0ebff70550f03146d0146cc7f3c9338824bcc3a4ddd6fda8df986ee38f231/Screenshot%202024-09-19%20at%209.30.21%20PM.png)
 
 - `user1`, without sudo privileges
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.31.55 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.31.55%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.31.55%20PM.png)
+> [![Screenshot 2024-09-19 at 9.31.55 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/256670c8be346547b075131a2fb0aa8d68bfbec5ea20ce09a6c9038837c087b2/Screenshot%202024-09-19%20at%209.31.55%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/256670c8be346547b075131a2fb0aa8d68bfbec5ea20ce09a6c9038837c087b2/Screenshot%202024-09-19%20at%209.31.55%20PM.png)
 
 ---
 
@@ -136,14 +136,14 @@ There were other ways to achieve this in the documentation, but I always prefer 
 Since I already daily drive Vim on my own setup, I went ahead and installed my Vim Dotfile Configuration onto my Pi.
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.39.20 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.39.20%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.39.20%20PM.png)
+> [![Screenshot 2024-09-19 at 9.39.20 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/407d49c3913ac22301d59406f046910fccd4651fe24e6c611e05e6dbf5f5fcf5/Screenshot%202024-09-19%20at%209.39.20%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/407d49c3913ac22301d59406f046910fccd4651fe24e6c611e05e6dbf5f5fcf5/Screenshot%202024-09-19%20at%209.39.20%20PM.png)
 
 ---
 
 ## 17. Create a Directory Called `lab01` Using the `mkdir` Command, and Use the `mv` Command to Move `hello2.py` into It.
 
 >[!Info] Screenshot
-> [![Screenshot 2024-09-19 at 9.41.07 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.41.07%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.41.07%20PM.png)
+> [![Screenshot 2024-09-19 at 9.41.07 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b6575ea35f226ee268878bb12fcc7dc2e8b2fa70ba52cbb1d1250e1a03e21ff/Screenshot%202024-09-19%20at%209.41.07%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6b6575ea35f226ee268878bb12fcc7dc2e8b2fa70ba52cbb1d1250e1a03e21ff/Screenshot%202024-09-19%20at%209.41.07%20PM.png)
 
 ---
 
@@ -157,4 +157,4 @@ Since I already daily drive Vim on my own setup, I went ahead and installed my V
 ## 19. Install Any Recent Updates to Your Raspberry Pi OS Distribution via `sudo apt update` and then `sudo apt upgrade`
 
 >[!Info] 
-> Screenshot[![Screenshot 2024-09-19 at 9.43.08 PM.png](../../../Attachments/Screenshot%202024-09-19%20at%209.43.08%20PM.png)](../../../Attachments/Screenshot%202024-09-19%20at%209.43.08%20PM.png)
+> Screenshot[![Screenshot 2024-09-19 at 9.43.08 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/315619d367865cd173dae5631cafbb37d8c215c38264d1ed659325ac67ead757/Screenshot%202024-09-19%20at%209.43.08%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/315619d367865cd173dae5631cafbb37d8c215c38264d1ed659325ac67ead757/Screenshot%202024-09-19%20at%209.43.08%20PM.png)

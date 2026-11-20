@@ -5,7 +5,7 @@ tags:
   - cs/theory/algorithms
 updated: 2025-09-22
 ---
-Dijkstra's algorithm is a popular **graph traversal algorithm** used to find the shortest path between nodes in a weighted graph. Developed by Edsger W. Dijkstra in 1956, it’s an efficient solution for finding the shortest path from a single source to all other nodes.
+Dijkstra's algorithm is a popular **graph traversal algorithm** used to find the shortest path between nodes in a weighted [[Graphs|graph]]. Developed by [[Edsger W. Dijkstra]] in 1956, it’s an efficient solution for finding the shortest path from a single source to all other nodes.
 
 ## Overview
 
@@ -21,7 +21,7 @@ Dijkstra’s algorithm uses the following:
 ## Algorithm Steps
 
 1. Initialize distances to all vertices as infinity, except the source vertex $s$ which is set to 0.
-2. Add all vertices to a **priority queue** (often a min-heap) where they are prioritized by distance.
+2. Add all vertices to a **[[Priority Queue|priority queue]]** (often a min-heap) where they are prioritized by distance.
 3. While the queue is not empty:
     - Extract the vertex $u$ with the minimum distance.
     - For each neighbor $v$ of $u$:
@@ -92,5 +92,5 @@ Starting from $A$, Dijkstra’s algorithm finds the shortest paths to other node
 
 ## Complexity
 
-- **Time Complexity**: $O((V + E) \log V)$ when implemented with a binary heap.
+- **[[Complexity|Time Complexity]]**: $O((V + E) \log V)$ when implemented with a binary heap.
 - **Space Complexity**: $O(V)$ , as we store distances and a priority queue for each vertex.

@@ -4,7 +4,6 @@ updated: 2026-07-22T15:59:52-07:00
 tags:
   - cs/python
   - cs/ai/speech
-  - seed
   - projects/aletheia
 class:
   - note

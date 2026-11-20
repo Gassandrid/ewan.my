@@ -25,7 +25,8 @@ cycle: 28d/6-12mo
 description:
 tags:
   - health
-  - transhumanism/nootropic
+  - pharmacology/nootropic
+  - transhumanism
   - pharmacology/neuro
 related: []
 targets:

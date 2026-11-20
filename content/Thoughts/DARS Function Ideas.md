@@ -4,7 +4,7 @@ tags:
 date: 2024-11-25
 updated: 2025-06-20
 ---
-Since DARS is a raspberry pi and ESP 32 project, a lot of the commands are going to be focused on room control devices and features. However, I think it would be nice to implement some software features in addition.
+Since [[DARS]] is a [[Raspberry Pi 3 with microphone|raspberry pi]] and [ESP 32](https://www.espressif.com/en/products/socs/esp32) project, a lot of the commands are going to be focused on room control devices and features. However, I think it would be nice to implement some software features in addition.
 
 ## Hardware Functions
 
@@ -14,11 +14,11 @@ These will be functions that are routed from the Pi to the master ESP-32, which 
 
 ## Software Functions
 
-These will mostly be API-based, and offer utility similar to that of modern home assitants.
+These will mostly be API-based, and offer utility similar to that of modern [[Home Assistant|home assitants]].
 
 ### Mock Database / Entry Logs
 
-Using the onboard hardrive, I think a cool feature would be for the user to ask DARS to make a data log of some kind, where they are asked to name it, and then can provide content for which the language model can decide how to populate it. This entry can then be called at any time, where the name of the log ( and also the date ) can be called to find the information. 
+Using the onboard hardrive, I think a cool feature would be for the user to ask DARS to make a data log of some kind, where they are asked to name it, and then can provide content for which the [[Large Language Model|language model]] can decide how to populate it. This entry can then be called at any time, where the name of the log ( and also the date ) can be called to find the information. 
 
 This goes beyond just a journal, as the user could ask DARS to populate the log with a list of event ideas which the LLM would be left to come up with.
 

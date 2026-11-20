@@ -20,18 +20,18 @@ class:
 > Textbook Exercise 17 in Chapter 4. In your answer, write:
 >
 > 1. the pseudocode of an executable algorithm
-> 2. the analysis of the running time complexity
+> 2. the analysis of the [[Complexity|running time complexity]]
 > 3. proof of the optimality of the algorithm
 >
 > Your algorithm, CircIntvlSched, can call IntvlSched shown below if and as needed. Consider the implementation of IntvlSched that has the running time complexity O(n logn). The proof of optimality is trivial from the optimality of IntvlSched; consider the optimality of IntvlSched already proven.
 
-[![Screenshot 2025-09-26 at 1.52.55 PM.png](../../../Attachments/Screenshot%202025-09-26%20at%201.52.55%20PM.png)](../../../Attachments/Screenshot%202025-09-26%20at%201.52.55%20PM.png)
+[![Screenshot 2025-09-26 at 1.52.55 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a1898fdf7e0d1830cd31fe98de7796823f4a84f61470d425403494eac4178a39/Screenshot%202025-09-26%20at%201.52.55%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a1898fdf7e0d1830cd31fe98de7796823f4a84f61470d425403494eac4178a39/Screenshot%202025-09-26%20at%201.52.55%20PM.png)
 
 ### Pseudocode
 
 See _Figure 2_ below(may be on another page). Created using the _LaTeX_ packages **algorithm**, **algpseudocode**, and **amsmath**.
 
-[![algohw3pseudocode.png](../../../Attachments/algohw3pseudocode.png)](../../../Attachments/algohw3pseudocode.png)
+[![algohw3pseudocode.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9b004f5bc1cb401d9239e2fc9902bd8a0e7d19754125bba1eda9c23f881bfdcf/algohw3pseudocode.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/9b004f5bc1cb401d9239e2fc9902bd8a0e7d19754125bba1eda9c23f881bfdcf/algohw3pseudocode.png)
 
 ### Time Complexity
 
@@ -73,7 +73,7 @@ This means that the return set on this anchor is at least $|OP_{a} + 1| = |OP|$,
 >
 > For each of these three greedy strategies, either prove or disprove if it is an optimal greedy strategy. If you want to prove it, use a proof technique of your choice (e.g., induction, contradiction, construction) and name the used proof technique at the beginning of the proof. If you want to disprove it, it suffices to provide a counterexample and state what the greedy strategy finds as a solution and what a true optimal solution is. For simplicity, your counterexample should contain as few lectures as you can find. Hint: remember we used a structural bound called “depth”, which denotes the largest number of intervals overlapping at any time.
 >
->  [![Screenshot 2025-09-26 at 4.53.42 PM.png](../../../Attachments/Screenshot%202025-09-26%20at%204.53.42%20PM.png)](../../../Attachments/Screenshot%202025-09-26%20at%204.53.42%20PM.png)
+>  [![Screenshot 2025-09-26 at 4.53.42 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4136cac0bf3ed924f8fa2367e5cf3cdcb04375d5b6ce77489f5c618794ecf927/Screenshot%202025-09-26%20at%204.53.42%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4136cac0bf3ed924f8fa2367e5cf3cdcb04375d5b6ce77489f5c618794ecf927/Screenshot%202025-09-26%20at%204.53.42%20PM.png)
 
 ### Earliest Finish time First
 

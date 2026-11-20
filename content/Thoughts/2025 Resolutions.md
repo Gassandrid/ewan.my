@@ -3,7 +3,6 @@ date: 2024-12-24
 updated: 2025-07-26
 title: 2025 Resolutions
 tags:
-  - seed
 ---
 While it isn't exactly the new year yet, I thought I might get ahead and start brainstorming my resolutions for how I will approach the upcoming year.
 
@@ -47,20 +46,20 @@ I am very happy that I started working out when I did, but 2025 is the time to t
 
 ## Projects, Passion, and Career
 
-This comes down to what I love to do, whether that be engineering, computer science, or mathematics. This can be for either my own hobby stuff, or for advancing myself in my capabilities.
+This comes down to what I love to do, whether that be engineering, computer science, or [[Mathematics|mathematics]]. This can be for either my own hobby stuff, or for advancing myself in my capabilities.
 
 ### 3D Printing
 
-I want to get into 3d printing for the sole reason that I am more of an engineer at heart than a software developer. I love computer science, but not for the idea of making software, and instead for solving problems in the way that they are most often presented to me. By getting into 3d printing I will finally be able to make good on a lot of my personal project promises, and also learn a lot about working with cad and design in the process.
+I want to get into [[3d Printing|3d printing]] for the sole reason that I am more of an engineer at heart than a software developer. I love computer science, but not for the idea of making software, and instead for solving problems in the way that they are most often presented to me. By getting into 3d printing I will finally be able to make good on a lot of my personal project promises, and also learn a lot about working with cad and design in the process.
 
 I also want this to tie into my work with embedded engineering and server work. In the future, I plan to use all of these for projects of mine like a full overhaul of the interior of my car, or maybe a sprinter van in the future!
 
 ### The Math Behind AI
 
-I am already at a point where I am fairly confident working with libraries like TensorFlow and PyTorch, and understand what is going on from a very top down perspective. However,, I want to spend this year focusing on the core underlying principles of machine learning, meaning pairing a strong understanding of linear algebra with back propagation calculus and some data science.
+I am already at a point where I am fairly confident working with libraries like TensorFlow and PyTorch, and understand what is going on from a very top down perspective. However,, I want to spend this year focusing on the core underlying principles of [[Machine Learning|machine learning]], meaning pairing a strong understanding of linear algebra with back propagation calculus and some data science.
 
 ## Computational Neuroscience
 
-I am sure that this is not only where the field of Machine Learning is heading, but also where I am as well. I firmly believe the key to advancing the field of Artificial Intelligence is to better understand the human mind, and I want to work on that problem using my skills with computer science. Computational Neuroscience seems like the perfect intersection of that, and I will thus be investing my time in 2025 into learning this field.
+I am sure that this is not only where the field of Machine Learning is heading, but also where I am as well. I firmly believe the key to advancing the field of [[Artificial Intelligence]] is to better understand the human mind, and I want to work on that problem using my skills with computer science. [[Computational Neuroscience]] seems like the perfect intersection of that, and I will thus be investing my time in 2025 into learning this field.
 
 	

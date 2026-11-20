@@ -3,7 +3,7 @@ id: Neuron
 aliases:
 tags:
   - biology
-  - comp-neuro/brain
+  - neuro
 date: 2025-03-25
 title: Neuron
 updated: 2026-03-13T14:58:40-07:00
@@ -20,7 +20,7 @@ In biology, a neuron serves as the basic building block of the nervous system. I
 	- this discrete spike propagates through the [[Axons|axon]] and is recieved by [[Synapses|synaptic terminals]] on other neurons.
 - after an [[Action Potentials|Action Potential]] the neuron will have a [[Refractory Period]] in which it cannot fire again.
 
-[![biologicalNeuron.png](../../../Attachments/biologicalNeuron.png)](../../../Attachments/biologicalNeuron.png)
+[![biologicalNeuron.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8372a666e2844788106bf9d533c70d87e7632628f2dbeb694f113fac15ffef9a/biologicalNeuron.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8372a666e2844788106bf9d533c70d87e7632628f2dbeb694f113fac15ffef9a/biologicalNeuron.png)
 
 Where in machine learning we would have thought of the connections between neurons as weights, in biology these connections are called [[Synapses]]. These synapses are the points of communication between neurons, where electrical signals are transmitted from one neuron to another. The strength of these connections can change over time, allowing for learning and [[Memory Formation]].
 

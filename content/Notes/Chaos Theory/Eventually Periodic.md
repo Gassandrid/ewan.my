@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - math/chaos/periods
+  - math/dynamical-systems/periodic
   - university
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 source:

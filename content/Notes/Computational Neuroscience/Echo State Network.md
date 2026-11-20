@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - cs/ai/recurrent/reservoir
+  - cs/ai/architecture/recurrent
   - comp-neuro/models
 source:
 related:
@@ -22,4 +22,4 @@ updated: 2026-10-07T15:06:07-04:00
 - [[Brain Computer Interfaces]] use these a lot for decoders, as they are great for low latency real time processing as only the linear readout layer is trained
 - [[FlyWire|Drosophila Connectome]] simulations that you see everywhere often use these.
 
-[![echoStateNetwork.png](../../Attachments/echoStateNetwork.png)](../../Attachments/echoStateNetwork.png)
+[![echoStateNetwork.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/861a24299af5b95382bfd58a0c2fa8cc9189544875d3f8bd367e30028f8a5320/echoStateNetwork.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/861a24299af5b95382bfd58a0c2fa8cc9189544875d3f8bd367e30028f8a5320/echoStateNetwork.png)

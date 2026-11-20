@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - cs/ai/activation
+  - cs/ai/architecture/layers
 source:
 related:
 author:

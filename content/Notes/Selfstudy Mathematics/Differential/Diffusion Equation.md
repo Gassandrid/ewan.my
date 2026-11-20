@@ -3,7 +3,6 @@ class:
   - note
 tags:
   - math/calculus/differential/pde
-  - working/math
   - math/probability/stochastic
 source:
 related:

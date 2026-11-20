@@ -22,7 +22,7 @@ Neural intergrators are actually [[Attractor Network#Line, Ring, and Plane Attra
 
 > These networks are called 'integrators' because the low-dimensional variable (e.g., horizontal eye position) x(t) describing the network's output reflects the integration of the input signal (e.g., eye movement velocity) v(t) to the system.
 
-[![IntegratorNeuroOculomotor.png](../../../Attachments/IntegratorNeuroOculomotor.png)](../../../Attachments/IntegratorNeuroOculomotor.png)
+[![IntegratorNeuroOculomotor.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4a91729f4aa9eb76f1159e775302839edb4e1434a9b59344c7cf6833975d29fb/IntegratorNeuroOculomotor.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4a91729f4aa9eb76f1159e775302839edb4e1434a9b59344c7cf6833975d29fb/IntegratorNeuroOculomotor.png)
 
 ---
 

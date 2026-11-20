@@ -51,7 +51,7 @@ As a one-man army, I have to say team collaboration has never been better! We al
 
 I just ended up making a new Gantt chart for all the stuff I have left to do, including the new Llama 3.2 experimentation.
 
-[![Screenshot 2024-10-25 at 11.09.30 PM.png](../../../Attachments/Screenshot%202024-10-25%20at%2011.09.30%20PM.png)](../../../Attachments/Screenshot%202024-10-25%20at%2011.09.30%20PM.png)
+[![Screenshot 2024-10-25 at 11.09.30 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b27e804228c73c8d12e0290d2539c6acadc4fc7325c00e2cace856fbcc548f02/Screenshot%202024-10-25%20at%2011.09.30%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b27e804228c73c8d12e0290d2539c6acadc4fc7325c00e2cace856fbcc548f02/Screenshot%202024-10-25%20at%2011.09.30%20PM.png)
 
 ---
 
@@ -59,7 +59,7 @@ I just ended up making a new Gantt chart for all the stuff I have left to do, in
 
 I don't have much hardware set up, but here's the coral TPU( one of them ) properly up with the pi. There are two options for TPU which I have, and I am experimenting with both of them.
 
-[![Screenshot 2024-10-25 at 10.04.34 PM.png](../../../Attachments/Screenshot%202024-10-25%20at%2010.04.34%20PM.png)](../../../Attachments/Screenshot%202024-10-25%20at%2010.04.34%20PM.png)
+[![Screenshot 2024-10-25 at 10.04.34 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/383b87e6feaa38cc0bcffa3501065dba4f3355d3c72f4333ce729313e4efa9a9/Screenshot%202024-10-25%20at%2010.04.34%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/383b87e6feaa38cc0bcffa3501065dba4f3355d3c72f4333ce729313e4efa9a9/Screenshot%202024-10-25%20at%2010.04.34%20PM.png)
 
 ---
 

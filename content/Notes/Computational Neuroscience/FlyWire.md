@@ -5,8 +5,7 @@ class:
   - website
   - note
 tags:
-  - website
-  - comp-neuro/brain
+  - neuro
   - university/research
   - comp-neuro/models/connectome
 related:
@@ -34,13 +33,13 @@ A funny project you see a lot of people doing is running the connectome as a [[S
 
 I was able to recreate the "fly brain upload" myself quite easily:
 
-<video src="../../Attachments/flyBrainRecreation.mp4" controls preload="metadata" title="flyBrainRecreation.mp4"></video>
+<video src="https://lab.ewan.my/api/lab/v1/loupe/v1/o/034b9b03649e692e27609205653f5069442ae2ef6c94e52c59b6e81482c75ad5/flyBrainRecreation.mp4" controls preload="metadata" title="flyBrainRecreation.mp4"></video>
 
 If one wants to run itself as a [[Leaky Integrate And Fire]] model, have a look at [FastFly](https://github.com/eonfathom/FastFly) or the origonal [full brain emulation github project](https://github.com/eonsystemspbc/fly-brain).
 
 Another funny thing being done with this cnnectome is it being used as a base for further RL postraining for other unintended tasks. **Tim Hwang** on twitter was able to train the connectome to drive a little robot vehicle towards a goal.
 
-<video src="../../Attachments/flybrainCar.mp4" controls preload="metadata" title="flybrainCar.mp4"></video>
+<video src="https://lab.ewan.my/api/lab/v1/loupe/v1/o/841fff4957fe334951f84912dd31febf39bb4daca592519da8773a92f3ada361/flybrainCar.mp4" controls preload="metadata" title="flybrainCar.mp4"></video>
 
 ![](https://x.com/timhwang/status/2091554909954961482)
 
@@ -50,7 +49,7 @@ Looks like I was ahead of the curve regarding training the Male CNS connectome t
 
 I am happy to see it, but as David Pfau put it below, it is now the time for [[Computational Neuroscience]] to be in the influencer spotlight with minimal understanding of whats really going on.
 
-[![Screenshot 2026-09-12 at 4.41.19 PM.png](../../Attachments/Screenshot%202026-09-12%20at%204.41.19%20PM.png)](../../Attachments/Screenshot%202026-09-12%20at%204.41.19%20PM.png)
+[![Screenshot 2026-09-12 at 4.41.19 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dbae3ff9f4debe9ee16438eb2c4a8b6560b828c5e703656ae3c96399f74c6fb3/Screenshot%202026-09-12%20at%204.41.19%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dbae3ff9f4debe9ee16438eb2c4a8b6560b828c5e703656ae3c96399f74c6fb3/Screenshot%202026-09-12%20at%204.41.19%20PM.png)
 
 It is quite reminiscient of [[Pantheon]], what is going on right now.
 

@@ -12,7 +12,7 @@ The Divergence Theorem gives us a method for computing the outward flux of $\vec
 
 [[14.5 - Multivariable Chain Rule]]
 
-Recall the **flux form of Green's Theorem** (end of sec. 16.5):
+Recall the **flux form of [[Green's Theorem]]** (end of sec. 16.5):
 
 $$
 \oint_{\partial \mathcal{D}} \vec{F} \cdot \vec{n} \ ds = \int \int _{\mathcal{D}} div(\vec{F}) \ dA
@@ -20,7 +20,7 @@ $$
 
 Where the $Flux \ across \ boundary = Sum \ of \ Flux \ throughout \ region$
 
-In the flux form of Green's Theorem, $\vec{F}$ is a vector field on $\mathbb{R}^2$ and $\mathcal{D}$ is a flat surface. The divergence theorem extends this concept to vector fields on $\mathbb{R}^3$ and non-flat surface. Intuitively, we can arrive at this result by "increasing the dimension" of the flux form of Green's Theorem by one: the line integral becomes a surface integral, and the double integral becomes a triple integral.
+In the flux form of Green's Theorem, $\vec{F}$ is a vector field on $\mathbb{R}^2$ and $\mathcal{D}$ is a flat surface. The divergence theorem extends this concept to [[Vector Fields|vector fields]] on $\mathbb{R}^3$ and non-flat surface. Intuitively, we can arrive at this result by "increasing the dimension" of the flux form of Green's Theorem by one: the [[Line Integral|line integral]] becomes a surface integral, and the double integral becomes a triple integral.
 
 > [!Warning] Divergence Theorem
 > Let $E$ be a simple solid region and let $S$ be the boundary surface of $E$. Then:
@@ -34,7 +34,7 @@ Where the **flux through the boundary** is equal to the **total flux throughout 
 > [!Abstract] Remarks
 >
 > 1. A "simple" region in $\mathbb{R}^3$ is simultaneously Type I, II, and III. A similar condition was required for Green's Theorem.
-> 2. **The moral of the divergence theorem** is that we can compute the flux through $S$ by evaluating a triple integral. Oftentimes, the latter computation is easier.
+> 2. **The moral of the divergence theorem** is that we can compute the flux through $S$ by evaluating a [[15.6 - Triple Integrals|triple integral]]. Oftentimes, the latter computation is easier.
 
 We will have a look at a basic example, and then prove the theorem.
 
@@ -66,7 +66,7 @@ $$
 Similar to Stokes' Theorem, the Divergence Theorem can be understood visually and intuitively.
 
 > [!Info] Sketch
-> [![Screenshot 2024-12-11 at 9.26.10 PM.png](../../Attachments/Screenshot%202024-12-11%20at%209.26.10%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%209.26.10%20PM.png)
+> [![Screenshot 2024-12-11 at 9.26.10 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/419c58e1fbde84cb4a7c27e36055ac5e63b27e92fe535e0006ea758dd1f261db/Screenshot%202024-12-11%20at%209.26.10%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/419c58e1fbde84cb4a7c27e36055ac5e63b27e92fe535e0006ea758dd1f261db/Screenshot%202024-12-11%20at%209.26.10%20PM.png)
 
 The idea is to chop up $E$ into its volume elements. The idea is to sum up the flux through each volume element.
 
@@ -75,7 +75,7 @@ Observe that flux cancels between adjacent volume elements:
 > [!Info] Sketch
 > "Adjacent" Volume Elements share a **common face.**
 >
-> [![Screenshot 2024-12-11 at 9.27.40 PM.png](../../Attachments/Screenshot%202024-12-11%20at%209.27.40%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%209.27.40%20PM.png)
+> [![Screenshot 2024-12-11 at 9.27.40 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b198881c01b28f17df8e46a7fbf2fce4a3eeace70d33a5ca9edb4f6ae2d45cc5/Screenshot%202024-12-11%20at%209.27.40%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b198881c01b28f17df8e46a7fbf2fce4a3eeace70d33a5ca9edb4f6ae2d45cc5/Screenshot%202024-12-11%20at%209.27.40%20PM.png)
 
 When we find the flux through a volume element, we find the flux through each face of the box, The outward normals are exact opposites, so:
 
@@ -106,7 +106,7 @@ When we add together these fluxes, they cancel!
 Consider a volume element with one corner at $(x_{0},y_{0},z_{0})$ and dimensions $\Delta x, \Delta y, \Delta z$. The flux through this element is the sum of the flux across each face.
 
 > [!Info] Sketch
-> [![Screenshot 2024-12-11 at 9.40.50 PM.png](../../Attachments/Screenshot%202024-12-11%20at%209.40.50%20PM.png)](../../Attachments/Screenshot%202024-12-11%20at%209.40.50%20PM.png)
+> [![Screenshot 2024-12-11 at 9.40.50 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d24d46e67d2d2ae4929b99ffd3094990cbb4656cb07e8a964512670fec1504af/Screenshot%202024-12-11%20at%209.40.50%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d24d46e67d2d2ae4929b99ffd3094990cbb4656cb07e8a964512670fec1504af/Screenshot%202024-12-11%20at%209.40.50%20PM.png)
 
 We'll find the flux across the front and back faces. The other faces follow a similar pattern.
 

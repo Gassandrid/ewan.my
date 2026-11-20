@@ -2,7 +2,7 @@
 class:
   - note
 tags:
-  - comp-neuro/cognition
+  - neuro/cognition
   - university
 source:
 related:
@@ -13,11 +13,11 @@ date: 2026-08-31T16:18:23-04:00
 updated: 2026-08-31T17:17:42-04:00
 ---
 
-Can think of it as "mixing up the sense", where people report hearing colors, or seeing music, etc.
+Can think of it as "mixing up the [[Yap about Perception|sense]]", where people report hearing colors, or seeing music, etc.
 
 Some common examples would be certain days of the week or certain numbers being various colors.
 
-Theres nothing really disorderly about synesthesia, in fact it even grants those with this condition superior memory ability. 
+Theres nothing really disorderly about synesthesia, in fact it even grants those with this condition superior [[Notes/Computational Neuroscience/Theory/Memory|memory]] ability. 
 
 - "Oh yeah i remember Emily, she tastes like blueberries", more sensory information grna
 - also ability to unlink unrelated things: like a metaphor, in fact it is the idea of the metaphor in the literal

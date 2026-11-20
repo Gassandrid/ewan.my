@@ -3,7 +3,6 @@ title: Habit Tracking Via Daily Note
 date: 2025-02-04
 updated: 2026-06-17T13:39:29-07:00
 tags:
-  - seed
   - journal/workflow
 class:
   - note
@@ -23,4 +22,4 @@ aliases:
 > 
 > for more on this read [[On Self Reported Data]] and [[Self reported data via phone app]]
 
- [![Pasted image 20250204150000.png](../Attachments/Pasted%20image%2020250204150000.png)](../Attachments/Pasted%20image%2020250204150000.png)
+ [![Pasted image 20250204150000.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/24637aeae7f46c463232cda5ebe14e3f780f7649876bff71e950c03af44deaa3/Pasted%20image%2020250204150000.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/24637aeae7f46c463232cda5ebe14e3f780f7649876bff71e950c03af44deaa3/Pasted%20image%2020250204150000.png)

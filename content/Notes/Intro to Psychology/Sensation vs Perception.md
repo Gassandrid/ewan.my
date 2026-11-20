@@ -20,7 +20,7 @@ updated: 2025-09-16
 
 **Transduction:** the transformation of sensory stimulus energy form the environment into neural impulse
 
-**Perception**: the neural processing of electrical signals to form an internal mental representation inside your brain of what's on the outside
+**[[Yap about Perception|Perception]]**: the neural processing of electrical signals to form an internal mental [[Representation|representation]] inside your [[Brain|brain]] of what's on the outside
 
 ## Processing Methods
 
@@ -28,7 +28,7 @@ We have a few techniques for dealing with sensation processing, namely:
 
 ### Bottom Up Processing
 
-**Bottom Up Processing**: processing that is driven by the physical features of the stimulus
+**[[Bayesian Brain|Bottom Up Processing]]**: processing that is driven by the physical features of the stimulus
 
 > [!Example]
 > **Bottom Up Processing Example**: You see a new fruit for the first time. You notice its color, shape, and texture. You use these sensory details to identify it as a fruit you've never seen before.
@@ -47,7 +47,7 @@ _You have conceptualized your world based on your experiences, and you use that 
 **Top Down** is when perception is dictated by what you already know.
 **Bottom Up** is when perception is dictated by what you are currently sensing.
 
-[![Pasted image 20250916115900.png](../../Attachments/Pasted%20image%2020250916115900.png)](../../Attachments/Pasted%20image%2020250916115900.png)
+[![Pasted image 20250916115900.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6d83ddd8fc70325fa5234d0f437bea735d0d34c0ebefaebc442c58d6a8dcb9d1/Pasted%20image%2020250916115900.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/6d83ddd8fc70325fa5234d0f437bea735d0d34c0ebefaebc442c58d6a8dcb9d1/Pasted%20image%2020250916115900.png)
 
 ---
 
@@ -55,7 +55,7 @@ _You have conceptualized your world based on your experiences, and you use that 
 
 Thresholds exist in our ability to perceive different stimuli, and reserachers attempt to determine them.
 
-**Psychophysics**: The study of the relations between the physical characteristics of environmental stimuli and our mental experience of them.
+**[[Psychophysics]]**: The study of the relations between the physical characteristics of environmental stimuli and our mental experience of them.
 
 ### Absolute Thresholds
 
@@ -69,7 +69,7 @@ The smallest difference between two stimuli that a person can detect half of the
 
 #### Weber's Law
 
-**Weber's Law**: The principle that the size of the JND is proportional to the intensity of the stimulus.
+**[[Weber's Law]]**: The principle that the size of the JND is proportional to the intensity of the stimulus.
 
 ---
 

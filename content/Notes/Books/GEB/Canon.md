@@ -2,9 +2,7 @@
 id: Canon
 aliases: []
 tags:
-  - seed
   - music/classical
-  - books/geb
 date: 2025-08-14
 updated: 2025-08-14
 class:
@@ -15,7 +13,7 @@ related:
 ---
 A **canon** is a piece of music in which a melody is played and then imitated by one or more voices or instruments. The term is often used to describe a specific type of musical form where the same melody is repeated at different pitches or times.
 
-[![Canon.png](../../../Attachments/Pasted%20image%2020250814105419.png)](../../../Attachments/Pasted%20image%2020250814105419.png)
+[![Canon.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/132e0715b14aecb23f24ad9fa03573279945168ceddf8a54e1f2fcd49eb4701f/Canon.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/132e0715b14aecb23f24ad9fa03573279945168ceddf8a54e1f2fcd49eb4701f/Canon.png)
 
 ---
 

@@ -2,7 +2,6 @@
 class:
   - note
 tags:
-  - books/geb
   - philosophy
 source:
   - "[[Gödel, Escher, Bach]]"

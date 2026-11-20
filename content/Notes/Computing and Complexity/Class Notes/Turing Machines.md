@@ -20,7 +20,7 @@ Before we get into the mathematical definition, let's explore what a Turing Mach
 
 The simple idea of a turing machine is just a tape with a read/write head. The tape is infinite in both directions, and the read/write head can move left or right. The tape is divided into cells, each of which can hold a symbol from a finite set of symbols.
 
-[![Pasted image 20250403084236.png](../../../Attachments/Pasted%20image%2020250403084236.png)](../../../Attachments/Pasted%20image%2020250403084236.png)
+[![Pasted image 20250403084236.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fe9a626bc24e0c28708171dc35ed88c3eb53baeebf3def87fae5b75dbca2728e/Pasted%20image%2020250403084236.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/fe9a626bc24e0c28708171dc35ed88c3eb53baeebf3def87fae5b75dbca2728e/Pasted%20image%2020250403084236.png)
 
 We can define a Turing Machine as a 7-tuple:
 

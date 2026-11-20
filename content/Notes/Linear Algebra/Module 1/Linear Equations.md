@@ -2,7 +2,7 @@
 id: Linear Equations
 aliases:
 tags:
-  - "#math/linear-algebra"
+  - math/linear-algebra
 date: 2025-01-15
 title: Linear Equations
 updated: 2025-04-02

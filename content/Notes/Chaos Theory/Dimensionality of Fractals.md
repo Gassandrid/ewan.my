@@ -6,7 +6,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos/fractals
+  - math/dynamical-systems/fractals
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 14
 source:
@@ -56,7 +56,7 @@ $$
 \dots K_{\infty}
 $$
 
-[![CantorSetExcalidraw.png](../../Attachments/CantorSetExcalidraw.png)](../../Attachments/CantorSetExcalidraw.png)
+[![CantorSetExcalidraw.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/81690e8083daf23709442c13f6525ad3286c95ec84e8749a0fb123c9b9bb0933/CantorSetExcalidraw.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/81690e8083daf23709442c13f6525ad3286c95ec84e8749a0fb123c9b9bb0933/CantorSetExcalidraw.png)
 
 1. What is "length" of $K_{\infty}$ ?
 
@@ -78,7 +78,7 @@ you might think so, given that $K_{\infty}$ is [[Uncountably Infinite]]. BUT the
 
 > A set is **uncountable** if it is not countable.
 
-[![Pasted image 20260317110459.png](../../Attachments/Pasted%20image%2020260317110459.png)](../../Attachments/Pasted%20image%2020260317110459.png)
+[![Pasted image 20260317110459.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b146b9eafea125cd70b7a56c622b20c629670ff95477bfa2a92bd8e5bbdd9275/Pasted%20image%2020260317110459.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b146b9eafea125cd70b7a56c622b20c629670ff95477bfa2a92bd8e5bbdd9275/Pasted%20image%2020260317110459.png)
 
 ---
 

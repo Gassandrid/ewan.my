@@ -13,7 +13,7 @@ updated: 2026-02-05T17:29:30-05:00
 ## Problem 1 (15 points).
 
 > [!Question]
-> List all 5 layers of the TCP/IP stack and briefly explain the purpose of each, 1-2 sentences per layer.
+> List all 5 layers of the [[TCP/IP Model|TCP/IP stack]] and briefly explain the purpose of each, 1-2 sentences per layer.
 
 ### Solution
 
@@ -37,7 +37,7 @@ updated: 2026-02-05T17:29:30-05:00
 #### R5: What Information is Used by a Process Running on One Host to Identify a Process Running on Another Host?
 
 > [!Success] Answer
-> They are identified by using the **IP Address** for the destination host, and the **Port Number** to specify the specific process on said host. These come together to form [[Sockets|socket]] addresses. IP locates machine on network, port directs data to application on machine.
+> They are identified by using the **[[IP Address]]** for the destination host, and the **Port Number** to specify the specific process on said host. These come together to form [[Sockets|socket]] addresses. IP locates machine on network, port directs data to application on machine.
 
 #### R6: Suppose You Wanted to Do a Transaction from a Remote Client to a Server as Fast as Possible. Would You Use UDP or TCP? Why?
 

@@ -18,4 +18,4 @@ $$
 
 For [[Large Language Model]]s, the softmax function is often used in the output layer to convert the logits into probabilities for each [[token]] in the vocabulary, allowing the model to predict the next token based on the highest probability:
 
-[![Screenshot 2025-08-12 at 3.27.59 PM.png](../../Attachments/Screenshot%202025-08-12%20at%203.27.59%20PM.png)](../../Attachments/Screenshot%202025-08-12%20at%203.27.59%20PM.png)
+[![Screenshot 2025-08-12 at 3.27.59 PM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/778c47bbbdd5b8ac4e778dc6b6407ef35529521d3958904925d6b4872820da35/Screenshot%202025-08-12%20at%203.27.59%20PM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/778c47bbbdd5b8ac4e778dc6b6407ef35529521d3958904925d6b4872820da35/Screenshot%202025-08-12%20at%203.27.59%20PM.png)

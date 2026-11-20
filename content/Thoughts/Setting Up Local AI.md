@@ -2,7 +2,6 @@
 date: 2025-01-03
 updated: 2025-06-19
 tags:
-  - seed
   - cs/ai
 title: Setting Up Local AI
 aliases:
@@ -52,7 +51,7 @@ This is an ever-changing choice, as the LLM landscape is quite volitile and alwa
 
 ## Local Image Generation
 
-Image + other types of media generation have a lot more variety when it comes to the actual models you can run. As of now though, I think I am going to stick with [Flux](https://huggingface.co/black-forest-labs/FLUX.1-dev), as while the new [Stable Diffusion 3.5](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) has the potential to one day be better than flux, as of right now Flux is a much more complete diffusion model, and has the added benefit of being extremely reliable with text and hand generation.
+Image + other types of media generation have a lot more variety when it comes to the actual models you can run. As of now though, I think I am going to stick with [Flux](https://huggingface.co/black-forest-labs/FLUX.1-dev), as while the new [Stable Diffusion 3.5](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) has the potential to one day be better than flux, as of right now Flux is a much more complete [[Diffusion in Machine Learning|diffusion]] model, and has the added benefit of being extremely reliable with text and hand generation.
 
 However the UI sphere has been a lot more confusing for me to grasp, so I am picking two that I think are the best in their own categories.
 

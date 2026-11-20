@@ -28,7 +28,7 @@ updated: 2026-11-07T20:42:41-05:00
 		- $PE_{(pos, 2i)}=\sin(pos \cdot \omega_{i})$, $PE_{(pos, 2i+1) }=\cos(pos \cdot \omega_{i})$
 - [[07-28-2026]] 16:25 - Kimi K3 interestingly decided not to use [[Rotary Position Encoding|RoPE]] and humorously said they use NoPE (No Position Encoding) in their technical paper.
 
-[![sinusoidalEncoding.png](../../Attachments/sinusoidalEncoding.png)](../../Attachments/sinusoidalEncoding.png)
+[![sinusoidalEncoding.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4f3e564d8047f55fb5bcacfd3ae82c13ce637619189d9d39653b41a9a89ea54a/sinusoidalEncoding.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/4f3e564d8047f55fb5bcacfd3ae82c13ce637619189d9d39653b41a9a89ea54a/sinusoidalEncoding.png)
 
 ## [[Rotary Position Encoding|RoPE]]
 

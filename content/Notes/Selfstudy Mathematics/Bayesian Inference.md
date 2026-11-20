@@ -36,7 +36,7 @@ In essence, Bayesian Inference allows us to update our prior beliefs about a par
 
 ## Extending to Probability Distributions
 
-The domain in which Bayesian Inference is mostly applied is in comparing a hypothetical probability distribution to observed data. In this context, the components of Bayes' Theorem can be interpreted as follows:
+The domain in which Bayesian Inference is mostly applied is in comparing a hypothetical [[Probability Distribution|probability distribution]] to observed data. In this context, the components of Bayes' Theorem can be interpreted as follows:
 
 $$
 P(\theta|D) = \frac{P(D|\theta) \cdot P(\theta)}{P(D)}

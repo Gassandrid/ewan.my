@@ -4,7 +4,6 @@ image: https://www.google.com/s2/favicons?domain=https://www.pewresearch.org/sho
 class:
   - website
 tags:
-  - website
   - religion/islam
 related:
   - "[[Reading Schedule Islam]]"
@@ -15,7 +14,7 @@ updated: 2025-08-29
 
 People at Djemaa el-Fna Square, late afternoon sun
 
-Muslims are the fastest-growing religious group in the world. The growth and regional migration of Muslims, combined with the ongoing impact of the Islamic State (also known as ISIS or ISIL) and other extremist groups that commit acts of violence in the name of Islam, have brought Muslims and the Islamic faith to the forefront of the political debate in many countries. Yet many facts about Muslims are not well known in some of these places, and most Americans – who live in a country with a relatively small Muslim population – have said they [know little or nothing about Islam](https://www.pewresearch.org/religion/2010/08/24/public-remains-conflicted-over-islam/).
+[[Muslim|Muslims]] are the fastest-growing religious group in the world. The growth and regional migration of Muslims, combined with the ongoing impact of the Islamic State (also known as ISIS or ISIL) and other extremist groups that commit acts of violence in the name of Islam, have brought Muslims and the Islamic faith to the forefront of the political debate in many countries. Yet many facts about Muslims are not well known in some of these places, and most Americans – who live in a country with a relatively small Muslim population – have said they [know little or nothing about Islam](https://www.pewresearch.org/religion/2010/08/24/public-remains-conflicted-over-islam/).
 
 Here are answers to some key questions about Muslims, compiled from several Pew Research Center reports published in recent years:
 
@@ -87,7 +86,7 @@ Westerners’ views of Muslims were more mixed. A median of 50% across four West
 
 #### What Do Muslims around the World Believe?
 
-Like any religious group, the religious beliefs and practices of Muslims vary depending on many factors, including where in the world they live. But Muslims around the world are [almost universally united](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-executive-summary/)  by a belief in one God and the Prophet Muhammad, and the practice of certain religious rituals, such as  [fasting during Ramadan](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-executive-summary/#unifying-rituals), is widespread.
+Like any religious group, the religious beliefs and practices of Muslims vary depending on many factors, including where in the world they live. But Muslims around the world are [almost universally united](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-executive-summary/)  by a belief in one God and the Prophet [[Muhammad]], and the practice of certain religious rituals, such as  [fasting during Ramadan](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-executive-summary/#unifying-rituals), is widespread.
 
 ![](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/05/gsi2-overview-1.png)
 
@@ -125,7 +124,7 @@ When it comes to [political and social views](https://www.pewresearch.org/religi
 
 #### What is the Difference between Shiite Muslims and Sunni Muslims?
 
-Sunnis and Shiites are two subgroups of Muslims, just as Catholics and Protestants are two subgroups within Christianity. The [Sunni-Shiite divide](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-executive-summary/#sunnishia) is nearly 1,400 years old, dating back to a dispute over the succession of leadership in the Muslim community following the death of the Prophet Muhammad in 632. While the two groups agree on some core tenets of Islam, there are [differences in beliefs and practices](https://www.pewresearch.org/short-reads/2013/11/14/muslim-holiday-of-ashura-brings-into-focus-shia-sunni-differences/), and in some cases  [Sunnis do not consider Shiites to be Muslims](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-5-religious-identity/).
+[[Sunni|Sunnis]] and [[Shi'i|Shiites]] are two subgroups of Muslims, just as Catholics and Protestants are two subgroups within Christianity. The [Sunni-Shiite divide](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-executive-summary/#sunnishia) is nearly 1,400 years old, dating back to a dispute over the succession of leadership in the Muslim community following the death of the Prophet Muhammad in 632. While the two groups agree on some core tenets of Islam, there are [differences in beliefs and practices](https://www.pewresearch.org/short-reads/2013/11/14/muslim-holiday-of-ashura-brings-into-focus-shia-sunni-differences/), and in some cases  [Sunnis do not consider Shiites to be Muslims](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-5-religious-identity/).
 
 With the exception of a few countries, including Iran (which is majority Shiite) as well as Iraq and Lebanon (which are split), most nations with a large number of Muslims [have more Sunnis than Shiites](https://www.pewresearch.org/religion/2012/08/09/the-worlds-muslims-unity-and-diversity-1-religious-affiliation/). In the U.S., 55% identify as Sunnis and 16% as Shiites (with the rest identifying with neither group, including some who say they are just a Muslim).
 

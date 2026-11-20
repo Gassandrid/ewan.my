@@ -3,7 +3,7 @@ id: Setting up a Homelab Dashboard
 aliases: []
 tags:
   - projects/homelab/software
-  - cs/homelab/monitoring
+  - projects/homelab/monitoring
   - projects/homelab/apartment
 class:
   - note

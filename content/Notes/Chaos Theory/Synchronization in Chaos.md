@@ -6,7 +6,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos
+  - math/dynamical-systems/chaos
 course: "[[Chaos, Fractals, and Dynamical Systems]]"
 lecture-number: 1
 source:
@@ -17,7 +17,7 @@ description:
 aliases:
 ---
 
-[![Screenshot 2026-04-28 at 11.04.30 AM.png](../../Attachments/Screenshot%202026-04-28%20at%2011.04.30%20AM.png)](../../Attachments/Screenshot%202026-04-28%20at%2011.04.30%20AM.png)
+[![Screenshot 2026-04-28 at 11.04.30 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/019d6e1784670e9b56b799cf80e02d13aa2c7b3cc56cedfa7ba6da916f5fc96d/Screenshot%202026-04-28%20at%2011.04.30%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/019d6e1784670e9b56b799cf80e02d13aa2c7b3cc56cedfa7ba6da916f5fc96d/Screenshot%202026-04-28%20at%2011.04.30%20AM.png)
 
 $$
 \begin{align}

@@ -13,7 +13,7 @@ This class will discuss RL's and their closure properties, proof of closure unde
 
 ## Randomized Logarithmic-space
 
-As a refresher, Randomized Logarithmic-Space (RL) is a complexity class that represents decision problems solvable by a Turing machine using logarithmic space and a source of randomness.
+As a refresher, Randomized Logarithmic-Space (RL) is a complexity class that represents decision problems solvable by a [[Turing Machines|Turing machine]] using logarithmic space and a source of randomness.
 
 The machine must provide a correct "yes" answer with high probability (at least 2/3) and can err on "no" answers, or vice versa. RL is significant because it explores the efficiency of algorithms in extremely constrained memory environments while leveraging randomness to achieve solutions that may not be possible deterministically in the same space bounds.
 
@@ -52,7 +52,7 @@ $$
 
 ## Non-Determinism
 
-An NFA is a non-deterministic finite automaton. It is a theoretical model of computation that can be used to solve decision problems. An NFA is similar to a DFA but has some key differences that make it more powerful and flexible.
+An [[Day 6 - NFAs to DFAs|NFA]] is a non-deterministic finite automaton. It is a theoretical model of computation that can be used to solve decision problems. An NFA is similar to a DFA but has some key differences that make it more powerful and flexible.
 
 Let's Distinguish between a **DFA** and an **NFA**
 

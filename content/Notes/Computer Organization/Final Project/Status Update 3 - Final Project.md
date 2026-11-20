@@ -21,7 +21,7 @@ class: note
 
 We have gotten to a place where most of the software is done, but we are still having some trouble with our hardware. All of our models work on our Lead Engineers' Computer, but is having trouble running on the very specialized Coral TPU. 
 
-Other than that, we are in a good place! all our basic models, aka speech to text, text to speech, and the LLM(with personality) is working!
+Other than that, we are in a good place! all our basic models, aka speech to text, text to speech, and the [[Large Language Model|LLM]](with personality) is working!
 
 We have also begun implementing some stuff for the screen. While this doesnt serve any functional aspect, we want it to display a terminal, the words it is "hearing" and its LLM response. This is to replicate what TARS' screen looks like in the movies.
 
@@ -39,7 +39,7 @@ We have also begun implementing some stuff for the screen. While this doesnt ser
 
 ## Next Steps
 
-We still have yet to complete the ESP 32 wireless network for which we will use to communicate with the devices in the room. For this demo, we only plan to have 1-2 devices on the network of control under DARS. One will be controlling some RGB strips(with hex code specification), and the other will be to toggle power to some of the stuff in the room.
+We still have yet to complete the ESP 32 wireless network for which we will use to communicate with the devices in the room. For this demo, we only plan to have 1-2 devices on the network of control under [[DARS]]. One will be controlling some RGB strips(with hex code specification), and the other will be to toggle power to some of the stuff in the room.
 
 This will require some additions to the Langroid framework, which serves as the glue that keeps it all together, calling other python files to then tell the RPi esp 32 to communicate with another esp 32, which then controls the devices in the room.
 

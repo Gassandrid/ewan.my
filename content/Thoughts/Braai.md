@@ -2,7 +2,6 @@
 class:
   - note
 tags:
-  - seed
   - food
   - places/south-africa
 source:
@@ -16,4 +15,4 @@ A **Braai** is a term from [[South Africa]] for something like a Barbecue, only 
 
 The meat selection of a Braai is also far wider ranging than the typical american "hotdog and hamburger" options. Some unique meats beyond the conventional would be **Boerewors**, a special kind of sausage. Also usually involves a lot of fish, Lamb Chops even.
 
-[![gaslookingBraai.png](../Attachments/Pasted%20image%2020251228222311.png)](../Attachments/Pasted%20image%2020251228222311.png)
+[![gaslookingBraai.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/abebe951166855d37bbce729e1d17c6cbf9cc6588f7403de44c7f5635518b3e7/gaslookingBraai.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/abebe951166855d37bbce729e1d17c6cbf9cc6588f7403de44c7f5635518b3e7/gaslookingBraai.png)

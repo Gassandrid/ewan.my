@@ -1,29 +1,33 @@
 ---
 id: Population
-aliases:
+class:
+  - note
 tags:
   - math/probability/statistics
   - university
+source:
+  - "[[Statistics Index]]"
+related:
+  - "[[Sample]]"
+  - "[[Descriptive Statistics]]"
+  - "[[Sampling Distribution]]"
+author:
+description: The entire set of individuals, items or outcomes a study wants to draw conclusions about.
+aliases:
+  - Populations
+  - Conceptual Population
+  - Tangible Population
 date: 2024-09-12
-updated: 2025-06-21
+updated: 2026-11-19T21:50:00-05:00
 ---
-# Population in Statistics
-
-- **Population** refers to the entire set of individuals, items, or data points that you are interested in studying. It represents the complete group from which you want to draw conclusions.
-
-## Examples
-
-- All students in a university
-- Every product in a warehouse
-- All residents of a city
-
-## Characteristics
-
-- Every individual has the same probability of being included in the sample.
-- Selection is typically done using random number generators or drawing names from a hat.
-
-## Related Concepts
-
-- **Sampling Frame**: A list or database that includes all members of the population from which the sample is drawn.
-- **Sampling Error**: The difference between the results obtained from a sample and the actual parameters of the population. It is inherent in the sampling process and can be minimized with proper sampling techniques.
-- **Stratified Sampling**: A method that divides the population into subgroups (strata) and then randomly samples from each subgroup. This ensures representation across key variables.
+- **population**: the entire collection of individuals, items or outcomes you want information about
+	- examples: all students at a university, every product in a warehouse, all residents of a city
+	- usually too big to measure, so you measure a [[Sample|sample]] and infer
+	- numbers describing it are [[Parameter|parameters]] ( $\mu$, $p$ ), numbers from the sample are statistics ( $\bar{x}$, $\hat{p}$ )
+- **tangible vs conceptual**
+	- tangible: real, finite, could be listed ( all UVM undergrads )
+	- conceptual: every value a process *might* produce, can't be listed or measured ( all possible repeat measurements of a weight )
+	- measurements taken under identical experimental conditions get treated as a simple random sample from that conceptual population
+- **sampling frame**: the list you actually draw from, whatever it leaves out the sample can't represent
+- [[Sampling Error|sampling error]]: gap between a sample result and the true parameter, built into sampling, shrinks with bigger and better samples ( [[Sampling Distribution]] )
+- [[Stratified Sampling|stratified sampling]]: split the population into subgroups ( strata ) and randomly sample each, so every key subgroup shows up

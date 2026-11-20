@@ -28,7 +28,7 @@ author:
 
 ### Pseudocode
 
-[![Screenshot 2025-09-02 at 11.06.43 AM.png](../../Attachments/Screenshot%202025-09-02%20at%2011.06.43%20AM.png)](../../Attachments/Screenshot%202025-09-02%20at%2011.06.43%20AM.png)
+[![Screenshot 2025-09-02 at 11.06.43 AM.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5d7feb96ae506eb97438912b8f611afbfeafa31e4f8da0e1a326ac89ed151087/Screenshot%202025-09-02%20at%2011.06.43%20AM.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5d7feb96ae506eb97438912b8f611afbfeafa31e4f8da0e1a326ac89ed151087/Screenshot%202025-09-02%20at%2011.06.43%20AM.png)
 
 ## Formal Definition
 

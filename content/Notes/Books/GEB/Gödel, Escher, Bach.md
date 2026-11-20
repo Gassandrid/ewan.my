@@ -2,11 +2,9 @@
 date: 2025-06-13
 updated: 2026-01-29 10:47:02-05:00
 tags:
-  - books/geb
   - philosophy
   - music/classical
   - math/logic
-  - books
 class:
   - book
 author:
@@ -26,9 +24,9 @@ aliases:
   - Godel, Escher, Bach
   - GEB
 ---
-[![GebCover.png](../../../Attachments/GebCover.png)](../../../Attachments/GebCover.png)
+[![GebCover.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5c2d9d64d58f2862ab5a4d3dc1f957518ed9722367217e8e2edc29975af0c629/GebCover.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/5c2d9d64d58f2862ab5a4d3dc1f957518ed9722367217e8e2edc29975af0c629/GebCover.png)
 
-> **Gödel, Escher, Bach**( often abbreviated as **GEB**), is a non fiction book written by American cognitive scientist [[Douglas Hofstadter]]. Through examples from the lives of the mathematician *Kurt Gödel*, the artist *M.C. Escher*, and the classical composer *Johann Sebastian Bach*, Hofstadter seeks to explore the nature of intelligence, symmetry, and mathematics.
+> **Gödel, Escher, Bach**( often abbreviated as **GEB**), is a non fiction book written by American cognitive scientist [[Douglas Hofstadter]]. Through examples from the lives of the mathematician *Kurt Gödel*, the artist *[[M.C. Escher]]*, and the classical composer *Johann Sebastian Bach*, Hofstadter seeks to explore the nature of intelligence, symmetry, and mathematics.
 
 I was recommended I read this book, both by a friend from University, and by my father and step-father. It is quite deep, but seeks answer some of the questions I have had about the nature of human intelligence, through the familiar language of mathematics and logic.
 

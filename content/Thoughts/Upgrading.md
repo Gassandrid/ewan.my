@@ -4,8 +4,8 @@ updated: 2026-02-10T14:39:00-05:00
 class:
   - note
 tags:
-  - seed
-  - transhumanism/nootropic
+  - pharmacology/nootropic
+  - transhumanism
 source:
 related:
 author:

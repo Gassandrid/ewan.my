@@ -13,9 +13,9 @@ source:
   - "[[Pepti.Wiki]]"
 description:
 tags:
-  - transhumanism/nootropic
-  - health/substance
-  - transhumanism/peptides
+  - pharmacology/nootropic
+  - transhumanism
+  - pharmacology/peptide
   - pharmacology/neuro
 related:
   - "[[On Peptides]]"

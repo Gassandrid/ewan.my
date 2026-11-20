@@ -14,7 +14,7 @@ aliases:
 
 Decision Trees are known for producing robust, *interpreable* cateogories/splits in which data is classified.
 
-[![decTree.png](../../Attachments/decTree.png)](../../Attachments/decTree.png)
+[![decTree.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7bb74432e49865a00ea509ad48bb9e0cf702564ef355c416351d36de71d2bfbf/decTree.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7bb74432e49865a00ea509ad48bb9e0cf702564ef355c416351d36de71d2bfbf/decTree.png)
 
 Here, the top box is the **root node**, containing all the data.
 

@@ -4,7 +4,7 @@ class:
   - lecture
 tags:
   - university
-  - math/chaos/fixed-point
+  - math/dynamical-systems/fixed-point
 source:
 related:
 author:
@@ -19,7 +19,7 @@ lecture-number: 1
 ---
 How do we go about predicting a linear system? Lets look at the example of a **billiards game**
 
-[![billardspath.png](../../Attachments/billardspath.png)](../../Attachments/billardspath.png)
+[![billardspath.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a76b9e79467f4d5640116e532a6d35b26d8e2bb612a73f5f2492c3b675c0399d/billardspath.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/a76b9e79467f4d5640116e532a6d35b26d8e2bb612a73f5f2492c3b675c0399d/billardspath.png)
 
 This is a good example of a linear chaotic system, as difference accumulates over time given any set amount of divergences from you estimation. In essence, a small difference in what you do vs what actually happens will lead to a large difference in the end result.
 
@@ -33,9 +33,9 @@ Where $A$ is a transformation matrix that describes how the balls move on the ta
 
 > [!Abstract] Edward Lorenz (1917 - 2008)
 >
-> [![edwardlorenz.png](../../Attachments/edwardlorenz.png)](../../Attachments/edwardlorenz.png)
+> [![edwardlorenz.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8a9aa2b91e986edc8289f36fabc4684c6610ebb785269f0a3325c416aa31e5a7/edwardlorenz.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/8a9aa2b91e986edc8289f36fabc4684c6610ebb785269f0a3325c416aa31e5a7/edwardlorenz.png)
 >
-> **Chaos**: When the present determines the future, but the approximate present does not approximately determine the future:
+> **[[Chaos]]**: When the present determines the future, but the approximate present does not approximately determine the future:
 
 ---
 
@@ -45,11 +45,11 @@ Forecasting in linear systems can be done by iteratively applying the transforma
 
 For a game like **plinko**, if we drop a ball from the top, we can predict its path by applying the transformation matrix at each level of the plinko board. However this gets so complicated that it is often easier to operate over the statistical distribution of outcomes rather than trying to predict the exact path of the ball.
 
-[![plinko.png](../../Attachments/plinko.png)](../../Attachments/plinko.png)
+[![plinko.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b8850e110ee3ef2dbf3457e0bc882238bdfbe8583a4ac466402369a6d2cd0522/plinko.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/b8850e110ee3ef2dbf3457e0bc882238bdfbe8583a4ac466402369a6d2cd0522/plinko.png)
 
 ### Solutions
 
-(Data Assimilation vs Ensemble Forecasting)
+([[Data Assimilation]] vs [[Ensemble Forecasting]])
 
 We have two main approaches to dealing with the uncertainty in linear chaotic systems:
 
@@ -59,13 +59,13 @@ We have two main approaches to dealing with the uncertainty in linear chaotic sy
 
 It reminds me of the [[Kalman Filter]] approach used in control systems and robotics, where predictions are updated based on sensor measurements to improve accuracy.
 
-[![dataAssim.png](../../Attachments/dataAssim.png)](../../Attachments/dataAssim.png)
+[![dataAssim.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3098e5786727116a7acd239a114347240cfb4013fd4281b814066d3c2469ae88/dataAssim.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/3098e5786727116a7acd239a114347240cfb4013fd4281b814066d3c2469ae88/dataAssim.png)
 
 ### Ensemble Forecasting
 
 This involves running multiple simulations of the system with slightly varied initial conditions. By analyzing the spread of outcomes from these simulations, we can gain insights into the range of possible future states of the system. This method helps to capture the inherent uncertainty in chaotic systems.
 
-[![ensembleForecasting.png](../../Attachments/ensembleForecasting.png)](../../Attachments/ensembleForecasting.png)
+[![ensembleForecasting.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dc2b7db344232c551f6059215f627634b912bc34c3ddf5bb72531983b84e9252/ensembleForecasting.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/dc2b7db344232c551f6059215f627634b912bc34c3ddf5bb72531983b84e9252/ensembleForecasting.png)
 
 ---
 
@@ -104,12 +104,12 @@ This would take quite a while though, so oftentimes we use computers to solve th
 
 ### The Interesting Thing
 
-You might notice for the graph above, the maximum extrema seems to lie on the coordinates $\left(  \frac{1}{2}, \frac{1}{2} \right)$. The **fundamental idea** behind a [[Logistic Map]] is that the maximum extrema is a fixed point, meaning that if we start at that point, we will always end up there. In other words:
+You might notice for the graph above, the maximum extrema seems to lie on the coordinates $\left(  \frac{1}{2}, \frac{1}{2} \right)$. The **fundamental idea** behind a [[Logistic Map]] is that the maximum extrema is a [[Fixed Point Classification|fixed point]], meaning that if we start at that point, we will always end up there. In other words:
 
 $$
 g_{2} \left( \frac{1}{2} \right) = \frac{1}{2}
 $$
 
-By taking discrete approximation steps, we notice this "staircase" pattern emerging, where we can see how the function iterates towards the fixed point. You will also notice that if we plot the line $y=x$, the points where the function intersects this line are the fixed points of the system.
+By taking discrete approximation steps, we notice this "[[Cobweb Plot|staircase]]" pattern emerging, where we can see how the function iterates towards the fixed point. You will also notice that if we plot the line $y=x$, the points where the function intersects this line are the fixed points of the system.
 
-[![logmap.png](../../Attachments/logmap.png)](../../Attachments/logmap.png)
+[![logmap.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f2304faffd524660aeb252ed0b2c2d1022157b9cf9696a2f371c5f41a10a6d06/logmap.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/f2304faffd524660aeb252ed0b2c2d1022157b9cf9696a2f371c5f41a10a6d06/logmap.png)

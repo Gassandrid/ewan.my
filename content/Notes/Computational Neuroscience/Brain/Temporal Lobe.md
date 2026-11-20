@@ -33,7 +33,7 @@ associated-disorders:
   - temporal lobe epilepsy
   - semantic dementia
 tags:
-  - comp-neuro/brain/region
+  - neuro/anatomy
   - biology
 date: 2026-02-22T22:16:38-05:00
 updated: 2026-02-24T15:15:46-05:00
@@ -41,7 +41,7 @@ updated: 2026-02-24T15:15:46-05:00
 
 The temporal lobe sits lateral and inferior, near the temples. Think "tempo" — it's the primary auditory processing region. But it does far more: the medial temporal lobe houses the [[Hippocampus]] and [[Entorhinal Cortex]], making it the memory hub; the inferior temporal cortex is the endpoint of the [[Ventral Pathway]] for object and face recognition.
 
-[![TempLobe.png](../../../Attachments/TempLobe.png)](../../../Attachments/TempLobe.png)
+[![TempLobe.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d59f097b8051299c26f50ea0b7e1831fd9aa228eae8b48632a9b3d6b99d05235/TempLobe.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/d59f097b8051299c26f50ea0b7e1831fd9aa228eae8b48632a9b3d6b99d05235/TempLobe.png)
 
 ## Structure and Function
 

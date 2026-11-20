@@ -3,8 +3,8 @@ class:
   - note
 tags:
   - comp-neuro/theory
-  - todo/neuro
-  - math/chaos/attractor
+  - neuro
+  - math/dynamical-systems/attractor
   - math/group
 date: 2025-09-04
 updated: 2026-07-18T18:43:35-07:00
@@ -20,7 +20,7 @@ They are particularly useful in [[Computational Neuroscience]] for modeling syst
 
 - has a lot of background coming from [[Group Theory in Neuroscience - Gemini|group theory in neuroscience]], in that it is a physical instantiation of a **topological manifold** where the system's marginal stability mimics a continuous symmetry space. something like a rat turning its head; the activity bump sliding along a ring attractor is an instantiation of the **[[Rotation Group]]**
 
-[![Cann1.gif](../../../Attachments/Cann1.gif)](../../../Attachments/Cann1.gif)
+[![Cann1.gif](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7a8b822fd4f7c12125d8a2b8b3de1b65d4755786b876ccefe2477c5fcc9b0409/Cann1.gif?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/7a8b822fd4f7c12125d8a2b8b3de1b65d4755786b876ccefe2477c5fcc9b0409/Cann1.gif)
 
 ---
 

@@ -13,7 +13,7 @@ date: 2026-02-05T08:31:13-05:00
 updated: 2026-09-11T10:57:47-04:00
 ---
 
-**CTRNNs** are a type of [[Recurrent Neural Network]] designed to model temporal dynamics in continuous time. They are particularly useful in fields like evolutionary robotics, where agents need to process sensory inputs and generate motor outputs in real-time.
+**CTRNNs** are a type of [[Recurrent Neural Network]] designed to model [[Temporal Dynamics|temporal dynamics]] in continuous time. They are particularly useful in fields like [[Evolutionary Robotics|evolutionary robotics]], where agents need to process sensory inputs and generate motor outputs in real-time.
 
 The most basic definition is as follows:
 
@@ -23,13 +23,13 @@ $$
 
 Where:
 
-- $\tau_i$ is the time constant of neuron $i$, determining how quickly it responds to inputs.
+- $\tau_i$ is the time constant of [[Neuron|neuron]] $i$, determining how quickly it responds to inputs.
 - $\frac{dy_i(t)}{dt}$ is the rate of change of the neuron's state over time.
 - $-y_i(t)$ represents the decay of the neuron's state.
 - $\sum_{j=1}^{N} w_{ij} \sigma(y_j(t) + \theta_j)$ is the weighted sum of inputs from other neurons, where $w_{ij}$ is the weight from neuron $j$ to neuron $i$, $\sigma$ is an activation function (often a sigmoid), and $\theta_j$ is a bias term.
 - $I_i(t)$ is the external input to neuron $i$ at time $t$.
 
-[![modelCTRNN.png](../../Attachments/modelCTRNN.png)](../../Attachments/modelCTRNN.png)
+[![modelCTRNN.png](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ecf6df6e82ac934254d85d7e23e5c2f193507ad099fed1b5c56b10908afb469c/modelCTRNN.png?size=s1024)](https://lab.ewan.my/api/lab/v1/loupe/v1/o/ecf6df6e82ac934254d85d7e23e5c2f193507ad099fed1b5c56b10908afb469c/modelCTRNN.png)
 
 ---
 
@@ -43,7 +43,7 @@ $$
 
 **The $-y_i(t)$ term:** Decay that pulls the state back to zero. This mirrors the biological tendancy towards equilibrium.
 
-**Parameter effects:**
+**[[Parameter]] effects:**
 
 - $\tau_i$ large → slow, integrative
 - $\tau_i$ small → fast, reactive
