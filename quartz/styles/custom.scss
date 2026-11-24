@@ -70,6 +70,15 @@ article > .markdown-rendered {
   font-display: swap;
 }
 
+// Home page scrolls without a visible scrollbar.
+html:has(body[data-slug="index"]) {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body[data-slug="index"] img {
   filter: invert(0%);
   opacity: 0.85;
